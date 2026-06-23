@@ -1,1 +1,31 @@
-bmFtZTogRGVwbG95IEdpdEh1YiBQYWdlcwoKb246CiAgcHVzaDoKICAgIGJyYW5jaGVzOiBbIm1haW4iXQogIHdvcmtmbG93X2Rpc3BhdGNoOgoKcGVybWlzc2lvbnM6CiAgY29udGVudHM6IHJlYWQKICBwYWdlczogd3JpdGUKICBpZC10b2tlbjogd3JpdGUKCmpvYnM6CiAgYnVpbGQ6CiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICBzdGVwczoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QHY0CiAgICAgIC0gdXNlczogYWN0aW9ucy9jb25maWd1cmUtcGFnZXNAdjUKICAgICAgLSB1c2VzOiBhY3Rpb25zL3VwbG9hZC1wYWdlcy1hcnRpZmFjdEB2MwogICAgICAgIHdpdGg6CiAgICAgICAgICBwYXRoOiAiLiIKCiAgZGVwbG95OgogICAgbmVlZHM6IGJ1aWxkCiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICBlbnZpcm9ubWVudDoKICAgICAgbmFtZTogZ2l0aHViLXBhZ2VzCiAgICAgIHVybDogJHt7IHN0ZXBzLmRlcGxveS5vdXRwdXRzLnBhZ2VfdXJsIH19CiAgICBzdGVwczoKICAgICAgLSBpZDogZGVwbG95CiAgICAgICAgdXNlczogYWN0aW9ucy9kZXBsb3ktcGFnZXNAdjQK
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
