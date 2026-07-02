@@ -1,0 +1,412 @@
+<title>A. Barth『Les religions de l'Inde』目次・内容梗概</title>
+<style>
+  :root {
+    --ink: #2d2a24;
+    --heading: #1a2744;
+    --accent: #b8692a;
+    --accent-light: rgba(184, 105, 42, 0.12);
+    --ground: #f6f3ec;
+    --card: #edeae2;
+    --rule: #c8c3b8;
+    --sage: #7a8b6e;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: "Palatino Linotype", Palatino, "Book Antiqua", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    color: var(--ink);
+    background: var(--ground);
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 5rem;
+  }
+
+  /* Header */
+  header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .book-label {
+    font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--heading);
+    line-height: 1.3;
+    text-wrap: balance;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--heading);
+    opacity: 0.7;
+    margin-bottom: 1.2rem;
+  }
+
+  .meta {
+    font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 0.82rem;
+    color: #6b6560;
+    line-height: 1.6;
+  }
+
+  .meta span { display: inline-block; }
+  .meta .sep { margin: 0 0.4em; opacity: 0.4; }
+
+  /* Section headings */
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--heading);
+    margin: 3rem 0 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    letter-spacing: 0.03em;
+  }
+
+  /* TOC */
+  .toc {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .toc > li {
+    padding: 0.55rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+
+  .toc > li:hover {
+    background: var(--accent-light);
+  }
+
+  .toc .ch-num {
+    font-weight: 700;
+    color: var(--accent);
+    margin-right: 0.5em;
+    font-variant-numeric: tabular-nums;
+    min-width: 2.2em;
+    display: inline-block;
+  }
+
+  .toc .ch-title {
+    color: var(--heading);
+    font-weight: 600;
+  }
+
+  .toc .ch-title-fr {
+    font-style: italic;
+    opacity: 0.75;
+    margin-left: 0.5em;
+    font-size: 0.92em;
+  }
+
+  .toc-sub {
+    list-style: none;
+    margin: 0.3rem 0 0 2.7em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .toc-sub li {
+    font-size: 0.92rem;
+    padding: 0.25rem 0.5rem;
+    border-left: 2px solid var(--rule);
+    color: #4a4540;
+  }
+
+  .toc-sub .sub-num {
+    font-weight: 600;
+    color: var(--sage);
+    margin-right: 0.4em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Summary sections */
+  .summary-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .summary-section h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--heading);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+    font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+
+  .summary-section h3 .sec-num {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+    padding: 0.15em 0.55em;
+    border-radius: 3px;
+    flex-shrink: 0;
+    line-height: 1.5;
+  }
+
+  .summary-section h4 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #4a4540;
+    margin: 1.2rem 0 0.4rem 0;
+    font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+
+  .summary-card {
+    background: var(--card);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    font-size: 0.93rem;
+    line-height: 1.78;
+  }
+
+  .summary-card p {
+    margin-bottom: 0.7rem;
+  }
+
+  .summary-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .summary-card ul {
+    margin: 0.4rem 0 0.7rem 1.2em;
+    padding: 0;
+  }
+
+  .summary-card ul:last-child {
+    margin-bottom: 0;
+  }
+
+  .summary-card li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .summary-card .fr {
+    font-style: italic;
+    color: #6b6560;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    font-size: 0.75rem;
+    color: #8a857e;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 2rem 1rem 3rem; }
+    h1 { font-size: 1.4rem; }
+    .toc-sub { margin-left: 1.5em; }
+  }
+</style>
+
+<div class="page">
+
+<header>
+  <div class="book-label">書誌情報・目次・内容梗概</div>
+  <h1>Les religions de l'Inde</h1>
+  <div class="subtitle">インドの諸宗教</div>
+  <div class="meta">
+    <span>A. Barth（オーギュスト・バルト）</span>
+    <span class="sep">·</span>
+    <span>Paris: Sandoz et Fischbacher, 1879</span>
+    <span class="sep">·</span>
+    <span>182 pp.</span>
+    <span class="sep">·</span>
+    <span>Encyclopédie des sciences religieuses, t. VI 所収</span>
+  </div>
+</header>
+
+<h2>目次</h2>
+
+<ol class="toc">
+  <li>
+    <span class="ch-num">序</span>
+    <span class="ch-title">凡例</span>
+    <span class="ch-title-fr">Avant-propos</span>
+  </li>
+  <li>
+    <span class="ch-num">I</span>
+    <span class="ch-title">ヴェーダの宗教──リグ・ヴェーダ</span>
+    <span class="ch-title-fr">Religions védiques / Rig-Vêda</span>
+  </li>
+  <li>
+    <span class="ch-num">II</span>
+    <span class="ch-title">バラモン教</span>
+    <span class="ch-title-fr">Brahmanisme</span>
+    <ol class="toc-sub">
+      <li><span class="sub-num">II-1</span> 祭儀 <span class="ch-title-fr">Rituel</span></li>
+      <li><span class="sub-num">II-2</span> 哲学的思弁 <span class="ch-title-fr">Spéculations philosophiques</span></li>
+      <li><span class="sub-num">II-3</span> 衰退 <span class="ch-title-fr">Déclin</span></li>
+    </ol>
+  </li>
+  <li>
+    <span class="ch-num">III</span>
+    <span class="ch-title">仏教</span>
+    <span class="ch-title-fr">Bouddhisme</span>
+  </li>
+  <li>
+    <span class="ch-num">IV</span>
+    <span class="ch-title">ジャイナ教</span>
+    <span class="ch-title-fr">Jaïnisme</span>
+  </li>
+  <li>
+    <span class="ch-num">V</span>
+    <span class="ch-title">ヒンドゥー教</span>
+    <span class="ch-title-fr">Hindouisme</span>
+    <ol class="toc-sub">
+      <li><span class="sub-num">V-1</span> 宗派の神々 <span class="ch-title-fr">Les divinités sectaires</span></li>
+      <li><span class="sub-num">V-2</span> 宗派の歴史と教義 <span class="ch-title-fr">Histoire et doctrines des sectes</span></li>
+    </ol>
+  </li>
+</ol>
+
+<h2>内容梗概</h2>
+
+<section class="summary-section">
+  <h3><span class="sec-num">序</span> 凡例 <span class="fr">Avant-propos</span></h3>
+  <div class="summary-card">
+    <p>本書の方法論と範囲を提示する。バルトはインド宗教史を一箇の連続する発展過程として捉え、ヴェーダ時代から近世ヒンドゥー教に至る通時的叙述を企図する。サンスクリット語の転写規則（学術的ローマ字表記の凡例）を示し、主要な先行研究（マックス・ミュラー、コールブルック、ウィルソンら）への言及がある。</p>
+  </div>
+</section>
+
+<section class="summary-section">
+  <h3><span class="sec-num">I</span> ヴェーダの宗教──リグ・ヴェーダ <span class="fr">Religions védiques</span></h3>
+  <div class="summary-card">
+    <p>ヴェーダ文献の全体像──四サンヒター（リグ・ヴェーダ、サーマ・ヴェーダ、ヤジュル・ヴェーダ、アタルヴァ・ヴェーダ）、ブラーフマナ文献、アーラニヤカを概観し、その成立年代と相互関係を論ずる。</p>
+    <p>リグ・ヴェーダの神々を体系的に分類する。</p>
+    <ul>
+      <li><b>アグニ</b>（火神）──祭火の神格化、天上・地上・祭壇の三重の火としての性格</li>
+      <li><b>ソーマ</b>──祭祀飲料の神格化、天上の月との同一視</li>
+      <li><b>インドラ</b>──武勇神、ヴリトラ殺し（竜退治神話）、雷雨・豊穣との結びつき</li>
+      <li><b>ヴァルナ</b>──道徳的秩序（リタ）の守護者、天空神、倫理的性格の卓越</li>
+      <li><b>マルト群・ルドラ</b>──暴風神群とその父神、後代のシヴァ神の萌芽</li>
+      <li><b>太陽神群</b>（スーリヤ、サヴィトリ、ヴィシュヌ等）──ヴィシュヌの「三歩」神話</li>
+      <li><b>ウシャス</b>（暁の女神）、<b>アシュヴィン双神</b>、<b>トヴァシュトリ</b>（工匠神）</li>
+    </ul>
+    <p>宇宙開闢論（ナーサディーヤ讃歌 X.129 等）における一元論的萌芽を指摘し、リグ・ヴェーダの宗教が多神教でありながら、しばしば一神教的・汎神論的傾向を示す点を強調する。祭祀の原初的形態、道徳観念（リタ＝宇宙的秩序）、死後の観念についても論ずる。</p>
+  </div>
+</section>
+
+<section class="summary-section">
+  <h3><span class="sec-num">II</span> バラモン教 <span class="fr">Brahmanisme</span></h3>
+
+  <h4>II-1. 祭儀 <span class="fr">Rituel</span></h4>
+  <div class="summary-card">
+    <p>ヴェーダ時代後期からバラモン教確立期への移行を論ずる。アーリヤ人の東方・南方への地理的拡大、ヴァルナ（四姓）制度の固定化、とりわけバラモン（祭官）階級の社会的優位の確立過程を叙述する。</p>
+    <p>バラモンの教育制度（ブラフマチャルヤ＝学生期）、家庭祭（サンスカーラ）の体系──誕生儀礼、入門式（ウパナヤナ）、婚姻儀礼、葬送儀礼──を詳述する。</p>
+    <p>発達した祭儀体系として、アグニホートラ（日々の火祭）、ソーマ祭（複雑な公的祭祀）、馬祀祭（アシュヴァメーダ）、人祀祭（プルシャメーダ）を紹介する。祭祀の神秘的意義──祭祀行為そのものが宇宙の維持に不可欠であるという観念──の発展を跡づけ、これがウパニシャッド哲学への橋渡しとなったことを示す。偶像崇拝の問題にも触れ、ヴェーダ期には神像崇拝が存在しなかった点を指摘する。</p>
+  </div>
+
+  <h4>II-2. 哲学的思弁 <span class="fr">Spéculations philosophiques</span></h4>
+  <div class="summary-card">
+    <p>ウパニシャッド文献群を中心に、バラモン教の哲学的発展を論ずる。</p>
+    <ul>
+      <li><b>宇宙開闢論の展開</b>──ブラーフマナ文献における創造神話からウパニシャッドの抽象的一元論への発展</li>
+      <li><b>サーンキヤ哲学</b>──プルシャ（精神原理）とプラクリティ（物質原理）の二元論、三グナ説</li>
+      <li><b>ヴェーダーンタ哲学</b>──アートマン（個我）とブラフマン（宇宙我）の同一性（「汝はそれなり」<span class="fr">tat tvam asi</span>）、不二一元論（アドヴァイタ）の形成</li>
+      <li><b>ヨーガ</b>──精神集中と苦行の体系化</li>
+      <li><b>業と輪廻</b>（カルマとサンサーラ）──行為の果報と転生の教説の確立</li>
+    </ul>
+    <p>出離・遊行者（サンニャーシン）の理想、苦行主義の発展、さらにはチャールヴァーカ派（唯物論・懐疑論）の存在にも言及し、バラモン教内部の思想的多様性を示す。</p>
+  </div>
+
+  <h4>II-3. 衰退 <span class="fr">Déclin</span></h4>
+  <div class="summary-card">
+    <p>バラモン教の制度的硬直化と衰退の過程を論ずる。ダルマシャーストラ（法典）文献、とりわけマヌ法典の成立と社会規範の法典化を扱う。ブラフマー神が創造神として前面に出る一方、生きた信仰の対象としては後退する過程を描く。正統派（アースティカ）の形成、ヴェーダーンタの優位の確立、そして祭儀の形骸化を跡づける。この衰退期がまさに仏教・ジャイナ教という革新的運動を生む土壌となったことを示唆する。</p>
+  </div>
+</section>
+
+<section class="summary-section">
+  <h3><span class="sec-num">III</span> 仏教 <span class="fr">Bouddhisme</span></h3>
+  <div class="summary-card">
+    <p>ゴータマ・ブッダの生涯を伝承資料に基づいて叙述する。その没年を紀元前482〜472年頃と推定する。教義の中核を体系的に提示する。</p>
+    <ul>
+      <li><b>四聖諦</b>──苦（ドゥッカ）、集（苦の原因＝渇愛）、滅（苦の止滅）、道（八正道）</li>
+      <li><b>十二因縁</b>（ニダーナ）──無明から老死に至る縁起の連鎖</li>
+      <li><b>五蘊</b>（スカンダ）──色・受・想・行・識、無我（アナートマン）の教説</li>
+      <li><b>涅槃</b>（ニルヴァーナ）──その解釈をめぐる議論（虚無か、至福の境地か）</li>
+    </ul>
+    <p>仏教とバラモン哲学との比較を行い、仏教がバラモン教の哲学的前提（業・輪廻）を共有しつつ、祭祀主義とカースト制を否定した点を強調する。僧伽（サンガ）の制度、仏教の伝播（アショーカ王の役割）、インド亜大陸における仏教の最終的衰退とその原因を論ずる。</p>
+  </div>
+</section>
+
+<section class="summary-section">
+  <h3><span class="sec-num">IV</span> ジャイナ教 <span class="fr">Jaïnisme</span></h3>
+  <div class="summary-card">
+    <p>ジャイナ教の資料状況を概観した上で、仏教との比較を行う。開祖マハーヴィーラ（ジナ）の伝記、ジャイナ教の教義体系を叙述する。</p>
+    <ul>
+      <li><b>三宝</b>（トリラトナ）──正信・正智・正行</li>
+      <li><b>白衣派と裸形派</b>（シュヴェーターンバラとディガンバラ）──両派の分裂とその教義的・実践的相違</li>
+      <li><b>不殺生</b>（アヒンサー）──ジャイナ教倫理の中核原理としての徹底した非暴力</li>
+    </ul>
+    <p>ジャイナ教が仏教と同時代に発し、類似の社会的背景（バラモン教の祭祀主義への反動）から生まれながら、仏教と異なりインド国内で存続し続けた事実に注意を促す。</p>
+  </div>
+</section>
+
+<section class="summary-section">
+  <h3><span class="sec-num">V</span> ヒンドゥー教 <span class="fr">Hindouisme</span></h3>
+
+  <h4>V-1. 宗派の神々 <span class="fr">Les divinités sectaires</span></h4>
+  <div class="summary-card">
+    <p>ヒンドゥー教の二大宗派神格──シヴァとヴィシュヌ──の形成過程を論ずる。</p>
+    <ul>
+      <li><b>シヴァ</b>──ヴェーダのルドラ神からの発展、破壊と苦行の両面的性格、リンガ崇拝</li>
+      <li><b>ヴィシュヌとクリシュナ</b>──ヴェーダのヴィシュヌ神の変容、クリシュナ伝承の発展と合流</li>
+      <li><b>アヴァターラ</b>（化身）説──ヴィシュヌの十化身の理論、とりわけ仏陀のヴィシュヌ化身への取り込み</li>
+      <li><b>ラーマ</b>──ラーマーヤナ叙事詩の展開とラーマ崇拝の形成</li>
+    </ul>
+  </div>
+
+  <h4>V-2. 宗派の歴史と教義 <span class="fr">Histoire et doctrines des sectes</span></h4>
+  <div class="summary-card">
+    <p>ヒンドゥー教諸宗派の歴史的展開と教義を論ずる。</p>
+    <ul>
+      <li><b>トリムールティ</b>（三神一体）──ブラフマー（創造）、ヴィシュヌ（維持）、シヴァ（破壊）の三位一体論</li>
+      <li><b>バガヴァッド・ギーター</b>──マハーバーラタ叙事詩中の宗教詩としての位置づけ、信愛（バクティ）・行為（カルマ）・知識（ジュニャーナ）の三道の統合</li>
+      <li><b>パーンチャラートラ派・バーガヴァタ派</b>──ヴィシュヌ教の宗派的展開</li>
+      <li><b>ラーマーヌジャ</b>（12世紀）──制限不二一元論（ヴィシシュタードヴァイタ）による信愛の道の哲学的基礎づけ</li>
+    </ul>
+    <p>バルトはヒンドゥー教を、ヴェーダ以来の諸要素──祭祀、哲学的思弁、民間信仰、宗派的帰依──が重層的に堆積した複合体として描き出す。その統一性は教義にではなく、カースト制度とヴェーダの権威の承認という社会的枠組みにあるとする。</p>
+  </div>
+</section>
+
+<footer>
+  A. Barth, « Les religions de l'Inde », <em>Encyclopédie des sciences religieuses</em>, t. VI, Paris, 1879<br>
+  原本：BnF Gallica（フランス国立図書館デジタルコレクション）
+</footer>
+
+</div>
