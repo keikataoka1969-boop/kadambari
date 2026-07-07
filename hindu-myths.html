@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 — 神々の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4BE;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4BE;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'ॐ';
+  position: absolute;
+  font-size: 18rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>ヒンドゥー神話入門</h1>
+  <div class="line"></div>
+  <p class="sub">インドの壮大な叙事詩と神々の物語——プラーナ百科事典（Vettam Mani著）から厳選した名場面を、神様ごとにわかりやすく紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p>ヒンドゥー教には何千もの神々が登場しますが、なかでもとくに重要な神様たちの「名場面」を集めました。壮大で、ときにユーモラスな物語の世界へようこそ。</p>
+  </div>
+
+  <!-- ═══════ ガネーシャ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🐘</div>
+      <div>
+        <h2>ガネーシャ（Gaṇapati）</h2>
+        <div class="sanskrit">障害を取り除く神・学問と知恵の神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      象の頭をもつ、ヒンドゥー教でもっとも親しまれる神のひとり。新しいことを始めるとき、まずガネーシャに祈るのがインドの習慣です。ぽっちゃりした体に折れた牙、手にはお菓子（モーダカ）——その愛嬌ある姿の裏には、驚きのエピソードが隠されています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>なぜ象の頭なのか</div>
+      <p>母パールヴァティーが沐浴するとき、体のこすり粉（ウブタン）から少年を作り、「誰も入れないで」と番をさせました。そこへ帰ってきた父シヴァ——しかし少年は「通さない」と譲りません。怒ったシヴァは少年の<span class="highlight">首を切り落として</span>しまいます。</p>
+      <p>嘆き悲しむパールヴァティーをなだめるため、シヴァは家来に「最初に見つけた北向きに寝ている生き物の頭を持ってこい」と命じました。見つかったのは<span class="highlight">象</span>。こうして少年は象の頭で蘇り、ガネーシャとなったのです。</p>
+      <div class="aside">別の伝承では、土星神シャニが赤ちゃんを見つめただけで頭が焼け落ちた、という版もあります。シャニの視線はそれほど強烈だったのです。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>世界一周レース——知恵の勝利</div>
+      <p>ある日、神々の間で「世界を一周した者にマンゴーを与える」という競争が起こりました。兄のスカンダ（ムルガン）は孔雀に乗って猛スピードで世界を駆け巡ります。</p>
+      <p>一方、体の大きなガネーシャはネズミに乗ってとても追いつけません。そこでガネーシャは<span class="highlight">両親（シヴァとパールヴァティー）のまわりをぐるりと回り</span>、こう言いました——「父と母こそが私の全世界です」。</p>
+      <p>この答えに感動した両親はガネーシャにマンゴーを与えました。力ではなく知恵で勝つ、ガネーシャらしいエピソードです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>マハーバーラタの書記官</div>
+      <p>聖仙ヴィヤーサが史上最長の叙事詩マハーバーラタを口述しようとしたとき、書き取り役を頼まれたのがガネーシャでした。ガネーシャは条件を出します。「一瞬たりとも口述を止めないでくれ」。ヴィヤーサも条件を返します。「意味を理解してから書いてくれ」。</p>
+      <p>口述の途中、ガネーシャのペンが折れました。彼は迷わず<span class="highlight">自分の牙を折ってペン代わりに</span>し、書き続けたと伝えられています。ガネーシャの牙が片方だけなのは、このためだという説があります。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ シヴァ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🔱</div>
+      <div>
+        <h2>シヴァ（Śiva）</h2>
+        <div class="sanskrit">破壊と再生の神・ヨーガの王</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ヒンドゥー教の三大神（トリムールティ）のひとりで、「破壊」を司ります。ただし破壊は終わりではなく、新たな創造のための浄化。瞑想する苦行者でありながら、家族思いの夫でもある——矛盾を内包した奥深い神です。額の第三の目、首に巻きつく蛇、三叉の矛（トリシューラ）がトレードマーク。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>猛毒を飲み干した青い喉</div>
+      <p>神々と悪魔（アスラ）が不死の霊薬アムリタを得ようと、大海を棒で攪拌（かくはん）する「乳海攪拌」が行われました。しかし霊薬より先に出てきたのは、世界を滅ぼすほどの<span class="highlight">猛毒カーラクータ</span>。</p>
+      <p>誰も手を出せない毒を、シヴァがゴクリと飲み干しました。妻パールヴァティーが喉を押さえて毒が体内に入るのを止めたため、毒は喉にとどまり、シヴァの喉は<span class="highlight">青く</span>染まりました。以来、シヴァは「ニーラカンタ（青い喉）」と呼ばれるようになったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>ダクシャの祭祀を破壊する</div>
+      <p>シヴァの義父ダクシャは盛大な祭祀（ヤジュニャ）を開催しましたが、シヴァだけを招待しませんでした。妻サティー（パールヴァティーの前世）は「夫を侮辱するような父の祭祀には耐えられない」と、自ら<span class="highlight">火に身を投じて</span>命を絶ちます。</p>
+      <p>妻の死を知ったシヴァの怒りは凄まじく、恐ろしい化身ヴィーラバドラを生み出してダクシャの祭祀を完膚なきまでに破壊。ダクシャの首を切り落とし、のちにヤギの頭をつけて蘇らせました。</p>
+      <div class="aside">この物語は、傲慢への戒めであると同時に、シヴァの激しい愛の深さを物語っています。サティーは後にパールヴァティーとして転生し、千年の苦行を経てシヴァと再び結ばれます。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>三つの都市を焼く——トリプラ伝説</div>
+      <p>三人のアスラ兄弟が、それぞれ金・銀・鉄の空飛ぶ都市（トリプラ）を建設し、千年に一度だけ三つの都市が一直線に並びます。その瞬間に一本の矢で貫かなければ破壊できない——それがブラフマーの与えた条件でした。</p>
+      <p>シヴァはメール山を弓に、ヴァースキ蛇を弦に、ヴィシュヌ自身を矢じりにした特別な矢を構え、三都市が揃った<span class="highlight">一瞬</span>を逃さず射抜きました。燃え上がる三都市——シヴァはこの功績から「トリプラーンタカ（三都市の破壊者）」と称されます。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ クリシュナ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🦚</div>
+      <div>
+        <h2>クリシュナ（Kṛṣṇa）</h2>
+        <div class="sanskrit">ヴィシュヌの化身・愛と知恵の神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      青黒い肌に孔雀の羽飾り、笛を奏でる美しい少年——クリシュナはヴィシュヌ神の第八の化身であり、インドでもっとも人気のある神です。いたずら好きな幼年期から、哲学的な教えを説く大人まで、その物語は幅広い魅力にあふれています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>暴君カンサからの脱出</div>
+      <p>悪王カンサは予言を受けます——「妹デーヴァキーの<span class="highlight">八番目の子</span>がお前を殺すだろう」。カンサはデーヴァキーとその夫ヴァスデーヴァを牢獄に閉じ込め、生まれた子を次々と殺していきました。</p>
+      <p>八番目の子クリシュナが生まれた夜、奇跡が起こります。牢の鎖は自然に外れ、番兵は眠りに落ち、大雨で増水したヤムナー川は赤ん坊の足に触れると道を開きました。父ヴァスデーヴァは赤ん坊を頭上に掲げて川を渡り、牧畜民の村ゴークラへ届けたのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>いたずら坊主の口の中に宇宙</div>
+      <p>幼いクリシュナは泥を食べたと兄バララーマに告げ口されます。母ヤショーダーが「口を開けなさい！」と叱ると、クリシュナがパカッと口を開けた——その中に母が見たものは、<span class="highlight">全宇宙</span>でした。</p>
+      <p>星々、山々、海、すべての生き物、そして自分自身までもがクリシュナの口の中に存在していました。ヤショーダーは一瞬、息子が神であることを悟りますが、クリシュナの幻力（マーヤー）により記憶は薄れ、再び普通の母親に戻ったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ゴーヴァルダナ山を傘にして</div>
+      <p>村人たちは毎年、雷神インドラに感謝の供物を捧げていました。少年クリシュナは「山のほうが私たちに恵みを与えてくれる」と言い、供物をゴーヴァルダナ山に捧げるよう勧めます。</p>
+      <p>怒ったインドラは<span class="highlight">七日七晩</span>の大豪雨を降らせました。クリシュナは片手の<span class="highlight">小指</span>でゴーヴァルダナ山を持ち上げ、巨大な傘のように村人と牛たちを守り続けます。ついにインドラは敗北を認め、クリシュナに頭を下げたのでした。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">04</span>バガヴァッド・ギーター——戦場の哲学</div>
+      <p>マハーバーラタの大戦争。王子アルジュナは敵軍に親族や師匠を見つけ、弓を落として「戦えない」と嘆きます。御者を務めるクリシュナはここで、ヒンドゥー教最重要の教え<span class="highlight">バガヴァッド・ギーター</span>を説きます。</p>
+      <p>「結果に執着せず、義務（ダルマ）を果たせ」「魂は不滅であり、肉体は衣服のように着替えるもの」——700節にわたるこの対話は、単なる戦争の話ではなく、人生の迷いに対する普遍的な答えとして今も世界中で読まれています。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ラーマ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🏹</div>
+      <div>
+        <h2>ラーマ（Rāma）</h2>
+        <div class="sanskrit">ヴィシュヌの化身・理想の王</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ラーマーヤナの主人公。「ダルマ（正義）」を体現する理想的な王子として描かれ、その物語はインド全土で愛されています。毎年秋の「ディーワーリー」祭は、ラーマの凱旋を祝うお祭りです。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>シヴァの弓を折る——シーターとの結婚</div>
+      <p>ミティラー国の王ジャナカは、娘シーターの婿選びの条件として「シヴァ神の弓を持ち上げ、弦を張れる者」と告げました。数多の王族が挑みましたが、誰も弓を持ち上げることすらできません。</p>
+      <p>若きラーマが弓に手をかけると、軽々と持ち上げ、弦を張ろうとした瞬間——<span class="highlight">弓がまっぷたつに折れた</span>のです。その轟音は世界中に響き渡りました。ラーマとシーターの結婚が決まった瞬間です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>十四年の追放とシーター奪還</div>
+      <p>継母カイケーイーの策略で、ラーマはアヨーディヤーの王位を奪われ、<span class="highlight">十四年間の森の追放</span>を命じられます。妻シーターと弟ラクシュマナが自ら同行しました。</p>
+      <p>追放中、魔王ラーヴァナが黄金の鹿に化けた部下を使ってラーマをおびき出し、隙を突いてシーターをランカー島（スリランカ）へさらいます。ラーマは猿の王スグリーヴァ、そして猿の戦士ハヌマーンと同盟を結び、大軍勢でランカーに攻め入ります。</p>
+      <p>ハヌマーンは海を一跳びで越えてランカーを偵察し、尻尾に火をつけられながら街に火を放つ大活躍。激戦の末、ラーマはラーヴァナを倒し、シーターを救出。アヨーディヤーへの帰還を祝い、人々が灯した無数のランプが<span class="highlight">ディーワーリー祭</span>の起源となりました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>アハリヤーの救済</div>
+      <p>聖仙ガウタマの妻アハリヤーは、ある過ちにより夫の呪いで<span class="highlight">石</span>に変えられていました。何千年もの間、森の中で石として眠り続けていたのです。</p>
+      <p>師ヴィシュヴァーミトラに連れられて森を通りかかったラーマが、その石に足を触れた瞬間、アハリヤーは人間の姿を取り戻しました。ラーマの足の清浄さが、長い呪いを解いたのです。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ パールヴァティー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🪷</div>
+      <div>
+        <h2>パールヴァティー（Pārvatī）</h2>
+        <div class="sanskrit">シヴァの妃・力と慈愛の女神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ヒマラヤの娘として生まれ、千年の苦行でシヴァの心を動かした女神。優しい妻・母であると同時に、ドゥルガーやカーリーといった恐ろしい戦いの姿も持ちます。「シャクティ（力）」そのものの化身です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>千年の苦行——シヴァを動かす</div>
+      <p>前世でサティーとして自死した後、パールヴァティーとしてヒマラヤ山の王の娘に転生しました。目的はただひとつ——シヴァと再び結ばれること。</p>
+      <p>しかし妻を失ったシヴァは深い瞑想に入り、誰にも心を開きません。パールヴァティーは<span class="highlight">千年もの苦行</span>を行い、最後には食べ物すら断って落ち葉だけで生きました。</p>
+      <p>シヴァは彼女を試すため、老いたバラモンの少年（ヴァトゥ）に化けて現れ、「シヴァなんて灰まみれの放浪者だ。なぜそんな男を望む？」と問いかけます。パールヴァティーは毅然として答えました。「シヴァの本質を知らぬ者の言葉には耳を貸しません」。その揺るぎない愛を見たシヴァは正体を明かし、ふたりは結ばれたのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>マヒシャースラを倒すドゥルガー</div>
+      <p>水牛の悪魔マヒシャースラは「いかなる神にも男にも殺されない」という特権（ヴァラ）をブラフマーから得て、天界を征服しました。困り果てた神々は怒りの光を集結させ、そこから生まれたのが女神<span class="highlight">ドゥルガー</span>——パールヴァティーの戦闘形態です。</p>
+      <p>シヴァからは三叉の矛、ヴィシュヌからは円盤、インドラからは雷、それぞれの神が最強の武器を彼女に授けました。十本の腕にそれらの武器を持ち、獅子に乗ったドゥルガーは、マヒシャースラとの壮絶な戦いの末に見事打ち倒したのです。</p>
+      <div class="aside">この勝利を祝うのが、インドの秋の大祭「ナヴァラートリ（九夜祭）」と「ドゥッセラ」です。女神の力が悪を打ち負かした物語として、今も盛大に祝われています。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ スカンダ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⚔️</div>
+      <div>
+        <h2>スカンダ（Subrahmaṇya）</h2>
+        <div class="sanskrit">軍神・シヴァの息子・六つの顔を持つ神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      カールッティケーヤ、ムルガンとも呼ばれる、シヴァとパールヴァティーの息子。南インドでは最高の人気を誇る神です。六つの顔と十二本の腕を持ち、孔雀に乗って戦う勇壮な姿で知られています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>火と水から生まれた戦神</div>
+      <p>悪魔ターラカースラは「シヴァの息子で、生まれて<span class="highlight">七日目</span>の子にしか殺されない」という特権を得ました。妻を亡くしたシヴァには息子ができるはずがない——ターラカースラはそう考えたのです。</p>
+      <p>しかしシヴァがパールヴァティーと結ばれた後、シヴァの精気が火の神アグニに、そしてガンジス川に渡り、川辺のシャラの葦原（シャラヴァナ）で六人の赤ん坊として誕生しました。六人の乳母（クリッティカー星＝プレアデス星団）に育てられ、パールヴァティーが抱きしめると<span class="highlight">六つの顔を持つ一人の子</span>になったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>七日目の勝利</div>
+      <p>生まれたばかりのスカンダは神々の軍の総司令官に任命されました。すべての神が最強の武器を贈ります——シヴァからは軍勢、ヴィシュヌからは力、アグニからは槍（ヴェール）。</p>
+      <p>そして<span class="highlight">生後わずか七日目</span>、スカンダはターラカースラの軍勢を打ち破り、悪魔を討ち取りました。不可能と思われた予言が、まさにその通りに成就したのです。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ガンガー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🌊</div>
+      <div>
+        <h2>ガンガー（Gaṅgā）</h2>
+        <div class="sanskrit">聖なる河の女神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ガンジス川を神格化した女神。ヴィシュヌの足元から流れ出し、天界から地上に降りてきたとされます。その水に触れるだけで罪が清められるとされ、ヒンドゥー教徒にとって最も神聖な存在のひとつです。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>バギーラタの大願——天から地上へ</div>
+      <p>古代の王サガラの六万人の息子たちが、聖仙カピラの怒りに触れて焼き尽くされました。彼らの魂を浄化できるのは天界にあるガンガーの水だけ。しかしガンガーを地上に降ろすなど、誰にもできないと思われていました。</p>
+      <p>何世代もの後、子孫のバギーラタ王子が一人で立ち上がります。彼は<span class="highlight">数千年もの苦行</span>でブラフマーを感動させ、ガンガーの降下を許可してもらいます。しかし問題がありました——天界から落ちるガンガーの水流はあまりに激しく、地上を押し潰してしまうのです。</p>
+      <p>そこでシヴァが頭頂で<span class="highlight">ガンガーを受け止め</span>ました。シヴァの絡まった髪が水流を和らげ、穏やかになったガンガーは地上へ流れ下りました。途中、聖仙ジャフヌの修行所を水浸しにしてしまい、怒ったジャフヌはガンガーを<span class="highlight">飲み込んで</span>しまいます。懇願の末、ジャフヌは耳からガンガーを放出。こうしてガンガーは「ジャーフナヴィー（ジャフヌの娘）」とも呼ばれるようになりました。</p>
+      <p>ついにガンガーはサガラの息子たちの灰に触れ、六万の魂は天へ昇っていったのです。一人の王子の不屈の祈りが、天の河を地上にもたらしました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>八人の息子と約束——シャンタヌ王の物語</div>
+      <p>ガンガーは人間の王シャンタヌと結婚しますが、不思議な条件を出しました——「私のすることに決して口出ししないで」。シャンタヌは同意します。</p>
+      <p>しかしガンガーは生まれた赤ん坊を次々と<span class="highlight">川に沈めて</span>いきました。七人の息子が流されるのを、シャンタヌは約束に縛られて止められません。八人目が生まれたとき、ついに耐えかねたシャンタヌが「やめてくれ！」と叫びます。</p>
+      <p>ガンガーは真相を明かしました。八人の息子は天界のヴァス神群（アシュタヴァス）で、呪いによって人間として生まれなければならなかったのです。七人は即座に天界に返す「慈悲」でした。最後の一人——のちの<span class="highlight">ビーシュマ</span>——だけが地上に残り、マハーバーラタ最強にして最も悲劇的な戦士となるのです。</p>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>ヒンドゥー神話入門 — 七柱の神々の物語</p>
+    <p class="src">出典: Puranic Encyclopaedia (Vettam Mani著) より抜粋・再構成</p>
+  </div>
+
+</div>
+
+</body>
+</html>

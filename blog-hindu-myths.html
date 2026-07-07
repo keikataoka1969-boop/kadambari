@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ブログ：ヒンドゥー神話入門を作りました</title>
+<style>
+:root {
+  --bg: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --text: #1E1E1E;
+  --text-muted: #5C5C5C;
+  --accent: #2D5A8E;
+  --accent-light: rgba(45, 90, 142, 0.08);
+  --border: #E0DDD6;
+  --link: #2D5A8E;
+  --link-hover: #1A3D66;
+  --tag-bg: #EDE8DF;
+  --tag-text: #6B5D4F;
+  --code-bg: #F4F1EA;
+  --blockquote-border: #D4882E;
+  --blockquote-bg: rgba(212, 136, 46, 0.06);
+  --preview-bg: #FDF6E8;
+  --preview-border: #D4882E;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161616;
+    --bg-card: #1E1E1E;
+    --text: #E0DDD6;
+    --text-muted: #9A948A;
+    --accent: #6EAAE8;
+    --accent-light: rgba(110, 170, 232, 0.1);
+    --border: #2E2E2E;
+    --link: #6EAAE8;
+    --link-hover: #9CC4F0;
+    --tag-bg: #2A2520;
+    --tag-text: #B8A890;
+    --code-bg: #222018;
+    --blockquote-border: #D4882E;
+    --blockquote-bg: rgba(212, 136, 46, 0.08);
+    --preview-bg: #1E1A12;
+    --preview-border: #B87A28;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161616;
+  --bg-card: #1E1E1E;
+  --text: #E0DDD6;
+  --text-muted: #9A948A;
+  --accent: #6EAAE8;
+  --accent-light: rgba(110, 170, 232, 0.1);
+  --border: #2E2E2E;
+  --link: #6EAAE8;
+  --link-hover: #9CC4F0;
+  --tag-bg: #2A2520;
+  --tag-text: #B8A890;
+  --code-bg: #222018;
+  --blockquote-border: #D4882E;
+  --blockquote-bg: rgba(212, 136, 46, 0.08);
+  --preview-bg: #1E1A12;
+  --preview-border: #B87A28;
+}
+:root[data-theme="light"] {
+  --bg: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --text: #1E1E1E;
+  --text-muted: #5C5C5C;
+  --accent: #2D5A8E;
+  --accent-light: rgba(45, 90, 142, 0.08);
+  --border: #E0DDD6;
+  --link: #2D5A8E;
+  --link-hover: #1A3D66;
+  --tag-bg: #EDE8DF;
+  --tag-text: #6B5D4F;
+  --code-bg: #F4F1EA;
+  --blockquote-border: #D4882E;
+  --blockquote-bg: rgba(212, 136, 46, 0.06);
+  --preview-bg: #FDF6E8;
+  --preview-border: #D4882E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+article {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0.6rem 0 1rem;
+  letter-spacing: 0.02em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.78rem;
+  padding: 0.2em 0.7em;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.6rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--link-hover); }
+
+blockquote {
+  border-left: 3px solid var(--blockquote-border);
+  background: var(--blockquote-bg);
+  padding: 0.8rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+ul, ol {
+  margin: 0.8rem 0 1.2rem 1.5rem;
+}
+li {
+  margin-bottom: 0.4rem;
+}
+
+.preview-box {
+  border: 2px solid var(--preview-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+.preview-header {
+  background: var(--preview-bg);
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: 1px solid var(--preview-border);
+}
+.preview-icon { font-size: 1.6rem; }
+.preview-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.preview-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+.preview-body {
+  padding: 1rem 1.2rem;
+  background: var(--bg-card);
+}
+.preview-body p { font-size: 0.92rem; margin-bottom: 0.6rem; }
+.preview-body p:last-child { margin-bottom: 0; }
+.preview-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1.4em;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.preview-link:hover {
+  background: var(--link-hover);
+  color: #fff;
+}
+
+.toc {
+  background: var(--accent-light);
+  border-radius: 8px;
+  padding: 1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.toc-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.toc ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+.toc li {
+  margin-bottom: 0.25rem;
+  font-size: 0.92rem;
+}
+.toc li::before {
+  content: '—';
+  color: var(--text-muted);
+  margin-right: 0.5em;
+}
+
+.deity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+}
+.deity-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem;
+  text-align: center;
+}
+.deity-card .icon { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.deity-card .name { font-weight: 700; font-size: 0.95rem; }
+.deity-card .role { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+code {
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  font-size: 0.88em;
+  font-family: 'Menlo', 'Consolas', monospace;
+}
+
+.footer-note {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+
+<article>
+
+<div class="date">2026年7月7日</div>
+<h1>「プラーナ百科事典」からヒンドゥー神話の入門ページを作った話</h1>
+<div class="tags">
+  <span class="tag">ヒンドゥー教</span>
+  <span class="tag">インド神話</span>
+  <span class="tag">プラーナ文献</span>
+  <span class="tag">デジタル人文学</span>
+</div>
+
+<p>ヒンドゥー教の神話は壮大で複雑ですが、その面白さは圧倒的です。象の頭をつけられた少年、猛毒を飲み干して喉が青くなった神、口を開けたら宇宙が見えた赤ん坊——ひとつひとつのエピソードが強烈で、一度聞いたら忘れられません。</p>
+
+<p>今回、Vettam Mani著『Puranic Encyclopaedia』（プラーナ百科事典）という大著から面白い神話を抜き出して、学生向けの入門ページを作りました。</p>
+
+<div class="preview-box">
+  <div class="preview-header">
+    <div class="preview-icon">🙏</div>
+    <div>
+      <div class="preview-title">ヒンドゥー神話入門 — 神々の物語</div>
+      <div class="preview-sub">七柱の神々の名場面を日本語でわかりやすく紹介</div>
+    </div>
+  </div>
+  <div class="preview-body">
+    <p>インドの叙事詩・プラーナ文献から厳選した名場面を、神様ごとにまとめました。ガネーシャ、シヴァ、クリシュナ、ラーマ、パールヴァティー、スカンダ、ガンガーの7柱を収録。</p>
+    <a class="preview-link" href="hindu-myths.html">読んでみる</a>
+  </div>
+</div>
+
+<h2>なぜこれを作ったのか</h2>
+
+<p>ヒンドゥー教の神話を日本語で学ぼうとすると、断片的な解説か、逆に専門的すぎる学術論文のどちらかに行き着くことが多く、「物語として楽しめる入門テキスト」が意外と少ないと感じていました。</p>
+
+<p>一方で、Vettam Maniの『Puranic Encyclopaedia』は、マハーバーラタやラーマーヤナ、各プラーナ文献の情報を一冊にまとめた百科事典で、英語圏ではインド神話研究の定番参考書です。この膨大なテキスト（29,000行超）から「面白い話」を拾い上げて、読みやすい日本語にまとめれば、良い入門教材になるのではないかと考えました。</p>
+
+<h2>収録した七柱の神々</h2>
+
+<div class="deity-grid">
+  <div class="deity-card">
+    <div class="icon">🐘</div>
+    <div class="name">ガネーシャ</div>
+    <div class="role">知恵と障害除去の神</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🔱</div>
+    <div class="name">シヴァ</div>
+    <div class="role">破壊と再生の神</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🦚</div>
+    <div class="name">クリシュナ</div>
+    <div class="role">愛と知恵の化身</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🏹</div>
+    <div class="name">ラーマ</div>
+    <div class="role">理想の王</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🪷</div>
+    <div class="name">パールヴァティー</div>
+    <div class="role">力と慈愛の女神</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">⚔️</div>
+    <div class="name">スカンダ</div>
+    <div class="role">軍神</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🌊</div>
+    <div class="name">ガンガー</div>
+    <div class="role">聖なる河の女神</div>
+  </div>
+</div>
+
+<h2>見どころ</h2>
+
+<p>各神様ごとに2〜4つの代表的なエピソードを厳選しました。特におすすめのものをいくつか紹介します。</p>
+
+<h3>ガネーシャの「世界一周レース」</h3>
+<p>兄スカンダが孔雀に乗って世界中を駆け巡るなか、ガネーシャは両親のまわりをぐるりと一周して「父と母こそ私の全世界」と答え、見事に勝利します。知恵が力に勝つ、という教訓がシンプルに美しい。</p>
+
+<h3>クリシュナの口の中の宇宙</h3>
+<p>泥を食べたと叱られた幼いクリシュナが口を開けると、そこに全宇宙が広がっていた——母は一瞬だけ息子の神性を見ますが、すぐに忘れてしまう。日常と超越の間を行き来する、インド神話ならではの感覚が凝縮されたエピソードです。</p>
+
+<h3>ガンガーの降下</h3>
+<p>天の河を地上に降ろすために何世代もの苦行が必要だった物語。シヴァが髪で水流を受け止め、途中で聖仙に飲み込まれ——スケールの大きさと、神話的想像力の豊かさに圧倒されます。</p>
+
+<blockquote>
+  <p>ヒンドゥー神話の魅力は、神々がどこまでも「人間的」なところにあります。嫉妬し、怒り、いたずらし、深く愛する。完璧な存在ではなく、矛盾を抱えた存在として描かれるからこそ、何千年経っても物語として生き続けているのだと思います。</p>
+</blockquote>
+
+<h2>出典について</h2>
+
+<p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia: A Comprehensive Dictionary with Special Reference to the Epic and Puranic Literature』に基づいて再構成しています。原典はマハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、シヴァ・プラーナ、デーヴィー・バーガヴァタなど、多数のサンスクリット文献に典拠を持ちます。</p>
+
+<p>入門として読みやすくするため、複数の異伝を整理したり、物語の順序を再構成した箇所があります。より詳しく知りたい方は、原典やその翻訳にあたることをお勧めします。</p>
+
+<h2>ページへのリンク</h2>
+
+<p><a href="hindu-myths.html">ヒンドゥー神話入門 — 神々の物語</a>を読んでみてください。ダーク/ライト両テーマ対応で、スマートフォンでも快適に読めます。</p>
+
+<div class="footer-note">
+  <p>このページの内容は学術的な正確さを期していますが、あくまで入門的な紹介であり、研究目的には原典の参照をお勧めします。</p>
+</div>
+
+</article>
+
+</body>
+</html>
