@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第二弾 — 続・神々の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4BE;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'श्री';
+  position: absolute;
+  font-size: 16rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第二弾</div>
+  <h1>続・ヒンドゥー神話入門</h1>
+  <div class="line"></div>
+  <p class="sub">創造神ブラフマー、守護神ヴィシュヌ、雷霆の王インドラ、猿の英雄ハヌマーン、幸運の女神ラクシュミー、学問の女神サラスヴァティー——さらに六柱の神々の名場面を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p><a href="hindu-myths.html">第一弾</a>ではガネーシャ、シヴァ、クリシュナ、ラーマ、パールヴァティー、スカンダ、ガンガーの七柱を紹介しました。今回はさらに六柱の神々をとりあげ、プラーナ百科事典（Vettam Mani著）から厳選した名場面をお届けします。</p>
+  </div>
+
+  <!-- ═══════ ヴィシュヌ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🔵</div>
+      <div>
+        <h2>ヴィシュヌ（Viṣṇu）</h2>
+        <div class="sanskrit">維持と保護の神・十の化身をもつ最高神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ヒンドゥー教三大神のひとりで、宇宙の「維持」を司ります。世界に危機が訪れるたび、魚、亀、猪、人獅子、矮人、ラーマ、クリシュナなど様々な姿（アヴァターラ）に化身して降臨する守護神。蛇シェーシャの上で眠り、手にはスダルシャナ円盤と法螺貝パーンチャジャンヤを持ちます。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>大洪水の後——菩提樹の葉の上の赤ん坊</div>
+      <p>宇宙が大洪水に呑み込まれ、すべてが消え去った後——広大な水面にぷかぷかと浮かぶ<span class="highlight">菩提樹の葉</span>が一枚。その上に赤ん坊の姿のヴィシュヌが横たわっていました。</p>
+      <p>赤ん坊は考えます。「わたしは誰だろう？ 誰がわたしを作ったのだろう？」すると天から声が響き、宇宙の真理を告げました。やがてヴィシュヌのへそから<span class="highlight">蓮の花</span>が伸び、その花の上にブラフマーが生まれ、新たな宇宙の創造が始まるのです。</p>
+      <div class="aside">破壊と創造は終わりなく繰り返される——これがヒンドゥー教の宇宙観の核心です。ヴィシュヌは創造のたびにブラフマーを生み、ブラフマーが世界を形作ります。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>シヴァ・リンガの果てを探す競争</div>
+      <p>ある日、ヴィシュヌとブラフマーが「自分こそ最高の神だ」と言い争いを始めました。すると二神の前に、天にも地にも果てが見えない<span class="highlight">巨大な光の柱（リンガ）</span>が現れます。</p>
+      <p>「この柱の端を見つけた方が上だ」——ヴィシュヌは猪の姿になって下へ潜り、ブラフマーは白鳥になって上へ飛びました。ヴィシュヌは長い旅の末に「見つからない」と正直に認めて戻ります。しかしブラフマーは途中で見つけた花を証拠に「見つけた」と嘘をつきました。</p>
+      <p>柱の正体はシヴァ。嘘を見抜いたシヴァは怒り、ブラフマーの<span class="highlight">五番目の顔を切り落とし</span>、「ブラフマーは人々から礼拝されないだろう」と宣言しました。正直に負けを認めたヴィシュヌは、逆にシヴァから深く敬われたのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>耳垢から生まれた悪魔マドゥとカイタバ</div>
+      <p>ヴィシュヌが蛇シェーシャの上で眠っていたとき、その<span class="highlight">耳垢</span>から二体の恐ろしい悪魔マドゥとカイタバが生まれました。彼らはヴィシュヌのへそから生まれたばかりのブラフマーを襲おうとします。</p>
+      <p>ブラフマーが必死に助けを求めると、ヴィシュヌは目覚め、五千年にもわたる激闘の末にこの二体の悪魔を討ち滅ぼしました。「マドゥスーダナ（マドゥの殺者）」というヴィシュヌの別名はこの物語に由来します。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">04</span>十の化身（ダシャーヴァターラ）</div>
+      <p>ヴィシュヌは宇宙が危機に瀕するたびに姿を変えて降臨します。プラーナ文献では<span class="highlight">二十二もの化身</span>が挙げられていますが、特に有名な十の化身（ダシャーヴァターラ）を紹介します。</p>
+      <p><strong>マツヤ</strong>（魚）は大洪水からマヌを救い、<strong>クールマ</strong>（亀）は乳海攪拌で山を背中に載せ、<strong>ヴァラーハ</strong>（猪）は海底に沈んだ大地を牙で持ち上げ、<strong>ナラシンハ</strong>（人獅子）は「人にも獣にも殺されない」と驕る悪魔ヒラニヤカシプを膝の上で引き裂きました。</p>
+      <p><strong>ヴァーマナ</strong>（矮人）は三歩で宇宙を測り、<strong>パラシュラーマ</strong>は堕落した王族を二十一回にわたって討伐し、<strong>ラーマ</strong>と<strong>クリシュナ</strong>は叙事詩の主人公として有名です。<strong>ブッダ</strong>は悪魔を教化するために現れ、最後の化身<strong>カルキ</strong>は未来の暗黒時代に白馬に乗って現れると予言されています。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ブラフマー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🪷</div>
+      <div>
+        <h2>ブラフマー（Brahmā）</h2>
+        <div class="sanskrit">宇宙の創造神・すべての生命の祖父</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      三大神の「創造」担当。ヴィシュヌのへそから生えた蓮の花の上で生まれ、世界のすべてを作り出しました。四つの顔、四本の腕、白鳥に乗る姿が特徴。ただし、シヴァの怒りを買って五番目の顔を失い、「人々に礼拝されない」と宣言されたため、インド全土でブラフマーの寺院はごくわずかしかありません。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>創造のはじまり——黄金の卵</div>
+      <p>宇宙がまだ何もない水だけの世界だったとき、太陽のように輝く<span class="highlight">黄金の卵</span>が水に現れました。その卵の中にブラフマーが宿ります。</p>
+      <p>千ユガ（数十億年）にわたる眠りから目覚めたブラフマーは、卵を割って出てきました。最初に「オーム」の音が生まれ、「ブー」「ブヴァ」「スヴァ」という三つの世界の名が続きます。そしてブラフマーは心から七人の大聖仙（サプタリシ）を、体から数多の生命の主（プラジャーパティ）を生み出し、ここからあらゆる生き物が世界に広がっていったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>ヴァールミーキにラーマーヤナを書かせる</div>
+      <p>聖仙ヴァールミーキがタマサー川のほとりを歩いていたとき、恋を語らう二羽のサシバが目に入りました。そこへ猟師の矢が飛び、一羽が射殺されます。悲嘆にくれるもう一羽を見て、ヴァールミーキの口から<span class="highlight">呪いの言葉</span>が溢れ出ました。</p>
+      <p>驚くべきことに、その言葉は美しい韻律をもつ詩句になっていました。これこそが世界初の「詩」（シュローカ）だとされています。この詩句に惹かれたブラフマーがヴァールミーキの庵を訪れ、「ラーマの物語をこの韻律で書きなさい」と命じました。こうして叙事詩ラーマーヤナが誕生したのです。</p>
+      <div class="aside">ラーマーヤナの起源が「悲しみ（ショーカ）」から生まれた「詩（シュローカ）」だというのは、インド詩学の根幹をなす考え方です。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>パールヴァティーに黄金の肌を与える</div>
+      <p>パールヴァティー（シヴァの妻）のもとの名は「カーリー」——肌が黒かったからです。ある日シヴァが冗談で「カーリー」と呼んだのを聞いて、パールヴァティーは深く傷つきました。</p>
+      <p>「言葉の矢は体の矢より痛い。もう二度とカーリーと呼ばれないようにしてみせます」——そう言い残してヒマラヤへ行き、<span class="highlight">百年間の苦行</span>を始めます。苦行の場に虎がやって来ましたが、パールヴァティーを睨みつけて片目を失いました。</p>
+      <p>ブラフマーが降臨し、まず虎にシヴァの従者（ガナ）の長という恩恵を与え、次にパールヴァティーに尋ねます。「何を望むか」。答えは「<span class="highlight">黄金の肌</span>をください」。こうしてパールヴァティーは蓮の花弁のような輝く肌を得ました。脱ぎ捨てた黒い肌からはカウシキー女神が生まれ、インドラに託されてヴィンディヤ山に住まうことになりました。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ インドラ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⚡</div>
+      <div>
+        <h2>インドラ（Indra）</h2>
+        <div class="sanskrit">天界の王・雷霆の神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      天界（スヴァルガ）の王であり、ヴェーダ時代にはもっとも重要な神でした。武器は雷霆ヴァジュラ、乗り物は白象アイラーヴァタ。プラーナ文献のインドラは全知全能の王というよりも、地位を脅かされるたびに慌てふためき、時に策略を使い、時に英雄的に戦う——じつに人間臭い神として描かれます。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>ヴリトラ退治——聖者の骨で作った武器</div>
+      <p>悪魔ヴリトラが率いる軍勢に天界が征服され、インドラは意識を失うほどの敗北を喫しました。打つ手がないまま神々はヴィシュヌに助けを求めます。ヴィシュヌの答えはこうでした——「ヴリトラを倒せるのは、聖仙<span class="highlight">ダディーチャの骨</span>で作った武器だけだ」。</p>
+      <p>神々がダディーチャに事情を話すと、聖仙は一瞬もためらわず自らの命を捨て、骨を差し出しました。インドラはその骨から最強の武器ヴァジュラを鍛え上げ、ヴリトラに致命の一撃を叩き込みます。しかしヴリトラはバラモンだったため、インドラは「聖者殺し」の罪を背負い、サラユー川で沐浴して罪を洗い流さなければなりませんでした。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>シビ王の試練——鳩と鷹</div>
+      <p>インドラとアグニ（火神）が、シビ王の徳の強さを試しました。アグニが鳩に、インドラが<span class="highlight">鷹</span>に姿を変えます。鳩がシビ王の膝に飛び込み「助けて」と叫ぶと、王は「守ってやろう」と誓います。</p>
+      <p>鷹は「鳩は私の獲物だ。返せ」と要求。シビ王は提案します——「私の肉を鳩と同じ重さだけ差し出す」。体中の肉を切り取って秤に載せますが、小さな鳩のほうが常に重い。最後にシビ王が秤に<span class="highlight">自分の全身</span>を乗せたとき、インドラとアグニが正体を現し、王を称えて祝福を授けました。</p>
+      <div class="aside">「自己犠牲による正義の貫徹」というインドの理想を、もっともドラマチックに表現した物語です。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>山の翼を切り落とす</div>
+      <p>太古の時代、世界中の山には<span class="highlight">翼</span>がありました。山々はガルダのように空を飛び回り、風の速さで移動していたのです。</p>
+      <p>聖仙や神々は「いつ頭上に山が落ちてくるかわからない」と恐怖しました。神々の会議でインドラが対策役に選ばれ、雷霆ヴァジュラで山々の翼を次々と切り落としていきます。ただし風神ヴァーユの友人であったマイナーカ山だけは、ヴァーユが素早く海に隠したため翼を保ちました。後にハヌマーンがランカーへ飛ぶ途中、このマイナーカ山が海から姿を現して休憩場所を提供したのは、風の神の息子への恩返しだったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">04</span>ダルマの犬——ユディシュティラとの最後の旅</div>
+      <p>パーンダヴァ五兄弟は人生の最後に、ヒマラヤを越えて天界を目指す旅に出ます。途中で四人の兄弟とドラウパディーが次々と倒れて死に、最後に残ったのは長男ユディシュティラと、ずっと後をつけてきた<span class="highlight">一匹の犬</span>だけでした。</p>
+      <p>旅の果てにインドラが天の戦車で迎えに来て言います。「兄弟たちも妻も、すでに天界にいる。さあ乗りなさい。ただし犬は置いていけ」。ユディシュティラは断固として拒否します。「ここまで私について来た者を見捨てることはできない」。</p>
+      <p>インドラが何度も説得しても、ユディシュティラは折れません。すると犬の姿が変わり、正義の神<span class="highlight">ダルマ</span>（ユディシュティラの実の父）が現れました。「お前の高潔さを試していたのだ」——三人は揃って天界の戦車に乗り込みました。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ハヌマーン ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🐒</div>
+      <div>
+        <h2>ハヌマーン（Hanūmān）</h2>
+        <div class="sanskrit">猿の英雄・ラーマの最大の忠臣</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      叙事詩の登場人物の中で、動物の姿でありながらこれほどの力、学識、哲学性を兼ね備えた存在は世界の文学にも類を見ない——プラーナ百科事典はそう評します。風神ヴァーユの子、あるいはシヴァの化身とも言われ、空を飛び、山を持ち上げ、海を越える超人的な力を持ちながら、ラーマへの献身を人生の全てとした忠義の英雄です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>太陽を食べようとした赤ん坊</div>
+      <p>生まれたばかりのハヌマーンに、母アンジャナーは言いました。「太陽のように赤く熟した果物があなたの食べ物よ」。母が去った後、赤ん坊ハヌマーンは昇る太陽を見て<span class="highlight">「おいしそうな果物だ！」</span>と、一跳びで太陽に飛びかかりました。</p>
+      <p>さらに太陽の傍にいたラーフ（日蝕を起こす魔神）や、インドラの白象アイラーヴァタまで食べようとします。驚いたインドラが雷霆ヴァジュラを放ち、ハヌマーンの<span class="highlight">顎（ハヌ）</span>に命中。赤ん坊は傷ついて地上に落下しました。</p>
+      <p>怒った風神ヴァーユが息子を抱いて冥界に引きこもると、地上から風がなくなり、万物が窒息しかけます。慌てたブラフマーと神々が冥界へ駆けつけ、ハヌマーンを蘇らせ、次々と祝福を与えました。「ブラフマーが存在するかぎり不死」「火にも焼かれない」「いかなる武器も効かない」——こうしてハヌマーンは最強の存在となったのです。</p>
+      <div class="aside">「顎（ハヌ）」にヴァジュラの傷を受けたことから「ハヌマーン」と名付けられました。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>太陽の前を歩いて学んだヴェーダ</div>
+      <p>ハヌマーンは四つのヴェーダと六つのシャーストラ（学問体系）を学ぶため、太陽神スーリヤを師に選びました。しかしスーリヤは常に空を移動しているため、弟子が座って授業を受けることはできません。</p>
+      <p>ハヌマーンは条件を受け入れ、<span class="highlight">スーリヤの戦車の前を後ろ向きに歩きながら</span>、師の顔を見つめて学び続けました。わずか<span class="highlight">六十時間</span>で全ての聖典を完璧に修得。スーリヤが「その熱心さこそが授業料だ」と言うと、ハヌマーンは「もっと何かお返しを」と求めました。</p>
+      <p>スーリヤは答えます。「私の息子スグリーヴァが地上でバーリンと暮らしているが、バーリンほど強くない。スグリーヴァの友となり、助けてやってくれ」。こうしてハヌマーンはスグリーヴァの大臣となり、やがてラーマとの出会いへとつながっていくのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>忘れられた力——ジャーンバヴァーンの言葉</div>
+      <p>聖仙トリナビンドゥの呪いにより、ハヌマーンは自分の超人的な力を<span class="highlight">忘れて</span>しまいます。ただし「誰かがその力を思い出させてくれれば取り戻せる」という条件つきでした。</p>
+      <p>シーター（ラーマの妻）を探す旅で、猿たちの前に広大な海が立ちはだかります。ランカー島は遥か彼方。誰も海を渡る力がない——そのとき長老の熊ジャーンバヴァーンがハヌマーンに語りかけます。「お前はシヴァの子、風の子。お前の力は無限だ」。</p>
+      <p>言葉を聞いた瞬間、ハヌマーンの体が膨れ上がり、忘れていた力が甦りました。山のように巨大になったハヌマーンは<span class="highlight">海を一跳び</span>で飛び越え、ランカー島へと到達したのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">04</span>クシャとラヴァに捕らえられる</div>
+      <p>ラーマが馬祀祭（アシュヴァメーダ）を行ったとき、祭祀の馬がガウタマ仙の庵の近くに繋がれていました。そこにラーマの双子の息子クシャとラヴァが現れ、<span class="highlight">馬を捕獲</span>してしまいます。</p>
+      <p>知らせを受けて駆けつけたハヌマーンでしたが、なんと二人の少年に<span class="highlight">蔓で手足を縛られ</span>、庵まで引きずられてしまいます。最強の英雄が子供に敗北——しかし庵にいたのは、長年離れ離れになっていたシーターでした。ハヌマーンが「ラーマ、ラーマ」と唱えるのを聞いて物思いから覚めたシーターは、目の前で縛られた忠臣の姿に驚き、息子たちに解放を命じたのです。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ラクシュミー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">✨</div>
+      <div>
+        <h2>ラクシュミー（Lakṣmī）</h2>
+        <div class="sanskrit">幸運と繁栄の女神・ヴィシュヌの妃</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      富、美、幸運、繁栄——あらゆる「良きもの」を体現する女神。右手に蓮の花、左手にビルヴァの実を持ち、蓮の上に座る姿で信仰されます。ヴィシュヌが化身するたびにラクシュミーも姿を変えてその傍に寄り添います。ラーマの妻シーター、クリシュナの伴侶ラーダーもラクシュミーの化身です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>乳海攪拌——海から生まれた美の女神</div>
+      <p>聖仙ドゥルヴァーサスの呪いで神々が老衰し、天界から繁栄が消え失せたとき、スヴァルガ・ラクシュミー（天界の幸運）はヴィシュヌの妃マハーラクシュミーのもとへ帰ってしまいました。</p>
+      <p>神々は不死の霊薬アムリタを得るため、悪魔たちと協力して<span class="highlight">乳の海を攪拌</span>します。海から様々な宝物が現れるなか、美と繁栄そのものである女神が海面に立ち上がりました。それがラクシュミーです。</p>
+      <p>ラクシュミーはヴィシュヌの首に<span class="highlight">野の花の冠</span>をかけ、妃として寄り添いました。この瞬間、神々は失われた力と繁栄を取り戻したのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>牛糞に宿る繁栄</div>
+      <p>ある日、牧場で草を食んでいた牛の群れの前をラクシュミーが通りかかりました。女神は牛たちを気に入り、「何か恩恵を与えよう」と言います。</p>
+      <p>牛たちは豊かで満ち足りていたため、最初は断りました。しかし女神が重ねて勧めるので、牛たちはこう答えました——「それでは、<span class="highlight">私たちの糞にも繁栄を宿してください</span>」。</p>
+      <p>ラクシュミーはその願いを聞き届けました。インドで牛糞が神聖なものとされ、家の壁や床に塗る伝統があるのは、この物語に由来すると言われています。</p>
+      <div class="aside">一見ユーモラスな話ですが、牛はインド文化で最も敬われる動物。牛にまつわるあらゆるものに繁栄を見出す世界観が凝縮されています。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>夫の首を落とす呪い</div>
+      <p>ラクシュミーは穏やかな女神として知られますが、プラーナ文献にはヴィシュヌの<span class="highlight">首が落ちる呪い</span>をかけた驚きの物語があります。</p>
+      <p>ある時、ヴィシュヌがモーヒニー（魅惑の女性）の姿をとった出来事がきっかけで、ラクシュミーは夫に対して激しい呪いを発しました。この呪いによりヴィシュヌの首は体から切り離されてしまいます。</p>
+      <p>首を失ったヴィシュヌの体に馬の首がつけられ、<span class="highlight">ハヤグリーヴァ</span>（馬頭のヴィシュヌ）として悪魔ハヤグリーヴァを倒すという、もうひとつの物語へとつながっていきます。妻の呪いすらも、宇宙を守る大きな計画の一部だった——ヒンドゥー神話のスケールの大きさが感じられるエピソードです。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ サラスヴァティー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🎵</div>
+      <div>
+        <h2>サラスヴァティー（Sarasvatī）</h2>
+        <div class="sanskrit">学問・音楽・言葉の女神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      白い衣をまとい、白蓮の上に座り、手にはヴィーナー（弦楽器）と数珠と書物を持つ学問の女神。ブラフマーの娘であり妻でもあるという複雑な神話的系譜を持ちます。日本の弁財天のルーツでもあり、音楽・学問・言葉のすべてを司ります。また河の女神としてインド北部を流れるサラスヴァティー川と同一視されています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>ブラフマーの顔から生まれた女神</div>
+      <p>創造の瞑想に入ったブラフマーの心に<span class="highlight">純質（サットヴァ）</span>が満ちあふれたとき、その顔から一人の少女が生まれました。</p>
+      <p>ブラフマーが「お前は誰だ」と尋ねると、少女は答えます。「あなたから生まれました。私に居場所と役目をください」。ブラフマーは彼女にサラスヴァティーの名を与え、こう定めました——「すべての人の<span class="highlight">舌の先</span>に宿れ。とりわけ学者の舌の上で踊れ。そして河の姿をとって地上にも存在し、さらに私自身の中にも住め」。こうしてサラスヴァティーは、言葉と学問と河という三つの姿を持つ女神となったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>クンバカルナの舌を操る</div>
+      <p>ラーヴァナの弟クンバカルナは、ブラフマーに恩恵を求めて苦行を成し遂げました。本来の望みは<span class="highlight">「ニルデーヴァトヴァ」（神々の不在＝無敵）</span>でしたが、ブラフマーの指示を受けたサラスヴァティーがクンバカルナの舌に入り込み、言葉を入れ替えてしまいます。</p>
+      <p>口から出てきたのは「<span class="highlight">ニドラーヴァトヴァ</span>」（眠り）——クンバカルナは一度眠ると何ヶ月も目覚めない体質を授けられてしまったのです。言葉の女神が舌を操る、というのがいかにもサラスヴァティーらしい物語です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>地獄の炎を海へ運ぶ</div>
+      <p>バールガヴァ族とヘーハヤ族の争いから、世界を焼き尽くす恐ろしい<span class="highlight">バダヴァーグニ（地底の炎）</span>が生まれました。この炎を放置すれば世界は滅びます。インドラはサラスヴァティーに「この炎を西の海へ運んでほしい」と頼みました。</p>
+      <p>しかしサラスヴァティーは「父ブラフマーの許可なしには動けません」と断ります。神々がブラフマーに訴え、ブラフマーがサラスヴァティーに命じると、彼女は涙を流しながらも従いました。シヴァがバダヴァーグニを壺に入れ、祝福によって手が焼けないようにしてくれます。</p>
+      <p>サラスヴァティーは壺を抱えて北へ向かい、聖地プシュカラで人々の罪を清め、さらに西の海にたどり着いて炎を海底に沈めました。こうしてサラスヴァティーは<span class="highlight">河の姿</span>をとってインドの大地を流れるようになったのです。</p>
+      <div class="aside">学問の女神が河になるという、抽象と具象をつなぐ壮大な物語。サラスヴァティー川は実在の河でもあり、ヴェーダ時代にはインド最大の河のひとつでした。</div>
+    </div>
+  </section>
+
+  <div class="nav-link">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、デーヴィー・バーガヴァタ、シヴァ・プラーナ、パドマ・プラーナ、ヴァーマナ・プラーナ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
