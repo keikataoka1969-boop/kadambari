@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第三弾 — 英雄と炎の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'तप';
+  position: absolute;
+  font-size: 16rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第三弾</div>
+  <h1>英雄と炎の物語</h1>
+  <div class="line"></div>
+  <p class="sub">火の神アグニ、太陽神スーリヤ、愛の神カーマ、大地の娘シーター、火から生まれた王女ドラウパディー、無双の弓使いアルジュナ——六柱の神々と英雄の名場面を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p><a href="hindu-myths.html">第一弾</a>ではガネーシャやシヴァなど七柱、<a href="hindu-myths-2.html">第二弾</a>ではヴィシュヌやハヌマーンなど六柱を紹介しました。第三弾では「炎」にまつわる神話を軸に、火の神、太陽神、そして炎に縁の深い英雄たちの物語をプラーナ百科事典（Vettam Mani著）から厳選してお届けします。</p>
+  </div>
+
+  <!-- ═══════ アグニ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🔥</div>
+      <div>
+        <h2>アグニ（Agni）</h2>
+        <div class="sanskrit">火の神・神々と人間をつなぐ祭祀の仲介者</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ヴェーダ時代から最も重要な神のひとり。供物を天界へ運ぶ「神々の口」であり、家庭の炉から葬儀の火まで、あらゆる火はアグニの顕現です。マハーバーラタでは食欲旺盛で個性的な神として活躍します。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>カーンダヴァの森の大火——アルジュナとクリシュナの共闘</div>
+      <p>アグニは長年にわたって祭祀の供物である<span class="highlight">バターの奔流</span>を飲み続け、ひどい消化不良に陥りました。治療法はただひとつ——脂の豊かなカーンダヴァの森を丸ごと喰らい尽くすこと。</p>
+      <p>しかしこの森にはインドラの友・蛇王タクシャカが棲んでおり、アグニが火を放つたびにインドラが大雨を降らせて消してしまいます。そこでアグニは若きアルジュナとクリシュナに助けを求めました。</p>
+      <p>アグニはアルジュナに<span class="highlight">名弓ガーンディーヴァ</span>と尽きることのない矢筒を、クリシュナにはスダルシャナ円盤を贈ります。アルジュナは矢の天幕で雨を遮り、クリシュナとともに森を守ること十五日間。インドラすら退き、アグニはついに森を完食して消化不良を治したのでした。</p>
+      <div class="aside">この「森の大火」はマハーバーラタ前半のクライマックスのひとつ。アルジュナの超人的な弓の技と、アグニの意外にも人間くさい「胃もたれ」が印象的です。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>幻のシーター——火の神の秘密の役割</div>
+      <p>ラーヴァナがシーターを攫う直前、アグニはバラモンに変装してラーマのもとを訪れました。「ラクシュミーの化身であるシーター様をラーヴァナに触れさせてはなりません。本物のシーターは私がお預かりします」</p>
+      <p>ラーマはアグニに本物のシーターを託し、代わりにアグニが作った<span class="highlight">幻のシーター（マーヤー・シーター）</span>を傍に置きました。ラクシュマナですらこの入れ替わりに気づきません。</p>
+      <p>ラーヴァナが攫ったのは幻のシーター。戦いの後、シーターが火の中を歩く「貞操の試練」の場面で、幻のシーターは炎の中に消え、アグニが本物のシーターを返したのです。</p>
+      <div class="aside">ラーマーヤナの「火の試練」に隠された別の物語。アグニが黒子として壮大な神話のシナリオを支えていたという、デーヴィー・バーガヴァタ独自の伝承です。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>隠れるアグニ——蛙・象・鳥への呪い</div>
+      <p>あるとき、アグニはブリグ仙の妻プルローマーの居場所を阿修羅に教えてしまいました。激怒したブリグはアグニに「おまえは何でも喰らう呪いを受けよ」と宣告。これに傷ついたアグニは姿を消してしまいます。</p>
+      <p>火が消えた世界は大混乱に陥りました。神々は必死にアグニを探します。<span class="highlight">蛙たち</span>が水中に隠れたアグニの居場所を神々に密告すると、アグニは蛙を呪いました——「おまえたちは舌の味覚を失うだろう」。同じように<span class="highlight">象</span>が裏切ると「舌が後ろに曲がるだろう」、<span class="highlight">鳥</span>が裏切ると「声を失うだろう」と呪いました。</p>
+      <p>結局アグニは神々に説得されて世界に戻りましたが、ブリグの呪いは覆されず——だからこそ火はこの世のあらゆるものを焼き尽くすことができるのだ、とプラーナ文献は語ります。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ スーリヤ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">☀️</div>
+      <div>
+        <h2>スーリヤ（Sūrya）</h2>
+        <div class="sanskrit">太陽神・生命の源・時の支配者</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      七頭の馬に曳かれる黄金の戦車で天空を駆ける太陽神。その馬はヴェーダの七つの韻律の化身であり、戦車の車輪は時の流れそのもの。毎月七人の神格（アーディティヤ、聖仙、ガンダルヴァ、蛇、ヤクシャ、阿修羅、天女）が交代で随行し、天空の秩序を保っています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>妻サンジュニャーの逃走——影の妻チャーヤー</div>
+      <p>太陽神の妻サンジュニャーは、夫の<span class="highlight">あまりの輝き</span>に耐えられなくなりました。彼女は自分そっくりの影——<span class="highlight">チャーヤー（影）</span>を残して実家に逃げ帰ります。チャーヤーは本物の妻のように振る舞い、スーリヤも気づきませんでした。</p>
+      <p>しかしサンジュニャーの息子ヤマ（死の神）がチャーヤーに足で蹴る無礼を働いたとき、チャーヤーはヤマに「その足は腐り落ちるだろう」と呪いました。実の母なら息子にそんな呪いはかけない——これがきっかけでスーリヤは真実に気づいたのです。</p>
+      <p>サンジュニャーの父ヴィシュヴァカルマンが太陽の輝きを八分の一に削り、その削りかすからヴィシュヌの円盤スダルシャナやシヴァの三叉槍が作られました。輝きが和らいだ太陽のもとにサンジュニャーは戻り、双子のアシュヴィニー・クマーラ（馬の姿をした医術の神）が生まれたのです。</p>
+      <div class="aside">この物語は太陽がなぜ「ちょうどよい明るさ」なのかを説明する起源譚であり、同時にシヴァやヴィシュヌの武器の由来譚でもあります。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>スーリヤの子どもたち——死の神から英雄カルナまで</div>
+      <p>スーリヤは驚くほど多くの子をもうけました。正妻サンジュニャーからは<span class="highlight">ヤマ（死の神）</span>、ヤミー（ヤムナー河）、マヌ（人類の祖）が生まれ、影の妻チャーヤーからはシャニ（土星の神）とタパティーが生まれました。</p>
+      <p>さらに注目すべきは、ラーマーヤナの猿王<span class="highlight">スグリーヴァ</span>やマハーバーラタの悲劇の英雄<span class="highlight">カルナ</span>もスーリヤの子だということです。クンティー王女が太陽神に祈ったとき、鎧と耳飾りを生まれながらに身につけた赤子が授けられました——それがカルナです。</p>
+      <p>死を司るヤマも、不死身の鎧をまとうカルナも、同じ太陽の子。生と死の両方を統べる太陽の性格が、子どもたちの物語によく表れています。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ カーマ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🏹</div>
+      <div>
+        <h2>カーマ（Kāma）</h2>
+        <div class="sanskrit">愛と美の神・花の矢を持つ「心を乱す者」</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      サトウキビの弓に蜂の弦、五種の花を矢じりとする愛の神。鸚鵡に乗り、旗印は魚。ギリシア神話のエロスに相当しますが、その運命はエロスよりはるかに苛烈です。別名マンマタ（心を攪乱する者）、アナンガ（肉体なき者）。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>誕生——「誰を惑わしましょうか？」</div>
+      <p>ブラフマーが十人のプラジャーパティ（創造神の補佐）を創った直後、サンディヤーという女性が生まれました。その美しさにブラフマーも補佐たちも一斉に席を立ってしまいます。</p>
+      <p>そのとき、ブラフマーの心から花の弓を手にした<span class="highlight">美しい若者</span>が飛び出しました。生まれた瞬間、若者はブラフマーに問います——「<span class="highlight">カン・ダルパヤーミ？</span>（誰を驕らせましょうか？）」。ブラフマーは答えました。「生きとし生けるものの心を、おまえの矢の的とせよ」。こうして愛の神カーマが誕生し、「誰を」の問いから<span class="highlight">カンダルパ</span>の名も得ました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>シヴァの第三の目に焼かれる</div>
+      <p>阿修羅ターラカが暴虐の限りを尽くしていました。予言によれば、彼を倒せるのは<span class="highlight">シヴァの息子</span>だけ。しかしシヴァは妻サティーを失って以来、深い瞑想に沈んでいます。パールヴァティーがシヴァを夫に望んで苦行する今こそ好機——インドラはカーマに、シヴァの心に恋の炎を灯すよう命じました。</p>
+      <p>カーマはシヴァの座に忍び寄り、花の矢を放ちます。瞬間、シヴァの額の<span class="highlight">第三の目</span>が開き、炎が迸りました。カーマは一瞬にして灰と化したのです。</p>
+      <p>肉体を失ったカーマは「アナンガ（肉体なき者）」と呼ばれるようになりました。妻ラティの嘆きを聞いたシヴァは、いつかカーマが転生して戻ると約束します。愛は肉体を失っても消えない——だからこそ目に見えない愛の力は、かえって強くなったのだとも語られます。</p>
+      <div class="aside">カーマが焼かれた場所は「アンガ国」と呼ばれるようになったと伝えられます。愛の神の死が地名の起源になるという、インド神話らしい壮大さ。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>クリシュナの息子として転生</div>
+      <p>シヴァの約束どおり、カーマの妻ラティは<span class="highlight">マーヤーヴァティー</span>として地上に生まれ変わり、阿修羅シャンバラの屋敷で台所女中として暮らしていました。一方、カーマはクリシュナの妻ルクミニーの息子<span class="highlight">プラデュムナ</span>として転生します。</p>
+      <p>シャンバラは「カーマが転生したら自分は死ぬ」という予言を恐れ、赤ん坊を盗み出して海に投げ込みました。赤ん坊を呑み込んだ魚が漁師に捕らえられ、その腹から取り出された美しい赤子がマーヤーヴァティーに託されます。</p>
+      <p>聖仙ナーラダが秘密を明かし、成長したプラデュムナはシャンバラを倒してマーヤーヴァティーとともにクリシュナのもとへ帰還しました。かつて灰になった愛の神が、英雄として甦る物語です。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ シーター ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🪷</div>
+      <div>
+        <h2>シーター（Sītā）</h2>
+        <div class="sanskrit">大地の娘・ラーマの妻・貞節と忍耐の象徴</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ラーマーヤナのヒロインであり、マハーラクシュミーの化身。ジャナカ王が祭祀のために大地を耕したとき、溝（シーター）から発見された少女。その誕生の背景には、何度もの前世と転生の物語が隠されています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>前世——ヴェーダヴァティーの誓い</div>
+      <p>シーターの前世は<span class="highlight">ヴェーダヴァティー</span>という苦行者の娘でした。彼女はヴィシュヌを夫にしたいと願い、ヒマラヤで厳しい苦行を続けていました。</p>
+      <p>そこに征服旅行中のラーヴァナが通りかかり、美しいヴェーダヴァティーに言い寄ります。彼女が拒むと、ラーヴァナは力ずくで手を掴みました。「不浄な者に触れられた身体はもういらない」——ヴェーダヴァティーは自ら<span class="highlight">火に身を投じ</span>、死の直前に誓いました。「来世ではヴィシュヌが私の夫となり、おまえを滅ぼすだろう」</p>
+      <p>ラーヴァナはヴェーダヴァティーの遺灰を黄金の箱に入れてランカーに持ち帰りましたが、以来ランカーに不吉な前兆が続きます。聖仙ナーラダの助言で箱は海に捨てられ、やがて波に運ばれてミティラーの河辺にたどり着き——ジャナカ王の祭祀の場で掘り出されたのです。箱の中で灰は少女の姿となっていました。これがシーターの誕生です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>シヴァの弓を引く——婿選びの奇跡</div>
+      <p>シーターは庭園で遊んでいるとき、シヴァが昔ダクシャの祭祀を破壊するために使った<span class="highlight">シヴァの弓（シャイヴァチャーパ）</span>を軽々と持ち上げ、矢でジャスミンの花を傷つけずに射落としました。これを見たジャナカ王は婿選びの条件を定めます——「シヴァの弓を引き、矢を射ることができた者だけが、シーターの夫となれる」。</p>
+      <p>名だたる王侯が挑みましたが、弓を持ち上げることすらできません。そこにヴィシュヴァーミトラに連れられたラーマが現れ、<span class="highlight">左手一本</span>で弓を持ち上げ、弦を張り、力を込めると弓は折れてしまいました。雷鳴のような轟音に王たちは震え、シーターは孔雀のように喜び跳ねたのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>鸚鵡の呪い——なぜシーターは夫と引き離されたのか</div>
+      <p>シーターがまだジャナカ王の宮殿で暮らす少女だった頃、庭で<span class="highlight">つがいの鸚鵡</span>がラーマーヤナの物語を歌っているのを見つけました。「美しい王ラーマが生まれ、シーターという妻を迎えるだろう」。好奇心に駆られたシーターは鸚鵡を捕らえ、ラーマが現れるまで手元に置こうとします。</p>
+      <p>雄の鸚鵡は懇願しました。「妻は身ごもっています、どうか放してください」。しかしシーターは聞き入れません。雌の鸚鵡は悲しみと怒りに震え、呪いを発しました——「<span class="highlight">おまえも身ごもったときに夫と引き離されるがよい</span>」。そう叫ぶと、雌の鸚鵡はその場で息絶えたのです。</p>
+      <p>雄の鸚鵡は妻の死を嘆き、「ラーマの都に生まれ変わって復讐する」と誓いながらガンジス河に身を投げました。この鸚鵡がラーマの都の洗濯屋クローダナに転生し、シーターの貞操を中傷する噂を流したのです。その噂のために、身ごもったシーターはラーマに追放されました。</p>
+      <div class="aside">パドマ・プラーナに伝わる異伝。少女時代の無邪気な残酷さが、壮大な叙事詩の悲劇の遠因だったという、因果応報の物語です。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ ドラウパディー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🔱</div>
+      <div>
+        <h2>ドラウパディー（Draupadī）</h2>
+        <div class="sanskrit">パーンチャーリー・火から生まれた王女・五人の夫をもつ女性</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      マハーバーラタの中心人物のひとり。パーンチャーラ国のドルパダ王が復讐の祭祀を行ったとき、祭壇の火から弟ドリシュタデュムナとともに出現しました。マハーラクシュミーの化身であり、前世の呪いと祝福により五人のパーンダヴァ兄弟すべての妻となります。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>前世の物語——五つのインドラと洞窟の秘密</div>
+      <p>ドラウパディーの前世のひとつが<span class="highlight">ナーラーヤニー</span>（別名インドラセーナー）。老齢で体中が膿み、指が食事中に落ちるほど衰えた聖仙マウドガリヤの妻でした。それでもナーラーヤニーは献身的に夫に仕え、夫の指が落ちた飯をそのまま食べたのです。</p>
+      <p>感激した聖仙は五つの体を持つ恩恵を与え、二人は何千年も愛の生活を楽しみました。やがて聖仙が苦行に戻ると、なおも愛を求めるナーラーヤニーに聖仙は告げます——「来世ではパーンチャーラの王女に生まれ、<span class="highlight">五人の夫</span>を持つだろう」。</p>
+      <p>シヴァの導きでナーラーヤニーはインドラに出会い、シヴァはインドラを洞窟に連れて行きます。そこには四人のインドラがすでに座っていました。「この五人のインドラが、おまえの五人の夫だ。彼らは月の一族に生まれ変わり、おまえを娶るだろう」——こうしてパーンダヴァ五兄弟が誕生する因縁が定まったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>火から生まれる——祭壇の炎からの出現</div>
+      <p>ドルパダ王はドローナに屈辱を与えられた恨みから、ドローナを倒す息子を得るために大祭祀を行いました。祭官ヤージャが供物を火に注ぐと、祭壇の炎から<span class="highlight">冠をかぶり剣と弓を手にした少年</span>が立ち上がりました。これがドリシュタデュムナです。</p>
+      <p>続いて祭壇の台座から<span class="highlight">眩い光を放つ美しい少女</span>が現れました。天からの声が響きます——「この乙女は神々の仕事を助け、カウラヴァ族に恐怖をもたらすだろう」。肌は濃い色で、黒い蓮のように美しかったため<span class="highlight">クリシュナー（黒き者）</span>と名付けられました。これがドラウパディーです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>衣を剥がされる——マハーバーラタ最大の屈辱</div>
+      <p>賭博でドラウパディーをも失ったユディシュティラ。ドゥルヨーダナの命でドラウパディーは大広間に引き出されました。ドゥフシャーサナが彼女の<span class="highlight">髪をつかんで</span>広間の中央まで引きずります。「私は月経中で上着一枚しか身につけていません」という懇願も無視されました。</p>
+      <p>ドゥフシャーサナがドラウパディーの衣を剥ぎ取り始めます。すべての人間的な助けが絶たれたとき、ドラウパディーは<span class="highlight">神に祈りました</span>。すると奇跡が起こります——ドゥフシャーサナがどれだけ衣を引いても、次々と新しい布が現れてドラウパディーの裸身を覆ったのです。ドゥフシャーサナは疲れ果てて諦めました。</p>
+      <p>ビーマは咆哮しました。「ドゥルヨーダナの太腿を棍棒で砕いてやる」。ドラウパディーは誓います——「ドゥフシャーサナの<span class="highlight">血で染まった手</span>で髪を結い直すまで、この髪を解いたままにしておく」。この誓いが、マハーバーラタ大戦争の遠因のひとつとなったのです。</p>
+      <div class="aside">この場面はインドの演劇・絵画で最も多く描かれるエピソードのひとつ。ドラウパディーの怒りと誓いが、物語全体を突き動かす原動力となります。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ アルジュナ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⚡</div>
+      <div>
+        <h2>アルジュナ（Arjuna）</h2>
+        <div class="sanskrit">パーンダヴァ第三王子・インドラの息子・無双の弓の名手</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      マハーバーラタの中心的英雄。前世ではナラ仙としてナーラーヤナ仙（クリシュナの前世）とともにバダリ道場で苦行した不可分の魂。インドラの子として生まれ、ドローナのもとで武芸を磨き、名弓ガーンディーヴァを得て、クリシュナの親友にして戦車の同乗者として大戦争を戦い抜きました。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>闇の中の修練——ドローナに見出された才能</div>
+      <p>師ドローナは息子アシュヴァッターマンだけに特別な技を教えるため、弟子全員を水汲みに行かせ、アシュヴァッターマンが最初に戻るよう仕組んでいました。アルジュナはこの企みに気づき、<span class="highlight">アシュヴァッターマンと同時に戻る</span>ようになります。ドローナは二人に特別な技を教えるほかなくなりました。</p>
+      <p>さらにドローナは料理人に「アルジュナに暗闇で食事を出すな」と命じました。ところがある晩、食事中に風がランプを消してしまいます。アルジュナは暗闇の中でも手と口の位置を正確に把握して食べ続けました。「<span class="highlight">弓術も暗闇で練習できるはずだ</span>」——そう悟ったアルジュナは夜間の射撃訓練を始め、ドローナをして「比類なき弓の名手」と言わしめたのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>エーカラヴィヤの親指——師への供物</div>
+      <p>森の狩猟民族の王子<span class="highlight">エーカラヴィヤ</span>はドローナに弟子入りを願いましたが、身分を理由に拒まれます。エーカラヴィヤはドローナの土像を作り、それを師と仰いで独学で弓を修めました。</p>
+      <p>ある日、パーンダヴァ兄弟の猟犬がエーカラヴィヤに吠えかかると、エーカラヴィヤは犬が痛くないように口の中に七本の矢を<span class="highlight">同時に</span>射込んで黙らせました。この技を知ったアルジュナはドローナに訴えます——「私を最高の弟子と仰ったのに、あの者は私を超えています」。</p>
+      <p>ドローナはエーカラヴィヤのもとを訪れ、「弟子なら師への供物（グル・ダクシナー）を差し出せ」と言いました。「何なりと」と答えるエーカラヴィヤに、ドローナは告げます——「おまえの<span class="highlight">右手の親指</span>が欲しい」。エーカラヴィヤは一瞬もためらわず親指を切り落としました。</p>
+      <div class="aside">才能と献身、不公正と忠誠が交錯する、マハーバーラタで最も議論を呼ぶエピソードのひとつです。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ハヌマーンと矢の橋——旗印の由来</div>
+      <p>巡礼の旅の途中、アルジュナはラーメーシュヴァラムでラーマが架けた<span class="highlight">ランカーへの橋</span>を見て疑問に思いました。「なぜラーマは矢で橋を架けず、猿に石を運ばせたのだろう？ 私なら矢だけで橋を架けられるのに」</p>
+      <p>そこに子猿が現れ、「矢の橋など猿が乗れば壊れる」と反論。アルジュナは賭けを提案します——「猿が壊せなければ猿は私の奴隷に、壊れたら私は火に入って死ぬ」。アルジュナが矢の橋を架けると、子猿が乗った瞬間に崩壊。再挑戦しても同じ結果。</p>
+      <p>アルジュナが火を用意して飛び込もうとしたとき、<span class="highlight">河で沐浴中のバラモンの少年</span>が駆けつけて止めました。「立会人なしの賭けは無効だ」。三度目の勝負を少年が見届けると、今度は橋が壊れません。子猿が渾身の力で跳んでも揺るがない。</p>
+      <p>子猿は少年の足下にひれ伏し「<span class="highlight">ラーマチャンドラ！</span>」と叫び、アルジュナも同時に「<span class="highlight">シュリー・クリシュナ！</span>」と叫びました。子猿は実はハヌマーン、少年は実はクリシュナ。二人は慢心を戒め、ハヌマーンに「約束どおりアルジュナの旗印となれ」と命じました。こうしてアルジュナの軍旗にはハヌマーンが描かれるようになったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">04</span>バガヴァッド・ギーター——戦場の絶望と悟り</div>
+      <p>クルクシェートラの戦場。敵軍の中に祖父ビーシュマ、師ドローナ、従兄弟たちの顔を見たアルジュナは、弓を取り落としました。「<span class="highlight">身内を殺して得る王国に何の意味がある</span>」——戦車の上に崩れ落ちるアルジュナに、御者クリシュナが語り始めます。</p>
+      <p>「肉体は滅びても魂（アートマン）は不滅である。義務（ダルマ）を果たせ。結果に執着するな」——これが世界で最も有名なヒンドゥー教の聖典<span class="highlight">バガヴァッド・ギーター</span>です。クリシュナはアルジュナに宇宙の全体を含む<span class="highlight">ヴィシュヴァルーパ（宇宙的姿）</span>を見せ、アルジュナは迷いを断ち切って戦いに臨みました。</p>
+      <p>十八日間の大戦争でアルジュナはビーシュマ、ドローナ、カルナ、ジャヤドラタら錚々たる勇士と戦い、最終的にカウラヴァ軍を壊滅させます。しかし勝利の代償は、愛する者たちの死でした。</p>
+      <div class="aside">バガヴァッド・ギーターは戦争の物語であると同時に、あらゆる人間が直面する「行動の倫理」への回答です。義務と慈悲のあいだで引き裂かれるアルジュナの姿は、今なお多くの人の心に響きます。</div>
+    </div>
+  </section>
+
+  <div class="nav-link">
+    <a href="hindu-myths-2.html">← 第二弾「続・ヒンドゥー神話入門」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、デーヴィー・バーガヴァタ、カーリカー・プラーナ、パドマ・プラーナ、カターサリトサーガラ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
