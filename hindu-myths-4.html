@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第四弾 — 誓いと宿命の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'धर्म';
+  position: absolute;
+  font-size: 14rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第四弾</div>
+  <h1>誓いと宿命の物語</h1>
+  <div class="line"></div>
+  <p class="sub">生涯独身を誓った祖父ビーシュマ、運命に翻弄される悲劇の英雄カルナ、母を解放するために天界に挑んだ鳥王ガルダ、神々の世界を引っかき回す聖仙ナーラダ、死神ヤマを論破した貞女サーヴィトリー、そして死そのものを司るヤマ——六柱の物語を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p><a href="hindu-myths.html">第一弾</a>ではガネーシャやシヴァなど七柱、<a href="hindu-myths-2.html">第二弾</a>ではヴィシュヌやハヌマーンなど六柱、<a href="hindu-myths-3.html">第三弾</a>ではアグニやアルジュナなど六柱を紹介しました。第四弾のテーマは「誓い」と「宿命」。自ら選んだ誓いに縛られる者、逃れられない運命を背負う者——彼らの物語をプラーナ百科事典（Vettam Mani著）から厳選してお届けします。</p>
+  </div>
+
+  <!-- ═══════ ビーシュマ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🛡️</div>
+      <div>
+        <h2>ビーシュマ（Bhīṣma）</h2>
+        <div class="sanskrit">マハーバーラタの祖父・不死身の誓いを立てた英雄</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      本名デーヴァヴラタ。月の王朝のシャンタヌ王とガンガー女神の八番目の息子であり、前世では八ヴァス神のひとり、ディヤウ。父への孝行のために生涯独身を誓い、「ビーシュマ（恐ろしき誓いを立てた者）」の名を得ました。マハーバーラタ全編を通じて、クル族の最長老として物語を支え続けた人物です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>誕生——ガンガーに流された七人の兄たち</div>
+      <p>シャンタヌ王がガンガー河畔の美女と出逢い、結婚を申し込みました。彼女の条件はひとつ——「私が何をしても文句を言わないこと。破れば去ります」。王は承諾しました。</p>
+      <p>やがて子が生まれるたび、彼女は赤ん坊を河に投げ込みました。七人の子が次々に流されても、王は約束を守って口を閉ざします。しかし八人目が生まれたとき、ついに王は叫びました——<span class="highlight">「やめてくれ！」</span></p>
+      <p>約束を破られた彼女は正体を明かします。「私はガンガー女神です。この子たちはヴァシシュタ仙の呪いで人間に生まれ変わった八ヴァス神。河に還すことで呪いを解いていたのです」。八番目の子だけが地上に残され、これがデーヴァヴラタ——のちのビーシュマでした。</p>
+      <div class="aside">ガンガーは三十二年後に成長した息子を父に返しました。ヴァシシュタ仙とガンガー自身から学問と武芸を学んだデーヴァヴラタは、すでに比類なき戦士でした。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>恐ろしき誓い——父の恋のために王位を捨てる</div>
+      <p>年老いたシャンタヌ王が森で麝香の香りに惹かれて辿り着いた先に、漁師の娘サティヤヴァティーがいました。王は一目惚れしましたが、漁師は条件を突きつけます——「娘の息子を王位に就けること」。すでに皇太子デーヴァヴラタがいる以上、王は応じることができません。</p>
+      <p>悲嘆に沈む父を見たデーヴァヴラタは、自ら漁師のもとへ向かいました。「サティヤヴァティーの息子が王になります。私は王位を放棄します」。漁師がなおも「あなたの子が争うかもしれない」と言うと、デーヴァヴラタは立ち上がり、<span class="highlight">「私は生涯独身を貫く」</span>と宣言しました。</p>
+      <p>天から花が降り注ぎ、神々は叫びました——「ビーシュマ！（恐ろしき誓いの者よ！）」。感激した父は息子に<span class="highlight">「望む時にのみ死ぬことができる」</span>という恩恵を与えました。こうしてデーヴァヴラタは「ビーシュマ」となったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>矢の床——死を選ぶ時を待つ</div>
+      <p>クルクシェートラの大戦争で、ビーシュマはカウラヴァ側の総大将として戦いました。十日間にわたって無双の武力を発揮しましたが、パーンダヴァ側が繰り出した策は残酷なものでした。ビーシュマが「女でも男でもない者」シカンディンとは戦わないと宣言していたことを利用し、シカンディンを盾にしてアルジュナが無数の矢を射かけたのです。</p>
+      <p>ビーシュマは矢に貫かれて戦車から落ちましたが、地面に触れませんでした。全身を刺し貫く矢が身体を支え、<span class="highlight">「矢の床」</span>の上に横たわったのです。王侯たちが枕を持ってきましたが、ビーシュマはアルジュナに頼みました。「おまえの矢で枕を作ってくれ」。アルジュナは三本の矢を射って頭を支えました。</p>
+      <p>ビーシュマはこの姿のまま、太陽が北に向かう吉日（ウッタラーヤナ）を待ち続け、ユディシュティラにダルマ（正義）の教えを何日もかけて説きました。そして自ら望んだ瞬間に、静かに息を引き取ったのです。</p>
+      <div class="aside">ビーシュマの最期は、父から授かった「望む時に死ねる」という恩恵の帰結でした。戦場に倒れてなお、最後の務め——王への教え——を果たしてから、自ら命を手放す。誓いに始まり、誓いに終わる生涯です。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ カルナ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">☀️</div>
+      <div>
+        <h2>カルナ（Karṇa）</h2>
+        <div class="sanskrit">太陽の子・悲劇の英雄・不滅の施しの精神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      パーンダヴァ五兄弟の実の長兄でありながら、その事実を知らずにカウラヴァ側で戦った悲運の戦士。クンティー王女が少女時代に太陽神の子として産み、箱に入れて河に流しました。御者の家で育てられ、ドゥルヨーダナに見出されてアンガ国の王となります。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>河に流された赤子——太陽神の子の出生</div>
+      <p>クンティー王女は少女時代、ドゥルヴァーサス仙から神を呼び出す<span class="highlight">マントラ</span>を授かりました。好奇心から太陽神を呼ぶと、輝く神がそのまま彼女のもとに現れ、「処女性は失われない」と告げて子を授けました。</p>
+      <p>生まれた赤子は<span class="highlight">生まれながらに鎧と耳飾り</span>を身につけていました。太陽神が「この鎧がある限り、彼は無敵だ」と定めたのです。しかし未婚のクンティーは赤子を育てることができず、義母の助けを借りて箱に入れ、アシュヴァー河に流しました。</p>
+      <p>箱はヤムナー河を経てガンガー河に至り、チャンパープリーに漂着。御者アディラタの妻ラーダーが箱を拾い、子のいなかった夫婦はこの赤子を<span class="highlight">ヴァスシェーナ</span>と名づけて大切に育てました。これがのちのカルナです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>二重の呪い——嘘と虫に裏切られる</div>
+      <p>カルナはアルジュナに対抗するため、パラシュラーマのもとでブラフマー・ミサイルの秘術を学ぼうとしました。パラシュラーマがバラモンにしか教えないことを知り、<span class="highlight">自分はバーガヴァ族のバラモンだ</span>と偽って弟子入りします。</p>
+      <p>ある日、修行中にバラモンの牛を誤って射殺し、怒ったバラモンに呪われました——「最大の敵と戦う時、おまえの戦車の車輪は泥に沈むだろう」。</p>
+      <p>もうひとつの呪いはこうです。パラシュラーマが昼寝中、カルナの膝に頭を載せていました。そのとき<span class="highlight">アラルカという甲虫</span>がカルナの太腿に食いつき、血が流れます。師を起こすまいとカルナは微動だにしませんでした。目覚めたパラシュラーマは血まみれの太腿を見て悟ります——「バラモンにこれほどの痛みを耐えられる者はいない。おまえは嘘をついたな」。そして呪いました——<span class="highlight">「ブラフマー・ミサイルの使い方を、最も必要な瞬間に忘れるだろう」</span>。</p>
+      <div class="aside">嘘によって得た力は、決定的な瞬間に消える。カルナの悲劇は、才能の不足ではなく、出自の嘘に運命を封じられたことにあります。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>鎧を剥ぐ——施しの美学</div>
+      <p>カルナの<span class="highlight">生まれながらの鎧と耳飾り</span>がある限り、彼は不死身でした。息子アルジュナの勝利を願うインドラは、バラモンに変装してカルナを訪ねます。太陽神は夢の中で息子に警告していました——「インドラが来る。鎧を渡すな」。</p>
+      <p>それでもカルナは拒むことができませんでした。「私はどんな施しの求めも断らない」。自分の身体から鎧と耳飾りを切り離し、傷ひとつつけずにインドラに差し出したのです。感嘆したインドラは代わりに最強の武器<span class="highlight">シャクティ</span>を与えました——ただし使えるのは一度きり。</p>
+      <p>カルナはこの一度きりのシャクティを、アルジュナではなくガトートカチャ（ビーマの息子）を倒すために使ってしまいます。無敵の鎧も切り札の武器も失ったカルナは、呪いどおり戦車の車輪が泥に沈んだ瞬間にアルジュナの矢に討たれました。死後、その魂は太陽に還りました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">04</span>母との再会——拒まれた和解</div>
+      <p>大戦争の直前、クンティーはひとりでガンガー河畔を訪れ、カルナに会いました。「あなたは私の息子です。パーンダヴァはあなたの弟たちです」。太陽神もまた天から「母の言葉に従え」と語りかけました。</p>
+      <p>しかしカルナは拒みました。「ドゥルヨーダナは、私が窮地にいたとき助けてくれた。その恩を裏切ることはできません」。そのうえで約束しました——<span class="highlight">「アルジュナ以外の四人の弟は殺しません。あなたの息子は常に五人です」</span>。</p>
+      <p>この約束は守られました。カルナは何度もビーマやユディシュティラを追い詰めながら、致命傷は与えなかったのです。敵に忠義を尽くしながら、血の絆をも裏切らない——カルナの宿命の複雑さがここに凝縮されています。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ガルダ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🦅</div>
+      <div>
+        <h2>ガルダ（Garuḍa）</h2>
+        <div class="sanskrit">鳥の王・ヴィシュヌの乗り物・蛇の天敵</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      カシュヤパ仙とヴィナター女の子。太陽のように眩い輝きをもって卵から生まれ、天界を震撼させました。ヴィシュヌの乗り物（ヴァーハナ）であり、蛇族の永遠の敵。その物語は「母の解放」をめぐる壮大な冒険譚です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>母の奴隷——卵の中の五百年</div>
+      <p>ガルダの母ヴィナターと、蛇族の母カドゥルーは姉妹でした。カシュヤパ仙が二人に望みを尋ねると、カドゥルーは「千匹の蛇の子を」、ヴィナターは「カドゥルーの子より強い二人の子を」と願いました。</p>
+      <p>カドゥルーの千の卵は五百年で孵りましたが、ヴィナターの二つの卵はまだ孵りません。焦ったヴィナターが一つを割ると、<span class="highlight">半分しか育っていない子</span>が出てきました——これがアルナ（暁の神・太陽の御者）です。アルナは怒って母を呪いました。「もう一つの卵も割らずに五百年待て。さもなければカドゥルーの奴隷になるだろう」。</p>
+      <p>さらに、乳海撹拌で得られた馬ウッチャイヒシュラヴァスの尾の色をめぐる賭けで、カドゥルーが蛇の子どもたちに尾に絡みつかせて黒く見せかけるという不正を行い、ヴィナターは負けて<span class="highlight">カドゥルーの奴隷</span>にされてしまいました。五百年後に生まれたガルダは、奴隷として働く母の姿を見て衝撃を受けます。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>天界への強襲——不死の甘露を奪う</div>
+      <p>ガルダは蛇たちに「母を解放する代価は何か」と尋ね、蛇たちは<span class="highlight">天界の不死の甘露（アムリタ）</span>を要求しました。ガルダは天界に向けて飛び立ちます。</p>
+      <p>途中、父カシュヤパの助言で池の象と亀（実は兄弟喧嘩で呪われた二人の人間）を食べてエネルギーを補給。巨大な菩提樹に止まるとバーラキリヤ仙人たちが枝にぶら下がって苦行中で、枝が折れてしまいます。仙人たちを傷つけまいとガルダは折れた枝を嘴にくわえたまま飛び続け、無人の山頂に安置してから天界に突入しました。</p>
+      <p>ヴィシュヴァカルマンを倒し、インドラの軍勢を蹴散らし、太陽と月すら退け、ガルダはアムリタの壷に辿り着きました。壷の周囲は回転する刃の車輪と、火を吐く不眠の大蛇が守っていましたが、ガルダは砂塵で蛇の目を潰し、体を極限まで縮めて車輪の隙間を抜け、壷を嘴にくわえて飛び去ったのです。</p>
+      <div class="aside">感嘆したヴィシュヌは「アムリタを飲まずとも不死身にしてやる。代わりに私の乗り物になれ」と提案。ガルダは二つの恩恵を受け入れ、ヴィシュヌの永遠の友となりました。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>蛇たちを出し抜く——インドラとの共謀</div>
+      <p>帰途、インドラがヴァジュラ（雷の武器）でガルダの翼を打ちましたが、羽根が一枚落ちただけでした。その羽根の美しさを見た者たちがガルダを<span class="highlight">「スパルナ（美しき翼の者）」</span>と讃えました。インドラは力ずくでは勝てないと悟り、友好を申し出ます。</p>
+      <p>ガルダは告げました。「このアムリタは自分のためではない。蛇たちに渡して母を解放するだけだ。渡した後に奪い返しても構わない」。そしてガルダは蛇たちにアムリタの壷を手渡し、<span class="highlight">「飲む前にダルバ草の上に置いて沐浴せよ」</span>と助言しました。</p>
+      <p>蛇たちが沐浴に行った隙に、インドラが壷を奪い返します。戻った蛇たちはアムリタが消えたことに気づき、せめてもとダルバ草を舐めました——そのとき草で舌が裂け、<span class="highlight">蛇の舌が二股に分かれた起源</span>となったのです。こうしてガルダは母を解放し、蛇たちにアムリタは渡らず、すべてが計画どおりに終わりました。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ナーラダ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🎵</div>
+      <div>
+        <h2>ナーラダ（Nārada）</h2>
+        <div class="sanskrit">神々の使者・天界のトリックスター・ヴィーナーの名手</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ブラフマーの膝から生まれた聖仙にして、三界を自由に飛び回る永遠の旅人。ヴィーナー（弦楽器）を手に、どこにでも現れては秘密を暴露し、諍いの種を蒔き、しかし結果的に神の計画を前に進める——プラーナ文献で最も出番の多い人物です。ダクシャの呪いで永遠に定住できない運命を負っています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>ダクシャの息子たちを追い散らす</div>
+      <p>ブラフマーの命でダクシャは妻ヴィーラニーとの間に五千人の息子（ハリヤシュヴァ）を設けました。彼らが子孫を増やそうとしていたとき、ナーラダがやって来て言いました——<span class="highlight">「大地の果てすら見ていないのに、どうやって人を作るつもりだ？」</span></p>
+      <p>ハリヤシュヴァたちは大地の果てを探しに出かけ、二度と戻りませんでした。ダクシャは次に<span class="highlight">シャバラーシュヴァ</span>という息子たちを作りましたが、ナーラダはまた同じ手口で追い散らします。さらに五千人の息子を作っても、ナーラダが同じことを繰り返しました。</p>
+      <p>激怒したダクシャは呪いました——「おまえは永遠に放浪し、定住できないだろう。そしていずれ私の息子として生まれ変わるだろう」。この呪いによってナーラダは三界を彷徨う永遠の旅人となり、同時にダクシャの息子としても転生することになったのです。</p>
+      <div class="aside">ナーラダの「お節介」には裏があります。もし何万人もの子孫が際限なく増えたら世界はどうなるか——ナーラダは混乱を装いつつ、宇宙のバランスを守っていたとも読めます。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>女になったナーラダ——クリシュナのマーヤーの教え</div>
+      <p>ドヴァーラカーでクリシュナと過ごしていたナーラダは、あるとき空飛ぶ戦車で旅に出ました。途中で小川を見つけたナーラダが、クリシュナの「先に沐浴せよ」という忠告を無視して水を飲むと、たちまち<span class="highlight">女性の姿</span>に変わり、クリシュナも戦車も消えてしまいました。</p>
+      <p>森を彷徨った「彼女」は隠者の弟子となり、やがて結婚して<span class="highlight">六十人の子ども</span>をもうけます。しかしある日、夫と六十人の子ども全員が同時に亡くなりました。嘆きのなか、ひとりのバラモンが現れて「食事の前に沐浴すべきだ」と諭します。</p>
+      <p>「彼女」が小川に飛び込むと——水から出てきたのはナーラダでした。水に浸からなかった片手だけが女性の腕輪をつけたまま。バラモンはクリシュナに姿を変え、もう一度全身を浸けるよう促すと、すべてが元に戻りました。手に持っていたマンゴーは美しいヴィーナーに変わっていたのです。「あの隠者の夫はカーラ（時間の神）、六十人の子は六十年の年月だった」とクリシュナは教えました。</p>
+      <div class="aside">これがクリシュナの「マーヤー（幻力）」の教え。何十年もの人生が一瞬の幻であり、家族も時間もすべてはマーヤーの演出だという、ヒンドゥー哲学の核心が物語の形で語られます。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ハヌマーンに恥をかかされる——音楽の慢心</div>
+      <p>ナーラダは自分の音楽の腕前に大変な自信を持っていました。ヴィシュヌはこの慢心を打ち砕くため、ナーラダをある森に連れて行きます。そこには手足を切り落とされて泣いている女たちがいました。「あなたたちは誰ですか」とヴィシュヌが尋ねると、彼女たちは答えました——<span class="highlight">「私たちはラーギニー（旋律の女神）です。ナーラダの下手な演奏のせいでこの姿になりました」</span>。ナーラダは恥じ入って頭を垂れました。</p>
+      <p>別の機会に、ナーラダはハヌマーンに出会いました。ハヌマーンが歌うと、その声の力で<span class="highlight">岩が溶け</span>、ナーラダのヴィーナーが岩に沈み込んで固まってしまいます。ハヌマーンは言いました——「歌でこの岩をもう一度溶かしてヴィーナーを取り出してごらん」。ナーラダはいくら歌っても岩はびくともしません。ハヌマーンがもう一度歌うと岩が溶け、ヴィーナーは救い出されました。ナーラダはハヌマーンを讃え、恥じ入りながら去りました。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ サーヴィトリー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🌺</div>
+      <div>
+        <h2>サーヴィトリー（Sāvitrī）</h2>
+        <div class="sanskrit">サティヤヴァーンの妻・死神を論破した女性</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      マドラ国のアシュヴァパティ王の娘。サーヴィトリー女神への十八年間の祈りの末に生まれ、その名を与えられました。ラクシュミーの化身のように美しかったが、あまりの美しさに誰も求婚しなかったため、自ら夫を探す旅に出ます。マハーバーラタのヴァナ・パルヴァで語られるその物語は、ヒンドゥー教における妻の理想として今も語り継がれています。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>「一年後に死ぬ」と知りながら選ぶ</div>
+      <p>旅から戻ったサーヴィトリーは父に報告しました。「シャールヴァ国のサティヤヴァーンを夫に選びました。父王ディユマトセーナは盲目になり、敵に国を奪われ、妻子とともに森で暮らしています」。</p>
+      <p>ちょうど宮殿に来ていた聖仙ナーラダがサティヤヴァーンの美点を数え上げたあと、こう告げました——<span class="highlight">「ただし、ちょうど一年後に死にます」</span>。父は動揺しましたが、サーヴィトリーは一歩も引きません。「私は一度決めたことを変えません。たとえ彼が一年しか生きられなくても」。</p>
+      <p>結婚が成立し、サーヴィトリーは装飾品を捨てて森の生活に入りました。運命の日が近づくにつれ、彼女は三日間の断食に入ります。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>死神ヤマとの対話——四つの恩恵</div>
+      <p>運命の日、サティヤヴァーンは森で薪を切っているうちに激しい頭痛に襲われ、サーヴィトリーの膝の上に倒れました。すると<span class="highlight">血の色の衣をまとい、縄を手にした人物</span>が現れます。</p>
+      <p>「あなたは誰ですか」「<span class="highlight">私はヤマだ</span>。この者の魂を迎えに来た。彼は正しき人間だから、使者ではなく私が自ら来た」。ヤマはサティヤヴァーンの魂を縄で引き抜き、南へ歩き始めました。サーヴィトリーはその後を追います。</p>
+      <p>「戻りなさい」とヤマは言いましたが、サーヴィトリーは夫の行くところへ行くのが妻の務めだと説きます。感心したヤマは<span class="highlight">「命以外なら何でも」</span>という条件で恩恵を与えました。一つ目：義父の視力回復。二つ目：義父の王国の回復。三つ目：実父に百人の息子を。そして四つ目——「サティヤヴァーンとの間に百人の子を授けてください」。</p>
+      <p>ヤマがこれを許した瞬間、サーヴィトリーは微笑みました。「夫が死んでいるのに、どうやって子が生まれましょうか」。<span class="highlight">ヤマは自らの言葉に縛られ</span>、サティヤヴァーンの魂を返すほかありませんでした。</p>
+      <div class="aside">力ではなく知恵と言葉で死神を出し抜いた物語。サーヴィトリーの「四つ目の願い」の巧みさは、インド文学における論理的機知の最高傑作のひとつです。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>すべてが叶う——暗闇の中の帰還</div>
+      <p>ヤマは喜んでサティヤヴァーンの魂を返し、「二人は百年を生きるだろう」と祝福して去りました。サーヴィトリーが夫の身体のもとに戻り、膝に頭を乗せると、サティヤヴァーンは目を覚ましました。</p>
+      <p>夜になっていました。暗闇の中、サーヴィトリーは斧を持ち、夫を支えながら月明かりを頼りに庵へ歩きます。そこでは視力を取り戻したディユマトセーナが、息子夫婦を探して森を歩き回っていました。全員が再会し、サーヴィトリーはすべての経緯を語りました。</p>
+      <p>やがてシャールヴァ国から使者が到着します。「簒奪者の大臣が殺され、民が王の帰還を求めています」。ディユマトセーナは王位に復帰し、サティヤヴァーンとサーヴィトリーは幸福に暮らしました。ヤマの四つの恩恵は、すべて現実となったのです。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ヤマ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⚖️</div>
+      <div>
+        <h2>ヤマ（Yama）</h2>
+        <div class="sanskrit">死の神・正義の裁き手・南の守護神</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      太陽神スーリヤと妻サンジュニャーの子。水牛に乗り、縄と杖を手にした死の支配者であり、同時にダルマ（正義）の体現者。彼の都サンヤマニーでは記録官チトラグプタが全ての生命の善悪を計算し、ヤマは公正な裁きを下します。二十八の地獄を管理するが、善人の魂はヴァイクンタ（天界）へ送る慈悲の面も持ちます。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>継母の呪い——影の妻チャーヤーとの衝突</div>
+      <p>ヤマの出生については<a href="hindu-myths-3.html" style="color: var(--accent-indigo); text-decoration: underline; text-underline-offset: 2px;">第三弾のスーリヤの項</a>でも触れましたが、もう少し詳しく語りましょう。母サンジュニャーが太陽の輝きに耐えられず家出したあと、影の代理妻<span class="highlight">チャーヤー</span>がサンジュニャーのふりをしていました。</p>
+      <p>ある日ヤマがチャーヤーに対して足で蹴るという無礼を働きました。実の母なら叱りこそすれ呪うことはないはずですが、チャーヤーは激怒して呪いました——<span class="highlight">「おまえの足は腐り落ちるだろう」</span>。ヤマは父スーリヤに訴え、スーリヤは「実の母ではない誰かが妻のふりをしている」と悟ります。</p>
+      <p>ヤマの足は完全には腐らず、蛆虫が肉を食べるだけで済みました（スーリヤが呪いを軽減したため）。この事件がきっかけでスーリヤはサンジュニャーの失踪を知り、妻を連れ戻す物語が始まるのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>死のない世界——ヤマが不在になると</div>
+      <p>マハーバーラタによると、ヤマがナイミシャーラニヤで長期間の祭祀を始めたとき、<span class="highlight">世界から死が消えました</span>。あらゆる生き物が死なないまま増え続け、大地はその重みに耐えかねて百ヨージャナ（数百キロ）も沈み込んだのです。</p>
+      <p>困り果てた神々がヤマのもとを訪れ、「祭祀を終えて職務に戻ってほしい」と懇願しました。ヤマが祭祀を終えて死を世界に戻すと、ようやく秩序が回復しました。</p>
+      <p>別の伝承では、少年マールカンデーヤが十六歳で死ぬ運命だったとき、シヴァ神像に抱きついて逃れようとしました。ヤマが縄を投げると縄がシヴァの首にかかり、激怒したシヴァが<span class="highlight">第三の目でヤマを焼き尽くしました</span>。世界から再び死が消え、混乱が起こったため、シヴァがヤマを蘇生させて事態は収拾されたのです。</p>
+      <div class="aside">死は恐ろしいが、死がなくなればもっと恐ろしい——ヤマの不在が教えるのは、死もまた宇宙の秩序の一部だという逆説的な真理です。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ラーマを迎えに——変装した死神</div>
+      <p>ラーマがアヨーディヤーを一万一千年統治した後、ヴィシュヌの化身を天界に呼び戻す時が来ました。ブラフマーはヤマを地上に遣わします。ヤマは<span class="highlight">若いバラモンの姿</span>に変装してラーマを訪ね、「密談がある」と告げました。</p>
+      <p>ラーマはラクシュマナに門番を命じます——「誰も入れるな。破った者は死刑とする」。しかし密談の最中、千年間の断食を終えたばかりの<span class="highlight">ドゥルヴァーサス仙</span>が食事を求めて現れました。断れば全王族に呪いがかかる。ラクシュマナは弟の命を救うため、死刑の禁を破って密談の部屋に入りました。</p>
+      <p>賢者ヴァシシュタの助言で、死刑の代わりにラクシュマナは「追放」とされました。ラクシュマナはサラユー河に身を投じ、心を砕かれたラーマもまた同じ河に入り、ヤマが二人の魂をヴァイクンタへ導いたのです。</p>
+      <div class="aside">死神が「密使」として王のもとを訪れ、忠実な弟の犠牲を引き起こす——ラーマーヤナの最終章は、ヤマの「来訪」がもたらす連鎖的な悲劇の物語です。</div>
+    </div>
+  </section>
+
+  <div class="nav-link">
+    <a href="hindu-myths-3.html">← 第三弾「英雄と炎の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-2.html">← 第二弾「続・ヒンドゥー神話入門」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、デーヴィー・バーガヴァタ、パドマ・プラーナ、ガルダ・プラーナ、ウッタラ・ラーマーヤナ、カターサリトサーガラ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
