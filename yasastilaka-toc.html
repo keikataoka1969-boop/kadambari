@@ -1,0 +1,611 @@
+<title>Yasastilaka and Indian Culture — 目次・内容梗概</title>
+<style>
+@import url('data:text/css,');
+
+:root {
+  --bg: #FAF8F3;
+  --bg-alt: #F0EDE5;
+  --text: #2C2418;
+  --text-muted: #6B5D4A;
+  --accent: #8B3A2A;
+  --accent-light: #C4775A;
+  --rule: #D4CABC;
+  --sanskrit: #5A4632;
+  --chapter-num: #B8A48E;
+  --card-bg: #FFFEF9;
+  --shadow: rgba(44,36,24,0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1A1610;
+    --bg-alt: #231E16;
+    --text: #E2D9CA;
+    --text-muted: #9E8E78;
+    --accent: #D4845A;
+    --accent-light: #E8A67A;
+    --rule: #3A3228;
+    --sanskrit: #C4A882;
+    --chapter-num: #6B5D4A;
+    --card-bg: #211C14;
+    --shadow: rgba(0,0,0,0.3);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-alt: #231E16;
+  --text: #E2D9CA;
+  --text-muted: #9E8E78;
+  --accent: #D4845A;
+  --accent-light: #E8A67A;
+  --rule: #3A3228;
+  --sanskrit: #C4A882;
+  --chapter-num: #6B5D4A;
+  --card-bg: #211C14;
+  --shadow: rgba(0,0,0,0.3);
+}
+:root[data-theme="light"] {
+  --bg: #FAF8F3;
+  --bg-alt: #F0EDE5;
+  --text: #2C2418;
+  --text-muted: #6B5D4A;
+  --accent: #8B3A2A;
+  --accent-light: #C4775A;
+  --rule: #D4CABC;
+  --sanskrit: #5A4632;
+  --chapter-num: #B8A48E;
+  --card-bg: #FFFEF9;
+  --shadow: rgba(44,36,24,0.06);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  line-height: 1.72;
+  font-size: 16.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+/* — Header — */
+.header {
+  text-align: center;
+  padding-bottom: 2.8rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+
+.header .series {
+  font-variant: small-caps;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.header h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.28;
+  text-wrap: balance;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.header .subtitle {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.9rem;
+}
+
+.header .author {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.header .doc-label {
+  display: inline-block;
+  margin-top: 1.4rem;
+  font-size: 0.82rem;
+  font-variant: small-caps;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.25em 1em;
+  border-radius: 2px;
+}
+
+/* — TOC — */
+.toc-section {
+  margin-bottom: 3.2rem;
+}
+
+.section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+.toc-group {
+  margin-bottom: 1.6rem;
+}
+
+.toc-group-label {
+  font-size: 0.78rem;
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.toc-item .num {
+  flex-shrink: 0;
+  width: 2.2rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--chapter-num);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.toc-item .title {
+  flex: 1;
+}
+
+.toc-item .title a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.toc-item .title a:hover {
+  border-bottom-color: var(--accent-light);
+}
+
+.toc-item .pages {
+  flex-shrink: 0;
+  font-size: 0.82rem;
+  color: var(--chapter-num);
+  font-variant-numeric: tabular-nums;
+}
+
+.toc-dots {
+  flex: 1;
+  border-bottom: 1px dotted var(--rule);
+  min-width: 1.5rem;
+  align-self: baseline;
+  margin-bottom: 0.35em;
+}
+
+/* — Divider — */
+.divider {
+  text-align: center;
+  margin: 2.8rem 0;
+  color: var(--rule);
+  font-size: 1.2rem;
+  letter-spacing: 0.6em;
+}
+
+/* — Chapter summaries — */
+.chapter {
+  margin-bottom: 2.8rem;
+}
+
+.chapter-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.chapter-header .ch-num {
+  font-size: 0.78rem;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  color: var(--chapter-num);
+  flex-shrink: 0;
+}
+
+.chapter-header h2 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--accent);
+}
+
+.chapter p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.chapter p:last-child {
+  margin-bottom: 0;
+}
+
+.sub-section {
+  margin-top: 1rem;
+  margin-left: 1.2rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--rule);
+}
+
+.sub-section h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.front-matter {
+  margin-bottom: 2.4rem;
+}
+
+.front-matter h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.front-matter p {
+  margin-bottom: 0.7rem;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.appendix-block {
+  background: var(--bg-alt);
+  border-radius: 4px;
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.appendix-block h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+}
+
+.appendix-block p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.colophon {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 2rem 1rem 3rem; }
+  .header h1 { font-size: 1.45rem; }
+  .toc-item .pages { display: none; }
+  .toc-dots { display: none; }
+  .sub-section { margin-left: 0.5rem; }
+}
+</style>
+
+<div class="page">
+
+  <div class="header">
+    <div class="series">Jivaraja Jaina Granthamala No. 2</div>
+    <h1>Yasastilaka and Indian Culture</h1>
+    <div class="subtitle">Somadeva's Yaśastilaka and Aspects of Jainism and Indian Thought and Culture in the Tenth Century</div>
+    <div class="author">Krishna Kanta Handiqui, M.A. (Cal. et Oxon.)</div>
+    <div class="doc-label">目次・内容梗概</div>
+  </div>
+
+  <!-- ═══ TABLE OF CONTENTS ═══ -->
+  <div class="toc-section">
+    <div class="section-title">目次</div>
+
+    <div class="toc-group">
+      <div class="toc-group-label">前付</div>
+      <ul class="toc-list">
+        <li class="toc-item"><span class="num"></span><span class="title">General Editors' Preface（総編集者序文）</span><span class="toc-dots"></span><span class="pages">v–vi</span></li>
+        <li class="toc-item"><span class="num"></span><span class="title">General Editors' Preface, Second Edition（第二版序文）</span><span class="toc-dots"></span><span class="pages">vii–viii</span></li>
+        <li class="toc-item"><span class="num"></span><span class="title">Author's Preface（著者序文）</span><span class="toc-dots"></span><span class="pages">ix–x</span></li>
+        <li class="toc-item"><span class="num"></span><span class="title">Author's Preface, Second Edition（第二版著者序文）</span><span class="toc-dots"></span><span class="pages">xi</span></li>
+        <li class="toc-item"><span class="num"></span><span class="title">Supplementary Notes I–IV（補注）</span><span class="toc-dots"></span><span class="pages">xii–xv</span></li>
+      </ul>
+    </div>
+
+    <div class="toc-group">
+      <div class="toc-group-label">本文</div>
+      <ul class="toc-list">
+        <li class="toc-item"><span class="num">I</span><span class="title"><a href="#ch1">Somadeva and his Age（ソーマデーヴァとその時代）</a></span><span class="toc-dots"></span><span class="pages">1–20</span></li>
+        <li class="toc-item"><span class="num">II</span><span class="title"><a href="#ch2">Synopsis of Yaśastilaka（ヤシャスティラカ梗概）</a></span><span class="toc-dots"></span><span class="pages">21–41</span></li>
+        <li class="toc-item"><span class="num">III</span><span class="title"><a href="#ch3">The Story of Yaśodhara and Its Sources（ヤショーダラ物語とその典拠）</a></span><span class="toc-dots"></span><span class="pages">42–52</span></li>
+        <li class="toc-item"><span class="num">IV</span><span class="title"><a href="#ch4">Yaśastilaka as a Prose Romance（散文ロマンスとしてのヤシャスティラカ）</a></span><span class="toc-dots"></span><span class="pages">53–123</span></li>
+        <li class="toc-item"><span class="num">V</span><span class="title"><a href="#ch5">Yaśastilaka as a Socio-Political Record（社会政治記録としてのヤシャスティラカ）</a></span><span class="toc-dots"></span><span class="pages">124–138</span></li>
+        <li class="toc-item"><span class="num">VI</span><span class="title"><a href="#ch6">Yaśastilaka as a Religious Romance（宗教ロマンスとしてのヤシャスティラカ）</a></span><span class="toc-dots"></span><span class="pages">139–183</span></li>
+        <li class="toc-item"><span class="num">VII</span><span class="title"><a href="#ch7">Yaśastilaka as an Anthology of Sanskrit Verse（サンスクリット詩華集としてのヤシャスティラカ）</a></span><span class="toc-dots"></span><span class="pages">184–216</span></li>
+        <li class="toc-item"><span class="num">VIII</span><span class="title"><a href="#ch8">Philosophical Doctrines（哲学教説）</a></span><span class="toc-dots"></span><span class="pages">217–245</span></li>
+        <li class="toc-item"><span class="num">IX</span><span class="title"><a href="#ch9">Schools of Thought（諸学派）</a></span><span class="toc-dots"></span><span class="pages">246–290</span></li>
+        <li class="toc-item"><span class="num">X</span><span class="title"><a href="#ch10">Jaina Dogmatics and Moral and Spiritual Discipline（ジャイナ教義と道徳的・精神的修行）</a></span><span class="toc-dots"></span><span class="pages">291–315</span></li>
+        <li class="toc-item"><span class="num">XI</span><span class="title"><a href="#ch11">The Anuprekṣās and Jaina Religious Poetry（アヌプレークシャーとジャイナ教の宗教詩）</a></span><span class="toc-dots"></span><span class="pages">316–325</span></li>
+        <li class="toc-item"><span class="num">XII</span><span class="title"><a href="#ch12">A Controversial Dialogue（論争的対話）</a></span><span class="toc-dots"></span><span class="pages">326–376</span></li>
+        <li class="toc-item"><span class="num">XIII</span><span class="title"><a href="#ch13">Jainism and Other Faiths（ジャイナ教と他の宗教）</a></span><span class="toc-dots"></span><span class="pages">377–390</span></li>
+        <li class="toc-item"><span class="num">XIV</span><span class="title"><a href="#ch14">Jaina Criticism of Vedic Sacrifices（ヴェーダ祭祀に対するジャイナ教の批判）</a></span><span class="toc-dots"></span><span class="pages">391–407</span></li>
+        <li class="toc-item"><span class="num">XV</span><span class="title"><a href="#ch15">Non-Jaina Cults, Customs and Beliefs（非ジャイナ教の諸信仰・慣習）</a></span><span class="toc-dots"></span><span class="pages">408–431</span></li>
+        <li class="toc-item"><span class="num">XVI</span><span class="title"><a href="#ch16">Jaina Religious and Moral Stories（ジャイナ教の宗教的・道徳的説話）</a></span><span class="toc-dots"></span><span class="pages">432–438</span></li>
+        <li class="toc-item"><span class="num">XVII</span><span class="title"><a href="#ch17">Myths and Legends（神話と伝説）</a></span><span class="toc-dots"></span><span class="pages">439–463</span></li>
+        <li class="toc-item"><span class="num">XVIII</span><span class="title"><a href="#ch18">Quotations and References（引用と参照）</a></span><span class="toc-dots"></span><span class="pages">464–465</span></li>
+      </ul>
+    </div>
+
+    <div class="toc-group">
+      <div class="toc-group-label">附録・索引</div>
+      <ul class="toc-list">
+        <li class="toc-item"><span class="num">附 I</span><span class="title"><a href="#ap1">Somadeva and the Pratihāra Court of Kanauj</a></span><span class="toc-dots"></span><span class="pages">466</span></li>
+        <li class="toc-item"><span class="num">附 II</span><span class="title"><a href="#ap2">The Verses on the Courtesan's Corpse and a Buddhist Legend</a></span><span class="toc-dots"></span><span class="pages">467</span></li>
+        <li class="toc-item"><span class="num">附 III</span><span class="title"><a href="#ap3">Śaiva Temples and their Geographical Distribution</a></span><span class="toc-dots"></span><span class="pages">509</span></li>
+        <li class="toc-item"><span class="num">附 IV</span><span class="title"><a href="#ap4">The Kālāmukha Sect</a></span><span class="toc-dots"></span><span class="pages">511</span></li>
+        <li class="toc-item"><span class="num"></span><span class="title">Index of Geographical Names（地名索引）</span><span class="toc-dots"></span><span class="pages">518</span></li>
+        <li class="toc-item"><span class="num"></span><span class="title">General Index（総索引）</span><span class="toc-dots"></span><span class="pages">—</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="divider">— ✦ —</div>
+
+  <!-- ═══ DETAILED SUMMARIES ═══ -->
+  <div class="toc-section">
+    <div class="section-title">内容梗概</div>
+
+    <div class="front-matter">
+      <h2>前付について</h2>
+      <p>本書は Jīvarāja Jaina Granthamālā（ジーヴァラージャ・ジャイナ叢書）の第2巻として、1949年にソーラープル（Sholapur）のJaina Saṁskṛti Samrakṣaka Saṅghaより初版刊行、1968年に第二版（写真版再刷＋補注付）が出版された。総編集者 A. N. Upadhye と H. L. Jain による序文では、ジャイナ教研究の遅れを指摘し、ソーマデーヴァの文学的天才と本書の学術的意義を称える。著者 K. K. Handiqui はガウハーティー大学元副学長で、『ナイシャダチャリタ』英訳でも知られるサンスクリット学の泰斗である。</p>
+      <p>補注（Supplementary Notes I–IV）では、ヴェームラヴァーダ（Vemulavāda）のチャールキヤ家とソーマデーヴァの関係に関する最新研究成果、東チャールキヤ朝のシヴァ寺院群、ダルマキールティの『プラマーナヴァールッティカ』からの引用の特定、ガンガダーラム碑文の発見などが補足される。</p>
+    </div>
+
+    <div class="chapter" id="ch1">
+      <div class="chapter-header">
+        <span class="ch-num">第 I 章</span>
+        <h2>Somadeva and his Age（ソーマデーヴァとその時代）</h2>
+      </div>
+      <p>ソーマデーヴァの現存する二著作――『ヤシャスティラカ』（959年完成、散文韻文混交の宗教ロマンス、全8巻）と『ニーティヴァーキヤームリタ』（政治学の格言集、32章）――について概説する。ソーマデーヴァはデーヴァサンガに属するジャイナ教僧侶で、師ネーミデーヴァ、大師ヤショーデーヴァの系譜に連なる。「スヤードヴァーダの山上の獅子」「論理学者の帝王」「詩人の王」等の尊称を持つ。</p>
+      <p>『ヤシャスティラカ』はシャカ暦881年（西暦959年）、ラーシュトラクータ朝の大帝クリシュナ3世が南方遠征の勝利を祝してメールパーティーに滞陣していた年に、チャールキヤ家の封臣アリケーサリンの長子ヴァーガラージャ（バッディガ）の領地ガンガダーラーで完成された。パルバニー銅板碑文（966年）により、ソーマデーヴァが同地でシュバダーマ・ジナーラヤ寺院を管掌していたことが判明する。</p>
+      <p>同時代の文学状況として、カンナダ詩人パンパ（941年）、プシュパダンタ（959–965年、アパブランシャ詩人）、政治顧問ヴァーディガンガラ・バッタ等を挙げ、10世紀デカン地方のジャイナ教文学の隆盛を描く。ソーマデーヴァの文学的特質として、散文韻文の巧みさ、百科全書的学識、ジャイナ教義の権威としての側面、政治学への関心、民話・宗教説話の再話者としての技量、そして鋭い社会観察眼を挙げる。非ジャイナ教の文学者からは完全に無視され、文学的復権は近代の研究によって初めてなされた。</p>
+    </div>
+
+    <div class="chapter" id="ch2">
+      <div class="chapter-header">
+        <span class="ch-num">第 II 章</span>
+        <h2>Synopsis of Yaśastilaka（ヤシャスティラカ梗概）</h2>
+      </div>
+
+      <div class="sub-section">
+        <h3>第1巻</h3>
+        <p>ヤウデーガ国ラージャプラに暴君マーラダッタが君臨する。タントラ教師ヴィーラバイラヴァの教唆により、チャンダマーリー女神の神殿で大量の動物と一組の人間を生贄に捧げて魔剣を得ようと企む。ジャイナ教の聖者スダッタの弟子である少年苦行者アバヤルチとその妹アバヤマティ（実はマーラダッタの甥と姪）が衛兵に捕らえられ神殿に連行される。しかし二人の沈着な態度にマーラダッタの心は軟化し、剣を収める。</p>
+      </div>
+
+      <div class="sub-section">
+        <h3>第2巻</h3>
+        <p>アバヤルチが前世の自伝を語り始める。アヴァンティ国ウッジャイニーの王ヤショールガとその妃チャンドラマティの子ヤショーダラが主人公。ヤショールガは白髪を見て出家を決意し、息子ヤショーダラに王位を譲る。戴冠式、象馬の選定、婚礼の儀式、王宮への行列など中世宮廷文化が詳細に描写される。</p>
+      </div>
+
+      <div class="sub-section">
+        <h3>第3巻</h3>
+        <p>王としてのヤショーダラの日常が連作的に描かれる。朝の裁判、運命と努力に関する閣議討論、間諜シャンカナカによる腐敗大臣パーマローダーラの告発（政治風刺詩の大系を含む）、軍隊の閲兵、外交使節の接見、宮廷道化師の諧謔、象の調教、健康と食養生の講義、水遊びの機械装置、戦争と勝利、春祭りとマハーナヴァミー祭など。</p>
+      </div>
+
+      <div class="sub-section">
+        <h3>第4巻（物語の転換点）</h3>
+        <p>ある夜、ヤショーダラは妃アムリタマティが密かに寝所を抜け出し、醜い跛の象使いアシュタヴァルカのもとへ通うのを目撃する。復讐を思い止まった王は世の無常を悟り出家を決意。母チャンドラマティとの間で動物犠牲やバラモン教義をめぐる激しい論争が交わされる。妥協策として小麦粉で作った鶏を女神に供えるが、アムリタマティは発覚を恐れ、翌日の宴で夫と姑に毒を盛り、さらにヤショーダラを絞殺する。</p>
+      </div>
+
+      <div class="sub-section">
+        <h3>第5巻</h3>
+        <p>ヤショーダラとチャンドラマティの悲惨な輪廻転生が語られる。孔雀と犬、鹿と蛇、魚と鰐、山羊の雌雄、雄鶏と雌鶏として次々に生まれ変わり、暴力と殺生の業報を繰り返す。最終的にヤショーマティ王の妃クスマーヴァリの胎内に双子として宿り、アバヤルチとアバヤマティとして人間に生まれ変わる。聖者スダッタがアヒンサー（非暴力）の教えを説き、一切衆生への加害が苦の連鎖をもたらすことを示す。</p>
+      </div>
+
+      <div class="sub-section">
+        <h3>第6–8巻</h3>
+        <p>聖者スダッタがマーラダッタに対しジャイナ教教義の大講義を行う。第6巻ではサンヤクトヴァ（正信）と諸学派批判、第7巻では殺生・飲酒の禁止と五大誓戒（アヌヴラタ）、第8巻では礼拝・瞑想の体系を説く。教化を受けたマーラダッタと市民はジャイナ教に帰依し、出家修行の末に天界に生まれ変わる。</p>
+      </div>
+    </div>
+
+    <div class="chapter" id="ch3">
+      <div class="chapter-header">
+        <span class="ch-num">第 III 章</span>
+        <h2>The Story of Yaśodhara and Its Sources（ヤショーダラ物語とその典拠）</h2>
+      </div>
+      <p>ヤショーダラ物語の文学史的系譜を追う。最古の言及はプラバンジャナの『ヤショーダラチャリタ』（8世紀以前）で、ハリバドラの『サマライッチャカハー』（8世紀中頃、プラークリット散文）にも詳細な版が見られる。ハリバドラ版との比較から、ソーマデーヴァ版の独自性が明らかにされる。（1）マーラダッタと人身御供の挿話はソーマデーヴァの追加、（2）殺害の動機がハリバドラ版では出家回避だがソーマデーヴァ版では正当防衛、（3）ソーマデーヴァ版のみが反バラモン教論争を含む。</p>
+      <p>アムリタマティの人物造型を詳細に分析する。歌の名手たる象使いへの異常な執着の心理的説明、政略結婚による不幸な結婚生活への言及、愛の相互性に対する主張など、ソーマデーヴァは罪人としての類型的描写を超えて複雑な性格造型を試みている。類話としてデーヴァラティとラクター、ダナシュリーの物語等ジャイナ教説話文学の並行例も論じる。10世紀以降、この物語はサンスクリット、古グジャラート語、古ヒンディー語、タミル語、カンナダ語で多数の改作が生まれた。</p>
+    </div>
+
+    <div class="chapter" id="ch4">
+      <div class="chapter-header">
+        <span class="ch-num">第 IV 章</span>
+        <h2>Yaśastilaka as a Prose Romance（散文ロマンスとしてのヤシャスティラカ）</h2>
+      </div>
+      <p>サンスクリット散文ロマンス史における『ヤシャスティラカ』の位置を論じる。バーナ、スバンドゥの傑作以後の空白を経て、10–11世紀にジャイナ教作家を中心に宗教的散文ロマンスが復興した。ソーマデーヴァはバーナやスバンドゥの文体的影響を受けつつも、百科全書的学識・ジャイナ教教義・政治学・古譚・引用を包含する唯一無二の作品を創り出した。</p>
+      <p>物語の本質的特徴として、（1）家庭内悲劇に基づくリアリズム小説であること（ロマンティックな恋愛を排し運命の苛酷さを描く）、（2）超自然的要素がほぼ皆無なこと、（3）同時代社会の生き生きとした描写を含むこと、を指摘する。チャンダマーリー女神の描写、間諜の風貌、象使いの醜怪な容姿、機械仕掛けの噴水庭園、軍隊編成の詳細など、文学史上他に類を見ない散文描写の数々を原文引用とともに分析する。</p>
+    </div>
+
+    <div class="chapter" id="ch5">
+      <div class="chapter-header">
+        <span class="ch-num">第 V 章</span>
+        <h2>Yaśastilaka as a Socio-Political Record（社会政治記録としてのヤシャスティラカ）</h2>
+      </div>
+      <p>『ヤシャスティラカ』に描かれた10世紀インドの社会と政治の実態を検証する。宮廷生活の詳細、行政機構、諜報制度、軍制（インド各地からの徴兵連隊の構成）、外交儀礼、間諜による腐敗大臣の告発と政治風刺詩群を分析する。ソーマデーヴァの政治思想は『ニーティヴァーキヤームリタ』と相互補完の関係にあり、ラーシュトラクータ帝国の帝室宮廷の実態を反映している。</p>
+    </div>
+
+    <div class="chapter" id="ch6">
+      <div class="chapter-header">
+        <span class="ch-num">第 VI 章</span>
+        <h2>Yaśastilaka as a Religious Romance（宗教ロマンスとしてのヤシャスティラカ）</h2>
+      </div>
+      <p>作品の宗教的側面を論じる。『ヤシャスティラカ』全体の約半分がジャイナ教教義の弁護と解説に充てられている。聖者スダッタの大講義（第6–8巻）を中心に、サンヤクトヴァ（正信）の本質と障碍、五大誓戒（殺生・虚言・盗み・邪淫・貪欲の禁止）、礼拝・瞑想の体系が展開される。各教義は寓話的説話によって例証され、この手法はジャイナ教説話文学の長い伝統に連なる。</p>
+    </div>
+
+    <div class="chapter" id="ch7">
+      <div class="chapter-header">
+        <span class="ch-num">第 VII 章</span>
+        <h2>Yaśastilaka as an Anthology of Sanskrit Verse（サンスクリット詩華集としてのヤシャスティラカ）</h2>
+      </div>
+      <p>散文の間に挿入された膨大な韻文を体系的に分析する。宮廷詩（朝の情景、季節の描写、王の讃歌）、動物詩（象・馬・孔雀の生態描写）、火葬場の詩、チャンダマーリー女神讃歌、子供の生態描写、アヌプレークシャー（瞑想主題）の宗教詩、そして大臣の腐敗を風刺する政治詩など、カーヴィヤ文学の多様な主題を網羅する。特にプラークリット韻律をサンスクリット詩に用いた実験的手法は、ジャヤデーヴァの『ギータゴーヴィンダ』に先行する抒情的試みとして注目される。政治風刺詩はクシェーメーンドラの『ナルママーラー』に先駆する最初の体系的試みである。</p>
+    </div>
+
+    <div class="chapter" id="ch8">
+      <div class="chapter-header">
+        <span class="ch-num">第 VIII 章</span>
+        <h2>Philosophical Doctrines（哲学教説）</h2>
+      </div>
+      <p>『ヤシャスティラカ』に展開されるジャイナ哲学の核心教説を体系的に解説する。存在論（ジーヴァとアジーヴァ）、認識論（プラマーナ論）、カルマ論、因果論、そしてスヤードヴァーダ（相対主義的認識論）の原理を検討する。ソーマデーヴァのジャイナ哲学理解の深さと精密さが、原典の詳細な引用と分析によって明らかにされる。</p>
+    </div>
+
+    <div class="chapter" id="ch9">
+      <div class="chapter-header">
+        <span class="ch-num">第 IX 章</span>
+        <h2>Schools of Thought（諸学派）</h2>
+      </div>
+      <p>ソーマデーヴァが『ヤシャスティラカ』中で批判的に論じた非ジャイナ教の哲学体系を検討する。サーンキヤ、ヨーガ、ニヤーヤ、ヴァイシェーシカ、ミーマーンサー、ヴェーダーンタの六派哲学、仏教（特にヨーガーチャーラ派・サウトラーンティカ派）、チャールヴァーカ（唯物論）の各教説に対するソーマデーヴァの理解と反駁を分析する。当時のインドにおける哲学的論争の実態を映す貴重な資料である。</p>
+    </div>
+
+    <div class="chapter" id="ch10">
+      <div class="chapter-header">
+        <span class="ch-num">第 X 章</span>
+        <h2>Jaina Dogmatics and Moral and Spiritual Discipline（ジャイナ教義と道徳的・精神的修行）</h2>
+      </div>
+      <p>ジャイナ教の教理体系の中核を解説する。三宝（正信・正知・正行）、七つの根本原理（タットヴァ）、九つのパダールタ、カルマの八種分類、グナスターナ（霊的段階）の体系を論じる。在家信者の義務（シュラーヴァカダルマ）と出家修行者の義務（ムニダルマ）の詳細な規定、苦行の種類と実践を、作品中の記述に即して分析する。</p>
+    </div>
+
+    <div class="chapter" id="ch11">
+      <div class="chapter-header">
+        <span class="ch-num">第 XI 章</span>
+        <h2>The Anuprekṣās and Jaina Religious Poetry（アヌプレークシャーとジャイナ教の宗教詩）</h2>
+      </div>
+      <p>ジャイナ教で規定される十二のアヌプレークシャー（瞑想主題）――無常・無帰依・輪廻・孤独・身体と自己の別異・不浄・流入・制御・滅却・世界の構造・菩提の困難・法の正しさ――に関するソーマデーヴァの詩的表現を分析する。これらの瞑想主題をカーヴィヤ詩の形式で詠んだ試みは、宗教思想と文学芸術の独創的な融合として高く評価される。</p>
+    </div>
+
+    <div class="chapter" id="ch12">
+      <div class="chapter-header">
+        <span class="ch-num">第 XII 章</span>
+        <h2>A Controversial Dialogue（論争的対話）</h2>
+      </div>
+      <p>第4巻におけるヤショーダラと母チャンドラマティの宗教論争を詳細に分析する。チャンドラマティはバラモン教の立場からシヴァ・ヴィシュヌ崇拝と動物犠牲を主張し、ヤショーダラはジャイナ教の立場からこれらを体系的に批判する。ヴェーダの権威、神の本質、バラモン教の祭祀と慣行に関する論点が逐一検討される。この対話篇はソーマデーヴァの論争的知性の最も集中的な表現であり、10世紀における宗派間論争の実態を生々しく伝える。</p>
+    </div>
+
+    <div class="chapter" id="ch13">
+      <div class="chapter-header">
+        <span class="ch-num">第 XIII 章</span>
+        <h2>Jainism and Other Faiths（ジャイナ教と他の宗教）</h2>
+      </div>
+      <p>ソーマデーヴァが『ヤシャスティラカ』中で言及する諸宗教・宗派との関係を考察する。バラモン教・ヒンドゥー教各派（ヴァイシュナヴァ、シャイヴァ、シャークタ等）、仏教諸派、チャールヴァーカに対するジャイナ教の立場と批判を整理する。ジャイナ教の優位を主張しつつも、他の宗教的伝統に対する深い知識を示すソーマデーヴァの学識が明らかにされる。</p>
+    </div>
+
+    <div class="chapter" id="ch14">
+      <div class="chapter-header">
+        <span class="ch-num">第 XIV 章</span>
+        <h2>Jaina Criticism of Vedic Sacrifices（ヴェーダ祭祀に対するジャイナ教の批判）</h2>
+      </div>
+      <p>ヴェーダの動物犠牲に対するジャイナ教の伝統的批判をソーマデーヴァの記述に即して整理する。犠牲獣が天界に行くという正当化論への反駁、祭祀がバラモンの私利のために歪曲されたとする批判、アヒンサー（非暴力）の絶対的原理との矛盾の指摘などを論じる。これらの議論は単なる宗派的偏見にとどまらず、インド思想史における暴力と非暴力の倫理的議論の重要な一局面をなす。</p>
+    </div>
+
+    <div class="chapter" id="ch15">
+      <div class="chapter-header">
+        <span class="ch-num">第 XV 章</span>
+        <h2>Non-Jaina Cults, Customs and Beliefs（非ジャイナ教の諸信仰・慣習）</h2>
+      </div>
+      <p>『ヤシャスティラカ』に描写された10世紀インドの非ジャイナ教的宗教実践と民間信仰を広範に検討する。シヴァ信仰の諸形態（カーパーリカ、カーラームカ等）、シャークタ信仰とチャンダマーリー女神崇拝、タントラ的実践、占い・呪術・護符の信仰、祭礼と季節の儀礼、迷信と俗信など、当時の宗教文化の多層性を浮き彫りにする民族誌的に貴重な資料である。</p>
+    </div>
+
+    <div class="chapter" id="ch16">
+      <div class="chapter-header">
+        <span class="ch-num">第 XVI 章</span>
+        <h2>Jaina Religious and Moral Stories（ジャイナ教の宗教的・道徳的説話）</h2>
+      </div>
+      <p>『ヤシャスティラカ』第6–7巻に挿入されたジャイナ教説話の全体を検討する。サンヤクトヴァ（正信）の四障碍と四助長要因を例証する説話群、飲酒と肉食の害を示す説話群、五大誓戒（不殺生・不妄語・不偸盗・不邪淫・不貪欲）に違反した結果を描く説話群に分類し、各説話の典拠と並行例をジャイナ教説話文学（『カターコーシャ』『ブリハットカターコーシャ』等）との比較において検討する。プシュパダンタの『マハープラーナ』との共通素材も指摘される。</p>
+    </div>
+
+    <div class="chapter" id="ch17">
+      <div class="chapter-header">
+        <span class="ch-num">第 XVII 章</span>
+        <h2>Myths and Legends（神話と伝説）</h2>
+      </div>
+      <p>ソーマデーヴァが作品中で言及または再話したジャイナ教・非ジャイナ教の神話・伝説を体系的に整理する。ティールタンカラ（祖師）の伝説、ヴィドヤーダラ（知識の精霊）の物語、チャクラヴァルティン（転輪聖王）の伝承、プラーナ文学由来の神話的素材のジャイナ教的改変、叙事詩（マハーバーラタ・ラーマーヤナ）の登場人物への言及などを検討する。</p>
+    </div>
+
+    <div class="chapter" id="ch18">
+      <div class="chapter-header">
+        <span class="ch-num">第 XVIII 章</span>
+        <h2>Quotations and References（引用と参照）</h2>
+      </div>
+      <p>ソーマデーヴァの博引旁証の全貌を整理する。『ヤシャスティラカ』中に引用・参照される文献として、ジャイナ教の聖典・論書・説話集のみならず、バラモン教のヴェーダ・スムリティ・プラーナ、仏教文献、カーヴィヤ文学の古典、政治学・修辞学・文法学等の専門書、さらには語彙学的に貴重な稀少語の使用例を網羅的に列挙する。ソーマデーヴァの百科全書的学識の範囲と深さを如実に示す章である。</p>
+    </div>
+
+    <div class="divider">— ✦ —</div>
+
+    <div class="toc-group">
+      <div class="section-title">附録</div>
+    </div>
+
+    <div class="appendix-block" id="ap1">
+      <h3>附録 I：Somadeva and the Pratihāra Court of Kanauj</h3>
+      <p>ソーマデーヴァとカナウジのプラティハーラ朝宮廷との関係の可能性を論じる。</p>
+    </div>
+
+    <div class="appendix-block" id="ap2">
+      <h3>附録 II：The Verses on the Courtesan's Corpse and a Buddhist Legend</h3>
+      <p>『ヤシャスティラカ』中の遊女の屍体に関する詩群と、仏教説話との並行関係を分析する。火葬場の描写に見られる「かつての美女の朽ちゆく屍体」という主題は、パーリ語仏典のアスバ瞑想（不浄観）の伝統とも通底する。</p>
+    </div>
+
+    <div class="appendix-block" id="ap3">
+      <h3>附録 III：Śaiva Temples and their Geographical Distribution</h3>
+      <p>『ヤシャスティラカ』に言及されるシヴァ寺院の地理的分布を調査し、10世紀前後のデカン・南インドにおけるシャイヴァ信仰の圧倒的優勢を実証する。東チャールキヤ朝の寺院群（ドラークシャーラーマ、パーラコールル等のパンチャーラーマ聖地群）についても補論で詳述。</p>
+    </div>
+
+    <div class="appendix-block" id="ap4">
+      <h3>附録 IV：The Kālāmukha Sect</h3>
+      <p>『ヤシャスティラカ』に描写されるカーラームカ派（シヴァ教の苦行宗派）について、碑文資料と文学的典拠を照合し、その教義・実践・地理的分布を明らかにする。カーパーリカとの異同も論じる。</p>
+    </div>
+
+  </div>
+
+  <div class="colophon">
+    K. K. Handiqui, <em>Yasastilaka and Indian Culture</em><br>
+    Jivaraja Jaina Granthamala No. 2, Sholapur, 1949 (2nd ed. 1968)<br>
+    PDF Source: Jain eLibrary, Serial #001609
+  </div>
+
+</div>
