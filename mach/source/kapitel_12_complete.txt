@@ -1,0 +1,275 @@
+Kapitel XII · 第ⅩⅡ章
+Die Zeitempfindung
+時間感覚
+
+§1
+
+Viel schwieriger als die Raumempfindung ist die Zeitempfindung zu untersuchen. Manche Empfindungen treten mit, anderen ohne deutliche Raumempfindung auf. Die Zeitempfindung begleitet aber jede andere Empfindung und kann von keiner gänzlich losgelöst werden. Wir sind also bei der Untersuchung darauf angewiesen, auf die Variationen der Zeitempfindung zu achten. Zu dieser psychologischen Schwierigkeit gesellt sich noch die andere, daß die physiologischen Prozesse, an welche die Zeitempfindung geknüpft ist, noch weniger bekannt sind, tiefer und verborgener liegen als die andern Empfindungen entsprechenden Prozesse. Die Analyse muß sich also vorzugsweise auf die psychologische Seite beschränken, ohne von der physischen, wie dies in anderen Sinnesgebieten wenigstens teilweise möglich ist, entgegenzukommen.
+
+【補】空間感覚に比べて、時間感覚の研究ははるかに困難である。ある種の感覚は明瞭な空間感覚を伴って現れるが、伴わないものもある。しかし時間感覚は他のあらゆる感覚に付き添い、どの感覚からも完全に切り離すことができない。したがって研究にあたっては、時間感覚の変動に注目するほかない。この心理学的な困難に加えて、もう一つの困難がある。時間感覚が結びついている生理学的過程は、他の感覚に対応する過程よりもさらに知られておらず、より深く隠されたところにある。したがって分析は主として心理学的な側面に限定されざるをえない。他の感覚領域ではある程度可能であるような、物理的な側面からの対応づけは、ここでは期待しがたい。
+
+Die wichtige Rolle, welche die zeitliche Ordnung der Elemente in unserm psychischen Leben spielt, braucht kaum besonders betont zu werden. Diese Ordnung ist fast noch bedeutender als die räumliche. Die Umkehrung der zeitlichen Ordnung entstellt einen Vorgang noch viel mehr, als die Umkehrung einer Raumgestalt von oben nach unten. Sie macht aus dem selben geradezu ein anderes, neues Erlebnis. Deshalb werden die Worte einer Rede, eines Gedichtes, nur in der erlebten Ordnung reproduziert und nicht auch in der umgekehrten, in welcher sie im allgemeinen einen ganz andern, oder gar keinen Sinn haben. Kehrt man gar durch umgekehrtes Lautieren, oder durch umgekehrten Gang des Phonographen die ganze akustische Folge um, so erkennt man nicht einmal mehr die Wortbestandteile der Rede wieder. Nur an die bestimmte Lautfolge eines Wortes knüpfen sich bestimmte Erinnerungen, und nur wenn dieselben der Wortfolge entsprechend in bestimmter Ordnung geweckt werden, fügen sie sich zu einem bestimmten Sinn zusammen 1). Aber auch eine Tonfolge, eine einfache Melodie, bei welcher die Gewohnheit und die Assoziation jedenfalls eine sehr geringe Rolle spielen, wird durch die zeitliche Umkehrung unkenntlich. Die zeitliche Folge selbst sehr elementarer Vorstellungen oder Empfindungen gehört mit zu deren Erinnerungsbild.
+
+【補】我々の心的生活において要素の時間的順序が演じる重要な役割は、特に強調するまでもないだろう。この順序は空間的順序よりもさらに重要である。時間的順序の反転は、空間的形の上下反転よりもはるかに強く出来事を歪める。それは同じものからまさに別の、新しい体験を作り出す。だからこそ、演説や詩の言葉は経験された順序でのみ再現され、逆順では再現されない——逆順ではまったく別の意味になるか、あるいは何の意味もなくなるからだ。逆に発音したり蓄音機を逆回しにしたりして音声の全系列を反転させれば、もはや言葉の構成要素すら認識できなくなる。ある語の特定の音の連なりにのみ特定の記憶が結びつき、語の連なりに応じた特定の順序で呼び覚まされてはじめて、それらは一つの意味にまとまるのである。また、習慣や連合がほとんど役割を果たさないはずの音列——単純な旋律——でさえ、時間的反転によって見分けがつかなくなる。きわめて基本的な表象や感覚であっても、その時間的連続は記憶像の一部をなしている。
+
+Faßt man die Zeit als Empfindung auf, so befremdet es weniger, daß in einer Reihe, welche in der Ordnung A B C D E ablief, irgend ein Glied, z. B. C, bloß die nachfolgenden, nicht aber die vorhergehenden in die Erinnerung ruft. So taucht ja auch das Erinnerungsbild eines Gebäudes nicht mit dem Dach nach unten gekehrt auf. Übrigens scheint es nicht einerlei zu sein, ob nach einem Organ A das Organ B erregt wird, oder umgekehrt. Es dürfte hierin ein physiologisches Problem liegen, mit dessen Lösung erst das volle Verständnis der fundamentalen psychologischen Tatsache des Ablaufs der Reproduktionsreihen in einem bestimmten Sinne gegeben wäre 2). Möglich, daß diese Tatsache damit zusammenhängt, daß die Erregung, je nach dem Anfangspunkt, in welchem sie in den Organismus eintritt auf ganz verschiedenen Wegen sich fortpflanzt, ähnlich wie dies für physikalische Fälle durch die Betrachtung S. 76 und die Fig. 12 erläutert wurde. Wenn selbst in einem ganz homogenen Protoplasma zwei Erregungen von zwei distanten Punkten ausgehend, sich gleichmäßig ausbreiten, so treffen dieselben näher an dem später erregten Punkte zusammen. Die Ordnung der Erregung kann also selbst in den einfachsten Fällen nicht gleichgültig sein.
+
+【補】時間を感覚として捉えるならば、A B C D E の順序で進行した系列において、ある一項——例えば C——が後続の項のみを記憶に呼び戻し、先行する項を呼び戻さないことは、さほど奇異ではなくなる。建物の記憶像が屋根を下にして浮かばないのと同じである。なお、器官 A のあとに器官 B が興奮するのと、その逆とでは、まったく同じではないように思われる。ここには生理学的な問題があり、それが解決されてはじめて、再生系列が一定の方向に進行するという根本的な心理学的事実が十分に理解されるであろう。おそらくこの事実は、興奮が有機体に入る出発点によって、まったく異なる経路で伝播するということと関連しているのだろう——これは物理的な場合について S. 76 の考察と Fig. 12 で説明されたのと類似している。まったく均質な原形質の中であっても、二つの遠く離れた点から出発した二つの興奮が均等に広がるならば、それらはより遅く興奮した点に近い所で出会う。興奮の順序は、したがって、もっとも単純な場合でさえ無関係ではありえないのだ。
+
+Einem Ton C folge ein Ton D. Der Eindruck ist ein ganz anderer, als wenn C auf D folgt. Das liegt großenteils an den Tönen selbst, an ihrer Wechselwirkung. Denn macht man die Pause zwischen beiden Tönen genügend groß, so unterscheidet man möglicher Weise beide Fälle gar nicht mehr. Analoges kann man bei der Folge von Farben, oder überhaupt von Empfindungen beliebiger Sinnesgebiete beobachten. Wenn aber einem Ton A eine Farbe oder ein Geruch B folgt, so weiß man doch immer, daß B auf A gefolgt ist, wobei die Schätzung der Pause zwischen A und B auch ganz unwesentlich durch deren Qualität beeinflußt ist. Es muß also nebenher noch ein Prozeß stattfinden, der von der Variation der Empfindungsqualität nicht affiziert wird, der von derselben ganz unabhängig ist, und an dem wir die Zeit schätzen. Man kann ja eine Art Rhythmus aus ganz heterogenen Empfindungen, Tönen, Farben, Tasteindrücken u. s. w. herstellen.
+
+【補】音 C の後に音 D が続くとしよう。その印象は、D の後に C が来る場合とはまったく異なる。これは大部分、音そのものとその相互作用に起因する。なぜなら、二つの音の間の休止を十分に大きくすると、両方の場合をもはや区別できなくなるかもしれないからだ。色の系列や、任意の感覚領域の感覚の系列についても、同様のことが観察される。しかし、音 A の後に色や匂い B が続く場合でも、B が A の後に来たことは常に分かり、しかも A と B の間の休止の見積もりは、それらの質によってまったく本質的には影響されない。したがって、感覚の質の変化に影響されず、それとはまったく独立した過程がなお並行して進行しており、我々はそれによって時間を見積もっているのである。実際、音、色、触覚印象など、まったく異質な感覚からある種のリズムを作り出すことができるのだ。
+
+§2
+
+Daß es eine besondere spezifische Zeitempfindung gibt, scheint mir hiernach nicht zweifelhaft. Der gleiche Rhythmus der beiden nebenstehenden Takte von gänzlich verschiedener Tonfolge wird unmittelbar erkannt. Dies ist nicht Sache des Verstandes oder der Überlegung, sondern der Empfindung.
+
+【補】特殊な固有の時間感覚が存在するということは、以上のことから私には疑いがない。まったく異なる音の列からなる隣り合う二つの小節の同じリズムが、直ちに認識される。これは悟性や考察の問題ではなく、感覚の問題である。
+
+So wie sich uns verschieden gefärbte Körper von gleicher Raumgestalt darstellen können, so finden wir hier zwei akustisch verschieden gefärbte Tongebilde von gleicher Zeitgestalt. So wie wir in dem einen Fall die gleichen Raumempfindungsbestandteile unmittelbar herausfühlen, so bemerken wir hier die gleichen Zeitempfindungsbestandteile oder die Gleichheit des Rhythmus.
+
+【補】異なる色をした同じ空間的形の物体が我々の前に現れうるのと同様に、ここでは音的に異なる色づけを持つ二つの音の形象が同じ時間的形を持っている。空間のほうでは同一の空間感覚構成要素を直接に感じ取るように、ここでは同一の時間感覚構成要素、すなわちリズムの同一性を直接に感じ取るのである。
+
+Ich behaupte natürlich die unmittelbare Zeitempfindung nur bezüglich kleiner Zeiten. Längere Zeiten beurteilen wir und schätzen wir durch die Erinnerung an die in denselben stattgehabten Vorgänge, also durch Zerlegung in kleinere Teile, von welchen wir eine unmittelbare Empfindung hatten.
+
+【補】もちろん、直接的な時間感覚が存在すると私が主張するのは、短い時間に関してのみである。より長い時間は、その間に生じた出来事の記憶によって判断・推定される——すなわち、我々が直接的な感覚を持っていたより小さな部分への分割によってである。
+
+§3
+
+Wenn ich eine Anzahl akustisch vollkommen gleicher Glockenschläge höre, unterscheide ich den ersten, zweiten, dritten u. s. w. Sind es vielleicht die begleitenden Gedanken oder andere zufällige Empfindungen, mit welchen die Glockenschläge sich verknüpfen, die diese Unterscheidungsmerkmale abgeben? Ich glaube nicht, daß jemand ernstlich diese Ansicht wird aufrecht erhalten wollen. Wie zweifelhaft und unzuverlässig müßte da unser Zeitmaß ausfallen. Wohin müßte es geraten, wenn jener zufällige Gedanken- und Empfindungshintergrund aus dem Gedächtnis verschwinden würde.
+
+【移】音響的にまったく同一の鐘の打撃を何回か聞くとき、一打目、二打目、三打目……を区別する。付随する思考や偶然の感覚——それらと鐘の音が結びついて——が区別の手がかりとなるのだろうか？　この見解を真剣に主張しようとする者はいないだろう。それでは我々の時間の尺度はどれほど不確実で信頼できないものになってしまうことか。偶然の思考や感覚の背景が記憶から消えてしまったらどうなるのか？
+
+Während ich über irgend etwas nachdenke, schlägt die Uhr, die ich nicht beachte. Nachdem sie ausgeschlagen hat, kann es mich interessieren, die Glockenschläge zu zählen. Und in der Tat tauchen in meiner Erinnerung deutlich ein, zwei, drei, vier Glockenschläge auf, während ich ganz dieser Erinnerung meine Aufmerksamkeit zuwende, und mir gerade dadurch für den Augenblick gänzlich entschwindet, worüber ich während des Schlagens der Uhr nachgedacht habe. Der vermeintliche Hintergrund, auf dem ich die Glockenschläge fixieren könnte, fehlt mir nun. Wodurch unterscheide ich also den zweiten Schlag vom ersten? Warum halte ich nicht alle die gleichen Schläge für einen? Weil jeder mit einer besonderen Zeitempfindung verknüpft ist, die mit ihm zugleich auftaucht. Ein Erinnerungsbild unterscheide ich von einer Ausgeburt meiner Phantasie ebenfalls durch eine spezifische Zeitempfindung, welche nicht jene des gegenwärtigen Augenblickes ist.
+
+【移】何かについて考えている間に時計が鳴り、私はそれに注意を払わない。鳴り終わったあとに、鐘の打数が気になることがある。実際、記憶の中に一つ、二つ、三つ、四つの鐘の音がはっきりと浮かび上がる。その記憶に注意を向けている間、時計が鳴っていたときに何を考えていたかはすっかり意識から消えている。鐘の音を固定できたはずの背景は、いまや存在しない。では、なぜ二打目を一打目から区別できるのか？　なぜすべての同じ打撃を一つと見なさないのか？
+
+【移】それぞれの打撃が特別な時間感覚と結びついて現れるからである。
+
+【移】記憶像を空想の産物から区別するのもまた、現在の瞬間のものではない固有の時間感覚による。
+
+§4
+
+Da die Zeitempfindung immer vorhanden ist, solange wir bei Bewußtsein sind, so ist es wahrscheinlich, daß sie mit der notwendig an das Bewußtsein geknüpften organischen Konsumtion zusammenhängt, daß wir die Arbeit der Aufmerksamkeit als Zeit empfinden. Bei angestrengter Aufmerksamkeit wird uns die Zeit lang, bei leichter Beschäftigung kurz. In stumpfem Zustand, wenn wir unsere Umgebung kaum beachten, fliegen die Stunden rasch dahin. Wenn unsere Aufmerksamkeit gänzlich erschöpft ist, schlafen wir. Im traumlosen Schlaf fehlt auch die Empfindung der Zeit. Der Tag von gestern ist mit dem von heute, wenn zwischen beiden ein tiefer Schlaf liegt, die gleichbleibenden Gemeingefühle abgerechnet, nur durch ein intellektuelles Band, verknüpft.
+
+時間感覚は、我々が意識ある限り常に存在するのだから、意識に必然的に結びついた有機的消耗と関連しているらしい。我々は注意の労働を時間として感じているのだと思われる。注意を強く集中すれば時間は長く感じられ、楽な作業のときは短く感じられる。ぼんやりとして周囲をほとんど気にかけないとき、時間は速く過ぎる。注意が完全に尽きれば、眠りに入る。夢のない深い睡眠では時間の感覚もない。昨日は今日と結びついているが、深い眠りが間にあれば、それは知的な絆によってのみつながっている。
+
+Auf das wahrscheinlich verschiedene Zeitmaß verschieden großer Tiere derselben Art habe ich schon bei früherer Gelegenheit hingewiesen 1). Aber auch mit dem Alter scheint sich das Zeitmaß zu ändern. Wie kurz erscheint mir jetzt der Tag gegen jenen meiner Jugendzeit. Und wenn ich mich an den Sekundenschlag der astronomischen Uhr erinnere, welche ich in der Jugend beobachtete, so erscheint mir dieser Sekundenschlag jetzt merklich beschleunigt. Ich kann mich des Eindrucks nicht erwehren, daß meine physiologische Zeiteinheit größer geworden ist.
+
+【補】同じ種の大きさの異なる動物が、おそらく異なる時間尺度を持っていることについては、以前の機会にすでに指摘した。しかし年齢とともに時間尺度も変化するようだ。今の私には一日がなんと短く感じられることか——青年時代のそれに比べて。そして若い頃に観察していた天文時計の秒刻みを思い出すと、その秒刻みが今では著しく速まっているように感じられる。自分の生理学的な時間単位が大きくなったという印象をどうしても拭えないのだ。
+
+Die Ermüdung des Bewußtseinsorgans schreitet, solange wir wachen, kontinuierlich fort, und die Arbeit der Aufmerksamkeit wächst ebenso stetig. Die Empfindungen, welche an eine größere Arbeit der Aufmerksamkeit geknüpft sind, erscheinen uns als die späteren.
+
+【移】覚醒中、意識器官の疲労は連続的に進行し、注意の労働もまた着実に増大する。より大きな注意の労働と結びついた感覚が、我々にはより後のものとして現れる。
+
+Normale wie anormale psychische Vorkommnisse scheinen sich dieser Auffassung wohl zu fügen. Da die Aufmerksamkeit sich nicht zugleich auf zwei verschiedene Sinnesorgane erstrecken kann, so können deren Empfindungen nicht mit einer absolut gleichen Aufmerksamkeitsarbeit zusammentreffen. Die eine erscheint also später als die andere. Ein solches Analogon dieser sogenannten persönlichen Differenz der Astronomen ergibt sich aber aus dem analogen Grunde auch in einem und demselben Sinnesgebiet. Es ist bekannt, daß ein optischer Eindruck, der physisch später entsteht, unter Umständen dennoch früher erscheinen kann. Es kommt z. B. vor, daß der Chirurg beim Aderlassen zuerst das Blut austreten, und dann den Schnepper einschlagen sieht1). Dvořák2) hat in einer Versuchsreihe, die er vor Jahren auf meinen Wunsch ausgeführt hat, gezeigt, daß sich dieses Verhältnis willkürlich herstellen läßt, indem das mit Aufmerksamkeit fixierte Objekt (selbst bei einer wirklichen Verspätung von 1/8—1/6 Sekunde) früher erscheint als das indirekt gesehene. Es ist wohl möglich, daß sich die bekannte Erfahrung der Chirurgen durch diesen Umstand aufklären läßt. Die Zeit aber, welche die Aufmerksamkeit benötigt, um von einem Orte, an dem sie beschäftigt wird, nach einem anderen zu wandern, zeigt sich in folgendem von mir angestellten Versuch3). Zwei intensiv rote Quadrate von 2 cm Seite und 8 cm Abstand auf schwarzem Grunde werden in völliger Dunkelheit durch einen für das Auge gedeckten elektrischen Funken beleuchtet. Das direkt gesehene Quadrat erscheint rot, das indirekt gesehene grün, und zwar oft sehr intensiv. Die verspätete Aufmerksamkeit findet also das indirekt gesehene Quadrat schon in dem Stadium des Purkinjeschen positiven Nachbildes vor. Auch eine Geißlersche Röhre mit zwei etwas voneinander entfernten rot leuchtenden Teilen zeigt beim Hindurchgehen einer einzelnen Entladung dieselbe Erscheinung1).
+
+【移】正常な場合も異常な場合も、この見方にうまく合致するように思われる。
+
+【移】注意は同時に二つの異なる感覚器官にまたがることができないから、それぞれの感覚は、まったく同一の注意の労働と重なることができない。一方が他方より遅く現れる。天文学者のいわゆる「人差（個人差）」の類似現象は、同一の感覚領域の中でも、同様の理由から生じる。
+
+【移】物理的に後から生じた光学的印象が、ある状況のもとでは先に現れうることが知られている。例えば、外科医が瀉血の際にまず血が出るのを見てから、ランセットを打ち込んだのを見る、ということが起こる。ドヴォルザークは私の依頼で何年か前に行った一連の実験で、注意をもって注視されている対象が（実際には8分の1秒から6分の1秒遅れていても）間接的に見られている対象よりも先に現れることを示した。
+
+【移】注意がある場所から別の場所に移るのに要する時間は、次の実験に現れる。黒い地の上に2センチ角の赤い正方形を8センチ間隔で二つ置き、完全な暗闇の中で、目に隠された電気火花によって照明する。直接に見ている正方形は赤く見えるが、間接的に見ている方は緑に見える——しばしばかなり強烈に。遅れた注意が間接視の正方形に到達したとき、それはすでにプルキンエの正の残像の段階に入っているのである。
+
+In Bezug auf die Einzelheiten muß ich auf die Abhandlung von Dvořák verweisen. Besonders interessant sind Dvořáks2) Versuche über die stereoskopische (binokulare) Kombination ungleichzeitiger Eindrücke. Neuere Versuche dieser Art haben Sandford3) und Münsterberg4) angestellt.
+
+【補】詳細についてはドヴォルザークの論文に委ねなければならない。とりわけ興味深いのは、非同時的な印象の立体視的（両眼的）結合に関するドヴォルザークの実験である。この種のより新しい実験は、サンドフォードとミュンスターベルクが行っている。
+
+§5
+
+Wiederholt habe ich ein interessantes hierher gehöriges Phänomen beobachtet. Ich saß, in die Arbeit vertieft, in meinem Zimmer, während in einem Nebenzimmer Versuche über Explosionen angestellt wurden. Regelmäßig geschah es nun, daß ich zuerst erschreckt zusammenzuckte, und nachher erst den Knall hörte.
+
+【移】次のような興味深い現象を、私は繰り返し観察した。仕事に没頭して自室に座っているとき、隣室で爆発の実験が行われていた。きまって、まず驚いてびくっと体が動き、そのあとで爆発音が聞こえるのだった。
+
+Da im Traum die Aufmerksamkeit besonders träge ist, so kommen in diesem Falle die sonderbarsten Anachronismen vor, und jeder hat wohl solche Träume erlebt. Wir träumen z. B. von einem Mann, der auf uns losstürzt und schießt, erwachen plötzlich, und bemerken den Gegenstand, der durch seinen Fall den ganzen Traum erzeugt hat. Es hat nun nichts Widersinniges, anzunehmen, daß der akutische Reiz verschiedene Nervenbahnen zugleich einschlägt, und hier in beliebiger verkehrter Ordnung von der Aufmerksamkeit angetroffen wird, so wie ich bei der obigen Beobachtung zuerst die allgemeine Erregung, und dann den Explosionsknall bemerkte. Freilich wird es in manchen Fällen zur Erklärung auch ausreichen, ein Verweben einer Sinnesempfindung in ein vorher schon vorhandenes Traumbild anzunehmen.
+
+【移】夢の中では注意がとりわけ鈍いので、もっとも奇妙な時間錯誤が起こる。誰しもそうした夢を経験したことがあるだろう。例えば、男が我々に向かって突進し発砲する夢を見て、ぱっと目を覚まし、落下物がその夢全体を引き起こしたことに気づく。音響刺激が同時に複数の神経経路に入り込み、注意が任意の逆順でそれらに出会うと考えれば、不合理なことはない。上の観察で、全般的な身体の動揺をまず知覚し、そのあとで爆発音に気づいたのと同じである。もちろん多くの場合、ある感覚が、すでに存在していた夢の像の中に織り込まれると考える方が適切な場合もあるだろう。
+
+§6
+
+Würde die Konsumtion oder etwa die Anhäufung eines Ermüdungsstoffes unmittelbar empfunden, so müßte man ein Rückwärtsgehen der Zeit im Traum erwarten. Diese Schwierigkeit besteht nicht, wenn Konsumtion und Restitution als heterodrome Prozesse im Sinne Paulis (vergl. S. 56) aufgefaßt werden. — Die Sonderbarkeiten des Traumes lassen sich fast alle darauf zurückführen, daß manche Empfindungen und Vorstellungen gar nicht, andere zu schwer und zu spät ins Bewußtsein treten. Trägheit der Assoziation ist ein Grundzug des Traumes. — Der Intellekt schläft oft nur teilweise. Man spricht im Traume sehr vernünftig mit längst verstorbenen Personen, erinnert sich aber nicht ihres Todes. Ich spreche zu einem Freunde von einer dritten Person, und dieser Freund ist selbst die Person, von der ich sprach. Man reflektiert im Traume über den Traum, erkennt ihn als Traum an den Sonderbarkeiten, ist aber gleich wieder über dieselben beruhigt. — Mir träumte sehr lebhaft von einer Mühle. Das Wasser floß in einem geneigten Kanal von einer Mühle herab und hart daneben in einem eben solchen Kanal zur Mühle hinauf. Ich war dadurch gar nicht beunruhigt. — Als ich viel mit Raumfragen beschäftigt war, träumte mir von einem Spaziergang im Walde. Plötzlich bemerkte ich die mangelhafte perspektivische Verschiebung der Bäume und erkannte daran den Traum. Sofort traten aber auch die vermißten Verschiebungen ein. — Im Traum sah ich in meinem Laboratorium ein mit Wasser gefülltes Becherglas, in dem ruhig ein Kerzenlicht brannte. „Woher bezieht das den Sauerstoff?" dachte ich. „Der ist im Wasser absorbiert." „Wo kommen die Verbrennungsgase hin?" Nun stiegen Blasen von der Flamme im Wasser auf, und ich war beruhigt. — W. Robert 1) macht die vortreffliche Beobachtung, daß es hauptsächlich Wahrnehmungen und Gedanken sind, die man wegen einer Störung bei Tage nicht zu Ende führen konnte, welche im Traume sich fortspinnen. In der Tat findet man häufig die Traumelemente in den Erlebnissen des vorausgehenden Tages. So konnte ich den Traum von dem Licht im Wasser fast mit Sicherheit auf einen Vorlesungsversuch mit dem elektrischen Kohlenlicht unter Wasser, jenen von der Mühle auf die Versuche mit dem Apparat Fig. 18, S. 117 zurückführen1). In meinen Träumen spielen Gesichtshalluzinationen die Hauptrolle. Seltener habe ich akustische Träume. Ich höre jedoch deutlich Unterredungen im Traume, Glockengeläute und Musik2). Jeder Sinn, selbst der Geschmacksinn, macht sich, wenn auch seltener, im Traume geltend. Da im Traume die Reflexerregbarkeit sehr gesteigert, das Gewissen aber wegen der trägen Assoziation sehr geschwächt ist, so ist der Träumende fast eines jeden Verbrechens fähig, und kann im Stadium des Erwachens die ärgsten Qualen durchkosten. Wer solche Erlebnisse auf sich wirken läßt, wird sehr zweifeln, daß die Methode unserer Gerechtigkeit die richtige ist, ein Unglück durch ein zweites gut zu machen, welches in empörend besonnener, grausamer und feierlicher Weise hinzugefügt wird. — Ich möchte die Gelegenheit nicht vorbeigehen lassen, dem Leser das vortreffliche Buch von M. de Manacéïne zu empfehlen3). Was über das Unzureichende der temporären Assoziationen zur Erklärung des psychischen Lebens S. 165, 195, 196 gesagt wurde, gilt auch für den Traum. Es kommt noch hinzu, daß im Traum die leisesten Spuren des für das wache Bewußtsein längst Vergessenen, die geringsten Störungen der Gesundheit und des Gemütslebens, welche vor dem Lärm des Tages in den Hintergrund treten mußten, sich geltend machen können. Du Prel vergleicht in seiner „Philosophie der Mystik" (1885, S. V, 123) diesen Vorgang poetisch und wahr zugleich mit dem Sichtbarwerden des schwach leuchtenden Sternenhimmels nach Untergang der Sonne. Das genannte Buch enthält überhaupt manche bemerkenswerte und tiefe Blicke. Gerade der Naturforscher, dessen kritischer Sinn auf das zunächst Erforschbare gerichtet ist, liest dasselbe mit Vergnügen und Gewinn, ohne sich durch die Neigung des Verfassers für das Abenteuerliche, Wunderbare und Außerordentliche beirren zu lassen.
+
+【移】もし消耗そのもの、あるいは何らかの疲労物質の蓄積が直接に感じられるとすれば、夢の中で時間が逆行することを期待しなければならないが、そうはならない。夢の奇妙さはすべて、ある感覚や表象がまったく意識に上らず、あるいは遅すぎて意識に上ることから説明される。知性はしばしば部分的にしか眠らない。夢の中で久しく亡くなった人と非常に理性的に話をするが、その人の死を思い出さない。夢の中で夢について考察し、その奇妙さからそれが夢であると気づくが、すぐにまた平気になっている。
+
+【補】——私はきわめて鮮明に水車小屋の夢を見た。傾いた水路を水が水車小屋から流れ下り、そのすぐ隣のまったく同じ水路を水が水車小屋へと流れ上っていた。私はそれにまったく不安を覚えなかった。——空間の問題に多く取り組んでいた頃、森の散歩の夢を見た。突然、樹木の遠近法的な移動が不十分であることに気づき、それによって夢であることを認識した。するとたちまち、欠けていた移動が現れた。——夢の中で私は自分の研究室に水を満たしたビーカーグラスを見た。その中でロウソクの火が静かに燃えていた。「酸素はどこから得ているのだ？」と私は考えた。「水に吸収されている」。「燃焼ガスはどこへ行くのだ？」すると泡が炎から水中に立ちのぼり、私は安心した。——W・ローベルトは、夢の中で紡がれるのは主として、昼間に妨害されたために最後まで遂行できなかった知覚や思考であるという、優れた観察を行っている。
+
+【補】実際、夢の要素は前日の経験の中にしばしば見出される。水中の灯火の夢は水中での電気アーク灯の講義実験に、水車小屋の夢は Fig. 18（S. 117）の装置を用いた実験に、ほぼ確実に遡ることができた。私の夢では視覚的幻覚が主役を演じる。聴覚的な夢はより稀だが、夢の中で会話や鐘の音や音楽をはっきりと聞くことはある。味覚を含むあらゆる感覚が、まれとはいえ夢の中に現れる。夢においては反射の興奮性がきわめて高まり、一方で連合の鈍さのために良心はきわめて弱まっているので、夢を見る者はほとんどあらゆる犯罪を犯しうるのであり、目覚めの段階で最悪の苦悶を味わうことがある。こうした経験に心を委ねる者は、不幸を——憤慨するほど冷静で、残酷で、荘厳な仕方で加えられる——もう一つの不幸によって償うという我々の正義の方法が正しいかどうか、大いに疑うであろう。——この機会に、M・ド・マナセインの優れた書を読者に推薦することを逸したくない。心的生活の説明にとって一時的な連合では不十分であるということ（S. 165, 195, 196 で述べたこと）は、夢にも当てはまる。夢においては、覚醒時の意識にとってとうに忘れ去られたもののかすかな痕跡や、日中の喧噪のために背景に退かざるをえなかった健康や心の生活のもっともわずかな障害が、主張しうるのである。デュ・プレルはその「神秘主義の哲学」（1885年、S. V, 123）の中で、この過程を、太陽が沈んだ後に弱く光る星空が見えるようになることに喩えている——詩的にして同時に真実の比喩である。この書にはそもそも注目すべき深い洞察が多く含まれている。まず研究可能なものに批判的精神を向ける自然科学者こそ、著者の冒険的・驚異的・非凡なものへの傾向に惑わされることなく、快く有益にこれを読むのである。
+
+§7
+
+Wenn die Zeitempfindung an die wachsende organische Konsumtion oder an die ebenfalls stetig wachsende Arbeit der Aufmerksamkeit gebunden ist, so wird es verständlich, warum die physiologische Zeit ebenso wie die physikalische Zeit nicht umkehrbar ist, sondern nur in einem Sinne abläuft. Die Konsumtion und Aufmerksamkeitsarbeit kann, solange wir wachen, nur wachsen und nicht abnehmen. Die beiden nebenstehenden Takte, welche für das Auge und den Verstand eine Symmetrie darbieten, zeigen nichts Derartiges in Bezug auf die Zeitempfindung. Im Gebiete des Rhythmus und der Zeit überhaupt gibt es keine Symmetrie.
+
+【移】時間感覚が、増大する有機的消耗、あるいは同様に着実に増大する注意の労働に結びついているとすれば、次のことが理解される。生理学的な時間は不可逆であり、一方向にしか進まない。消耗は、覚醒中は増大することしかできず、減少することはできない。
+
+【移】二つの小節が視覚と悟性にとっては対称であっても、時間感覚に関しては対称なものは何もない。リズムと時間の領域には、対称性は存在しない。
+
+§8
+
+Es möchte wohl eine naheliegende und natürliche, wenn auch noch unvollkommene Vorstellung sein, sich das „Bewußtseinsorgan" in geringem Grade aller spezifischen Energien fähig zu denken, von welchen jedes Sinnesorgan nur einige aufzuweisen vermag. Daher das Schattenhafte und Vergängliche der Vorstellung gegenüber der Sinnesempfindung, durch welche letztere die erstere stets genährt und aufgefrischt werden muß. Daher die Fähigkeit des Bewußtseinsorgans, als Verbindungsbrücke zwischen allen Empfindungen und Erinnerungen zu dienen. Mit jeder spezifischen Energie des Bewußtseinsorgans hätten wir uns noch eine besondere Energie, die Zeitempfindung, verbunden zu denken, so daß keine der ersteren ohne die letztere erregt werden kann. Sollte es scheinen, daß diese letztere physiologisch müßig und nur ad hoc erdacht sei, so könnte man ihr sofort eine wichtige physiologische Funktion zuweisen. Wie wäre es, wenn diese Energie den die arbeitenden Hirnteile nährenden Blutstrom unterhalten, an seinen Bestimmungsort leiten und regulieren würde? Unsere Vorstellung von der Aufmerksamkeit und Zeitempfindung würde dadurch eine sehr materielle Basis erhalten. Es würde verständlich, daß es nur eine zusammenhängende Zeit gibt, da die Teilaufmerksamkeit auf einen Sinn immer nur aus der Gesamtaufmerksamkeit fließt und durch diese bedingt ist. Die plethysmographischen Arbeiten von Mosso, sowie dessen Beobachtungen über den Blutkreislauf im Gehirn1), legen eine solche Auffassung nahe. James2) äußert sich über die hier ausgesprochene Vermutung vorsichtig zustimmend. Eine bestimmtere, ausgeführtere Form derselben, die James als wünschenswert bezeichnet, könnte ich leider nicht angeben.
+
+【移】意識の器官を、あらゆる感覚器官の特殊的エネルギーに（低い度合いで）参加しうるものと考えるのは、おそらく自然で、不完全ではあるが近似的な表象であろう。それぞれの感覚器官はその一部のエネルギーしか示さないが、意識器官はすべてに参加できる。表象が感覚に比べて影のように淡くはかないのはそのためであり、感覚によって常に養われ、リフレッシュされなければならない。また意識器官があらゆる感覚や記憶の間の橋渡しとして機能しうるのもそのためである。
+
+【移】意識器官の各特殊エネルギーには、さらにもう一つの特別なエネルギー——時間感覚——が結びついていると考えなければならない。前者のどれも後者なしには活性化されない。
+
+【移】もしこのエネルギーが、働いている脳の各部分に栄養を送る血流を維持し、その目的地に導き、調節しているとしたらどうだろうか？　そうすれば、注意と時間感覚についての我々の表象はきわめて物質的な基盤を得ることになる。時間がただ一つの連続したものであることも理解できるだろう。なぜなら、ある感覚に向けられた部分的注意は、つねに全体的注意から流れ出し、それによって条件づけられているからである。
+
+【補】モッソの容積脈波記録の研究、および脳の血液循環に関する彼の観察は、こうした見解を示唆する。ジェイムズは、ここに述べた推測に対して慎重ながら同意を表明している。ジェイムズが望ましいとする、より確定的で精密な形をそれに与えることは、遺憾ながら私にはできなかった。
+
+§9
+
+Wenn wir eine Anzahl gleicher Glockenschläge beobachten, so können wir, solange sie in geringer Anzahl gegeben sind, jeden einzelnen von den andern in der Erinnerung unterscheiden, und können in der Erinnerung nachzählen. Bei einer größeren Zahl von Glockenschlägen aber unterscheiden wir zwar die letzten von einander, doch nicht mehr die ersten. Wollen wir in diesem Fall keinem Irrtum unterliegen, so müssen wir beim Erklingen derselben zählen, d. h. jeden Schlag willkürlich mit einem Ordnungszeichen verknüpfen. Die Erscheinung ist ganz analog derjenigen, welche wir im Gebiet des Raumsinns beobachten, und wird auch nach demselben Prinzip zu erklären sein. Wenn wir vorwärts schreiten, haben wir zwar die Empfindung, daß wir uns von einem Ausgangspunkt entfernen, allein das physiologische Maß dieser Entfernung geht nicht proportional dem geometrischen. So schrumpft auch die abgelaufene physiologische Zeit perspektivisch zusammen, und ihre einzelnen Elemente werden weniger unterscheidbar 1).
+
+【補】同一の鐘の音を何回か聞くとき、少数であれば個々の打撃を記憶の中で互いに区別でき、あとから数えることができる。しかし数が多くなると、最後のいくつかは区別できても、最初のものはもはや区別できない。その場合に誤りを避けるには、鳴り始めと同時に数えなければならない——すなわち各打撃に意図的に順序記号を結びつけなければならない。この現象は空間感覚の領域で観察されるものとまったく類似であり、同じ原理で説明されるであろう。前方に歩いて行くとき、出発点から遠ざかっている感覚はあるが、この距離の生理学的な尺度は幾何学的な尺度に比例しない。同様に経過した生理学的時間も遠近法的に縮み、個々の要素はますます区別しがたくなるのである¹⁾。
+
+§10
+
+Wenn eine besondere Zeitempfindung existiert, so ist es selbstverständlich, daß die Identität zweier Rhythmen unmittelbar erkannt wird. Wir dürfen aber nicht unbemerkt lassen, daß derselbe physikalische Rhythmus physiologisch sehr verschieden erscheinen kann, ebenso wie derselben physikalischen Raumgestalt je nach deren Lage verschiedene physiologische Raumformen entsprechen können. Der durch nebenstehende Noten veranschauliche Rhythmus erscheint z. B. ganz verschieden, je nachdem man die kurzen dicken, oder die langen dünnen, oder die punktierten Vertikalstriche als Taktstriche ansieht. Es hängt dies augenscheinlich damit zusammen, daß die Aufmerksamkeit (durch die Betonung geleitet) bei 1, 2 oder 3 einsetzt, d. h. daß die den aufeinander folgenden Schlägen entsprechenden Zeitempfindungen mit verschiedenen Anfangsempfindungen verglichen werden.
+
+【移】特殊な時間感覚が存在するなら、二つのリズムの同一性が直ちに認識されることは当然である。ただし見落としてはならないのは、同一の物理学的リズムが、生理学的にはきわめて異なって現れうるということである。これは、同一の物理学的な空間形が、その配置によって異なる生理学的空間形に対応しうるのと同様である。
+
+【移】例えば、記譜された一つのリズムも、どの垂直線を拍子線と見なすかによってまったく異なって聞こえる。これは、注意が（拍子の強調に導かれて）1、2、あるいは3のどの点から始まるかによって、連続する打撃に対応する時間感覚が、異なる開始感覚と比較されることによる。
+
+Bei Verlängerung oder Verkürzung aller Zeiten eines Rhythmus entsteht ein ähnlicher Rhythmus. Als solcher empfunden kann derselbe nur werden, wenn die Verlängerung oder Verkürzung nicht über ein gewisses Maß hinausgeht, das eben der unmittelbaren Zeitempfindung gesteckt ist.
+
+【補】リズムのすべての時間を延長または短縮すると、相似なリズムが生じる。しかしそれが相似として感じられるのは、延長または短縮がある限度を超えない場合に限られる——その限度はまさに、直接的な時間感覚の範囲によって定められているのだ。
+
+Der im folgenden dargestellte Rhythmus erscheint dem vorigen physiologisch ähnlich; aber nur dann, wenn in beiden die gleichbezeichneten Taktstriche anerkannt werden, wenn also die Aufmerksamkeit in homologen Zeitpunkten einsetzt. Zwei physikalische Zeitgebilde können als ähnlich bezeichnet werden, wenn alle Teile des einen in demselben Verhältnis zueinander stehen, wie die homologen Teile des andern. Die physiologische Ähnlichkeit tritt aber erst hervor, wenn auch die obige Bedingung erfüllt ist. So viel ich übrigens zu beurteilen vermag, erkennt man die Zeitverhältnisse zweier Rhythmen nur dann als gleich, wenn dieselben durch sehr kleine ganze Zahlen dargestellt sind. Eigentlich bemerkt man also unmittelbar nur die Gleichheit oder Ungleichheit zweier Zeiten, und erkennt das Verhältnis im letztern Fall nur dadurch, daß ein Teil in dem andern einfach aufgeht. Hiedurch erklärt es sich, warum man beim Taktgeben die Zeit in lauter durchaus gleiche Teile teilt1).
+
+【移】二つの物理的な時間形象は、一方のすべての部分が互いに同じ比率をなし、他方の相同な部分も同じ比率をなすなら、相似と呼ぶことができる。しかし生理学的な類似性は、上の条件——すなわち、相同な時間点で注意が同期すること——が満たされてはじめて感じられる。
+
+【移】私の知る限り、二つのリズムの時間関係は、きわめて小さな整数で表しうる場合にのみ等しいと認識される。本来、我々が直接に認識できるのは二つの時間の等しさか不等だけであり、不等の場合に比率を認識するのは、一方が他方の中に単純に割り切れる場合に限られる。拍子を取るときに時間をことごとく等しい部分に分割するのは、このためである。
+
+Es wird hiermit die Vermutung nahe gelegt, daß die Empfindung der Zeit mit periodisch oder rhythmisch sich wiederholenden Prozessen in nahem Zusammenhange steht. Es wird sich aber kaum nachweisen lassen, wie es gelegentlich versucht worden ist, daß sich das allgemeine Zeitmaß auf die Atmung oder den Puls gründet. Diese Fragen sind jedenfalls nicht so einfacher Natur. Rhythmisch verlaufen viele Vorgänge natürlich auch im Leibe der Tiere, ohne daß man diesen einen besonders empfindlichen Sinn für Zeit, Rhythmus und Takt zuschreiben dürfte. Wenn bei meiner Wohnung ein Zweigespann vorbeifährt, so kann ich lange und weithin das Koinzidieren und Alternieren der Hufschläge der beiden Pferde in ganz regelmäßigen Perioden hören. Jedes Pferd hält also seinen eigenen Takt fest, ohne sich um jenen des anderen Pferdes zu kümmern, und ohne sich demselben anzupassen. Dieses Verhalten wäre zusammengespannten Menschen beinahe unerträglich. Wallaschek erwähnt des mangelnden Taktgefühls der Pferde und auch der Schwierigkeit, den Schein desselben bei Zirkusproduktionen aufrecht zu halten. Grob körperliche Vorgänge sind es kaum, auf welchen das Taktgefühl unmittelbar beruht. Dasselbe dürfte vielmehr auf eine größere psychische Empfindlichkeit zurückzuführen sein, vermöge welcher ein geringfügiger psychischer Umstand die Aufmerksamkeit bestimmt, einen sonst gleichgültigen Vorgang zu beachten. Bei aufmerksamer Beobachtung taktmäßiger Vorgänge, welche stets ein leises Mittun oder Nachahmen ist, werden aber die psychischen und schließlich auch die grob leiblichen Funktionen selbst taktmäßig1).
+
+【補】これによって、時間の感覚が周期的にまたはリズミカルに反復する過程と密接に関連しているという推測が導かれる。しかし、時折試みられてきたように、一般的な時間尺度が呼吸や脈拍に基づいていることを証明するのは、おそらく不可能であろう。これらの問いはいずれにせよ、そう単純なものではない。リズミカルに進行する過程は動物の体内にも多くあるが、そのことから動物に時間・リズム・拍子に対するとりわけ鋭敏な感覚があると考えるわけにはいかない。二頭立ての馬車が私の住居の前を通ると、二頭の馬の蹄の音がきわめて規則的な周期で一致したり交替したりするのを長く遠くまで聞くことができる。各馬はしたがって自分のリズムを守り続け、他の馬のリズムを気にかけず、それに合わせることもない。連れ添った人間にとって、この振る舞いはほとんど耐えがたいであろう。ヴァラシェックは馬のリズム感覚の欠如と、サーカスの演目でそれがあるかのように見せかけることの困難さについて言及している。拍子感覚が直接に依存しているのは、粗大な身体的過程ではほとんどありえない。それはむしろ、ささいな心的事情が注意を決定づけて、さもなくば無関心な過程に注目させるような、より大きな心理的感受性に帰せられるべきであろう。拍子にかなった過程を注意深く観察すること——それは常にかすかな参加ないし模倣である——の中で、心的機能が、そしてついには粗大な身体的機能それ自体も拍子にかなったものになるのである。
+
+Auch Herr Dr. R. Wlassak hat mir bei Gelegenheit eines Gespräches eine Bemerkung mitgeteilt, die ich mit seinen eigenen Worten wiedergeben will: „Mit der Hypothese, daß die Zeitempfindung von der organischen Konsumtion abhängig ist, steht es in Einklang, daß die Zeitwerte überall da zu starker Abhebung gelangen, wo die Empfindungen mit lebhafter Gefühlsbetonung verbunden sind. Dies gilt sowohl für mit stark lustvollen wie auch mit unlustvollen Empfindungen ausgefüllte Zeitstrecken. Dagegen sind die in den Indifferenzwerten der Gefühlsbetonung sich bewegenden Empfindungen mit relativ undeutlichen Zeitempfindungen verknüpft. Diese Tatsachen weisen darauf hin, daß der den Zeitempfindungen und den Gefühlen zugehörige nervöse Vorgang gewisse Analogien darbietet.
+
+【補】R・ヴラサック博士もまた、ある会話の際に私に一つの所見を伝えてくれた。彼自身の言葉で再現しよう。「時間感覚が有機的消耗に依存しているという仮説と整合するのは、感覚が強い感情的色合いを伴っているところではどこでも時間的な値が強く際立つということである。これは、強く快い感覚で満たされた時間区間についても、不快な感覚で満たされた時間区間についても当てはまる。それに対して、感情的色合いの無差別値に留まっている感覚は、比較的不明瞭な時間感覚と結びついている。これらの事実は、時間感覚と感情に属する神経過程がある種の類似性を示すことを指し示している。」
+
+In der Tat bringen alle Versuche einer physiologischen Theorie der Gefühle diese in Beziehung zur Konsumtion, z. B. Meynerts und auch Avenarius' Theorie der Gefühle.
+
+【補】実際、感情の生理学的理論のすべての試みは、感情を消耗との関係に置いている——例えばメイネルトの理論も、アヴェナリウスの感情理論もそうである。
+
+Anmerkungen · 注
+
+Anm. 1)
+
+Der Standpunkt, den ich hier einnehme, ist nur wenig verschieden von jenem meiner „Untersuchungen über den Zeitsinn des Ohres" (Sitzgber. der Wiener Akademie, Bd. 51, 1865). Auf die Einzelheiten dieser älteren Versuche, die ich schon 1860 begonnen habe, will ich hier nicht wieder zurückkommen. Auch das reiche Material kann hier nicht diskutiert werden, welches sich durch die Arbeiten von Meumann, Münsterberg, Schumann, Nichols, Hermann u. a. ergeben hat. Vgl. Scripture, The new Psychology, London 1897, p. 170. — Ergänzende Ausführungen s. in „Erkenntnis und Irrtum", 1905, S. 415 u. f.
+
+注1）私がここでとる立場は、私の「耳の時間感覚の研究」（ウィーン学士院報告、第51巻、1865年）のそれとほとんど変わらない。すでに1860年に開始したこれらの古い実験の細部にはここでは立ち返らない。また、モイマン、ミュンスターベルク、シューマン、ニコルス、ヘルマンその他の研究によって得られた豊富な資料もここでは論じえない。スクリプチュア『新心理学』ロンドン、1897年、170頁参照。——補足的叙述は『認識と誤謬』1905年、415頁以下を見よ。
+
+Anm. 1)
+
+Vgl. R. Wallaschek, Psychologie und Pathologie der Vorstellung. Leipzig 1905, insbesondere: das Ganze und seine Teile, S. 15 u. f.
+
+注1）R・ヴァラシェク『表象の心理学と病理学』ライプツィヒ、1905年、特に「全体とその部分」15頁以下参照。
+
+Anm. 2)
+
+Vielleicht sind die nervösen Elemente nicht nur mit einer dauernden angeborenen polaren Orientierung behaftet, wie dies durch die abwärts laufende Welle im Darm, in der Muskulatur der Schlange, durch die galvanotropischen Erscheinungen wahrscheinlich wird, sondern sie sind vielleicht auch einer temporären erworbenen Polarität fähig, wie sich dies in der Einhaltung der Zeitfolge im Gedächtnis, in der Übung usw. ausspricht. Vgl. Loeb und Maxwell, Zur Theorie des Galvanotropismus. Pflügers Archiv, Bd. 63, S. 121. — Loeb, Vergleichende Gehirnphysiologie, S. 108 u. ff.
+
+注2）おそらく神経要素は、腸内の下行波、蛇の筋肉、ガルヴァノトロピズム的現象によって蓋然的となるような恒久的な生得の極性配向を帯びているのみならず、記憶における時間順序の保持、練習などに表れるような一時的な獲得された極性をも持ちうるのであろう。レープおよびマクスウェル「ガルヴァノトロピズムの理論のために」『プフリューガース・アルヒーフ』第63巻、121頁参照。——レープ『比較脳生理学』108頁以下。
+
+Anm. 1)
+
+Zeitsinn des Ohres, S. 17.
+
+注1）「耳の時間感覚」17頁。
+
+Anm. 1)
+
+Vgl. Fechner, Psychophysik. Leipzig 1860. Bd. 2, S. 433.
+
+注1）フェヒナー『精神物理学』ライプツィヒ、1860年、第2巻、433頁参照。
+
+Anm. 2)
+
+Dvořák, Über Analoga der persönlichen Differenz zwischen beiden Augen und den Netzhautstellen desselben Auges. Sitzungsberichte der königl. böhm. Gesellschaft der Wissenschaften (math.-naturw. Klasse) vom 8. März 1872.
+
+注2）ドヴォルジャーク「両眼間および同一眼の網膜諸位置間の個人差の類似物について」ボヘミア王立学術協会報告（数学・自然科学部門）1872年3月8日。
+
+Anm. 3)
+
+Von Dvořák a. a. O. mitgeteilt.
+
+注3）ドヴォルジャーク、前掲書にて報告。
+
+Anm. 1)
+
+Auch Professor G. Heymans, dem dieser letztere Versuch anfangs nicht gelingen wollte, hat sich später von der Richtigkeit der Angabe überzeugt.
+
+注1）G・ヘイマンス教授も、この後者の実験がはじめは成功しなかったが、のちにこの報告の正しさを確信した。
+
+Anm. 2)
+
+a. a. O. S. 2.
+
+注2）前掲書、2頁。
+
+Anm. 3)
+
+Sandford, Amer. Journ. Psych., 1894, Vol. VI, p. 576.
+
+注3）サンドフォード『アメリカ心理学雑誌』1894年、第6巻、576頁。
+
+Anm. 4)
+
+Münsterberg, Psych. Rev., 1894, Vol. I, p. 56.
+
+注4）ミュンスターベルク『心理学評論（Psych. Rev.）』1894年、第1巻、56頁。
+
+Anm. 1)
+
+W. Robert, Über den Traum. Hamburg 1886.
+
+注1）W・ローベルト『夢について』ハンブルク、1886年。
+
+Anm. 1)
+
+Prinzipien der Wärmelehre, 2. Aufl., 1900, S. 444.
+
+注1）『熱学の諸原理』第2版、1900年、444頁。
+
+Anm. 2)
+
+Wallaschek, Das musikalische Gedächtnis. Vierteljahrsschr. f. Musikwissensch., 1882, S. 204.
+
+注2）ヴァラシェク「音楽的記憶」『音楽学季報』1882年、204頁。
+
+Anm. 3)
+
+M. de Manacéïne, Sleep, its Physiology etc. London 1897.
+
+注3）M・ド・マナセイーネ『睡眠、その生理学、他』ロンドン、1897年。
+
+Anm. 1)
+
+Mosso, Kreislauf des Blutes im Gehirn. Leipzig 1881. — Vgl. auch: Kornfeld, Über die Beziehung von Atmung und Kreislauf zur geistigen Arbeit. Brünn 1896.
+
+注1）モッソ『脳における血液循環』ライプツィヒ、1881年。——コルンフェルト「呼吸と循環の精神的労働への関係について」ブリュン、1896年も参照。
+
+Anm. 2)
+
+James, Psychology, I, 635.
+
+注2）ジェームズ『心理学』第1巻、635頁。
+
+Anm. 1)
+
+Vgl. S. 110.
+
+注1）110頁参照。
+
+Anm. 1)
+
+Die Ähnlichkeit der Raumgestalten würde hiernach viel unmittelbarer empfunden als die Ähnlichkeit der Rhythmen.
+
+注1）空間形の類似性は、これによればリズムの類似性よりもはるかに直接的に感じられるであろう。
+
+Anm. 1)
+
+Wallaschek, Anfänge der Tonkunst, Leipzig 1903, S. 270, 271. Dieses Buch, eine bereicherte illustrierte deutsche Ausgabe eines englischen Buches desselben Verfassers („Primitive Music", London 1903) enthält überhaupt sehr wertvolle Beobachtungen zu den in diesem und in dem folgenden Kapitel behandelten Fragen.
+
+注1）ヴァラシェク『音楽の始まり（Anfänge der Tonkunst）』ライプツィヒ、1903年、270、271頁。この書は、同著者の英語の書（『原始音楽（Primitive Music）』ロンドン、1903年）の増補図版入りドイツ語版であり、本章および次章で扱われる諸問題に対してきわめて価値ある観察を含んでいる。

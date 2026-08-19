@@ -1,0 +1,461 @@
+Kapitel IV · 第Ⅳ章
+Die Hauptgesichtspunkte für die Untersuchung der Sinne
+感覚の研究のための主要な観点
+
+§1
+§1
+
+Wir versuchen nun von dem gewonnenen Standpunkte einen orientierenden Ausblick für unseren besonderen Zweck.
+
+ここで、先に得られた立場から、我々の特別な目的に向けた方向づけの展望を試みよう。
+
+Hat der forschende Intellekt durch Anpassung die Gewohnheit erworben, zwei Dinge A und B in Gedanken zu verbinden, so sucht derselbe diese Gewohnheit auch unter etwas veränderten Umständen nach Möglichkeit festzuhalten. Überall, wo A auftritt, wird B hinzugedacht. Man kann das sich hierin aussprechende Prinzip, welches in dem Streben nach Ökonomie seine Wurzel hat, und welches bei den großen Forschern besonders klar hervortritt, das Prinzip der Stetigkeit oder Kontinuität nennen.
+
+探究する知性が、適応によって二つの事物 A と B を思考の中で結びつける習慣を身につけると、多少異なる状況のもとでも、この習慣をできるだけ維持しようとする。A が現れるところでは、どこでも B が付け加えて考えられる。ここに表れている原理——経済（節約）への努力に根を持ち、偉大な研究者のもとで特に明瞭に現れるこの原理を、連続性（持続性）の原理と呼ぶことができる。
+
+Jede tatsächlich beobachtete Variation in der Verbindung von A und B, welche groß genug ist, um bemerkt zu werden, macht sich aber als Störung der bezeichneten Gewohnheit geltend, so lange, bis die letztere genügend modifiziert ist, um diese Störung nicht mehr zu empfinden. Man hätte sich z. B. gewöhnt, das auf die Grenze von Luft und Glas einfallende Licht abgelenkt zu sehen. Diese Ablenkungen variieren aber von Fall zu Fall in merklicher Weise, und man kann die an einigen Fällen gewonnene Gewohnheit solange nicht ungestört auf neu vorkommende Fälle übertragen, bis man imstande ist, jedem besonderen Einfallswinkel A einen besonderen Brechungswinkel B zuzuordnen, was durch Auffindung des sogenannten Brechungsgesetzes beziehungsweise durch Geläufigwerden der in demselben enthaltenen Regel erreicht ist. Es tritt also dem Prinzip der Stetigkeit ein anderes Prinzip modifizierend entgegen; wir wollen es das Prinzip der zureichenden Bestimmtheit oder der zureichenden Differenzierung nennen.
+
+【移】しかし、A と B の結びつきにおいて実際に観察される変異は、気づかれるほど大きなものであれば、上の習慣に対する擾乱として作用する——習慣がその擾乱をもはや感じないほどに十分修正されるまでは。
+
+【移】例えば、空気とガラスの境界面に入射する光が屈折されるのを見ることに慣れたとしよう。しかし屈折の大きさは場合ごとに目に見えて変わり、少数の場合から得た習慣は、新たに現れる場合にそのまま妨げなく当てはめることはできない。個々の入射角に対応する個々の屈折角を割り当てることができるようになってはじめて——つまり、いわゆる屈折の法則を見つけ出し、それに含まれる規則が馴染みのものになってはじめて——満足が得られる。
+
+【移】こうして、連続性の原理に対して、もう一つの原理が修正を加えるかたちで現れる。これを十分な確定性（十分な分化）の原理と呼ぼう。
+
+Das Zusammenwirken beider Prinzipien läßt sich nun durch weitere Ausführung des berührten Beispieles recht gut erläutern. Um den Tatsachen gerecht zu werden, welche bei Änderung der Farbe des Lichtes auftreten, hält man den Gedanken des Brechungsgesetzes fest, muß aber jeder besonderen Farbe einen besonderen Brechungsexponenten zuordnen; bald merkt man dann, daß man auch jeder besonderen Temperatur einen besonderen Brechungsexponenten zuordnen muß, usw.
+
+【移】両方の原理の共同作用は、先に触れた例をさらに展開することでよく説明できる。光の色が変化するときに生じる事実に対応するためには、屈折の法則という考えは維持しつつも、個々の色ごとに特別な屈折率を割り当てなければならない。やがて、温度ごとにも特別な屈折率を割り当てなければならないことに気づく、等々。
+
+Dieser Prozeß führt schließlich zur zeitweiligen Beruhigung und Befriedigung, indem die beiden Dinge A und B so verbunden gedacht werden, daß jeder der augenblicklichen Erfahrung zugänglichen Änderung des einen eine zugehörige Änderung des andern entspricht. Es kann der Fall eintreten, daß sowohl A als B sich als Komplexe von Bestandteilen darstellen, und daß jeder Bestandteil von A einem Bestandteil von B zugeordnet ist. Dieses findet z. B. statt, wenn B ein Spektrum und A die zugehörige Probe eines Gemenges ist, wo je einem Bestandteil des Spektrums je ein Bestandteil der vor dem Spektralapparat verflüchtigten Probe unabhängig von den übrigen zugeordnet ist. Erst durch die vollständige Geläufigkeit dieses Verhältnisses kann dem Prinzip der zureichenden Bestimmtheit entsprochen werden.
+
+【移】このプロセスは最終的に次のような到達点で一時的な安心と満足をもたらす。すなわち、二つの事物 A と B が、A のどの変化にも対応する B の変化が伴い、A のどの構成要素にも B の対応する構成要素が対応するように、結びつけて考えられるようになった時点である。A と B の両方がそれぞれ構成要素の複合体として現れることもある。例えば、A がある混合物の一つの試料であり、B がスペクトルであるとき、スペクトルの各構成部分には、分光器の前で気化された試料の各構成部分が、他とは独立に対応する。この関係が完全に馴染みのものになってはじめて、十分な確定性の原理に応えることができる。
+
+§2
+§2
+
+Stellen wir uns nun vor, wir betrachten eine Farbenempfindung B nicht in ihrer Abhängigkeit von der glühenden Probe A, sondern in ihrer Abhängigkeit von den Elementen des Netzhautprozesses N. Hierdurch ist nicht die Art, sondern nur die Richtung der Orientierung geändert, alles eben Besprochene verliert dadurch nicht seine Geltung, und die zu befolgenden Grundsätze bleiben dieselben. Und dies gilt natürlich für alle Empfindungen.
+
+【移】ここで、ある色覚 B を、発光する試料 A への依存においてではなく、網膜過程の要素 K への依存において観察すると考えてみよう。これによって変わるのは方向づけの種類ではなく、方向づけの方向だけであり、先に述べたことはすべてそのまま有効であり、従うべき原則も同じままである。このことは、当然ながらすべての感覚について成り立つ。
+
+Die Empfindung kann nun an sich, unmittelbar, psychologisch analysiert werden (wie dies Joh. Müller getan hat), oder es können die ihr zugeordneten physikalischen (physiologischen) Prozesse nach den Methoden der Physik untersucht werden (wie dies vorzugsweise die moderne Physiologenschule tut), oder endlich (was am weitesten führen wird, weil hierbei die Beobachtung an allen Punkten angreift und eine Untersuchung die andere stützt) kann der Zusammenhang des psychologisch Beobachtbaren mit dem zugehörigen physikalischen (physiologischen) Prozeß verfolgt werden. Dieses letztere Ziel streben wir überall an, wo es erreichbar scheint.
+
+【移】感覚は、それ自体として、直接的に、心理学的に分析することができる（ヨハネス・ミュラーが行ったように）。あるいは、感覚に対応する物理的（生理的）過程を物理学の方法で研究することもできる（近代の生理学派がおもに行っているように）。あるいは最後に——これが最も遠くまで導くだろう、なぜなら観察があらゆる点に手がかりを持ち、一方の研究が他方を支えるから——心理学的に観察されるものと、それに対応する物理的（生理的）過程との関連を追究することもできる。我々はこの最後の目標を、到達可能と思われるところではどこでも目指す。
+
+Mit diesem Ziel im Auge werden wir dem Prinzip der Kontinuität und jenem der zureichenden Bestimmtheit nur genügen können, wenn wir dem gleichen B (irgend einer Empfindung) immer und überall nur das gleiche N (denselben Nervenprozeß) zuordnen, zu jeder beobachtbaren Änderung von B aber eine entsprechende Änderung von N auffinden. Können wir B psychologisch in mehrere von einander unabhängige Bestandteile zerlegen, so können wir nur in der Auffindung ebensolcher den ersteren entsprechender Bestandteile in N Beruhigung finden. Sollten aber an B Eigenschaften oder Seiten zu bemerken sein, die nicht gesondert auftreten können, wie z. B. Höhe und Intensität des Tones, so würde dasselbe Verhalten auch von N zu erwarten sein. Mit einem Worte, zu allen psychisch beobachtbaren Einzelheiten von B haben wir die zugeordneten physikalischen Einzelheiten von N aufzusuchen.
+
+【移】この目標を念頭に置くならば、連続性の原理と十分な確定性の原理に応えるには、次のことが必要になる。すなわち、同じ B（ある感覚）にはいつでもどこでも同じ N（同じ神経過程）だけを帰属させ、B の観察される変化のどれに対しても、N の対応する変化を見つけ出すことである。B を心理学的に互いに独立な複数の構成部分に分解できるなら、N の中にも同じ数の対応する構成部分を見つけ出すことに安心を見出すことができる。一言でいえば、B の心理学的に観察可能なすべての個々の要素に対して、対応する N の物理学的な個々の要素を探し出さなければならない。
+
+Wir wollen natürlich nicht behaupten, daß nicht auch durch recht komplizierte Umstände eine (psychologisch) einfache Empfindung bedingt werden kann. Denn die Umstände hängen kettenförmig zusammen und lösen keine Empfindung aus, wenn die Kette nicht bis in den Nerv reicht. Da aber die Empfindung auch als Halluzination auftreten kann, wenn gar keine außerhalb des Leibes liegende physikalische bedingte Umstände vorhanden sind, so sehen wir, daß ein gewisser Nervenprozeß, als Endglied jener Kette, die wesentliche und unmittelbare Bedingung der Empfindung ist. Diese unmittelbare Bedingung können wir nun nicht variiert denken, ohne uns auch die Empfindung variiert vorzustellen, und umgekehrt. Für den Zusammenhang dieses Endgliedes und der Empfindung wollen wir das ausgesprochene Prinzip als gültig ansehen.
+
+【補】もちろん、かなり複雑な状況によって（心理学的に）単純な感覚が条件づけられることもありうる、と主張しないわけではない。なぜなら、状況は鎖のようにつながっており、鎖が神経にまで達しなければ感覚を引き起こすことはないからである。しかし、身体の外に存在する物理的条件がまったくなくても、感覚が幻覚として現れうることから、ある特定の神経過程が——あの鎖の末端の環として——感覚の本質的かつ直接的な条件であることがわかる。この直接的条件が変化したと考えれば、感覚も変化したと考えざるをえず、逆もまた然りである。この末端の環と感覚の連関について、我々は述べた原理を妥当なものとして認めようと思う。
+
+§3
+§3
+
+Wir können also einen leitenden Grundsatz für die Untersuchung der Empfindungen aufstellen, der als Prinzip des vollständigen Parallelismus des Psychischen und Physischen bezeichnet werden mag. Nach unserer Grundanschauung, welche eine Kluft zwischen den beiden Gebieten (des Psychischen und Physischen) gar nicht anerkennt, ist dieses Prinzip fast selbstverständlich, kann aber auch ohne Hilfe dieser Grundanschauung als heuristisches Prinzip aufgestellt werden, wie ich dies vor Jahren getan habe 1).
+
+【移】こうして、研究のための指導原理を立てることができる。これを心的なもの（心理学的なもの）と物理的なもの（物理学的なもの）の完全な平行性の原理と呼ぶことにしよう。我々の基本的な見方——二つの領域（心的なものと物理的なもの）のあいだにそもそも溝を認めないという見方——からすれば、この原理はほとんど自明である。しかし、この基本的な見方を借りなくても、発見的原理として独立に立てることもできる。私が数年前にそうしたように。
+
+Das hier verwendete Prinzip geht über die allgemeine Voraussetzung, daß jedem Psychischen ein Physisches entspricht und umgekehrt, in seiner Spezialisierung hinaus. Letztere allgemeine Annahme, die in vielen Fällen als richtig nachgewiesen ist, wird in allen Fällen als wahrscheinlich richtig festgehalten werden können, und bildet zudem die notwendige Voraussetzung der exakten Forschung. Von der Fechnerschen Auffassung des Physischen und Psychischen als zweier verschiedener Seiten ein und desselben Realen ist die unsrige ebenfalls verschieden. Erstens hat unsere Auffassung keinerlei metaphysischen Untergrund, sondern entspricht nur dem verallgemeinerten Ausdruck von Erfahrungen. Dann unterscheiden wir auch nicht zwei verschiedene Seiten eines unbekannten Dritten, sondern die in der Erfahrung vorgefundenen Elemente, deren Verbindung wir untersuchen, sind immer dieselben, nur von einerlei Art und treten nur je nach der Art ihres Zusammenhanges bald als physische, bald als psychische Elemente auf 1). Man hat mich gefragt, ob denn der Parallelismus des Psychischen und Physischen überhaupt noch einen Sinn hätte und nicht eine bloße Tautologie sei, wenn man das Psychische und das Physische überhaupt nicht als wesentlich verschieden ansieht? Dies beruht auf einer mißverständlichen Auffassung meiner obigen Ausführungen. Wenn ich ein grünes Blatt sehe, was durch gewisse Gehirnprozesse bedingt ist, so ist jenes Blatt in seiner Form und Farbe allerdings verschieden von den Formen, Farben usw., die ich an dem untersuchten Gehirn finde, wenn auch alle Formen, Farben usw., an sich gleichartig, an sich weder psychisch noch physisch sind. Das gesehene Blatt, als abhängig gedacht vom Gehirnprozeß, ist etwas Psychisches, während dieser Gehirnprozeß selbst in dem Zusammenhang seiner Elemente etwas Physisches vorstellt. Und für die Abhängigkeit der ersteren unmittelbar gegebenen Elementengruppe von der durch (vielleicht komplizierte) physikalische Untersuchung sich erst ergebenden zweiten Gruppe besteht das Parallelismusprinzip.
+
+【補】ここで用いた原理は、すべての心的なものにはそれに対応する物理的なものがあり、また逆もそうであるという一般的前提を、その特殊化において超え出ている。後者の一般的仮定は、多くの場合に正しいと実証されており、すべての場合においておそらく正しいと保持されうるであろうし、さらに精密な研究の必要な前提をなすものでもある。フェヒナーの見解——物理的なものと心理的なものを同一の実在の二つの異なる側面と見なす——とも、我々の見方は異なっている。第一に、我々の見方はいかなる形而上学的な基盤も持たず、経験の一般化された表現にのみ対応している。さらに我々は、未知の第三のものの二つの異なる側面を区別するのではない。経験のうちに見出される要素——我々がその結合を研究する要素——はつねに同一であり、同じ種類のものにすぎず、その連関の仕方に応じて、あるときは物理的要素として、あるときは心理的要素として現れるのである 1)。心理的なものと物理的なものを本質的に異なるものとまったく見なさないのであれば、心理的なものと物理的なものの平行性にそもそもまだ意味があるのか、それは単なるトートロジーではないのか、と問われたことがある。これは私の上記の説明に対する誤解に基づいている。私が一枚の緑の葉を見るとき、それは特定の脳過程によって条件づけられているが、その形や色における葉は、研究される脳に見出される形や色とは確かに異なっている——たとえすべての形や色が、それ自体としては同種のものであり、それ自体としては心理的でも物理的でもないとしても。脳過程に依存するものとして考えられた、見られた葉は心理的なものであり、一方、この脳過程自体はその要素の連関において物理的なものを表す。そして、前者の直接所与の要素群が、（おそらく複雑な）物理学的研究によってはじめて得られる後者の群に依存するということについて、平行性の原理が成り立つのである。
+
+§4
+§4
+
+Zur Erläuterung des vielleicht etwas zu abstrakt ausgesprochenen Grundsatzes mögen sofort einige Beispiele dienen. Überall wo ich Raum empfinde, ob durch das Gesicht, den Tastsinn oder auf andere Weise, werde ich einen in allen Fällen gleichartigen Nervenprozeß als vorhanden anzunehmen haben. Für alle Zeitempfindung supponiere ich gleiche Nervenprozesse.
+
+【移】やや抽象的に述べたこの原理を具体的に説明するために、いくつかの例を挙げよう。
+
+【移】空間を感じるところではどこでも——視覚によってであれ、触覚によってであれ、その他の方法によってであれ——あらゆる場合に同種の神経過程が存在すると想定しなければならない。すべての時間感覚に対しても、同じ神経過程を前提とする。
+
+Sehe ich gleiche verschiedenfarbige Gestalten, so suche ich neben den verschiedenen Farbenempfindungen besondere gleiche Raumempfindungen und zugehörige gleiche Nervenprozesse. Sind zwei Gestalten ähnlich (liefern sie teilweise gleiche Raumempfindungen), so enthalten auch die zugehörigen Nervenprozesse teilweise gleiche Bestandteile. Haben zwei verschiedene Melodien gleichen Rhythmus, so besteht neben den verschiedenen Tonempfindungen in beiden Fällen eine gleiche Zeitempfindung mit gleichen zugehörigen Prozessen. Sind zwei Melodien in verschiedener Tonlage gleich, so haben die Tonempfindungen und ihre physiologischen Bedingungen trotz der ungleichen Tonhöhe gleiche Bestandteile. Kann die scheinbar unbegrenzte Mannigfaltigkeit der Farbenempfindungen durch psychologische Analyse (Selbstbeobachtung) auf 6 Elemente (Grundempfindungen) reduziert werden, so dürfen wir die gleiche Vereinfachung für das System der Nervenprozesse erwarten. Zeigt sich das System der Raumempfindungen als eine dreifache Mannigfaltigkeit, so wird sich auch das System der zugeordneten Nervenprozesse als eine solche darstellen.
+
+【移】異なる色を持つ同一の形を見るとき、異なる色覚のほかに、特別な同一の空間感覚と、それに対応する同一の神経過程を探す。二つの形が類似しているなら（部分的に同じ空間感覚を与えるなら）、対応する神経過程にも部分的に同じ構成要素が含まれる。
+
+【移】二つの異なる旋律が同じリズムを持つなら、異なる音の感覚のほかに、両方の場合に同一の時間感覚と、同一の対応する過程が存在する。二つの旋律が異なる調で同一であるなら、音高は異なるにもかかわらず、音の感覚とその物理的条件には同一の構成要素がある。
+
+【移】色覚の一見無限に思える多様性が心理学的分析（自己観察）によって六つの要素（基本感覚）に還元できるなら、対応する神経過程の系にも同じ単純化を期待してよい。空間感覚の系が三重の多様性を示すなら、対応する神経過程の系もまた三重の多様性として現れるだろう。
+
+§5
+§5
+
+Dieses Prinzip ist übrigens mehr oder weniger bewußt, mehr oder weniger konsequent stets befolgt worden. Wenn z. B. Helmholtz 1) für jede Tonempfindung eine besondere Nervenfaser (mit dem zugehörigen Prozeß) statuiert, wenn er den Klang in Tonempfindungen auflöst, die Verwandtschaft der Klänge auf den Gehalt an gleichen Tonempfindungen (und Nervenprozessen) zurückführt, so liegt hierin eine Betätigung des ausgesprochenen Prinzips. Die Anwendung ist nur keine vollständige, wie später gezeigt werden soll.
+
+【移】この原理は、多かれ少なかれ意識的に、多かれ少なかれ一貫して、これまでも常に実行されてきた。
+
+【移】例えば、ヘルムホルツが一つひとつの音の感覚に対して特定の神経線維（対応する過程とともに）を想定し、音色を音の感覚に分解し、音色の親近性を共通の音の感覚（と神経過程）の含有量に帰着させるとき、そこには述べた原理の実践がある。ただし、その適用は完全に一貫したものではない——後に示すように。
+
+Brewster 2) ließ sich durch eine, wenn auch mangelhafte, psychologische Analyse der Farbenempfindungen und unvollkommene physikalische Versuche 1) geleitet, zu der Ansicht führen, daß den drei Empfindungen Rot, Gelb, Blau entsprechend auch physikalisch nur drei Lichtsorten existieren, und daß demnach die Newtonsche Annahme einer unbegrenzten Anzahl von Lichtsorten mit kontinuierlich abgestuften Brechungsexponenten falsch sei. Leicht konnte Brewster in den Irrtum verfallen, Grün für eine Mischempfindung zu halten. Hätte er aber überlegt, daß Farbenempfindungen ganz ohne physikalisches Licht auftreten können, so hätte er seine Folgerungen auf den Nervenprozeß beschränkt und Newtons physikalische Aufstellungen die ebenso wohlbegründet sind, unangetastet gelassen.
+
+【移】ブリュースターは、不十分ではあっても心理学的な色覚分析と不完全な物理学的実験に導かれて、三つの感覚——赤・黄・青——に対応して物理学的にも三種類の光しか存在しないと考え、したがって連続的に段階づけられた屈折率を持つ無限に多くの光の種類を認めるニュートンの仮定は誤りだという見解に至った。しかし、もしブリュースターが、色覚は物理的な光がなくてもまったく生じうるということに気づいていたなら、自分の結論を神経過程に限定し、ニュートンの物理学的主張——同様に十分な根拠を持つ——には手をつけなかったであろう。
+
+Th. Young hat diesen Fehler wenigstens prinzipiell verbessert. Er hat erkannt, daß eine unbegrenzte Anzahl physikalischer Lichtsorten von kontinuierlich abgestuften Brechungsexponenten (und Wellenlängen) mit einer geringen Zahl von Farbenempfindungen und Nervenprozessen vereinbar ist, daß dem Kontinuum der Ablenkungen im Prisma (dem Kontinuum der Raumempfindungen) eine diskrete Zahl von Farbenempfindungen entspricht.
+
+【移】トマス・ヤングはこの誤りを正した。彼は、連続的に段階づけられた屈折率（と波長）を持つ無限に多くの物理的な光の種類が、少数の色覚と神経過程と両立しうること、つまりプリズム中の偏差の連続体（空間感覚の連続体）に離散的な数の色覚が対応することを認識した。
+
+Aber auch Young hat das ausgesprochene Prinzip nicht mit vollem Bewußtsein und nicht mit strenger Konsequenz angewandt, abgesehen davon, daß er sich bei der psychologischen Analyse noch durch physikalische Vorurteile beirren ließ. Auch Young nahm zuerst Rot, Gelb, Blau als Grundempfindungen an, die er später, durch einen physikalischen Irrtum Wollastons verleitet, wie Alfred Mayer (in Hoboken) in einer trefflichen Arbeit gezeigt hat 2), durch Rot, Grün und Violett ersetzte. In welcher Richtung die Theorie der Farbenempfindung zu modifizieren ist, welche seither durch Hering einen hohen Grad der Vollendung erreicht hat, habe ich vor Jahren an andern Ort angedeutet.
+
+【移】しかしヤングもまた、この原理を完全な自覚をもって、また厳密な一貫性をもって適用したわけではなかった。心理学的分析にあたって物理学的先入見に惑わされることもあった。ヤングは最初、赤・黄・青を基本感覚として採用したが、後にウォラストンの物理学的な誤りに導かれて、赤・緑・紫に置き換えた。色覚の理論をどの方向に修正すべきかは、ヘーリングの研究によって高い完成度に達しており、私は以前に別の場所で示唆したことがある。
+
+Die zweifelhaften Resultate, welche die psychologische Analyse hiernach liefern kann, könnten leicht den Glauben an ihre Brauchbarkeit überhaupt erschüttern. Wir dürfen aber nicht vergessen, daß man bei Anwendung eines jeden Prinzips in Irrtum verfallen kann. Die Übung wird auch hier entscheidend sein. Der Umstand, daß die physikalischen Bedingungen der Empfindung fast immer Mischempfindungen auslösen, und die Empfindungsbestandteile nicht leicht gesondert auftreten, erschwert die psychologische Analyse sehr bedeutend. So ist z. B. Grün eine einfache Empfindung. Ein vorgelegtes Pigment- oder Spektralgrün wird aber in der Regel eine Gelb- oder Blauempfindung miterregen und dadurch die irrtümliche (auf Mischergebnissen von Pigmenten beruhende) Ansicht begünstigen, daß die Grünempfindung aus Gelb- und Blauempfindung zusammengesetzt sei. Das sorgfältige physikalische Studium ist also auch bei der psychologischen Analyse nicht zu entbehren. Andrerseits darf man auch die physikalische Erfahrung nicht überschätzen. Die bloße Erfahrung, daß ein gelbes und blaues Pigment gemischt ein grünes Pigment liefert, kann uns allein nicht bestimmen, im Grün Gelb und Blau zu sehen, wenn nicht das eine oder das andere wirklich darin enthalten ist. Sieht doch im Weiß niemand Gelb und Blau, obgleich Spektralgelb und Spektralblau gemischt, wirklich Weiß geben.
+
+【補】心理学的分析がこのように疑わしい結果をもたらしうるとすれば、その有用性に対する信頼が容易に揺らぐかもしれない。しかし忘れてはならないのは、いかなる原理の適用においても誤りに陥る可能性があるということである。ここでも実践（練習）が決定的な意義を持つであろう。感覚の物理的条件がほとんどつねに混合感覚を引き起こし、感覚の構成部分が容易に個別に現れないという事情が、心理学的分析を著しく困難にしている。
+
+【補】例えば、緑は単純な感覚である。しかし、提示された顔料の緑やスペクトルの緑は通常、黄や青の感覚をも誘発し、それによって——顔料の混合結果に基づく——緑の感覚が黄の感覚と青の感覚から合成されているという誤った見解を助長する。したがって、心理学的分析においても、入念な物理学的研究は欠かせない。他方で、物理学的経験を過大評価してもならない。黄色の顔料と青色の顔料を混合すると緑色の顔料が得られるという単なる経験だけでは、そのどちらかが実際に含まれていない限り、緑の中に黄と青を見ることにはならない。実際、スペクトルの黄とスペクトルの青を混合すれば本当に白が得られるのに、白の中に黄と青を見る者は誰もいない。
+
+§6
+§6
+
+Ich will hier nur kurz zusammenfassen, was ich heute über die Behandlung der Theorie der Farbenempfindung zu sagen habe. Man findet in neueren Schriften häufig die Angabe, daß die von Hering akzeptierten sechs Grundfarbenempfindungen, Weiß, Schwarz, Rot, Grün, Gelb, Blau zuerst von Leonardo da Vinci, nachher von Mach und Aubert aufgestellt worden seien. Daß die Angabe in bezug auf Leonardo da Vinci auf einem Irrtum beruhe, war mir von vornherein, in Anbetracht der Anschauungen seiner Zeit, höchst wahrscheinlich. Hören wir, was er selbst in seinem „Buche von der Malerei" sagt 1): „254. Der einfachen Farben sind sechs. Die erste davon ist das Weiß, obwohl die Philosophen weder Weiß noch Schwarz unter die Zahl der Farben aufnehmen, da das eine die Ursache der Farbe ist, das andere deren Entziehung. Da indes der Maler nicht ohne diese beiden fertig werden kann, so werden wir sie zu der Zahl der übrigen hierhersetzen und sagen, das Weiß sei in dieser Ordnung unter den einfachen die erste, Gelb die zweite, Grün die dritte, Blau die vierte, Rot die fünfte, Schwarz die sechste. Und das Weiß werden wir für Licht setzen, ohne das man keine Farbe sehen kann, das Gelb für die Erde, das Grün fürs Wasser, Blau für die Luft, Rot für Feuer und das Schwarz für die Finsternis, die sich über dem Feuerelement befindet, weil dort keine Materie oder dichter Stoff ist, auf den die Sonnenstrahlen ihren Stoß ausüben, und den sie infolgedessen beleuchten könnten." — „255. Das Blau und das Grün sind nicht einfache für sich. Denn das Blau setzt sich aus Licht und Finsternis zusammen, wie das Blau der Luft, aus äußerst vollkommenem Schwarz und vollkommen reinem Weiß ähnlich". „Das Grün setzt sich aus einer einfachen und einer zusammengesetzten zusammen, nämlich aus Gelb und aus Blau". Dies wird genügen, zu zeigen, daß es sich bei Leonardo da Vinci teils um Beobachtungen über Pigmente, teils um naturphilosophische Betrachtungen, nicht aber um die Grundfarbenempfindungen handelt.
+
+【補】ここでは、色覚の理論の取り扱いについて、今日私が述べるべきことを簡潔にまとめたい。近年の著作には、ヘーリングが受け入れた六つの基本色覚——白・黒・赤・緑・黄・青——が、最初にレオナルド・ダ・ヴィンチによって、次いでマッハとアウベルトによって提唱されたという記述がしばしば見られる。レオナルド・ダ・ヴィンチに関するこの記述が誤りに基づいていることは、彼の時代の見方を考慮すれば、私には最初からきわめてありそうなことであった。
+
+【補】彼自身が『絵画の書』の中で述べていることを聞こう 1)。「254. 単純な色は六つある。そのうちの第一は白である。もっとも哲学者たちは白も黒も色の数に入れない。一方が色の原因であり、他方がその欠如であるからである。しかし画家はこの二つなしには済ませられないから、我々はこれらを他の色の仲間に加え、こう言おう——白がこの順序において単純な色の第一であり、黄が第二、緑が第三、青が第四、赤が第五、黒が第六であると。白は光を表し、それなくしては色を見ることができない。黄は大地を、緑は水を、青は空気を、赤は火を、そして黒は火の元素の上にある暗闇を表す。そこには物質も密な素材もなく、太陽光線がそこに衝撃を与え照らすこともできないからである」。——「255. 青と緑はそれ自体としては単純ではない。なぜなら青は光と暗闇から合成されるからであり……」「緑は一つの単純なものと一つの合成されたもの、すなわち黄と青から合成される」。これは、レオナルド・ダ・ヴィンチの場合、一方では顔料についての観察が、他方では自然哲学的考察が問題であって、基本色覚が問題なのではないことを示すのに十分であろう。
+
+Die vielen wunderbaren und feinen naturwissenschaftlichen Beobachtungen aller Art, welche in Leonardos Buch enthalten sind, führen zu der Überzeugung, daß die Künstler und insbesondere er, wahre Vorläufer der großen bald folgenden Naturforscher waren. Sie mußten die Natur kennen, um sie angenehm vorzutäuschen; sie beobachteten sich und anderen zum Vergnügen. Doch hat wohl Leonardo bei weitem nicht alle Entdeckungen und Erfindungen gemacht, welche ihm z. B. Groth 1) zuschreibt.
+
+【補】レオナルドの書物に含まれるあらゆる種類の驚くべき精緻な自然科学的観察の数々は、芸術家たちが、とりわけ彼が、間もなく続く偉大な自然研究者たちの真の先駆者であったという確信をもたらす。彼らは自然を心地よく模倣するために自然を知らねばならなかった。彼らは自己と他者の喜びのために観察した。しかし、レオナルドが例えばグロート 1) が彼に帰するすべての発見や発明をなしたわけではおそらくない。
+
+Meine nur gelegentlichen Äußerungen über die Theorie der Farbenempfindung waren vollkommen deutlich. Ich nahm die Grundempfindungen: Weiß, Schwarz, Rot, Gelb, Grün, Blau und diesen entsprechend in der Netzhaut sechs verschiedene (chemische) Prozesse (nicht Nervenfasern) an.
+
+【補】色覚の理論に関する私のあくまで折に触れた発言は完全に明確であった。私は基本感覚として白・黒・赤・黄・緑・青を採用し、これに対応して網膜において六つの異なる（化学的）過程を（神経線維ではなく）想定した。
+
+Das Verhältnis der Komplementärfarben war natürlich, wie jedem Physiker, auch mir bekannt und geläufig. Ich stellte mir aber vor, daß die beiden Komplementärprozesse zusammen einen neuen, den Weißprozeß anregen. Die großen Vorzüge der Heringschen Theorie erkenne ich freudig an. Sie bestehen für mich in Folgendem. Zunächst wird der Schwarzprozeß als eine Reaktion gegen den Weißprozeß aufgefaßt. Ich weiß die Erleichterung, welche darin liegt, umso mehr zu würdigen, als mir das Verhältnis von Schwarz und Weiß gerade die größte Schwierigkeit einzuschließen schien. Außerdem werden Rot und Grün, ebenso Gelb und Blau als antagonistische Prozesse aufgefaßt, die nicht einen neuen Prozeß erzeugen, sondern die sich gegenseitig vernichten. Das Weiß wird hiernach nicht erst erzeugt, sondern es ist schon vorher vorhanden, und bleibt bei der Vernichtung einer Farbe durch die Komplementärfarbe übrig. Was mich an der Heringschen Theorie allein noch gestört hat, war, daß man nicht sah, warum die beiden Gegenprozesse Schwarz und Weiß zugleich auftreten und zugleich empfunden werden können, während dies bei Rot-Grün und Blau-Gelb nicht möglich ist. Dieses Bedenken ist aber durch die Darlegung Herings teilweise beseitigt 1).
+
+【補】補色の関係は、すべての物理学者と同様に、私にも当然知られ馴染みのものであった。しかし私は、二つの補色過程が一緒になって新しい過程——白の過程——を喚起すると考えていた。ヘーリングの理論の大きな長所を私は喜んで認める。私にとってその長所は次のことにある。まず、黒の過程が白の過程に対する反応として捉えられる。黒と白の関係がまさに最大の困難を含んでいるように思われた私には、そこに含まれる解放感をいっそう深く評価できる。さらに、赤と緑、同じく黄と青が、新たな過程を生むのではなく互いに消滅し合う拮抗的過程として捉えられる。白はこの見方ではあらたに生成されるのではなく、すでに前もって存在しており、一方の色がその補色によって消滅した後に残るのである。ヘーリングの理論で唯一私を悩ませたのは、なぜ二つの対抗過程である黒と白は同時に現れ同時に感じられうるのに、赤-緑や青-黄ではそれが不可能なのかが見えなかったことである。この疑念はヘーリングの説明によって部分的に解消された 1)。
+
+Die vollständige Aufklärung dieses Verhältnisses liegt wohl in dem Nachweise, welchen W. Pauli geliefert hat, daß gewisse Prozesse in kolloidalen und in lebenden Substanzen durch entgegengesetzte Prozesse auf demselben Wege, homodrom, wie in a, andere Prozesse aber durch Gegenprozesse auf anderem Wege, heterodrom, wie in b, rückgängig gemacht werden können 2). Ich selbst habe vor langer Zeit gezeigt, daß gewisse Empfindungen sich zu einander verhalten wie positive und negative Größen, z. B. Rot und Grün, daß aber andere nicht in diesem Verhältnis stehen, z. B. Weiß und Schwarz 1). Alles kommt nun in beste Übereinstimmung, wenn man mit Pauli die dem ersteren Paar entsprechenden Heringschen Gegenprozesse als homodrom, die dem letzteren Paar zugrunde liegenden Vorgänge als heterodrom ansieht 2).
+
+【補】この関係の完全な解明は、おそらく W. パウリが提示した証明のうちにある。すなわち、コロイドおよび生体物質における特定の過程は、同じ経路を辿る反対過程によって（同方向的〔homodrom〕に）元に戻されうるが、他の過程は別の経路を辿る対抗過程によって（異方向的〔heterodrom〕に）元に戻されうるのである 2)。私自身、かなり以前に、ある種の感覚は互いに正と負の量のように振る舞う——例えば赤と緑——が、他のもの——例えば白と黒——はこの関係にないことを示した 1)。パウリとともに、前者の対に対応するヘーリング的対抗過程を同方向的（homodrom）とし、後者の対の基礎にある過程を異方向的（heterodrom）と見なすならば、すべてが最もよく一致する 2)。
+
+§7
+§7
+
+Die angeführten Beispiele werden genügen, den Sinn des aufgestellten Forschungsgrundsatzes zu erläutern und zugleich zu zeigen, daß dieser Grundsatz nicht durchaus neu ist. Als ich mir vor Jahren den Satz formulierte, hatte ich auch keine andere Absicht, als etwas instinktiv längst Gefühltes mir selbst zur vollen Klarheit zu bringen.
+
+【移】以上の例は、述べた研究原理の意味を説明し、またこの原理がまったく新しいものではないことを示すのに十分であろう。私がこの命題を数年前に自分自身に定式化したとき、それは本能的に長く感じていたことを、自分自身に完全に明確にするという意図以上のものではなかった。
+
+Es schien mir ein einfacher und natürlicher, ja beinahe selbstverständlicher Gedanke, daß Ähnlichkeit auf einer teilweisen Gleichheit, auf einer teilweisen Identität beruht, und daß man demnach bei ähnlichen Empfindungen nach den gemeinsamen identischen Empfindungsbestandteilen und den entsprechenden gemeinsamen physiologischen Prozessen zu suchen hat.
+
+【補】私には、類似が部分的な同一性、部分的な一致に基づいており、したがって類似した感覚のもとでは、共通の同一の感覚構成部分と、対応する共通の生理学的過程を探さなければならない、ということが単純で自然な、ほとんど自明の考えに思われた。
+
+Ich kann jedoch den Leser darüber nicht im Unklaren lassen, daß diese Ansicht sich keineswegs allgemeiner Zustimmung erfreut. In philosophischen Schriften findet man vielfach die Behauptung, daß eine Ähnlichkeit auch wahrgenommen werden kann, ohne daß im geringsten von solchen identischen Bestandteilen die Rede sein könnte.
+
+【補】しかし、この見解がけっして一般的な賛同を得ているわけではないことを、読者に対して明らかにしておかなければならない。哲学的著作においては、そのような同一の構成部分など問題にならなくても類似は知覚されうるという主張がしばしば見られる。
+
+Ein Physiologe 3) spricht sich in folgender Weise über das hier dargelegte Prinzip aus: „Denn dessen Anwendung auf die obigen Probleme führt ihn (Mach) direkt dazu, nach dem physiologischen Moment zu fragen, welches jenen postulierten Qualitäten entspreche. Mir scheint nun, daß von allen Axiomen und Prinzipien keines bedenklicher, keines größeren Mißverständnissen ausgesetzt ist, als dieser Satz. Sollte er nichts anderes sein als eine Umschreibung des sogen. Parallelprinzips, so würde er weder als neu noch als besonders fruchtbar gelten können, und das Gewicht, das auf ihn gelegt wird, nicht verdienen. Wenn er dagegen besagen soll, daß allem, was wir psychologisch als etwas Einheitliches herausheben können, jedem Verhältnis, jeder Form, kurz allem, was wir durch eine Allgemeinvorstellung bezeichnen können, ein bestimmtes Element, ein Bestandteil des physiologischen Geschehens, entsprechen muß, so kann, glaube ich, diese Formulierung nur als bedenklich und irreführend bezeichnet werden."
+
+【補】ある生理学者 3) は、ここに述べた原理について次のように発言している。「この原理を上記の問題に適用することは、彼（マッハ）をして直接に、あの想定された諸性質に対応する生理学的契機を問うことへと導く。私には、すべての公理や原理のうちで、この命題ほど懸念すべきもの、これほど大きな誤解にさらされるものはないように思われる。もしそれがいわゆる平行原理の言い換えにすぎないのなら、新しいとも特に実りあるとも見なすことはできず、それに置かれた重みに値しないであろう。もしそれが逆に、我々が心理学的に統一的なものとして取り出しうるすべてのもの、すべての関係、すべての形式、要するに一般的表象によって名指しうるすべてのものに、生理学的出来事の特定の要素、特定の構成部分が対応しなければならないということを意味するなら、この定式化は懸念すべき、誤解を招くものとしか言いようがないと思う」。
+
+Allerdings will ich den Satz (unter dem S. 49 gemachten Vorbehalt) in diesem letzteren „bedenklichen und irreführenden" Sinn verstanden wissen. Ich muß es nun ganz dem Leser überlassen, ob er mir noch weiter folgen und in den durch jenen Grundsatz deutlich bezeichneten Anfang der Untersuchung eingehen, oder ob er, der Autorität der Gegner folgend, umkehren und sich lediglich mit der Betrachtung der vorgehaltenen Schwierigkeiten begnügen will.
+
+【補】確かに私は、この命題を（49頁で述べた留保のもとで）、この後者の「懸念すべき、誤解を招く」意味において理解されることを望む。読者が私にさらに従い、かの原理が明確に指し示す研究の出発点に入ってゆくか、それとも反対者の権威に従って引き返し、もっぱら提示された困難の考察にとどまるかは、まったく読者に委ねなければならない。
+
+In ersterem Falle wird er, wie ich hoffe, die Erfahrung machen, daß nach Erledigung einfacherer Fälle, in Fällen tiefer liegender, abstrakter Ähnlichkeit die Schwierigkeiten nicht mehr in der abschreckenden Beleuchtung erscheinen, in welcher sie zuweilen gesehen wurden. Ich möchte nur gleich hinzufügen, daß in solchen komplizierten Fällen von Ähnlichkeit dieselbe nicht auf einem gemeinschaftlichen Element, sondern auf einem gemeinschaftlichen System von Elementen beruht, wie ich dies wiederholt in Bezug auf das begriffliche Denken ausgeführt habe (vgl. Kap. XIV).
+
+【補】前者の場合、読者は——私が望むように——より単純な場合を片付けた後には、より深い抽象的類似の場合にあっても、困難がかつて見られたほどの威圧的な光のもとにはもはや現れないという経験をするであろう。ただちに付け加えておきたいのは、そのような複雑な類似の場合には、類似は一つの共通要素にではなく、要素の共通の体系に基づいているということである——概念的思考について私が繰り返し論じてきたように（第XIV章参照）。
+
+§8
+§8
+
+Da wir eine eigentliche Kluft zwischen Physischem und Psychischem überhaupt nicht anerkennen, so versteht es sich, daß beim Studium der Sinnesorgane sowohl die allgemein physikalischen als auch die speziell biologischen Erfahrungen Verwendung finden können. Manches, was uns schwer verständlich bleibt, wenn wir das Sinnesorgan mit einem physikalischen Apparat parallelisieren, an welchem die „Seele" beobachtet, wird durchsichtig im Lichte der Entwicklungslehre, wenn wir annehmen, daß wir mit einem lebenden Organismus mit besonderem Gedächtnis, besonderen Gewohnheiten und Manieren, die einer langen und schicksalsreichen Stammesgeschichte ihren Ursprung verdanken, zu tun haben. Die Sinnesorgane sind selbst ein Stück Seele, leisten selbst einen Teil der psychischen Arbeit, und überliefern das Ergebnis fertig dem Bewußtsein. Was ich hierüber zu sagen habe, will ich hier kurz zusammenfassen.
+
+【移】我々は物理的なものと心理的なものの間にそもそも溝を認めないのであるから、当然のこととして、感覚器官の研究においては、一般的な物理学的経験も特殊な生物学的経験も、ともに役立てることができる。
+
+【移】感覚器官を物理学的な装置と並べて考えると理解しがたいことも、発展（進化）の学説に照らし、特別な記憶を持ち、特別な習慣や癖を持つ生きた有機体——その長く波瀾に満ちた種の歴史にその起源を負う有機体——と関わっているのだと考えれば、透明になることが多い。
+
+【補】感覚器官はそれ自体が魂の一片であり、心理的な仕事の一部をそれ自体で遂行し、その結果を完成した形で意識に手渡す。これについて私が述べるべきことを、ここで簡潔にまとめたい。
+
+§9
+§9
+
+Der Gedanke, die Entwicklungslehre auf die Physiologie der Sinne insbesondere, und auf die Physiologie überhaupt, anzuwenden, tritt schon vor Darwin bei Spencer (1855) auf. Derselbe hat eine mächtige Förderung durch Darwins Buch „Über den Ausdruck der Gemütsbewegungen" erfahren. Später hat P. R. Schuster (1879) die Frage, ob es „ererbte Vorstellungen" gebe, in Darwinischem Sinne erörtert. Auch ich habe mich (Sitzungsberichte der Wiener Akademie, Oktober 1866) für die Anwendung der Entwicklungslehre auf die Theorie der Sinnesorgane ausgesprochen.
+
+【移】進化の学説を感覚の生理学や心理学一般に応用するという考えは、ダーウィン以前にすでにスペンサー（1855年）に見られる。この考えはダーウィンの著書『感情の表現について』によって力強い促進を受けた。後にシュルツェは「遺伝される表象」があるかどうかという問題をダーウィン的な意味で論じた。私もまた（ウィーン学士院紀要、1866年10月）、進化の学説を感覚器官の理論に適用することを支持した。
+
+Eine der schönsten und aufklärendsten Ausführungen im Sinne einer psychologisch-physiologischen Anwendung der Entwicklungslehre enthält die akademische Festrede von Hering 1). Gedächtnis und Vererbung fallen in der Tat fast in einen Begriff zusammen, wenn wir bedenken, daß Organismen, welche Teile des Elternleibes waren, auswandern, und die Grundlage der neuen Individuen werden. Die Vererbung wird uns durch diesen Gedanken fast ebenso verständlich als z. B. der Umstand, daß die Amerikaner englisch sprechen, daß ihre Staatseinrichtungen in vieler Beziehung den englischen gleichen, usw. Das Problem, welches darin liegt, daß Organismen ein Gedächtnis haben, welches der unorganischen Materie zu fehlen scheint, wird hierdurch selbstverständlich nicht berührt und besteht fort (vgl. Kap. V, XI).
+
+【移】心理学的・生理学的な進化論の応用としてもっとも美しく啓発的な論述のひとつは、ヘーリングの学術講演「組織された物質の一般的機能としての記憶について」（1870年）に含まれている。記憶と遺伝は、実際にほとんど一つの概念に融合する。なぜなら、親の体の一部であった有機体が移出し、新しい個体の基盤となるからである。この考えによって遺伝はほぼ、例えばアメリカ人が英語を話し、その国家制度が多くの点でイギリスのそれに似ていることと同程度に理解可能になる。もっとも、有機体が記憶を持つのに対して無機的な物質にはそれが欠けているように見えるという問題は、これによっては触れられず、依然として残る。
+
+Will man an Herings Darstellung nicht unbillige Kritik üben, so muß man in Betracht ziehen, daß er den Begriff Gedächtnis in einem weiteren Sinne nimmt. Er hat die Verwandtschaft erschaut, die besteht zwischen den anhaltenden Spuren, welche die Stammesgeschichte den Organismen aufprägt, und den flüchtigeren Eindrücken, die das individuelle Leben (im Bewußtsein) zurückläßt. Das spontane Wiederaufleben eines einmal eingeleiteten Prozesses auf einen leisen Anstoß hin erkennt er als wesentlich denselben Vorgang, ob derselbe nun in dem engen Rahmen des Bewußtseins beobachtet werden kann oder nicht. Das Erschauen dieses gemeinsamen Zuges in einer großen Reihe von Erscheinungen ist nun ein wesentlicher Fortschritt, wenn auch dieser Grundzug selbst noch aufzuklären bleibt 1).
+
+【補】ヘーリングの叙述に対して不当な批判を行わないためには、彼が記憶の概念をより広い意味でとっていることを考慮しなければならない。彼は、種の歴史が有機体に刻みつける持続的な痕跡と、個体の生涯が（意識のうちに）残すより一過的な印象との間にある親縁性を洞察した。一度導入された過程がわずかな契機によって自発的に再び蘇ることを、彼は——それが意識の狭い枠内で観察されうるか否かにかかわらず——本質的に同一の過程として認識している。広範な一連の現象のうちにこの共通の特徴を洞察することは本質的な進歩であるが、この根本特徴そのものはなお解明を待っている 1)。
+
+In neuerer Zeit hat Weismann 2) auch den Tod als eine Vererbungserscheinung aufgefaßt. Auch diese schöne Schrift wirkt sehr anregend. Die Schwierigkeit, die man darin sehen könnte, daß sich eine Eigenschaft vererben soll, die im Elternorganismus erst sich geltend machen kann, nachdem der Prozeß der Vererbung schon abgeschlossen ist, liegt wohl nur im Ausdruck. Sie fällt weg, wenn man darauf achtet, daß die Vermehrungsfähigkeit der Körperzellen auf Kosten der Vermehrung der Keimzellen (wie Weismann andeutet) wachsen kann. Somit kann man sagen, daß die längere Lebensdauer der Zellengemeinschaft und die verminderte Fortpflanzung zwei sich gegenseitig bedingende Anpassungserscheinungen seien.
+
+【補】近年、ヴァイスマン 2) は死をも遺伝現象として捉えた。この美しい著作もまた非常に示唆に富む。遺伝の過程がすでに終了した後にはじめて親の有機体で発現しうるような性質が遺伝されるべきだという点に困難を見出す向きもあるかもしれないが、それはおそらく表現上の問題にすぎない。体細胞の増殖能力が生殖細胞の増殖を犠牲にして（ヴァイスマンが示唆するように）増大しうることに注目すれば、この困難は消失する。したがって、細胞共同体のより長い寿命と生殖の減少は、互いに条件づけ合う二つの適応現象であると言うことができる。
+
+Noch als Gymnasiast hörte ich einmal, daß Pflanzen der südlichen Hemisphäre bei uns blühen, wenn in ihrer Heimat Frühling ist. Ich erinnere mich lebhaft der geistigen Erschütterung, die mir diese Mitteilung verursacht hat. Ist dies richtig, so kann man hierbei in der Tat an eine Art Gedächtnis der Pflanze denken, auch dann, wenn die Periodizität der Lebenserscheinungen hiebei die Hauptsache sein sollte. Die sogenannten Reflexbewegungen der Tiere lassen sich in natürlicher Weise als Gedächtniserscheinungen außerhalb des Bewußtseinsorgans auffassen.
+
+【補】まだギムナジウムの生徒であったとき、南半球の植物がこちらでは故郷の春の季節に花を咲かせるという話を聞いたことがある。この報告が私に与えた精神的衝撃を生き生きと思い出す。これが正しいなら、ここには確かに植物の一種の記憶を見ることができる——たとえ生命現象の周期性がここでは主要な要因であるとしても。動物のいわゆる反射運動は、意識器官の外にある記憶現象として自然に理解することができる。
+
+Eine der merkwürdigsten dieser Erscheinungen sah ich (ich glaube 1865) bei Rollett an enthirnten Tauben. Diese Tiere trinken jedesmal, wenn sie mit den Füßen in eine kalte Flüssigkeit gesetzt werden, ob dieselbe nun Wasser, Quecksilber oder Schwefelsäure ist. Da nun ein Vogel gewöhnlich in die Lage kommen wird, seine Füße zu benetzen, wenn er seinen Durst zu stillen sucht, so ergibt sich die Anschauung ganz ungezwungen, daß hier eine durch die Lebensweise bedingte zweckmäßige, durch Vererbung befestigte Gewohnheit vorliegt, welche (auch bei Ausschaltung des Bewußtseins) auf den entsprechenden auslösenden Reiz mit der Präzision eines Uhrwerks abläuft. Goltz hat in seinem wunderbaren Buch 1) und in späteren Schriften viele derartige Erscheinungen beschrieben.
+
+【補】これらの現象のうちもっとも注目すべきものの一つを、私は（おそらく1865年に）ロレットのもとで、除脳されたハトに見た。これらの動物は、足を冷たい液体に浸されるたびに飲む——それが水であろうと水銀であろうと硫酸であろうと。鳥は通常、渇きを癒そうとするとき足を濡らす状況になるのであるから、ここには生活様式によって条件づけられた合目的的な、遺伝によって固着された習慣が存在するという見方がまったく自然に浮かんでくる。この習慣は（意識が排除されていても）対応する誘発刺激に対して時計仕掛けの精確さで遂行される。ゴルツはその素晴らしい書物 1) や後の著作で、このような現象を多数記述している。
+
+Ich will nun bei dieser Gelegenheit noch einige Beobachtungen erwähnen, deren ich mich mit großem Vergnügen erinnere. In den Herbstferien 1873 brachte mir mein kleiner Junge einen wenige Tage alten Sperling, welcher aus dem Nest gefallen war, und wünschte ihn aufzuziehen. Die Sache war jedoch nicht einfach. Das Tierchen war nicht zum Schlingen zu bewegen, und wäre den unvermeidlichen Insulten beim gewaltsamen Füttern sicherlich bald erlegen. Da stellte ich folgende Überlegung an: „Das neugeborene Kind wäre (ob die Darwinsche Theorie richtig ist oder nicht) unfehlbar verloren, wenn es nicht die vorgebildeten Organe und den ererbten Trieb zum Saugen hätte, welche durch den passenden Reiz ganz automatisch und mechanisch in Tätigkeit geraten. Etwas Ähnliches muß in anderer Form auch beim Vogel existieren."
+
+【移】ある秋の休暇に、息子が巣から落ちた生後数日のスズメを連れてきた。しかし雛は飲み込もうとしない。そこで私は次のように考えた。「新生児も、もし吸乳のための器官と遺伝された本能——適切な刺激によってまったく自動的・機械的に活動する——がなければ、たちまち死んでしまうだろう。鳥にも形を変えた同様のものがあるはずだ」。
+
+Ich bemühte mich nun den passenden Reiz zu finden. Ein kleines Insekt wurde an ein spitzes Stäbchen gesteckt und an diesem um den Kopf des Vogels rasch herumbewegt. Sofort sperrte das Tier den Schnabel auf, schlug mit den Flügeln und schlang gierig die dargebotene Nahrung hinab. Ich hatte also den richtigen Reiz für die Auslösung des Triebes und der automatischen Bewegung gefunden.
+
+【移】適切な刺激を見つけようとして、小さな虫を尖った棒に刺し、鳥の頭の周りで素早く動かした。すると直ちに雛はくちばしを開け、翼をばたつかせ、貪欲に差し出された餌を飲み込んだ。
+
+Das Tier wurde zusehends stärker und gieriger; es fing an, nach der Nahrung zu schnappen, erfaßte einmal auch ein zufällig vom Stäbchen auf den Tisch gefallenes Insekt, und fraß von da an ohne Anstand selbständig. In dem Maße als sich der Intellekt, die Erinnerung entwickelte, war ein immer kleinerer Teil des auslösenden Reizes notwendig. Das selbständig gewordene Tier nahm nach und nach alle charakteristischen Sperlingsmanieren an, die es doch nicht eigens gelernt hatte.
+
+【移】知性が発達するにつれて、必要な誘発刺激はどんどん少なくて済むようになった。
+
+【補】この動物は目に見えて強く、また貪欲になった。餌に飛びつくようになり、偶然棒からテーブルに落ちた虫を捉えたこともあり、それ以来問題なく自立して食べるようになった。自立した動物は次第に、特に学んだわけでもないスズメに特徴的な習癖をすべて身につけた。
+
+Bei Tage (bei wachem Intellekt) war es sehr zutraulich und liebenswürdig. Des Abends traten regelmäßig andere Erscheinungen auf. Das Tier wurde furchtsam. Es suchte immer die höchsten Orte der Stube auf, und beruhigte sich erst, wenn es durch die Zimmerdecke verhindert wurde, noch höher zu steigen. Wieder eine andere zweckmäßige ererbte Gewohnheit!
+
+【補】昼間（知性が覚醒しているとき）、この鳥はきわめて人懐こく愛らしかった。しかし夕方になると、別の現象が規則的に現れた。動物は怖がるようになった。常に部屋の最も高い場所を探し求め、天井によってさらに高く昇ることを阻まれたときにようやく落ち着いた。ここにもまた一つの合目的的な遺伝された習慣がある！
+
+Bei einbrechender Dunkelheit war das Tier vollends verändert. Näherte man sich dann, so sträubte es die Federn, fing an zu fauchen und zeigte den Ausdruck des Entsetzens und der leibhaftigen Gespensterfurcht. Auch diese ist ganz wohlbegründet und zweckmäßig bei einem Wesen, das unter normalen Verhältnissen jeden Augenblick von irgend einem Ungetüm verschlungen werden kann.
+
+【補】暗闘が迫ると動物はすっかり変わった。近づくと羽毛を逆立て、シューシューという声を出し始め、恐怖と生々しい幽霊恐怖の表情を見せた。これもまた、通常の状況下ではいつなんどき何かの怪物に呑み込まれてもおかしくない生き物にとっては、まったく根拠のある合目的的なものである。
+
+Diese letztere Beobachtung bekräftigte mir die schon vorher gefaßte Ansicht, daß die Gespensterfurcht meiner Kinder nicht von den (sorgfältig ferngehaltenen) Ammenmärchen herrührte, sondern angeboren war. Eines meiner Kinder fing gelegentlich an, den im Dunkeln stehenden Lehnstuhl zu beanstanden, ein anderes wich abends sorgfältig einem Kohlenbehälter beim Ofen aus, besonders wenn derselbe mit geöffnetem Deckel dastand, und einem aufgesperrten Rachen glich.
+
+【補】この後者の観察は、私の子供たちの幽霊恐怖が（注意深く遠ざけていた）乳母の昔話に由来するのではなく生得的なものだという、すでに以前に形成していた見解を確証するものであった。私の子供の一人はときおり暗闇の中に立っている肘掛け椅子を嫌がりはじめ、別の子は夕方になるとストーブのそばの石炭入れを注意深く避けた——とりわけ蓋が開いたまま立っていて、大きく開いた口に似ているときに。
+
+Die Gespensterfurcht ist die wirkliche Mutter der Religionen. Weder die naturwissenschaftliche Analyse noch die sorgfältige historische Kritik eines D. Strauss Mythen gegenüber, welche für den kräftigen Intellekt schon widerlegt sind, bevor sie noch erfunden wurden, werden diese Dinge plötzlich beseitigen und hinwegdekretieren. Was so lange einem wirklichen ökonomischen Bedürfnis entsprach und teilweise noch entspricht (Furcht eines Schlimmern, Hoffnung eines Besseren), wird in den dunkleren unkontrollierbaren instinktiven Gedankenreihen noch lange fortleben.
+
+【補】幽霊恐怖こそ宗教の真の母である。自然科学的分析も、力強い知性にとっては発明される前にすでに論駁されている神話に対するD・シュトラウスの注意深い歴史的批判も、これらの事柄を突然に除去し布告によって消し去ることはないであろう。これほど長い間、現実の経済的必要——より悪いものへの恐怖、より良いものへの希望——に対応してきた（そして部分的にはなお対応している）ものは、より暗い制御不可能な本能的思考の連鎖の中に長く生き続けるであろう。
+
+Wie die Vögel auf unbewohnten Inseln (nach Darwin) die Menschenfurcht erst im Laufe mehrerer Generationen erlernen müssen, so werden wir erst nach vielen Generationen das unnötig gewordene „Gruseln" verlernen. Jede Faustaufführung kann uns darüber belehren, wie sympathisch uns insgeheim die Anschauungen der Hexenzeit noch sind. Nützlicher als die Furcht vor dem Unbekannten wird dem Menschen die genaue Kenntnis der Natur, seiner Lebensbedingungen. Und bald ist es für ihn am wichtigsten, daß er auf der Hut sei vor Nebenmenschen, die ihn roh vergewaltigen, oder durch Irreleitung seines Verstandes und Gefühls perfid mißbrauchen wollen.
+
+【補】無人島の鳥が（ダーウィンによれば）人間への恐怖を何世代もかけてはじめて学ばねばならないように、我々もまた不要になった「ぞっとする感覚」を忘れるには多くの世代を要するであろう。どのファウスト上演も、魔女の時代の見方がひそかになお我々にとっていかに共感的であるかを教えてくれる。未知のものへの恐怖よりも、自然の、自らの生活条件の正確な知識のほうが人間にとって有益である。そしてまもなく人間にとって最も重要なのは、粗暴に暴力をふるう同胞、あるいは知性と感情を誤導して巧妙に利用しようとする同胞に対して警戒することであろう。
+
+Noch eine eigentümliche Beobachtung will ich hier mitteilen, deren Kenntnis ich meinem Vater (zuletzt Gutsbesitzer in Krain), einem begeisterten Darwinianer, verdanke. Mein Vater beschäftigte sich viel mit Seidenzucht, zog Yama Mai frei im Eichenwalde usw. Die gewöhnliche Morus-Seidenraupe ist seit vielen Jahrhunderten ein Haustier und dadurch höchst unbehilflich und unselbständig geworden. Kommt die Zeit des Einspinnens heran, so pflegt man den Tieren Strohbündel darzubieten, auf welchen sie sich verpuppen. Mein Vater kam nun eines Tages auf den Einfall, einer Gesellschaft von Morusraupen die üblichen Strohbündel nicht bereit zu legen. Die Folge war, daß der größte Teil der Raupen zu Grunde ging, und nur ein geringer Bruchteil, die Genies (mit größerer Anpassungsfähigkeit), sich einspann.
+
+【補】もう一つの独特な観察をここに伝えたい。その知識は、私の父——最終的にはクライン地方の地主であり、熱心なダーウィン主義者であった——に負っている。父は養蚕に多く携わり、ヤママユガを樫の森で自由に飼育するなどしていた。通常のクワの蚕は何世紀もの間家畜であったため、きわめて不器用で自立できなくなっていた。繭を作る時期が来ると、蛹化のための藁束を提供するのが慣例であった。ある日父は、一群のクワ蚕に通常の藁束を用意しないことを思いついた。その結果、蚕の大部分は滅び、ごくわずかな部分——天才たち（より大きな適応能力を持つもの）——だけが繭を作った。
+
+Ob, wie meine Schwester beobachtet zu haben glaubt, die Erfahrungen einer Generation schon in der nächsten merklich benützt werden, muß wohl noch weiter untersucht werden. Aus den Versuchen, die C. Lloyd Morgan (Comparative psychology, London 1894) mit jungen Hühnchen, Enten usw. angestellt hat, geht hervor, daß wenigstens bei höheren Tieren kaum etwas anderes angeboren ist als die Reflexe. Das frisch ausgeschlüpfte Hühnchen pickt gleich mit großer Sicherheit nach allem, was es sieht. Was aber aufzupicken ersprießlich ist, muß es durch individuelle Erfahrung lernen. Je einfacher der Organismus, desto geringer die Rolle des individuellen Gedächtnisses.
+
+【補】一世代の経験がすでに次の世代で顕著に利用されるかどうかは——私の姉妹がそう観察したと信じているように——なお更なる研究を要するであろう。C・ロイド・モーガン（『比較心理学』、ロンドン、1894年）が若いヒヨコやアヒルなどで行った実験から明らかになるのは、少なくとも高等動物においては反射以外にはほとんど何も生得的ではないということである。孵化したばかりのヒヨコは、目に見えるすべてのものを即座にきわめて確実につつく。しかし何をつつくのが有益であるかは、個体的経験によって学ばなければならない。有機体が単純であるほど、個体的記憶の役割は小さい。
+
+Aus allen diesen merkwürdigen Erscheinungen brauchen wir keine Mystik des Unbewußten zu schöpfen. Ein über das Individuum hinausreichendes Gedächtnis (in der oben bezeichneten erweiterten Bedeutung) macht sie verständlich. Eine Psychologie in Spencer-Darwinschen Sinne auf Entwicklungslehre gegründet, aber auf positiver Detailforschung fußend, verspricht reichere Resultate als alle bisherigen Spekulationen.
+
+【補】これらすべての注目すべき現象から、無意識の神秘主義を汲み取る必要はない。個体を超えて及ぶ記憶（上述の拡張された意味において）がそれらを理解可能にする。スペンサー＝ダーウィン的な意味で進化の学説に基礎づけられながらも、実証的な詳細研究に立脚する心理学は、これまでのすべての思弁よりも豊かな成果を約束する。
+
+Meine Beobachtungen und Betrachtungen waren längst angestellt und niedergeschrieben, als Schneiders wertvolle Schrift („Der tierische Wille", Leipzig 1880) erschien, die viele ähnliche enthält. Den Detailausführungen Schneiders, soweit dieselben nicht durch Lloyd Morgans Versuche problematisch werden, muß ich fast durchaus zustimmen, wenngleich seine naturwissenschaftlichen Grundanschauungen (das Verhältnis von Empfindung und physikalischem Prozeß, die Bedeutung der Arterhaltung usw. betreffend) von den meinigen wesentlich verschieden sind, und obgleich ich z. B. auch die Unterscheidung von Empfindungs- und Wahrnehmungstrieben für ganz überflüssig halte.
+
+【補】私の観察と考察がとうに行われ書き記されていたとき、シュナイダーの貴重な著作（『動物の意志』、ライプツィヒ、1880年）が現れた。それは類似の内容を多く含んでいる。シュナイダーの詳細な叙述には——ロイド・モーガンの実験によって問題含みとなる限りにおいてはともかく——ほぼ全面的に賛同しなければならない。もっとも、彼の自然科学的基本見解（感覚と物理的過程の関係、種の保存の意義などに関する）は私のものとは本質的に異なっており、例えば感覚衝動と知覚衝動の区別はまったく余計であると私は考える。
+
+Eine wichtige Umgestaltung unserer Anschauungen über die Vererbung dürfte durch Weismanns Schrift (Über die Vererbung, Jena 1883) eingeleitet sein. Weismann hält die Vererbung durch Übung erworbener Eigenschaften für höchst unwahrscheinlich und sieht das wichtige Moment in der zufälligen Variation der Keimesanlagen und der Auslese der Keimesanlagen. Wie man sich auch zu Weismanns Ausführungen stellen mag, jedenfalls kann die durch ihn angeregte Diskussion zur Klärung der Fragen nur beitragen. Der fast mathematischen Schärfe und Tiefe seiner Problemstellung wird man gewiß nicht die Anerkennung versagen, und seinen Argumenten nicht die Kraft absprechen können.
+
+【補】遺伝に関する我々の見方の重要な変革は、ヴァイスマンの著作（『遺伝について』、イェーナ、1883年）によって導入されたであろう。ヴァイスマンは、練習によって獲得された性質の遺伝をきわめてありそうにないものと見なし、重要な契機を生殖質の偶然的変異と生殖質の選択に見ている。ヴァイスマンの議論に対してどのような立場をとろうとも、いずれにせよ彼によって触発された議論は問題の解明に寄与しうるのみである。ほぼ数学的な鋭利さと深さをもつ彼の問題設定には確かに敬意を拒むことはできず、彼の論証に力を否定することもできない。
+
+Die Bemerkung z. B. gibt sehr zu denken, daß die eigentümlichen ungewöhnlichen, scheinbar auf Gebrauch und Anpassung zurückzuführenden Formen der geschlechtslosen Ameisen, welche zudem von der Form ihrer fortpflanzungsfähigen Genossen so sehr abweichen, nicht auf einer Vererbung durch Übung erworbener Eigenschaften beruhen können 1).
+
+【補】例えば、次のような指摘は非常に考えさせられるものである。すなわち、使用と適応に帰せられるように見える、無性のアリの独特で異常な形態——それは繁殖能力のある仲間の形態からきわめて大きく逸脱している——は、練習によって獲得された性質の遺伝に基づくことはありえないのである 1)。
+
+Daß die Keimesanlagen selbst sich durch äußere Einflüsse ändern können, scheint aber doch durch die Bildung neuer Rassen, welche sich als solche erhalten, ihre Rasseneigenschaften vererben, und die selbst wieder unter anderen Umständen einer Umbildung fähig sind, deutlich hervorzugehen. Auf das Keimplasma muß also doch auch der dasselbe umschließende Leib Einfluß nehmen (wie Weismann selbst zugibt). Somit ist ein Einfluß des individuellen Lebens auf die Nachkommen doch nicht auszuschließen, wenn auch eine direkte Übertragung der Resultate der Übung des Individuums auf die Deszendenten (nach Weismanns Darlegung) nicht mehr erwartet werden kann.
+
+【補】しかし、生殖質そのものが外的影響によって変化しうることは、それ自体として存続し、その人種的特質を遺伝し、さらに別の状況下で再び変形可能な新しい人種の形成によって、明確に示されているように思われる。したがって生殖質に対しても、それを包む身体が影響を及ぼさねばならない（ヴァイスマン自身が認めるように）。したがって、個体の生涯が子孫に影響を及ぼすことは排除できない——たとえ個体の練習の結果が子孫に直接伝達されることは（ヴァイスマンの説明によれば）もはや期待できないとしても。
+
+Wenn man sich vorstellt, daß die Keimesanlagen zufällig variieren, so ist zu bedenken, daß der Zufall kein Aktionsprinzip ist. Wenn ganz gesetzmäßig wirksame periodische Umstände verschiedener Art und Periodizität zusammentreffen, so überdecken sich dieselben derart, daß man im einzelnen kein Gesetz mehr wahrnimmt. Dennoch äußert sich das Gesetz im Verlauf eines längeren Zeitraumes und erlaubt uns auf gewisse Mittelwerte, Wahrscheinlichkeiten der Effekte zu rechnen 2). Ohne ein solches Aktionsprinzip hat die Wahrscheinlichkeit, der Zufall, gar keinen Sinn. Welches Aktionsprinzip sollte aber auf die Variation der Keimesanlagen mehr Einfluß üben als der Elternleib?
+
+【補】生殖質が偶然に変異すると考えるなら、偶然は作用原理ではないということを考慮しなければならない。まったく法則的に作用するさまざまな種類と周期性の周期的状況が出合うと、それらは互いに覆い合って、個々には法則が認められなくなる。しかしそれでも法則はより長い期間の経過のうちに現れ、結果の一定の平均値、確率を計算することを可能にする 2)。このような作用原理なしには、確率も偶然もまったく意味を持たない。しかし、生殖質の変異に対して親の身体以上に影響を及ぼすべき作用原理がどこにあるだろうか。
+
+Ich für meine Person kann mir nicht vorstellen, daß die Art dem Einflusse variierender Umstände unterliegen sollte, welche gleichwohl nicht am Individuum angreifen würden. Meine eigene Variation wird mir aber zudem gewiß, durch jeden Gedanken, jede Erinnerung, jede Erfahrung, welche ja mein ganzes physisches Verhalten ändern 3).
+
+【補】私個人としては、種が変動する状況の影響を受けるべきであるのに、その状況が個体を攻撃しないなどということは想像できない。さらに私自身の変異は、あらゆる思考、あらゆる記憶、あらゆる経験——これらは確かに私の全物理的挙動を変化させるのだから——によって確実なものとなる 3)。
+
+Obwohl es kaum nötig ist, möchte ich noch ausdrücklich hinzufügen, daß ich die Entwicklungslehre in jeder Form als eine modifizierbare, zu verschärfende naturwissenschaftliche Arbeitshypothese betrachte, deren Wert so weit reicht, als dieselbe das provisorische Verständnis des in der Erfahrung Gegebenen erleichtert. Für mich, der den gewaltigen Aufschwung aller Forschung, nicht nur der biologischen, durch Darwin miterlebt hat, ist dieser Wert allerdings ein sehr großer. Ich rechne nicht mit jenen, für welche derselbe sehr gering ist.
+
+【補】ほとんど不要であるとはいえ、明言しておきたい。私は進化の学説をいかなる形態においても、修正可能で精鋭化されるべき自然科学的作業仮説と見なしている。その価値は、経験に与えられたものの暫定的理解を容易にする限りにおいて及ぶ。ダーウィンによるすべての研究——生物学的研究だけではなく——の巨大な高揚をともに体験した私にとって、この価値はまことに大きなものである。この価値をきわめて小さいと見なす人々とは、私は立場を異にする。
+
+Auf die Notwendigkeit, mit schärferen, durch das Studium der biologischen Tatsachen an sich gewonnenen Begriffen vorzugehen, habe ich schon 1883 und 1886 hingewiesen 1). Ich stehe also Forschungen, wie jenen Drieschs, keineswegs verständnislos gegenüber. Ob aber Drieschs Kritik 2) meines Verhaltens gegenüber der Entwicklungslehre gerechtfertigt ist, überlasse ich jenen zu beurteilen, welche sich die Mühe nehmen, trotz dieser Kritik, doch noch meine Ausführungen zu lesen.
+
+【補】生物学的事実そのものの研究によって得られた、より鋭利な概念をもって進む必要性については、私はすでに1883年と1886年に指摘していた 1)。したがって私は、ドリーシュのような研究に対してけっして無理解な態度をとるものではない。しかし、進化の学説に対する私の態度へのドリーシュの批判 2) が正当化されるかどうかは、この批判にもかかわらずなお私の叙述を読む労をとる人々の判断に委ねたい。
+
+§10
+§10
+
+Teleologische Betrachtungen haben wir als Hilfsmittel der Forschung keineswegs zu scheuen. Gewiß wird uns das Tatsächliche nicht verständlicher durch Zurückführung desselben auf einen selbst problematischen unbekannten „Weltzweck", oder den ebenso problematischen Zweck eines Lebewesens. Allein die Frage, welchen Wert diese oder jene Funktion für das tatsächliche Bestehen des Organismus hat, oder was sie zu der Erhaltung desselben beiträgt, kann das Verständnis dieser Funktion selbst fördern 3).
+
+【移】目的論的な考察もまた、研究の補助手段として避ける必要はない。もちろん事実そのものが、問題の多い未知の「世界目的」に遡及することで理解しやすくなるわけではない。しかし、ある機能が有機体の存続にとってどんな価値を持つか、それが有機体の存続に何を貢献するか、という問いかけは、その機能自体の理解を促進しうる。
+
+Deshalb dürfen wir natürlich noch nicht glauben, daß wir, wie manche Darwinianer sich ausdrücken, eine Funktion „mechanisch erklärt" haben, wenn wir erkennen, daß sie für das Bestehen der Art notwendig ist. Darwin selbst ist von dieser kurzsichtigen Auffassung wohl vollkommen frei. Durch welche physikalische Mittel die Funktion sich entwickelt, bleibt noch immer ein physikalisches, und wie und warum sich der Organismus anpassen will, ein psychologisches Problem.
+
+【移】ただし、ある機能が種の存続に必要であることを認識したからといって、それで機能を「機械的に説明した」と信じてはならない——一部のダーウィン主義者が言うように。ダーウィン自身はこの近視眼的な見方からは完全に自由である。有機体がどのような物理的手段によって発達したか、機能がどのように、またなぜ適応するのかは、依然として物理学的・心理学的な問題である。
+
+Die Erhaltung der Art ist überhaupt nur ein tatsächlicher wertvoller Anhaltspunkt für die Forschung, keineswegs aber das Letzte und Höchste. Arten sind ja wirklich zugrunde gegangen, und neue wohl ebenso zweifellos entstanden. Der lustsuchende und schmerzmeidende Wille 1) muß also wohl weiter reichen als an die Erhaltung der Art. Er erhält die Art, wenn es sich lohnt, er vernichtet sie, wenn ihr Bestand sich nicht mehr lohnt. Wäre er nur auf die Erhaltung der Art gerichtet, so bewegte er sich, alle Individuen und sich selbst betrügend, ziellos in einem fehlerhaften Zirkel. Dies wäre das biologische Seitenstück des berüchtigten physikalischen „perpetuum mobile". Derselben Verkehrtheit machen sich jene Staatsmänner schuldig, welche den Staat als Selbstzweck ansehen.
+
+【移】種の保存は、実際上の価値ある手がかりにすぎず、決して究極のものでも最高のものでもない。種は実際に絶滅してきたし、新しい種も確かに生まれてきた。快を求め苦を避ける意志は、種の保存よりもさらに遠くまで及ぶものでなければならない。この意志は、種を保存する——それが割に合う限りで。種を変える——それが割に合う限りで。種を滅ぼす——その存続がもはや割に合わなくなったとき。
+
+【移】もしこの意志がもっぱら種の保存にだけ向けられていたなら、すべての個体と自分自身を欺きながら、目的もなく誤った円環の中をぐるぐる回っていたことだろう。これは、あの悪名高い物理学的「永久機関」の、生物学的な対応物であろう。
+
+【補】国家を自己目的と見なす政治家たちも、同じ倒錯の罪を犯している。
+
+Anmerkungen · 注
+
+Anm. 1) zu §3
+注1）§3に対して
+
+Vergl. meine Abhandlung „Ueber die Wirkung der räumlichen Verteilung des Lichtreizes auf die Netzhaut" (Sitzungsberichte der Wiener Akademie, Bd. 52, Jahrg. 1865). Ferner Reichert's und Dubois' Arch., 1865, S. 634 und Grundlinien der Lehre von den Bewegungsempfindungen. Leipzig, Engelmann, 1875, S. 63. — Auch in meiner Ausführung in Fichte's Zeitschrift für Philosophie, Bd. 46, Jahrg. 1865, S. 5 ist der Grundsatz implizite schon enthalten. (Abgedruckt in den Populärwissenschaftlichen Vorlesungen. Leipzig, 3. Aufl., 1903.)
+
+【補】拙論「光刺激の空間的分布が網膜に及ぼす作用について」（ウィーン学士院紀要、第52巻、1865年）を参照。さらに、ライヘルト＝デュ・ボワ『紀要』1865年、634頁、および『運動感覚論の基本線』ライプツィヒ、エンゲルマン、1875年、63頁。——フィヒテ『哲学雑誌』第46巻、1865年、5頁における私の叙述にも、この原理はすでに暗黙のうちに含まれている（『通俗科学講演集』第3版、ライプツィヒ、1903年に再録）。
+
+Anm. 1) zu §3 (zweite)
+注1）§3に対して（第二）
+
+In bezug auf die verschiedenen Seiten der Parallelismusfrage vergl. C. Stumpf, Ansprache beim Psychologenkongreß in München. München 1897. — G. Heymans, Zur Parallelismusfrage. Zeitschr. f. Psychologie der Sinnesorgane, Bd. XVII. — O. Külpe, Über die Beziehungen zwischen körperlichen und seelischen Vorgängen. Zeitschr. f. Hypnotismus, Bd. VII. — J. v. Kries, Über die materiellen Grundlagen der Bewußtseinserscheinungen. Freiburg i. B. 1898. — C. Hauptmann, Die Metaphysik in der Physiologie. Dresden 1893.
+
+【補】平行性問題のさまざまな側面については以下を参照。C・シュトゥンプ「ミュンヒェン心理学者会議での挨拶」ミュンヒェン、1897年。——G・ハイマンス「平行性問題について」『感覚器官の心理学雑誌』第XVII巻。——O・キュルペ「身体的過程と心的過程の関係について」『催眠術雑誌』第VII巻。——J・フォン・クリース『意識現象の物質的基礎について』フライブルク、1898年。——C・ハウプトマン『生理学における形而上学』ドレスデン、1893年。
+
+Anm. 1) zu §5
+注1）§5に対して
+
+Helmholtz, Die Lehre von den Tonempfindungen. Braunschweig, Vieweg. 1863.
+
+【補】ヘルムホルツ『音感覚論』ブラウンシュヴァイク、フィーヴェーク書店、1863年。
+
+Anm. 2) zu §5
+注2）§5に対して
+
+Brewster, A treatise on optics. London 1831. Brewster denkt sich das rote, das gelbe und das blaue Licht über das Sonnenspektrum reichend, jedoch in verschiedener Intensität verteilt, so daß für das Auge das Rot an beiden Enden (am roten und violetten), das Gelb in der Mitte, das Blau am brechbareren Ende hervortritt.
+
+【補】ブリュースター『光学論』ロンドン、1831年。ブリュースターは、赤・黄・青の光が太陽スペクトル全体にわたって広がっているが、異なる強度で分布しており、目にとっては赤が両端（赤端と紫端）に、黄が中央に、青がより屈折しやすい端に現れると考えた。
+
+Anm. 1) zu §5 (Brewsters Irrtum)
+注1）§5に対して（ブリュースターの誤り）
+
+Brewster meinte nämlich die Nuance von Newton für einfach gehaltene Spektralfarben durch Absorption ändern zu können, was, wenn es richtig wäre, die Newtonsche Anschauung wirklich erschüttern würde. Er experimentierte jedoch, wie Helmholtz (Physiologische Optik) gezeigt hat, mit einem unreinen Spektrum.
+
+【補】すなわちブリュースターは、ニュートンが単純と見なしたスペクトル色の色合いを吸収によって変えることができると考えた。もしそれが正しければ、ニュートンの見解は確かに揺らいだであろう。しかし彼は、ヘルムホルツ（『生理光学』）が示したように、不純なスペクトルで実験していた。
+
+Anm. 2) zu §5
+注2）§5に対して
+
+Philosophical Magazine. February 1876, p. III. Wollaston beobachtete (1802) zuerst die später nach Fraunhofer benannten dunklen Linien des Sonnenspektrums, und glaubte sein schmales Spektrum durch die stärksten Linien in einen roten, grünen oder violetten Teil getrennt zu sehen. Er hielt diese Linien für Grenzen physikalischer Farben. Young nahm diese Ansicht an, und setzte an die Stelle seiner Grundempfindungen Rot, Gelb, Blau die Farben Rot, Grün, Violett. Bei der ersten Aufstellung hielt also Young das Grün für eine Mischempfindung, bei der zweiten das Gelb und dieses und Violett für einfach.
+
+【補】『フィロソフィカル・マガジン』1876年2月号、III頁。ウォラストンは（1802年に）のちにフラウンホーファー線と名づけられた太陽スペクトルの暗線を最初に観察し、自分の狭いスペクトルが最も強い線によって赤・緑・紫の部分に分けられていると見た。彼はこれらの線を物理的な色の境界と見なした。ヤングはこの見解を採用し、自分の基本感覚——赤・黄・青を赤・緑・紫に置き換えた。最初の設定ではヤングは緑を混合感覚と見なし、第二の設定では黄をそう見なし、緑と紫を単純なものとした。
+
+Anm. 1) zu §6 (Leonardo)
+注1）§6に対して（レオナルド）
+
+Nr. 254 und 255 nach der Übersetzung von Heinrich Ludwig, Quellenschriften zur Kunstgeschichte. Wien, Braumüller, 1882, Bd. XVIII.
+
+【補】第254番および第255番、ハインリヒ・ルートヴィヒ訳『美術史原典叢書』ウィーン、ブラウミュラー書店、1882年、第XVIII巻による。
+
+Anm. 1) zu §6 (Groth)
+注1）§6に対して（グロート）
+
+Leonardo da Vinci als Ingenieur und Philosoph. Berlin 1874. — Marie Herzfeld, Leonardo da Vinci, Auswahl nach den veröffentlichten Handschriften. Leipzig 1904.
+
+【補】『技師および哲学者としてのレオナルド・ダ・ヴィンチ』ベルリン、1874年。——マリー・ヘルツフェルト『レオナルド・ダ・ヴィンチ、公刊手稿からの選集』ライプツィヒ、1904年。
+
+Anm. 1) zu §6 (Hering, Lichtsinn)
+注1）§6に対して（ヘーリング、光覚）
+
+Zur Lehre vom Lichtsinn. Wien 1878, S. 122. Vgl. auch meine oben zitierte Abhandlung. Sitzungsberichte der Wiener Akademie, Bd. LII, Jahrg. 1865, Oktober.
+
+【補】『光覚の学説について』ウィーン、1878年、122頁。上に引用した拙論も参照。ウィーン学士院紀要、第LII巻、1865年、10月。
+
+Anm. 2) zu §6 (Pauli)
+注2）§6に対して（パウリ）
+
+W. Pauli, Der kolloidale Zustand und die Vorgänge in der lebenden Substanz. Braunschweig, Vieweg, 1902, S. 22, 30.
+
+【補】W・パウリ『コロイド状態と生体物質における過程』ブラウンシュヴァイク、フィーヴェーク書店、1902年、22頁、30頁。
+
+Anm. 1) zu §6 (Bewegungsempfindungen)
+注1）§6に対して（運動感覚）
+
+Grundlinien der Lehre von den Bewegungsempfindungen. 1875, S. 57 f.
+
+【補】『運動感覚論の基本線』1875年、57頁以下。
+
+Anm. 2) zu §6 (Hering, Augenheilkunde)
+注2）§6に対して（ヘーリング、眼科学）
+
+Eine neue Darstellung seiner Ansichten gibt Hering in Graefe-Saemisch, Handbuch der ges. Augenheilkunde. Leipzig 1905, Bd. III.
+
+【補】ヘーリングの見解の新たな叙述は、グレーフェ＝ゼーミッシュ『総合眼科学便覧』ライプツィヒ、1905年、第III巻に見られる。
+
+Anm. 3) zu §7
+注3）§7に対して
+
+J. v. Kries, Über die materiellen Grundlagen der Bewußtseinserscheinungen. Freiburg i. B. 1898.
+
+【補】J・フォン・クリース『意識現象の物質的基礎について』フライブルク、1898年。
+
+Anm. 1) zu §9 (Hering, Gedächtnis)
+注1）§9に対して（ヘーリング、記憶）
+
+Über das Gedächtnis als eine allgem. Funktion der organisierten Materie, 1870.
+
+【補】「組織された物質の一般的機能としての記憶について」1870年。
+
+Anm. 1) zu §9 (Semon)
+注1）§9に対して（ゼーモン）
+
+R. Semon, Die Mneme. Leipzig 1904.
+
+【補】R・ゼーモン『ムネーメ（記憶素）』ライプツィヒ、1904年。
+
+Anm. 2) zu §9 (Weismann, Lebensdauer)
+注2）§9に対して（ヴァイスマン、寿命）
+
+Über die Dauer des Lebens, 1882.
+
+【補】「生命の持続について」1882年。
+
+Anm. 1) zu §9 (Goltz)
+注1）§9に対して（ゴルツ）
+
+Die Nervenzentren des Frosches, 1869.
+
+【補】『カエルの神経中枢』1869年。
+
+Anm. 1) zu §9 (geschlechtslose Ameisen)
+注1）§9に対して（無性のアリ）
+
+Vielleicht sind aber die kräftigen Kiefer die ursprüngliche Erwerbung der Art, und dieselben sind nur verkümmert bei den ausschließlich das Geschlecht fortpflanzenden Individuen.
+
+【補】しかし、強靭な顎こそがもともとの種の獲得物であり、それがもっぱら生殖のみを行う個体においては退化したにすぎないのかもしれない。
+
+Anm. 2) zu §9 (Psychophysik)
+注2）§9に対して（精神物理学）
+
+Vorlesungen über Psychophysik. Zeitschr. f. prakt. Heilkunde. Wien 1863, S. 148, 168, 169.
+
+【補】「精神物理学についての講義」『実践医学雑誌』ウィーン、1863年、148頁、168頁、169頁。
+
+Anm. 3) zu §9
+注3）§9に対して
+
+Populärwissenschaftliche Vorlesungen, 3. Aufl. 1903, S. 260, 261.
+
+【補】『通俗科学講演集』第3版、1903年、260頁、261頁。
+
+Anm. 1) zu §9 (Entwicklungslehre)
+注1）§9に対して（進化の学説）
+
+Vgl. Populärwissenschaftliche Vorlesungen, S. 244 f. und Analyse der Empfindungen, 1866, S. 34 f.
+
+【補】『通俗科学講演集』244頁以下、および『感覚の分析』1866年、34頁以下を参照。
+
+Anm. 2) zu §9 (Driesch)
+注2）§9に対して（ドリーシュ）
+
+Driesch, Die organisatorischen Regulationen, 1901, S. 165 f.
+
+【補】ドリーシュ『組織的調節作用』1901年、165頁以下。
+
+Anm. 3) zu §10 (teleologische Betrachtungen)
+注3）§10に対して（目的論的考察）
+
+Solche teleologische Betrachtungen sind mir oft nützlich und aufklärend gewesen. Die Bemerkung z. B., daß ein sichtbares Objekt bei wechselnder Beleuchtungsintensität nur dann als dasselbe wiedererkannt werden kann, wenn die ausgelöste Empfindung von dem Verhältnis der Beleuchtungsintensitäten des Objektes und der Umgebung abhängt, macht eine ganze Reihe organischer Eigenschaften des Auges verständlich. (Vgl. Hering in Graefe-Saemisch, Handbuch der Augenheilkunde, Bd. III, 12. Kap., S. 13 f.). Man versteht durch dieselbe auch, wie der Organismus sich im Interesse seines Bestehens der bezeichneten Forderung anpassen und sich darauf einrichten mußte, Lichtintensitätsverhältnisse zu empfinden. Das sogenannte Webersche Gesetz oder die Fechnersche psychophysische Fundamentalformel erscheint demnach nicht als etwas Fundamentales, sondern als erklärbares Ergebnis organischer Einrichtungen. Natürlich ist damit der Glaube an die Allgemeingültigkeit dieses Gesetzes aufgegeben. Ich habe die betreffenden Ausführungen in verschiedenen Abhandlungen gegeben (Sitzungsberichte der Wiener Akademie, Bd. LII, Jahrg. 1865, Vierteljahrsschrift für Psychiatrie. Neuwied und Leipzig 1868, Sitzungsberichte der Wiener Akademie, Bd. LVII, Jahrg. 1868). In der letzterwähnten Abhandlung habe ich von der Annahme des Parallelismus zwischen Psychischem und Physischem, oder, wie ich damals mich ausdrückte, von der Proportionalität zwischen Reiz und Empfindung ausgehend, die Fechnersche Maßformel (das Logarithmusgesetz) fallen gelassen und eine andere Auffassung der Fundamentalformel angenommen, deren Gültigkeit für die Lichtempfindung ich nicht bestritten habe. Dies geht aus der daselbst befindlichen Entwicklung unzweifelhaft hervor. Man kann also nicht sagen, wie es Hering getan hat, daß ich überall auf dem psychophysischen Gesetz fuße, sofern man unter diesem die Maßformel versteht. Wie hätte ich auch die Proportionalität von Reiz und Empfindung zugleich mit der logarithmischen Abhängigkeit festhalten können? Mir war es genügend, meine Meinung deutlich zu machen; die Fechnersche eingehend zu kritisieren und zu bekämpfen, hatte ich aus vielen naheliegenden Gründen kein Bedürfnis. Genau genommen, halte ich auch den Ausdruck Proportionalität für unzutreffend, da von einer eigentlichen Messung der Empfindung doch nicht die Rede sein kann, sondern höchstens von einer genauen Charakterisierung und Inventarisierung durch Zahlen. Vgl. „Prinzipien der Wärmelehre", S. 56, was über die Bezeichnung der Wärmezustände gesagt ist.
+
+【補】このような目的論的考察は私にしばしば有益で啓発的であった。例えば、可視的な対象が照明強度の変化のもとで同一のものとして再認されうるのは、誘発される感覚が対象と周囲の照明強度の比に依存する場合に限られるという指摘は、目の一連の有機的特性を理解可能にする（ヘーリング、グレーフェ＝ゼーミッシュ『眼科学便覧』第III巻、第12章、13頁以下を参照）。この考察によって、有機体がその存続の利益のために上述の要求に適応し、光の強度比を感じ取れるように整えなければならなかったことも理解される。いわゆるヴェーバーの法則、すなわちフェヒナーの精神物理学的基本公式は、したがって根本的なものとしてではなく、有機体の装備の説明可能な結果として現れる。もちろん、これによってこの法則の普遍的妥当性への信頼は放棄される。私はこれに関する論述を種々の論文で行った（ウィーン学士院紀要、第LII巻、1865年。『精神医学季刊誌』ノイヴィート＝ライプツィヒ、1868年。ウィーン学士院紀要、第LVII巻、1868年）。最後に挙げた論文では、心理的なものと物理的なものの平行性の仮定から——当時の私の表現では刺激と感覚の比例性から——出発し、フェヒナーの測定公式（対数法則）を放棄して、基本公式の別の解釈を採用した。光の感覚に対するその妥当性を私は争わなかった。このことはそこに含まれる展開から疑いなく明らかである。したがって、ヘーリングが述べたように、私がいたるところで精神物理学的法則——測定公式の意味でのそれ——に立脚していると言うことはできない。刺激と感覚の比例性を対数的依存性と同時に保持することがどうしてできたであろうか。私にとっては自分の意見を明確にすることで十分であった。フェヒナーの見解を詳細に批判し論駁することは、多くの身近な理由から必要を感じなかった。厳密に言えば、比例性という表現も不適切と考える。なぜなら、感覚の本来的な測定ということは問題にならず、せいぜい数字による正確な特徴づけと目録作成が問題になるにすぎないからである。『熱学の原理』56頁の、熱状態の表記について述べたことを参照。
+
+Anm. 1) zu §10
+注1）§10に対して
+
+Man kann den Schopenhauerschen Gedanken der Beziehung von Willen und Kraft ganz wohl annehmen, ohne in beiden etwas Metaphysisches zu sehen.
+
+【補】意志と力の関係についてのショーペンハウアーの思想は、両者に形而上学的なものを見ることなく、十分に受け入れることができる。

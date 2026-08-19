@@ -1,0 +1,680 @@
+Kapitel VII · 第Ⅶ章
+Weitere Untersuchung der Raumempfindungen
+空間感覚のさらなる研究
+
+§1
+§1
+
+Die Kenntnis des räumlichen Sehens hat im Verlauf des 19. Jahrhunderts wesentliche Fortschritte gemacht, nicht allein durch den Gewinn an positiver Einsicht, sondern auch durch die Beseitigung der in diesem Gebiete von verschiedenen Philosophen und Physikern, namentlich seit Descartes, angehäuften Vorurteile, wodurch erst die für positive Entdeckungen nötige Unbefangenheit gewonnen werden mußte.
+
+【補】空間的視覚の知識は、19世紀の間に本質的な進歩を遂げた。それは実証的な洞察の獲得によるだけでなく、この分野において種々の哲学者や物理学者が、とりわけデカルト以来蓄積してきた偏見の除去によるものでもあった。この偏見の除去によって、はじめて実証的発見に必要な先入観のない態度が獲得されねばならなかったのである。
+
+Johannes Müller²) schuf die Lehre von den spezifischen Energien, und derselbe vertrat auch in sehr klarer Weise die Vorstellung von den identischen Netzhautstellen, welche sich übrigens in deutlichen Anfängen bis auf Ptolemaeus³) zurückverfolgen läßt. Nach seiner Ansicht, daß die Netzhaut in ihrer eigenen Tätigkeit sich selbst empfinde, ist ihm der „Sehraum" etwas unmittelbar Gegebenes. Im Sehfeld erscheint auch der eigene Leib. Alle Orientierungsfragen können nur auf die Lage der Teile des Sehfeldes gegen einander Bezug haben. Die Sehrichtung hängt nur von der Anordnung der empfindenden Netzhaut.
+
+【補】ヨハネス・ミュラー²⁾は特殊エネルギーの学説を創始し、同一網膜部位の概念をもきわめて明晰に提唱した。この概念はその明確な萌芽において実はプトレマイオス³⁾にまで遡ることができる。網膜がその固有の活動において自らを感覚するというミュラーの見解によれば、「視空間」は彼にとって直接に与えられたものである。視野には自分自身の身体も現れる。あらゆる方位の問題は、視野の諸部分の相互の位置関係にのみ関わりうる。視覚の方向は感覚する網膜の配置にのみ依存する。
+
+hautstellen ab. Alle Projektionstheorien und Probleme des Aufrechtsehens entfallen. Die Schätzung der Entfernung des Gesehenen ist aber für Müller durchaus noch Sache des Verstandes. Durch das von Wheatstone¹) erfundene Stereoskop konnte man sich leicht überzeugen, daß nicht nur auf identische Netzhautstellen, sondern auch auf andere nicht zu sehr differente Stellen fallende Bilder unter Umständen einfach, und je nach der stereoskopischen Differenz in verschiedener Tiefe gesehen werden. Dies führte nun wieder zu Zweifeln an der Identitätslehre und begünstigte das Auftreten psychologischer Erklärungen des Tiefensehens. So entstand Brückes Theorie des sukzessiven Fixirens beim räumlichen Sehen, welche durch Doves Stereoskopversuche bei Momentbeleuchtung wieder als unhaltbar erwiesen wurde. Panum²) trat solchen Theorien durch gewichtige Überlegungen und trefflich ausgedachte Versuche entgegen. Gestützt auf die Phänomene des binokularen Wettstreites und die hervorragende Rolle der Konturen bei denselben, gelangt er zu der Ansicht, daß das Tiefensehen auf einer Wechselwirkung (Synergie) der beiden Netzhäute beruhe, daß die Tiefenempfindung eine angeborene spezifische Energie sei. Je ähnlicher die beiden monokularen Bilder, namentlich die Konturen, in Form, Farbe und Lage sind, desto leichter verschmelzen sie zu einem binokularen Bilde, dessen Tiefe durch die stereoskopische Differenz bestimmt wird. Diese Tiefe entspricht aber, wie Panum noch meint, der durch die Projektionslinien gegebenen. Am gründlichsten hat Hering³) mit alten Vorurteilen aufgeräumt. Hering geht von der Ansicht aus, daß der uns unmittelbar gegebene Sehraum von unserem durch besondere Erfahrungen gewonnenen Raumbegriff durchaus zu unterscheiden sei. Wie er durch schlagende Experimente nachweist, ist die Richtung, in welcher wir ein Objekt sehen, von jener der Verbindungslinie auch bei den Sehrichtungen. Diese Andeutungen mögen genügen, da es hier nicht möglich ist, auf die reichhaltigen Einzelarbeiten einzugehen, durch welche Hering¹⁾ diesem Kapitel eine sichere Grundlage geschaffen hat. Es sei nur noch bemerkt, daß nach demselben Forscher die beiden Augen als einheitliches Organ aufzufassen sind, deren assoziierte Bewegungen auf einer angeborenen anatomischen Grundlage beruhen, worauf schon Johannes Müller hingewiesen hatte.
+
+【補】網膜部位から離れる。すべての投影理論と直立視の問題は消失する。しかし、見られたものの距離の推定は、ミュラーにとってはまったくなお悟性の事柄である。ホイートストン¹⁾が発明した実体鏡によって、同一網膜部位だけでなく、それほど大きく異ならない他の部位に映る像も、場合によっては単一に、しかも立体視差に応じてさまざまな奥行きで見られることを容易に確認できた。このことは同一性の学説への疑念を再び引き起こし、奥行き視覚の心理学的説明の台頭を促した。こうしてブリュッケの空間視における逐次注視の理論が生まれたが、それはドーフェの瞬間照明による実体鏡実験によって再び支持しがたいものと証明された。パーヌム²⁾はそのような理論に対し、重要な考察と巧みに考案された実験をもって反論した。両眼競合の現象と、そこにおける輪郭の際立った役割に基づいて、彼は奥行き視覚が両網膜の相互作用（共働）に基づくこと、奥行き感覚は生得的な特殊エネルギーであるという見解に至った。二つの単眼像が、とりわけ輪郭において、形・色・位置において類似しているほど、容易にそれらは両眼像に融合し、その奥行きは立体視差によって規定される。ただし、この奥行きはパーヌムがなお考えるところでは、投影線によって与えられるものに対応する。もっとも徹底的に旧来の偏見を一掃したのはヘーリング³⁾である。ヘーリングは、我々に直接に与えられている視空間が、特別な経験によって獲得された空間概念とはまったく区別されるべきであるという見解から出発する。彼が印象的な実験によって証明するように、我々が対象を見る方向は、視線方向においても結合線の方向とは異なる。以上の示唆で十分であろう、というのもここでは、ヘーリング¹⁾がこの章に確固たる基礎を創出した豊富な個別研究に立ち入ることはできないからである。なお、同じ研究者によれば、両目は統一的な器官と解されるべきであり、その連合運動は生得的な解剖学的基礎に基づくこと——すでにヨハネス・ミュラーが指摘していたこと——を付け加えておく。
+
+Die biologische und die psychologische²) Untersuchung führen übereinstimmend zu der Überzeugung, daß in bezug auf die Raumanschauung nur mehr die nativistische Ansicht aufrecht erhalten werden kann. Das Hühnchen, welches eben aus dem Ei geschlüpft ist, zeigt sich schon im Raume orientiert und pickt schon nach allen Gegenständen, welche seine Aufmerksamkeit erregen. Für den neugeborenen Menschen können wir höchstens eine geringere Reife, sonst aber nicht wesentlich verschiedene Verhältnisse annehmen. Schon Panum hat auf diesen Punkt hingewiesen. Die Raumanschauung ist also bei der Geburt vorhanden. Ob wir imstande sein werden, dieselbe durch die Entwicklungsgeschichte oder die Stammesgeschichte aufzuklären, etwa in der von Helmholtz versuchten Weise, ist eine Frage für sich.
+
+【補】生物学的研究と心理学的²⁾研究は一致して、空間直観に関しては生得論（生得的見解）のみがもはや維持しうるという確信へと導く。卵からかえったばかりの雛は、すでに空間において方位を示し、注意を惹くあらゆる対象に向かってすでにつつく。新生児については、せいぜい成熟度がより低いことは認めうるが、それ以外に本質的に異なる事情を想定することはできない。すでにパーヌムがこの点を指摘していた。したがって、空間直観は出生時にすでに存在している。我々がそれを発生史あるいは系統発生史によって、たとえばヘルムホルツが試みたような仕方で解明しうるかどうかは、別の問題である。
+
+Die phylogenetische Entwicklung, die Variation der Korrespondenz der Netzhäute beim Übergang von einer Tierspezies zur andern, welche Johannes Müller³) untersucht hat, möchte hierfür schon Anhaltspunkte bieten. Vielversprechend scheint ferner die Verfolgung der pathologischen Anomalien bei Schielenden und der Anpassungserscheinungen, welche in diesen Fällen zu beobachten sind⁴).
+
+【補】系統発生的発展、すなわち一つの動物種から別の動物種への移行に際しての網膜の対応関係の変異——ヨハネス・ミュラー³⁾がこれを研究した——は、すでにこのための手がかりを提供するかもしれない。さらに、斜視者における病理学的異常と、これらの場合に観察される適応現象の追究も有望に思われる⁴⁾。
+
+§2
+§2
+
+Daß die Raumempfindung mit motorischen Prozessen zusammenhängt, wird seit langer Zeit nicht mehr bestritten. Die Meinungen gehen nur darüber auseinander, wie dieser Zusammenhang aufzufassen sei.
+
+【移】空間感覚が運動過程と結びついていることは、もう長い間異論のないところである。意見が分かれるのは、この結びつきをどのように理解すべきかという点だけである。
+
+Fallen zwei verschiedenfarbige kongruente Bilder nach einander auf dieselben Netzhautstellen, so werden sie ohne weiteres als gleiche Gestalten erkannt. Wir können uns also zunächst verschiedene Raumempfindungen an verschiedene Netzhautstellen gebunden denken. Daß aber diese Raumempfindungen nicht unabänderlich an bestimmte Netzhautstellen geknüpft sind, erkennen wir, indem wir frei und willkürlich die Augen bewegen, wobei die Objekte, obgleich ihre Bilder auf der Netzhaut sich verschieben, ihren Ort und ihre Gestalt nicht ändern.
+
+【移】二つの異なる色を持つ合同な像が次々と同じ網膜部位に投影されると、同一の形として難なく認識される。つまりまず、異なる空間感覚が異なる網膜部位に結びついていると考えることができる。しかし、空間感覚が不変的に特定の網膜部位に固定されているわけではないことは、自由に意図的に目を動かしてみればわかる。網膜上の像は移動するにもかかわらず、対象はその場所も形も変えない。
+
+Wenn ich geradeaus vor mich blicke, ein Objekt O fixierend, so erscheint mir ein Objekt A, das sich auf der Netzhaut in a, in einer bestimmten Tiefe unter der Stelle des deutlichsten Sehens o abbildet, in einer gewissen Höhe zu liegen. Erhebe ich nun den Blick, B fixierend, so behält A hierbei seine frühere Höhe bei. Es müßte tiefer erscheinen, wenn der Ort des Bildes auf der Netzhaut, bezw. der Bogen o a allein die Raumempfindung bestimmen würde. Ich kann den Blick bis zu A und darüber hinaus erheben, ohne daß an diesem Verhältnis etwas geändert wird. Der physiologische Prozeß also, der die willkürliche Erhebung des Auges bedingt, vermag die Höhenempfindung ganz oder teilweise zu ersetzen, ist mit ihr gleichartig, kurz gesagt, algebraisch mit derselben summierbar. Drehe ich den Augapfel durch einen leichten Ruck mit dem Finger aufwärts, so scheint sich hierbei das Objekt A, der Verkleinerung des Bogens o a entsprechend, in der Tat zu senken. Dasselbe geschieht, wenn durch irgend einen andern unbewußten oder unwillkürlichen Prozeß, z. B. durch einen Krampf der Augenmuskel, der Augapfel sich aufwärts dreht. Nach einer seit mehreren Dezennien bekannten Erfahrung der Augenärzte greifen Patienten mit einer Lähmung des Rectus externus zu weit nach rechts, wenn sie ein rechts liegendes Objekt ergreifen wollen. Da dieselben eines stärkeren Willensimpulses bedürfen als Gesunde, um ein rechtsliegendes Objekt zu fixieren, so liegt der Gedanke nahe, daß der Wille, rechts zu blicken, die optische Raumempfindung „rechts" bedingt. Ich habe vor Jahren¹) diese Erfahrung in die Form eines Versuches gebracht, den jeder sofort anstellen kann. Man drehe die Augen möglichst nach links und drücke nun an die rechten Seiten der Augäpfel zwei große Klumpen von ziemlich festem Glaserkitt gut an. Versucht man alsdann rasch nach rechts zu blicken, so gelingt dies wegen der ungenauen Kugelform der Augen nur sehr unvollkommen, und die Objekte verschieben sich hierbei ausgiebig nach rechts. Der blosse Wille, rechts zu blicken, gibt also den Netzhautbildern an bestimmten Netzhautstellen einen größeren Rechtswert, wie wir kurz sagen wollen. Der Versuch wirkt anfangs überraschend. Wie man aber bald merkt, lehren die beiden einfachen Erfahrungen, daß durch willkürliche Rechtswendung der Augen die Objekte nicht verschoben, und daß durch gewaltsame unwillkürliche Linkswendung die Objekte nach rechts verschoben werden, zusammen genau dasselbe. Mein Auge, welches ich rechts wenden will und nicht kann, läßt sich als ein willkürlich rechts gewendetes und durch eine äußere Kraft gewaltsam zurückgedrehtes Auge ansehen. Professor W. James²) wollte der erwähnte Versuch nicht gelingen. Ich habe denselben oft wiederholt und immer bestätigt gefunden. Die Tatsache, glaube ich, steht fest, womit aber natürlich nicht über die Richtigkeit der Auffassung entschieden ist.
+
+【移】例えば、正面の対象 O を注視しているとき、明視の位置 o よりも下に像を結ぶ対象 A は、ある高さにあるように見える。ここで視線を上に向けて B を注視しても、A はもとの高さを保ったままである。もし網膜上の像の位置だけが空間感覚を決めるなら、A はもっと低く見えるはずだ。さらに視線を A まで、あるいはそれ以上に上げても、この関係は変わらない。
+【移】つまり、目の随意的な挙上を条件づけている生理的過程は、高さの感覚を全面的にあるいは部分的に代替することができる。この生理的過程は高さの感覚と同質であり、それと代数的に加算可能である。指で眼球を上向きに押すと、対象 A は、oa の弧の縮小に応じて実際に沈んで見える。何らかの無意識・不随意的な過程（例えば眼筋の痙攣）によって眼球が上向きに回転する場合も同様のことが起こる。
+【移】数十年来知られている眼科的経験によれば、外直筋の麻痺を持つ患者は、右側にある対象をつかもうとして右方に手を伸ばしすぎる。右方の対象を注視するために健常者より強い意志の衝動を必要とするからであり、「右を見よう」という意志が光学的空間感覚「右」を条件づけているのだと考えられる。
+【移】私は以前、この経験を誰でもすぐにできる実験の形に変換した。目をできるだけ左に向け、両眼球の右側にかなり硬いガラス職人用のパテの大きな塊を押し当てる。すると素早く右を見ようとしても、眼球の不完全な球形のため非常に不十分にしか成功せず、対象はその際に大幅に右方に移動して見える。つまり、右を見ようとする意志だけで、特定の網膜部位にある網膜像に、より大きな「右の値」が与えられるのだ。
+【移】最初は驚くべき効果だが、すぐに気づくのは、随意的な右方向転換では対象は移動しないこと、そして外力による強制的・不随意的な右方向転換では対象が左に移動すること——この二つの単純な経験を合わせると、まったく同じ結果になるということである。右に向けようとして向けることができない目は、随意的に右を向けてから外力で強制的に押し戻された目と見なすことができる。
+
+§3
+§3
+
+Der Wille, Blickbewegungen aufzuführen, oder die Innervation (?), ist die Raumempfindung selbst. Dies ergibt sich ungezwungen aus der angeführten Betrachtung¹). Wenn wir an einer Hautstelle ein Jucken oder einen Stich empfinden, wodurch unsere Aufmerksamkeit genügend gefesselt wird, so greifen wir sofort mit dem richtigen Ausmaß der Bewegung dahin. Ebenso drehen wir die Augen mit dem richtigen Ausmaß nach einem Netzhautbild, sobald dasselbe uns genügend reizt, und wir es demnach beachten. Vermöge organischer Einrichtungen und langer Übung treffen wir sofort die zur Fixierung eines auf bestimmter Netzhautstelle sich abbildenden Objektes eben zureichende Innervation. Sind die Augen schon rechts gewendet, und fangen wir an, ein neues mehr rechts oder links gelegenes Objekt zu beachten, so fügt sich eine neue gleichartige Innervation der schon vorhandenen algebraisch hinzu. Eine Störung entsteht erst, wenn zu den willkürlich abgemessenen Innervationen fremdartige unwillkürliche oder äußere bewegende Kräfte hinzutreten.
+
+眼球運動を行おうとする意志、すなわち神経支配（Innervation）こそが、空間感覚そのものである。 これは、上の考察から自然に導かれる¹⁾。
+【移】皮膚のある箇所にかゆみや刺し傷を感じ、注意が十分に引きつけられると、我々はただちに正しい運動の量をもって手を伸ばす。同様に、網膜上の像が十分に刺激的であれば、正しい運動の量をもって目をそちらに向ける。有機体の仕組みと長い練習のおかげで、特定の網膜部位に像を結ぶ対象の注視にちょうど十分な神経支配を即座に命中させるのである。
+【移】すでに目が右方を向いていて、さらに右方または左方にある新しい対象に注意を向けるなら、すでに存在している神経支配に、新しい同種の神経支配が代数的に加算される。擾乱が生じるのは、随意的に測られた神経支配に、異質な不随意的神経支配や外部からの運動力が加わるときだけである。
+
+§4
+§4
+
+Als ich mich vor Jahren mit den hierher gehörigen Fragen beschäftigte, bemerkte ich eine eigentümliche Erscheinung, die meines Wissens noch nicht beschrieben worden ist. Wir betrachten in einem recht dunklen Zimmer ein Licht A und führen dann eine rasche Blickbewegung nach dem tieferen Licht B aus. Das Licht A scheint hierbei einen (rasch verschwindenden) Schweif AA' nach oben zu ziehen. Dasselbe tut natürlich auch das Licht B, was zur Vermeidung von Komplikationen in der Figur nicht angedeutet ist. Der Schweif ist selbstverständlich ein Nachbild, welches erst bei Beendigung oder kurz vor Beendigung der Blickbewegung zum Bewußtsein kommt, jedoch, was eben merkwürdig ist, mit Ortswerten, welche nicht der neuen Augenstellung und Innervation, sondern noch der frühern Augenstellung und Innervation entsprechen. Ähnliche Erscheinungen bemerkt man oft beim Experimentieren mit der Holtzschen Elektrisiermaschine. Wird man während einer Blickbewegung abwärts von einem Funken überrascht, so erscheint derselbe oft hoch über den Elektroden. Liefert er ein dauerndes Nachbild, so zeigt sich dieses natürlich unter den Elektroden. Diese Vorgänge entsprechen der sogenannten persönlichen Differenz der Astronomen, nur daß sie auf das Gebiet des Gesichtssinnes beschränkt sind. Durch welche organischen Einrichtungen dies Verhältnis bedingt ist, muß dahingestellt bleiben, wahrscheinlich hat es aber einen gewissen Wert für Verhinderung der Desorientierung bei Augenbewegungen¹). S.Z.109.
+
+【移】私が以前、これに関連する問題に取り組んでいたとき、まだ記述されていない（と思われる）ある独特の現象に気づいた。
+【移】かなり暗い部屋で二つの光 A と B を観察し、A から下方の B へと素早く視線移動を行う（図16）。すると光 A は、急速に消える尾 AA' を上方に引くように見える。光 B も同様のことをするが、図の複雑化を避けるため描かれていない。
+【移】この尾は明らかに残像であり、視線移動の終了の直前または終了時に意識に上る。しかし興味深いのは、その残像が新しい目の位置と神経支配に対応する位置の値ではなく、以前の目の位置と神経支配に対応する位置の値を伴って現れることである。
+【移】同様の現象は、ホルツの起電機での実験中にしばしば見られる。下方への視線移動の途中で火花に不意を打たれると、火花は当然ながら電極の上方高くに見える。持続的な残像が得られれば、それもやはり電極のはるか上方に見えることが多い。
+【移】これらの現象は、天文学者のいわゆる「個人差（人差）」に対応するものである。ただし、視覚の領域に限定されている。S.Z.109.
+
+§5
+§5
+
+Wir dachten uns bisher der Einfachheit wegen nur die fixierenden Augen bewegt, hingegen den Kopf (und überhaupt den Körper) ruhig. Drehen wir nun den Kopf ganz beliebig, ohne ein optisches Objekt absichtlich ins Auge zu fassen, so bleiben die Objekte hierbei ruhig. Zugleich kann aber ein anderer Beobachter bemerken, daß die Augen wie reibungslose träge Massen an den Drehbewegungen keinen Anteil nehmen. Noch auffallender wird der Vorgang, wenn man sich kontinuierlich aktiv oder passiv um die Vertikalachse, von oben gesehen, etwa im Sinne des Uhrzeigers, herumdreht. Die offenen oder geschlossenen Augen drehen sich dann, wie Breuer beobachtet hat, etwa zehnmal auf eine volle Umdrehung des Körpers gleichmäßig verkehrt wie der Uhrzeiger, und ebenso oft ruckweise im Sinne des Uhrzeigers zurück. Die Figur veranschaulicht diesen Vorgang. Nach OT sind die Zeiten als Abszissen, aufwärts als Ordinaten die Drehungswinkel im Sinne Fig. 17.
+
+【移】これまで単純化のため、注視する目だけが動き、頭（や身体）は静止していると想定していた。ここで、光学的対象を特に注視することなく頭を自由に回転させると、対象は静止したままである。同時に、別の観察者は、目が摩擦のない慣性質量のように頭の回転に参加しないことに気づく。
+【移】この現象はさらに、垂直軸のまわりに上から見て時計回りに長時間連続回転すると、より顕著になる。ブロイアーが観察したように、開いたまたは閉じた目は、身体の一回転あたり約10回、時計と逆方向にゆっくり回転し、同じ回数だけ時計方向に急速に戻る（図17）。
+
+des Uhrzeigers, abwärts im entgegengesetzten Sinne aufgetragen. Die Kurve OA entspricht der Drehung des Körpers, OBB der relativen und OCC der absoluten Drehung der Augen. Niemand wird sich bei Wiederholung der Beobachtung der Überzeugung verschließen können, daß man es mit einer durch die Körperdrehung reflektorisch vom Labyrinth ausgelösten automatischen (unbewußten) Augenbewegung zu tun hat. Dieselbe verschwindet, sobald die (passive) Drehung nicht mehr empfunden wird. Wie diese Bewegung zustande kommt, bleibt natürlich zu untersuchen. Eine einfache Vorstellung wäre die, daß von zwei antagonistischen Innervationsorganen der ihnen bei der Körperdrehung gleichmäßig zufließende Reiz von dem einen wieder mit einem gleichmäßigen Innervationsstrom beantwortet wird, während das andere immer erst nach einer gewissen Zeit wie ein gefüllter und plötzlich umkippender Regenmesser einen Innervationsstoß abgibt. Für uns genügt es vorläufig zu wissen, daß diese automatische kompensierende unbewußte Augenbewegung tatsächlich vorhanden ist.
+
+【移】これは明らかに、身体の回転によって反射的に迷路（内耳迷路）から引き起こされる自動的（無意識的）な眼球運動である。この運動は（受動的な）回転がもはや感じられなくなると同時に消失する。この運動がどのようにして生じるかはもちろん研究課題として残る。単純な表象としては、二つの拮抗的な神経支配器官のうち一方は身体回転時に等しく流入する刺激に等しい神経支配の流れで応答し、他方はつねに一定の時間を経てはじめて、満杯になって突然倒れる雨量計のように神経支配の衝撃を発するというものである。我々にとっては当面、この自動的で代償的な無意識の眼球運動が実際に存在することを知っていれば十分である。
+
+Bekannt ist die kompensatorische Raddrehung der Augen, welche bei Seitwärtsneigung des Kopfes auftritt. Nagel¹) hat nachgewiesen, daß dieselbe 1/10-1/6 des Winkels der Kopfneigung beträgt. Kürzlich haben nun Breuer und Kreidl²) auch im Drehapparat solche Versuche angestellt und gefunden: „Wir empfinden, wie Purkynie und Mach gesagt haben, die Richtung der Massenbeschleunigung. Ändert sich diese Richtung durch Hinzutritt einer seitlich auf den Körper wirkenden horizontalen Beschleunigung, so tritt eine Raddrehung der Augen auf, welche während der Dauer jener Einwirkung anhält und die Hälfte, 0,6 des Ablenkungswinkels beträgt. Die Drehung des Sehraumes, die Schiefstellung vertikaler Linien, welche unter solchen Verhältnissen wahrgenommen wird, beruht also auf einer wirklichen unbewußten Drehung der Augen."
+
+【補】周知のように、頭を横に傾けると代償的な眼球の車軸回転が生じる。ナーゲル¹⁾は、これが頭の傾斜角の1/10から1/6であることを示した。最近、ブロイアーとクライドル²⁾が回転装置でもこのような実験を行い、次のことを見出した。「プルキニエとマッハが述べたように、我々は質量加速度の方向を感覚する。身体に側方から作用する水平加速度が加わることによってこの方向が変化すると、その作用が持続する間継続する眼球の車軸回転が生じ、偏向角の半分ないし0.6の大きさとなる。そのような条件のもとで知覚される視空間の回転、垂直線の傾斜は、したがって実際の無意識的な眼球回転に基づくのである。」
+
+§6
+§6
+
+Die langsamere unbewußte kompensierende Augenbewegung (die ruckweise hinterläßt keinen optischen Eindruck) ist also die Ursache, daß die Objekte bei Kopfdrehungen ihren Ort beizubehalten scheinen, was für die Orientierung sehr wichtig ist. Drehen wir nun mit dem Kopf in demselben Sinn, das fixierte Objekt wechselnd, auch willkürlich die Augen, so müssen wir durch die willkürliche Innervation die automatische unwillkürliche überkompensieren. Wir bedürfen derselben Innervation, als ob der ganze Drehungswinkel vom Auge allein zurückgelegt worden wäre. Hierdurch erklärt es sich auch, warum, wenn wir uns umdrehen, der ganze optische Raum uns als ein Kontinuum und nicht als ein Aggregat von Gesichtsfeldern erscheint, und warum hierbei die optischen Objekte festliegend bleiben. Was wir beim Umdrehen von unserem eigenen Körper sehen, sehen wir aus klarliegenden Gründen optisch bewegt.
+
+【移】ゆっくりとした無意識の代償運動（急速な戻りの方は光学的印象を残さない）こそが、頭を回転しても対象が定位置にとどまるように見える原因であり、これは方位の把握にきわめて重要である。
+【移】頭と同時に、対象を交互に注視しながら目も同方向に随意的に動かすと、無意識の自動的な代償運動を随意的な神経支配で過補償しなければならない。回転角全体を目だけで遂行した場合と同じ神経支配が必要になる。これによって、体を回転させたとき、光学的空間全体が断片的な視野の集合ではなく連続体として現れ、光学的対象が定位置にとどまる理由が解明される。自分の身体のうち見える部分は、明白な理由から、光学的に動いて見える。
+
+So gelangen wir also zu der praktisch wertvollen Vorstellung unseres bewegten Körpers in einem festliegenden Raume. Es wird uns verständlich, daß wir bei mehrfachen Drehungen und Wendungen in Straßen, in Gebäuden, und bei passiven Drehungen im Wagen, oder in der Kajüte eingeschlossen (ja selbst in der Dunkelheit) die Orientierung nicht verlieren. Allerdings schlafen die Urkoordinaten, von welchen wir ausgingen, allmählich und unvermerkt ein, und bald zählen wir wieder von den Objekten aus, welche vor uns liegen. Der eigentümlichen Desorientierung, in welcher man sich zuweilen nachts beim plötzlichen Erwachen befindet, ratlos das Fenster, den Tisch usw.
+
+【移】通りや建物の中での複数の回転や方向転換の際にも、馬車に乗っているときや船室に閉じ込められているときにも（暗闇の中でさえ）方位を失わないことが理解できる。もっとも、出発点の座標は徐々に眠り込み、いつの間にか周囲の対象から数え直すようになる。真夜中に突然目覚めたときの独特の方向感覚の喪失——窓やテーブルを手探りで探す——には、おそらく覚醒直前の運動的な夢が関係しているのだろう。
+
+suchend, mögen wohl dem Erwachen unmittelbar vorausgehende motorische Träume zugrunde liegen. Ähnliche Verhältnisse wie bei Körperdrehungen zeigen sich bei Körperbewegungen überhaupt. Bewege ich den Kopf oder den ganzen Körper seitwärts, so verliere ich ein optisch fixirtes Objekt nicht. Dasselbe scheint fest zu stehen, während die ferneren Objekte eine der Körperbewegung gleichsinnige, die näheren eine entgegengesetzte parallaktische Verschiebung erfahren. Die gewohnten parallaktischen Verschiebungen werden gesehen, stören aber nicht, und werden richtig interpretiert. Bei monokularer Inversion eines Plateau'schen Drahtnetzes aber fallen die dem Sinne und dem Ausmaß nach ungewohnten parallaktischen Bewegungen sofort auf, und spiegeln uns ein gedrehtes Objekt vor¹).
+
+【補】こうして我々は、固定された空間の中で動く自分の身体という、実際上きわめて有用な表象に到達する。身体の回転のみならず身体運動一般において類似の事情が見られる。頭あるいは全身を横に動かしても、光学的に注視している対象を見失うことはない。その対象は固定して見え、一方、遠方の対象は身体運動と同方向の、近方の対象は逆方向の視差的移動を受ける。慣れた視差的移動は見えるが、邪魔にはならず、正しく解釈される。しかし、プラトーの針金格子の単眼的反転の場合には、方向と大きさにおいて慣れない視差的運動が直ちに目につき、回転した対象の錯覚を生じさせる¹⁾。
+
+§7
+§7
+
+Wenn ich meinen Kopf drehe, so sehe ich nicht nur jenen Teil desselben, den ich überhaupt sehen kann, gedreht, was nach dem Vorausgeschickten sofort verständlich ist, sondern ich fühle ihn auch gedreht. Dies beruht darauf, daß im Gebiete des Tastsinnes ganz analoge Verhältnisse bestehen, wie im Gebiete des Gesichtssinnes²).
+
+【移】頭を回すと、その見える部分が回転して見えるだけでなく、回転しているのを感じる。これは、触覚の領域にも視覚と全く同様の関係が成り立つことに基づいている。
+
+Greife ich nach einem Objekt, so kompliziert sich eine Tastempfindung mit einer Innervation. Blicke ich nach dem Objekt, so tritt an die Stelle der Tastempfindung eine Lichtempfindung. Da Hautempfindungen auch ohne Tasten von Objekten immer vorgefunden werden, sobald man ihnen die Aufmerksamkeit zuwendet, so geben diese, mit wechselnden Innervationen kompliziert, ebenfalls die Vorstellung unseres bewegten Körpers, welche mit der auf optischem Wege gewonnenen in voller Übereinstimmung steht. Bei aktiven Bewegungen werden also die Hautempfindungen disloziert, wie man kurz sagen kann. Bei passiven Bewegungen unseres Körpers treten reflektorisch ausgelöste unbewußte kompensierende Innervationen und Bewegungen auf. Drehe ich mich z. B. rechts herum, so komplizieren sich meine Hautempfindungen mit denselben Innervationen, die mit Berührung von Objekten bei Rechtsdrehung verbunden wären. Ich fühle mich rechts gedreht. Werde ich passiv rechts gedreht, so entsteht reflektorisch das Bestreben, die Drehung zu kompensieren. Ich bleibe entweder wirklich stehen, und empfinde mich dann auch ruhig, oder ich unterdrücke die Linksdrehung. Dazu bedarf ich aber derselben willkürlichen Innervation, wie zu einer aktiven Rechtsdrehung, welche auch die gleiche Empfindung zur Folge hat.
+
+【移】対象に手を伸ばせば、触覚が神経支配感覚と合成される。対象に目を向ければ、触覚の代わりに光の感覚が入る。皮膚の感覚は対象に触れなくても常に存在しており、注意を向けさえすれば、変化する神経支配と合成されて、我々の動く身体の表象を与える。これは光学的な経路で得られるものと完全に一致する。
+【移】能動的な運動では皮膚感覚が転位（dislocirt）される。受動的な運動では、反射的に引き起こされた無意識の代償的神経支配と運動が生じる。例えば私が能動的に右に回ると、皮膚感覚は右回転での対象接触と同じ神経支配と結びつき、右に回ったと感じる。受動的に右に回されると、反射的に回転を補償しようとする傾向が生じ、実際に静止するか、あるいは左方への回転を抑制する。しかし、この抑制には能動的な右回転と同じ随意的神経支配が必要であり、同じ運動感覚をもたらす。
+
+Alle Raumempfindungssysteme, mögen sie noch so verschieden sein, sind durch ein gemeinsames, assoziatives Band, die Bewegungen, zu deren Leitung sie dienen, verknüpft. Wie hätte der blinde Saunderson, wenn Locke Unrecht hätte, eine für Sehende verständliche Geometrie schreiben können! Analogien zwischen dem Raumsinn des Gesichts und des Getastes bestehen gewiß. Etwas hiervon wurde schon bei Besprechung der Arbeit von Soret (S. 97) erwähnt, und manches war schon in der Aristotelischen Schule bekannt. So erwähnen schon die „Parva naturalia" das Experiment mit dem Kügelchen, welches zwischen dem Zeigefinger und dem kreuzweise über diesen gelegten Mittelfinger doppelt empfunden wird. Dasselbe gelingt mir noch viel schlagender, wenn ich die so gelegten Finger an einem Stäbchen hin- und herführe. Und einfach empfinde ich zwei parallele Stäbchen, zwischen welchen ich die in gleicher Weise gelegten Finger schleifend bewege. Die Analogie mit dem Doppeltsehen des Einfachen und dem Einfachsehen des Doppelten ist hier vollständig. Aber auch die Unterschiede sind so groß, daß der Sehende sich sehr schwer in die Raumvorstellung des Blinden hineinzufinden vermag, da er immer seine Gesichtsvorstellungen interpretierend einmischt. Selbst ein Kopf wie Diderot verfällt gelegentlich in den sonderbaren Irrtum, dem Blinden die Raumphantasie abzusprechen. Vgl. Loebs Arbeit über den Fühlraum (S. 93) und Hellers Studien zur Blinden-Psychologie (Leipzig, 1895). S. Kap. IX. S.Z.10.
+
+【補】すべての空間感覚の体系は、いかに互いに異なっていようとも、一つの共通の連合的な絆——すなわちそれらが導くのに役立つ運動——によって結びつけられている。ロックが間違っていたなら、盲目のソーンダーソンが見える人々にも理解できる幾何学をどうして書けたであろうか。視覚の空間感覚と触覚の空間感覚との間にはたしかに類似性がある。このことの一部はすでにソレの研究（97頁）の議論で言及し、多くのことはすでにアリストテレス学派において知られていた。すでに『小自然学』は、人差し指と交差させた中指の間に小球を挟むと二重に感じられるという実験に言及している。同じ実験は、そのように置いた指を小棒に沿って前後に動かすとさらにはるかに印象的に成功する。そして、同じように置いた指を滑らせるように動かす二本の平行な小棒を、私は単一に感じる。単一のものの二重視と二重のものの単一視との類似は、ここで完全である。しかし相違もまた大きく、見える者は盲人の空間表象に入り込むことが非常に困難である。なぜなら、つねに自分の視覚表象を解釈的に混入させるからである。ディドロのような頭脳でさえ、時として盲人には空間的想像力がないという奇妙な誤りに陥る。ロェーブの触覚空間に関する研究（93頁）およびヘラーの盲人心理学研究（ライプツィヒ、1895年）を参照のこと。第IX章参照。S.Z.10.
+
+§8
+§8
+
+Das hier dargelegte einfache Verhältnis übersah ich noch nicht vollständig bei Abfassung meiner Schrift über Bewegungsempfindungen. In Folge dessen blieben mir einige teils von Breuer, teils von mir beobachtete Erscheinungen schwer verständlich, die sich nun ohne Schwierigkeit erklären, und die ich kurz berühren will. Bei passiver Drehung eines in einem Kasten eingeschlossenen Beobachters nach rechts erscheint demselben der Kasten optisch gedreht, obgleich jeder Anhaltspunkt zur Beurteilung einer Relativdrehung fehlt. Führen seine Augen unwillkürlich kompensierende Bewegungen nach links aus, so verschieben sich die Netzhautbilder so, daß er eine Bewegung nach rechts sieht. Fixiert er aber den Kasten, so muß er die unwillkürlichen Bewegungen willkürlich kompensieren, und sieht nun wieder eine Bewegung nach rechts. Es wird hierdurch deutlich, daß die Breuersche Erklärung der Scheinbewegung des Augenschwindels richtig ist, und daß gleichwohl durch willkürliches Fixieren diese Bewegung nicht zum Verschwinden gebracht werden kann.
+
+【移】この単純な関係を、私は『運動感覚論』の執筆時にはまだ完全には見通していなかった。そのため、一部はブロイアーが、一部は私自身が観察したいくつかの現象が理解しがたいままだったが、今や困難なく説明される。
+【移】箱の中に閉じ込められた観察者が受動的に右に回されると、箱が回転して見える（相対回転を判断する手がかりがないにもかかわらず）。目が無意識に左方への代償運動を行えば、網膜像は右方運動に対応する移動をし、右への運動を感じる。箱を注視すると、無意識の運動を随意的に補償しなければならず、やはり右への運動を見る。これによって、ブロイアーの眼振性めまいの説明が正しいこと、そしてそれにもかかわらず随意的な注視によってこの見かけの運動を消すことはできないことが明らかになる。
+
+Auch die übrigen in meiner Schrift erwähnten Fälle des Augenschwindels finden auf analoge Weise ihre Erledigung¹).
+
+【補】私の著作で言及した眼振性めまいのその他の場合も同様の仕方で解決される¹⁾。
+
+Wenn wir uns bewegen, z. B. vorwärts schreiten oder uns drehen, so haben wir nicht nur eine Empfindung der jedesmaligen Lage unserer Körperteile, sondern auch noch die viel einfachere Empfindung einer Vorwärtsbewegung oder Drehung. In der Tat setzen wir die Vorstellung der Vorwärtsbewegung nicht aus den Vorstellungen der einzelnen Beinschwingungen zusammen, oder haben wenigstens nicht nötig, dies zu tun. Ja es gibt sogar Fälle, in welchen die Empfindung der Vorwärtsbewegung entschieden vorhanden ist, jene der Beinbewegung aber ebenso entschieden fehlt. Dies trifft z. B. bei einer Eisenbahnfahrt zu, auch schon bei dem Gedanken einer Reise, andeutungsweise bei der Erinnerung an einen fernen Ort u. s. w. Dies kann nur daran liegen, daß der Wille, sich vorwärts zu bewegen oder zu drehen, aus welchen die Extremitäten ihre motorischen Anregungen schöpfen, die ja durch besondere Innervationen noch modifiziert werden können, verhältnismäßig einfacher Natur ist. Es bestehen hier wohl ähnliche, wenn auch kompliziertere Verhältnisse, wie jene bei den Augenbewegungen, welche Hering so glücklich durchschaut hat, worauf wir alsbald zurückkommen.
+
+【移】我々が動くとき——例えば前進歩行や回転——、身体各部の逐一の位置感覚だけでなく、はるかに単純な前進運動そのものの感覚や回転そのものの感覚がある。実際、前進運動の表象を個々の足の振り出しの表象から組み立てるのではなく、それを行う必要もない。脚の運動とは無関係に前進運動の感覚が存在する場合さえある——例えば列車に乗っているとき、あるいは旅行を思い浮かべるとき、遠い場所を思い出すときなどである。これは、前進や回転への意志——そこから四肢が運動への刺激を汲み取り、特別な神経支配によってさらに修正される——が、比較的単純な性質のものだからにほかならない。
+
+Man wird kaum fehl gehen, wenn man annimmt, daß die vom Labyrinth aus erregten, verhältnismäßig einfachen Bewegungsempfindungen²) mit dem Willen, sich zu bewegen, im engsten Zusammenhange stehen. Diese Bewegungsempfindungen möchten auch den von Riehl³) postulierten, bezw. von ihm gesuchten Richtungsgefühlen entsprechen. Sie sind dem Blinden ebenso eigen wie dem Sehenden, und bilden wohl mit eine wichtige Grundlage des Verständnisses des Tastraums.
+
+【補】迷路（内耳迷路）から引き起こされる比較的単純な運動感覚²⁾が、動こうとする意志ともっとも密接に関連しているという想定は、ほとんど誤りではないだろう。これらの運動感覚は、リール³⁾が要請した、ないし探求した方向感覚にも対応するかもしれない。これらは盲人にも見える人にも同様に固有のものであり、おそらく触覚空間の理解のための重要な基盤の一つを形成するのであろう。
+
+Befangen in physikalischer Denkweise, war ich geneigt zu glauben, daß die Empfindungen der Progressivbeschleunigung sich vollkommen analog verhalten den Empfindungen der Winkelbeschleunigung. In der Tat werden jedem Physiker, der sich mit unserem Gegenstand beschäftigt, sofort die drei Gleichungen für die drehende, und die drei Gleichungen für die fortschreitende Bewegung eines Körpers in den Sinn kommen. Außerdem glaubte ich, entsprechend dem Prinzip der spezifischen Energie, besondere Empfindungen der Kopflage vermuten zu dürfen. Breuer²) hat durch eine spätere Untersuchung wahrscheinlich gemacht, daß die Empfindungen der Progressivbeschleunigung sehr viel rascher verschwinden als jene der Winkelbeschleunigung, beziehungsweise daß vielleicht das Organ der ersteren, wenigstens beim Menschen, verkümmert ist. Ferner findet Breuer, außer den Bogengängen B, nur noch den Otolithenapparat O mit seinen den Bogengangebenen entsprechenden Gleitebenen geeignet, Progressivbeschleunigungen und Lagen zugleich zu signalisieren. Die drei Schwerekomponenten nach den drei Gleitebenen charakterisieren die Lage des Kopfes. Jede Änderung der Lage ändert diese Komponenten und setzt zugleich den Bogengangapparat momentan in Funktion. Progressivbeschleunigungen ändern diese Komponenten ebenfalls, ohne den Bogenapparat zu beanspruchen. Demnach würden nach Breuer die drei Kombinationen: O allein, O + B, und B allein für die Unterscheidung aller Fälle genügen. Diese Auffassung wäre also, wenn sie sich bewährt, eine bedeutende Vereinfachung.
+
+【補】物理学的思考様式に囚われていた私は、並進加速度の感覚が角加速度の感覚と完全に類似的にふるまうと信じがちであった。実際、我々の主題に取り組むどの物理学者にも、物体の回転運動の三つの方程式と並進運動の三つの方程式がただちに念頭に浮かぶだろう。さらに私は、特殊エネルギーの原理に応じて、頭の位置についての特別な感覚を想定してよいと考えていた。ブロイアー²⁾はその後の研究によって、並進加速度の感覚が角加速度の感覚よりもはるかに速やかに消失すること、あるいはおそらく前者の器官が、少なくとも人間においては退化していることを蓋然的なものとした。さらにブロイアーは、半規管（三半規管）B のほかには、耳石器官 O のみがその半規管面に対応する滑動面をもって、並進加速度と位置とを同時に伝達しうるものと見出した。三つの滑動面に沿った三つの重力成分が頭の位置を特徴づける。位置のいかなる変化もこれらの成分を変え、同時に半規管装置を一時的に作動させる。並進加速度もまたこれらの成分を変えるが、半規管装置を動員することはない。したがってブロイアーによれば、O のみ、O + B、B のみの三つの組み合わせがすべての場合の区別に十分であろう。この見解は、もし実証されれば、著しい単純化となるだろう。
+
+Wäre ich überhaupt noch in der Lage zu experimentieren, so würde ich die Bewegungsempfindungen an sich nochmals von Grund aus untersuchen. Der Unterschied in dem Verhalten der Empfindungen der Winkel- und Progressivbeschleunigungen scheint mir jetzt bedeutend. Die Drehbeschleunigung löst eine Empfindung aus, welche lange, nachdem die Beschleunigung Null geworden, in abnehmender, quantitativ¹) zu verfolgender Stärke fortbesteht. Die Progressivbeschleunigung wird rein nur beim vertikalen beschleunigten Fallen oder Steigen empfunden. Verschwindet die Beschleunigung, so ist auch die Empfindung rasch vernichtet. Das einfachste Mittel, eine konstante Beschleunigung von konstanter Richtung gegen den Leib zu erzeugen, ist die gleichförmige Rotation. Wir empfinden die gleichförmige Drehung bald nicht mehr. Aber auch die konstante Zentrifugalbeschleunigung ruft nicht die Illusion des Fortfliegens nach deren Richtung, sondern die Empfindung einer geänderten Lage hervor, welche mit jener Zentrifugalbeschleunigung zugleich wieder verschwindet. Erschöpft sich also die konstante Progressivbeschleunigung als Reiz, oder ändert die Empfindung beim Konstantwerden des Reizes ihren Charakter? Dann müßten doch zwei Elemente in derselben vermutet werden.
+
+【補】私が実験を行えるような状況になお置かれていたなら、運動感覚そのものを根底から改めて研究するだろう。角加速度と並進加速度の感覚のふるまいの違いは、今の私には重大に思われる。回転加速度は、加速度がゼロになった後も長く、量的に¹⁾追跡しうる減少する強さで持続する感覚を引き起こす。並進加速度が純粋に感じられるのは、垂直方向に加速されて落下または上昇するときだけである。加速度が消えると、感覚もまた速やかに消滅する。身体に対して一定方向の一定加速度を生み出すもっとも簡単な手段は等速回転である。等速の回転はまもなく感じられなくなる。しかし一定の遠心加速度も、その方向へ飛び去るという錯覚ではなく、変化した位置の感覚を引き起こし、この感覚はあの遠心加速度とともにまた消失する。それでは、一定の並進加速度は刺激として消尽するのだろうか、それとも刺激が一定になるとき感覚はその性格を変えるのだろうか？後者であれば、そこに二つの要素が想定されねばならないだろう。
+
+Nicht die gleichförmige Bewegung, sondern lediglich die Beschleunigung wird empfunden. Den Elementen der Änderung der Progressiv- und Winkelgeschwindigkeit entsprechen Elemente der Bewegungsempfindungen, von welchen wenigstens die letzteren in langsam abnehmender Stärke persistieren, und übrigens so wie jene algebraisch summierbar sind, so daß einer (gewöhnlich von der Geschwindigkeit Null an) in kurzer Zeit eingeleiteten Bewegung eine der totalen Geschwindigkeitsänderung, also der erreichten Geschwindigkeit v, entsprechende Empfindung ϱ zugeordnet ist²). Die Menge der vorbeigeführten Gesichts- und Tasteindrücke wächst nun mit ϱ und mit der Zeit t. Es darf uns daher nicht wundern, daß die Erfahrung uns ϱ als eine Geschwindigkeit und ϱ.t als einen Weg begrifflich interpretieren lehrt, wenngleich ϱ an sich natürlich mit einem räumlichen Maßbegriff gar nichts zu schaffen hat. Es scheint mir hiermit ein paradoxer Rest beseitigt, welcher mich noch 1875 in der Auffassung der Bewegungsempfindungen störte, und welcher, wie ich sehe, auch andere gestört hat¹).
+
+【補】等速運動ではなく、加速度のみが感覚される。並進速度および角速度の変化の要素に運動感覚の要素が対応し、後者のうち少なくとも角速度に関するものはゆっくりと減少する強さで持続する。それらはまた前者と同様に代数的に加算可能であり、したがって（通常は速度ゼロから）短時間のうちに導入された運動には、速度変化の総量すなわち到達速度 v に対応する感覚 ϱ が割り当てられる²⁾。通り過ぎる視覚的・触覚的印象の量は ϱ とともに、また時間 t とともに増大する。したがって、経験が ϱ を速度として、ϱ·t を道のりとして概念的に解釈することを我々に教えるのは驚くに当たらない。たとえ ϱ それ自体は空間的な計量概念とは無論まったく関係がないとしてもである。これによって、1875年に私を運動感覚の把握において悩ませ、また他の人々をも悩ませたと思われる逆説的な残余が除去されたように思う¹⁾。
+
+§9
+§9
+
+Die folgenden Versuche und Überlegungen, welche an eine ältere Mitteilung anknüpfen²), werden vielleicht die richtige Auffassung dieser Erscheinungen fördern. Wir stellen uns auf eine Brücke und betrachten das unter derselben durchfließende Wasser. Dann empfinden wir gewöhnlich uns in Ruhe, das Wasser aber in Bewegung. Längeres Hinblicken auf das Wasser hat aber bekanntlich fast regelmäßig zur Folge, daß plötzlich die Brücke mit dem Beobachter und der ganzen Umgebung dem Wasser entgegen in Bewegung zu geraten scheint, während umgekehrt das Wasser den Anschein der Ruhe gewinnt³). Die relative Bewegung der Objekte ist in beiden Fällen dieselbe, und es muß demnach einen triftigen physiologischen Grund haben, warum bald der eine, bald der andere Teil der Objekte bewegt empfunden wird. Um dies bequem untersuchen zu können, habe ich mir einen einfachen Apparat konstruiert, der in Fig. 18 dargestellt ist. Ein einfach gemusterter Ledertuchlaufteppich wird horizontal über zwei 2 m lange, 3 m voneinander in Lagern befestigte Walzen gezogen und mit Hilfe einer Kurbel in gleichmäßige Bewegung gesetzt. Quer über den Teppich, etwa 30 cm über demselben, ist ein Faden ff mit einem Knoten K gespannt, der dem bei A aufgestellten Beobachter als Ruhepunkt für das Auge dient. Folgt der Beobachter mit den Augen den Zeichnungen des im Sinne des Pfeiles bewegten Teppichs, so sieht er diesen in Bewegung, sich und die Umgebung aber ruhig. Fixiert er hingegen den Knoten, so glaubt er alsbald mit dem ganzen Zimmer, dem Pfeile entgegen, in Bewegung zu geraten, während er den Teppich für stillstehend hält. Dieser Wechsel des Anblicks vollzieht sich je nach der Stimmung in längerer oder kürzerer Zeit, gewöhnlich nach einigen Sekunden. Weiß man einmal, worauf es ankommt, so kann man ziemlich rasch und willkürlich mit den beiden Eindrücken wechseln. Jedes Verfolgen des Teppichs bringt den Beobachter zum Stehen, jedes Fixieren von K oder Nichtbeachten des Teppichs, wobei dessen Zeichnungen verschwimmen, setzt den Beobachter in Bewegung. Bezüglich des Ausfalls dieses Versuchs unter den angegebenen Umständen stimmen mir zwei von mir hochgeschätzte Forscher nicht zu. Der eine ist W. James¹), der andere Crum Brown²). Ich habe den Versuch oft und oft immer mit dem gleichen Erfolge angestellt. Da ich gegenwärtig nicht in der Lage bin, zu experimentieren, muß ich auf eine neuerliche Prüfung verzichten, für welche sich die von Brown beschriebene Nachbildmethode empfehlen würde. Von den Differenzen in der theoretischen Auffassung des Versuches soll hier zunächst abgesehen werden.
+
+【移】以下の実験と考察は、これらの現象の正しい理解をさらに促すだろう²⁾。
+【移】橋の上に立ち、その下を流れる水を眺める。普通は自分が静止し、水が動いていると感じる。しかし、水を長時間見つめていると、ほぼ必ず、橋と観察者と周囲全体が突然水に逆らって動き始めたように見え、一方で水は静止しているように見える³⁾。
+【移】対象の相対的な運動は両方の場合に同じであるから、なぜあるときは一方が、あるときは他方が動いて感じられるのか、そこには正当な生理学的理由があるはずである。
+【移】これを手軽に調べるために、私は簡単な装置を作った（図18）。模様のついた人工皮革のベルトコンベアを、水平に、2メートルの長さで3メートル間隔の軸受に固定された二つのローラーの上を通し、ハンドルで一様に動かす。ベルトの約30センチ上には結び目 K のある糸が張ってあり、位置 A の観察者にとっての目の休憩点となる。
+【移】矢印の方向に動くベルトの模様を目で追うと、ベルトが動いて見え、自分と周囲は静止している。しかし結び目 K を注視すると——ベルトの模様がぼやけるのだが——たちまち観察者は自分が周囲の部屋ごと矢印と逆方向に動いているように感じ、ベルトは静止して見える。
+【移】このような切り替わりは、気分次第で数秒後に起こる。コツがわかれば、かなり速やかに意のままに二つの印象を切り替えることができる。ベルトを追うたびに観察者は止まり、K を注視したりベルトに注意を払わないとき（模様がぼやけるとき）には、観察者が動き出す。
+【補】この実験の結果について、私が高く評価する二人の研究者が同意しない。一人はW・ジェイムズ¹⁾であり、もう一人はクルム・ブラウン²⁾である。私はこの実験を幾度も繰り返し、つねに同じ結果を確認してきた。現在は実験を行える状況にないので、新たな検証は断念せざるをえない。ブラウンの記述した残像法が推奨されるだろう。実験の理論的解釈における相違については、ここではひとまず立ち入らないことにする。
+
+§10
+§10
+
+Die Erscheinung ist selbstredend gänzlich verschieden von der bekannten Plateau-Oppelschen, die eine lokale Netzhauterscheinung ist. Bei dem obigen Experiment bewegt sich die deutlich gesehene ganze Umgebung, bei dem letztern Phänomen zieht ein bewegter Schleier über das ruhige Objekt hin. Auch die nebenbei auftretenden stereoskopischen Erscheinungen, bei welchen z. B. der Faden mit dem Knoten unter dem sich als durchsichtig darstellenden Teppich erscheint, sind hier ganz gleichgiltig. In meiner Schrift über „Bewegungsempfindungen" S. 63 habe ich konstatiert, daß den Plateau-Oppelschen Erscheinungen ein besonderer Prozeß zu grunde liegt, der mit den übrigen Bewegungsempfindungen nichts zu schaffen hat. Es heißt daselbst: „Dementsprechend werden wir daran denken müssen, daß mit der Bewegung eines Netzhautbildes ein besonderer Prozeß erregt wird, der in der Ruhe nicht vorhanden ist, und daß bei entgegengesetzten Bewegungen ganz ähnliche Prozesse in ähnlichen Organen erregt werden, welche sich aber gegenseitig in der Art ausschließen, daß mit dem Eintreten des einen der andere erlöschen muß, und mit der Erschöpfung des einen der andere eintritt. — Dies scheinen S. Exner und Vierordt übersehen zu haben, welche später ähnliche Ansichten über denselben Gegenstand ausgesprochen haben.
+
+【移】この現象は、周知のプラトー＝オッペルの現象（局所的な網膜現象）とはまったく別物である。上の実験では、はっきりと見えている周囲全体が動くのであり、後者の現象では動くヴェールが静止した対象の上を通過するのだ。
+【補】付随的に生じる立体視的現象——例えば結び目の付いた糸が透明に見えるベルトの下に現れる——は、ここではまったく無関係である。私の『運動感覚論』63頁において、プラトー＝オッペル現象の基礎には、他の運動感覚とは何の関係もない特別な過程があることを確認した。同書には次のように述べた。「したがって我々は、網膜像の運動によって、静止時には存在しない特別な過程が引き起こされること、逆方向の運動によってきわめて類似した過程が類似の器官において引き起こされるが、しかしそれらは一方が生じると他方が消滅し、一方が消耗すると他方が現れるという仕方で互いに排除し合うものだと考えなければならない。——S・エクスナーとフィーロルトはこのことを見落としていたように思われる。彼らは後に同じ主題について類似の見解を述べた。」
+
+§11
+§11
+
+Bevor wir an die Erklärung des Versuches (Fig. 18) gehen, wollen wir denselben noch variieren. Ein Beobachter, der sich bei B aufstellt, meint unter den angegebenen Umständen mit seiner ganzen Umgebung nach links zu fliegen. Wir bringen ferner über dem Teppich TT, Fig. 19, einen gegen den Horizont um 45° geneigten Spiegel SS an. Durch SS betrachten wir das Spiegelbild T'T', nachdem wir auf die Nase noch einen Schirm nn gesetzt haben, welcher dem Auge O den direkten Anblick von TT entzieht. Bewegt sich TT im Sinne des Pfeiles, während wir das Spiegelbild K' von K fixieren, so glauben wir alsbald mit dem ganzen Zimmer zu versinken, bei umgekehrter Bewegung glauben wir hingegen wie in einem Luftballon zu steigen¹). Endlich gehören hierher noch die Versuche mit der Papiertrommel, welche ich bereits beschrieben habe²), und auf die auch die nachfolgende Erklärung anzuwenden ist. Alle diese Erscheinungen sind keine rein optischen, sondern sie sind von einer unverkennbaren Bewegungsempfindung des ganzen Leibes begleitet.
+
+【移】鏡を使った変形実験では、ベルトの動きが上昇・下降の印象に変換される。自分が部屋ごと沈んでいく、あるいは気球のように上昇していく感覚が得られる¹⁾。紙製ドラムを使った実験でも同様の原理が適用される²⁾。
+【移】これらの現象はすべて、純粋に光学的なものではなく、全身の紛れもない運動感覚を伴っている。
+
+§12
+§12
+
+Wie haben wir nun unsere Gedanken einzurichten, um in denselben die besprochenen Tatsachen in einfachster Weise darzustellen? Bewegte Objekte üben bekanntlich einen besonderen Bewegungsreiz auf das Auge aus, ziehen die Aufmerksamkeit und den Blick auf sich. Folgt ihnen der Blick wirklich, so müssen wir nach allem bisher Besprochenen annehmen, daß die Objekte bewegt erscheinen. Soll das Auge trotz der bewegten Objekte auf die Dauer ruhig bleiben, so muß der von denselben ausgehende konstante Bewegungsreiz durch einen konstanten, dem motorischen Apparat des Auges zufließenden Innervationsstrom kompensiert werden, ganz so, als wäre der ruhige fixierte Punkt gleichmäßig entgegengesetzt bewegt, und als wollte man demselben mit den Augen folgen. Tritt dies aber ein, so muß alles fixierte Unbewegte bewegt erscheinen. Daß dieser Innervationsstrom immer mit bewußter Absicht eingeleitet werde, wird kaum notwendig sein, wenn er nur von demselben Zentrum aus und auf denselben Wegen verläuft, von welchen das willkürliche Fixieren ausgeht.
+
+【移】これらの事実をもっとも単純に表現するために、我々の考えをどのように整えるべきか。
+【移】動く対象は目に対して特別な運動刺激を及ぼし、注意と視線を引きつける。実際に視線が追従すれば、これまで述べてきたことに基づき、対象は動いて見えるはずである。しかし、動く対象にもかかわらず目が持続的に静止するためには、対象から発せられる恒常的な運動刺激が、目の運動装置に流れ込む恒常的な神経支配の流れによって補償されなければならない。これは、注視している静止点が一様に逆方向に動いていて、目がそれを追おうとしているのとまったく同じ状態である。しかしそうなれば、注視されている静止物すべてが動いて見えるはずである。
+
+Um die zuvor besprochenen Erscheinungen zu beobachten, bedarf es gar keiner besonderen Vorkehrungen. Wir sind vielmehr immer von denselben umgeben. Ich schreite durch einen einfachen Willensakt vorwärts. Meine Beine vollführen ihre Schwingungen, ohne daß ich mich besonders darum kümmere, und meine Augen sind fest auf das Ziel gerichtet, ohne sich von den durch das Ausschreiten bewegten Netzhautbildern ablenken zu lassen. Mit einem Willensakt ist alles dies eingeleitet, und dieser Willensakt selbst ist die Empfindung der Vorwärtsbewegung. Derselbe Prozeß, oder doch ein Teil desselben, wird auch auftreten müssen, sollen die Augen dem Reize einer Masse von bewegten Objekten dauernd widerstehen. Daher die Bewegungsempfindung bei den obigen Versuchen. Beobachten wir ein Kind auf einem Eisenbahnzuge, so folgen dessen Augen fast unausgesetzt in zuckender Bewegung den äußern Objekten, welche ihm zu laufen scheinen. Auch der Erwachsene hat die gleiche Empfindung, wenn er sich den Eindrücken zwanglos hingibt. Fahre ich voraus, so dreht sich, aus naheliegenden Gründen, der ganze Raum zu meiner Linken um eine sehr ferne vertikale Achse im Sinne des Uhrzeigers, der ganze Raum zu meiner Rechten ebenso umgekehrt. Erst wenn ich dem Verfolgen der Objekte widerstehe, tritt für mich die Empfindung der Vorwärtsbewegung auf.
+
+【移】私が一つの単純な意志の行為によって前に歩み出すとき、脚は振り子運動をするが、私はそれに特別に気を配らない。目は目標にしっかりと向けられ、歩行によって動く網膜像に惑わされない。この一つの意志行為によってすべてが開始され、この意志行為そのものが前進運動の感覚なのである。
+【移】列車の子どもの目が、外の風景を追ってひっきりなしにぴくぴく動くのを観察すればわかる。大人も、印象に身を任せれば同じ感覚を持つ。動く対象の追跡に抵抗してはじめて、前進運動の感覚が生まれる。
+
+§13
+§13
+
+Meine Ansichten über Bewegungsempfindungen sind bekanntlich mehrfach angefochten worden, wobei allerdings die Polemik immer nur gegen die Hypothese gerichtet war, auf welche ich selber keinen besonderen Wert gelegt habe. Daß ich sehr gern bereit bin, meine Ansichten nach Maßgabe der bekannt gewordenen Tatsachen zu modifizieren, dafür mag eben die vorliegende Schrift den Beweis liefern. Ich will die Entscheidung darüber, wieweit ich das Richtige getroffen habe, mit Beruhigung der Zukunft überlassen. Andrerseits möchte ich nicht unbemerkt lassen, daß sich auch für die von mir, Breuer und Brown aufgestellte Ansicht günstige Beobachtungen ergeben haben. Hierher gehören zunächst die von Dr. Guye (in Amsterdam) gesammelten Erfahrungen (Du Vertige de Ménière. Rapport lu dans la section d'otologie du congrès périodique international de sciences médicales à Amsterdam, 1879). Guye beobachtete bei Erkrankungen des Mittelohres reflektorische Kopfdrehungen beim Einblasen von Luft in die Trommelhöhle und fand einen Patienten, der genau den Sinn und die Anzahl der Drehungen angeben konnte, welche er beim Einspritzen von Flüssigkeiten empfunden hatte. Professor Crum Brown, On a case of dyspeptic vertigo (Proceedings of the Royal Society of Edinburgh, 1881—82) beschreibt einen an sich beobachteten interessanten Fall von pathologischem Schwindel, welcher sich in seiner Gesamtheit durch eine gesteigerte Intensität und verlängerte Dauer der jeder Drehung folgenden Empfindung erklären ließ. — Am merkwürdigsten sind aber die Beobachtungen von William James (The sense of dizzines in deafmutes. American Journal of Otology, Volume IV, Oktober 1882). James fand eine relative vorwiegende auffallende Unempfindlichkeit der Taubstummen gegen den Drehschwindel, häufig eine große Unsicherheit des Ganges derselben bei geschlossenen Augen, und in manchen Fällen eine überraschende Desorientierung beim Untertauchen unter Wasser, wobei Beängstigung und gänzliche Unsicherheit über das Oben und Unten eintrat. Diese Beobachtungen sprechen sehr dafür, daß bei den Taubstummen, wie es nach meiner Auffassung zu erwarten war, der eigentliche Gleichgewichtssinn sehr zurücktritt, und daß dieselben die beiden andern orientierenden Sinne, den Gesichtssinn und den Muskelsinn (welcher letztere beim Versinken im Wasser mit der Aufhebung des Körpergewichtes alle Anhaltspunkte verliert), desto nötiger haben.
+
+【移】以上の観察は、私の『運動感覚論』に記述された事実に矛盾することなく、その解釈を修正する可能性を示唆する。
+【補】運動感覚についての私の見解が幾度も異議を唱えられてきたことはよく知られている。もっとも、論争はつねに私自身がさほど重要視していなかった仮説に対してのみ向けられていた。判明した事実に応じて自分の見解を修正する用意が私に十分あることは、本書がまさにその証拠となるだろう。どの程度私が正しかったかの判定は、安心して将来に委ねたい。他方、私、ブロイアー、ブラウンの立てた見解に有利な観察も得られていることを見逃してはならない。まず、ギュイ博士（アムステルダム）の収集した経験がここに属する。ギュイは中耳の疾患において鼓室への送気の際に反射的な頭部回転を観察し、液体の注入の際に感じた回転の方向と回数を正確に言い当てることのできる患者を見出した。クルム・ブラウン教授は、消化性めまいの興味深い事例を記述しており、その全体は各回転に続く感覚の強度増大と持続延長によって説明できた。しかし、もっとも注目すべきはウィリアム・ジェイムズの観察である。ジェイムズは、聾唖者が回転性めまいに対して著しく鈍感であること、閉眼時の歩行に大きな不安定さがしばしばあること、水中に潜る際に驚くべき方向感覚の喪失——上下の見当がまったくつかなくなる不安——があることを見出した。これらの観察は、聾唖者においては私の見解から予想されたとおり本来の平衡感覚が大きく後退し、残りの二つの方向づけの感覚——視覚と筋肉感覚（後者は水中で体重が消失すると手がかりをすべて失う）——がそれだけ必要であることを強く示唆する。
+
+Die Ansicht ist nicht haltbar, daß wir zur Kenntnis des Gleichgewichtes und der Bewegungen nur durch die Halbzirkelkanäle gelangen. Höchst wahrscheinlich haben vielmehr auch niedere Tiere, denen das entsprechende Organ ganz fehlt, Bewegungsempfindungen. Es war mir bisher nicht möglich, in dieser Richtung Versuche anzustellen. Die Versuche aber, welche Lubbock in seiner Schrift über „Ameisen, Bienen und Wespen" (Leipzig, Brockhaus, 1885, S. 220) beschrieben hat, werden mir durch die Annahme von Bewegungsempfindungen viel verständlicher. Da möglicherweise andern derartige Versuche näher liegen, ist es vielleicht nicht unnütz, wenn ich einen Apparat bespreche, den ich (Anzeiger der Wiener Akademie, 30. Dezember 1876) schon kurz beschrieben habe. Andere Apparate dieser Art sind später von Govi und Ewald konstruiert worden. Man hat sie nachher Cyclostaten genannt. S.Z.11.
+
+【補】平衡と運動についての知識を半規管（三半規管）のみによって得るという見解は支持しがたい。むしろ、対応する器官がまったく欠けている下等動物にも、きわめて高い確率で運動感覚が存在する。私にはこの方向での実験を行うことがこれまで不可能であった。しかし、ラボックがその著書『蟻、蜜蜂、蜂』（ライプツィヒ、ブロックハウス、1885年、220頁）に記述した実験は、運動感覚の存在を仮定することで私にはるかに理解しやすくなる。おそらく他の研究者の方がそのような実験に適しているだろうから、私が（ウィーン学術院報告、1876年12月30日に）すでに簡潔に記述した装置について述べるのもおそらく無駄ではなかろう。この種の他の装置はその後ゴヴィとエヴァルトによって構成された。それらは後にツィクロスタートと呼ばれた。S.Z.11.
+
+Der Apparat dient dazu, das Verhalten von Tieren bei rascher Rotation derselben zu beobachten. Da nun das Bild durch die Rotation verwischt wird, so muß die passive Rotation optisch aufgehoben und ausgeschaltet werden, so daß die aktiven Bewegungen des Tieres allein übrig bleiben und beobachtbar werden. Man erreicht die optische Aufhebung der Rotation einfach dadurch, daß man über der Scheibe der Zentrifugalmaschine genau um dieselbe Achse mit Hilfe einer Zahnradübertragung ein Reflexionsprisma mit der halben Winkelgeschwindigkeit der Scheibe und in demselben Sinne rotieren läßt.
+
+【補】この装置は、動物の急速な回転中のふるまいを観察するためのものである。回転によって像がぼやけるので、受動的な回転を光学的に打ち消して排除し、動物の能動的運動だけが残って観察可能になるようにしなければならない。回転の光学的打消しは、遠心機の円盤の上に、まったく同じ軸のまわりに、歯車伝動を用いて反射プリズムを円盤の半分の角速度で同方向に回転させることによって、簡単に達成される。
+
+Fig. 20.
+
+Die Figur 20 gibt eine Ansicht des Apparates. Auf der Scheibe der Zentrifugalmaschine befindet sich ein Glasbehälter g, in welchem die zu beobachtenden Tiere eingeschlossen werden. Durch eine Zahnradübertragung wird das Okular o mit der halben Winkelgeschwindigkeit und in demselben Sinne wie g gedreht. Nebenstehende Figur zeigt die Verzahnung in einer besonderen Darstellung. Das Okular OO und der Behälter gg drehen sich um die Achse AA, während ein Paar von Zahnrädern, die fest mit einander verbunden sind, sich um BB drehen. Der Radius des mit gg starr verbundenen Zahnrades aa sei = r, dann ist r jener von bb, 2r/3, jener von cc, jener von dd aber = 4r/3, womit das verlangte Geschwindigkeitsverhältnis von oo und gg erzielt ist.
+
+【補】図20は装置の外観を示す。遠心機の円盤上にガラス容器 g があり、その中に観察すべき動物が閉じ込められる。歯車伝動によって接眼鏡 o が g と同方向に、その半分の角速度で回転する。付属の図は特別な表現で歯車装置を示す。接眼鏡 OO と容器 gg は軸 AA のまわりに回転し、互いに固く結合された一対の歯車が BB のまわりに回転する。gg と固く結合した歯車 aa の半径を r とすると、bb の半径は r、cc の半径は 2r/3、dd の半径は 4r/3 であり、これにより oo と gg の必要な速度比が達成される。
+
+Um den Apparat zu zentrieren, legt man auf die Bodenscheibe des Behälters einen mit Stellschrauben versehenen Spiegel S und justiert denselben so, daß beim Rotieren die Bilder in demselben ruhig bleiben. Dann steht er senkrecht auf der Rotationsachse des Apparates. Einen zweiten kleinen Spiegel S', dessen Belegung ein kleines Loch L enthält, bringt man an dem leeren Okularrohr mit der spiegelnden Fläche nach unten so an, daß bei der Rotation die Bilder unbewegt bleiben, die man durch das Loch hindurch in dem Spiegelbilde von S' in S sieht. Dann steht S' senkrecht auf der Okularachse. Nun bringt man, was nach einigen Versuchen leicht gelingt, mit Hilfe eines Pinsels auf dem Spiegel S einen Punkt P an, welcher beim Rotieren seine Lage nicht ändert, und stellt das Loch im Spiegel S so, daß es bei der Rotation ebenfalls an Ort und Stelle bleibt. Hierdurch sind Punkte der beiden Rotationsachsen gewonnen. Stellt man nun das Okular (mit Hilfe von Schrauben) so, daß man, durch das Loch in S hindurchsehend, den Punkt P auf S und das Spiegelbild von L in S (oder eigentlich die vielen Spiegelbilder von P und L) in Deckung sieht, so sind die beiden Achsen nicht nur parallel, sondern sie fallen auch zusammen.
+
+【補】装置を中心合わせするには、容器の底板に調整ねじ付きの鏡 S を置き、回転時に鏡像が静止するように調整する。すると鏡は装置の回転軸に垂直に立つ。第二の小さな鏡 S'——その被覆に小さな穴 L がある——を、空の接眼鏡筒に鏡面を下にして取り付け、回転時に穴を通して S における S' の鏡像に見える像が不動であるように調整する。すると S' は接眼鏡軸に垂直に立つ。次に、数回の試行の後に容易に成功するのだが、筆を用いて鏡 S 上に回転しても位置が変わらない点 P を記し、鏡 S' の穴もまた回転時に定位置に留まるように設定する。これによって二つの回転軸の点が得られる。接眼鏡を（ねじの助けを借りて）、S' の穴を通して見たときに S 上の点 P と S における L の鏡像（正確にはP と L の多数の鏡像）が一致するように設定すれば、二つの軸は平行であるだけでなく一致する。
+
+Als Okular könnte man in der einfachsten Weise einen Spiegel, dessen Ebene die Achse enthält, anwenden, und ich habe dies bei dem ersten Rudiment meines Apparates auch getan. Allein man veriert hierdurch die Hälfte des Gesichtsfeldes. Ein total reflektierendes Prisma ist deshalb viel vorteilhafter. In der Figur 22 stelle ABC einen ebenen Schnitt senkrecht zu der Hypotenusenfläche und den Kathetenflächen des total reflektierenden Okularprismas vor. Dieser Schnitt enthalte zugleich die Rotationsachse ONPQ, welche parallel zu AB ist. Der Strahl, welcher nach der Achse QP fortgeht, muß nach der Brechung und Reflexion im Prisma wieder nach der Achse NO fortgehen und das (in der Achse befindliche) Auge O treffen. Wenn dies erfüllt ist, können die Punkte der Achse bei der Rotation keine Verschiebung erfahren und der Apparat ist zentriert. Der betreffende Strahl muß also den Mittelpunkt M von AB treffen und schneidet demnach, weil er unter dem Inzidenzwinkel von 45° auf Crownglas fällt, AB unter etwa 16° 40'. Hiernach muß OP um etwa 0.115. AB von der Achse abstehen, welches Verhältnis am besten empirisch hergestellt wird, indem man das Prisma im Okular so verschiebt, daß Schwankungen der Objekte in gg bei der Rotation wegfallen. Die Figur 22 macht zugleich das Gesichtsfeld für das Auge in O ersichtlich. Der Strahl OA (welcher eben senkrecht auf AC fällt) wird an AB nach AC reflektiert und geht nach S. Der Strahl OR hingegen wird bei B reflektiert und tritt gebrochen nach T aus. Der Apparat erwies sich bei meinen bisherigen Versuchen in jeder Beziehung als ausreichend. Bringt man ein gedrucktes Blatt nach gg, und rotiert so rasch, daß dessen Bild ganz verwischt wird, so kann man die Schrift durch das Okular bequem lesen. Die Umkehrung wegen der Spiegelung könnte beseitigt werden, wenn man über dem rotierenden Okularprisma ein zweites festes Reflexionsprisma anbringen würde, welche Komplikation mir aber unnötig schien. Bisher habe ich außer einigen physikalischen Versuchen nur Rotationsversuche mit verschiedenen kleinen Wirbeltieren (Vögeln, Fischen) angestellt, und meine (in der Schrift über „Bewegungsempfindungen") angegebenen Daten durchaus bestätigt gefunden. Es wäre aber wohl auch förderlich, wenn man mit Insekten und andern, namentlich niederen Tieren (Seetieren) ähnliche Versuche durchführen würde.
+
+【補】接眼鏡としてはもっとも簡単には、軸を含む平面の鏡を用いることもでき、私は装置の最初の試作でそうした。しかしこれでは視野の半分を失う。したがって全反射プリズムの方がはるかに有利である。図22において ABC は全反射接眼プリズムの斜辺面とカテーテル面に垂直な平面断面を表す。この断面は同時に AB に平行な回転軸 ONPQ を含む。軸 QP に沿って進む光線は、プリズム内での屈折と反射の後に再び軸 NO に沿って進み、（軸上にある）目 O に達しなければならない。これが満たされれば、軸上の点は回転時に移動を受けず、装置は中心合わせされている。当該光線は AB の中点 M に当たらねばならず、したがってクラウンガラスに対して入射角45度で当たるため、AB を約16度40分で切る。これにより OP は AB の約0.115倍だけ軸から離れていなければならず、この関係はプリズムを接眼鏡内で移動させて gg 内の対象の回転時の揺動がなくなるように、もっともよく経験的に達成される。図22は同時に目 O に対する視野を示す。光線 OA（AC に垂直に当たる）は AB で AC 方向に反射され S へ向かう。光線 OR は B で反射され屈折して T へ出る。装置は、これまでの私の実験ではあらゆる点で十分であることが示された。印刷物を gg に入れてその像が完全にぼやけるほど速く回転させると、接眼鏡を通して文字を楽に読むことができる。反射による左右反転は、回転する接眼プリズムの上にもう一つの固定反射プリズムを取り付ければ除去できるだろうが、その複雑化は私には不要に思われた。これまでは若干の物理学的実験のほかには、種々の小型脊椎動物（鳥類、魚類）を使った回転実験のみを行い、私の（『運動感覚論』に記した）データが十分に確認された。しかし、昆虫その他の、とりわけ下等動物（海洋動物）での類似の実験を行うことも有益であろう。
+
+Seither sind solche Versuche, die sich als recht lehrreich erwiesen haben, von Schäfer (Naturwissenschaftliche Wochenschrift, No. 25, 1891), von Loeb (Heliotropismus der Tiere, Würzburg 1890, S. 117) u. a. ausgeführt worden. Was ich gegenwärtig sonst noch über den Orientierungssinn zu sagen hätte, findet sich in meinem Vortrag „Über Orientierungsempfindungen" (Schriften des Vereins zur Verbreitung naturwissenschaftlicher Kenntnisse in Wien, 1897, auch „Populärwissenschaftliche Vorlesungen, 3 Aufl., 1903). Insbesondere möchte ich aber hinweisen auf Breuers Untersuchungen über die Otolithenapparate, Pollaks und Kreidls Versuche an Taubstummen, Kreidls Experimente an Krebsen, vor allem aber auf das grundlegende Werk von Ewald „Über das Endorgan des Nervus octavus", Wiesbaden 1892. Im dritten Bande des „Handbuches der Physiologie des Menschen" 1905 von W. Nagel findet sich eine ausführliche Darstellung der Lehre von den „Lage-, Bewegungs- und Widerstandsempfindungen". Da ich nun seit Jahren nicht mehr in der Lage bin, die experimentellen Arbeiten auf diesem Gebiete genau zu verfolgen, habe ich Herrn Professor Dr. Josef Pollak gebeten, hier dasjenige aus den neuesten Arbeiten hervorzuheben, was für die Leser dieses Buches von Interesse sein möchte. Diesem Wunsche hat Professor Pollak in den nun folgenden Paragraphen 14-19 freundlichst entsprochen.
+
+【補】それ以来、きわめて教訓的であることが判明したそのような実験が、シェーファー（『自然科学週報』第25号、1891年）、ロェーブ（『動物の走光性』、ヴュルツブルク、1890年、117頁）その他によって実施されてきた。方位感覚について現在他に述べるべきことは、私の講演「方位感覚について」（ウィーン自然科学知識普及協会叢書、1897年、および『通俗科学講演集』第3版、1903年）に見出される。とりわけ私が指摘したいのは、ブロイアーの耳石器官に関する研究、ポラックとクライドルの聾唖者についての実験、クライドルの甲殻類についての実験、そしてとりわけエヴァルトの基本的著作『第八脳神経の終末器官について』（ヴィースバーデン、1892年）である。W・ナーゲルの『人体生理学ハンドブック』（1905年）第3巻には「位置・運動・抵抗感覚」の学説の詳細な叙述がある。この分野の実験的研究を正確に追うことがもう何年も不可能であるので、私はヨーゼフ・ポラック教授に、最新の研究から本書の読者にとって興味あるものを取り上げていただくようお願いした。この希望に、ポラック教授は以下の第14節から第19節で親切にお応えくださった。
+
+§14
+§14
+
+Die Resultate der im Verlaufe der letzten 10 Jahre gemachten morphologischen, vergleichend- und experimentell-physiologischen Untersuchungen über das Ohrlabyrinth (Schnecke, Bogengang- und Otolithenapparat) sprechen fast ausnahmslos zu Gunsten der Mach-Breuerschen Hypothese.
+
+【補】過去10年間に行われた耳の迷路（内耳迷路）（蝸牛、半規管（三半規管）装置および耳石装置）に関する形態学的、比較生理学的および実験生理学的研究の結果は、ほぼ例外なくマッハ＝ブロイアー仮説に有利に語っている。
+
+Als erwiesen kann angenommen werden, daß als Gehörorgan einzig und allein die Schnecke anzusehen sei und daß der Vestibularapparat keinerlei akustische Funktionen hat. Einen vollgültigen Beweis hiefür hat Biehl¹) erbracht, dem es gelang, an Schafen durch intrakranielle Durchschneidung des Vestibularastes des Akustikusstammes mit Schonung des Ramus cochlearis, Gleichgewichtsstörungen bei erhaltenem Gehör zu beobachten.
+
+【補】聴覚器官としては蝸牛のみが認められるべきであり、前庭器官にはいかなる聴覚機能もないということは、実証されたと見なしうる。ビール¹⁾がこれについて十分な証明を提供した。彼は羊において、蝸牛枝を温存しつつ聴神経幹の前庭枝を頭蓋内で切断することに成功し、聴覚が保存された状態で平衡障害を観察した。
+
+Fest begründet und kaum anfechtbar ist auch jener Teil der Lehre von der statischen Funktion des Labyrinthes, welcher die Bogengänge als Sinnesorgane zur Wahrnehmung von Drehungen des Kopfes (und mittelbar des Körpers) betrachtet, insbesondere seitdem diese Hypothese durch Breuer²), auf Grundlage seiner anatomischen Studien über die Epithelhaare der Ampullen eine nicht unwesentliche Modifikation erfahren hat.
+
+【補】迷路（内耳迷路）の静的機能に関する学説のうち、半規管（三半規管）を頭の（そして間接的には身体の）回転を知覚するための感覚器官と見なす部分も、確固として打ち立てられ、ほとんど反駁しがたい。とりわけ、この仮説がブロイアー²⁾によって膨大部の上皮毛についての解剖学的研究に基づいて少なからぬ修正を受けて以来のことである。
+
+Sie lautet nun folgendermaßen: „Gleichmäßig andauernde Drehungen werden, auch wenn sie noch so rasch sind, nicht empfunden; wohl aber Anfang und Ende, Beschleunigung und Verlangsamung der Drehung. Auf den Ampullarapparat wirken nicht dauernde Winkelgeschwindigkeiten, sondern nur positive und negative Winkelbeschleunigungen. Diese verursachen momentane Verlagerung des Endolymphringes und der Cupula terminalis (welche als konsistente Masse die Epithelhaare in einem konstanten formbeständigen Gebilde zusammenhält); damit die Spannung der Zellhaare und Erregung der Nervenendapparate auf einer Seite der betreffenden Crista. — Diese lösen, solange sie andauern, die Empfindung einer Rotation aus, welche anhält, bis der Gegenstoß der negativen Beschleunigung beim Stillstande der Drehung, oder die langsam wirkende Elastizität der gespannten Gebilde den normalen Zustand wieder hergestellt hat (Breuer¹)). Das Bogengangsystem hat ferner, wie alle anderen Sinnesorgane, die Eigenschaft, außer den Empfindungen auch Reflexe auszulösen (Breuer, Delage, Nagel). Als reagierende Organe kommen in erster Linie die Augenmuskel in Betracht, die bei Körperdrehungen den Augen Drehungen erteilen.
+
+【補】修正された仮説は今や次のように述べる。「均等に持続する回転は、いかに速くても感覚されない。しかし回転の開始と終了、加速と減速は感覚される。膨大部装置に作用するのは持続的な角速度ではなく、正および負の角加速度のみである。これらは内リンパ環とクプラ・テルミナリス（恒常的な形態安定的構造物として上皮毛を結合する堅固な塊）の瞬間的な変位を引き起こし、それによって当該稜の一方の側での細胞毛の緊張と神経終末装置の興奮を引き起こす。——これらは持続する限り回転の感覚を引き起こし、回転の停止時の負の加速度の反動か、緊張した構造物のゆっくりと作用する弾性が正常状態を回復するまで持続する（ブロイアー¹⁾）」。半規管（三半規管）系はさらに、他のすべての感覚器官と同様に、感覚のほかに反射をも引き起こす性質を持つ（ブロイアー、ドラージュ、ナーゲル）。反応する器官としてはまず眼筋が考えられ、身体の回転に際して目に回転を与える。
+
+§15
+§15
+
+Daß aber progressiv beschleunigte Bewegung auf die in den Bogengängen eingeschlossene Lymphe keinen Einfluß ausüben könne, wie daß für die Perzeption dieser Beschleunigungen und für die Empfindung der Kopflage besondere Organe im Labyrinth existieren, hat Mach schon früher vermutungsweise ausgesprochen. — Breuer gelang es nun, zum mindesten das sehr wahrscheinlich zu machen, daß diese Funktion dem Otolithenapparate zukomme. Er nimmt an, daß die Otolithen durch ihre Schwere auf die unter ihnen befindlichen Haarzellen einen bestimmten Druck ausüben. Jede Kopfneigung muß die Lage der Säckchen und damit die der Sinnesepithelien ändern. Breuer zeigt, indem er die Lage der „Gleitrichtungen" der Otolithen bei verschiedenen Kopfstellungen bestimmt, daß erst durch das Zusammenwirken beider Säckchen eine eindeutige Angabe über die Kopfstellung möglich ist. „Es gibt für jede Lage des Kopfes nur eine bestimmte Kombination von Gravitationsgrößen der Otolithen in den 4 Maculis. Wenn, wie wir annehmen, die Gravitation der Otolithen empfunden wird, so ist jede Lage des Kopfes durch eine bestimmte Kombination dieser Empfindungen charakterisiert." — Bei der geradlinigen Beschleunigung wird jeder Bewegungsstoß vermöge der Trägheit der Otolithenmasse eine Relativbeschleunigung derselben in entgegengesetzter Richtung hervorrufen, die den adäquaten Sinnesreiz vorstellt. Dieser Teil der Hypothese hat sich heuristisch sehr bewährt, da er die Grundlage für Untersuchungen an niederen Tieren geworden ist, bei welchen bloß Otolithen vorkommen, wie er auch bei höheren Tieren zu einer isolierten experimentellen Prüfung der Funktionen hingeleitet hat.
+
+【補】しかし、並進的に加速された運動が半規管（三半規管）に封入されたリンパに何の影響も及ぼしえないこと、またこれらの加速度の知覚と頭の位置の感覚のために迷路（内耳迷路）内に特別な器官が存在することは、マッハがすでに以前に推測的に述べていた。——ブロイアーは今や、この機能が耳石装置に帰属することを少なくともきわめて蓋然的にすることに成功した。彼は、耳石がその重力によってその下にある有毛細胞に一定の圧力を及ぼすと想定する。頭のいかなる傾斜も嚢の位置を、したがって感覚上皮の位置を変えねばならない。ブロイアーは、種々の頭の位置における耳石の「滑動方向」の位置を決定することにより、両方の嚢の共働によってはじめて頭の位置についての一義的な指示が可能になることを示す。「頭の各位置に対して、4つの斑における耳石の重力量の一つの特定の組み合わせのみが存在する。我々が仮定するように、耳石の重力が感覚されるならば、頭の各位置はこれらの感覚の特定の組み合わせによって特徴づけられる。」——直線的加速度においては、各運動の衝撃が耳石質量の慣性によって逆方向の相対加速度を引き起こし、これが適刺激を表す。仮説のこの部分は発見法的にきわめて有効であることが示された。というのも、耳石のみが存在する下等動物についての研究の基礎となり、また高等動物において機能の孤立した実験的検証へと導いたからである。
+
+Aus der Fülle der in den letzten Jahren an niederen Tieren gefundenen Tatsachen will ich nur einige prägnante hervorheben. -- Studiert wurden die Ausfallserscheinungen nach Entfernung der Otolithen, das Verhalten bei Rotationen und die kompensierenden Bewegungen. -- Besonders interessant sind die Versuche von Prentiss¹). Er wiederholte zunächst die berühmten Versuche Kreidls, häutende Krebse zu zwingen, sich „eiserne" Otolithen einzuführen, und bestätigte das der Theorie entsprechende Verhalten derselben gegen Magneten. Es ist ihm aber auch geglückt, Beobachtungen an freischwimmenden Larven von Hummern anzustellen, welchen die Möglichkeit genommen war, sich nach der Häutung die Otolithen zu bilden. Er konnte sich überzeugen, daß sie dieselben Phaenomene boten, wie ausgewachsene Palaemonen, welchen man die Otolithen entfernt hatte: sie rollen von einer Seite auf die andere, schwimmen mit der Bauchseite nach oben, lassen sich leichter als normale Larven in die Rückenlage bringen, und wenn man sie blendet, so ist der Verlust des Gleichgewichtes noch augenfälliger. -- Derselbe Autor beschreibt auch das Verhalten eines de norma statozystenlosen Krebses, Virbius zostericula, folgendermaßen: „Er ist keine freischwimmende Form, sondern heftet sich in den von der Schwerkraft unabhängigen Positionen an Gräser an. Zwingt man ihn zum Schwimmen, so schwimmt er in sehr unsicherer Weise, jedoch meist mit dem Rücken nach oben. Man kann ihn leicht auf den Rücken umdrehen, aus welcher Lage er sich nur langsam aufzurichten vermag. Seine unsichere Art zu schwimmen erinnert an die anderer Crustaceen nach Statozystenzerstörung. Nach Schwärzung der Augen mit Lampenschwarz geht beim Schwimmen jede Orientierung verloren." Prentiss Versuche erinnern an die K. L. Schaefers²), welcher bei Drehversuchen an Froschlarven fand, daß das erste Auftreten von Drehschwindel zeitlich mit der Vollendung der Bogengangbildung zusammenfällt. Von Wichtigkeit sind die Untersuchungen Achs¹) an Fröschen. Ach fand, daß die Otolithen mit dem Lidreflex der gekreuzten Seite in Verbindung stehen, und schließt nun aus der Tatsache, daß beim Frosche, dem die Otolithen entfernt wurde, der Lidreflex bei rascher Bewegung in der vertikalen sowie in der horizontalen verschwindet, die Otolithen als Sinnesorgane für geradlinige Verschiebungen des Körpers im Raum zu dienen haben.
+
+【補】近年、下等動物について見出された事実の豊富さから、特に顕著なもののみを若干挙げたい。——研究されたのは耳石除去後の欠損現象、回転時のふるまい、代償運動である。——特に興味深いのはプレンティス¹⁾の実験である。彼はまずクライドルの有名な実験——脱皮中の甲殻類に「鉄の」耳石を導入させる——を繰り返し、磁石に対する理論に一致した反応を確認した。しかし彼はまた、脱皮後に耳石を形成する可能性を奪われた自由遊泳のロブスター幼生での観察にも成功した。彼は、それらが耳石を除去された成体のテナガエビと同じ現象を示すことを確認できた。すなわち左右に転がり、腹面を上にして泳ぎ、正常幼生よりも容易に仰向けにでき、目隠しをすれば平衡の喪失はさらに明白になる。——同著者は通常平衡胞を持たない甲殻類 Virbius zostericula のふるまいについても次のように記述する。「これは自由遊泳の形態ではなく、重力に依存しない位置で草に付着する。泳がせると非常に不安定に泳ぐが、多くは背を上にする。容易に仰向けにでき、そこから立ち直るのは遅い。その不安定な泳ぎ方は平衡胞破壊後の他の甲殻類を想起させる。ランプの煤で目を黒くすると、泳ぎにおける方位はすべて失われる。」プレンティスの実験は K・L・シェーファー²⁾の実験を想起させる。シェーファーはカエル幼生の回転実験で、回転性めまいの最初の出現が半規管形成の完成と時間的に一致することを見出した。重要なのはアッハ¹⁾のカエルについての研究である。アッハは耳石が交叉側の瞬目反射と結びついていることを見出し、耳石を除去されたカエルでは垂直および水平方向の急速な運動において瞬目反射が消失するという事実から、耳石が空間内での身体の直線的移動のための感覚器官としての役割を果たすと結論した。
+
+§16
+§16
+
+Schon lange bekannt und genügend analysiert sind hingegen die Raddrehung der Augen bei andauernden Lageveränderungen des Kopfes sowie die nystagmischen Bewegungen bei der Rotation und bei querer Durchleitung von galvanischen Strömen durch den Kopf. Die typischen Kopfbewegungen wie die zuckenden Augenbewegungen, welche sich bei fortgesetzter Drehung des Kopfes oder bei galvanischer Durchquerung desselben in regelmäßigen Intervallen wiederholen und die sich auch durch die geschlossenen Augenlider leicht hindurch fühlen lassen, sind sichere und objektive Zeichen von Schwindel. — Augen- und Kopfnystagmus fehlt bei Tieren ohne Labyrinth vollständig, wie Ewald an Tauben, und Breuer an Katzen, denen beiderseits die N. VIII. durchschnitten wurden, gezeigt haben. Breuer und Kreidl haben nachgewiesen, daß die Verdrehung der optischen Vertikale, welche eintritt, wenn man auf einem Karussell fährt oder auf der Eisenbahn eine Kurve mit starker Krümmung in genügender Geschwindigkeit passiert, auf einer realen Raddrehung der Augen beruht. Wir verdanken ferner Breuer (l. c.) den Nachweis, daß einzelne Ampullen auch, u. zw. isoliert, galvanisch gereizt werden können; sie lösen dann Kopfbewegung in der Ebene des betreffenden Kanals aus, während die Folge der diffusen Reizung die nach Breuer sog. galvanotropische Reaktion ist, bestehend in einer Neigung des Kopfes gegen die Anode hin.
+
+【補】他方、頭の持続的な位置変化に伴う眼球の車軸回転、ならびに回転時や頭を横切るガルヴァーニ電流の通電時の眼振運動は、以前から知られ十分に分析されている。頭の継続的回転時やガルヴァーニ電流の横断通電時に規則的な間隔で繰り返される典型的な頭の運動および急速な眼球運動——閉じた瞼を通しても容易に触知できる——は、めまいの確実で客観的な徴候である。——迷路（内耳迷路）のない動物では眼振および頭部眼振は完全に欠如する。エヴァルトがハトで、ブロイアーが両側の第VIII神経を切断したネコで示したとおりである。ブロイアーとクライドルは、回転木馬に乗ったり鉄道で十分な速度で急カーブを通過したときに生じる光学的垂直線の偏位が、実際の眼球の車軸回転に基づくことを証明した。さらにブロイアー（前掲書）のおかげで、個々の膨大部も孤立して電気的に刺激しうることが示された。その場合、当該管の面内での頭の運動が引き起こされ、一方、拡散的な刺激の結果はブロイアーのいわゆるガルヴァノトロピー反応であり、陽極に向かう頭の傾斜からなる。
+
+Dies vorausgeschickt, lassen sich die von James¹), Kreidl²) und Pollak³) an Taubstummen beobachteten Ausfallserscheinungen beim Dreh- resp. galvanischen Schwindel aus der Mach-Breuerschen Theorie ungezwungen erklären. Nach Mygind⁴) fanden sich bei 56% von 118 anatomisch untersuchten Taubstummen pathologische Veränderungen des Vestibularapparates. 50-58% der Kreidl'schen taubstummen Versuchspersonen bekamen keinen Drehschwindel, 21% derselben, bei denen Kreidl die Bedingungen des Mach'schen Versuches mit Karussellbewegung einhielt, unterlagen nicht der bei Normalen unvermeidlichen Täuschung über die Orientierung zur Vertikalen; dieselben zeigten auch ausnahmslos beim Rotieren keine reflektorischen Augenbewegungen. Die geringere Prozentzahl erklärt sich daraus, daß nach Mygind's Statistik die Bogengänge häufiger erkrankt gefunden wurden, als das Vestibulum.
+
+【補】以上を前提として、ジェイムズ¹⁾、クライドル²⁾およびポラック³⁾が聾唖者において観察した回転性めまいないしガルヴァーニ性めまいにおける欠損現象は、マッハ＝ブロイアー理論から無理なく説明される。ミュギント⁴⁾によれば、解剖学的に検査された118名の聾唖者の56％に前庭器官の病的変化が見出された。クライドルの聾唖の被験者の50～58％は回転性めまいを生じず、そのうちの21％はクライドルがマッハの回転木馬実験の条件を守った際に、正常者では不可避の垂直方向に関する錯覚を免れた。これらの人々は回転時に反射的眼球運動を例外なく示さなかった。パーセンテージが低いのは、ミュギントの統計によれば半規管（三半規管）が前庭よりも高頻度に罹患していることで説明される。
+
+Pollak fand, daß 30% der von ihm untersuchten Taubstummen den galvanischen Schwindel vermissen ließen und daß die meisten von jenen Taubstummen, welche auf der Drehscheibe und im Karussell keine Augenbewegungen und keine Täuschung über die Vertikale zeigen, auch die charakteristischen Äußerungen des galvanischen Schwindels nicht haben. Weitere Untersuchungen von Strehl, Kreidl und Alexander, Hammerschlag bestätigten diese Tatsache; die letzteren fanden überdies, daß bei Scheidung der Taubstummen in kongenitale Taubstumme und solche mit erworbener Taubheit die ersteren einen überaus hohen Prozentsatz, 84% (K. u. A.), 95% (H.) normale galvanische Reaktion zeigten, während nur 29% der Versuchspersonen mit erworbener Taubstummheit gegenüber dem galvanischen Strome normal reagierten. Die kongenitalen (hereditär-degenerativen) Taubstummen verhalten sich diesbezüglich so, wie die japanischen Tanzmäuse, deren physiologisches Verhalten im anatomischen Baue, wie Kreidl und Alexander¹) zeigten, seine Erklärung findet. Diese vollständig tauben Tiere zeigen einen breitspurigen, humpelnden Gang; bei oberflächlicher Betrachtung scheinen sie vollständiges Gleichgewichtsvermögen zu besitzen; veranlaßt man sie aber zu Gehversuchen auf einem schmalen Steg, stellt sich sofort ihr hochgradig defektes Balanziervermögen heraus. Sie haben keinen Drehschwindel, verhalten sich aber der galvanischen Durchströmung des Kopfes gegenüber wie normale Tiere. Die anatomische Untersuchung ergiebt: Destruktion der Papilla basilaris cochleae, hochgradige Verdünnung des Ram. inf. N. VIII, und hochgradiger Schwund des Ganglion spirale, Destruktion der Macula sacculi, mittelgradige Verdünnung der Äste und Wurzeln der Ram. sup. und med. N. VIII. und mittelgradige Verkleinerung beider Vestibularganglien.
+
+【補】ポラックは、自分が検査した聾唖者の30％がガルヴァーニ性めまいを欠いていること、また回転盤や回転木馬で眼球運動も垂直に関する錯覚も示さない聾唖者の大部分が、ガルヴァーニ性めまいの特徴的な発現も持たないことを見出した。シュトレール、クライドルとアレクサンダー、ハンマーシュラークのさらなる研究がこの事実を確認した。後者らはさらに、聾唖者を先天性聾唖者と後天性聾唖者に分けると、前者はきわめて高い割合——84％（K. u. A.）、95％（H.）——で正常なガルヴァーニ反応を示すのに対し、後天性聾唖者では29％のみが電流に正常に反応することを見出した。先天性（遺伝的退行性）聾唖者はこの点で日本の舞踏マウスと同様にふるまい、その生理学的行動はクライドルとアレクサンダー¹⁾が示したように解剖学的構造にその説明を見出す。これらの完全に聾の動物は、ガニ股の跳ねるような歩行を示す。表面的な観察では完全な平衡能力を持つように見えるが、狭い桟橋の上を歩かせると、たちまちその高度に欠損した均衡能力が明らかになる。回転性めまいは持たないが、頭のガルヴァーニ電流に対しては正常動物と同様にふるまう。解剖学的検査の結果は、蝸牛基底乳頭の破壊、第VIII神経下枝の高度な菲薄化、らせん神経節の高度な萎縮、球形嚢斑の破壊、第VIII神経上枝および中枝の分枝と根の中等度の菲薄化、両側の前庭神経節の中等度の縮小を示した。
+
+§17
+§17
+
+Von den neueren vergleichend-physiologischen Versuchen erscheinen mir die von Dreyfuß²) bemerkenswert. Er hat das Verhalten normaler und labyrinthloser (ein- und doppelseitig operierter) Meerschweinchen auf der Drehscheibe beobachtet, wobei er insbesondere die kompensierenden Bewegungen der Augäpfel und des Kopfes studierte. Er konstatiert einen auffallenden Unterschied im Verhalten des operierten gegenüber dem des gesunden Tieres bei der Drehung. Das doppelseitig labyrinthlose Tier bleibt bei der Drehung ruhig am Platze, zeigt keine Verdrehung der Wirbelsäulelängsachse und keinen Kopf- oder Augennystagmus. Die Drehung kommt ihm nicht zum Bewußtsein.
+
+【補】近年の比較生理学的実験のなかでは、ドライフス²⁾のものが注目に値する。彼は正常および迷路（内耳迷路）のない（片側および両側手術された）モルモットの回転盤上でのふるまいを観察し、特に眼球と頭の代償運動を研究した。彼は、回転時の手術された動物と健常動物のふるまいに著しい違いがあることを確認する。両側に迷路のない動物は回転中静かにその場にとどまり、脊柱長軸の捻転も頭部または眼球の眼振も示さない。回転が意識にのぼらないのである。
+
+§18
+§18
+
+Morphologisch und vom teleologischen Standpunkte aus betrachtet, interessant ist die Arbeit Alexander's¹) über das statische und das Gehörorgan von Tieren mit kongenital defektem Sehapparat: Maulwurf (Talpa europaea) und Blindmaus (Spalax typhlus).
+
+【補】形態学的および目的論的観点から見て興味深いのは、先天的に視覚器官が欠損した動物——モグラ（Talpa europaea）と盲目ネズミ（Spalax typhlus）——の静的器官および聴覚器官に関するアレクサンダー¹⁾の研究である。
+
+Es ist wohl bekannt, daß der Vestibularapparat bei höheren Tieren und beim Menschen im Vergleiche zu niederen Tieren mangelhaft entwickelt ist. Wir finden bei allen Tieren, die sich in der Luft oder im Wasser zu bewegen vermögen, drei statolithentragende Nervenendstellen; bei den höheren Säugetieren nur zwei. Auch haben Mach und Breuer mit Bezug auf die letzteren wiederholt hervorgehoben, „daß sie durchaus nicht meinen, das Labyrinth liefere die für Gleichgewichtserhaltung nötigen Empfindungen allein, sondern es wirke hierbei mit dem Druck- und Muskelgefühl, wie mit dem Gesichtssinn zusammen. Es wurde nie geleugnet und ist ja ganz sicher, daß Mangel oder Verlust der Labyrinthempfindungen durch die anderen genannten Sinneswahrnehmungen größtenteils ersetzt wird, so daß — wie vor allem Ewald gezeigt hat — die gröberen Funktionen der Gleichgewichtserhaltung, das Gehen und Stehen trotz Verlust oder bei angeborenem Mangel der Labyrinthfunktion in genügender Weise ausgeübt werden."
+
+【補】前庭器官が高等動物および人間において下等動物に比べて不完全に発達していることは周知の通りである。空中または水中を移動しうるすべての動物においては、三つの耳石を担う神経終末部位が見出される。高等哺乳類では二つのみである。マッハとブロイアーもまた後者に関して繰り返し強調してきた。「彼らは決して迷路（内耳迷路）が平衡維持に必要な感覚を単独で提供すると言っているのではなく、圧覚・筋肉感覚、および視覚と協働するのだと言っているのである。迷路感覚の欠如または喪失が他の感覚知覚によって大部分補われることは決して否定されず、まったく確実である。したがって——とりわけエヴァルトが示したように——平衡維持のより粗大な機能、すなわち歩行と起立は、迷路機能の喪失時または先天的欠如にもかかわらず十分に遂行される。」
+
+§19
+§19
+
+Resumiere ich die Resultate der nur in kleiner Auswahl gebrachten Untersuchungen: Die jede Kopfbewegungen für das Gesichtsfeld kompensierenden Augenbewegungen, welche auch bei geschlossenen Augen und von Blinden ausgeführt werden, ihr Fehlen bei vielen Taubstummen und der Augennystagmus bei fortgesetzter Drehung; die Raddrehung der Augen, wenn durch die Zentrifugalkraft die Richtung der Massenbeschleunigung im Körper abgeändert wird; der Drehschwindel und sein Gesetz, sein Fehlen bei vielen Taubstummen, endlich der galvanische Schwindel, der sich beim Menschen ebenso verhält, wie bei Tieren, — so ergeben sich hieraus genügende Beweise für die Mach-Breuer'sche Theorie, wenn auch nicht in Abrede gestellt werden kann, daß noch manche Frage der Lösung harrt. Gegenüber den anderen Hypothesen (Ewald, Cyon) hat sie jedenfalls den Vorzug, daß durch dieselbe die spezifische Disposition für den adäquaten Reiz bei keinem Sinnesorgan so klar verständlich wird, wie bei den Ampullen- und Otolithenapparaten, und daß sich die beiden Sinnesorgane im Labyrinth auch dem Prinzip der spezifischen Sinnesenergien gut einfügen (Nagel). Jedenfalls erweist sich die Bewegungsempfindung als ein durchaus eigenartiges Empfindungsgebiet.
+
+【補】小規模な選択にすぎない研究の結果を要約すると——視野に対して頭のあらゆる運動を代償する眼球運動（閉眼時にも盲人によっても遂行される）、多くの聾唖者におけるその欠如、持続的回転時の眼振。遠心力によって体内の質量加速度の方向が変化するときの眼球の車軸回転。回転性めまいとその法則、多くの聾唖者におけるその欠如。そして最後に、人間においても動物においても同様にふるまうガルヴァーニ性めまい——これらから、マッハ＝ブロイアー理論に十分な証拠が得られる。もっとも、まだ多くの問題が解決を待っていることは否定できないが。他の仮説（エヴァルト、ツィオン）に比べれば、この理論は少なくとも次の利点を持つ。すなわち適刺激に対する特殊な素因がいかなる感覚器官においてもこれほど明瞭に理解されるものはなく、膨大部装置と耳石装置においてそうであるということ、また迷路（内耳迷路）内の二つの感覚器官が特殊感覚エネルギーの原理にもよく適合するということ（ナーゲル）。いずれにしても、運動感覚はまったく独自の感覚領域であることが証明される。
+
+以上、ポラック教授の報告である。
+
+§20
+§20
+
+So weit das Referat von Professor Pollak. Ohne den Tatsachen Gewalt anzutun, welche in meiner Schrift über Bewegungsempfindungen beschrieben sind, legen die oben besprochenen Beobachtungen die Möglichkeit nahe, die Auffassung dieser Tatsachen zu modifizieren, wie wir dies im Folgenden andeuten wollen. Es bleibt höchst wahrscheinlich, daß ein Organ im Kopfe existiert, wir wollen es das Endorgan (EO) nennen, welches auf Beschleunigungen reagiert, und durch dessen Vermittlung wir zur Kenntnis von Bewegungen gelangen. Mir selbst erscheint die Existenz von Bewegungsempfindungen von der Natur der Sinnesempfindungen nicht zweifelhaft und ich kann kaum verstehn, wie jemand, der die fraglichen Versuche an sich selbst wirklich wiederholt hat, diese Empfindungen leugnen kann. Statt sich aber vorzustellen, daß das Endorgan besondere Bewegungsempfindungen erregt, welche von diesem Apparat wie von einem Sinnesorgan ausgehen, könnte man auch annehmen, daß dasselbe lediglich reflektorisch Innervationen auslöst. Innervationen können willkürlich und bewußt oder unwillkürlich und unbewußt sein. Die beiden verschiedenen Organe, von welchen sie ausgehen, bezeichnen wir mit WI und UI. Beide können auf den okulomotorischen (OM) und den lokomotorischen Apparat (LM) übergehen. Betrachten wir nun das nebenstehende Schema (Fig. 23). Wir leiten im Sinne des glatten Pfeiles willkürlich, also von WI aus, eine aktive Bewegung ein, welche sich im Sinne der glatten Pfeile auf OM und LM überträgt. Die zugehörige Innervation, deren Antezedenz oder Konsequenz empfinden wir unmittelbar. Eine besondere hiervon verschiedene Bewegungsempfindung wäre also in diesem Falle unnötig. Ist nun die Bewegung im Sinne des glatten Pfeiles eine (uns überraschende) passive, so gehen erfahrungsgemäß von EO über UI Reflexe aus, welche kompensierende Bewegungen hervorbringen, was wir durch die gefiederten Pfeile andeuten. Beteiligt sich WI nicht, und gelingt die Kompensation, so fällt hiermit auch die Bewegung und die Forderung einer Bewegungsempfindung weg. Wird aber die kompensierende Bewegung von WI aus (absichtlich) unterdrückt, so ist hierzu wieder dieselbe Innervation, wie bei der aktiven Bewegung nötig, und sie liefert auch wieder die gleiche Bewegungsempfindung. Das Organ EO ist also zu WI und UI so gestimmt, daß in den beiden letzteren mit demselben Bewegungsreiz des ersteren entgegengesetzte Innervationen zusammentreffen. Außerdem haben wir aber noch folgende Verschiedenheit in der Beziehung von EO zu WI und UI zu bemerken. Für EO ist der Bewegungsreiz natürlich derselbe, ob die eingeleitete Bewegung eine passive oder aktive ist. Auch bei einer aktiven Bewegung würden die von WI ausgehenden Innervationen in ihrem Erfolg durch EO und UI aufgehoben, wenn nicht zugleich von WI mit der willkürlichen Innervation eine Hemmung nach EO oder UI ausginge. Den Einfluß von EO auf WI haben wir uns viel schwächer vorzustellen, als jenen auf UI. Denken wir uns etwa drei Tiere WI, UI und EO, welche die Arbeit so geteilt hätten, daß das erste nur Angriffs-, das zweite nur Abwehr- oder Fluchtbewegungen ausführte, während das dritte als Wächter aufgestellt wäre, mit einander zu einem neuen Wesen verbunden, wobei WI eine dominierende Stellung einnähme, so würde dies ungefähr dem dargestellten Verhältnis entsprechen. Es wird sich auch manches zu gunsten einer derartigen Auffassung der höheren Tiere anführen lassen¹).
+
+【移】頭の中に器官が存在する可能性はきわめて高い——これを**終末器官（EO）**と呼ぼう——これが加速度に反応し、その媒介によって我々は運動の認知に至る。しかし、この装置が特別な運動感覚を与えるとする代わりに、それが単に反射的に神経支配を引き起こすだけだと考えることもできる。
+【移】神経支配は随意的・意識的にも、不随意的・無意識的にもありうる。それぞれの源泉を WI（随意的神経支配の器官）と UI（不随意的神経支配の器官）と表す。両者とも眼球運動装置（OM）と移動運動装置（LM）に伝達されうる。
+【移】次の図式（図23）を考えよう。滑らかな矢印の方向に WI から能動的な運動を導入すると、それは OM と LM に伝わる。これに伴う神経支配を我々は直接に感じる。この場合、別個の運動感覚は不要である。
+【移】運動が（我々を不意に襲う）受動的なものであれば、EO から UI を経て、代償的な運動を引き起こす反射が出る（羽根付き矢印で示す）。代償が成功すれば、WI は関与せず、運動も運動感覚の必要もなくなる。しかし、代償運動が WI から（意図的に）抑制されると、能動的運動と同じ神経支配が必要となり、同じ運動感覚をもたらす。
+【移】つまり、EO は WI と UI に対して、同一の運動刺激に対して後二者に逆方向の神経支配が対応するように調律されている。EO から WI への影響は、UI への影響に比べてはるかに弱いと考えなければならない。
+【補】能動的運動においても、WI から発する神経支配はその効果において EO と UI によって打ち消されるだろう——もし WI が随意的神経支配と同時に EO または UI に向けて抑制を発しなければ。たとえば三匹の動物 WI、UI、EO が、第一のものは攻撃運動のみを、第二のものは防御・逃走運動のみを行い、第三のものが番人として配置されているかのように作業を分担し、互いに結合されて一つの新しい存在となり、WI が支配的地位を占めると考えれば、これが記述された関係にほぼ対応するだろう。このような高等動物の解釈を支持する論拠もまた多く挙げられるであろう¹⁾。
+
+Ich will das eben Ausgesprochene nicht für ein vollständiges und nach allen Seiten zutreffendes Bild der Tatsachen ausgeben, bin mir vielmehr der Mängel meiner Ausführung bewußt. Das dem entwickelten Hauptgrundsatz (S. 51) entsprechende Streben aber, alle Raum- und Bewegungsempfindungen, welche im Gebiete des Gesichts- und Tastsinnes, bei der Ortsbewegung, als Schatten selbst bei der Erinnerung an die Lokomotion, beim Gedanken an einen fernen Ort u. s. w. auftreten, auf einerlei Empfindungsqualität zurückzuführen, wird man gerechtfertigt finden. Die Annahme, daß diese Empfindungsqualität der Wille sei, soweit er sich auf Raumlage und räumliche Bewegung bezieht, oder die Innervation, präjudiziert der weiteren Forschung nicht, und stellt nur die Tatsachen dar, soweit sie bis jetzt bekannt sind²).
+
+【移】ここで述べたことを完全かつあらゆる面で正確な事実の描写だと主張するつもりはなく、自分の叙述の欠点も自覚している。しかし、展開された主要原理（第2章の28頁参照）に従って、視覚と触覚の領域に、移動運動に、移動運動の記憶にさえ、遠い場所を思い浮かべるときにさえ現れるすべての空間感覚と運動感覚を、一つの感覚の質に還元しようとする努力は、正当と認められるだろう。この感覚の質が、空間的位置と空間的運動に関する限りでの意志であり、すなわち神経支配感覚であるという想定は、さらなる研究を先取りするものではなく、現在知られている限りの事実を表現するものにすぎない²⁾。
+
+§21
+§21
+
+Aus den Erörterungen des vorigen Kapitels über Symmetrie und Ähnlichkeit können wir ohne weiteres den Schluß ziehen, daß gleichen Richtungen gesehener Linien gleichartige Innervationen, zur Medianebene symmetrischen Linien sehr ähnliche Innervationen, dem Blick nach oben und unten, in die Ferne und in die Nähe aber sehr verschiedene Innervationen entsprechen, was nach den Symmetrieverhältnissen des motorischen Apparates der Augen größtenteils auch von vornherein zu erwarten ist. Hiermit allein ist schon eine ganze Reihe eigentümlicher physiologisch-optischer Phänomene aufgeklärt, die bisher kaum beachtet worden sind. Ich komme nun aber zu dem, nach physikalischer Schätzung wenigstens, wichtigsten Punkt. Der Raum des Geometers ist ein Vorstellungsgebilde von dreifacher Mannigfaltigkeit, welches sich auf Grundlage von manuellen und intellektuellen Operationen entwickelt hat. Der optische Raum (Herings Sehraum) steht in einer ziemlich komplizierten geometrischen Verwandtschaft zu dem vorigen. Man kann mit Hilfe bekannter Ausdrücke die Sache noch am besten darstellen, wenn man sagt, daß der optische Raum den geometrischen (Euklidischen) in einer Art Reliefperspektive abbilde, was sich teleologisch auch erklären läßt. Jedenfalls ist aber auch der optische Raum eine dreifache Mannigfaltigkeit. Der Raum des Geometers zeigt in jedem Punkte und nach allen Richtungen dieselben Eigenschaften, was vom physiologischen Raum durchaus nicht gilt. Der Einfluß des physiologischen Raumes ist aber in der Geometrie noch vielfach zu bemerken. Wenn wir z. B. konvexe und konkave Krümmung unterscheiden, so ist dies ein solcher Fall. Der Geometer sollte eigentlich nur die Abweichung vom Mittel der Ordinaten kennen.
+
+【移】前章の対称性と類似性に関する議論から、我々は直ちに次の結論を引き出すことができる。見られる線の同じ方向には同質の神経支配感覚が、正中面に対して対称的な方向にはきわめて類似した神経支配感覚が、上と下、遠くと近くへの視線にはきわめて異なる神経支配感覚が対応する。これは目の運動装置の対称関係から、大部分は前もって予測できることである。
+【移】これだけで、これまでほとんど注目されてこなかった一連の独特な生理学的・光学的現象が解明される。
+【移】幾何学者の空間は、手動的・知的操作の基盤の上に発達した三重の多様性を持つ表象構成物である。光学的空間（ヘーリングの「視空間」）は、幾何学者の空間とかなり複雑な幾何学的親近関係にある。光学的空間が幾何学的（ユークリッド的）空間を一種のレリーフ遠近法で写像していると言うのがもっとも適切であろう。これは目的論的にも説明できる。
+【移】いずれにせよ、光学的空間もまた三重の多様性を持つ。幾何学者の空間があらゆる点、あらゆる方向において同じ性質を示すのに対し、光学的空間にはそれが当てはまらない。生理学的空間の幾何学への影響は、なお多くの箇所に認められる。例えば凸の曲率と凹の曲率を区別するのはそうした場合である。幾何学者は本来、座標の平均値からの偏差のみを知るべきなのだが。
+
+§22
+§22
+
+So lange man sich vorstellt, daß die (12) Augenmuskel einzeln innerviert werden, ist man nicht imstande, die fundamentale Tatsache zu verstehen, daß der optische Raum als dreifache Mannigfaltigkeit sich darstellt. Ich habe diese Schwierigkeit jahrelang gefühlt und auch die Richtung erkannt, in welcher nach dem Prinzip des Parallelismus des Physischen und Psychischen die Aufklärung zu suchen ist; die Auflösung selbst blieb mir wegen mangelhafter Erfahrung auf diesem Gebiete verborgen. Desto besser weiß ich Herings Verdienst zu schätzen, der dieselbe gefunden hat. Den drei optischen Raumkoordinaten, Höhen, Breiten- und Tiefenempfindung (Hering, Beiträge zur Physiologie. Leipzig, Engelmann, 1861-65) entspricht nämlich nach den Ausführungen desselben Forschers (Die Lehre vom binokularen Sehen. Leipzig, Engelmann, 1868) auch nur eine dreifache Innervation, welche beziehungsweise Rechts- oder Linkswendung, Erhebung oder Senkung und Konvergenz der Augen hervorruft. Darin liegt für mich die wichtigste und wesentlichste Aufklärung¹). Ob man nun die Innervation selbst für die Raumempfindung hält, oder sich vor oder hinter derselben erst die Raumempfindung vorstellt, was sofort zu entscheiden weder leicht noch notwendig sein dürfte, jedenfalls wirft die Heringsche Darlegung ein ausgiebiges Licht in die psychische Tiefe des Sehprozesses. Auch die in bezug auf Symmetrie und Ähnlichkeit von mir angeführten Erscheinungen fügen sich dieser Auffassung sehr gut, was weiter darzulegen wohl unnötig ist²).
+
+【移】目の筋肉が個別に神経支配されると考える限り、この根本的事実を説明することはできない。私はこの困難を長年感じていたし、心理物理的平行論の原理に従って解決の方向を認識してもいた。しかし、この領域での経験不足のため、解決そのものは私には隠されたままだった。それだけに、ヘーリングが解決を見出した功績を高く評価することができる。
+【移】三つの光学的空間座標——高さの感覚・幅の感覚・奥行きの感覚——に対応して、同じヘーリングの研究によれば、やはり三重の神経支配だけが存在する。それはそれぞれ、右転または左転、挙上または下降、両目の輻輳を引き起こす。ここに、私にとってもっとも重要かつ本質的な解明がある¹⁾。
+【移】神経支配そのものを空間感覚と見なすか、それとも神経支配の背後にさらに空間感覚を想定するかは、直ちに決定することが容易でも必要でもないかもしれない。いずれにせよ、ヘーリングの叙述は視覚過程の心理的な深みに豊かな光を投じている。対称性と類似性に関して私が挙げた現象もまた、この見方にみごとに合致する²⁾。
+
+Anmerkungen · 注
+
+注1）[§1 に対して]
+
+Anm. 1)
+Der im vorigen Kapitel behandelte Stoff ist meines Wissens (drei kleine Arbeiten von mir selbst und die spätere von Soret abgerechnet) noch nicht besprochen worden. Die Erörterungen in diesem Kapitel aber gründen sich für mich auf jene des vorigen. Ich lege hier die Wege dar, auf welchen ich selbst zu Aufklärungen über die Raumempfindung gelangt bin, ohne etwas von dem in Anspruch zu nehmen, was von anderer Seite in dieser Richtung geleistet wurde und was namentlich in der Heringschen Theorie enthalten ist. Die große hierher gehörige Literatur ist mir auch zu unvollständig bekannt, um nach jeder Richtung hin genaue Nachweise zu geben. Denjenigen Punkt der Heringschen Theorie, der mir der wichtigste scheint, werde ich übrigens besonders hervorheben.
+
+【補】前章で扱った素材は、私の知る限り（私自身の三つの小さな研究と後のソレの研究を除けば）まだ論じられていない。本章の議論は私にとっては前章のそれに基づいている。ここで私は自分自身が空間感覚についての解明にたどり着いた道筋を述べるが、この方向で他の側から為されたこと、とりわけヘーリングの理論に含まれていることを自分のものとして主張する意図はない。ここに属する膨大な文献についても、私はあらゆる方向について正確な文献指示を与えるにはあまりにも不完全にしか知らない。なお、ヘーリングの理論のうち私にもっとも重要と思われる点は、特に強調するつもりである。
+
+注2）[§1 に対して]
+
+Anm. 2)
+Joh. Müller, Vergleichende Physiologie des Gesichtssinnes, 1826. — Handbuch der Physiologie, Bd. 2, 1840.
+
+【補】ヨハネス・ミュラー『視覚の比較生理学』1826年。——『生理学ハンドブック』第2巻、1840年。
+
+注3）[§1 に対して]
+
+Anm. 3)
+L'Ottica di Claudio Tolomeo pubblicata da G. Govi, Torino, 1885.
+
+【補】G・ゴヴィ刊行『クラウディオス・プトレマイオスの光学』トリノ、1885年。
+
+注1）[§1、ホイートストンに対して]
+
+Anm. 1)
+Wheatstone, Contributions to the theory of vision. Phil. Transact., 1838, 1852.
+
+【補】ホイートストン「視覚理論への寄与」『哲学紀要』1838年、1852年。
+
+注2）[§1、パーヌムに対して]
+
+Anm. 2)
+Panum, Untersuchungen über das Sehen mit zwei Augen, 1858.
+
+【補】パーヌム『両眼視に関する研究』1858年。
+
+注3）[§1、ヘーリングに対して]
+
+Anm. 3)
+Hering, Beiträge zur Physiologie, 1861—1865. — Archiv für Anatomie und Physiologie, 1864, 1865. — Der Raumsinn und die Bewegungen des Auges, in Hermanns Handbuch der Physiologie, Bd. III, 1, 1879. zwischen Objekt und Netzhautbild, der Visierlinie oder Projektionslinie, verschieden. Den Paar der Visierlinien der beiden Augen entspricht eine deren Winkel halbierende Sehrichtung, welche wir von dem Halbierungspunkte der Verbindungslinie beider Augen ausgehend zu denken haben. Um jede Beziehung auf den geometrischen Raum auszuschalten, können wir sagen: Die beiden Augen zusammen sehen dieselbe Breiten- und Höhenanordnung, welche ein einzelnes mitten zwischen denselben liegendes Auge sehen würde. Fixieren wir mit horizontalen Blicklinien und symmetrischer Konvergenz einen Punkt auf der Fensterscheibe, so sehen wir diesen in der Medianebene, zugleich aber in derselben dahinter weit seitwärts abliegende Objekte. Auch bei schwacher Divergenz der Augenachsen sehen wir im stereoskopischen Versuch noch Objekte vor uns, während die Projektionsrichtungen überhaupt nicht mehr zu solchen führen, wenigstens keinen physikalischen oder physiologischen Sinn mehr haben. Auch die gesehenen Entfernungen stimmen nicht zu den Ergebnissen der Projektionslehre. Wenn wir bei horizontalen Blicklinien durch den Müllerschen Horopterkreis vertikale Fäden legen, so erscheint uns der so entstandene Zylinder als eine Ebene. Wir sehen nicht nur das Bild des fixierten Punktes (den „Kernpunkt"), sondern auch den Inbegriff aller sich auf identischen („korrespondierenden") Stellen abbildender Punkte (die „Kernfläche") als eine in bestimmter Entfernung vor uns liegende Ebene. Diese und viele andere analoge Tatsachen sind nach der Projektionslehre ganz unverständlich. Das Raumsehen führt Hering auf ein einfaches Prinzip zurück. Identische („korrespondierende") Netzhautstellen haben identische Höhen- und Breitenwerte, symmetrische Netzhautstellen dagegen identische Tiefenwerte, welche letztere von den Außenseiten der Netzhäute nach innen zu wachsen. Tritt wegen Ähnlichkeit der monokularen Bilder in Farbe, Form und Lage Verschmelzung derselben zu einem binokularen Bilde ein, so erhält dieses den Mittelwert der Tiefenwerte der Einzelbilder. Solche Mittelwerte der Einzelbilder spielen überhaupt eine maßgebende Rolle, so auch bei den Sehrichtungen.
+
+【補】ヘーリング『生理学への寄与』1861年～1865年。——『解剖学・生理学紀要』1864年、1865年。——「空間感覚と目の運動」ヘルマン編『生理学ハンドブック』第III巻第1部、1879年。〔ヘーリングの理論によれば〕我々が対象を見る方向は、対象と網膜像とを結ぶ照準線ないし投影線の方向とは異なる。両目の照準線の対に対しては、それらの角を二等分する視線方向が対応し、両目の結合線の二等分点から出発すると考えるべきである。幾何学的空間へのあらゆる参照を排除するために言えば、二つの目は合わせて、ちょうどその中間に位置する一つの目が見るであろうのと同じ幅と高さの配置を見る。水平な視線と対称的な輻輳で窓ガラス上の一点を注視すると、その点は正中面に見え、同時にその背後はるか側方にある対象も見える。眼軸のわずかな開散においてさえ、立体視実験で我々の前に対象が見えるが、投影方向はもはやそのようなものには導かず、少なくとも物理学的ないし生理学的意味を持たない。見える距離も投影理論の結果と一致しない。水平な視線でミュラーのホロプター円に沿って垂直の糸を張ると、そうして生じた円柱は平面として現れる。我々は注視点の像（「核点」）だけでなく、同一（「対応」）部位に像を結ぶすべての点の総体（「核面」）をも、一定の距離に我々の前に横たわる平面として見る。これらの、および多くの類似した事実は、投影理論ではまったく理解不能である。空間視をヘーリングは一つの単純な原理に帰する。同一（「対応」）網膜部位は同一の高さの値と幅の値を持ち、対称的な網膜部位は同一の奥行きの値を持つ。後者は網膜の外側から内側に向かって増大する。単眼像が色・形・位置において類似しているために両眼像に融合すると、この両眼像は個々の像の奥行き値の平均値を得る。このような個々の像の平均値はそもそも決定的な役割を演じ、視線方向においてもそうである。
+
+注1）[§1、ヒルデブラントに対して]
+
+Anm. 1)
+Unter den an Herings Untersuchungen anknüpfenden Arbeiten jüngerer Forscher sind besonders jene F. Hildebrands von Interesse für die Psychologie.
+
+【補】ヘーリングの研究に接続する若い研究者たちの研究のうち、特に心理学にとって興味深いのはF・ヒルデブラントのそれである。
+
+注2）[§1、シュトゥンプフに対して]
+
+Anm. 2)
+Stumpf, Der psychologische Ursprung der Raumvorstellungen, 1873.
+
+【補】シュトゥンプフ『空間表象の心理学的起源』1873年。
+
+注3）[§1、ミュラーの比較生理学に対して]
+
+Anm. 3)
+Vergleichende Physiologie des Gesichtssinnes, S. 106 u. f.
+
+【補】『視覚の比較生理学』106頁以下。
+
+注4）[§1、チェルマーク/シュロートマンに対して]
+
+Anm. 4)
+Tschermak, Über anomale Sehrichtungsgemeinschaft der Netzhäute bei Schielenden. Graefes Archiv, XLVII, 3, S. 508. — Tschermak, Über physiologische und pathologische Anpassung des Auges. Leipzig 1900. — Schlodtmann, Studien über anomale Sehrichtungsgemeinschaft bei Schielenden. Graefes Archiv, LI, 2, 1900.
+
+【補】チェルマーク「斜視者における網膜の異常な視線方向共同体について」『グレーフェ紀要』第XLVII巻第3分冊、508頁。——チェルマーク「目の生理学的および病理学的適応について」ライプツィヒ、1900年。——シュロートマン「斜視者における異常な視線方向共同体の研究」『グレーフェ紀要』第LI巻第2分冊、1900年。
+
+注1）[§2 に対して]
+
+Anm. 1)
+Kurz nach Abschluß meiner „Grundlinien der Lehre von den Bewegungsempfindungen" (1875).
+
+【補】私の『運動感覚の学説の基本線』（1875年）の完成直後に。
+
+注2）[§2 に対して]
+
+Anm. 2)
+W. James, The principles of Psychology, II, 509.
+
+【補】W・ジェイムズ『心理学原理』第II巻、509頁。
+
+注1）[§3 に対して]
+
+Anm. 1)
+Ich halte hier den Ausdruck fest, welcher sich mir (1875) unmittelbar ergeben hat, ohne der weitern Untersuchung zu präjudizieren. Ich lasse es hier und in dem zunächst Folgenden noch dahingestellt, ob die Innervation eine Folge der Raumempfindung ist oder umgekehrt. Gewiß sind beide eng verbunden.
+
+【補】ここで私は（1875年に）直接得られた表現を保持するが、さらなる研究を先取りするつもりはない。神経支配が空間感覚の結果であるのか、その逆であるのかは、ここでは、また当面の以下においてもまだ未決のままにしておく。両者が密接に結びついていることは確かである。
+
+注1）[§4 に対して]
+
+Anm. 1)
+Eine andere Ansicht hierüber entwickelt Lipps, Zeitschr. f. Psychologie u. Physiologie der Sinnesorgane, Bd. I, S. 60.
+
+【補】これについて別の見解を展開しているのはリップス、『感覚器官の心理学・生理学雑誌』第I巻、60頁。
+
+注1）[§5、ナーゲルに対して]
+
+Anm. 1)
+Nagel, Über kompensatorische Raddrehungen der Augen. Zeitschr. f. Psychol. u. Physiol. der Sinnesorgane, Bd. 12, S. 338.
+
+【補】ナーゲル「眼球の代償的車軸回転について」『感覚器官の心理学・生理学雑誌』第12巻、338頁。
+
+注2）[§5、ブロイアーとクライドルに対して]
+
+Anm. 2)
+Breuer u. Kreidl, Über scheinbare Drehung des Gesichtsfeldes während der Einwirkung einer Zentrifugalkraft. Pflügers Archiv, Bd. 70, S. 494. solchen Verhältnissen wahrgenommen wird, beruht also auf einer wirklichen unbewußten Drehung der Augen." Ich muß hier ferner noch zweier Arbeiten über kompensierende Augenbewegungen gedenken, welche von Crum Brown¹) herrühren.
+
+【補】ブロイアーおよびクライドル「遠心力作用中の視野の見かけの回転について」『プフリューガース・アルヒーフ』第70巻、494頁。〔遠心力などの条件下で知覚される視野回転が実際の無意識的眼球回転に基づくことの叙述に続き〕さらに私は、クルム・ブラウン¹⁾に由来する代償的眼球運動に関する二つの研究にもここで言及しなければならない。
+
+注1）[§5/§6、クルム・ブラウンに対して]
+
+Anm. 1)
+Crum Brown, Note on normal nystagmus. Proceedings of the Royal Society of Edinburgh, February 4, 1895. — The relation between the movements of the eyes and the movements of the head. Robert Boyle lecture, May 13, 1895.
+
+【補】クルム・ブラウン「正常眼振についての覚書」『エディンバラ王立協会紀要』1895年2月4日。——「目の運動と頭の運動の関係」ロバート・ボイル講演、1895年5月13日。
+
+注1）[§6、単眼立体視に対して]
+
+Anm. 1)
+Vgl. meine „Beobachtungen über monokulare Stereoskopie". Sitzungsberichte der Wiener Akademie (1868), Bd. 58.
+
+【補】私の「単眼立体視に関する観察」参照。『ウィーン学術院報告』（1868年）第58巻。
+
+注2）[§7、ロック/バークリー/ディドロに対して]
+
+Anm. 2)
+Die Ansicht, daß Gesichtssinn und Tastsinn sozusagen denselben Raumsinn als gemeinsamen Bestandteil enthalten, ist von Locke aufgestellt, von Berkeley wieder bestritten worden. Auch Diderot ist (Lettre sur les aveugles) der Ansicht, daß der Raumsinn des Blinden von jenem des Sehenden gänzlich verschieden ist. Man vgl. hierüber die scharfsinnigen Ausführungen von Dr. Th. Loewy (Common sensibles. Die Gemein-Ideen des Gesichts- und Tastsinnes nach Locke und Berkeley, Leipzig 1884), deren Resultat ich übrigens nicht beistimmen kann. Der Umstand, daß ein Blindgeborner nach der Operation, bei dem von Molyneux vorgeschlagenen Experiment, den ihm durch das Getast wohlbekannten Würfel und die ebenso bekannte Kugel, durch das Gesicht nicht unterscheidet, beweist für mich gar nichts gegen Locke und nichts für Berkeley und Diderot. Auch der Sehende erkennt die einfach umgekehrte Figur erst nach mehrfacher Übung. Es fehlen eben bei Beginn des Sehens alle auf das Optische bezüglichen Assoziationen zur intellektuellen Verwertung desselben. Hierzu kommt noch, daß bei dauerndem Fehlen optischer Reize in früher Jugend die Entwicklung der zentralen Sehsphäre ausbleibt oder vielleicht sogar Rückbildung eintritt, wie dies aus den schönen Beobachtungen von Schnabel und aus den Experimenten von Munk an neugeborenen Hunden hervorgeht. Auch bei nicht eigentlichen Blinden kann die Sehsphäre so wenig entwickelt sein, daß dieselben nur durch eine besondere Anleitung zur Verwertung ihrer Gesichtsempfindungen erzogen werden können. Der vom Blindeninstituts-Direktor Herrn S. Heller vorgestellte Knabe ist wahrscheinlich ein solcher Fall von partiellem (optischem) Idiotismus. Aus dem Verhalten operierter Blindgeborener sind also nur mit größter Vorsicht Schlüsse zu ziehen.
+
+【補】視覚と触覚がいわば同じ空間感覚を共通の構成要素として含むという見解はロックによって立てられ、バークリーによって再び争われた。ディドロもまた（『盲人についての書簡』において）盲人の空間感覚は見える人のそれとはまったく異なるという意見である。これについてはTh・ロェーヴィ博士の鋭い論述（『共通感覚。ロックとバークリーによる視覚と触覚の共通観念』ライプツィヒ、1884年）を参照されたい。もっとも、その結論には私は同意できない。先天性盲人が手術後に、モリヌーが提案した実験において、触覚でよく知っている立方体や球体を視覚によっては区別できないという事実は、私にはロックに反する証拠にも、バークリーやディドロに有利な証拠にもまったくならない。見える人でも単に反転した図形を認識するには何度かの練習を要する。視覚の開始時には光学に関わるあらゆる連合——それを知的に利用するための——が欠けているのである。これに加えて、幼年期に光学的刺激が持続的に欠如すると、中枢視覚野の発達が起こらず、おそらく退行さえ生じる。このことはシュナーベルの優れた観察と、ムンクの新生仔犬についての実験から明らかである。本来の盲目でなくても視覚野がきわめて未発達で、視覚感覚の利用のために特別な指導によって教育されなければならない場合もある。盲人施設所長ヘラー氏が紹介した少年は、おそらくそのような部分的（光学的）白痴の事例である。手術された先天性盲人のふるまいからは、したがって最大限の注意をもってのみ結論を引き出すべきである。
+
+注1）[§8、運動感覚論に対して]
+
+Anm. 1)
+Grundlinien der Lehre von den Bewegungsempfindungen. Leipzig, Engelmann, 1875, S. 83.
+
+【補】『運動感覚の学説の基本線』ライプツィヒ、エンゲルマン、1875年、83頁。
+
+注2）[§8、同書に対して]
+
+Anm. 2)
+a. a. O. S. 124.
+
+【補】同書、124頁。
+
+注3）[§8、リールに対して]
+
+Anm. 3)
+Riehl, Der philosophische Kritizismus, Bd. 2, S. 143.
+
+【補】リール『哲学的批判主義』第2巻、143頁。
+
+注1）[§8、運動感覚論26頁に対して]
+
+Anm. 1)
+Bewegungsempfindungen S. 26.
+
+【補】『運動感覚論』26頁。
+
+注2）[§8、ブロイアーの耳石に対して]
+
+Anm. 2)
+Breuer, Über die Funktion des Otholithen-Apparates. Pflügers Archiv, Bd. XLVI, S. 195.
+
+【補】ブロイアー「耳石装置の機能について」『プフリューガース・アルヒーフ』第XLVI巻、195頁。
+
+注1）[§8、運動感覚論96頁に対して]
+
+Anm. 1)
+Bewegungsempfindungen, S. 96, Versuch 2.
+
+【補】『運動感覚論』96頁、実験2。
+
+注2）[§8、同書116頁に対して]
+
+Anm. 2)
+a. a. O. 116 u. fg.
+
+【補】同書、116頁以下。
+
+注1）[§8、同書122頁に対して]
+
+Anm. 1)
+a. a. O. S. 122 (10).
+
+【補】同書、122頁（10）。
+
+注2）[§8、同書85頁に対して]
+
+Anm. 2)
+a. a. O. S. 85.
+
+【補】同書、85頁。
+
+注3）[§9、列車/汽船の印象に対して]
+
+Anm. 3)
+Derartige Eindrücke erhält man bekanntlich in der mannigfaltigsten Form, wenn man sich zwischen mehreren teils bewegten, teils ruhenden Eisenbahnzügen befindet. — Als ich einmal auf der Elbe mittels Dampfschiffs einen Ausflug unternahm, hatte ich unmittelbar vor der Landung den überraschenden Eindruck, als ob das Schiff stünde, und die ganze Landschaft sich demselben entgegenbewegte, was nach den folgenden Auseinandersetzungen unschwer verständlich ist.
+
+【補】周知のように、一部が動き一部が静止する複数の列車の間にいると、このような印象がもっとも多様な形で得られる。——あるときエルベ川を汽船で遊覧した際、上陸直前に、船が止まっていて風景全体が船に向かって動いてくるという驚くべき印象を受けた。これは以下の議論から容易に理解される。
+
+注1）[§9、ジェイムズに対して]
+
+Anm. 1)
+W. James, Principles of Psychology, II, 512 ff.
+
+【補】W・ジェイムズ『心理学原理』第II巻、512頁以下。
+
+注2）[§9、クルム・ブラウンの眼振に対して]
+
+Anm. 2)
+Crum Brown, On normal Nystagmus. Vergl. S. 109 dieser Schrift.
+
+【補】クルム・ブラウン「正常眼振について」本書109頁参照。
+
+注1）[§11、娘の降雪体験に対して]
+
+Anm. 1)
+Derartige Erscheinungen treten oft ganz ungesucht auf. Als einmal im Winter bei Windstille und starkem Schneefall meine kleine Tochter am Fenster stand, rief sie plötzlich, sie steige mit dem ganzen Hause in die Höhe.
+
+【補】このような現象はしばしばまったく意図せずに生じる。ある冬の無風の大雪の日、小さな娘が窓辺に立っていたとき、突然家ごと上に昇っていくと叫んだ。
+
+注2）[§11、運動感覚論/シリに対して]
+
+Anm. 2)
+Bewegungsempfindungen, S. 85. — Neuere Versuche bei A. v. Szily, Bewegungsnachbild und Bewegungskontrast. Zeitschr. f. Psychol. u. Physiol. d. Sinnesorgane, 1905, Bd. 38, S. 81.
+
+【補】『運動感覚論』85頁。——A・v・シリによる新しい実験「運動残像と運動対比」『感覚器官の心理学・生理学雑誌』1905年、第38巻、81頁。
+
+注1）[§14、ビールに対して]
+
+Anm. 1)
+Über die intrakranielle Durchtrennung des N. vestib. und deren Folgen von Karl Biehl. Sitzungsb. d. K. Akad. d. W. in Wien. 1900.
+
+【補】カール・ビール「前庭神経の頭蓋内切断とその結果について」ウィーン帝国学術院報告、1900年。
+
+注2）[§14、ブロイアーの前庭研究に対して]
+
+Anm. 2)
+J. Breuer, Studien über den Vestibularapparat. Sitzungsber. d. K. Akad. d W. in Wien. Bd. CXII. 1903.
+
+【補】J・ブロイアー「前庭器官に関する研究」ウィーン帝国学術院報告、第CXII巻、1903年。
+
+注1）[§14、ブロイアーl.c.に対して]
+
+Anm. 1)
+l. c. -- 129 --
+
+【補】前掲書、129頁。
+
+注1）[§15、プレンティスに対して]
+
+Anm. 1)
+The otocyst of Decapod Crustacea, its structure, development and functions. Bulletin of the Mus. of compar. Zool. at Harvard College. 1900/01. (Zitiert nach Kreidl.)
+
+【補】「十脚甲殻類の耳胞——その構造、発生および機能」ハーヴァード大学比較動物学博物館報。1900/01年。（クライドルによる引用。）
+
+注2）[§15、シェーファーに対して]
+
+Anm. 2)
+K. L. Schaefer, Funktion und Funktionsentwicklung der Bogengänge. Zeitschr. f. Psych. u. Phys. d. Sinnesorgane. 1894.
+
+【補】K・L・シェーファー「半規管の機能と機能発達」『感覚器官の心理学・生理学雑誌』1894年。
+
+注1）[§15、アッハに対して]
+
+Anm. 1)
+Ach, Über die Otolithenfunktion und Labyrinthtonus. Pflüger's Arch., Bd. LXXXVI, 1900.
+
+【補】アッハ「耳石機能と迷路緊張について」『プフリューガース・アルヒーフ』第LXXXVI巻、1900年。
+
+注1）[§16、ジェイムズに対して]
+
+Anm. 1)
+James, Americ. Journ. of otology 1887.
+
+【補】ジェイムズ『アメリカ耳科学雑誌』1887年。
+
+注2）[§16、クライドルに対して]
+
+Anm. 2)
+A. Kreidl, Beiträge zur Physiologie des Ohrlabyrinths auf Grund von Versuchen bei Taubstummen. Pflügers Archiv, Bd. LI.
+
+【補】A・クライドル「聾唖者における実験に基づく耳迷路の生理学への寄与」『プフリューガース・アルヒーフ』第LI巻。
+
+注3）[§16、ポラックに対して]
+
+Anm. 3)
+J. Pollak, Über den galvanischen Schwindel bei Taubstummen etc. Pflügers Archiv, Bd. LIV.
+
+【補】J・ポラック「聾唖者におけるガルヴァーニ性めまいについて他」『プフリューガース・アルヒーフ』第LIV巻。
+
+注4）[§16、ミュギントに対して]
+
+Anm. 4)
+H. Mygind, Über die pathologisch-anatomischen Veränderungen der Gehörorgane Taubstummer. A. f. O., Bd. XXV.
+
+【補】H・ミュギント「聾唖者の聴覚器官の病理解剖学的変化について」『耳科学紀要』第XXV巻。
+
+注1）[§16、アレクサンダーとクライドルの舞踏マウスに対して]
+
+Anm. 1)
+Alexander und Kreidl zur Physiologie des Labyrinthes der Tanzmaus. Pflüger's Arch. I, II, III, Bd. LXXXII, LXXXVIII.
+
+【補】アレクサンダーおよびクライドル「舞踏マウスの迷路の生理学に寄せて」『プフリューガース・アルヒーフ』I、II、III、第LXXXII巻、第LXXXVIII巻。
+
+注2）[§17、ドライフスに対して]
+
+Anm. 2)
+Dreyfuß, Experim. Beiträge z. d. Lehre von der nichtakust. Funktion des Ohrlabyrinthes. Pflüger's Arch. Bd. LXXXI. drehung der Wirbelsäulelängsachse und keinen Kopf- oder Augennystagmus. Die Drehung kommt ihm nicht zum Bewußtsein. Dies beweist der folgende, von Dreyfuss angestellte Freßversuch. Bringt man vier Meerschweinchen, und zwar ein normales, eines, dem das linke, eines, dem das rechte, und endlich eines, dem beide Labyrinthe zerstört worden sind, auf die Drehscheibe und wartet, bis alle zu fressen beginnen, so hört das normale Tier während der Rotation zu fressen auf, das rechtsseitig operierte frißt bei Rechtsdrehung weiter, hört bei Linksdrehung auf; das linksseitig operierte frißt bei Linksdrehung weiter und hört bei Rechtsdrehung auf; das beiderseitig labyrinthlose frißt bei jeder Drehungsrichtung. — Zu analogen Resultaten kamen Breuer und Kreidl bei vergleichenden Versuchen mit normalen und akustikuslosen Katzen.
+
+【補】ドライフス「耳迷路の非聴覚的機能に関する学説への実験的寄与」『プフリューガース・アルヒーフ』第LXXXI巻。〔両側の迷路を除去された動物は脊柱長軸の捻転も頭・眼の眼振も示さない。回転が意識にのぼらない。このことは、ドライフスが行った次の採食実験によって証明される。正常なもの、左の迷路を、右の迷路を、そして両方の迷路を破壊された四匹のモルモットを回転盤に乗せ、全員が食べ始めるまで待つ。すると正常な動物は回転中に食べるのをやめ、右側手術のものは右回転では食べ続け左回転ではやめ、左側手術のものは左回転では食べ続け右回転ではやめ、両側迷路のないものはどちらの回転方向でも食べ続ける。——ブロイアーとクライドルは、正常ネコと聴神経のないネコの比較実験で類似の結果を得た。〕
+
+注1）[§18、アレクサンダーの系統発生学的研究に対して]
+
+Anm. 1)
+G. Alexander, Zur Frage der phylogenetischen Ausbildung der Sinnesorgane. Zeitschr. f. Psych. u. Phys. der Sinnesorgane. Bd. XXXVIII. wird, so daß — wie vor allem Ewald gezeigt hat — die gröberen Funktionen der Gleichgewichtserhaltung, das Gehen und Stehen trotz Verlust oder bei angeborenem Mangel der Labyrinthfunktion in genügender Weise ausgeübt werden. Das sehen wir, wie an operierten Tieren, auch an jenen Taubstummen, bei denen wir mit Grund eine Schädigung des Bogengangsystems annehmen" (Breuer). — Allerdings haben James und Kreidl gezeigt, daß jene Taubstummen, die keinen Drehschwindel bekommen, in allen feineren Aufgaben der Balanzierung sehr ungeschickt sind. Im Gegensatze hierzu zeigt uns nun Alexander, daß beim Maulwurfe, der sich zwar auf fester Grundlage, jedoch zumeist unterirdisch bewegt und außerdem ziemlich vollständig der Orientierung durch das Sehorgan entbehrt, diese reichlich kompensiert wird durch eine ausgezeichnete Aequilibrierung. Diese ist anatomisch ausgedrückt durch die besondere Größe der Nervenendzellen, der relativen Zunahme der Anzahl der Sinneszellen, und insbesondere durch das Vorhandensein einer Macula neglecta im Sinus utricular inferior, die den übrigen Säugetieren fehlt, und, von den Vögeln und Reptilien abgesehen, nur an einem anderen niederen Säuger — Echidna aculeata — gefunden worden ist. — Es ist ein Verdienst Alexander's, nachgewiesen zu haben, daß Echidna, was den Bau ihrer statischen Nervenendzellen betrifft, den bisher nicht bekannten Übergang von Säugern zu Vögeln herstellt. Die Echidna besitzt ein Cortisches Organ, das im histologischen Bau mit dem der Säuger übereinstimmt, in der Anzahl der übrigen Nervenendstellen deckt sie sich aber mit dem Vogellabyrinth, sie zeigt neben drei makularen Nervenendstellen (Macula utriculi, Macula sacculi und Macula lagenae) eine Macula neglecta Retzii. —
+
+【補】G・アレクサンダー「感覚器官の系統発生的形成の問題に寄せて」『感覚器官の心理学・生理学雑誌』第XXXVIII巻。〔エヴァルトがとりわけ示したように、平衡維持のより粗大な機能——歩行と起立——は、迷路機能の喪失時や先天的欠如においても十分に遂行される。これは手術された動物においても、半規管系の損傷を根拠をもって推定しうる聾唖者においても見られる（ブロイアー）。——もっとも、ジェイムズとクライドルは、回転性めまいを生じない聾唖者が均衡のより精密な課題においてはきわめて不器用であることを示した。これとは対照的に、アレクサンダーは、モグラにおいて——固い地盤の上ではあるがほとんど地下で移動し、しかも視覚器官による方位をほぼ完全に欠いている——この欠如が卓越した平衡能力によって十分に補償されることを示す。これは解剖学的には神経終末細胞の特別な大きさ、感覚細胞数の相対的増加、とりわけ他の哺乳類には欠け、鳥類と爬虫類を除けば他の一つの下等哺乳類——ハリモグラ（Echidna aculeata）——にのみ見出された下球形嚢洞における遺棄斑（Macula neglecta）の存在によって表現される。——ハリモグラが、その静的神経終末細胞の構造に関して哺乳類から鳥類へのこれまで知られていなかった移行を示すことを証明したのはアレクサンダーの功績である。ハリモグラは組織学的構造において哺乳類と一致するコルチ器官を持つが、その他の神経終末部位の数においては鳥類迷路と一致し、三つの斑状神経終末部位（卵形嚢斑、球形嚢斑、ラゲーナ斑）に加えてレツィウスの遺棄斑を示す。〕
+
+注1）[§20、三匹の動物の比喩に対して]
+
+Anm. 1)
+Wenn ich einen kleinen Vogel mit der Hand anfassen will, so benimmt er sich dieser Hand gegenüber gerade so, wie sich etwa ein Mensch gegen einen riesigen Tintenfisch verhalten würde. — Bei Betrachtung einer Gesellschaft kleiner Kinder, deren Bewegungen noch wenig überlegt und geübt sind, machen namentlich die Hände und die Augen sehr stark den Eindruck polypenartiger Wesen. Selbstverständlich können solche Eindrücke keine wissenschaftliche Frage entscheiden, es kann aber sehr anregend sein, sich denselben zeitweilig hinzugeben.
+
+【補】小さな鳥を手でつかもうとすると、鳥はその手に対して、人間が巨大なタコに対してふるまうであろうのとまったく同じようにふるまう。——まだほとんど考慮も練習もされていない動作をする幼い子どもたちの一群を観察すると、とりわけ手と目がポリプ（腔腸動物）のような生物であるという印象をきわめて強く与える。もちろんこのような印象は科学的問題を決定することはできないが、一時的にそれに身を委ねることはきわめて示唆に富みうる。
+
+注2）[§20、ヘーリング/ジェイムズ/ミュンスターベルクに対して]
+
+Anm. 2)
+Vergl. die Ansicht von Hering in Hermann's Handbuch der Physiologie, Bd. 3, 1. T., S. 547. — Ich will den Weg, der mich zu meiner Auffassung geführt hat, nicht verbergen, wenn mir auch jetzt die von James, Münsterberg und Hering vertretene, in Kapitel VIII dargelegte Ansicht die bessere scheint.
+
+【補】ヘルマン編『生理学ハンドブック』第3巻第1部、547頁のヘーリングの見解を参照。——私を自分の見解に導いた道筋を隠すつもりはないが、今では、ジェイムズ、ミュンスターベルクおよびヘーリングによって代表され第VIII章で述べる見解の方が優れているように思われる。
+
+注1）[§22、空間座標と神経支配に対して]
+
+Anm. 1)
+Dies ist der Punkt, auf welchen oben (S. 101 Anmerkung 1 und S. 114) hingewiesen wurde.
+
+【補】これが上述の（101頁注1および114頁で）指摘された論点である。
+
+注2）[§22、片眼者の対称感覚に対して]
+
+Anm. 2)
+Hiermit verschwindet auch die Schwierigkeit, die ich noch 1871 empfand, und in meinem Vortrag über „die Symmetrie", Prag, Calve, 1872, mit den Worten aussprach: „Wenn nun auch von Geburt Einäugige ein gewisses Gefühl für Symmetrie haben, so ist dies freilich ein Rätsel. Freilich kann das Symmetriegefühl, wenn auch zunächst durch die Augen erworben, nicht auf diese beschränkt bleiben. Es muß sich wohl auch noch in andern Teilen des Organismus durch mehrtausendjährige Übung des Menschengeschlechtes festsetzen und kann dann nicht mit dem Verlust des einen Auges sofort wieder verschwinden." (Abgedruckt in: Populär-wissenschaftliche Vorlesungen, 3. Aufl., S. 109.) — In der Tat bleibt der symmetrische Innervationsapparat, auch wenn das eine Auge verloren geht.
+
+【補】これによって、1871年に私がなお感じていた困難も消失する。私は「対称性について」の講演（プラハ、カルヴェ、1872年）で次のように述べていた。「生まれつき片目の人でも対称性についてのある種の感覚を持っているとすれば、これはたしかに謎である。もちろん対称性の感覚は、たとえ最初は目を通して獲得されたとしても、目に限定されたままではいられない。人類の数千年にわたる練習によって有機体の他の部分にも定着し、したがって片方の目の喪失とともにただちに再び消失することはありえないだろう。」（『通俗科学講演集』第3版、109頁に収録。）——実際、対称的な神経支配装置は、たとえ片方の目が失われても残るのである。

@@ -1,0 +1,447 @@
+Kapitel XIV · 第ⅩⅣ章
+Einfluß der vorausgehenden Untersuchungen auf die Auffassung der Physik
+以上の研究が物理学の把握に及ぼす影響
+
+【移】これまでの研究から物理学はどんな収穫を得るのか？
+
+§1
+
+Wir sind über irgend einen Naturvorgang, z. B. ein Erdbeben, so vollständig als möglich unterrichtet, wenn unsere Gedanken uns die Gesamtheit der zusammengehörigen sinnlichen Tatsachen so vorführen, daß sie fast als Ersatz derselben angesehen werden können, daß uns die Tatsachen selbst als bekannte entgegentreten, daß wir durch dieselben nicht überrascht werden. Wenn wir in Gedanken das unterirdische Dröhnen hören, die Schwankung fühlen, die Empfindung beim Heben und Senken des Bodens, das Krachen der Wände, das Abfallen des Anwurfs, die Bewegung der Möbel und Bilder, das Stehenbleiben der Uhren, das Klirren und Springen der Fenster, das Verziehen der Türstöcke und Festklemmen der Türen uns vergegenwärtigen, wenn wir die Welle, die durch den Wald wie durch ein Kornfeld zieht, und die Äste bricht, die in eine Staubwolke gehüllte Stadt im Geiste sehen, die Glocken ihrer Türme anschlagen hören, wenn uns auch noch die unterirdischen Vorgänge, welche zur Zeit noch unbekannt sind, sinnlich so vor Augen stehen, daß wir das Erd- beben herankommen sehen wie einen fernen Wagen, bis wir endlich die Erschütterung unter den Füßen fühlen, so können wir mehr Einsicht nicht verlangen. Können wir auch die Teiltatsachen nicht in dem richtigen Ausmaß kombinieren ohne gewisse (mathematische) Hilfsvorstellungen oder geometrische Konstruktionen, so ermöglichen letztere unseren Gedanken doch nur nach und nach zu leisten, was sie nicht auf einmal vermögen. Diese Hilfsvorstellungen wären aber wertlos, wenn wir mit denselben nicht bis zur Darstellung der sinnlichen Tatsachen vordringen könnten.
+
+【移】我々はある自然の過程——例えば地震——について、思考が関連する感覚的事実の総体をあたかもその代替として提示できるほどに、事実そのものが既知のものとして我々に立ち現れ、我々がそれらに驚かされないほどになったとき、可能な限り完全に知っているのである。思考の中で地下の轟音を聴き、揺れを感じ、床の上下動の感覚を知り、壁のひび割れ、漆喰の剥落、家具や絵の動き、時計の停止、窓のがたつきと割れ、扉枠の歪みと扉の固着を思い浮かべ、穀物畑を通り過ぎるように森を通り過ぎ枝を折る波を、粉塵に包まれた街を、鐘の鳴る塔を心に描き、地下の過程もまた——現在はまだ未知であるが——感覚的に目の前に現れ、地震が遠くの馬車のように近づいてくるのを見、ついに足下の揺れを感じる。それ以上の洞察は求められない。
+
+【移】部分的事実を正しい規模で組み合わせるためにある種の（数学的な）補助表象あるいは幾何学的構成が必要だとしても、それらは思考の力で一度にはできないことを段階的に可能にするためのものにすぎない。しかしこれらの補助表象も、それによって感覚的事実の描写にまで到達できなければ、無価値であろう。
+
+Wenn ich das auf ein Prisma fallende weiße Lichtbündel in Gedanken als Farbenfächer austreten sehe mit bestimmten Winkeln, die ich voraus bezeichnen kann, wenn ich das reelle Spektralbild sehe, das beim Vorsetzen einer Linse auf einen Schirm entsteht, darin die Fraunhoferschen Linien an voraus bekannten Stellen, wenn ich im Geiste sehe, wie sich die letzteren verschieben, sobald das Prisma gedreht wird, sobald ein dasselbe berührendes Thermometer seinen Stand ändert, so weiß ich alles, was ich verlangen kann. Alle Hilfsvorstellungen, Gesetze, Formeln sind nur das quantitative Regulativ meiner sinnlichen Vorstellung. Diese ist das Ziel, jene sind die Mittel.
+
+【補】プリズムに当たった白い光束が特定の角度で色の扇のように出てくるのを思考の中で見、レンズを置いたスクリーン上に実スペクトル像が現れるのを見、その中にフラウンホーファー線があらかじめ知られた位置にあるのを見、プリズムを回転させたりプリズムに触れた温度計の示度が変わったりするとそれらが移動するのを心の中で見るとき、私は求めうるすべてを知っている。
+
+【補】すべての補助表象、法則、公式は、我々の感覚的表象の量的な規整にすぎず、感覚的表象が目標であり、それらは手段である。
+
+Die Anpassung der Gedanken an die Tatsachen ist also das Ziel aller naturwissenschaftlichen Arbeit. Die Wissenschaft setzt hier nur absichtlich und bewußt fort, was sich im täglichen Leben unvermerkt von selbst vollzieht. Sobald wir der Selbstbeobachtung fähig werden, finden wir unsere Gedanken den Tatsachen schon vielfach angepaßt vor. Die Gedanken führen uns die Elemente in ähnlichen Gruppen vor, wie die sinnlichen Tatsachen. Der begrenzte Gedankenvorrat reicht aber nicht für die fortwährend wachsende Erfahrung. Fast jede neue Tatsache bringt eine Fortsetzung der Anpassung mit sich, die sich im Prozeß des Urteilens äußert.
+
+【移】思考の事実への適応——これこそがすべての自然科学的営為の目標である。科学はただ、日常生活の中で自然に行われていることを、意図的かつ意識的に続けるにすぎない。
+
+【移】自己観察が可能になった時点で、我々の思考はすでに多くの点で事実に適応しているのを見出す。しかし限られた思考の蓄えは、絶えず増大する経験には足りない。ほとんどすべての新しい事実が、適応のさらなる継続をもたらす。それが判断の過程に表れる。
+
+Man kann diesen Vorgang an Kindern sehr gut beobachten. Ein Kind kommt zum erstenmal aus der Stadt aufs Land, etwa auf eine große Wiese, sieht sich da nach allen Seiten um, und spricht verwundert: „Wir sind in einer Kugel. Die Welt ist eine blaue Kugel ¹)". Hier haben wir zwei Urteile. Was geht vor, indem dieselben gebildet werden? Die fertige sinnliche Vor- stellung „wir" (die begleitende Gesellschaft) wird durch die ebenfalls schon vorhandene Vorstellung einer Kugel zu einem Bilde ergänzt. Ähnlich wird in dem zweiten Urteil das Bild der „Welt" (alle Gegenstände der Umgebung) durch die einschließende blaue Kugel (deren Vorstellung auch schon vorhanden war, weil sonst der Name gefehlt hätte) ebenfalls ergänzt. Ein Urteil ist also immer eine Ergänzung einer sinnlichen Vorstellung zur vollständigeren Darstellung einer sinnlichen Tatsache. Ist das Urteil in Worten ausdrückbar, so besteht es sogar immer in einer Zusammensetzung der neuen Vorstellung aus schon vor- handenen Erinnerungsbildern, welche auch beim Angesprochenen durch Worte hervorgelockt werden können.
+
+【移】この過程は子どもにおいてきわめてよく観察できる。子どもがはじめて街から田舎の大きな草原に出て、四方を見回し、驚いて言う。「私たちは球の中にいる！」「世界は青い球だ！」——ここに二つの判断がある。これらの判断が形成される際に何が起こるのか。「私たち」（付き添いの人々）という既成の感覚的表象が、同じくすでに持っていた「球」の表象によって一つの像に補完される。同様に第二の判断では、「世界」（周囲のあらゆる対象）の像が、それを包む青い球——その表象もすでに持っていたはずである、さもなければその名前がなかったであろうから——によって補完される。判断とは常に、ある感覚的表象を、感覚的事実のより完全な描写へと補完することなのである。判断が言葉で表現可能な場合、それはつねに、すでに持っている記憶像から新しい表象を組み立てることであり、その記憶像は相手においても言葉によって呼び起こすことができるものである。
+
+Der Prozeß des Urteilens besteht also hier in einer Be- reicherung, Erweiterung, Ergänzung sinnlicher Vorstellungen durch andere sinnliche Vorstellungen unter Leitung der sinn- lichen Tatsache. Ist der Prozeß vorbei und das Bild geläufig geworden, tritt es als fertige Vorstellung ins Bewußtsein, so haben wir es mit keinem Urteil, sondern nur mehr mit einer einfachen Erinnerung zu tun ²). Das Wachstum der Naturwissenschaft und der Mathematik beruht größtenteils auf der Bildung solcher intuitiver Erkenntnisse (wie sie Locke nennt). Betrachten wir z. B. die Sätze: „1. Der Baum hat eine Wurzel. 2. Der Frosch hat keine Klauen. 3. Aus der Raupe wird ein Schmetterling. 4. Verdünnte Schwefelsäure löst Zink. 5. Reibung macht das Glas elektrisch. 6. Der elektrische Strom lenkt die Magnetnadel ab. 7. Der Würfel hat 6 Flächen, 8 Ecken, 12 Kanten." Der erste Satz enthält eine räumliche Erweiterung der Baumvorstellung, der 2. die Korrektur einer nach der Gewohnheit zu voreilig vervollständigten Vorstellung, der 3., 4., 5. und 6. enthalten zeitlich erweiterte Vorstellungen. Der 7. Satz gibt ein Beispiel der geometrischen intuitiven Erkenntnis.
+
+【補】判断の過程は、ある感覚的表象を、感覚的事実の導きの下に、他の感覚的表象によって豊かにし、拡張し、補完することにある。この過程が終わり、像が馴染み深くなって既成の表象として意識に現れるようになれば、もはや判断ではなく、ただの記憶にすぎない。
+
+【移】自然科学と数学の成長は、大部分こうした直観的認識——ロックがそう呼ぶもの——の形成に基づいている。
+
+【補】次の命題を考えてみよう。「一、木には根がある。二、蛙には爪がない。三、芋虫は蝶になる。四、希硫酸は亜鉛を溶かす。五、摩擦でガラスは帯電する。六、電流は磁針を偏向させる。七、立方体は六つの面、八つの頂点、十二の辺を持つ。」第一の命題は木の表象の空間的拡張を含み、第二は習慣に基づき早まって補完された表象の修正を含み、第三・四・五・六は時間的に拡張された表象を含む。第七は幾何学的な直観的認識の例を示している。
+
+§2
+
+Derartige intuitive Erkenntnisse prägen sich dem Gedächtnis ein und treten als jede gegebene sinnliche Tatsache spontan ergänzende Erinnerungen auf. Die verschiedenen Tatsachen gleichen sich nicht vollständig. Die verschiedenen Fällen gemeinsamen Bestandteile der sinnlichen Vorstellung werden aber gekräftigt, und es kommt dadurch ein Prinzip der möglichsten Verallgemeinerung oder Kontinuität in die Erinnerung. Anderseits muß die Erinnerung, soll sie der Mannigfaltigkeit der Tatsachen gerecht werden, und überhaupt nützlich sein, dem Prinzip der zureichenden Differenzierung entsprechen. Schon das Tier wird durch lebhaft rot und gelb gefärbte (ohne Anstrengung am Baum sichtbare) weiche Früchte an deren süßen, durch grüne (schwer sichtbare) harte Früchte an deren saueren Geschmack erinnert werden. Der Insekten jagende Affe hascht nach allem, was schwirrt und fliegt, hütet sich aber vor der gelb und schwarz gefleckten Wespe, der in den Anfängen der Kultur und der Sprachbildung anthropomorphische Vorstellungen großen Einfluß üben. In diesen Beispielen spricht sich deutlich genug das Bestreben nach möglichster Verallgemeinerung und Kontinuität, sowie nach praktisch zureichender Differenzierung der Erinnerung aus. Und beide Tendenzen werden durch dasselbe Mittel, die Aussonderung und Hervorhebung jener Bestandteile der sinnlichen Vorstellung, erreicht, welche für den zur Erfahrung passenden Gedankenlauf maß- gebend sind. Ganz analog verfährt der Physiker, wenn er verallgemeinernd sagt, „alle durchsichtigen starren Körper brechen das aus der Luft einfallende Licht zum Lote", und wenn er differenzierend hinzufügt, „die tesseral krystallisierten und amorphen einfach, die übrigen doppelt".
+
+【移】直観的認識は記憶に刻まれ、新たな感覚的事実に対して自発的に補完する記憶として現れる。異なる事実は互いに完全には一致しないが、共通する構成部分は強化される。ここに、できうる限りの一般化（連続性）の原理が記憶の中に入り込む。他方、事実の多様性に応えるには、記憶は十分な分化の原理にも従わねばならない。
+
+【移】動物でさえ、鮮やかに赤や黄に色づいた（苦労なく木の上に見える）柔らかい果実は甘い味を想起させ、緑の（見えにくい）硬い果実は酸っぱい味を想起させる。昆虫を追う猿はぶんぶん飛ぶものに何でも飛びかかるが、黄と黒の斑のある蜂——文化の始まりと言語形成において擬人的表象が大きな影響を及ぼすものである——は避ける。これらの例に、できうる限りの一般化と連続性、そして実際的に十分な記憶の分化への志向が、十分明瞭に表れている。そしてこの両方の傾向は同じ手段によって達成される——感覚的表象の構成部分のうち、経験に適合する思考の流れにとって決定的なものを選り出し、際立たせることによって。物理学者が一般化して「すべての透明な固体は空気から入る光を法線の方へ屈折させる」と言い、分化的に「正方晶系および非晶質のものは単屈折、それ以外は複屈折する」と付加するのも、まったく同じ営みである。
+
+§3
+
+Ein guter Teil der Gedankenanpassung vollzieht sich un- bewußt und unwillkürlich unter Leitung der sinnlichen Tatsachen. Ist diese Anpassung ausgiebig genug geworden, um der Mehr- zahl der auftretenden Tatsachen zu entsprechen, und stoßen wir nun auf eine Tatsache, welche mit unserm gewohnten Gedanken- lauf in starkem Widerstreit steht, ohne daß man sofort das maß- gebende Moment zu erschauen vermöchte, welches zu einer neuen Differenzierung führen würde, so entsteht ein Problem. Das Neue, das Ungewöhnliche, das Wunderbare wirkt als Reiz, welcher die Aufmerksamkeit auf sich zieht. Praktische Gründe, oder das intellektuelle Unbehagen allein, können den Willen zur Beseitigung des Widerstreites, zur neuen Gedankenanpassung er- zeugen. So entsteht die absichtliche Gedankenanpassung, die Forschung. Wir sehen z. B. einmal ganz gegen unsere Gewohnheit, daß an einem Hebel oder Wellrad eine große Last durch eine kleine gehoben wird. Wir suchen nach dem differenzierenden Moment, welches uns die sinnliche Tatsache nicht unmittelbar zu bieten vermag. Erst wenn wir, verschiedene ähnliche Tat- sachen vergleichend, den Einfluß der Gewichte und der Hebelarme bemerkt, und uns selbsttätig zu den abstrakten Begriffen Moment oder Arbeit erhoben haben, ist das Problem gelöst. Das Moment oder die Arbeit ist das differenzierende Element. Ist die Beachtung des Momentes oder der Arbeit zur Denkgewohnheit geworden, so existiert das Problem nicht mehr.
+
+【移】思考の適応の大部分は、感覚的事実の導きのもとに無意識的・不随意的に行われる。この適応が、出現するほとんどの事実に対応できるほど広くなったところで、習慣化した思考の流れと激しく矛盾する事実に遭遇し、しかもただちに新たな分化へ導く決定的な契機が見出せないとき——問題が生まれる。
+
+【移】新しいもの、異常なもの、驚くべきものは、注意を引きつける刺激として働く。実際的理由や知的な不快感だけが、矛盾の解消への意志を、新たな思考適応への意志を生み出しうる。こうして意図的な思考適応、すなわち研究が生まれる。
+
+【補】例えば、てこや揚力装置で大きな荷重が小さな力で持ち上がるのを、まったく予期に反して目にする。感覚的事実が直接には提供しえない分化の契機を探し求める。さまざまな類似の事実を比較して重さと腕の長さの影響に気づき、みずからモーメントあるいは仕事という抽象的概念に到達してはじめて、問題は解決される。モーメントあるいは仕事が分化の要素なのである。
+
+§4
+
+Was tut man nun, indem man abstrahiert? Was ist eine Abstraktion? Was ist ein Begriff? Entspricht dem Begriff ein sinnliches Vorstellungsbild? Einen allgemeinen Menschen kann ich mir nicht vorstellen, höchstens einen besonderen, vielleicht einen, der zufällige Besonderheiten verschiedener Menschen, die sich nicht ausschließen, vereinigt. Ein allgemeines Dreieck, welches etwa zugleich rechtwinklig und gleichseitig sein müßte, ist nicht vorstellbar. Allein ein solches mit dem Namen des Begriffs auftauchendes, die begriffliche Operation begleitendes Bild ist auch nicht der Begriff. Überhaupt deckt ein Wort, welches aus Not zur Bezeichnung vieler Einzelvorstellungen ver- wendet werden muß, durchaus noch keinen Begriff. Ein Kind, das zuerst einen schwarzen Hund gesehen und nennen gehört hat, nennt z. B. alsbald einen großen schwarzen, rasch dahin laufenden Käfer ebenfalls „Hund", bald darauf ein Schwein oder Schaf ebenfalls Hund1). Irgend eine an die früher benannte Vorstellung erinnernde Ähnlichkeit führt zum naheliegenden Gebrauch desselben Namens. Der Ähnlichkeitspunkt braucht in aufeinander folgenden Fällen gar nicht derselbe zu sein; er liegt z. B. einmal in der Farbe, dann in der Bewegung, dann in der Gestalt, der Bedeckung u. s. w.; demnach ist auch von einem Be- griff gar nicht die Rede. So nennt ein Kind gelegentlich die Federn des Vogels Haare, die Hörner der Kuh Fühlhörner, den Bartwisch, den Bart des Vaters und den Samen des Löwenzahns ohne Unterschied „Bartwisch" u. s. w.¹). Die meisten Menschen verfahren mit den Worten ebenso, nur weniger auffallend, weil sie einen größeren Vorrat zur Verfügung haben. Der gemeine Mann nennt ein Rechteck „Viereck" und gelegentlich auch den Würfel (wegen der rechtwinkligen Begrenzung) ebenfalls „Viereck". Die Sprachwissenschaft und einige historisch beglaubigte Fälle lehren, daß ganze Völker sich nicht anders verhalten ²).
+
+【移】抽象するとは何をしているのか？　概念とは何か？　概念には感覚的な表象像が対応するのか？
+
+【移】「一般的な人間」を思い浮かべることはできない——せいぜい特定の一人を、おそらくは互いに排除し合わないさまざまな人間の偶然的特殊性を結合した一人を思い浮かべうるにすぎない。「一般的な三角形」——直角三角形でもあり正三角形でもあるようなもの——は表象不可能である。しかし、概念の名前とともに浮かぶ像は概念ではない。多くの個別表象に対して窮余の策として同一の語が使われているからといって、それは概念をなさない。
+
+【補】はじめて黒い犬を見て名前を聞いた子どもが、黒くて素早く走る大きな甲虫をも「犬」と呼び、やがて豚や羊も「犬」と呼ぶ。以前に名づけた表象を想起させるなんらかの類似性が、同じ名前の使用へと導く。類似点は、色、動き、形、覆いなど、場面ごとに異なることがあり、したがって概念が形成されているとはまったく言えない。子どもは鳥の羽を「毛」と呼び、牛の角を「触角」と呼び、ほうき、父親の髭、タンポポの綿毛を区別なく「ほうき」と呼んだりする。大人も言葉の使い方は同じであるが、語彙の蓄えが多い分だけ目立たないにすぎない。一般人は長方形を「四角形」と呼び、時には立方体をも（直角の境界のゆえに）やはり「四角形」と呼ぶ。言語学といくつかの歴史的に証明された事例が教えるように、民族全体がこれと異なる振る舞いをするわけではない。
+
+Ein Begriff ist überhaupt nicht eine fertige Vorstellung. Gebrauche ich ein Wort zur Bezeichnung eines Begriffs, so liegt in demselben ein einfacher Impuls zu einer geläufigen sinnlichen Tätigkeit, als deren Resultat ein sinnliches Element (das Merkmal des Begriffs) sich ergibt. Denke ich z. B. an den Begriff Siebeneck, so zähle ich in der vorliegenden Figur oder in der auftauchenden Vorstellung die Ecken durch; komme ich hiebei bis sieben, wobei der Laut, die Ziffer, die Finger das sinnliche Merkmal der Zahl abgeben können, so fällt die gegebene Vorstellung unter den gegebenen Begriff. Spreche ich von einer Quadratzahl, so versuche ich die vorliegende Zahl durch die Operation 5x5, 6x6 usw., deren sinnliches Merkmal (die Gleichheit der beiden multiplizierten Zahlen) auf der Hand liegt, herzustellen. Das gilt von jedem Begriff. Die Tätigkeit, welche das Wort auslöst, kann aus mehreren Operationen bestehen; die eine kann eine andere enthalten. Immer ist das Resultat ein sinnliches Element, welches vorher nicht da war.
+
+【補】概念はけっして出来合いの表象ではない。概念を表すために語を用いるとき、そこには馴染み深い感覚的活動への単純な衝動があり、その活動の結果として感覚的要素（概念の標識）が得られる。例えば「七角形」の概念を考えるとき、目の前の図形あるいは浮かんだ表象の角を数え、七まで数えれば——その際、音声、数字、指が数の感覚的標識となりうるが——その表象は当の概念のもとに属する。「平方数」の場合は、当の数を 5×5、6×6 などの操作で作り出そうとし、掛けられる二つの数の等しさという感覚的な標識はすぐにわかる。あらゆる概念がそうである。語が引き起こす活動は、複数の操作から成りうる。一つの操作が別の操作を含みうる。結果は常に、以前にはなかった感覚的要素なのである。
+
+Wenn ich ein Siebeneck sehe oder mir vorstelle, braucht mir die Siebenzahl der Ecken noch nicht gegenwärtig zu sein. Sie tritt erst durch die Zählung hervor. Oft kann das neue sinnliche Element, wie z. B. beim Dreieck, so nahe liegen, daß die Zähloperation unnötig scheint; das sind aber Spezialfälle, welche eben zu Täuschungen über die Natur des Begriffes führen. An den Kegelschnitten (Ellipse, Hyperbel, Parabel) sehe ich nicht, daß sie unter denselben Begriff fallen; ich kann es aber durch die Operation des Kegelschneidens und durch die Konstruktion der Gleichung finden.
+
+【補】七角形を見たり思い浮かべたりしても、七つの角があることがまだ意識されている必要はない。数える操作によってはじめてそれが現れる。三角形のように新しい感覚的要素があまりに自明で数える操作が不要に見える場合もあるが、それは特殊例であり、概念の本性についての誤解を招く。円錐曲線（楕円・双曲線・放物線）を見ても、それらが同一の概念に属するとは見えないが、円錐を切る操作や方程式の構成によってそれを見出すことができる。
+
+Wenn wir also abstrakte Begriffe auf eine Tatsache anwenden, so wirkt dieselbe auf uns als einfacher Impuls zu einer sinnlichen Tätigkeit, welche neue sinnliche Elemente herbeischafft, die unsern ferneren Gedankenlauf der Tatsache entsprechend bestimmen können. Wir bereichern und erweitern durch unsere Tätigkeit die für uns zu arme Tatsache. Wir tun dasselbe, was der Chemiker mit einer farblosen Salzlösung tut, indem er ihr durch eine bestimmte Operation einen gelben oder braunen Niederschlag ablockt, der seinen Gedankenlauf zu differenzieren vermag. Der Begriff des Physikers ist eine bestimmte Reaktionstätigkeit, welche eine Tatsache mit neuen sinnlichen Elementen bereichert. S.Z.19.
+
+【移】概念を事実に適用するとき、事実は我々に対して、ある感覚的活動への単純な衝動として作用する。その活動が、それまで存在しなかった新しい感覚的要素をもたらし、それが我々のその後の思考の流れを事実に対応して規定する。我々は活動を通じて、貧弱すぎる事実を豊かにする。化学者が無色の塩溶液に特定の操作を加えて黄色や褐色の沈殿を引き出し、それが思考の流れを分化させるのとまったく同じである。
+
+【移】物理学者の概念は、ある特定の反応活動であり、それが事実を新しい感覚的要素で豊かにするのである。
+
+Eine sehr dürftige Sinnlichkeit und eine sehr geringe Beweglichkeit reichen zur Bildung von Begriffen aus. Dies lehrt die Entwicklungsgeschichte der blinden und taubstummen Laura Bridgman, welche Jerusalem in einer interessanten kleinen Schrift1) allgemein zugänglich gemacht hat. Fast ganz ohne Geruch und auf die Wahrnehmung von Erschütterungen und Schallschwingungen durch die Fußsohlen und Fingerspitzen, kurz durch die Haut angewiesen, vermochte Laura doch einfache Begriffe zu gewinnen. Durch Herumgehen und durch die Bewegung der Hände findet sie die Tastmerkmale (Klassencharaktere) der Türe, des Stuhles, des Messers usw. Allerdings reicht die Abstraktion nicht hoch. Die abstraktesten Begriffe, die sie sich erwarb, dürften die Zahlen gewesen sein. Im ganzen blieb ihr Denken natürlich an Spezialvorstellungen haften. Beweis dafür ist ihre Auffassung der Rechenaufgaben eines Schulbuches als speziell an sie gerichtet (a. a. O. S. 25), ihre Meinung, daß der Himmel (das Jenseits) eine Schule sei usw. (a. a. O. S. 30).
+
+【補】概念の形成にはきわめて貧弱な感覚性ときわめてわずかな運動能力で足りる。盲聾のローラ・ブリッジマンの発達史がそれを教えている——イェルサレムが興味深い小著によって広く知られるようにしたものである。嗅覚をほとんど欠き、足裏や指先——すなわち皮膚——による振動と音波の知覚に頼りながらも、ローラは単純な概念を獲得しえた。歩き回ることと手の動きによって、扉・椅子・ナイフなどの触覚的な類標識を見出す。もっとも、抽象の高さには限界があり、彼女が獲得した最も抽象的な概念は数であったろう。全体として思考は個別的表象に留まった——教科書の算数の問題を自分個人宛の課題と解釈し、天国は学校だと思ったことがその証拠である。
+
+§5
+
+Wenn wir, um an ein früheres Beispiel anzuknüpfen, einen Hebel erblicken, so treibt uns dieser Anblick, die Arme abzu- messen, die Gewichte zu wägen, die Maßzahl des Armes mit der Maßzahl des Gewichtes zu multiplizieren. Entspricht den beiden Produkten dasselbe sinnliche Zahlzeichen, so erwarten wir Gleichgewicht. Wir haben so ein neues sinnliches Element ge- wonnen, welches zuvor in der bloßen Tatsache noch nicht ge- geben war, und das nun unsern Gedankenlauf differenziert. Hält man sich recht gegenwärtig, daß das begriffliche Denken eine Reaktionstätigkeit ist, die wohl geübt sein will, so versteht man die bekannte Tatsache, daß niemand Mathematik oder Physik oder irgend eine Naturwissenschaft durch bloße Lektüre, ohne praktische Übung, sich aneignen kann. Das Verstehen beruht hier gänzlich auf dem Tun. Ja es wird in keinem Gebiet mög- lich sein, sich zu den höheren Abstraktionen zu erheben, ohne sich mit den Einzelheiten beschäftigt zu haben.
+
+【移】てこを見たとき、腕を測り、重さを量り、腕の長さと重さの積を求めるよう駆り立てられる。二つの積が同じ数字を示せば、均衡を期待する。以前は事実そのものに含まれていなかった新しい感覚的要素が獲得され、それが思考の流れを分化させる。
+
+【移】概念的思考が練習を要する反応活動であることを心に留めれば、数学や物理学やいかなる自然科学も、実際の練習なしに読書だけで身につけることはできないという周知の事実が理解される。理解することはまったく行為することにかかっている。いかなる領域においても、個々の詳細に取り組むことなしに、より高い抽象に到達することは不可能であろう。
+
+Die Tatsachen werden also durch die begriffliche Behand- lung erweitert und bereichert, und schließlich wieder vereinfacht. Denn wenn das neue maßgebende sinnliche Element (z. B. die Maßzahl der Momente des Hebels) gefunden ist, wird nur mehr dieses beachtet, und die mannigfaltigsten Tatsachen gleichen und unterscheiden sich nur durch dieses Element. Wie bei der intuitiven Erkenntnis reduziert sich also auch hier alles auf die Auffindung, Hervorhebung und Aussonderung der maßgebenden sinnlichen Elemente. Die Forschung erreicht hier nur auf einem Umwege, was sich der intuitiven Erkenntnis unmittelbar darbietet.
+
+【移】事実は概念的な処理によって拡張され豊かにされ、最終的にはまた単純化される。なぜなら、新しい決定的な感覚的要素（例えばてこのモーメントの測定数）が見出されれば、もはやそれだけが注目され、もっとも多様な事実もこの要素によってのみ一致したり区別されたりするからである。直観的認識の場合と同様に、ここでもすべては決定的な感覚的要素の発見・強調・抽出に帰着する。研究はただ、直観的認識に直接与えられるものに、迂回によって到達するのである。
+
+Der Chemiker mit seinen Reagentien, der Physiker mit Maßstab, Wage, Galvanometer, und der Mathematiker verhalten sich den Tatsachen gegenüber eigentlich ganz gleichartig; nur braucht der letztere bei Erweiterung der Tatsache am wenigsten über die Elemente α β γ ..., KLM hinauszugehen. Seine Hilfs- mittel hat er stets und sehr bequem zur Hand. Der Forscher mit seinem ganzen Denken ist ja auch nur ein Stück Natur wie jedes andere. Eine eigentliche Kluft zwischen diesem und anderen Stücken besteht nicht. Alle Elemente sind gleichwertig. Nach dem Dargelegten ist das Wesen der Abstraktion nicht erschöpft, wenn man sie (mit Kant) als negative Aufmerksamkeit bezeichnet. Zwar wendet sich beim Abstrahieren von vielen sinnlichen Elementen die Aufmerksamkeit ab, dafür aber andern neuen sinnlichen Elementen zu, und das letztere ist gerade wesentlich. Jede Abstraktion gründet sich auf das Hervortreten bestimmter sinnlicher Elemente.
+
+【補】試薬を持つ化学者、ものさし・天秤・検流計を持つ物理学者、そして数学者は、事実に対してまったく同じように振る舞う。ただし数学者は事実の拡張に際して α β γ …、KLM の要素からもっとも逸脱する必要が少ない。研究者もその全思考とともに、他のあらゆるものと同じく自然の一片にすぎず、これと他の断片との間に本当の溝は存在しない。すべての要素は等価である。抽象の本質は、（カントのように）消極的注意と呼ぶだけでは汲み尽くせない。抽象に際して多くの感覚的要素から注意が離れるが、その代わりに他の新しい感覚的要素に注意が向かうのであり、後者こそが本質なのである。あらゆる抽象は、特定の感覚的要素が際立つことに基づいている。
+
+§6
+
+Indem ich hier meine Darstellung von 1886 unverändert lasse, möchte ich zugleich auf die weiteren Ausführungen in einer spätern Schrift hinweisen1). Daselbst sind auch (in der zweiten Auflage von 1900) die seit 1897 erschienenen Arbeiten von H. Gomperz und Ribot erwähnt, welche Untersuchungen enthalten, deren Ergebnisse in mancher Beziehung mit den meinigen verwandt sind. Gomperz und Ribot schließen beide die wissenschaftlichen Begriffe von ihrer Untersuchung aus, und behandeln bloß die vulgären Begriffe, wie sie in den Worten der gewöhnlichen Verkehrssprache fixiert sind. Ich bin im Gegenteil der Meinung, daß die Natur der Begriffe an den wissenschaftlichen Begriffen, welche mit Bewußtsein gebildet und angewendet werden, sich viel besser offenbaren muß, als an den vulgären Begriffen. Letztere können wegen ihrer Verschwommenheit kaum zu den eigentlichen Begriffen gerechnet werden. Die Worte der Vulgärsprache sind einfach geläufige Merkzeichen, welche ebenso geläufige Denkgewohnheiten auslösen. Der begriffliche Inhalt dieser Worte, soweit er überhaupt in schärferer Form besteht, kommt kaum zum Bewußtsein, wie dies auch Ribot bei seinen statistischen Versuchen gefunden hat. Ohne Zweifel könnte ich Gomperz und Ribot noch viel weiter zustimmen, als es schon jetzt der Fall ist, wenn sie auch die wissenschaftlichen Begriffe in ihre Untersuchung einbezogen hätten. Wir haben als einfaches Beispiel des Begriffes oben das statische Moment gewählt. Komplizierte Begriffe werden ein kompliziertes System von Reaktionen erfordern, welche mehr oder weniger große Teile des Zentralnervensystems in Anspruch nehmen, und ein entsprechend kompliziertes, den Begriff charakterisierendes System von sinnlichen Elementen zutage fördern. Die von J. v. Kries erhobenen Schwierigkeiten 1) möchten bei dieser Auffassung nicht unüberwindlich sein. (Vergl. S. 57, 58.)
+
+【補】ここでは1886年の叙述をそのまま残しつつ、後の著作における更なる展開を指示しておきたい。そこでは（1900年の第2版において）1897年以降に発表されたH・ゴンペルツとリボーの仕事も言及されており、その研究結果はいくつかの点で私のものと近縁である。ゴンペルツとリボーはともに科学的概念を研究から除外し、日常の通俗語に固定された通俗的概念のみを扱っている。しかし私は逆に、概念の本性は、意識的に形成され適用される科学的概念においてこそ、はるかによく現れると考える。通俗的概念はその曖昧さのゆえに本来の概念とは言い難い。通俗語の語は馴染み深い記号にすぎず、馴染み深い思考の習慣を喚起する。これらの語の概念的内容は、より明確な形で存在している限りにおいても、ほとんど意識に上ることがない——リボーも統計的実験でこのことを見出している。ゴンペルツとリボーも科学的概念を研究に含めたなら、私との合意はさらに広がったであろう。概念の簡単な例として上では静的モーメントを選んだ。複雑な概念は複雑な反応の体系を必要とし、中枢神経系の多かれ少なかれ大きな部分を動員し、概念を特徴づける相応に複雑な感覚的要素の体系を生み出すことになろう。J・フォン・クリースが提起した困難も、この見解のもとでは克服不可能ではないであろう（57、58頁参照）。
+
+§7
+
+Die sinnliche Tatsache ist also der Ausgangspunkt und auch das Ziel aller Gedankenanpassungen des Physikers. Die Gedanken, welche unmittelbar der sinnlichen Tatsache folgen, sind die geläufigsten, stärksten und anschaulichsten. Wo man einer neuen Tatsache nicht sofort folgen kann, drängen sich die kräftigsten und geläufigsten Gedanken heran, um dieselbe reicher und bestimmter zu gestalten. Hierauf beruht jede naturwissenschaftliche Hypothese und Spekulation, deren Berechtigung in der Gedankenanpassung liegt, welche sie fördert und schließlich herbeiführt. So denken wir uns den Planeten als einen geworfenen Körper, stellen uns den elektrischen Körper mit einer fernwirkenden Flüssigkeit bedeckt vor, denken uns die Wärme als einen Stoff, der aus einem Körper in den andern überfließt, bis uns schließlich die neuen Tatsachen ebenso geläufig und anschaulich werden als die älteren, die wir als Gedankenhilfe herangezogen hatten. Aber auch wo von unmittelbarer Anschaulichkeit nicht die Rede sein kann, bilden sich die Gedanken des Physikers unter möglichster Einhaltung des Prinzips der Kontinuität und der zureichenden Differenzierung zu einem ökonomisch geordneten System von Begriffsreaktionen aus, welche wenigstens auf den kürzesten Wegen zur Anschaulichkeit führen. Alle Rechnungen, Konstruktionen u. s. w. sind nur die Zwischenmittel, diese Anschaulichkeit schrittweise und auf sinnliche Wahrnehmung gestützt, zu erreichen, wo dieselbe nicht unmittelbar zu erreichen ist.
+
+【移】感覚的事実は、物理学者のすべての思考適応の出発点であり、また目標でもある。感覚的事実に直接に続く思考は、もっとも馴染み深く、もっとも力強く、もっとも直観的である。事実にすぐに追随できないとき、もっとも力強く馴染み深い思考が押し寄せ、事実をより豊かで確定的なものにしようとする。すべての自然科学的仮説と思弁はこれに基づいており、その正当性は、仮説が促進し最終的にもたらす思考適応にある。
+
+【移】そうして我々は惑星を投射体と考え、帯電体を遠隔作用する流体に覆われたものと考え、熱を物体間を流れる物質と考える——やがて新しい事実が、補助として引き合いに出した古い事実と同じくらい馴染み深くなるまで。
+
+【移】直接的な直観性が問題にならない場合でも、物理学者の思考は連続性の原理と十分な分化の原理を最大限に守りつつ、少なくとも最短の迂回で直観性に到達しうる、経済的に秩序づけられた概念反応の体系に形成される。すべての計算、構成などは、直観性が直接に達しえないところで、それを段階的に、感覚的知覚に支えられて達成するための中間手段にすぎない。
+
+§8
+
+Betrachten wir nun die Ergebnisse der Gedanken- anpassung. Nur dem, was an den Tatsachen überhaupt be- ständig ist, können sich die Gedanken anpassen, und nur die Nachbildung des Beständigen kann einen ökonomischen Vorteil gewähren. Hierin liegt also der letzte Grund des Strebens nach Kontinuität der Gedanken, d. h. nach Er- haltung der möglichsten Beständigkeit, und hiedurch werden auch die Anpassungsergebnisse verständlich 1). Kontinuität, Ökonomie und Beständigkeit bedingen sich gegenseitig; sie sind eigentlich nur verschiedene Seiten einer und derselben Eigenschaft des gesunden Denkens. S.Z.20.
+
+【移】思考適応の成果を概観しよう。事実のうち恒常的なものにだけ思考は適応しうるのであり、恒常的なものの模写だけが経済的な利益をもたらす。ここに、思考の連続性への努力、すなわちできうる限りの恒常性の維持への努力の究極的な根拠がある。
+
+【補】連続性、経済性、恒常性は互いに条件づけ合い、実際には健全な思考の一つの同一の特性の異なる側面にすぎない。
+
+§9
+
+Das bedingungslos Beständige nennen wir Substanz. Ich sehe einen Körper, wenn ich ihm den Blick zuwende. Ich kann ihn sehen, ohne ihn zu tasten. Ich kann ihn tasten, ohne ihn zu sehen. Obgleich also das Hervortreten der Elemente des Komplexes an Bedingungen geknüpft ist, habe ich dieselben doch zu sehr in der Hand, um sie besonders zu würdigen und zu beachten. Ich betrachte den Körper oder den Elementen- komplex oder den Kern dieses Komplexes als stets vorhanden, ob er mir augenblicklich in die Sinne fällt oder nicht. Indem ich den Gedanken dieses Komplexes, oder das Symbol desselben, den Gedanken des Kerns mir stets parat halte, gewinne ich den Vorteil der Voraussicht, und vermeide den Nachteil der Überraschung. Ebenso halte ich es mit den chemischen Elementen, die mir als bedingungslos beständig erscheinen. Obgleich hier mein bloßer Wille nicht genügt, um die betreffenden Komplexe zur sinnlichen Tatsache zu machen, obgleich hier auch äußere Mittel (z. B. Körper außer meinem Leib) nötig sind, sehe ich doch von diesen Mitteln ab, sobald sie mir geläufig geworden, und betrachte die chemischen Elemente einfach als beständig. Wer an Atome glaubt, hält es mit diesen analog.
+
+【移】無条件に恒常的なものを我々は実体と呼ぶ。私は物体を、視線を向けるときに見る。見ることなく触ることもでき、触ることなく見ることもできる。したがって複合体の要素の出現は条件に結びついているが、その条件はあまりにも容易に支配できるので、特に評価し注意を払うには至らない。私は物体、すなわち要素複合体ないしその核を、それが瞬間的に感覚に現れようと現れまいと、常に現存するものと見なす。この複合体の思考、あるいはその記号、核の思考を常に準備しておくことで、私は予見の利益を得、驚きの不利益を避ける。化学的元素についても同様であり、それは無条件に恒常的に思われる。ここでは私の単なる意志だけでは当該の複合体を感覚的事実にするには足りず、外的手段（例えば私の身体以外の物体）も必要であるが、それらの手段に馴染んでしまえば私はそれを度外視し、化学的元素を単に恒常的と見なす。原子を信じる者は、原子についても同様に扱う。
+
+Ähnlich wie mit dem Elementenkomplex, der einem Körper entspricht, können wir auf einer höheren Stufe der Gedankenanpassung auch mit ganzen Gebieten von Tatsachen verfahren. Wenn wir von Elektrizität, Magnetismus, Licht, Wärme sprechen, auch ohne uns hierunter besondere Stoffe zu denken, so schreiben wir diesen Tatsachengebieten, wieder von den uns geläufigen Bedingungen ihres Hervortretens absehend, eine Beständigkeit zu, und halten die nachbildenden Gedanken stets parat, mit gleichem Vorteil wie in den obigen Fällen. Wenn ich sage, ein Körper ist „elektrisch", so ruft mir dies viel mehr Erinnerungen wach, ich erwarte viel bestimmtere Gruppen von Tatsachen, als wenn ich etwa die in dem Einzelfalle sich äußernde Anziehung hervorheben würde. Doch kann diese Hypostasierung auch ihre Nachteile haben. Zunächst wandeln wir, solange wir so verfahren, immer dieselben historischen Wege. Es kann aber wichtig sein zu erkennen, daß eine spezifisch elektrische Tatsache gar nicht gibt, daß jede solche Tatsache z. B. ebenso gut als eine mechanische, chemische oder thermische angesehen werden kann, oder vielmehr, daß alle physikalischen Tatsachen schließlich aus denselben sinnlichen Elementen (Farben, Drucken, Räumen, Zeiten) sich zusammensetzen, daß wir durch die Bezeichnung „elektrisch", bloß an eine Spezialform erinnert werden, in welcher wir die Tatsache zuerst kennen gelernt haben.
+
+【補】物体に対応する要素の複合体と同様に、より高い段階では事実の全領域に対しても同じように扱うことができる。電気・磁気・光・熱と言うとき、それらの下に特別な物質を考えなくても、再びそれらの出現の馴染み深い条件を度外視しつつ、これらの事実領域にある恒常性を帰属させ、模写する思考を常に準備しておく——上述の場合と同じ利益をもって。物体が「帯電している」と言えば、個々の引力を強調するよりもはるかに多くの記憶が喚起され、はるかに確定的な事実群が予期される。しかし、この実体化には欠点もありうる。まず、我々がこのように手続きする限り、常に同じ歴史的な道を歩むことになる。しかし認識することが重要でありうる——特殊に電気的な事実というものは実は存在せず、そうした事実はすべて力学的・化学的・熱的とも見なしうるのであり、あるいはむしろ、すべての物理的事実は結局は同じ感覚的要素（色・圧力・空間・時間）から構成されている——「電気的」という名称は、我々がその事実をはじめて知った特殊な形態を想起させるにすぎない。
+
+Haben wir uns gewöhnt, den Körper, welchem wir die tastende Hand und den Blick beliebig zu- und abwenden können, als beständig anzusehen, so tun wir dies auch leicht in Fällen, in welchen die Bedingungen der Sinnenfälligkeit gar nicht in unserer Hand liegen, z. B. bei Sonne und Mond, die wir nicht tasten können, bei den Weltteilen, die wir vielleicht einmal und nicht wieder sehen können, oder die wir gar nur aus der Beschreibung kennen. Dies Verfahren kann für eine ruhige ökonomische Weltauffassung seine Bedeutung haben, es ist aber gewiß nicht das einzig berechtigte. Es wäre nur ein konsequenter Schritt weiter, die ganze Vergangenheit, welche ja in ihren Spuren noch vorhanden ist (da wir z. B. Sterne dort sehen, wo sie vor Jahrtausenden waren), und die ganze Zukunft, die im Keime schon da ist (da man z. B. unser Sonnensystem nach Jahrtausenden noch sehen wird, wo es jetzt ist), als beständig anzusehen. Ist doch der ganze Zeitverlauf nur an Bedingungen unserer Sinnlichkeit gebunden. Mit dem Bewußtsein eines besonderen Zweckes wird man auch diesen Schritt unternehmen dürfen. S.Z.21.
+
+【移】触れる手や視線を自由に向けたり逸らしたりできる物体を恒常的と見なすことに慣れると、感覚に現れる条件がまったく我々の手中にない場合にも、容易に同じことをするようになる——例えば触れることのできない太陽や月、一度しか見られないかもしれない大陸、記述からしか知らない土地に対してさえ。この手続きは穏やかな経済的世界観にとって意味を持ちうるが、唯一正当なものでは確かにない。さらに一歩進めて、過去全体——その痕跡はまだ存在する（何千年も前にあった場所で星が見える）——も、未来全体——その萌芽はすでに存在する（例えば何千年後にもなお、今あるところに我々の太陽系が見えるであろう）——も、恒常的と見なすこともできる。時間経過全体が、我々の感覚の条件に拘束されているにすぎないのだから。特別な目的を意識してのことならば、このさらなる一歩も踏み出してよいであろう。（補遺21参照。）
+
+§10
+
+Eine wirkliche bedingungslose Beständigkeit gibt es nicht, wie dies aus dem Besprochenen deutlich hervorgeht. Wir gelangen zu derselben nur, indem wir Bedingungen übersehen, unterschätzen, oder als immer gegeben betrachten, oder willkürlich von denselben absehen. Es bleibt nur eine Art der Beständigkeit, die alle vorkommenden Fälle von Beständigkeit umfaßt, die Beständigkeit der Verbindung (oder Beziehung). Auch die Substanz, die Materie ist kein bedingungslos Beständiges. Was wir Materie nennen, ist ein gewisser gesetzmäßiger Zusammenhang der Elemente (Empfindungen). Die Empfindungen verschiedener Sinne eines Menschen, so wie die Sinnesempfindungen verschiedener Menschen sind gesetzmäßig von einander abhängig. Darin besteht die Materie. Der älteren Generation, namentlich den Physikern und Chemikern, wird die Zumutung Schrecken erregen, die Materie nicht als das absolut Beständige zu betrachten, und statt dessen ein festes Verbindungsgesetz von Elementen, welche an sich sehr flüchtig scheinen, als das Beständige an-zusehen. Auch jüngeren Leuten wird dies Mühe machen, und mich selbst hat es seiner Zeit eine große Überwindung gekostet, zu dieser unvermeidlichen Einsicht zu gelangen. Doch wird man sich zu einer so radikalen Änderung der Denkweise entschließen müssen, wenn man aufhören will, denselben Fragen immer wieder in gleicher Ratlosigkeit gegenüber zu stehen.
+
+【移】しかし、真に無条件な恒常性は存在しない。 条件を見落とし、過小評価し、あるいは常に与えられたものと見なし、あるいは意図的に度外視することで恒常性に到達しているにすぎない。
+
+【補】あらゆる恒常性を包括する恒常性はただ一つ——結合（関係）の恒常性——だけである。実体すなわち物質も無条件に恒常的なものではない。物質と呼ばれるものは、要素（感覚）のある法則的な連関である。一人の人間の異なる感覚、また異なる人間の感覚は法則的に相互に依存し合う。物質とはそれに尽きる。年長の世代、特に物理学者と化学者にとって、物質を絶対的に恒常的なものとは見なさず、それ自体はきわめて移ろいやすく見える要素の恒常的な結合法則を恒常者と見なすべきだという要求は衝撃であろう。より若い人々にとってもこれは労苦であろうし、私自身もかつてこの不可避の認識に到達するには大きな克服を要した。しかし同じ問題に繰り返し同じ当惑で向き合うことをやめようとするならば、この根本的な思考の転換を決心しなければならない。
+
+Es kann sich nicht darum handeln, für den Hand- und Hausgebrauch den vulgären Begriff der Materie, der sich für diesen Zweck instinktiv herausgebildet hat, abzuschaffen. Auch alle physikalischen Maßbegriffe bleiben aufrecht, und erfahren nur eine kritische Läuterung, wie ich dieselbe in bezug auf Mechanik, Wärme, Elektrizität usw. versucht habe. Hiebei treten einfach empirische Begriffe an die Stelle der metaphysischen. Die Wissenschaft erleidet aber keinen Verlust, wenn das starre, sterile, beständige, unbekannte Etwas (die Materie) durch ein be-ständiges Gesetz ersetzt wird, das in seinen Einzelheiten noch weiter durch die physikalisch-physiologische Forschung aufgeklärt werden kann. Es soll hiermit keine neue Philosophie, keine neue Metaphysik geschaffen, sondern einem augenblicklichen Streben der positiven Wissenschaften nach gegenseitigem Anschluß ent-sprochen werden 1).
+
+【補】日常使用のために本能的に形成されてきた物質の通俗概念を廃止することが問題なのではない。物理学的な計量概念もすべてそのまま維持され、力学・熱・電気などに関して私が試みたような批判的な浄化を経験するのみである。その際、形而上学的概念に代えて単に経験的概念が入る。科学は、硬直した、不毛の、恒常的な、未知のなにものか（物質）が、その詳細をさらに物理学的＝生理学的研究によって解明しうる恒常的法則に置き換えられることで、何の損失も被らない。ここで意図されるのは新しい哲学でも新しい形而上学でもなく、実証諸科学の相互接続への今日的志向に応えることである。
+
+Zunächst wird ein weit verbreitetes Vorurteil und damit eine Schranke hinweggeräumt.
+
+【補】まず、ある広く行きわたった偏見と、それに伴う障壁が取り払われる。
+
+[4. Aufl. (1903) § 1; in der 9. Aufl. (1922) gestrichen] Es gibt keine Kluft zwischen Psychischem und Physischem, kein Drinnen und Draußen, keine Empfindung, der ein äußeres von ihr verschiedenes Ding entspräche. Es gibt nur einerlei Elemente, aus welchen sich das vermeintliche Drinnen und Draußen zusammensetzt, die eben nur, je nach der temporären Betrachtung, drinnen oder draußen sind.
+
+【補】〔第4版§1のみ・第9版では削除〕心的なものと物理的なものの間に溝はない。内と外はない。感覚に対して、それとは異なる外的な「物」が対応しているのでもない。存在するのはただ一種類の要素であり、それが見かけ上の「内」と「外」を構成している。その要素は、ただそのときどきの観点に応じて、内にも外にもなるのである。
+
+[4. Aufl. § 1; 9. Aufl. gestrichen] Die sinnliche Welt gehört dem physischen und psychischen Gebiet zugleich an.
+
+【補】〔第4版§1のみ〕感覚的世界は、物理学的領域と心理学的領域に同時に属する。
+
+[4. Aufl. § 1; 9. Aufl. gestrichen] So wie wir beim Studium des Verhaltens der Gase durch Absehen von den Temperaturänderungen zu dem Mariotteschen, durch ausdrückliches Beachten der Temperaturänderungen aber zum Gay-Lussacschen Gesetz gelangen, und unser Untersuchungsobjekt doch immer dasselbe bleibt, so treiben wir auch Physik im weitesten Sinne, solange wir die Zusammenhänge in der sinnlichen Welt, von unserem Leib ganz absehend, untersuchen, Psychologie oder Physiologie der Sinne aber, sobald wir hierbei eben auf diesen, und speziell auf unser Nervensystem, das Hauptaugenmerk richten.
+
+【補】〔第4版§1のみ〕気体の研究で温度変化を無視すればボイルの法則に、温度変化を明示的に考慮すればゲイ＝リュサックの法則に到達するが、研究対象自体は同じであるように、我々は身体（Leib）を完全に度外視して感覚世界の連関を研究する限り（もっとも広い意味での）物理学を行い、身体、特に神経系に主な注意を向ければ感覚の心理学を行っている。
+
+[4. Aufl. § 1; 9. Aufl. gestrichen] Unser Leib ist ein Teil der sinnlichen Welt wie jeder andere, die Grenze zwischen Physischem und Psychischem lediglich eine praktische und konventionelle. Betrachten wir sie für höhere wissenschaftliche Zwecke als nicht vorhanden, und sehen alle Zusammenhänge als gleichwertig an, so kann es an der Eröffnung neuer Forschungswege nicht fehlen.
+
+【補】〔第4版§1のみ〕我々の身体は他のあらゆるものと同様に感覚世界の一部であり、物理的なものと心理的なものの境界は単に実際上・慣習上のものにすぎない。より高い科学的目的のためにこの境界を存在しないものと見なし、すべての連関を等価と見なせば、新しい研究の道が開かれないはずはない。
+
+Ein weiterer Gewinn besteht darin, daß sich der Physiker vor seinen bisherigen intellektuellen Hilfsmitteln nicht mehr fürchtet. Ist schon die vulgäre „Materie" ein unbewußtes, natürliches Gedankensymbol für einen Komplex sinnlicher Elemente, so gilt dies noch mehr von den künstlichen, hypothetischen Atomen und Molekülen der Physik und Chemie.
+
+【補】さらなる収穫として、物理学者はもはや従来の知的手段に気おされなくなる。日常的な「物質」がすでに感覚的要素の複合体に対する無自覚的・自然的な思考記号にすぎないとすれば、物理学と化学の人為的・仮説的な原子や分子にはなおさらそのことが当てはまる。
+
+Diese Mittel haben für ihren bestimmten, begrenzten Zweck ihren Wert. Sie bilden eine ökonomische Symbolik der Erfahrungswelt. So wenig man von den Zeichen der Algebra mehr erwartet, als man hineingelegt hat, ebenso wenig darf man auch von diesen Symbolen Aufschlüsse erwarten, welche über die Erfahrung selbst hinausgehen.
+
+【補】これらの手段にはその特定の限定された目的のための価値がある。それらは経験の世界の経済的な記号化にとどまる。代数の記号から、そこに入れた以上のものを期待しないように、これらの記号からも、経験そのものが与える以上の啓示を期待してはならない。
+
+Selbst innerhalb des physikalischen Gebietes wird die Überschätzung der Symbole vermieden werden. Um so weniger wird uns der abenteuerliche Gedanke ergreifen können, Atome zur Erklärung psychischer Vorgänge heranzuziehen.
+
+【補】物理学の領域内でさえ記号の過大評価は避けられる。まして、心理的な過程の説明に原子を使おうなどという途方もない考えが、我々をとらえることはありえない。
+
+§11
+
+Die naturwissenschaftlichen Sätze drücken nur solche Be-ständigkeiten der Verbindung aus: „Aus der Kaulquappe wird ein Frosch. Das Chlornatrium tritt in Würfelform auf. Der Lichtstrahl ist geradlinig. Die Körper fallen mit der Beschleuni-gung 9,81 (m/sec^2)". Den begrifflichen Ausdruck dieser Beständig-keiten nennen wir Gesetze. Die Kraft (im mechanischen Sinne) ist auch nur eine Beständigkeit der Verbindung. Wenn ich sage, ein Körper A übe auf B eine Kraft aus, so heißt dies, daß B sofort eine gewisse Beschleunigung gegen A zeigt, sobald es diesem gegenübertritt. Die eigentümliche Illusion, als ob der Stoff A der absolut beständige Träger einer Kraft wäre, welche wirksam wird, sobald B dem A gegenübertritt, ist leicht zu beseitigen. Treten wir, oder genauer unsere Sinnesorgane, an die Stelle von B, so sehen wir von dieser jederzeit erfüllbaren Bedingung ab, und A erscheint uns als absolut beständig. So scheint uns das magnetische Eisen, das wir immer sehen, so oft wir hinblicken wollen, als der beständige Träger der magnetischen Kraft, die erst wirksam wird, sobald ein Eisenstückchen hinzutritt, von welchem wir nicht so unvermerkt absehen können, wie von uns selbst¹). Die Phrasen: „Kein Stoff ohne Kraft, keine Kraft ohne Stoff", welche einen selbstverschuldeten Widerspruch vergeblich aufzuheben suchen, werden entbehrlich, wenn man nur Beständigkeiten der Verbindung anerkennt.
+
+【移】あらゆる場合に通用する恒常性はただ一つ——結合（関係）の恒常性——だけである。自然科学の命題の大多数は、こうした結合の恒常性を表現している。「オタマジャクシはカエルになる。塩化ナトリウムは立方体の結晶形をとる。光線は直進する。物体は gt²/2 で落下する。」これらの恒常性の概念的表現を我々は法則と呼ぶ。
+
+【移】力（力学的な意味での）もまた結合の恒常性にすぎない。「物体 A が B に力を及ぼす」とは、B が A に対面すると直ちに一定の加速度を示す、という意味にほかならない。物質Aがあたかも力の絶対的に恒常的な担い手であり、BがAに対面するや否や力が作用するかのような独特の幻想は、容易に除去できる。我々が、あるいはより正確には我々の感覚器官がBの代わりになると、この常に充足可能な条件を度外視するようになり、Aは我々に絶対的に恒常的に見える。こうして磁化された鉄は——見ようと思えばいつでも見えるのだから——磁力の恒常的な担い手に見え、その力は小さな鉄片が近づいてはじめて作用するが、この鉄片は我々自身のようにそっと度外視するわけにはいかないのである。「力なき物質なし、物質なき力なし」という文句は、自ら招いた矛盾を徒に解消しようとするものであり、結合の恒常性だけを認めれば不要になる。
+
+§12
+
+Bei hinreichender Beständigkeit unserer Umgebung entwickelt sich eine entsprechende Beständigkeit der Gedanken. Vermöge dieser Beständigkeit streben sie, die halb beobachtete Tatsache zu vervollständigen. Dieser Vervollständigungstrieb entspringt nicht der eben beobachteten einzelnen Tatsache, er ist auch nicht mit Absicht erzeugt; wir finden ihn, ohne unser Zutun, in uns vor. Er steht uns wie eine fremde Macht gegenüber, die uns doch stets begleitet und hilft, den wir eben brauchen, um die Tatsache zu ergänzen. Obgleich er durch die Erfahrung entwickelt ist, liegt in ihm mehr, als in der einzelnen Erfahrung. Der Trieb bereichert gewissermaßen die einzelne Tatsache. Durch ihn ist sie uns mehr. Mit diesem Trieb haben wir stets ein größeres Stück Natur im Gesichtsfeld, als der Unerfahrene mit der Einzeltatsache allein. Denn der Mensch mit seinen Gedanken und seinen Trieben ist eben auch ein Stück Natur, das sich zur Einzeltatsache hinzufügt. Anspruch auf Unfehlbarkeit hat aber dieser Trieb keineswegs, und eine Notwendigkeit für die Tatsachen, ihm zu entsprechen, besteht durchaus nicht. Unser Vertrauen zu ihm liegt nur in der Voraussetzung der vielfach erprobten zureichenden Anpassung unserer Gedanken, welche aber jeden Augenblick der Enttäuschung gewärtig sein muß. Nicht alle unsere Tatsachen nachbildenden Gedanken haben die gleiche Beständigkeit. Immer und überall, wo wir an der Nachbildung der Tatsachen ein besonderes Interesse haben, werden wir bestrebt sein, die Gedanken von geringerer Beständigkeit durch solche von größerer Beständigkeit zu stützen und zu stärken oder sie durch solche zu ersetzen. So denkt sich Newton den Planeten, obgleich die Keplerschen Gesetze schon bekannt sind, als einen geworfenen Körper, die Masse der Flutwelle, obgleich der Verlauf derselben längst ermittelt ist, als vom Monde gezogen. Das Saugen, das Fließen des Hebers glauben wir erst zu verstehen, wenn wir uns den Druck der Luft als die Kette der Teilchen zusammenhaltend hinzudenken. Ähnlich versuchen wir die elektrischen, optischen, thermischen Vorgänge als mechanische aufzufassen. Dies Bedürfnis nach Stützung schwächerer Gedanken durch stärkere wird auch Kausalitätsbedürfnis genannt und ist die Haupttriebfeder aller naturwissenschaftlichen Erklärungen. Als Grundlagen ziehen wir natürlich die stärksten besterprobten Gedanken vor, die uns unsere viel geübten mechanischen Verrichtungen an die Hand geben und die wir jeden Augenblick ohne viele Mittel aufs neue erproben können. Daher die Autorität der mechanischen Erklärungen, namentlich jener durch Druck und Stoß. Eine noch höhere Autorität kommt dementsprechend den mathematischen Gedanken zu, zu deren Entwicklung wir der geringsten äußeren Mittel bedürfen, für welche wir vielmehr das Experimentiermaterial größtenteils stets mit uns herumtragen. Weiß man dies aber einmal, so schwächt sich eben damit das Bedürfnis nach mechanischen Erklärungen ab1).
+
+【移】環境の十分な恒常性に応じて、思考にも対応する恒常性が発達する。この恒常性のおかげで、思考は半ば観察された事実を自発的に補完しようとする。この補完衝動は、個々の事実から生じたものでも、意図的に作り出されたものでもない。我々は自分の関与なしにそれを自分の中に見出す。それは異質な力のように我々に対峙するが、しかし常に我々に伴い助けてくれる力であり、事実を補完するためにまさに必要とするものである。
+
+【移】この衝動は、経験によって発達してきたものではあるが、個々の経験以上のものを含んでいる。この衝動によって事実は豊かにされ、我々には未経験者が個々の事実だけで持つよりも、常により大きな自然の一片が視野に入っている。思考とその衝動を持つ人間もまた自然の一片であり、個々の事実にみずからを付加するのだから。
+
+【移】しかし、この衝動に無謬性の権利はなく、事実がそれに従わねばならない必然性もまったく存在しない。我々の信頼は、十分に適応してきた思考への信頼にとどまり、その信頼はいつでも裏切られる可能性に備えていなければならない。
+
+【移】事実を模写する我々の思考のすべてが同じ恒常性を持つわけではない。事実の模写に特別な関心を持つあらゆる場合に、我々はより恒常性の低い思考をより恒常性の高い思考で支え、強化し、置き換えようとする。ニュートンがケプラーの法則がすでに知られている惑星を投射体として考えるように、月から引かれるものとして潮汐を考え、大気圧が粒子の連鎖をつなぎ止めていると考えてはじめて、サイフォンの吸い上げと流れを理解したと信じる。同様に我々は電気的・光学的・熱的過程を力学的なものとして把握しようとする。こうしたより弱い思考をより強い思考で支える欲求が因果性への欲求と呼ばれ、すべての自然科学的説明の主たる推進力である。
+
+【移】基盤としてもっとも強く、もっともよく検証された思考が選ばれるのは当然であり、それは我々のはるかに訓練された力学的な営みが提供するものである。ゆえに力学的説明の、とりわけ圧力と衝突による説明の権威がある。さらに高い権威が数学的思考に帰属する。外的手段をほとんど必要とせず、実験材料を大部分自分自身の中に持ち運んでいるからである。しかしひとたびこのことを知れば、まさにそれによって力学的説明への欲求は弱まるのである。
+
+Daß man mit einer sogenannten kausalen Erklärung auch nur einen Tatbestand, einen tatsächlichen Zusammenhang konstatiert (oder beschreibt), habe ich schon mehrfach dargelegt, und ich könnte mich einfach auf meine ausführlichen Auseinandersetzungen in der „Wärmelehre" und in den „Populären Vorlesungen" berufen. Da aber der Physik Fernerstehende immer wieder weiter und tiefer zu denken glauben, wenn sie einen fundamentalen Unterschied zwischen einer naturwissenschaftlichen Beschreibung, z. B. einer embryonalen Entwicklung und einer physikalischen Erklärung annehmen, so seien noch einige Worte gestattet. Wenn wir das Wachstum einer Pflanze beschreiben, so bemerken wir, daß so viele und mannigfaltige Umstände, die von Fall zu Fall variieren, hiebei im Spiel sind, daß unsere Beschreibung höchstens in den gröberen Zügen allgemein passen, in den feineren Einzelheiten aber nur für den Individualfall Geltung haben kann. Gerade so verhält es sich in physikalischen Fällen unter komplizierteren Umständen; nur sind letztere im allgemeinen doch einfacher und besser bekannt. Wir können die Umstände deshalb besser experimentell und auch intellektuell (durch Abstraktion) trennen, wir können leichter schematisieren. Die Bewegung der Planeten zu beschreiben, war für die antike Astronomie eine analoge Aufgabe, wie die Beschreibung der Entwicklung einer Pflanze für den modernen Botaniker. Die Auffindung der Keplerschen Gesetze beruht auf einer glücklichen, ziemlich rohen Schematisierung. Je genauer wir einen Planeten betrachten, desto individueller wird seine Bewegung, desto weniger folgt sie den Keplerschen Gesetzen. Genau genommen, bewegt sich jeder Planet anders, und derselbe Planet verschieden zu verschiedenen Zeiten. Wenn nun Newton die Planetenbewegungen „kausal erklärt", indem er statuiert, daß ein Massenteilchen m durch ein anderes m' die Beschleunigung φ = km'/r^2 erfährt, und daß die von verschiedenen Massenteilchen an ersterem bestimmten Beschleunigungen sich geometrisch summieren, werden wieder nur Tatsachen konstatiert oder beschrieben, welche sich (wenn auch auf einem Umwege) durch Beobachtung ergeben haben. Betrachten wir, was hiebei geschieht. Zunächst sind die bei der Planetenbewegung maßgebenden Umstände (die einzelnen Massenteilchen und ihre Entfernungen) getrennt. Das Verhalten zweier Massenteilchen ist sehr einfach, und wir glauben alle Umstände (Masse und Entfernung), welche dasselbe bestimmen, zu kennen. Wir nehmen die Beschreibung, die für wenige Fälle als richtig befunden ist, auch über die Grenzen der Erfahrung als allgemein richtig an, indem wir keine Störung durch einen unbekannten fremdartigen Umstand besorgen, worin wir uns allerdings täuschen könnten, wenn sich z. B. die Gravitation, als durch ein Medium zeitlich übertragen, herausstellen sollte. Ebenso einfach ist die Modifikation des Verhaltens, wenn zu zwei Teilchen ein drittes, zu diesen ein viertes usw. hinzutritt, wie dies angedeutet wurde. Die Beschreibung eines Individualfalles ist also die Newtonsche Beschreibung allerdings nicht; sie ist eine Beschreibung in den Elementen. Indem Newton beschreibt, wie sich die Massenelemente in den Zeitelementen verhalten, gibt er uns die Anweisung, die Beschreibung eines beliebigen Individualfalles 18* -- 276 -- vidualfalles aus den Elementen nach einer Schablone herzustellen. So ist es auch in den übrigen Fällen, welche die theoretische Physik bewältigt hat. Dies ändert aber nichts an dem Wesen der Beschreibung. Es handelt sich um eine generelle Beschrei- bung in den Elementen. Wenn man an einer Darstellung der Erscheinungen durch Differenzialgleichungen sich genügen läßt, wie ich es vor langer Zeit (Mechanik, 1883, 4. Aufl. 1901, S. 530) empfohlen habe, und wie es immer mehr in Aufnahme kommt, so liegt darin tatsächlich die Anerkennung der Erklärung als einer Beschreibung in den Elementen. Jeder Einzelfall läßt sich dann aus räumlichen und zeitlichen Elementen zusammen- setzen, in welchen das physikalische Verhalten durch die Gleichungen beschrieben ist.
+
+【補】いわゆる因果的説明によっても、事実の状態、事実上の連関が確認（あるいは記述）されるにすぎないことを、私はすでに繰り返し論じてきたし、『熱学』や『通俗講義』における私の詳細な論述を援用することもできるであろう。しかし物理学に疎い人々は、自然科学的記述——例えば胚の発生の記述——と物理学的説明とを根本的に区別することでより深く考えていると信じ続けるため、さらに一言しておきたい。植物の成長を記述するとき、あまりに多くの多様な状況が場合ごとに変化するため、我々の記述はせいぜい大まかな特徴においてのみ一般的に妥当し、細かい点では個別例にしか当てはまらない。物理学的な場合もより複雑な条件のもとではまったく同じであるが、後者は一般により単純でよく知られている。それゆえ我々は状況をよりよく実験的にも知的にも（抽象によって）分離することができ、より容易に図式化できる。惑星の運動の記述は、古代天文学にとって現代の植物学者にとっての植物の発生記述と類比的な課題であった。ケプラーの法則の発見は、幸運なかなり粗い図式化に基づいている。惑星をより精密に観察すればするほど、その運動はより個別的になり、ケプラーの法則に従わなくなる。厳密に言えば、すべての惑星は異なる運動をしており、同じ惑星も異なる時期に異なる運動をしている。ニュートンが惑星運動を「因果的に説明する」とき、質量粒子 m が別の m' によって加速度 φ＝km'/r² を受け、異なる質量粒子からの加速度が幾何学的に合成されるとする——ここでも（迂回的ではあるが）観察によって得られた事実が確認ないし記述されるにすぎない。ここで何が生じているかを見てみよう。まず惑星運動を規定する状況（個々の質量粒子とその距離）が分離される。二つの質量粒子のふるまいはきわめて単純であり、それを規定するすべての状況（質量と距離）を知っていると我々は信じている。我々は少数の場合に正しいと認められた記述を、経験の限界を超えても一般的に正しいと見なす——未知の異質な状況による撹乱を心配しないことによって。もっとも、例えば重力が媒質を介して時間的に伝達されることが判明すれば、その点で我々は誤りうるのだが。二つの粒子に第三の粒子が、さらに第四の粒子が加わるときのふるまいの変容も、すでに示唆したように、同様に単純である。ニュートンの記述は個別例の記述ではなく、要素における記述なのである。ニュートンが質量要素が時間要素の中でどのようにふるまうかを記述することによって、任意の個別例の記述を要素から一つの雛型に従って作り上げる指針を我々に与えるのである。理論物理学が克服してきた他の場合にも同様である。しかしこのことは記述の本質を何ら変えない。それは要素における普遍的な記述なのである。微分方程式による現象の叙述に満足するなら——私がかつて（『力学』1883年、第4版1901年、530頁）推奨し、今やますます普及しつつあるように——、それは実際には説明を要素における記述として承認することにほかならない。そうすればあらゆる個別例は、方程式によって物理的ふるまいが記述される空間的・時間的要素から組み立てることができるのである。
+
+§13
+
+Es wurde zuvor gesagt, daß der Mensch selbst ein Stück Natur sei. Es sei erlaubt, dies durch ein Beispiel zu erläutern. Ein Stoff kann für den Chemiker lediglich durch die Sinnes- empfindungen genügend charakterisiert sein. Dann liefert der Chemiker selbst durch innere Mittel den ganzen zur Be- stimmung des Gedankenlaufs nötigen Reichtum der Tatsache. Es kann aber in anderen Fällen die Vornahme von Reaktionen mit Hilfe äußerer Mittel nötig werden. Wenn ein Strom eine in seiner Ebene befindliche Magnetnadel umkreist, so weicht der Nordpol der Nadel zu meiner Linken aus, sobald ich mich in dem Strom als Ampèrescher Schwimmer denke. Ich bereichere die Tatsache (Strom und Nadel), die für sich meinen Gedanken- lauf nicht genügend bestimmt, indem ich mich selbst zuziehe (durch eine innere Reaktion). Ich kann auch auf die Ebene des Stromkreises eine Taschenuhr legen, so daß der Zeiger der Strombewegung folgt. Dann schlägt der Südpol vor, der Nord- pol hinter das Zifferblatt. Oder ich mache den Stromkreis zur Sonnenuhr, nach welcher ja die Taschenuhr1) gebildet ist, so daß der Schatten dem Strom folgt. Dann wendet sich der Nordpol nach der beschatteten Seite der Stromebene. Die beiden letzteren Reaktionen sind äußere. Beide Arten zugleich können nur brauchbar sein, wenn zwischen mir und der Welt keine Kluft besteht. Die Natur ist ein Ganzes. Daß nicht in allen Fällen beiderlei Reaktionen bekannt sind, und daß der Beobachter in manchen Fällen einflußlos scheint, beweist nichts gegen die vorgebrachte Ansicht.
+
+【補】人間自身が自然の一片であると先に述べた。一例で説明しよう。化学者にとってある物質は感覚的感覚のみで十分に特徴づけられることがある——その場合、化学者自身が内的手段によって思考の流れを規定するために必要な事実の豊かさの全体を提供する。しかし他の場合には外的手段による反応の実施が必要になる。電流がその平面上にある磁針を囲んで流れるとき、自分をアンペールの泳者として電流の中に思い描けば、磁針の北極は自分の左側にそれる。私は事実（電流と磁針）を——それだけでは私の思考の流れを十分に規定しない——自分自身を加えることで（内的な反応によって）豊かにしている。電流の平面に懐中時計を、その針が電流の動きに従うように置くこともでき、その場合は南極が文字盤の前に、北極が後ろに出る。あるいは電流回路を日時計にすることもできる——懐中時計はもともとそれに倣って作られているのだから——影が電流に従うようにする。すると北極は電流面の影のある側に向く。後者の二つは外的な反応である。内的反応と外的反応の両方が同時に使えるのは、私と世界との間に溝がない場合にのみ可能である。自然は一つの全体なのである。すべての場合に両種の反応が知られているわけではなく、観察者がある場合に無影響に見えることも、ここに提示された見解に対する反証にはならない。
+
+Rechts und links erscheinen uns gleich, im Gegensatze zu vorn und hinten, oben und unten. Doch sind sie gewiß nur verschiedene Empfindungen, welche durch stärkere gleiche übertäubt sind. Der Raum der Empfindung hat also drei ausgezeichnete wesensverschiedene Richtungen. Für metrische Betrachtungen sind alle Richtungen des geometrischen Raumes gleich. Symmetrische Gebilde, welche uns die unmittelbare Empfindung als äquivalent vorspiegelt, sind es aber in physischer Beziehung durchaus nicht. Auch der physische Raum hat drei wesensverschiedene Richtungen, welche sich in einem triklinen Medium, in dem Verhalten eines elektromagnetischen Elementes am deutlichsten offenbaren. Dieselben physischen Eigenschaften kommen eben auch in unserem Leib zum Vorschein, und daher die Verwendbarkeit desselben als Reagens in physikalischen Fragen. Die genaue physiologische Kenntnis eines Elementes unseres Leibes wäre zugleich eine wesentliche Grundlage unseres physikalischen Weltverständnisses. Vergleiche S. 83.
+
+【補】右と左は我々には等しく見えるが、前と後、上と下とは対照的である。しかし右と左もたしかに異なる感覚であり、ただより強い共通の感覚に圧倒されているにすぎない。感覚の空間には三つの本質的に異なる方向がある。計量的考察ではすべての方向は等しいが、直接の感覚が等価と見せかける対称的形象は、物理的関係においてはまったくそうではない。物理的空間もまた三つの本質的に異なる方向を持ち、それは三斜晶系の媒質において、電磁的要素の振る舞いにおいてもっとも明瞭に現れる。同じ物理的特性が我々の身体にも現れ、ゆえに身体が物理学的問題における試薬として使用できるのである。我々の身体の一要素についての正確な生理学的知識は、同時に我々の物理学的世界理解の本質的な基盤ともなるであろう。（83頁参照。）
+
+§14
+
+Die wiederholt betonte Einheit des Physischen und Psychischen verdient noch von einer besonderen Seite ins Auge gefaßt zu werden. Unser psychisches Leben, sofern wir darunter die Vorstellungen verstehen, scheint recht unabhängig von den physischen Vorgängen zu sein, sozusagen eine Welt für sich, mit freien Gesetzen, mit Gesetzen von anderer Ordnung. Das ist aber gewiß nur ein Schein, der daher rührt, daß immer nur ein winziger Teil der Spuren der physischen Vorgänge in den Vorstellungen lebendig wird. Die Umstände, welche diesen Teil bestimmen, sind so unübersehbar kompliziert, daß wir keine genaue Regel angeben können, nach welcher dies geschieht. Um zu bestimmen, welche Gedanken etwa ein Physiker an die Beobachtung einer gewissen optischen Tatsache knüpfen wird, müßte man die Erlebnisse seiner früheren Tage, die Stärke der Eindrücke, welche sie hinterlassen haben, die Tatsachen der allgemeinen und technischen Kulturentwicklung, welche auf ihn Einfluß genommen haben, kennen, endlich noch im stande sein, seine augenblickliche Stimmung in Rechnung zu ziehen. Dazu wäre die gesamte Physik im weitesten Sinne, und auf einer unerreichbar hohen Entwicklungsstufe als Hilfswissenschaft nötig 1).
+
+【補】繰り返し強調された物理的なものと心理的なものの統一は、なお特殊な側面から注目に値する。我々の心的生活は——表象として理解する限り——物理的過程からかなり独立しているように見え、いわばそれ自身の世界、独自の法則、別の秩序の法則を持つかのようである。しかしこれはたしかに仮象であり、物理的過程の痕跡のごくわずかな部分だけがつねに表象の中で生きているということに由来する。この部分を規定する状況はあまりにも見通しがたいほど複雑であり、それがどのように生じるかについて正確な規則を示すことはできない。ある物理学者がある光学的事実の観察にどのような思考を結びつけるかを定めるには、過去の体験と印象の強さ、文化的・技術的発展の影響、さらにはその瞬間の気分まで知らねばならず、そのためにはもっとも広い意味での物理学全体が、到達不可能なほど高い段階で補助科学として必要であろう。
+
+Betrachten wir nun das Gegenbild. Eine physikalische Tatsache, die wir zum ersten Mal erleben, ist uns fremd. Sie könnte ganz anders verlaufen, als es geschieht, sie würde uns darum nicht sonderbarer scheinen. Ihr Verlauf erscheint uns an sich durch nichts bestimmt, am allerwenigsten eindeutig bestimmt. Wodurch der Verlauf einer Tatsache den Charakter der Bestimmtheit gewinnt, kann nur aus der psychischen Entwicklung verstanden werden. Durch das Vorstellungsleben tritt die Tatsache erst aus ihrer Isoliertheit heraus, kommt dieselbe mit einer Fülle anderer Tatsachen in Kontakt, und gewinnt nun Bestimmtheit durch die Forderung der Übereinstimmung mit letzteren und durch die Ausschließung des Widerspruches. Die Psychologie ist Hilfswissenschaft der Physik. Beide Gebiete stützen sich gegenseitig und bilden nur in ihrer Verbindung eine vollständige Wissenschaft. Der Gegensatz von Subjekt und Objekt (in gewöhnlichem Sinne) besteht auf unserem Standpunkte nicht. Die Frage der mehr oder weniger genauen Abbildung der Tatsachen durch die Vorstellungen ist eine naturwissenschaftliche Frage, wie jede andere Frage.
+
+【補】今度は対照を考えてみよう。はじめて経験する物理的事実は我々にとって異質である。それがまったく別の仕方で進行したとしても、さして奇異には感じないであろう。その経過はそれ自体としては何によっても規定されていないように見え、まして一義的に規定されてはいないように見える。事実の経過が確定性の性格を獲得するのは、心理的発達からのみ理解される。表象生活を通じてはじめて事実は孤立から脱し、他の多くの事実との接触に入り、それらとの一致の要求と矛盾の排除とによって確定性を得る。心理学は物理学の補助科学であり、両領域は互いに支え合い、その結合においてのみ完全な科学を形成する。主観と客観の対立は（通常の意味では）我々の立場には存在しない。事実の表象による多少とも正確な模写の問題は、あらゆる他の問題と同様の自然科学的問題である。
+
+§15
+
+Wenn in einem Komplex von Elementen einige durch andere ersetzt werden, so geht eine Beständigkeit der Verbindung in eine andere Beständigkeit über. Es ist nun wünschenswert, eine Beständigkeit aufzufinden, welche diesen Wechsel überdauert. J. R. Mayer hat zuerst dies Bedürfnis gefühlt, und hat demselben durch Aufstellung seines Begriffes „Kraft" genügt, welcher dem Begriff Arbeit (Poncelet) der Mechaniker, oder genauer dem allgemeineren Begriff Energie (Th. Young) entspricht. Er stellt sich diese Kraft (oder Energie) als etwas absolut Beständiges (wie einen Vorrat oder Stoff) vor, und geht so bis auf die stärksten und anschaulichsten Gedanken zurück. Aus dem Ringen mit dem Ausdruck, mit allgemeinen philosophischen Phrasen (in der 1. und 2. Abhandlung Mayers) sehen wir, daß sich ihm zuerst unwillkürlich und instinktiv das starke Bedürfnis nach einem solchen Begriff aufgedrängt hat. Dadurch aber, daß er die vorhandenen physikalischen Begriffe den Tatsachen und seinem Bedürfnis angepasst hat, ist erst die große Leistung zustande gekommen 1).
+
+【移】ある要素の複合体の中でいくつかの要素が他に置き換えられると、一つの結合の恒常性が別の恒常性に移行する。この交替を貫く恒常性を見出すことが望ましい。J・R・マイヤーがこの欲求をはじめて感じ、彼の「力」の概念を立てることでそれに応えた——この概念は力学者の仕事（ポンスレ）の概念に、あるいはより正確にはより一般的なエネルギー（トマス・ヤング）の概念に対応する。
+
+【移】マイヤーはこのエネルギーを絶対的に恒常的なもの（蓄え、あるいは物質のようなもの）と表象し、もっとも強く直観的な思考にまで遡る。最初の二つの論文では表現との格闘と一般的哲学的常套句が見られ、まずは不随意的・本能的に強いこの概念への欲求が彼に迫ったことがわかる。しかし、既存の物理学的概念を事実と自らの欲求に適応させたことによって、偉大な業績が成し遂げられたのである。
+
+§16
+
+Bei genügender Anpassung werden die Tatsachen von den Gedanken spontan abgebildet, und teilweise gegebene Tatsachen ergänzt. Die Physik kann nur als quantitatives Regulativ wirken, und die spontan verlaufenden Gedanken, dem praktischen oder wissenschaftlichen Bedürfnis entsprechend, bestimmter gestalten. Wenn ich einen Körper horizontal werfen sehe, kann mir das anschauliche Bild der Wurfbewegung auftauchen. Für den Artilleristen oder Physiker ist mehr nötig. Er muß z. B. wissen, daß, wenn er an die horizontale Abszisse der Wurfbahn den Maßstab M anlegend, bis 1, 2, 3, 4 . . . . zählen kann, er, an die vertikalen Ordinaten den Maßstab M' anlegend, zugleich bis 1, 4, 9 16 . . . zählen muß, um zu einem Punkt der Wurfbahn zu gelangen. Die Funktion der Physik besteht also darin, zu lehren, daß eine Tatsache, welche auf eine bestimmte Reaktion R ein. Empfindungsmerkmal E liefert, zugleich noch auf eine andere Reaktion R' ein anderes Merkmal E' zeigt. Hiedurch wird die bestimmtere Ergänzung einer teilweise gegebenen Tatsache möglich.
+
+【移】思考が十分に適応すれば、事実は自発的に思考によって模写され、部分的に所与の事実が補完される。物理学は量的な規整としてのみ機能し、自発的に進む思考を、実際的あるいは科学的な必要に応じて、より確定的にするのである。
+
+【補】物体が水平に投げられるのを見るとき、弾道の直観的な像が浮かぶ。しかし砲兵あるいは物理学者にはそれだけでは足りない。弾道の水平横座標にものさし M を当てて 1、2、3、4 …… と数えるとき、垂直縦座標にものさし M' を当てて同時に 1、4、9、16 …… と数えねばならないことを知っていなければならない。物理学の機能は、ある反応 R に対して感覚的標識 E を示す事実が、同時に別の反応 R' に対して別の標識 E' をも示すことを教えることにある。
+
+Die Einführung der allgemein vergleichbaren, sogenannten absoluten Maße in die Physik, die Zurückführung aller physikalischen Messungen auf die Einheiten: Zentimeter, Gramme, Sekunde (Länge, Masse, Zeit) hat eine eigentümliche Folge. Es besteht ohnehin die Neigung, das physikalisch Faßbare und Meßbare, das gemeinschaftlich Konstatierbare¹), für „objektiv" und „real" gegenüber den subjektiven Empfindungen zu halten. Diese Meinung erhält nun scheinbar eine Stütze, eine psychologische (wenn auch nicht logische) Motivierung durch die absoluten Maße. Es sieht so aus, als ob das, was wir in bekanntem Sinne Empfindungen nennen, in der Physik etwas ganz Überflüssiges wäre. Sehen wir genauer zu, so läßt sich ja das System der Maßeinheiten noch weiter vereinfachen. Denn die Maßzahl der Masse ist durch ein Beschleunigungsverhältnis gegeben, und die Zeitmessung kommt auf eine Winkel- oder Bogenlängenmessung zurück. Demnach ist die Längenmessung die Grundlage für alle Messungen. Allein den bloßen Raum messen wir nicht, wir brauchen einen körperlichen Maßstab, womit das ganze System mannigfaltiger Empfindungen wieder eingeführt ist. Nur sinnliche anschauliche Vorstellungen können zur Aufstellung der Gleichungen der Physik führen, und in eben solchen besteht deren Interpretation. Obschon also die Gleichungen nur räumliche Maßzahlen enthalten, sind dieselben auch nur das ordnende Prinzip, das uns anweist, aus welchen Gliedern in der Reihe der sinnlichen Elemente wir unser Weltbild zusammenzusetzen haben.
+
+【補】一般に比較可能ないわゆる絶対単位の物理学への導入——すべての物理学的測定をセンチメートル・グラム・秒（長さ・質量・時間）に還元すること——は一つの独特な帰結をもたらす。物理学的に把握可能で測定可能なもの、共同的に確認可能なものを、主観的な感覚に対して「客観的」で「実在的」と見なす傾向がもともとある。この見解は絶対単位によって見かけ上の支えを、心理学的な（論理的ではないにせよ）動機づけを得る。我々が周知の意味で感覚と呼ぶものは、物理学においてまったく余計なものであるかのように見える。しかし仔細に見れば、測定単位の体系はさらに簡約化しうる。なぜなら質量の測定数は加速度の比によって与えられ、時間測定は角度ないし弧長の測定に帰着する。したがって長さの測定がすべての測定の基礎となるが、空間だけを測ることはできず、物理的なものさしが必要であり、それとともに多様な感覚の全体系が再び導入される。感覚的で直観的な表象のみが物理学の方程式の定立へ導きうるのであり、方程式の解釈もまさに感覚的表象においてなされる。方程式は空間的な測定数のみを含むが、それは我々に、感覚的要素のどの項からどの項から世界像を組み立てるべきかを指示する秩序づけの原理にすぎない。
+
+§17
+
+Es wurde anderwärts¹) ausgeführt, daß quantitative Auf- stellungen sich von qualitativen nur dadurch unterscheiden, daß erstere sich auf ein Kontinuum von gleichartigen Fällen beziehen. Hiernach wäre die vorteilhafte Anwendung der Gleichungen zur Beschreibung nur in einem sehr beschränkten Gebiet zu- lässig. Es ist jedoch Aussicht vorhanden, dieses Gebiet sukzessive ins Unbegrenzte zu erweitern und zwar in folgender Art. Die möglichen (optischen) Empfindungen können, wenn auch nicht gemessen, doch nach psychophysischen Methoden durch Zahlen charakterisiert und inventarisiert werden. Irgend ein (opti- sches) Erlebnis kann nun beschrieben werden, indem man die Werte der Zahlencharakteristiken als abhängig von den Raum- und Zeitkoordinaten und von einander durch Gleichungen darstellt. Ähnliches wird man im Prinzip auch in anderen Sinnes- gebieten für erreichbar halten dürfen. Der S. 37 gebrauchte Aus- druck hat also einen genau angebbaren Sinn.
+
+【補】量的規定は質的規定と、前者が同種の場合の連続体に関わるという点でのみ区別されることが、別の場所で論じられた。それによれば方程式を記述に有利に適用できるのは、きわめて限定された領域にすぎないことになる。しかしこの領域を次のような仕方で徐々に無限に拡張する見込みがある。可能な（光学的）感覚は、測定されずとも精神物理学的方法によって数値で特徴づけ、目録化しうる。ある（光学的）経験は、数値特性の値を空間座標と時間座標の、および相互の関数として方程式で表すことにより記述されうる。原理的には他の感覚領域でも同様のことが達成可能と見なしてよいであろう。したがって37頁で用いた表現は正確に指定可能な意味を持つのである。
+
+[4. Aufl. (1903) § 3; in der 9. Aufl. (1922) gestrichen] Die Wissenschaften können sich sowohl durch den Stoff unterscheiden als auch durch die Art der Behandlung dieses Stoffes. Alle Wissenschaft geht aber darauf aus, Tatsachen in Gedanken darzustellen, entweder zu praktischen Zwecken oder zur Beseitigung des intellektuellen Unbehagens.
+
+【補】〔第4版§3のみ〕諸科学は素材によっても、素材の扱い方によっても区別される。しかしすべての科学は、事実を思考の中に再現すること——それが実際的な目的のためであれ、知的な不快感の除去のためであれ——を目指している。
+
+[4. Aufl. § 3; 9. Aufl. gestrichen] Knüpfen wir an die Bezeichnung der „Vorbemerkungen” an, so entsteht Wissenschaft, indem durch die α β γ ... der Zusammenhang der übrigen Elemente nachgebildet wird. Beispielsweise entsteht Physik (in weitester Bedeutung) durch Nachbildung der A B C ... in ihrer Beziehung zueinander, Physiologie oder Psychologie der Sinne durch Nachbildung der Beziehung von A B C ... zu K L M, Physiologie durch Nachbildung der Beziehung der K L M ... zueinander und zu A B C .... Die Nachbildung der α β γ ... durch andere α β γ führt zu den eigentlichen psychologischen Wissenschaften.
+
+【補】〔第4版§3のみ〕「予備考察」（第1章）の記号を使えば、α β γ ……（思考・表象・意志）によって他の要素の連関が模写されるときに科学が成立する。例えば、A B C …… の相互関係の模写がもっとも広義の物理学を、A B C …… と K L M …… の関係の模写が感覚の生理学ないし心理学を、K L M …… 相互の関係の模写が生理学を、α β γ …… の α β γ …… による模写が狭義の心理学を生む。
+
+[4. Aufl. § 3; 9. Aufl. gestrichen] Man könnte nun z. B. in bezug auf Physik der Ansicht sein, daß es weniger auf Darstellung der sinnlichen Tatsachen als auf die Atome, Kräfte und Gesetze ankommt, welche gewissermaßen den Kern jener sinnlichen Tatsachen bilden. Unbefangene Überlegung lehrt aber, daß jedes praktische und intellektuelle Bedürfnis befriedigt ist, sobald unsere Gedanken die sinnlichen Tatsachen vollständig nachzubilden vermögen. Diese Nachbildung ist also Ziel und Zweck der Physik, die Atome, Kräfte, Gesetze hingegen sind nur die Mittel, welche uns jene Nachbildung erleichtern. Der Wert der letztern reicht nur so weit, als ihre Hilfe.
+
+【補】〔第4版§3のみ〕物理学においては感覚的事実の提示よりも原子・力・法則が重要だという見解もありうる。しかし、素直に考えれば、我々の実際的・知的な欲求は、感覚的事実を思考で再現できた時点で完全に満たされる。この再現こそが物理学の目的であり、原子・力・法則はその再現を容易にする手段にすぎない。手段の価値はその助けの範囲に尽きる。
+
+§18
+
+Die Ermittlung der Abhängigkeit der Elemente ABC.. von einander, unter Absehen von KLM, ist die Aufgabe der Natur- wissenschaft, oder der Physik im weitesten Sinne. In Wirklich- keit sind aber die ABC.. immer auch von KLM abhängig. Es bestehen immer Gleichungen von der Form f (A, B, C, ..K, L, M..) = 0. Indem nun viele verschiedene Beobachter KLM.., K'L'M'.., K"L"M".. sich beteiligen, gelingt es, den zufälligen Einfluß der Variation von KLM.. usw. zu eliminieren und nur das gemein- schaftlich Konstatierbare, die reine Abhängigkeit der ABC.. von einander zu ermitteln. Hierbei verhalten sich die KLM.., K'L'M'.. wie physikalische Apparate, von deren Eigentümlich- keiten, speziellen Konstanten usw. die Anzeigen, die Ergebnisse befreit werden müssen. Handelt es sich aber nur um den Zusammenhang einer quantitativen Reaktion mit andern quantitativen Reaktionen, wie in dem obigen Beispiele der Dynamik, so ist die Sache noch einfacher. Es kommt dann alles auf die Konstatierung von Gleichheit oder Identität der ABC.. unter gleichen Umständen (unter gleichen KLM..), eigentlich nur auf Konstatierung von räumlichen Identitäten hinaus. Die Art der Empfindungsqualitäten ist nun gleichgiltig; nur deren Gleichheit ist maßgebend. Ein einziges Individuum genügt nun, um Abhängigkeiten festzustellen, welche für jedes Individuum gelten. So wird von hier aus eine sichere Basis für das ganze Gebiet der Forschung gewonnen. Auch der Psychophysiologie gereicht dies zum Vorteil.
+
+【補】KLM を度外視した要素 ABC…… 相互の依存関係の究明は、自然科学ないしもっとも広い意味での物理学の課題である。しかし現実には ABC…… はつねに KLM にも依存している。f(A, B, C, …K, L, M…) = 0 の形の方程式がつねに成り立つ。多数の異なる観察者 KLM…、K'L'M'…、K''L''M''… が参加することにより、KLM の変動の偶然的な影響を排除し、共同的に確認可能なもの——ABC…… 相互の純粋な依存関係——だけを見出すことに成功する。その際 KLM…、K'L'M'… は物理学的装置のように振る舞い、その特性や特殊な定数などから表示や結果を解放しなければならない。上述の力学の例のように、量的反応の連関のみが問題なら、事態はさらに単純であり、同じ条件下（同じ KLM のもと）での ABC…… の等しさ・同一性の確認に、つまりは空間的な同一性の確認に帰着する。感覚性質の種類は無関係であり、その等しさだけが決定的である。こうしてただ一人の個人で、あらゆる個人に妥当する依存関係を確定することが可能となる。ここから研究の全領域に対する確実な基盤が得られるのである。精神物理学もまたこのことの恩恵を受ける。
+
+§19
+
+Der Raum des Geometers ist durchaus nicht das bloße System der Raumempfindungen (des Gesichts- und Tastsinnes), sondern derselbe besteht vielmehr aus einer Menge von begrifflich idealisierten und formulierten physikalischen Erfahrungen, welche an die Raumempfindungen anknüpfen. Schon indem der Geometer seinen Raum als an allen Stellen und nach allen Richtungen gleich beschaffen betrachtet, geht er weit über den dem Tast- und Gesichtssinn gegebenen Raum hinaus, welcher diese einfache Eigenschaft durchaus nicht hat (S. 138, 148 u. f.). Ohne physikalische Erfahrung würde er nie dahin gelangen. Die grundlegenden Sätze der Geometrie werden auch tatsächlich nur durch physikalische Erfahrungen, durch Anlegen von Längen und Winkelmaßstäben gewonnen, durch Anlegen starrer Körper aneinander. Ohne Kongruenzsätze keine Geometrie. Abgesehen davon, daß Raumbilder uns ohne physikalische Erfahrung gar nicht auftauchen würden, wären wir auch nicht imstande, dieselben aneinanderzulegen, um ihre Kongruenz zu prüfen. Wenn wir einen Zwang fühlen, ein gleichschenkliges Dreieck auch mit gleichen Winkeln an der Grundlinie vorzustellen, so beruht derselbe auf der Erinnerung an starke Erfahrungen. Beruhte der Satz auf reiner Anschauung, so brauchen wir ihn nicht zu lernen. Daß man in der bloßen geometrischen Phantasie Entdeckungen machen kann, wie es täglich geschieht, zeigt nur, daß auch die Erinnerung an die Erfahrung uns noch Momente zum Bewußtsein bringen kann, die früher unbeachtet blieben, so wie man an dem Nachbild einer hellen Lampe noch neue Einzelheiten zu bemerken vermag. Selbst die Zahlenlehre muß in ähnlicher Weise aufgefaßt werden. Auch ihre grundlegenden Sätze werden von der Erfahrung nicht ganz unabhängig sein.
+
+【移】幾何学者の空間は、空間感覚（視覚と触覚の空間）の単なる体系ではない。それは空間感覚に結びつく多くの物理学的経験から成り立っている。幾何学者がその空間をあらゆる場所とあらゆる方向において同質と見なすとき、すでに触覚と視覚が与える空間——この単純な性質をまったく持たない——をはるかに超えている。物理学的経験なしにはそこに到達しえない。
+
+【補】幾何学の基礎命題は実際、物理学的経験——長さと角度のものさしを当てること、剛体を互いに合わせること——によってのみ獲得される。合同の定理なくして幾何学はない。等脚三角形を底角も等しいものとして表象せざるをえないという強制は、純粋直観ではなく強い経験の記憶に基づく。幾何学的想像力のみで発見ができるのは、経験の記憶がなお気づかれなかった契機を意識にもたらしうることを示すだけであり、明るいランプの残像にさらに新しい細部が認められるのと同じである。数論もまた同様に理解されねばならず、その基礎命題も経験から完全に独立ではないであろう。
+
+Das Überzeugende der Geometrie (und der ganzen Mathematik) beruht nicht darauf, daß ihre Lehren durch eine ganz besondere Art der Erkenntnis gewonnen werden, sondern nur darauf, daß ihr Erfahrungsmaterial uns besonders leicht und bequem zur Hand ist, besonders oft erprobt wurde und jeden Augenblick wieder erprobt werden kann. Auch ist das Gebiet der Raumerfahrung ein viel beschränkteres, als das der gesamten Erfahrung. Die Überzeugung, das erstere im wesentlichen erschöpft zu haben, wird alsbald Platz greifen und das nötige Selbstvertrauen erzeugen¹).
+
+【移】幾何学（および数学全体）の説得力は、特殊な認識方法で得られるところにあるのではなく、その経験材料がとりわけ手軽に利用でき、とりわけ頻繁に検証され、いつでも再検証できるところにのみある。空間経験の領域は経験全体に比べてはるかに限定されており、その本質を尽くしたという確信がすぐに生まれ、必要な自信を生む。
+
+§20
+
+Ein ähnliches Selbstvertrauen, wie der Geometer, hat ohne Zweifel auch der Komponist, der in dem Gebiet der Tonempfindungen, der Ornamentenmaler, der im Gebiet der Farbenempfindungen reiche Erfahrungen gewonnen hat. Dem einen wird kein Raumgebilde vorkommen, dessen Elemente ihm nicht wohlbekannt wären, die beiden andern werden auf keine neue Ton- oder Farbenkombination stoßen. Ohne Erfahrung wird aber der Anfänger in der Geometrie durch die Ergebnisse seiner Tätigkeit nicht minder überrascht oder enttäuscht, als der junge Musiker oder Ornamentist.
+
+【移】同様の自信を、作曲家は音の感覚の領域で、装飾画家は色の感覚の領域で持っている。数学者、作曲家、装飾画家、そして思弁に身を委ねる自然研究者は、素材と目的が異なるにもかかわらず、まったく類似した仕方で行動している。
+
+Der Mathematiker, der Komponist, der Ornamentist und der Naturforscher, welche sich der Spekulation ergeben, verfahren trotz der Verschiedenheit des Stoffes und Zweckes ihrer Tätigkeit in ganz analoger Weise. Der erstere ist allerdings wegen der größten Beschränktheit des Stoffes gegen alle in Bezug auf die Sicherheit seines Vorgehens im Vorteil, der letztere aus dem entgegengesetzten Grunde gegen alle im Nachteil.
+
+【補】幾何学者と同様の自信を、音の感覚の領域で豊かな経験を積んだ作曲家や、色の感覚の領域での装飾画家も疑いなく持っている。幾何学者にはその要素が馴染みでない空間像は現れず、他の二者も未知の音や色の組み合わせに出くわすことはない。しかし経験なしには、幾何学の初学者は若い音楽家や装飾画家に劣らず、自身の活動の結果に驚かされあるいは失望させられる。数学者は素材がもっとも限定されているがゆえに手続きの確実さにおいて有利であり、自然研究者は正反対の理由から不利な立場にある。
+
+§21
+
+Die Unterscheidung des physiologischen und geometrischen Raumes hat sich als unvermeidlich erwiesen. Indem aber geometrische Einsicht durch die räumliche Vergleichung der Körper miteinander gewonnen wird, kann auch schon die Zeit nicht außer Betracht bleiben, da es unmöglich ist, hiebei vom Transport der Körper abzusehen. Raum und Zeit stehen in einem innigern Zusammenhange, und zeigen sich hiebei relativ unabhängig von andern physikalischen Elementen. Dies spricht sich in der Bewegung der Körper bei sonstiger relativer Konstanz ihrer übrigen Eigenschaften aus. Die Entstehung einer reinen Geometrie, Phoronomie und Mechanik wird eben dadurch möglich.
+
+【補】生理学的空間と幾何学的空間の区別は不可避であることが明らかになった。しかし幾何学的認識は物体の空間的比較によって得られるのであるから、物体の運搬を度外視することが不可能である以上、時間もすでに考慮から外せない。空間と時間はより密接な連関にあり、他の物理的要素から相対的に独立していることを示す。これは、物体が他の諸性質の相対的恒常性のもとで運動することに表現されている。純粋幾何学、運動学、力学の成立はまさにこれによって可能になる。
+
+Wenn wir genau zusehen, so bedeuten Raum und Zeit in physiologischer Beziehung besondere Arten von Empfindungen, in physikalischer Beziehung aber funktionale Abhängigkeiten der durch Sinnesempfindungen charakterisierten Elemente von einander. Indem die räumlichen und zeitlichen physiologischen Indices, welche durch Teile und Vorgänge unseres Leibes bedingt sind, bei gleichen physiologischen Umständen untereinander verglichen werden, ergeben sich Abhängigkeiten der physikalischen Elemente von einander. (Abhängigkeit der Elemente eines Körpers von jenen eines andern, Abhängigkeit der Elemente eines Vorgangs von jenen eines andern). Auf Grund dieser Einsicht kann man zeitliche und räumliche Bestimmungen rein physikalisch vornehmen. Was mit dem kleineren Teil eines stetig einsinnig ablaufenden Vorgangs zusammentrifft, ist zeitlich früher. Im homogen erfüllten Raum ist der Ort B dem Ort A näher als ein anderer, wenn B von dem von A aus erregten Vorgang früher erreicht wird, als jener andere. Die Gerade ist der Inbegriff der durch die physikalische Beziehung zweier Punkte (unendlich kleiner Körper) eindeutig bestimmten Orte. Der Ort C liegt im Halbierungspunkt der Geraden AB, wenn derselbe im homogenen Raum durch Vorgänge von A und B aus in gleicher Zeit erreicht wird, und in kürzerer Zeit als jeder andere, der erstere Eigenschaft mit ihm teilt.
+
+【補】正確に見れば、空間と時間は生理学的には特殊な種類の感覚を意味し、物理学的には感覚によって特徴づけられた要素の相互の機能的依存関係を意味する。空間的・時間的な生理学的指標——我々の身体の部分と過程によって条件づけられる——を同じ生理学的条件のもとで比較することにより、物理的要素相互の依存関係が得られる（ある物体の要素の他の物体の要素への依存、ある過程の要素の他の過程の要素への依存）。この洞察に基づいて時間的・空間的規定を純粋に物理学的に行うことができる。連続的に一方向に進行する過程のより小さな部分と一致するものは時間的に「より早い」。均質に満たされた空間では、A から発せられた過程が B にその他の場所より早く到達するとき、B は A により近い。直線とは二つの点（無限に小さな物体）の物理学的関係によって一義的に定まる場所の総体である。場所 C が直線 AB の二等分点にあるとは、均質な空間において A と B から発せられた過程が同じ時間で C に到達し、かつその性質を共有する他のいかなる場所よりも短い時間で到達することである。
+
+§22
+
+Die Zeit des Physikers fällt nicht mit dem System der Zeitempfindungen zusammen. Wenn der Physiker eine Zeit bestimmen will, so legt er identische oder als identisch vorausgesetzte Vorgänge, Pendelschwingungen, Erdrotationen usw., als Maßstab an. Die mit der Zeitempfindung verknüpfte Tatsache wird also einer Reaktion unterworfen, und das Ergebnis derselben, die Zahl, zu der man gelangt, dient nun statt der Zeitempfindung zur nähern Bestimmung des Gedankenlaufs. Ganz ebenso richten wir unsere Gedanken über Wärmevorgänge nicht nach der Wärmeempfindung, die uns die Körper liefern, sondern nach der viel bestimmteren, welche durch die Thermometerreaktion bei Ablesung des Standes des Quecksilberfadens sich ergibt. Gewöhnlich wird an die Stelle der Zeitempfindung eine Raumempfindung (Drehungswinkel der Erde, Weg des Zeigers auf dem Uhrzifferblatt), und für die letztere wieder eine Zahl gesetzt. Stellt man z. B. den Temperaturüberschuß eines abkühlenden Körpers über die Umgebung durch ϑ=Θe-kt dar, so ist t jene Zahl.
+
+【移】物理学者の時間は、時間感覚の体系とは一致しない。物理学者が時間を測るとき、振り子の振動や地球の自転など、同一あるいは同一と前提された過程を尺度として当てる。時間感覚に結びつく事実に反応が加えられ、その結果得られる数が、時間感覚の代わりに思考の流れをより正確に規定する。まったく同様に、熱の過程についての我々の思考も、物体が与える温度感覚によってではなく、温度計の反応すなわち水銀柱の目盛りの読み取りによって得られるはるかに確定的な感覚によって方向づけられる。通常、時間感覚の代わりに空間感覚（地球の回転角、時計文字盤上の針の移動）が置かれ、さらにその空間感覚の代わりに数が置かれる。例えば冷却する物体の周囲に対する温度超過を ϑ=Θe⁻ᵏᵗ で表すとき、t がその数である。
+
+Die Beziehung, in welcher die Größen einer Gleichung stehen, ist gewöhnlich (analytisch) eine allgemeinere als diejenige, welche man durch die Gleichung darstellen will. So haben in der Gleichung (x/a)² + (y/b)² = 1 alle beliebigen Werte von x einen analytischen Sinn, und liefern zugehörige Werte von y. Verwenden wir aber diese Gleichung zur Dar- - 286 - stellung einer Ellipse, so haben nur die Werte von x < a und von y < b einen (reellen) geometrischen Sinn. Ähnlich müßte man, wenn dies nicht auf der Hand läge, ausdrücklich hinzufügen, daß die Gleichung ϑ=Θe-kt nur für wachsende Werte von t den Vorgang darstellt. Denken wir uns den Verlauf verschiedener Tatsachen, z. B. die Abkühlung eines Körpers und den freien Fall eines andern, durch solche Gleichungen dargestellt, welche die Zeit enthalten, so kann aus denselben die Zeit eliminiert, und etwa der Temperaturüberschuß durch den Fallraum bestimmt werden. Die Elemente stellen sich dann einfach als abhängig von einander dar. Man müßte aber den Sinn einer solchen Gleichung durch die Hinzufügung näher bestimmen, daß nur wachsende Fallräume oder abnehmende Temperaturen nach einander einzusetzen seien. Wenn wir so den Temperaturüberschuß durch den Fallraum bestimmt denken, so ist die Abhängigkeit keine unmittelbare. Darin stimme ich Petzoldt 1) bei. Die Abhängigkeit ist aber ebenfalls keine unmittelbare, wenn wir den Temperaturüberschuß durch den Drehungswinkel der Erde bestimmt setzen. Denn niemand wird glauben, daß noch dieselben Temperaturwerte auf dieselben Winkelwerte entfallen würden, wenn die Erde etwa durch einen Stoß ihre Rotationsgeschwindigkeit ändern würde. Aus solchen Betrachtungen scheint mir doch zu folgen, daß unsere Aufstellungen provisorische sind, welche auf teilweiser Unkenntnis gewisser maßgebender, uns unzugänglicher unabhängig Variablen beruhen. Nur so wollte ich seiner Zeit meinen Hinweis auf eine Unbestimmtheit verstanden wissen 2). Diese Ansicht ist auch sehr wohl verträglich mit der Aufstellung eindeutiger Bestimmtheiten, welche immer unter Voraussetzung gegebener Umstände und unter Abstraktion von ungewöhnlichen und unerwarteten Änderungen stattfindet. Diese Auf- fassung ist, wie mir scheint, unvermeidlich, wenn man bedenkt, daß der von Petzoldt betonte Unterschied simultaner und sukzedaner Abhängigkeiten wohl für die anschauliche Vorstellung, nicht aber für die Gleichungen gilt, welche für erstere das quantitative Regulativ sind. Letztere können nur einerlei Art sein, nur simultane Abhängigkeiten aussprechen. Der Indeter- minismus in gewöhnlichem Sinne, etwa die Annahme einer Willensfreiheit im Sinne mancher Philosophen und Theologen liegt mir gänzlich fern.
+
+【補】方程式の量の間に成り立つ関係は、通常（分析的に）表現しようとする関係よりも一般的である。例えば方程式 (x/a)²＋(y/b)²＝1 では x の任意の値が分析的な意味を持ち、対応する y の値を与える。しかしこの方程式を楕円の描写に用いるなら、x＜a かつ y＜b の値だけが（実数の）幾何学的意味を持つ。同様に、もしそれが自明でなければ、方程式 ϑ=Θe⁻ᵏᵗ は t の増大する値に対してのみ過程を表す、と明示的に付記しなければならないであろう。異なる事実の経過——例えばある物体の冷却と別の物体の自由落下——を時間を含む方程式で表すとすれば、それらから時間を消去して温度超過を落下距離によって定めることができる。要素は単に相互依存的に現れる。しかしそのような方程式の意味を確定するには、増大する落下距離または減少する温度のみを順次に代入すべきである、と付記しなければならないであろう。温度超過を落下距離によって定めるとき、その依存関係は直接的ではない。ペッツォルト¹⁾にその点で同意する。しかし温度超過を地球の回転角で定めても依存関係は同じく直接的ではない。なぜなら、地球が衝撃によって回転速度を変えたなら、同じ温度値が同じ角度値に対応しなくなるであろうからである。このような考察から、我々の規定は暫定的であり、我々にとって近づきえないある決定的な独立変数の部分的な不知に基づいているということが帰結するように思われる。私がかつて不確定性を指摘したのは²⁾、まさにこの意味でのみ理解されたかったのである。この見解は、与えられた状況を前提とし通常でない予期しない変化を捨象したうえでつねに行われる一義的な確定性の設定とも十分に両立する。ペッツォルトが強調した同時的依存と継起的依存の区別は直観的表象にとっては妥当するが、その量的な規準である方程式にとっては妥当しないことを考えれば、この見方は不可避であるように思われる。方程式は一種類のものしかありえず、同時的依存のみを表現しうる。通常の意味での非決定論——哲学者や神学者が言う意志の自由の想定——は、私にはまったく無縁である。
+
+Die Zeit ist nicht umkehrbar. Ein warmer Körper in kalter Umgebung kühlt nur ab, und erwärmt sich nicht. Mit größeren (späteren) Zeitempfindungen sind nur kleinere Temperaturüber- schüsse verknüpft. Ein Haus in Flammen brennt nieder, und baut sich nicht auf. Die Pflanze kriecht nicht, sich verkleinernd, in die Erde, sondern wächst, sich vergrößernd, hervor. Die Tatsache der Nichtumkehrbarkeit der Zeit reduziert sich darauf, daß die Wert- änderungen der physikalischen Größen in einem bestimmten Sinne stattfinden. Von den beiden analytischen Möglichkeiten ist nur die eine wirklich. Ein metaphysisches Problem brauchen wir hierin nicht zu sehen.
+
+【移】時間の不可逆性という事実は、物理的量の値の変化がある定まった方向にだけ起こるということに帰着する。二つの分析的可能性のうち、一方だけが現実的なのである。ここに形而上学的問題を見る必要はない。
+
+【補】暖かい物体は冷たい環境では冷えるだけで暖まらない。より後の（大きい）時間感覚にはより小さい温度余剰だけが結びつく。炎に包まれた家は崩れ落ちるのであって建て直されるのではない。植物は小さくなって地中に潜るのではなく、大きくなりながら伸び出す。
+
+Veränderungen können nur durch Differenzen bestimmt sein. Im Unterschiedslosen gibt es keine Bestimmung. Die eintretende Veränderung kann die Unterschiede vergrößern oder verkleinern. Hätten aber die Differenzen die Tendenz, sich zu vergrößern, so würde die Veränderung ins Unendliche und Ziellose gehen. Mit dem allgemeinen Weltbild, oder vielmehr jenem unserer beschränkten Umgebung, verträgt sich nur die Annahme einer im all- gemeinen differenzverkleinernden Tendenz. Es würde aber bald überhaupt nichts mehr geschehen, wenn nicht von außen differenzsetzende Umstände, in unsere Umgebung eindringend, sich geltend machen würden.
+
+【補】変化は差異によってのみ規定されうる。差異のないところに規定はない。生じる変化は差異を拡大も縮小もしうる。しかし差異が拡大する傾向を持つなら、変化は無限・無目的に進むであろう。一般的な世界像、あるいはむしろ我々の限定された環境のそれとは、概して差異縮小的な傾向の想定だけが両立する。しかし外部から差異を設定する状況が侵入してこなければ、やがて何も起こらなくなるであろう。
+
+Wir können auch, wie Petzoldt, aus unserem eigenen Be- stehen, aus unserer körperlichen und geistigen Stabilität, auf die Stabilität, eindeutige Bestimmtheit und Einsinnigkeit der Vorgänge in der Natur schließen. Denn nicht nur sind wir selbst ein Stück Natur (S. 276), sondern die genannten Eigenschaften in unserer Umgebung bedingen unser Bestehen und Denken (vgl. Populärwiss. Vorlesungen, 3. Aufl., S. 250). Allein zuviel läßt sich hierauf nicht bauen, denn die Organismen sind ein eigenartiges Stück Natur von sehr begrenzter und mäßiger Stabilität, welche ja tatsächlich auch zugrunde gehen, und zu deren Erhaltung anderseits eine nur mäßige Stabilität der Umgebung genügt. Es wird also am zweckmäßigsten sein, die Grenzen unseres Wissens, die sich über- all zeigen, anzuerkennen und das Streben nach eindeutiger Be- stimmtheit als ein Ideal anzusehen, das wir in unserem Denken, soweit als möglich, verwirklichen.
+
+【補】ペッツォルトのように、我々自身の存在、我々の身体的・精神的安定性から、自然における過程の安定性、一義的確定性、一方向性を推論することもできる。我々自身が自然の一片であるだけでなく、環境のそうした特性が我々の存在と思考を条件づけている。しかしこれに多くを築くことはできない。有機体は非常に限定された穏やかな安定性しか持たない自然の独特な一片であり、実際に滅びもし、その維持には環境の穏やかな安定性で足りる。したがって、至る所に現れる我々の知識の限界を認め、一義的確定性への努力を、我々の思考においてできうる限り実現する理想と見なすのがもっとも適切であろう。
+
+Ich betrachte die Sätze, die ich in der Zeit der größten Gärung meiner Gedanken (1871) niedergeschrieben habe, nament- lich in ihrer Form, selbstverständlich nicht als unangreifbar, und sehe auch die Einwendungen von Petzoldt keineswegs als mut- willige an, hoffe aber, wenn ich ausführlicher auf den Gegenstand zurückkomme, den ich hier nur kurz berühren konnte, ohne das Wesentliche meiner Ansicht aufzugeben, doch eine volle Verstän- digung zu erzielen 1).
+
+【補】思考のもっとも激しい発酵の時期（1871年）に書き記した命題を、特にその形式において、攻撃不可能と見なすつもりは自明のことながらない。ペッツォルトの異論も故意のものとは見ていない。ここでは簡潔に触れることしかできなかったこの主題について、より詳しく立ち戻るとき、私の見解の本質を放棄することなく、完全な了解に達しうると期待している。
+
+Anmerkungen · 注
+
+Anm. 2)
+
+Auf eine Untersuchung über den Urteilsprozeß als solchen kann ich mich hier nicht einlassen. Ich möchte aber unter den neueren Schriften über den Gegen- stand diejenige von W. Jerusalem (Die Urteilsfunktion, Wien 1895) hervorheben. Ohne mit diesem Autor auf demselben Boden zu stehen, habe ich doch aus der Lektüre seiner Schrift durch die vielen Einzeluntersuchungen manche Anregung und Belehrung empfangen. Die physiologischen Seiten, namentlich die biologische Funktion des Ur- teils, sind sehr lebendig dargestellt. Die Auffassung des Subjekts als eines Kraft- zentrums wird man kaum glücklich finden. Dagegen gibt man gewiß gern zu, daß 17*
+
+注2）判断過程そのものの研究にはここでは立ち入れない。しかしこの対象に関する新しい著作の中で、W・イェルサレム（『判断機能』ウィーン、1895年）のものを強調したい。この著者と同じ土台に立つわけではないが、彼の著作の多くの個別研究から多くの示唆と教えを受けた。生理学的な側面、とりわけ判断の生物学的機能がきわめて生き生きと叙述されている。主体を力の中心とする把握はほとんど成功とは言えまい。
+
+Anm. 1)
+
+So nannten die Markomannen die von den Römern über die Donau gesetzten Löwen „Hunde" und die Jonier nannten (Herodot II 69) die „Champsä" des Nils nach den Eidechsen ihrer Büsche „Krokodile".
+
+注1）マルコマンニ族はローマ人がドナウ河畔に設置したライオンを「犬」と呼び、イオニア人は（ヘロドトス第2巻69）ナイルの「カムプサ」を灌木のトカゲにちなんで「クロコディロス（ワニ）」と呼んだ。
+
+Anm. 1)
+
+Sämtliche Beispiele sind der Beobachtung entnommen.
+
+注1）すべての例は観察から採られたものである。
+
+Anm. 2)
+
+Withney, Leben und Wachstum der Sprache. Leipzig 1876.
+
+注2）ホイットニー『言語の生活と成長』ライプツィヒ、1876年。
+
+Anm. 1)
+
+W. Jerusalem, Laura Bridgman. Wien, Pichler, 1891. — Vgl. auch L. W. Stern, Helen Keller. Berlin 1905. — Jerusalem, Marie Heurtin, Österreichische Rundschau, Bd. 3, S. 292, 426 (1905).
+
+注1）W・イェルサレム『ローラ・ブリッジマン』ウィーン、ピヒラー書店、1891年。——L・W・シュテルン『ヘレン・ケラー』ベルリン、1905年も参照。——イェルサレム「マリー・ウールタン」『オーストリア展望』第3巻、292、426頁（1905年）。
+
+Anm. 1)
+
+Prinzipien der Wärmelehre, 1896, 2. Aufl. 1900, S. 415, 422.
+
+注1）『熱学の諸原理』1896年、第2版1900年、415、422頁。
+
+Anm. 1)
+
+J. v. Kries, Die materiellen Grundlagen der Bewußtseinserscheinungen. Freiburg i. Br. 1898.
+
+注1）J・フォン・クリース『意識現象の物質的基礎』フライブルク、1898年。
+
+Anm. 1)
+
+Vgl.: „Die Mechanik in ihrer Entwicklung". 1. Aufl. 1883, 4. Aufl. S. 519, 520.
+
+注1）『力学——その発展における歴史的・批判的叙述』初版1883年、第4版519、520頁参照。
+
+Anm. 1)
+
+Vgl. Prinzipien der Wärmelehre, 2. Aufl. 1900, S. 423 u. ff.
+
+注1）『熱学の諸原理』第2版、1900年、423頁以下参照。
+
+Anm. 1)
+
+Dem Kinde erscheint alles als substanziell, zu dessen Wahrnehmung es nur seiner Sinne bedarf. Das Kind fragt, „wo der Schatten, wo das gelöschte Licht hinkommt?" Es will die Elektrisiermaschine nicht weiterdrehen lassen, um den Funkenvorrat derselben nicht zu erschöpfen. Ein noch nicht ein Jahr alter Knabe wollte seinem, ein Liedchen pfeifenden Vater die Töne von den Lippen wegfangen. Das Haschen nach farbigen Nachbildern kommt auch bei größeren Kindern noch vor usw. usw. — Erst sobald wir Bedingungen einer Tatsache außerhalb uns bemerken, verschwindet der Eindruck der Substanzialität. Die Geschichte der Wärmelehre ist in dieser Beziehung sehr lehrreich.
+
+注1）子どもには、その知覚に感覚だけを要するものすべてが実体的に見える。子どもは「影はどこへ行くのか、消えた光はどこへ行くのか」と問う。起電機をこれ以上回させまいとする——火花の蓄えを使い果たさないために。まだ一歳にならない男の子が、小唄を口笛で吹く父親の唇から音をつかみ取ろうとした。色の残像をつかまえようとすることは年長の子どもにもなお見られる、等々。——ある事実の条件を自分の外に見出して初めて、実体性の印象は消える。熱学の歴史はこの点できわめて教訓的である。
+
+Anm. 1)
+
+Außermechanische physikalische Erfahrungen können sich, in dem Maße als sie geläufiger werden, dem Werte der mechanischen nähern. Stricker hat meines Erachtens einen richtigen und wichtigen Punkt getroffen, indem er (Studien über die Assoziation der Vorstellungen, Wien 1883) die Kausalität mit dem Willen in Zusammenhang bringt. Ich selbst habe 1861 als junger Dozent (bei Darlegung der Bedeutung der Millschen Differenzmethode), die später von Stricker ausgesprochene Ansicht mit großer Lebhaftigkeit und Einseitigkeit vertreten. Der Gedanke hat mich auch nie ganz verlassen (vgl. z. B. „Die Mechanik in ihrer Entwicklung", Leipzig 1883, S. 78, 282, 456). Gegenwärtig bin ich aber, wie die obigen Ausführungen zeigen, doch der Meinung, daß diese Frage nicht so einfach ist, und von mehreren Seiten betrachtet muß. Vgl. Wärmelehre, 2. Aufl., 1900, S. 432.
+
+注1）力学外の物理学的経験も、馴染み深くなるにつれて、力学的経験の価値に近づきうる。シュトリッカーは私の考えでは正しく重要な点を衝いている——彼は（『表象の連合に関する研究』ウィーン、1883年）因果性を意志と結びつけた。私自身1861年に若い講師として（ミルの差異法の意義の説明に際して）、後にシュトリッカーが述べた見解をきわめて生き生きと一面的に主張した。この考えは私を完全に去ることはなかった（例えば『力学——その発展における歴史的・批判的叙述』ライプツィヒ、1883年、78、282、456頁参照）。しかし現在は、上述の叙述が示すように、この問題はそれほど単純ではなく、複数の側面から見なければならないと考えている。『熱学の諸原理』第2版、1900年、432頁参照。
+
+Anm. 1)
+
+Die Uhr trägt in dem Drehungssinn des Zeigers die Spur ihrer Abstammung von der Sonnenuhr an sich und ihrer Erfindung auf der nördlichen Hemisphäre.
+
+注1）時計は針の回転方向に、日時計からの由来と北半球での発明の痕跡を留めている。
+
+Anm. 1)
+
+So sehr ich also eine rein physiologische Psychologie als Ideal hochschätze, würde es mir doch als eine Verkehrtheit erscheinen, die sogenannte „introspektive" Psychologie ganz abzuweisen, da die Selbstbeobachtung nicht nur ein sehr wichtiges, sondern in vielen Fällen das einzige Mittel ist, um über grundlegende Tatsachen Aufschluß zu erhalten.
+
+注1）純粋に生理学的な心理学を理想として高く評価するとはいえ、いわゆる「内省的」心理学を完全に退けるのは倒錯と思われるであろう。自己観察は、根本的な事実について情報を得るためのきわめて重要な手段であるのみならず、多くの場合唯一の手段であるからだ。
+
+Anm. 1)
+
+Vgl. Prinzipien der Wärmelehre, 2. Aufl. 1900.
+
+注1）『熱学の諸原理』第2版、1900年参照。
+
+Anm. 1)
+
+In der Tat werden hierbei individuelle Zufälligkeiten eliminiert.
+
+注1）実際、これによって個人的な偶然性が排除される。
+
+Anm. 1)
+
+Zuletzt: Wärmelehre, S. 438, 459.
+
+注1）最後に：『熱学の諸原理』438、459頁。
+
+Anm. 1)
+
+Petzoldt, Das Gesetz der Eindeutigkeit. Vierteljahrsschrift f. wissenschaftl. Philosophie, XIX, S. 146 fg.
+
+注1）ペッツォルト「一義性の法則」『科学的哲学季報』第19巻、146頁以下。
+
+Anm. 2)
+
+Mach, Erhaltung der Arbeit. Prag 1872.
+
+注2）マッハ『仕事の保存』プラハ、1872年。
+
+Anm. 1)
+
+Weitere Ausführungen über das hier Behandelte enthält meine kürzlich er- schienene Schrift „Erkenntnis und Irrtum", 1905, insbesondere S. 426—440.
+
+注1）ここで扱われた事柄についてのさらなる叙述は、私の最近刊行された著作『認識と誤謬』1905年、特に426〜440頁に含まれている。
