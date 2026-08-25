@@ -1,0 +1,1045 @@
+<title>Sammelana</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;700&display=swap">
+<style>
+  :root {
+    --bg: #f7f3eb;
+    --heading: #1a1a2e;
+    --gold: #b8943e;
+    --ochre: #8b4513;
+    --text: #2d2d2d;
+    --bg-alt: #f0ead8;
+    --note-bg: #faf6ed;
+    --border: #d4c9a8;
+    --text-light: #5a5a5a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1a2e;
+      --heading: #e8e0d0;
+      --gold: #d4a94c;
+      --ochre: #c8875a;
+      --text: #d4cec4;
+      --bg-alt: #22223a;
+      --note-bg: #1e1e32;
+      --border: #3a3a52;
+      --text-light: #9a9494;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1a2e;
+    --heading: #e8e0d0;
+    --gold: #d4a94c;
+    --ochre: #c8875a;
+    --text: #d4cec4;
+    --bg-alt: #22223a;
+    --note-bg: #1e1e32;
+    --border: #3a3a52;
+    --text-light: #9a9494;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Noto Serif', 'Noto Serif JP', Georgia, serif;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.85;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--gold);
+  }
+  header h1 {
+    font-size: 1.75rem;
+    color: var(--heading);
+    margin: 0 0 0.25rem;
+    text-wrap: balance;
+  }
+  header h2 {
+    font-size: 1.15rem;
+    color: var(--gold);
+    font-weight: 400;
+    margin: 0.25rem 0;
+  }
+  header p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0;
+    font-style: italic;
+  }
+  .act-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .verse-pair, .prose-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    border-radius: 6px;
+  }
+  .verse-pair {
+    background: var(--bg-alt);
+  }
+  .prose-pair {
+    background: transparent;
+    padding: 0.75rem 1.25rem;
+  }
+  .verse-num {
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0.05em;
+  }
+  .sanskrit, .japanese {
+    font-size: 0.95rem;
+  }
+  .stage-dir {
+    color: var(--ochre);
+    font-style: italic;
+    margin: 1rem 0;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  .speaker {
+    font-weight: 700;
+    color: var(--heading);
+    margin-right: 0.25rem;
+  }
+  .note-block {
+    background: var(--note-bg);
+    border-left: 3px solid var(--gold);
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    border-radius: 0 4px 4px 0;
+  }
+  .note-block strong {
+    color: var(--gold);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+  .section-break {
+    text-align: center;
+    margin: 2.5rem 0;
+    color: var(--gold);
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+  }
+  @media (max-width: 640px) {
+    .verse-pair, .prose-pair {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    body { padding: 1rem; }
+    header h1 { font-size: 1.4rem; }
+  }
+</style>
+
+<header>
+  <div class="act-label">Saptamo 'ṅkaḥ — 第七幕</div>
+  <h1>Sammelana — 邂逅</h1>
+  <h2>The Final Union</h2>
+  <p>Bhavabhūti's Uttararāmacarita, Act VII — 対訳</p>
+</header>
+
+<!-- Opening stage direction -->
+<div class="stage-dir">（ततः प्रविशति लक्ष्मणः — ラクシュマナ登場）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span>
+    Bho bho adya khalu bhagavatā Vālmīkinā sabrahmakṣatrapaurajānapadāḥ prajāḥ sahāsmābhir āhūya kṛtsna eva sadevāsuratiryaṅ-uraganāyaka-nikāyaḥ jaṅgamaiḥ sthāvaraś ca bhūtagrāmaḥ svabhāvena saṃnidhāpitaḥ. Ādiṣṭaś cāham āryeṇa — "Vatsa Lakṣmaṇa, bhagavatā Vālmīkinā svakṛtibhir apsarobhiḥ prayujyamānāṃ draṣṭum apanimantritāḥ smaḥ. Tad Gaṅgātīram ātodyasthānam upagamya kriyatāṃ samājasaṃniveśa" iti. Kṛtaś ca martyāmartyasya bhūtagrāmasya samucitasthānasaṃniveśo mayā. Ayaṃ tu —
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span>
+    さあさあ、本日まことに尊きヴァールミーキ仙が、バラモン・クシャトリヤ・都民・地方民の臣民を我らとともに招集し、天・阿修羅・獣・蛇の頭領の一団から、動くもの動かぬものまで、生きとし生けるあらゆる存在をその神通力で集め給うた。そして兄上（ラーマ）はこう仰せられた——「弟ラクシュマナよ、我らは尊きヴァールミーキの自作の劇を天女たちが演じるのを観るよう招かれた。ゆえにガンガー河畔の劇場に赴き、観客の配置を整えよ」と。私は人間・神々すべての衆の適切な座席配置を完了した。さてここに——
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 1</div>
+    Rājyāśramanirvāse 'pi prāptakaṣṭamunivrataḥ /<br>
+    Vālmīkigauravād ārya ita evābhivartate //1//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第1偈</div>
+    王国という修行林の住まいにあってなお、<br>
+    苦行者の厳しき誓いを守られる兄上が、<br>
+    ヴァールミーキへの敬意から、まさにこちらへ向かわれる。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> rājyāśrama — 「王国＝修行の場」。ラーマにとって王政は安楽ではなく、禁欲的な義務の修行にほかならない。prāptakaṣṭamunivrataḥ は「苦難を伴う仙人の誓いを達成した者」。
+</div>
+
+<div class="stage-dir">（ततः प्रविशति रामः — ラーマ登場）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Vatsa Lakṣmaṇa, api sthitā raṅgaprekṣakāḥ?<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Atha kim.<br>
+    <span class="speaker">Rāmaḥ —</span> Imau punar vatsau Kuśalavau kumāra-Candraketusadṛśau sthāne pratipattiṃ lambhayitavyau.<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Prabhor iha pratyayāt tathaiva kṛtam. Idaṃ cāstīrṇaṃ rājāsanam. Tad upaviśatv āryaḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> ラクシュマナよ、観客は着席したか。<br>
+    <span class="speaker">ラクシュマナ —</span> もちろんです。<br>
+    <span class="speaker">ラーマ —</span> この二人の少年クシャとラヴァにも、クマーラ・チャンドラケートゥと同じく相応の席を与えるように。<br>
+    <span class="speaker">ラクシュマナ —</span> 兄上のご愛情を存じておりましたゆえ、すでにそのようにいたしました。ここに王座も敷いてございます。どうぞお座りください。
+  </div>
+</div>
+
+<div class="stage-dir">（रामः उपविशति — ラーマ着席する）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> Prastūyatāṃ bhoḥ.<br>
+    <span class="speaker">Sūtradhāraḥ —</span> (praviśya) Bho bho bhagavan bhūtārthavādī Prācetasaḥ sasthāvarajaṅgamaṃ jagad ājñāpayati — yad idam asmābhir ārṣeṇa cakṣuṣā samudvīkṣya pāvanaṃ karuṇādbhutarasaṃ ca kiñcid upanibaddhaṃ, tatra kāvyagauravād avadhātavyam iti.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> さあ、上演を始めよ。<br>
+    <span class="speaker">舞台監督 —</span> （登場して）皆々様、真実を語る者、プラーチェータサの子（ヴァールミーキ）が、動くもの動かぬもの含めたこの全世界に告げます——「これは我らが聖仙の眼をもって直観し、清浄にしてカルナ（悲愍）とアドブタ（驚異）のラサを湛えた詩として織り上げたものです。どうかこの詩の崇高さゆえ心を傾けてお聴きください」と。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> ここから始まるのは antar-nāṭaka（劇中劇）——ヴァールミーキが書いた劇を天女たちが演じるという構造で、シーター追放後の出来事が上演される。ラーマは観客として見るが、感情を抑えきれなくなる。bhūtārthavādī は「事実を語る者」、ārṣeṇa cakṣuṣā は「聖仙の（超自然的な）眼で」。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Etad uktaṃ bhavati — sākṣātkṛtadharmāṇa ṛṣayaḥ. Teṣām amṛtasārāṇi bhagavatāṃ parorajāṃsi prajñānāni na kaścid vyāhanyanta iti na hi śaṅkanīyāni.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> これはすなわちこういうことだ——聖仙たちはダルマを直観する者である。不死の真理を本質とし、穢れを超えたこの尊き方々の知見は決して誤ることがない。ゆえに疑うべきではない。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> sākṣātkṛtadharmāṇaḥ ṛṣayaḥ は Nirukta 第1章の引用。聖仙たちは法（dharma）を直観し、それを弟子に口伝した。amṛtasārāṇi は「不死の真理を本質とする」、parorajāṃsi は「塵垢（rajas）を超えた、清浄な」。
+</div>
+
+<div class="stage-dir">（舞台裏から声 — neyapthye）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    Hā āryaputra, hā kumāra Lakṣmaṇa! Ekākinīṃ mandabhāginīm aśaraṇām araṇye āsannaprasavavedanāṃ hatāśāṃ śvāpadā mām abhilaṣanti. Sāham idānīṃ mandabhāginī Bhāgīrathyām ātmānaṃ nikṣepsyāmi.
+  </div>
+  <div class="japanese">
+    ああ夫よ、ああラクシュマナ殿。独りぼっちの不幸な私は、身寄りもなく森の中で出産の苦しみが迫り、望みも絶え、野獣どもが私を狙っています。この薄幸の身をガンガー（バーギーラティー）に投じましょう。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> (ātmagatam) Kaṣṭaṃ batānyad evaṃ kim api.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> （独白）ああ、何ということだ、まったく予想もしなかった。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 2</div>
+    <span class="speaker">Sūtradhāraḥ —</span><br>
+    Viśvambharātmajā devī rājñā tyaktā mahāvane /<br>
+    prāptaprasavam ātmānaṃ Gaṅgādevyāṃ vimuñcati //2//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第2偈</div>
+    <span class="speaker">舞台監督 —</span><br>
+    大地の娘なる王妃は、王により大森林に棄てられ、<br>
+    出産を迎えた己が身を、ガンガー女神に委ねんとする。
+  </div>
+</div>
+
+<div class="stage-dir">（iti niṣkrāntaḥ — 舞台監督退場）<br>
+（prastāvanā — 序幕終わり）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> (sāvegam) Devi devi, kṣaṇam avekṣasva!<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Ārya, nāṭakam idam.<br>
+    <span class="speaker">Rāmaḥ —</span> Hā devi, Daṇḍakāraṇyavāsapriyasakhi, eṣa te Rāmādvaidha-durvipākaḥ.<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Ārya, dṛśyatāṃ tāvat prabandhārthaḥ.<br>
+    <span class="speaker">Rāmaḥ —</span> Eṣa sajjo 'smi, vajramayaḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> （動揺して）妃よ、妃よ、しばし待たれよ！<br>
+    <span class="speaker">ラクシュマナ —</span> 兄上、これは劇でございます。<br>
+    <span class="speaker">ラーマ —</span> ああ妃よ、ダンダカの森での暮らしの愛しき伴侶よ、これがラーマゆえのお前の苦しき運命か。<br>
+    <span class="speaker">ラクシュマナ —</span> 兄上、どうか劇の筋をご覧ください。<br>
+    <span class="speaker">ラーマ —</span> よし、覚悟はできた。金剛石でできた心で臨もう。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> ラーマが劇の内容に圧倒され、現実と虚構の区別を見失う場面。Rāmādvaidhadurvipākaḥ は「ラーマという二つに引き裂かれた者による苦き果報」。vajramayaḥ は「金剛石でできた」——自分を鋼の意志で固めるが、以後何度も崩れる。
+</div>
+
+<div class="stage-dir">（ततः प्रविशति उत्सङ्गितैकैकदारकाभ्यां पृथिवीगङ्गाभ्याम् अवलम्बिता सीता — それぞれ膝に赤子を抱いたプリティヴィー〔大地女神〕とガンガーに支えられてシーター登場）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Vatsa Lakṣmaṇa, asaṃvijñātam anibandhnam andhatamasan iva praviśāmi. Dhāraya mām.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> ラクシュマナよ、何の前触れもなく底知れぬ闇の中に沈んでゆくようだ。私を支えてくれ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 3</div>
+    <span class="speaker">Devyau —</span><br>
+    Samāśvasihi kalyāṇi diṣṭyā Vaidehi vardhase /<br>
+    antarjale prasūtāsi Raghuvaṃśadharau sutau //3//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第3偈</div>
+    <span class="speaker">二女神 —</span><br>
+    安心なされ、幸ある者よ。喜ばしいことよ、ヴァイデーヒよ。<br>
+    水の底にて双子の御子を産みたもうた——<br>
+    ラグ王統を支える二人の息子を。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā —</span> (samāśvasya) Diṣṭyā dārakau prasūtāsmi. Hā āryaputra! (iti mūrcchati)<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> (pādayor nipatya) Ārya, ārya, diṣṭyā vardhāmahe! Kalyāṇapraroho Raghuvaṃśaḥ. (vilokya) Hā hā, kathaṃ kṣubhitabāṣpotpīḍanirbharaḥ pramugdha evāryaḥ! (vījayati)
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター —</span> （気を取り直して）ああ、ありがたくも二人の子を産みました。ああ、夫よ！（気絶する）<br>
+    <span class="speaker">ラクシュマナ —</span> （ラーマの足元にひれ伏して）兄上、兄上、幸いなるかな！ラグ王統に吉祥の芽が生じました。（見上げて）ああ、なんと、涙があふれ出て兄上は気を失われた！（扇で仰ぐ）
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> kalyāṇaprarohaḥ は「吉祥の芽生え」。ラグ王統の存続が確保されたことへの歓喜。ラーマは劇を見ながら自らの感情に圧倒され失神する——劇中劇の効果が最大限に発揮される場面。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Pṛthivī —</span> Vatse, samāśvasihi.<br>
+    <span class="speaker">Sītā —</span> (samāśvasya) Bhagavati, kā tvam iyaṃ ca?<br>
+    <span class="speaker">Pṛthivī —</span> Iyaṃ te śvaśurakula-devatā Bhāgīrathī.<br>
+    <span class="speaker">Sītā —</span> Bhagavati, namas te.<br>
+    <span class="speaker">Bhāgīrathī —</span> Cāritrocitāṃ kalyāṇasaṃpadam adhigaccha.<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Anugṛhītāḥ smaḥ.<br>
+    <span class="speaker">Bhāgīrathī —</span> Iyaṃ tu jananī te Viśvambharā.<br>
+    <span class="speaker">Sītā —</span> Hā amba, īdṛśy ahaṃ tvayā dṛṣṭā.
+  </div>
+  <div class="japanese">
+    <span class="speaker">プリティヴィー —</span> 娘よ、安心しなさい。<br>
+    <span class="speaker">シーター —</span> （気を取り直して）尊き方、あなたはどなたですか。そしてこの方は？<br>
+    <span class="speaker">プリティヴィー —</span> こちらはお前の嫁ぎ先の守護神、バーギーラティー（ガンガー）です。<br>
+    <span class="speaker">シーター —</span> 女神様、ご挨拶申し上げます。<br>
+    <span class="speaker">バーギーラティー —</span> お前の貞節にふさわしい幸福を得なさい。<br>
+    <span class="speaker">ラクシュマナ —</span> ありがたいことです。<br>
+    <span class="speaker">バーギーラティー —</span> そしてこちらはお前の母、ヴィシュヴァンバラー（大地）です。<br>
+    <span class="speaker">シーター —</span> ああ母よ、このような姿を見られてしまいました。
+  </div>
+</div>
+
+<div class="stage-dir">（プリティヴィーがシーターを抱きしめ、気を失う）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> (saharṣam) Diṣṭyā Gaṅgā-Pṛthivībhyām anugṛhītāryā.<br>
+    <span class="speaker">Rāmaḥ —</span> (avalokya) Karuṇataraṃ khalv etad vartate.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> （喜んで）ありがたいことに、王妃はガンガーとプリティヴィーに庇護されておられる。<br>
+    <span class="speaker">ラーマ —</span> （見つめて）これはいよいよ胸を打つ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Bhāgīrathī —</span> Viśvambharāpi nāma vyathata iti jitam apatyasnehena. Yad vā sarvasādhāraṇo hy eṣa manaso mohagranthir antaś cetanāvatām anupaplavaḥ saṃsāratantuḥ. Devi bhūtadhātri, vatse Vaidehi, samāśvasihi, samāśvasihi.
+  </div>
+  <div class="japanese">
+    <span class="speaker">バーギーラティー —</span> 万物を支える大地でさえ苦しまれるとは。親の愛情の勝利である。あるいはむしろ、これは万人に共通する心の迷妄の結び目——生けるものの内にひそみ何ものにも打ち克てぬ、輪廻を紡ぐ糸そのもの。大地の養い手よ、娘ヴァイデーヒよ、どうか気をしっかり持ちなさい。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> mohagranthiḥ（迷妄の結び目）——マーヤー（幻）の教説への暗示。親子の愛着が人を世界に繋ぎ止める saṃsāratantu（輪廻の糸）であるという深い哲学的観察。anupaplavaḥ は「覆すことのできない」。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Pṛthivī —</span> Devi, Sītāṃ prasūya katham āśvasimi? Soḍhaś ciraṃ rākṣasamadhyavāsas tyāgo dvitīyas tu sudussaho 'syāḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">プリティヴィー —</span> 女神よ、シーターの母として、どうして安心できましょう。長い間、羅刹の只中での暮らしに耐えた。しかし二度目の追放こそ、この子には到底耐えがたいものです。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 4</div>
+    <span class="speaker">Bhāgīrathī —</span><br>
+    Ko nāma pākābhimukhasya jantor<br>
+    dvāraṇi daivasya pidhātum īṣṭe //4//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第4偈</div>
+    <span class="speaker">バーギーラティー —</span><br>
+    果報が実を結ぼうとする生き物の運命の門を、<br>
+    一体誰が閉ざすことなどできようか。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 5</div>
+    <span class="speaker">Pṛthivī —</span><br>
+    Na pramāṇīkṛtaḥ pāṇir bālye bālena pīḍitaḥ /<br>
+    nāhaṃ na Janako nāgnir nānuvṛttir na saṃtatiḥ //5//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第5偈</div>
+    <span class="speaker">プリティヴィー —</span><br>
+    幼き日に若者として固く握ったその手を、彼は証しとしなかった。<br>
+    この私も、ジャナカも、火神も、彼女の貞順も、<br>
+    子孫さえも、顧みられなかった。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> pāṇigrahaṇa（結婚の手の儀式）の際にラーマ自身がシーターの手の吉兆の相を見て、彼女の貞節を知っていたはずだ、という意。na pramāṇīkṛtaḥ は「証拠として認めなかった」。プリティヴィーの怒りと嘆きが凝縮された偈。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā —</span> Hā āryaputraṃ smāritāsmi.<br>
+    <span class="speaker">Pṛthivī —</span> Āḥ, kas tavāryaputraḥ!<br>
+    <span class="speaker">Sītā —</span> (salajjam) Yathā vāṅmātrā bhaṇati.<br>
+    <span class="speaker">Rāmaḥ —</span> Amba Pṛthivi, īdṛśo 'smi.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター —</span> ああ、夫のことを思い出しました。<br>
+    <span class="speaker">プリティヴィー —</span> ふん、お前の夫とは誰のことだ！<br>
+    <span class="speaker">シーター —</span> （恥じらいつつ）母上がそうお呼びになる方です。<br>
+    <span class="speaker">ラーマ —</span> 母なる大地よ、私はそのような者なのです。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 6</div>
+    <span class="speaker">Bhāgīrathī —</span><br>
+    Ghoraṃ loke vitatam ayaśo yā ca vahnau viśuddhir<br>
+    Laṅkādvīpe katham iva janas tām iha śraddadhātu /<br>
+    Ikṣvākūṇāṃ kuladhanam idaṃ yat sabhārādhanīyaḥ<br>
+    kṛtsno lokas tad iha viṣamaṃ kiṃ sa vatsaḥ karotu //6//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第6偈</div>
+    <span class="speaker">バーギーラティー —</span><br>
+    世間に恐ろしき醜聞が広がった。火による潔白の証明はランカー島でのこと——<br>
+    此処の民がそれをどうして信じられよう。<br>
+    全世界を満足させることこそイクシュヴァーク家の家宝。<br>
+    このような板挟みにあって、あの子に何ができたというのか。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> ガンガーがラーマを弁護する重要な偈。kuladhanam は「家門の財宝」——イクシュヴァーク王統にとって全民衆の敬愛こそが至上の家宝であり、ラーマの dharmasaṅkaṭa（義務の板挟み）を説明する。vahnau viśuddhiḥ は「火の試練による潔白」——ランカーでの出来事を此処の民は知らないという論理。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> Avyāhatāntaḥprakāśā hi devatāḥ sattveṣu.<br>
+    <span class="speaker">Bhāgīrathī —</span> Tathāpy eṣa te 'ñjaliḥ.<br>
+    <span class="speaker">Rāmaḥ —</span> Amba, anuvṛttas tvayā Bhagīrathakule prasādaḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> まことに神々は生きとし生けるものの心を曇りなく見通されます。<br>
+    <span class="speaker">バーギーラティー —</span> それでも、これは私のあなたへの合掌です（プリティヴィーへの謝罪の仕草）。<br>
+    <span class="speaker">ラーマ —</span> 母上（ガンガー）、バギーラタの家系への恩寵は途絶えたことがございません。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 7</div>
+    <span class="speaker">Pṛthivī —</span><br>
+    Dahyamānena manasā daivāt tvāṃ vihāya saḥ /<br>
+    lokottareṇa sattvena prajāpuṇyaiś ca jīvati //7//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第7偈</div>
+    <span class="speaker">プリティヴィー —</span><br>
+    燃えさかる心をもって、運命のゆえにお前を棄てた彼は、<br>
+    超人的な心の強さと、臣民の功徳の力によって、<br>
+    辛うじて命を保っているのだ。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> プリティヴィーはガンガーの弁護に納められ、ラーマへの怒りを和らげる。dahyamānena manasā（燃える心で）——ラーマもまたシーター追放に苦しんでいることを認める。prajāpuṇyaiḥ は「臣民の功徳によって」——王は民の善行に支えられて生きるという思想。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Sakaruṇā hi guravo garbharūpeṣu.<br>
+    <span class="speaker">Sītā —</span> (rudatī kṛtāñjaliḥ) Nayatu mām ātmano 'ṅkeṣu vilayam ambā.<br>
+    <span class="speaker">Rāmaḥ —</span> Kim anyad bravītu?<br>
+    <span class="speaker">Bhāgīrathī —</span> Śāntam. Avilīnāṃ saṃvatsarasahasrāṇi bhūyāḥ.<br>
+    <span class="speaker">Pṛthivī —</span> Vatse, avekṣaṇīyau te putrakau.<br>
+    <span class="speaker">Sītā —</span> Anāthāsmi. Kim etābhyām?
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> まことに、親というものは子に対して慈悲深いものだ。<br>
+    <span class="speaker">シーター —</span> （泣きながら合掌して）母よ、私をあなたの懐に吸収してください。<br>
+    <span class="speaker">ラーマ —</span> ほかに何を言えようか。<br>
+    <span class="speaker">バーギーラティー —</span> とんでもない。消え去ることなく、千年も万年も長生きしなさい。<br>
+    <span class="speaker">プリティヴィー —</span> 娘よ、お前には世話すべき二人の息子がいるのですよ。<br>
+    <span class="speaker">シーター —</span> 私には頼る者がおりません。この子たちに何ができましょう。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 8</div>
+    <span class="speaker">Devyau —</span><br>
+    Jaganmaṅgalam ātmānaṃ kathaṃ tvam avamanyase /<br>
+    āvayor api yatsaṅgāt pavitratvaṃ prakṛṣyate //8//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第8偈</div>
+    <span class="speaker">二女神 —</span><br>
+    世の吉祥そのものであるあなた自身を、どうして卑しめるのですか。<br>
+    あなたと交わることで、我ら二人の清浄さえも高められるというのに。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> Ārya, śrūyatām.<br>
+    <span class="speaker">Rāmaḥ —</span> Śṛṇotu lokaḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> 兄上、お聞きください。<br>
+    <span class="speaker">ラーマ —</span> 民にこそ聞かせよ。
+  </div>
+</div>
+
+<div class="stage-dir">（舞台裏に騒動の音。シーター：「なぜ空が燃えているのですか」）</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 9</div>
+    <span class="speaker">Devyau —</span><br>
+    Kṛśāśvaḥ Kauśiko Rāma iti yeṣāṃ gurukramaḥ /<br>
+    prādurbhavanti tāny eva śastrāṇi saha jṛmbhakaiḥ //9//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第9偈</div>
+    <span class="speaker">二女神 —</span><br>
+    クリシャーシュヴァからカウシカ（ヴィシュヴァーミトラ）へ、<br>
+    カウシカからラーマへと伝えられた師弟の系譜をもつ、<br>
+    まさにあの神兵たちが、ジュリンバカの呪法とともに出現した。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 10</div>
+    （neyapthye）<br>
+    Devi Sīte namas te 'stu gatir naḥ putrako hi te /<br>
+    ālekhyadarśane devo yathāha Raghunandanaḥ //10//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第10偈</div>
+    （舞台裏から）<br>
+    シーター妃よ、御身に敬礼いたします。御身の御子は我らの帰依の処。<br>
+    ラグの末裔たる王が、絵画を御覧の折にそう命じられたのです。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> ālekhyadarśane は第1幕の「絵画を見る場面」への回帰。ラーマが絵を見て感情を揺さぶられた折、神兵たちにシーターの子孫に仕えよと命じた。jṛmbhaka は特殊な呪法で、神兵の威力を拡大する。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā —</span> Diṣṭyā astradevata etāḥ. Hā āryaputra, adyāpi te prasādāḥ parisphurati.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター —</span> ありがたや、あの神兵の神々がここに。ああ夫よ、今なおあなたの恩恵が輝いているのですね。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 11</div>
+    <span class="speaker">Devyau —</span><br>
+    Namo vaḥ paramāstrebhyo dhanyāḥ smo vaḥ parigrahāt /<br>
+    kāle dhyātair upastheyaṃ vatsavor bhadram astu vaḥ //11//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第11偈</div>
+    <span class="speaker">二女神 —</span><br>
+    至高の神兵たちよ、御身らに帰命す。<br>
+    御身らに受け入れられ、我らは幸いなり。<br>
+    いざという時に念ぜられれば、この子らの元に来たりたまえ。<br>
+    御身らに吉祥あれ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 12</div>
+    <span class="speaker">Rāmaḥ —</span><br>
+    Kṣubhitāḥ kām api daśāṃ kurvanti mama sāṃpratam /<br>
+    vismayānandasaṃdarbhajarjarāḥ karuṇormayaḥ //12//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第12偈</div>
+    <span class="speaker">ラーマ —</span><br>
+    揺り動かされた感情の波が、今や私を言い知れぬ境地へと追いやる。<br>
+    驚きと歓びの交錯に引き裂かれ、<br>
+    悲愍の大波が押し寄せてくる。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> karuṇormayaḥ（悲愍の波）——karuṇa を海に喩える比喩が暗示される。vismaya（驚嘆）は神兵出現・双子誕生の不思議さから、ānanda（歓喜）は自分の息子かもしれないという予感から、karuṇa（悲愍）はシーターとの別離の苦しみから生じる。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Devyau —</span> Modasva vatse modasva. Rāmabhadratulyau te putrakāv idānīṃ saṃvṛttau.<br>
+    <span class="speaker">Sītā —</span> Bhagavatyau, ka etayoḥ kṣatriyocitaṃ karma kariṣyati?
+  </div>
+  <div class="japanese">
+    <span class="speaker">二女神 —</span> 喜びなさい娘よ、喜びなさい。今やお前の二人の息子はラーマに等しき者となった。<br>
+    <span class="speaker">シーター —</span> 尊き御方々、この子たちにクシャトリヤにふさわしい儀式を施してくださる方はどなたでしょうか。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 13</div>
+    <span class="speaker">Rāmaḥ —</span><br>
+    Eṣā Vasiṣṭhaguptānāṃ Raghūṇāṃ vaṃśanandanī /<br>
+    kaṣṭaṃ Sītāpi sutayoḥ saṃskāraṃ na vindati //13//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第13偈</div>
+    <span class="speaker">ラーマ —</span><br>
+    ヴァシシュタに守られしラグ家の歓びの源たるシーターが、<br>
+    痛ましいことに、息子たちの入門の儀式を執り行う者すら見出せぬとは。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Bhāgīrathī —</span> Putri, kiṃ tavānayā cintayā? Etau hi vatsau stanatyāgāt pareṇa bhagavato Vālmīker upaneṣyāmi. Sa etayoḥ kṣatrakṛtyaṃ kariṣyati.
+  </div>
+  <div class="japanese">
+    <span class="speaker">バーギーラティー —</span> 娘よ、何を心配する必要がありましょう。この子たちが乳離れしたら、尊きヴァールミーキに預けましょう。あの方がクシャトリヤの務めに必要なすべてを施してくださるでしょう。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 14</div>
+    Yathā Vasiṣṭhāṅgirasāv ṛṣiḥ Prācetasas tathā /<br>
+    Janakānāṃ Raghūṇāṃ ca vaṃśayor ubhayor guruḥ //14//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第14偈</div>
+    ヴァシシュタやアーンギラサと同様に、<br>
+    プラーチェータサの子（ヴァールミーキ）もまた聖仙であり、<br>
+    ジャナカ家とラグ家、両家の導師にふさわしい。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Suvicintitaṃ bhagavatyā.<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Ārya, satyaṃ vijñāpayāmi — tais tair upāyair vatsau Kuśalavāv utprekṣe.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> 女神のお考えは見事です。<br>
+    <span class="speaker">ラクシュマナ —</span> 兄上、正直に申し上げます——さまざまな状況証拠から、この二人の少年こそクシャとラヴァではないかと思われます。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 15</div>
+    Etau hi janmasiddhāstrau prāptaprācetasāv ubhau /<br>
+    āryatulyākṛtī vīrau vayasā dvādaśābdikau //15//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第15偈</div>
+    この二人は生まれながらにして神兵を備え、<br>
+    共にプラーチェータサ（ヴァールミーキ）の弟子であり、<br>
+    兄上と同じ姿形をした勇者で、年齢は十二歳です。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> ラクシュマナがクシャ・ラヴァの正体に気づく決定的な偈。janmasiddhāstrau（生来の武器の保持者）、prāptaprācetasau（ヴァールミーキの弟子）、āryatulyākṛtī（ラーマと同じ容姿）、dvādaśābdikau（十二歳＝追放から十二年）——四つの証拠が列挙される。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Vatsa, ity evāhaṃ pariplavamānahṛdayaḥ pramugdho 'smi.<br>
+    <span class="speaker">Pṛthivī —</span> Ehi vatse, pavitrikuru rasātalam.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> 弟よ、まさにその通りのことを思い、心が揺れ動いて途方に暮れているのだ。<br>
+    <span class="speaker">プリティヴィー —</span> さあ娘よ、大地の底を浄めに参りましょう。
+  </div>
+</div>
+
+<div class="stage-dir">（ラーマは「ああ愛しき者よ、あの世に行ってしまったのか」と嘆く。シーター「母よ、私を懐に吸収してください。もうこの現世の浮沈に耐えられません」）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Kim uttaraṃ syāt?<br>
+    <span class="speaker">Pṛthivī —</span> Manniyogataḥ stanyatyāgaṃ yāvat putrayor avekṣasva. Pareṇa tu yathā te rociṣyate.<br>
+    <span class="speaker">Bhāgīrathī —</span> Evaṃ tāvat.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> どのような答えが返ってくるのか。<br>
+    <span class="speaker">プリティヴィー —</span> 私の命により、乳離れするまで息子たちの面倒を見なさい。その後はお前の望むままに。<br>
+    <span class="speaker">バーギーラティー —</span> そういうことです。
+  </div>
+</div>
+
+<div class="stage-dir">（iti niṣkrānte devyau Sītā ca — 二女神とシーター退場）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Kathaṃ vilaya eva Vaidehyāḥ saṃpannaḥ! Hā devi, Daṇḍakāraṇyavāsapriyasakhi, hā cāritradevatē, lokāntaraṃ paryavasthitāsi! (iti mūrcchati)
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> なんと、ヴァイデーヒーは本当に消え去ってしまったのか！ああ妃よ、ダンダカの森暮らしの愛しき伴侶よ、ああ貞節の女神よ、あの世へ旅立ってしまったのか！（気絶する）
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> Bhagavan Vālmīke, paritrāyasva paritrāyasva! Eṣa te kāvyārthaḥ?
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> 尊きヴァールミーキよ、お救いください、お救いください！これがあなたの詩の結末なのですか！
+  </div>
+</div>
+
+<div class="stage-dir">（舞台裏：「楽器を片付けよ。動くもの動かぬものよ、人間も神々も、今こそ尊きヴァールミーキ大仙が授けたもう聖なる奇蹟を見よ」）</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 16</div>
+    <span class="speaker">Lakṣmaṇaḥ —</span> (vilokya)<br>
+    Manthād iva kṣubhyati Gāṅgam ambho<br>
+    vyāptaṃ ca devarṣibhir antarikṣam /<br>
+    āścaryam āryā saha devatābhyāṃ<br>
+    Gaṅgāmahībhyāṃ salilād udeti //16//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第16偈</div>
+    <span class="speaker">ラクシュマナ —</span> （見つめて）<br>
+    ガンガーの水が撹拌されるかのごとく波立ち、<br>
+    天空は神仙たちで満たされた。<br>
+    驚くべし——王妃が、ガンガーとプリティヴィーの二女神とともに、<br>
+    水の中から浮かび上がる！
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> manthād iva は「（乳海）撹拌のように」——宇宙創造の乳海撹拌の神話への暗示。ラーマーヤナでは、シーターが大地に吸い込まれて終わるが、バヴァブーティはシーターを再びガンガーの水から浮かび上がらせることで、独自の happy ending を創出する。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 17</div>
+    （punar nepathye）<br>
+    Arundhati jagadvandye Gaṅgāpṛthvyau juṣasva nau /<br>
+    arpiteyaṃ tavāvābhyāṃ Sītā puṇyavratā vadhūḥ //17//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第17偈</div>
+    （再び舞台裏から）<br>
+    世に仰がれるアルンダティーよ、我らガンガーとプリティヴィーをお認めください。<br>
+    ここに敬虔な誓いの嫁、シーターを、我ら二人からあなたにお預けいたします。
+  </div>
+</div>
+
+<div class="stage-dir">（ラクシュマナ：「ああ奇蹟だ、奇蹟だ！兄上、ご覧ください！」——ラーマはまだ意識を失ったまま）<br>
+（ततः प्रविश्य अरुन्धती सीता च — アルンダティーとシーター登場）</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 18</div>
+    <span class="speaker">Arundhatī —</span><br>
+    Tvarasva vatse Vaidehi muñca śālīnaśīlatām /<br>
+    ehi jīvaya me vatsaṃ priyasparśena pāṇinā //18//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第18偈</div>
+    <span class="speaker">アルンダティー —</span><br>
+    急ぎなさい、ヴァイデーヒーよ。<br>
+    恥じらいの性を解き放ちなさい。<br>
+    さあ来て、愛しき手の触れ合いで、<br>
+    我が息子を生き返らせておくれ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā —</span> (sasaṃbhramaṃ spṛśantī) Samāśvasitu, samāśvasitv āryaputraḥ!<br>
+    <span class="speaker">Rāmaḥ —</span> (samāśvasya, sānandam) Bhoḥ, kim etat? (dṛṣṭvā, saharṣādbhutam) Kathaṃ devī! (salajjam) Aye ambā me 'rundhatī, sarve ca prahṛṣyanta Ṛṣyaśṛṅga-Śāntādayo 'smadguravaḥ!
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター —</span> （慌てて触れながら）お気を確かに、お気を確かに、夫よ！<br>
+    <span class="speaker">ラーマ —</span> （意識を取り戻し、喜んで）おお、これは何事だ！（見て、喜びと驚きをもって）なんと、妃か！（恥じ入りつつ）ああ、母アルンダティー、そしてリシュヤシュリンガ、シャーンターをはじめ我が師父たちがみな喜んでおられる！
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> priyasparśena pāṇinā は「愛しき者の手の触れ合いによって」——アルンダティーがシーターの手でラーマを蘇生させるよう求める場面。śālīnaśīlatā は「慎み深い性質」——シーターの生来の恥じらいを脇に置いて行動するよう促す。
+</div>
+
+<div class="stage-dir">（舞台裏からガンガーの声——「世界の主ラーマチャンドラよ、絵画を御覧の折の私への御言葉を思い出してください——『母よ、アルンダティーのように嫁シーターの幸福を見守ってくれ』と。その義務を私は果たしました」）</div>
+
+<div class="stage-dir">（アルンダティー：「こちらはあなたの姑、尊きヴァスンダラー（大地）です」）</div>
+
+<div class="stage-dir">（舞台裏からプリティヴィーの声——「長命なる御方は、娘を追放する折に『尊きヴァスンダラーよ、立派な娘ジャーナキーの幸福を見守ってくれ』と仰せられました。その王子の言葉に従いました」）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāmaḥ —</span> Kathaṃ kṛtamahāparādho bhagavatībhyām anukampitaḥ! Praṇamāmi vaḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ —</span> 大罪を犯した私が、尊き女神方に哀れんでいただけるとは！御方々にひれ伏します。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Arundhatī —</span> Bho bhoḥ paurajānapadāḥ! Iyam adhunā bhagavatībhyāṃ Jāhnavī-Vasundharābhyām evaṃ praśasyamānā mamārundhātyāḥ samarpitā, pūrvaṃ ca bhagavatā Vaiśvānareṇa nirṇītapuṇyacāritrā, sa-Brahmakaiś ca devaiḥ saṃstutā, sāvitrikulavadhūr devayajanasambhavā Sītādevī — parigṛhyatām iti katham iha bhavanto manyante?
+  </div>
+  <div class="japanese">
+    <span class="speaker">アルンダティー —</span> おおよ、都民・地方民の皆様方！今しがた尊きガンガーとヴァスンダラーによって讃えられ、このアルンダティーに託されたこの方——かつて神聖なる火神によって貞節を証明され、ブラフマーをはじめ諸神に讃えられた、太陽の血統の嫁にして祭壇から生まれたシーター妃——この方をお迎えすることについて、皆さまはいかがお考えですか。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> アルンダティーが民衆に向かってシーターの潔白を公に宣言する重要な場面。Vaiśvānara（火神アグニ）による purification、Brahmā をはじめとする諸神の讃嘆、そしてガンガー・プリティヴィーの保証——三重の権威によってシーターの名誉が完全に回復される。sāvitrikulavadhūḥ は「太陽族の嫁」。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> Ārya, evam āryayārundhātyā nirbhartsitāḥ paurajānapadāḥ kṛtsnaś ca bhūtagrāma āryāṃ namaskurvanti. Lokapālāḥ saptarṣayaś ca puṣpavṛṣṭibhir upatiṣṭhante.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> 兄上、このように尊きアルンダティーに叱責された都民・地方民、そして全生類が王妃に礼拝しております。世界の守護神たちと七聖仙が花の雨を降らせて王妃を讃えております。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 19</div>
+    <span class="speaker">Arundhatī —</span><br>
+    Jagatpate Rāmacandra,<br>
+    niyojaya yathādharmaṃ priyāṃ tvaṃ dharmacāriṇīm /<br>
+    hiraṇmayyāḥ pratikṛteḥ puṇyāṃ prakṛtim ādhvare //19//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第19偈</div>
+    <span class="speaker">アルンダティー —</span><br>
+    世界の主ラーマチャンドラよ、<br>
+    法に従い、愛しく徳高きこの方を、<br>
+    黄金の身代わり像の聖なる原型として、<br>
+    祭祀に据えなさい。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> hiraṇmayyāḥ pratikṛteḥ puṇyāṃ prakṛtim は「黄金の像の聖なる原型」——シーター追放後、ラーマは王妃の代わりに黄金像を祭祀に用いていた。今やその像の「本体」であるシーター自身を祭祀の伴侶として復帰させよとの命令。ādhvare は「祭祀において」。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā —</span> (svagatam) Jānāty āryaputraḥ Sītāyā duḥkhaṃ parimārṣṭum.<br>
+    <span class="speaker">Rāmaḥ —</span> Yathā bhagavaty ādiśati.<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Kṛtārtho 'smi.<br>
+    <span class="speaker">Sītā —</span> Pratyujjīvitāsmi.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター —</span> （独白）夫はシーターの悲しみを拭い去る術をご存知でおられたのだ。<br>
+    <span class="speaker">ラーマ —</span> 尊き方のお言葉の通りにいたしましょう。<br>
+    <span class="speaker">ラクシュマナ —</span> 私の願いは成就いたしました。<br>
+    <span class="speaker">シーター —</span> 生き返りました。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Lakṣmaṇaḥ —</span> Ārye, eṣa nirlajjo Lakṣmaṇaḥ praṇamati.<br>
+    <span class="speaker">Sītā —</span> Vatsa, īdṛśas tvaṃ ciraṃ jīva.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラクシュマナ —</span> 王妃よ、ここに恥知らずのラクシュマナがひれ伏します。<br>
+    <span class="speaker">シーター —</span> 我が子よ、そのような心あるお前が長生きしますように。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> ラクシュマナは、かつてラーマの命でシーターを森に棄てた張本人。nirlajjaḥ（恥知らず）と自称するのは、その罪の意識の表れ。シーターの「そのような心あるお前」（īdṛśaḥ）という返答は、彼の誠実さを認め、許す言葉。
+</div>
+
+<div class="stage-dir">（アルンダティー：「尊きヴァールミーキよ、シーターの胎から生まれたラーマの息子、クシャとラヴァを今ここに連れて来てください」——退場）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāma-Lakṣmaṇau —</span> Diṣṭyā tathaivaivaitat.<br>
+    <span class="speaker">Sītā —</span> (sabāṣpākulā) Kutra mama putrakau?
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマとラクシュマナ —</span> ああ、やはり思った通りであった。<br>
+    <span class="speaker">シーター —</span> （涙にくれて）私の息子たちはどこ？
+  </div>
+</div>
+
+<div class="stage-dir">（ततः प्रविशति वाल्मीकिः कुशलवौ च — ヴァールミーキ、クシャとラヴァとともに登場）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Vālmīkiḥ —</span> Vatsau Kuśalavau, eṣa vāṃ Raghupatiḥ pitā, eṣa Lakṣmaṇaḥ kaniṣṭhatātaḥ, eṣā Sītā jananī, eṣa rājarṣir Janako mātāmahaḥ.<br>
+    <span class="speaker">Sītā —</span> (saharṣakaruṇādbhutaṃ vilokya) Kathaṃ tātaḥ!
+  </div>
+  <div class="japanese">
+    <span class="speaker">ヴァールミーキ —</span> 愛し子クシャとラヴァよ、こちらがラグの主、お前たちの父。こちらがラクシュマナ、叔父。こちらがシーター、母。こちらが王仙ジャナカ、母方の祖父だ。<br>
+    <span class="speaker">シーター —</span> （喜び・悲しみ・驚きの入り混じった表情で見つめて）なんと、父上まで！
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Kuśalavau —</span> Hā tāta, hā amba, hā mātāmaha!<br>
+    <span class="speaker">Rāma-Lakṣmaṇau —</span> (saharṣam āliṅgya) Nanu vatsau puṇyaiḥ prāptau sthaḥ.<br>
+    <span class="speaker">Sītā —</span> Ehi jāta Kuśa, ehi jāta Lava, cirasya pariṣvajethāṃ māṃ punar janmāntaragatāṃ jananīm.
+  </div>
+  <div class="japanese">
+    <span class="speaker">クシャとラヴァ —</span> ああ父上！ああ母上！ああ祖父上！<br>
+    <span class="speaker">ラーマとラクシュマナ —</span> （喜んで抱きしめて）さあ坊やたち、功徳によってお前たちを得たのだ。<br>
+    <span class="speaker">シーター —</span> おいでクシャ、おいでラヴァ、長い間、別の世に行っていた母を存分に抱きしめておくれ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Kuśalavau —</span> (tathā kṛtvā) Dhanyau svaḥ.<br>
+    <span class="speaker">Sītā —</span> Bhagavan, eṣāhaṃ praṇamāmi.<br>
+    <span class="speaker">Vālmīkiḥ —</span> Vatse, īdṛśy eva ciraṃ bhūyāḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">クシャとラヴァ —</span> （その通りにして）幸せな者です、私たちは。<br>
+    <span class="speaker">シーター —</span> 尊き方（ヴァールミーキ）、私はご挨拶申し上げます。<br>
+    <span class="speaker">ヴァールミーキ —</span> 娘よ、今のこの幸せなままで末永くありなさい。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā —</span> Ammahē, tātaḥ kulaguruḥ āryajanaḥ, sabhartṛkā cāryā Śāntādevī, saLakṣmaṇāḥ suprasannā āryaputracaraṇāḥ, samaṃ Kuśalavāv api dṛśyante — tan nirbharāmyānanandena.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター —</span> ああ、なんという幸い。父上、家門の師、敬うべき方々、そして夫君を伴う尊きシャーンター妃、ラクシュマナを従えた御機嫌麗しき夫の御足元、さらにクシャとラヴァまでもが——ここに見えます。あふれる喜びに満たされます。
+  </div>
+</div>
+
+<div class="stage-dir">（舞台裏に騒動の声）</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Vālmīkiḥ —</span> (utthāyāvalokya ca) Utkhātalavaṇo Madhureśvaraḥ prāptaḥ.<br>
+    <span class="speaker">Lakṣmaṇaḥ —</span> Sānubaṅdhāni kalyāṇāni.<br>
+    <span class="speaker">Rāmaḥ —</span> Sarvam idam anubhavann api na pratyemi. Yad vā prakṛtir iyam abhyudayānām.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ヴァールミーキ —</span> （立ち上がって見て）ラヴァナ魔を討ったマトゥラーの王（シャトルグナ）が到着した。<br>
+    <span class="speaker">ラクシュマナ —</span> 吉事は連なって参ります。<br>
+    <span class="speaker">ラーマ —</span> これほどの幸福を味わいながらも、信じきれぬ思いだ。いや、これこそが繁栄というものの本性なのであろう。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> Utkhātalavaṇaḥ は「ラヴァナ（魔族の名）を滅ぼした者」＝シャトルグナ。第1幕で彼がラヴァナ退治に派遣されたことが述べられており、十二年後に帰還。sānubaṅdhāni は「次々と連なる」。ラーマの na pratyemi は「信じきれない」——過去の苦しみを経て、幸福の実感が追いつかない心理。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Vālmīkiḥ —</span> Rāmabhadra, ucyatāṃ kiṃ te bhūyaḥ priyam upakaromi?<br>
+    <span class="speaker">Rāmaḥ —</span> Ataḥ param api priyam asti. Tathāpīdam astu —
+  </div>
+  <div class="japanese">
+    <span class="speaker">ヴァールミーキ —</span> ラーマよ、他に何かしてあげられることはありますか。<br>
+    <span class="speaker">ラーマ —</span> これ以上に望むことがあるでしょうか。しかしながら、これだけはお願いいたします——
+  </div>
+</div>
+
+<div class="section-break">✦ ✦ ✦</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">Verse 20 — Bharatavākya（結語）</div>
+    Pāpmabhyaś ca punāti vardhayati ca śreyāṃsi seyaṃ kathā<br>
+    maṅgalyā ca manoharā ca jagato māteva Gaṅgeva ca /<br>
+    tām etāṃ paribhāvayanty abhinayair vinyastarūpāṃ budhāḥ<br>
+    śabdabrahmavidaḥ kaveḥ pariṇatāṃ prājñasya vāṇīm imām //20//
+  </div>
+  <div class="japanese">
+    <div class="verse-num">第20偈 — バラタヴァーキャ（結びの言葉）</div>
+    罪から清め、幸を増すこの物語は、<br>
+    吉祥にして心を奪い、世界にとって母のごとく、ガンガーのごとし。<br>
+    この物語を——演技によって姿を与えられた形で——<br>
+    シャブダ・ブラフマン（言葉の梵）を知る賢き詩人の、<br>
+    成熟せし言葉として、智者たちよ、心に深く味わえ。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>注 :</strong> Bharatavākya は劇の最終偈で、俳優が役柄を離れて祝福を述べる。ここでラーマ＝バヴァブーティは、ラーマーヤナの物語を「母のように慈しみ、ガンガーのように浄化するもの」と讃える。śabdabrahmavid は「言葉の梵を知る者」——表面上はヴァールミーキを指すが、バヴァブーティ自身への暗示でもある。pariṇatāṃ vāṇīm は「成熟した言葉」——ヴァールミーキの叙事詩がバヴァブーティの劇として「形を変えた」（pariṇata）ことを指し、二人の詩人の等価性を暗示する。Kale は「詩人は、外面上はヴァールミーキに言及しているが、自分自身をも暗示している」と指摘し、「バヴァブーティがこの自己評価において間違っているとは言えない」と述べている。
+</div>
+
+<div class="stage-dir">（iti niṣkrāntāḥ sarve — 全員退場）</div>
+
+<div class="section-break">— ❧ —</div>
+
+<div style="text-align:center; margin:2rem 0; color:var(--text-light); font-size:0.9rem;">
+  <p style="margin:0.25rem 0;">इति सम्मेलनं नाम सप्तमोऽङ्कः ।</p>
+  <p style="margin:0.25rem 0;">Iti Sammelanaṃ nāma saptamo 'ṅkaḥ.</p>
+  <p style="margin:0.25rem 0;">邂逅と名づけられた第七幕、ここに終わる。</p>
+  <br>
+  <p style="margin:0.25rem 0;">इति महाकविश्रीभवभूतिविरचितम्</p>
+  <p style="margin:0.25rem 0;">उत्तररामचरितं नाम नाटकं समाप्तम् ।</p>
+  <p style="margin:0.5rem 0;">Iti mahākavi-Śrī-Bhavabhūti-viracitam<br>
+  Uttararāmacaritaṃ nāma nāṭakaṃ samāptam.</p>
+  <p style="margin:0.5rem 0;">偉大なる詩人シュリー・バヴァブーティ作<br>
+  『ウッタラ・ラーマチャリタ（ラーマ後日譚）』と名づけられた劇、<br>
+  ここに完結す。</p>
+</div>
