@@ -1,0 +1,1305 @@
+<title>Pañcavaṭīsamāgama</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+  :root {
+    --bg: #f7f3eb;
+    --bg-alt: #f0ead8;
+    --heading: #1a1a2e;
+    --gold: #b8943e;
+    --ochre: #8b4513;
+    --text: #2d2d2d;
+    --text-light: #5a5a5a;
+    --border: #d4c9a8;
+    --note-bg: #faf6ed;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1a2e;
+      --bg-alt: #22223a;
+      --heading: #e8dcc8;
+      --gold: #d4a843;
+      --ochre: #c87941;
+      --text: #d4cbb8;
+      --text-light: #9a917e;
+      --border: #3a3a52;
+      --note-bg: #1e1e32;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1a1a2e;
+    --bg-alt: #22223a;
+    --heading: #e8dcc8;
+    --gold: #d4a843;
+    --ochre: #c87941;
+    --text: #d4cbb8;
+    --text-light: #9a917e;
+    --border: #3a3a52;
+    --note-bg: #1e1e32;
+  }
+
+  body {
+    font-family: 'Noto Serif', 'Noto Serif JP', Georgia, serif;
+    background: var(--bg);
+    color: var(--text);
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.85;
+  }
+
+  .act-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .act-header h1 {
+    font-size: 1.75rem;
+    color: var(--heading);
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+  }
+
+  .act-header .subtitle {
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin: 0 0 0.25rem;
+  }
+
+  .act-header .act-info {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+    color: var(--gold);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .verse-pair, .prose-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px dotted var(--border);
+  }
+
+  .verse-num {
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .sanskrit {
+    font-style: italic;
+    color: var(--text);
+  }
+
+  .japanese {
+    font-family: 'Noto Serif JP', 'Noto Serif', serif;
+    color: var(--text);
+  }
+
+  .stage-dir {
+    font-style: italic;
+    color: var(--ochre);
+    margin: 0.75rem 0;
+    font-size: 0.92rem;
+  }
+
+  .speaker {
+    font-weight: 700;
+    color: var(--heading);
+  }
+
+  .note-block {
+    background: var(--note-bg);
+    border-left: 3px solid var(--gold);
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.88rem;
+    color: var(--text-light);
+  }
+
+  .note-block strong {
+    color: var(--gold);
+  }
+
+  .act-end {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--gold);
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 640px) {
+    .verse-pair, .prose-pair {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    body { padding: 1rem; }
+    .act-header h1 { font-size: 1.4rem; }
+  }
+</style>
+
+<div class="act-header">
+  <div class="subtitle">Uttararāmacarita — उत्तररामचरितम्</div>
+  <h1>Tṛtīyo 'ṅkaḥ — 第三幕</h1>
+  <div class="subtitle">Pañcavaṭīsamāgama — パンチャヴァティーでの邂逅</div>
+  <div class="act-info">Bhavabhūti 作 ・ M.R. Kale 校訂に基づく対訳</div>
+</div>
+
+<div class="section-title">शुद्धविष्कम्भक — Śuddha-viṣkambhaka（純序幕）</div>
+
+<p class="stage-dir">（二人の河の女神が登場する。）</p>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Ekā</span> — Sakhi Murale kim asi saṃbhrānteva.
+  </div>
+  <div class="japanese">
+    <span class="speaker">一人</span> — ねえムララー、どうしたの、慌てているようだけど。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Muralā</span> — Sakhi Tamase, preṣitāsmi bhagavato 'gastyasya patnyā Lopāmudrayā saridvarāṃ Godāvarīm abhidhātum —
+  </div>
+  <div class="japanese">
+    <span class="speaker">ムララー</span> — ねえタマサー、私は聖者アガスティヤの妻ローパームドラー様から、河の中で最も勝れたゴーダーヴァリーにこの伝言を届けるよう遣わされたの——「ご存知のように、嫁（シーター）を遺棄して以来——」
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔1〕</div>
+    anibhinno gāmbhīryād antar-gūḍhārdhana-vyathaḥ |<br>
+    puṭapāka-pratīkāśo Rāmasya karuṇo rasaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔1〕</div>
+    威厳のゆえに外に現れず、内に深く秘めた苦悶——<br>
+    密封した壺の中で煮詰められる薬のように、ラーマの悲哀はそのようなものです。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> puṭapāka は密封した土壺（二つの半球体を密閉接合したもの）の中で薬剤を加熱する特殊な過程を指す。比喩は的確で、ラーマの悲嘆は誰にも打ち明けることができず、内部で最も激しい苦痛を生じながらも外からはそれが感じられない、ちょうど密封壺の中の薬草のようだという意味。
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    Muralā — ... tena ca tathāvidheṣṭajanakāṣṭavinipatajanymanā prakarṣagatena dīrghaśokasaṃtāpena saṃpraty atitarāṃ parikṣīṇo Rāmabhadraḥ... tad bhagavati Godāvari tatra tvayā sāvadhānayā bhavitavyam.
+  </div>
+  <div class="japanese">
+    ムララー — ……あのように愛する人（シーター）に降りかかった災禍から生じ、極度に達した長い嘆きの苦悩のために、ラーマ殿は今では甚だ衰弱しておられます。……今やお戻りの途上、ラーマ殿はきっとパンチャヴァティーの森の中の、妻との親密な遊戯の証人であった場所をご覧になるでしょう。あの場所に来れば、たとえ天性沈着な方であっても、深く広がる嘆きの激動のために、一歩ごとに大きな危険が懸念されます。ですからゴーダーヴァリー様、あなたはそこで見守っていてくださいませ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔2〕</div>
+    vīcī-vātaiḥ śīkara-kṣoda-śītair ākṛṣadbhiḥ paṅkajālaka-gandhān |<br>
+    mohe mohe Rāmabhadrasya jīvaṃ svairaṃ svairaṃ preritaḥ tarpayeti ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔2〕</div>
+    波しぶきの粒で冷たく、蓮の花糸の芳香を運ぶ<br>
+    さざ波の風を、やわやわと送り出して、<br>
+    ラーマ殿が気を失うたびに、その命を蘇らせてくださいませと。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Tamasā</span> — Ucitam eva dākṣiṇyaṃ snehasya. Saṃjīvanopāyas tu maulikaṃ eva Rāmabhadrasyādya saṃnihitaḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">タマサー</span> — 愛情にふさわしい心遣いですこと。でも今日は、ラーマ殿を蘇生させる根本的な手段がすぐそこにあるのですよ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    Tamasā — Śrūyatām. Purā kila Vālmīkitapovanakaṇṭhāt parityajya nivṛtte Lakṣmaṇe Sītādevī prāptaprasavavedanām atiduḥkhasaṃvegād ātmānaṃ Gaṅgāpravāhe nikṣiptavatī. Tadaiva tatra dārakadvayaṃ prasūtā. Bhagavatībhyāṃ Pṛthvī-Bhāgīrathībhyām abhyupapannā Rasātalaṃ ca nītā. Stanyatyāgāt pareṇa ca dārakadvayaṃ tasyāḥ Prācetasasya maharṣer Gaṅgādevī svayam arpitavatī.
+  </div>
+  <div class="japanese">
+    <span class="speaker">タマサー</span> — お聞きなさい。かつてヴァールミーキの苦行林の端からシーターを置いて去ったラクシュマナが帰った後、シーター妃は分娩の苦痛に見舞われ、激しい悲嘆のあまり自らガンガーの流れに身を投じました。まさにその時その場で双子の男児を出産したのです。聖なるプリティヴィーとバーギーラティーが助けに来て、地底界（ラサータラ）へと連れていきました。そして乳離れの後、ガンガー女神みずから二人の子をプラーチェータサ（ヴァールミーキ）大仙に預けたのです。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔3〕</div>
+    <span class="speaker">Muralā</span> — (savismayam)<br>
+    īdṛśānāṃ vipāko 'pi jāyate param adbhutaḥ |<br>
+    yatropakaraṇībhāvam āyāty evaṃvidho janaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔3〕</div>
+    <span class="speaker">ムララー</span> — （驚きをもって）<br>
+    このような方々の不運の巡り合わせもまた実に驚嘆すべきもの——<br>
+    これほどの神格の方々が助けの手を差し伸べにいらっしゃるのですから。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    Tamasā — Idānīṃ tu... bhagavatī Bhāgīrathī... Sītāsametā kenacid iva gṛhācāravyapadeśena Godāvarīṃ vilokayitum āgatā.
+  </div>
+  <div class="japanese">
+    <span class="speaker">タマサー</span> — そして今、バーギーラティー女神は……シャンブーカの件でラーマ殿がジャナスターナに来るとサラユーから聞き、ローパームドラー様と同じ懸念を抱き、何かの家庭の儀式を口実にシーターとともにゴーダーヴァリーに来られたのです。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Muralā</span> — Sucintitaṃ bhagavatyā Bhāgīrathyā... avyagrasya punar asya śokamātradvitīyasya Pañcavaṭīpraveśo mahānartha iti. Tat katham idānīṃ Sītādevyā Rāmabhadra āśvāsanīyaḥ syāt.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ムララー</span> — バーギーラティー様は正しくお考えになりました。……今は他の務めもなく、嘆きだけを連れ添いとするラーマ殿にとって、パンチャヴァティーへの入場は大きな災いとなるでしょう。では、シーター妃がどのようにラーマ殿を慰められるのでしょう。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    Tamasā — ... "Vatse devayajanasaṃbhave Sīte, adya khalv āyuṣmatoḥ Kuśalavayoḥ dvādaśasya janmasaṃvatsarasya saṃkhyāmaṅgalagranthir bhavati..." iti. Aham apy ājñāpitā — "... tvam evāsyāḥ pratyanantarībhava" iti.
+  </div>
+  <div class="japanese">
+    <span class="speaker">タマサー</span> — ……バーギーラティー様がシーターにおっしゃったの——「娘よ、祭場から生まれたシーターよ、今日はクシャとラヴァの長命なる両子の十二歳の誕生記念結び紐の儀式の日です。さあ、自らの手で集めた花で太古の舅——マヌの広大な王仙の血統の始祖にして罪を滅ぼす太陽神を供養しなさい。私の恩寵により、森の精霊たちでさえ地上を歩く汝を見ることはないでしょう。まして人間には。」と。私にもこう命じられました——「タマサーよ、嫁のジャーナキーは汝にとりわけ深い愛情を持っている。ですから汝が彼女の付き添いとなりなさい」と。私はその仰せのとおりにいたします。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> saṃkhyāmaṅgala は人の誕生日に行う儀式で、手首に結んだ紐に毎年吉祥の結び目をつけるもの。結び目の数がその人の年齢を示す。伝承によれば紐にはguggulu（没薬）、nimba（ニーム）、siddhārtha（芥子）、dūrvā（芝草）、gorocanā（牛黄）などを結び目に付け、邪眼よけとした。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔4〕</div>
+    <span class="speaker">Tamasā</span> — tad iyaṃ Godāvarīhradān niṣkrāmya<br>
+    paripāṇḍu-durbalaka-pola-sundaraṃ dadhatī vilola-kabarīkam ānanam |<br>
+    karuṇasya mūrtir athavā śarīriṇī virahavyatheva vanam eti Jānakī ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔4〕</div>
+    <span class="speaker">タマサー</span> — ほら、ゴーダーヴァリーの淵から出てきたジャーナキーが——<br>
+    蒼ざめ痩せ細った頬を持つ美しい顔に、ほどけた髪を揺らしながら、<br>
+    憐憫の化身、いやむしろ離別の苦悩そのものが肉体を得たかのように、森へと向かう。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔5〕</div>
+    <span class="speaker">Muralā</span> — iyaṃ hi sā.<br>
+    kisalayam iva mugdhaṃ bandhanād vipralūnaṃ hṛdaya-kusuma-śoṣī dāruṇo dīrghaśokaḥ |<br>
+    galapayati paripāṇḍu kṣāmam asyāḥ śarīraṃ śaradija iva dharmaḥ ketakī-garbha-patram ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔5〕</div>
+    <span class="speaker">ムララー</span> — まさにこの方が——<br>
+    茎からもぎ取られたいたいけな若芽のように、<br>
+    心の花を枯らす酷い長い嘆きが、<br>
+    彼女の蒼白く痩せ衰えた体を萎れさせている——<br>
+    ちょうど秋の陽がケータキーの花の最も内側の花弁を焼き萎びさせるように。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> kisalayam iva は第三行の śarīra と同格。心の花を枯らし終えた dīrghaśoka（長い嘆き）がさらに身体をも萎びさせているという構成。śaradija（秋生まれ）の陽は夏の暑さよりも焼けるように厳しいとされる。ketakī-garbha-patra は極めて繊細で青白く、容易に枯れてしまう。
+</div>
+
+<p class="stage-dir">（二人は周回して退場。）<br>純序幕おわり。</p>
+
+<div class="section-title">本篇 — 主要場面</div>
+
+<p class="stage-dir">（舞台裏から）大変だ、大変だ！</p>
+<p class="stage-dir">（花を摘みながら、憐れみと不安をもって聞いているシーターが登場。）</p>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — Ajjahe jāṇāmi piasahī me Vāsandī vāharadīti.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — ああ、親友のヴァーサンティーの声だわ。
+  </div>
+</div>
+
+<p class="stage-dir">（再び舞台裏から、半偈が朗読される：「シーター妃が自らの手で摘んだシャッラキーの若葉の先で、かつて踊りながら育てた小象の子——」）</p>
+
+<div class="prose-pair">
+  <div class="sanskrit"><span class="speaker">Sītā</span> — Kiṃ tassa.</div>
+  <div class="japanese"><span class="speaker">シーター</span> — その子がどうしたの。</div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔6〕</div>
+    Sītādevyāḥ svakara-kalitaiḥ sallakī-pallavāgrair agre lolaḥ karikalabhako yaḥ purā vardhito 'bhūt |<br>
+    vadhvā sārdhaṃ payasi viharans so 'yam anyena darpād udyāmena dviradapatinā saṃnipatyābhiyuktaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔6〕</div>
+    シーター妃が自らの手で集めたシャッラキーの若葉で<br>
+    かつて面前で踊りながら育てられた小象の子——<br>
+    今やその子が妻とともに水中で遊んでいるところ、別の<br>
+    傲慢で猛々しい象の王に突然襲われ戦いを挑まれている！
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — (sasaṃbhramam) Ajjāutta parittāhi parittāhi maha taṃ puttaam. (stimitam abhinīya) Hā dhik hā dhik. Tāṇi eva cirapāricidāṇi akkharāṇi Pañcavaṭīdaṃsaṇeṇa maṃ mandabhāiṇiṃ aṇubandhanti. Hā ajjāutta!
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — （慌てて数歩進み）旦那様、助けて、あの子を助けて！（はっと我に返って）ああ、なんてこと。長年馴染んだ同じ言葉が、パンチャヴァティーを見たために、この不幸な私に付き纏うのだわ。ああ旦那様！（気を失う。）
+  </div>
+</div>
+
+<p class="stage-dir">（タマサーが登場する。）</p>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Tamasā</span> — Vatse samāśvasihi samāśvasihi.
+    <p class="stage-dir">(Nepathye) Vimānarāja atraiva sthīyatām.</p>
+  </div>
+  <div class="japanese">
+    <span class="speaker">タマサー</span> — 娘よ、しっかりして。しっかりして。
+    <p class="stage-dir">（舞台裏で）飛車の王よ、ここに止まれ。</p>
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — (samāśvasya) Ajjahe jalabharabhariamehamanyasthaṇiagambhīramaṃsalo kudo ṇu eso bhāraīṇigghoso...maṃ vi mandabhāiṇiṃ jhaṭṭi ussāṃvedi.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — （気を取り直して）ああ、水を湛えた雲の雷鳴のように深く力強い、この朗誦の響きは一体どこから？ 耳の奥まで満ちて、この不幸な私にさえ一瞬で生命を吹き込むのだわ！
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔7〕</div>
+    <span class="speaker">Tamasā</span> — (sasnehavismitam)<br>
+    aparisphuṭa-niṣkāṇe kutastye 'pi tvam īdṛśī |<br>
+    stanayitnor mayūrīva cakitotkaṇṭhitaṃ sthitā ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔7〕</div>
+    <span class="speaker">タマサー</span> — （愛情と微笑みをもって）<br>
+    娘よ、不明瞭で出所も知れぬ声なのに、<br>
+    どうしてそんなに動揺して期待に胸を躍らせているの——<br>
+    雷鳴を聞いた雌孔雀のように？
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — Bhavadi kiṃ bhaṇāsi aparipphuḍe tti. Mae uṇa sarasaṃjoeṇa paccabhiāṇidaṃ ajjāutto evva vāhuradīti.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — お方様、どうして不明瞭などとおっしゃるのですか。声の抑揚の一致から、旦那様が話しておられるのだと、私には分かったのです。
+  </div>
+</div>
+
+<p class="stage-dir">（舞台裏から）</p>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔8〕</div>
+    yatra drumā api mṛgā api bāndhavā me yāni priyāsahacaraś ciram adhyavātsam |<br>
+    etāni tāni bahunirjhara-kandarāṇi Godāvarīparisarasya gires taṭāni ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔8〕</div>
+    木々も鹿たちも私の身内であり、<br>
+    愛しい妻とともに長く住んだこの場所——<br>
+    多くの滝と洞窟のある<br>
+    ゴーダーヴァリーの畔にそびえる山の斜面よ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — (dṛṣṭvā) Hā kathaṃ prabhātacandramaṇḍalāpāṇḍura-parikṣāma-durbalena ākāreṇa... nija-saumya-gambhīrānubhāvamātra-pratyabhijñeya ārya-putra eva. Bhagavati Tamase dhāraya mām.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — （見つめて）ああ、なんということ！ 夜明けの月のように蒼白く痩せ衰えた姿をして、穏やかで荘厳な威厳だけによって辛うじてそれと分かる——まさに旦那様ご自身だわ。お方様タマサー、私を支えて。（タマサーにすがって気を失う。）
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔9〕</div>
+    <p class="stage-dir">(nepathye) anena Pañcavaṭīdarśanena —</p>
+    antarlīnasya duḥkhāgner uddāmaṃ jvalitaḥ adya |<br>
+    utpīḍa iva dhūmasya mohaḥ prāg āvṛṇoti mām ||<br>
+    Hā priye Jānaki!
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔9〕</div>
+    <p class="stage-dir">（舞台裏から）このパンチャヴァティーを見て——</p>
+    内に秘められ、今まさに激しく燃え上がろうとする悲しみの炎——<br>
+    その煙の立ちのぼる柱のように、失神がまず私を包む。<br>
+    ああ愛しいジャーナキーよ！
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — (samāśvasya) Hā katham etat.<br>
+    <p class="stage-dir">(punar nepathye) — Hā devi Daṇḍakāraṇyavāsapriyasakhi Videharājaputri! (iti mūrcchati.)</p>
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — （気を取り直して）ああ、何ということ。<br>
+    <p class="stage-dir">（再び舞台裏から）ああ妃よ、ダンダカの森での住まいの愛しき友よ、ヴィデーハ王の娘よ！（気を失う。）</p>
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — Hā dhik! Maṃ mandabhāiṇiṃ vāuhariya omīlantettaṇīluṅpalo mucchido evva... Bhavadī Tamase parittāehi parittāehi. Jīvāvehi ajjāuttam!
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — ああなんということ！ 私、不幸な者に呼びかけて、暗い青蓮のように目を閉じて、旦那様は気を失ったまま。ああ、大地に横たわり、息も止まるほどぐったりと。お方様タマサー、助けて、助けて！ 旦那様を生き返らせて！（足元にひれ伏す。）
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔10〕</div>
+    <span class="speaker">Tamasā</span> —<br>
+    tvam eva nanu kalyāṇi saṃjīvaya jagatpatim |<br>
+    priya-sparśo hi pāṇis te tatraiṣa nirato janaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔10〕</div>
+    <span class="speaker">タマサー</span> —<br>
+    やさしい姫よ、あなた自身が世界の主を蘇らせなさい。<br>
+    あなたの手のぬくもりこそ彼にとって最も愛しいもの——<br>
+    彼はそれにこそ深い喜びを見出すのだから。
+  </div>
+</div>
+
+<p class="stage-dir">シーター — 何が起ころうとも、お方様の仰せのとおりにいたします。（急いで退場。）<br>（地に倒れたラーマが現れる。涙を流すシーターに触れられ、元気を取り戻しつつある。）</p>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔11〕</div>
+    <span class="speaker">Rāma</span> — Aho ānandaḥ! Kim etad!<br>
+    āścyotanaṃ nu haricandana-pallavānāṃ niṣpīḍitendu-kara-kandalajo nu sekaḥ |<br>
+    ātapta-jīvita-punaḥ-paritarpaṇo 'yaṃ saṃjīvanauṣadhi-raso nu hṛdi prasiktaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔11〕</div>
+    <span class="speaker">ラーマ</span> — ああ、この喜びは何だ！<br>
+    ハリチャンダナ（天上の白檀）の葉からの甘露の滴りなのか、<br>
+    あるいは絞り出された月光の芽から生まれた灌水なのか、<br>
+    灼かれた命を再び潤す<br>
+    蘇生の霊薬の汁が心に注がれたのか！
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔12〕</div>
+    sparśaḥ purā paricito niyataṃ sa eva saṃjīvanaś ca manasaḥ parimohanaś ca |<br>
+    saṃtāpajaṃ sapadi yaḥ parihṛtya mūrcchām ānandena jaḍatāṃ punar ātanoti ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔12〕</div>
+    かつて覚えたあの同じ触れ心地に違いない——<br>
+    心を蘇らせ、そしてまた陶然とさせるあの感覚。<br>
+    悲嘆から生じた失神をたちまち払い退けながら、<br>
+    今度は歓喜によって再び恍惚の麻痺をもたらすとは。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — (ssa-sādhvasa-utkampam upasṛtya) Ettiam evva dāṇiṃ me bahudaram.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — （恐る恐る身を引いて）今はこれだけでも私には十分すぎるほど。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāma</span> — (upaviśya) Na khalu vatsalayā Sītādevyābhyupapanno 'smi.<br>
+    <span class="speaker">Sītā</span> — Hā dhik! Kimiti mām ajjāutto maggissadi.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ</span> — （身を起こして）ひょっとして、慈しみ深いシーター妃がこの私を助けてくださったのでは。<br>
+    <span class="speaker">シーター</span> — ああ、まさか旦那様が私を探してくださるなんて。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔13〕</div>
+    <span class="speaker">Tamasā</span> —<br>
+    taṭasthaṃ nairāśyād api ca kaluṣaṃ vipriyavaśād viyoge dīrghe 'smin jhaṭiti-ghaṭatenāstambhitam iva |<br>
+    prasannaṃ saujanyād dayita-karuṇair gāḍha-karuṇaṃ dravībhūtaṃ premṇā tava hṛdayam asmin kṣaṇa iva ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔13〕</div>
+    <span class="speaker">タマサー</span> —<br>
+    絶望ゆえに無関心に、辛い仕打ちゆえに怒りに曇り、<br>
+    この長い離別の中で突然の再会に戸惑い凍りつき、<br>
+    天性の善良さゆえに澄み渡り、愛する人の嘆きに深く心を痛め、<br>
+    そして愛ゆえに溶けてゆく——あなたの心はこの瞬間、まさにそのようなもの。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> この偈は一偈の中でシーターの心理の多層的変遷を同時並行的に描写する名句。nairāśya（絶望）による無感情、vipriya（遺棄という辛い仕打ち）による怒り、突然の再会による驚愕、天性の善良さによる穏やかさ、夫の苦悩への深い同情、そして愛による心の融解——これらすべてが一瞬に共存する。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔14〕</div>
+    <span class="speaker">Rāma</span> — Devi,<br>
+    prasāda iva sūtas te sparśaḥ snehārdra-śītalaḥ |<br>
+    adyopy ānandayati māṃ tvaṃ punaḥ kvāsi nandini ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔14〕</div>
+    <span class="speaker">ラーマ</span> — 妃よ、<br>
+    あなたの恩寵が姿をとったかのような、愛情に潤い涼やかなあなたの触れ心地は<br>
+    今もなお私を喜ばせる——だが愛しい人よ、あなた自身はどこにいるのだ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — ... ajjāutta asarisaṃ khu edaṃ vaaṇaṃ imassa vuttantassa. ... ahaṃ edassa hiaayaṃ jāṇāmi mamāvi eso.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — ……旦那様、このお言葉はあの出来事にはそぐわないもの。（涙して）いいえ、どうして私は鋼のように冷酷でいられよう。来世でさえ再び見ることが叶わぬかもしれぬ、慈愛深くこのように呼びかける旦那様に対して。私は旦那様の心を知っています、旦那様も私の心をご存知です。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔15〕</div>
+    <span class="speaker">Rāma</span> — ... Hā devi diṣṭyā vardhase.<br>
+    yenodbacchadvisakisalaya-snigdha-dantāṅkureṇa vyākṛṣṭas te sutanu lavalīpallavaḥ karṇamūlāt |<br>
+    so 'yaṃ putras tava madamucāṃ vāraṇānāṃ vijetā yat kalyāṇaṃ vayasi taruṇe bhājanaṃ tasya jātaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔15〕</div>
+    <span class="speaker">ラーマ</span> — 妃よ、おめでたいことだ。<br>
+    蓮の茎のように滑らかな生えたての牙で<br>
+    汝の耳元からラヴァリーの小枝を引き抜いていたあの子——<br>
+    今やこの汝の息子は狂暴な象たちの征服者となり、<br>
+    みずみずしい青春の中であらゆる吉祥の器となった。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> lavalīpallava は一種の蔓植物の小枝で、シーターが流刑中に耳飾りとして着けていたもの。小象がそれを引き抜いていた。kalyāṇa は若々しい美、活力、伴侶など、めでたいとされるすべてのものを含む。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔16〕</div>
+    līlotkhāta-mṛṇālakāṇḍa-kavala-cchedeṣu saṃpāditaiḥ puṣyat-puṣkara-vāsitasya payaso gaṇḍūṣa-saṃkrāntayaḥ |<br>
+    sekaḥ śīkariṇā kareṇa vihitaḥ kāmaṃ virāme punar yat snehād anarāla-nāla-nalinī-patrātapatraṃ dhṛtam ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔16〕</div>
+    戯れに引き抜いた蓮根の茎の食事の合間ごとに、<br>
+    咲き誇る蓮で香る水を鼻で含んで伴侶に与え、<br>
+    しかる後に鼻の霧で水浴びをさせ、<br>
+    終わりには愛情から、まっすぐな茎の蓮の葉を<br>
+    日傘のように彼女の上にかざしてやったのだ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔17〕</div>
+    <span class="speaker">Tamasā</span> —<br>
+    antaḥkaraṇa-tattvasya dampatyoḥ snehasaṃśrayāt |<br>
+    ānandagranthir ekaḥ ayam apatyam iti badhyate ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔17〕</div>
+    <span class="speaker">タマサー</span> —<br>
+    夫婦の心の本質が愛によって結び合わされるがゆえに、<br>
+    子とは——喜びの一つの結び目として結ばれるもの。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> この一偈は最も情感豊かな名句の一つで、親子の絆を描く詩人の卓越した才能が示されている。apatya（子）の語源を二通りに解釈する言葉遊びも含む：(1) na patanti pitaro 'nena — これにより父祖が堕ちない、(2) apatat bhavati pituḥ sakāśāt — 父から離れ出るもの。偈の中では antaḥkaraṇa の a、dampatyoḥ の pat、ayam の yam を組み合わせると apatyam（子）という語が得られるという巧みな構成。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔18〕</div>
+    <span class="speaker">Vāsantī</span> —<br>
+    anudivasam avardhayat priyā te yam āciranirgatamugdhalolavaīm |<br>
+    maṇimukuṭa ivoccikhaḥ kadambe nadati sa eṣa vadhūsakhaḥ śikhaṇḍī ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔18〕</div>
+    <span class="speaker">ヴァーサンティー</span> —<br>
+    あなたの愛しい妃が日ごと育てた孔雀——<br>
+    生え揃ったばかりの艶やかに揺れる尾羽を持つあの孔雀が、<br>
+    宝石の冠のように冠羽を逆立てて<br>
+    カダンバの木の上で、伴侶とともに鳴いておりますよ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔19〕</div>
+    <span class="speaker">Rāma</span> —<br>
+    bhramiṣu kṛta-puṭānta-maṇḍalāvṛtti-cakṣuḥ pracalita-caṭula-bhrūtāṇḍavair maṇḍayantyā |<br>
+    karakisalayatālair mugdhayā nartyamānaṃ sutam iva manasā tvāṃ vatsalena smarāmi ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔19〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    お前が円を描いて舞う時、目の端で丸く追いながら、<br>
+    揺れる優美な眉の踊りで飾り立て、<br>
+    柔らかな手のひらの拍子でお前を踊らせていたあの愛らしい人——<br>
+    息子のように、愛しさをもって私はお前を思い出すのだ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔20〕</div>
+    <span class="speaker">Rāma</span> — ... katipaayakusumodgamaḥ kadambaḥ priyatamayā parivardhito 'yam āsīt.<br>
+    smarati girimayūra eṣa devyāḥ svajana ivātra yataḥ pramodam eti ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔20〕</div>
+    <span class="speaker">ラーマ</span> — ……わずかに花をつけたこのカダンバの木は、愛しい妻が育てたものだ。<br>
+    この山の孔雀が妃を覚えているのだ——<br>
+    身内のもとにいるかのように、ここで喜びに満ちているのだから。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔21〕</div>
+    <span class="speaker">Vāsantī</span> —<br>
+    etat tad eva kadalīvanamadhyavarti kāntāsakhasya śayanīya-śilātalaṃ te |<br>
+    atra sthitā tṛṇam adāt haraśaśukaśo yadebhyaḥ Sītā tato hariṇakair na vimucyate sma ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔21〕</div>
+    <span class="speaker">ヴァーサンティー</span> —<br>
+    芭蕉の林の中にあるこの石の床こそ、<br>
+    愛しい妻とともに休まれた場所。<br>
+    ここに座ってシーターが草を与えていたので、<br>
+    あの鹿たちはここを離れないのです。
+  </div>
+</div>
+
+<p class="stage-dir">ラーマ — これさえ見るに堪えない。（涙して別の場所に座る。）</p>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — ... so evva ajjāutto taṃ evva Pañcavaṭīvanaṃ sā evva piasahī Vāsandī... sā jeva cāhiṃ. Mai uṇa mandabhāiṇīe dīsamtaṃ vi savvaṃ evva edaṃ ṇatthi tti — tā īdisā jīvalōassa parivatto.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — ……旦那様は変わらぬまま。これは同じパンチャヴァティーの森。同じ親友のヴァーサンティー。同じ様々な秘め事の証人であったゴーダーヴァリーの森のあの場所。同じ我が子同然の鹿や鳥や木々。そして私も同じまま。それなのに、不幸な私にとっては、見えていてもこれらすべてが存在しないも同然！ ああ、世の中とはこのように変わるものなのね！
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔22〕</div>
+    <span class="speaker">Vāsantī</span> —<br>
+    nīlakuvalaya-snigdhair daidaṃdhyann otsavaṃ satatam api naiḥ svecchādṛśyo navo nava eva yaḥ |<br>
+    vikalakaraṇaḥ pāṇḍucchāyaḥ śucā paridurbalaḥ katham api sa ityutprekṣyas tathāpi dṛśoḥ priyaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔22〕</div>
+    <span class="speaker">ヴァーサンティー</span> —<br>
+    青蓮のように艶やかなお姿で常に目の祭典を催し、<br>
+    思いのままに拝見できても常に新鮮であった方が——<br>
+    感覚は衰え、顔色は蒼ざめ、嘆きにすっかり衰弱して、<br>
+    辛うじてそれと推測できるほど。それでもなお目に愛しいお方。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔23〕</div>
+    <span class="speaker">Tamasā</span> — (pariṣvajya sāśrum)<br>
+    vilulitam atipūrair bāṣpam āmandaśokapṛabhavam avasṛjantī tṛṣṇayottānadīrghā |<br>
+    lapayati hṛdayeśaṃ snehanisyandinī te dhavalabahalamuggdhā dugdhakulyeva dṛṣṭiḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔23〕</div>
+    <span class="speaker">タマサー</span> — （抱きしめて涙しながら）<br>
+    喜びと悲しみから溢れ出る涙を大量に注ぎ、<br>
+    渇望に見開かれた大きなあなたの眼差しは、<br>
+    愛情を滴らせる白い豊かな乳の流れのように、<br>
+    あなたの心の主を愛の雨で浸しているかのよう。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> dhavala-bahula は「大部分が白い」の意。シーターの大きな目は瞳よりも白い部分が目立つ。ラーマに注がれる連続的な凝視が、愛情の液を注ぐ白い乳の流れに喩えられる。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔24〕</div>
+    <span class="speaker">Vāsantī</span> —<br>
+    dadatu taruvaḥ puṣpair arghyaṃ phalaiś ca madhu-śrutaḥ sphuṭita-kamalāmoda-prāyāḥ pravāntu vanānilāḥ |<br>
+    kalamaviralaṃ rajyat-kaṇṭhāḥ kraṇantu śakuntayaḥ punar imam ayaṃ devo Rāmaḥ svayaṃ vanam āgataḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔24〕</div>
+    <span class="speaker">ヴァーサンティー</span> —<br>
+    木々よ、花と果実で供物を捧げよ、蜜を滴らせながら。<br>
+    咲く蓮の香りを含んだ森の風よ、吹き渡れ。<br>
+    色づいた喉の鳥たちよ、甘く絶え間なく歌え——<br>
+    ラーマ王がみずからこの森に再びいらしたのだから。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔25〕</div>
+    <span class="speaker">Rāma</span> —<br>
+    karakamala-vitīrṇair ambu-nīvāra-śaṣpais taturu-śakuni-kuraṅgān Maithilī yān apuṣyat |<br>
+    bhavati mama vikāras teṣu dṛṣṭeṣu ko 'pi drava iva hṛdayasya prastarodbhedayogyaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔25〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    蓮のような手から水と野米と草を与えて<br>
+    マイティリー（シーター）が育てた木々、鳥、鹿——<br>
+    それらを目にすると、私の中にある感情が湧き上がる、<br>
+    岩をも砕くほどの心の液のように。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔26〕</div>
+    <span class="speaker">Vāsantī</span> — (rudatī)<br>
+    tvaṃ jīvitaṃ tvam asi me hṛdayaṃ dvitīyaṃ tvaṃ kaumudī nayanyor amṛtaṃ tvam aṅge |<br>
+    ityādibhiḥ priyaśatair anurudhya mugdhāṃ tām eva — śāntam; atha vā kim ihottareṇa ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔26〕</div>
+    <span class="speaker">ヴァーサンティー</span> — （泣きながら）<br>
+    「お前は我が命、お前は我が第二の心、<br>
+    お前は我が目に月光、我が体に甘露」——<br>
+    そうした幾百もの甘い言葉であの素直な人を口説いておいて<br>
+    その人を——もうよしましょう。この上何を言えば。（気を失う。）
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> mugdhā は「素直な」「無邪気な」の意——シーターが容易にその言葉を信じた。ヴァーサンティーは「その人をお前は——」と言いかけ、あまりの痛みに文を完結できず śāntam（もういい）と打ち切る。修辞法としては ākṣepa（言いかけて控える手法）。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔27〕</div>
+    <span class="speaker">Vāsantī</span> — (samāśvasya)<br>
+    ayi kaṭhora yaśaḥ kila te priyaṃ kim ayaśo nanu ghoram ataḥ param |<br>
+    kim abhavad vipine hariṇīdṛśaḥ kathaya nātha kathaṃ bata manyase ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔27〕</div>
+    <span class="speaker">ヴァーサンティー</span> — （我に返って）<br>
+    ああ薄情な方、名声がお好きだそうですが、<br>
+    これ以上恐ろしい不名誉があるでしょうか？<br>
+    森の中であの鹿のような目をした人はどうなったのか——<br>
+    おっしゃってください、主よ。彼女の運命をどうお思いですか？
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔28〕</div>
+    <span class="speaker">Rāma</span> —<br>
+    trastaikahāyana-kuraṅga-vilola-dṛṣṭes tasyāḥ parisphūrita-garbha-bharālasāyāḥ |<br>
+    jyotsnāmayīva mṛdu-bāla-mṛṇāla-kalpā kanyādviṣ aṅgalatā niyataṃ viluptā ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔28〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    怯えた一歳の子鹿のように揺れ動く目を持ち、<br>
+    膨らんだ胎のために身重であったあの人——<br>
+    月光で作られたかのように柔らかな蓮の若茎のような体は、<br>
+    きっと猛獣に滅ぼされてしまったに違いない。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit"><span class="speaker">Sītā</span> — Ajjāutta dharāmi esā dharāmi.</div>
+  <div class="japanese"><span class="speaker">シーター</span> — 旦那様、私はここに生きております、生きておりますのに。</div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔29〕</div>
+    <span class="speaker">Tamasā</span> —<br>
+    pūrotpīḍe taṭākasya parīvāhaḥ pratikriyā |<br>
+    śokakṣobhe ca hṛdayaṃ pralapair eva dhāryate ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔29〕</div>
+    <span class="speaker">タマサー</span> —<br>
+    池が溢れそうな時、排水路こそが対処法。<br>
+    嘆きの激動の中で、心は嘆きの声によってこそ保たれるのです。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔30〕</div>
+    idaṃ viśvaṃ pālyaṃ vidhivad abhiyuktena manasā priyāśoko jīvaṃ kusumam iva dharmo galapayati |<br>
+    svayaṃ kṛtvā tyāgaṃ vilapanavimodo 'py asulabhas tavāpy ucchvāso bhavati nanu lābho hi ruditam ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔30〕</div>
+    一心不乱にこの世界を法に従い統べねばならず、<br>
+    愛する妻への嘆きは花のように命を萎れさせ、<br>
+    自ら遺棄したがゆえに嘆きによる慰めさえ容易には得られない——<br>
+    けれど今日こそ安堵の息をつけるのだから、泣くことこそまさに得るものなのです。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔31〕</div>
+    <span class="speaker">Rāma</span> — Kaṣṭaṃ bhoḥ kaṣṭam!<br>
+    dalati hṛdayaṃ gāḍhodvegaṃ dvidhā tu na bhidyate vahati vikalaḥ kāyo mohaṃ na muñcati cetanām |<br>
+    jvalyati tanum antardāhaḥ karoti na bhasmasāt praharati vidhir marmacchedī na kṛntati jīvitam ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔31〕</div>
+    <span class="speaker">ラーマ</span> — 苦しい、ああ苦しい！<br>
+    心は激しい苦悶に砕けるが、真二つには割れぬ。<br>
+    衰えた体は失神を重ねるが、意識は去らぬ。<br>
+    内なる炎は体を焼くが、灰にはせぬ。<br>
+    運命は急所を抉るが、命を断ちはしない。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔32〕</div>
+    na kila bhavatāṃ devyāḥ sthānaṃ gṛhe 'bhimataṃ tatas tṛṇam iva vane śūnye tyaktā na cāpy anuśocitā |<br>
+    ciraparicitās te te bhāvāḥ paridravayanti mām idam aśaraṇair dyausmābhiḥ prasīdata rudyate ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔32〕</div>
+    <span class="speaker">ラーマ</span> — ああ、市民よ、国人よ！<br>
+    妃が我が家にいることをお前たちは良しとせず、<br>
+    それゆえ私は彼女を藁のように荒野に捨て、嘆きもしなかった。<br>
+    だが長年親しんだ様々の事物が私の心を揺さぶる。<br>
+    頼るところなき私が泣いているのだ——どうか赦してほしい。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔33〕</div>
+    vedhyāḥ śūnyasya jagato dvādaśaḥ parivatsaraḥ |<br>
+    pranaṣṭam iva nāmāpi na ca Rāmo na jīvati ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔33〕</div>
+    シーターなきこの空虚な世界も十二年目。<br>
+    彼女の名さえ消え失せたかのよう——<br>
+    だがラーマが生きていないわけではない。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔34〕</div>
+    <span class="speaker">Tamasā</span> —<br>
+    naitāḥ priyatamā vācaḥ snehārdrāḥ śokadāruṇāḥ |<br>
+    etās tā madhunā dhārāḥ sravanti saviṣās tvayi ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔34〕</div>
+    <span class="speaker">タマサー</span> —<br>
+    これらは愛に満ちて嘆きゆえに痛ましい、最も愛しいお言葉ではない——<br>
+    あなたに注がれるのは、毒の混じった蜜の流れなのですよ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔35〕</div>
+    <span class="speaker">Rāma</span> —<br>
+    yathā tiraścīnam alātaśalyaṃ pratyuptam antaḥ saviṣaś ca daṃśaḥ |<br>
+    tathaiva tīvraṃ hṛdi śokaśaṅkur marmāṇi kṛntann api kiṃ na soḍhaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔35〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    ちょうど胸に突き刺さった灼熱の鉄の棘のように、<br>
+    また毒蛇の噛み傷のように、<br>
+    まさに同様に鋭い悲嘆の杭が心臓の急所を<br>
+    抉りながらも、私はそれに堪えてきたではないか。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔36〕</div>
+    lolollola-kṣubhita-karuṇojṛmbhaṇa-stambhanārthaṃ yo yo yatnaḥ katham api mayādhīyate taṃ tam antam |<br>
+    bhitvā bhitvā prasarati balāt ko 'pi cetovikāras toyasyevāpratihatarāyaḥ saikataṃ setum aughaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔36〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    波のように溢れ騒ぐ悲哀の激動を抑えようと<br>
+    私がどのように努力しても、それぞれの努力を<br>
+    打ち破り、打ち破り、ある抗いがたい心の変動が猛然と広がる——<br>
+    抗いがたい勢いの洪水が砂の堰を押し流すように。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔37〕</div>
+    <span class="speaker">Vāsantī</span> — (sakaruṇam) Deva deva,<br>
+    asminn eva latāgṛhe tvam abhavas tanmārgadattekṣaṇaḥ sā haṃsaiḥ kṛtakautukā ciram abhūd Godāvarīsaikte |<br>
+    āyāntyā paridurmunāyitam iva tvāṃ vīkṣya baddhas tayā kātaryād aravidakuḍmalanibho mugdhaḥ praṇāmāñjaliḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔37〕</div>
+    <span class="speaker">ヴァーサンティー</span> — （哀れみをもって）陛下、陛下、<br>
+    まさにこの蔓の茂みで、あなたは彼女の帰る道に目を向けておられました。<br>
+    彼女は白鳥に心を奪われてゴーダーヴァリーの砂洲で長く過ごし、<br>
+    帰ってきてご不興のご様子を見た時、おずおずと<br>
+    蓮の蕾のような愛らしい合掌の礼をお捧げしたのです。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> paridurmunāyitam iva は「不機嫌に見えたが、実際にはそうではなかった」の意。aravidakuḍmalanibha は蓮の蕾に似た合掌。kātarya は「あやまちを察して生じた怖じ気」。この偈はヴァイダルビー（柔和な）様式の好例で、長い複合語を避け、情感を直截に伝える。
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔38〕</div>
+    <span class="speaker">Rāma</span> —<br>
+    hā hā devi sphuṭati hṛdayaṃ dhvaṃsate dehabandhaḥ śūnyaṃ manye jagad aviratajvālam antarjvalāmi |<br>
+    sīdann andhe tamasi vidhuro majjatīvāntarātmā viśvaṅmohaḥ sthagayati kathaṃ mandabhāgyaḥ karomi ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔38〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    ああ、妃よ！ 心は砕け、体の結合は崩れ、<br>
+    世界は空虚と感ず。絶えず燃える炎で内から焼かれ、<br>
+    心の奥は暗闇の中に沈み溺れゆき、<br>
+    あまねく覆う失神が一切を包む——不幸な私は何をすればよいのだ。
+  </div>
+</div>
+
+<p class="stage-dir">（気を失う。シーターが駆け寄って心臓と額に触れる。ラーマが蘇生する。）</p>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔39〕</div>
+    <span class="speaker">Rāma</span> —<br>
+    ālimpann amṛtamayair iva pralepair antar vā bahir api vā śarīradhātūn |<br>
+    saṃsparśaḥ punar api jīvayann akasmād ānandād aparavidhaṃ tanoti moham ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔39〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    甘露でできた膏薬のように、内からも外からも<br>
+    体の構成要素に塗り込むかのように、<br>
+    突然に命を呼び覚ますこの心地よい感触は、<br>
+    歓喜から来る別種の恍惚をもたらすのだ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāma</span> — (ānandanīmīlitākṣa eva) Sakhi Vāsanti, punaḥ prāptā Jānakī.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ</span> — （歓喜に目を閉じたまま）友ヴァーサンティーよ、ジャーナキーが再び来てくれたのだ。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔40〕</div>
+    gṛhīto yaḥ pūrvaṃ pariṇayavidhau kaṅkaṇadharaś ciraṃ svecchāsparśair amṛtaśiśiraiḥ paricitaḥ |<br>
+    <span class="speaker">Sītā</span> — Ajjāutta sa evva dāṇiṃ si tumam.<br>
+    <span class="speaker">Rāma</span> — sa evāyaṃ tasyās tuhinanikarāupamyasubhago mayā labdhaḥ pāṇir lalitalavalīkandaḍanibhaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔40〕</div>
+    <span class="speaker">ラーマ</span> — かつて婚礼の儀式で腕輪をつけて握り、<br>
+    長い間、思いのままの甘露のように冷たい愛撫で馴染んだ手——<br>
+    <span class="speaker">シーター</span> — 旦那様、今も昔のままのあなたです。<br>
+    <span class="speaker">ラーマ</span> — まさにあの人の手だ——雪の塊のように心地よく、<br>
+    優美なラヴァリーの若芽に似た、あの手を私は得たのだ。（と彼女の手を握る。）
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — Hā dhik! Ajjāuttappharissamohiae pamādo khu me saṃvutto.<br>
+    <span class="speaker">Rāma</span> — Sakhi Vāsanti, ānandanimīlitendriyaḥ sādhvasena paravān asmi. Tat tvaṃ tāvad enāṃ dhāraya.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — ああ、なんということ！ 旦那様の触れ心地に恍惚として、うっかりしてしまったわ。<br>
+    <span class="speaker">ラーマ</span> — ヴァーサンティーよ、歓喜で感覚が閉ざされ、動揺に我を失っている。お前がこの人を支えてくれ。
+  </div>
+</div>
+
+<p class="stage-dir">ヴァーサンティー — ああ、お気の毒に。これは狂乱にすぎません。<br>（シーターは慌てて手を引き抜き、後ずさりする。）</p>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔41〕</div>
+    karapallavaḥ sa tasyāḥ sahasaiva jaḍāt paribhraṣṭaḥ |<br>
+    parikampinaḥ prakampī karan mama svidyataḥ svidyan ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔41〕</div>
+    あの人の若芽のような手が、たちまち<br>
+    痺れた私の手から滑り落ちた——<br>
+    震えるものから震えつつ、汗ばむものから汗ばみながら。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔42〕</div>
+    <span class="speaker">Tamasā</span> — (sasnehakautuksmitaṃ nirvarṇya)<br>
+    sasvedromāśritakampitāṅgī jātā priyasparśasukhena vatsā |<br>
+    marunnavāmbhaḥpravidhūtasiktā kadambayaṣṭiḥ sphuṭakorakeva ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔42〕</div>
+    <span class="speaker">タマサー</span> — （愛情と好奇の微笑みを浮かべて見つめ）<br>
+    愛する人の触れ心地の喜びに、汗ばみ鳥肌を立て<br>
+    体を震わせるこの娘は——<br>
+    風に揺さぶられ新しい雨に濡れた<br>
+    蕾を膨らませるカダンバの若枝のよう。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔43〕</div>
+    <span class="speaker">Vāsantī</span> — Deva paśya paśya.<br>
+    Paulastyasya Jaṭāyuṣā vighaṭitaḥ kārṣṇāyaso 'yaṃ rathas te caite purataḥ piśācavadanāḥ kaṅkālaśeṣāḥ kharāḥ |<br>
+    khaḍgacchinna-Jaṭāyu-pakṣatiḥ ataḥ Sītāṃ calantīṃ vahan anvaryākulavidyud ambuda iva kham abhyudas tad ariḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔43〕</div>
+    <span class="speaker">ヴァーサンティー</span> — 陛下、ご覧ください、ご覧ください。<br>
+    これがジャターユに砕かれたラーヴァナの鉄の戦車、<br>
+    あそこに骸骨だけとなった悪鬼面の騾馬たち。<br>
+    ここでジャターユの翼が根元から断ち切られ、あの敵はもがくシーターを載せて<br>
+    稲妻を内に閃かせる雲のように空に飛び上がったのです。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔44〕</div>
+    <span class="speaker">Rāma</span> —<br>
+    upāyānāṃ bhāvād virativinodavyatikarai vimardair vīrāṇāṃ jagati janitātyaddbutarasaḥ |<br>
+    viyogo mugdhākṣyāḥ sa khalu ripughātāvadhirabhūt kathaṃ tūṣṇīṃ sahyo niravadhi ayaṃ tvapratividhaḥ ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔44〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    手段があるがゆえに絶えず気を紛らわせ、<br>
+    勇者たちの激闘が世に驚異の感を生んだ<br>
+    あの美しい目の妻との最初の別離は、敵の滅亡を期限としていた。<br>
+    だが終わりもなく、救済もないこの離別を、<br>
+    どうして黙って堪えることができよう。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔45〕</div>
+    vyarthaṃ yatra kapīndrasakhyam api me vīryaṃ harīṇāṃ vṛthā prajñā Jāmbavato 'pi yatra na gatiḥ putrasya Vāyor api |<br>
+    mārgaṃ yatra na Viśvakarmatanayaḥ kartuṃ Nalo 'pi kṣamaḥ Saumitrer api patriṇām aviṣaye tatra priye kvāsi me ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔45〕</div>
+    <span class="speaker">ラーマ</span> —<br>
+    猿の王との友情も役に立たず、猿たちの武勇も無駄、<br>
+    ジャーンバヴァットの知恵も無力、風神の子（ハヌマーン）さえ至れず、<br>
+    ヴィシュヴァカルマンの子ナラでさえ道を開くことができず、<br>
+    スミトラーの子（ラクシュマナ）の矢さえ届かぬその場所に——<br>
+    愛しい人よ、お前は今どこにいるのだ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — Bahumaṇāvidahmi taṃ puvvavirabam.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — あの最初の別離がどんなに恵まれていたか、今になって分かります。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Rāma</span> — Asti cedānīm aśvamedhāya sahadharmacāriṇī me —<br>
+    <span class="speaker">Sītā</span> — (sotkampam) Ajjāutta kā.<br>
+    <span class="speaker">Rāma</span> — Hiraṇmayī Sītāpratikṛtiḥ.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ラーマ</span> — 今やアシュヴァメーダ（馬祀祭）での私の祭祀の伴侶がいる——<br>
+    <span class="speaker">シーター</span> — （動揺して）旦那様、それは誰ですか。<br>
+    <span class="speaker">ラーマ</span> — シーターの黄金像だ。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — (socchvāsam) Ajjāutta, dāṇiṃ si tumam. Ahaha ukkhāṇidaṃ dāṇiṃ me pariccaaylajjāsallaṃ ajjāuttteṇa.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — （安堵の溜息をついて、涙しながら）旦那様、今のあなたこそがあなたです。ああ、旦那様は今、私の遺棄から生じた恥辱の棘を抜いてくださいました。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — Dhaṇṇā khu sā jā evaṃ ajjāutteṇa bahumaṇṇīadi jā a ajjāuttaṃ viṇodayandī āsāṇibandhaṇaṃ jādā jīalōassa.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — このように旦那様に敬われ、旦那様を慰めて人間世界の希望の拠り所となった、あの像はなんと幸せなことでしょう。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Tamasā</span> — (sasmitasnehaṃ pariṣvajya) Ayi vatse, evam ātmā stūyate.
+  </div>
+  <div class="japanese">
+    <span class="speaker">タマサー</span> — （微笑みと愛情をもって抱きしめて）おやおや、娘よ、こうして自分自身を褒め称えているのね。
+  </div>
+</div>
+
+<p class="stage-dir">シーター — （顔を赤らめてうつむき、独白）ああ、タマサー様に笑われてしまった。</p>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Vāsantī</span> — Mahān ayaṃ vyatikaro 'smākaṃ prasādaḥ. Gamanaṃ punar yathā kāryahānir na bhavati tathāstu.
+  </div>
+  <div class="japanese">
+    <span class="speaker">ヴァーサンティー</span> — この出会いは私たちへの大きなお恵みです。ですが、お帰りは公務の妨げにならぬようになさってください。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔46〕</div>
+    <span class="speaker">Tamasā</span> — kathā vā gamyate. Yasyāḥ tava —<br>
+    pratyutpasyeva dayite tṛṣṇādīrghasya cakṣuṣaḥ |<br>
+    marmacchedaparair yatnair ākarṣo na samāpyate ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔46〕</div>
+    <span class="speaker">タマサー</span> — いや、どうやって去れるのでしょう。<br>
+    愛する人に釘づけになったかのような、<br>
+    渇望に大きく見開かれた目を——<br>
+    心の急所を抉るような努力をもってしても<br>
+    引き離すことはできないのだから。
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — Ṇamo ṇamo apuvvapuṇṇajaṇidadaṃsaṇāṇaṃ ajjāuttacalaṇakamalāṇam. (mūrcchati)
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — 余人にない功徳をもって初めて拝することの叶う、旦那様の蓮華の御足に繰り返し帰命いたします。（気を失う。）
+  </div>
+</div>
+
+<div class="prose-pair">
+  <div class="sanskrit">
+    <span class="speaker">Sītā</span> — (samāśvasya) Kiyac ciraṃ vā meghāntareṇa pūrṇimācandrasya darśanam.
+  </div>
+  <div class="japanese">
+    <span class="speaker">シーター</span> — （気を取り直して）雲の間から満月を見られるのも、いつまでのことでしょうか。
+  </div>
+</div>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔47〕</div>
+    <span class="speaker">Tamasā</span> — Aho saṃvidhānakam!<br>
+    eko rasaḥ karuṇa eva nimittabhedād bhinnaḥ pṛthak pṛthag ivāśrayate vivartān |<br>
+    āvartabudbuda-taraṅgamayān vikārān ambho yathā salilam eva tu tat samagram ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔47〕</div>
+    <span class="speaker">タマサー</span> — ああ、何という構成の妙か！<br>
+    ただ一つの情趣——悲哀（karuṇa）のみが、原因の違いによって<br>
+    様々に分かれ、別々の変容を帯びるかのように見える——<br>
+    渦巻き、泡沫、波となる水の変化のように。<br>
+    しかし、そのすべてはやはり水にほかならないのだ。
+  </div>
+</div>
+
+<div class="note-block">
+  <strong>Kale注：</strong> この偈はこの戯曲の美学的核心を表す。詩人はタマサーの口を借りて、この劇において一つの rasa（情趣）すなわち karuṇa（悲哀）こそが主導的であり、他の情趣——恋愛・勇壮・驚嘆など——はすべてこの karuṇa の変容にすぎないと宣言する。水が渦・泡沫・波と姿を変えながらも本質は水であるのと同じように。これは従来の rasa 理論（śṛṅgāra（恋愛）または vīra（勇壮）が主情趣であるとする説）に対するバヴァブーティの革新的主張である。
+</div>
+
+<p class="stage-dir">ラーマ — 飛車の王よ、こちらへ来い。<br>（一同立ち上がる。）</p>
+
+<div class="verse-pair">
+  <div class="sanskrit">
+    <div class="verse-num">〔48〕</div>
+    <span class="speaker">Tamasā, Vāsantī</span> — (Sītā-Rāmau prati)<br>
+    avanir amara-sindhuḥ sārdham asmadvidhābhiḥ sa ca kulapatir ādyaś chandasāṃ yaḥ prayoktā |<br>
+    sa ca munir anuyātārundhutīko Vasiṣṭhas tvayi vitaratu bhadraṃ bhūyase maṅgalāya ||
+  </div>
+  <div class="japanese">
+    <div class="verse-num">〔48〕</div>
+    <span class="speaker">タマサーとヴァーサンティー</span> — （シーターとラーマに向かって）<br>
+    大地よ、天の河（ガンガー）よ、我らのような者たちとともに、<br>
+    韻律の創始者にして最初の一族の長（ヴァールミーキ）よ、<br>
+    アルンダティーを伴う聖者ヴァシシュタよ——<br>
+    どうかあなた方に、さらに大きな吉祥のために幸いを授けたまえ。
+  </div>
+</div>
+
+<p class="stage-dir">（一同退場。）</p>
+
+<div class="act-end">
+  iti tṛtīyo 'ṅkaḥ | 第三幕終<br>
+  <span style="font-size:0.9rem; color: var(--text-light);">Pañcavaṭīsamāgama — パンチャヴァティーでの邂逅</span>
+</div>
