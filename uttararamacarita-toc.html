@@ -1,0 +1,666 @@
+<title>Uttararāmacarita 総覧</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;600;700&display=swap">
+<style>
+:root {
+  --bg: #f7f3eb;
+  --heading: #1a1a2e;
+  --gold: #b8943e;
+  --ochre: #8b4513;
+  --text: #2d2d2d;
+  --bg-alt: #f0ead8;
+  --note-bg: #faf6ed;
+  --border: #d4c9a8;
+  --text-light: #5a5a5a;
+  --accent-red: #9b3a3a;
+  --accent-blue: #3a5a7c;
+  --accent-green: #4a6741;
+  --accent-purple: #6b4a7c;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1a2e;
+    --heading: #e8e0d0;
+    --gold: #d4a94c;
+    --ochre: #c8875a;
+    --text: #d4cec4;
+    --bg-alt: #22223a;
+    --note-bg: #1e1e32;
+    --border: #3a3a52;
+    --text-light: #9a9494;
+    --accent-red: #c86a6a;
+    --accent-blue: #6a9ac4;
+    --accent-green: #7aa871;
+    --accent-purple: #a07ab8;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1a2e;
+  --heading: #e8e0d0;
+  --gold: #d4a94c;
+  --ochre: #c8875a;
+  --text: #d4cec4;
+  --bg-alt: #22223a;
+  --note-bg: #1e1e32;
+  --border: #3a3a52;
+  --text-light: #9a9494;
+  --accent-red: #c86a6a;
+  --accent-blue: #6a9ac4;
+  --accent-green: #7aa871;
+  --accent-purple: #a07ab8;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif', 'Noto Serif JP', Georgia, serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  line-height: 1.8;
+}
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--gold);
+}
+header h1 { font-size: 1.6rem; color: var(--heading); margin: 0 0 0.2rem; text-wrap: balance; }
+header .sub { font-size: 1rem; color: var(--gold); font-weight: 400; margin: 0.2rem 0; }
+header .desc { color: var(--text-light); font-size: 0.85rem; font-style: italic; margin-top: 0.5rem; }
+
+h2 {
+  color: var(--heading);
+  font-size: 1.2rem;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+h2 .emoji { margin-right: 0.4rem; }
+h3 { color: var(--gold); font-size: 1rem; margin: 1.5rem 0 0.5rem; }
+
+/* TOC Table */
+.toc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  font-size: 0.9rem;
+}
+.toc-table th {
+  background: var(--bg-alt);
+  color: var(--heading);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 2px solid var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+.toc-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.toc-table tr:last-child td { border-bottom: 2px solid var(--gold); }
+.toc-table .act-num {
+  color: var(--gold);
+  font-weight: 700;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.toc-table .skt { font-size: 0.85rem; color: var(--text-light); }
+.toc-table a { color: var(--ochre); text-decoration: none; }
+.toc-table a:hover { text-decoration: underline; }
+
+/* Stats row */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.stat-card {
+  background: var(--bg-alt);
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-align: center;
+}
+.stat-card .num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.stat-card .label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gold);
+}
+.tl-item {
+  position: relative;
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-alt);
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+.tl-item::before {
+  content: '';
+  position: absolute;
+  left: -1.75rem;
+  top: 1rem;
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+}
+.tl-act {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+.tl-title {
+  font-weight: 700;
+  color: var(--heading);
+  margin: 0.15rem 0;
+}
+.tl-desc { color: var(--text); }
+.tl-key { color: var(--text-light); font-size: 0.82rem; margin-top: 0.25rem; }
+
+/* SVG diagram */
+.diagram-wrap {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+.diagram-wrap svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Synopsis cards */
+.synopsis {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--bg-alt);
+  border-radius: 6px;
+  border-left: 3px solid var(--gold);
+}
+.synopsis .act-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.synopsis .act-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.synopsis .act-title { font-weight: 700; color: var(--heading); font-size: 1rem; }
+.synopsis .act-sub { font-size: 0.85rem; color: var(--ochre); font-style: italic; }
+.synopsis p { margin: 0.4rem 0; font-size: 0.9rem; }
+.synopsis .key-verses {
+  margin-top: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+.synopsis .key-verses strong { color: var(--gold); }
+
+/* Rasa table */
+.rasa-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+.rasa-table th {
+  background: var(--bg-alt);
+  color: var(--heading);
+  font-weight: 700;
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+.rasa-table td {
+  padding: 0.45rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.rasa-bar {
+  display: inline-block;
+  height: 8px;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* Character groups */
+.char-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.char-group {
+  background: var(--bg-alt);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+.char-group h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.82rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.char-group ul {
+  margin: 0; padding: 0; list-style: none;
+  font-size: 0.85rem;
+}
+.char-group li { margin: 0.2rem 0; }
+.char-group .skt { color: var(--text-light); font-size: 0.8rem; }
+
+@media (max-width: 640px) {
+  body { padding: 1rem; }
+  header h1 { font-size: 1.3rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .char-grid { grid-template-columns: 1fr; }
+  .toc-table { font-size: 0.82rem; }
+}
+</style>
+
+<header>
+  <h1>Uttararāmacarita — ウッタラ・ラーマチャリタ</h1>
+  <div class="sub">バヴァブーティ作『ラーマ後日譚』対訳全七幕 — 総覧</div>
+  <div class="desc">M.R. Kale 校訂版に基づくサンスクリット（IAST）・日本語対訳</div>
+</header>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat-card"><div class="num">7</div><div class="label">全幕数</div></div>
+  <div class="stat-card"><div class="num">281</div><div class="label">総偈数</div></div>
+  <div class="stat-card"><div class="num">12年</div><div class="label">劇中経過年数</div></div>
+  <div class="stat-card"><div class="num">1</div><div class="label">主情（rasa）: 悲愍</div></div>
+</div>
+
+<h2><span class="emoji">📜</span>目次 — 全七幕一覧</h2>
+
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th>幕</th>
+      <th>サンスクリット名</th>
+      <th>邦題</th>
+      <th>偈数</th>
+      <th>主要場面</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="act-num">I</td>
+      <td>Prathamo 'ṅkaḥ<br><span class="skt">प्रथमोऽङ्कः</span></td>
+      <td><a href="https://claude.ai/code/artifact/1fbcbe61-7a33-435f-a4e7-1cdbf65e3430">序幕 — 追放の決断</a></td>
+      <td>51</td>
+      <td>ラーマの苦悩、シーター追放、ラクシュマナへの命令</td>
+    </tr>
+    <tr>
+      <td class="act-num">II</td>
+      <td>Dvitīyo 'ṅkaḥ<br><span class="skt">द्वितीयोऽङ्कः</span></td>
+      <td><a href="https://claude.ai/code/artifact/05d73e7b-64da-4d9d-9ce3-0b6e22a0c26c">修行林逍遥</a></td>
+      <td>30</td>
+      <td>12年後のダンダカの森、シーター幻影との再会</td>
+    </tr>
+    <tr>
+      <td class="act-num">III</td>
+      <td>Tṛtīyo 'ṅkaḥ<br><span class="skt">तृतीयोऽङ्कः</span></td>
+      <td><a href="https://claude.ai/code/artifact/98cc60de-921a-40ee-b0a2-62ea9095f28d">影 — Chāyā</a></td>
+      <td>48</td>
+      <td>森の精霊たちの嘆き、シーターの影との対話</td>
+    </tr>
+    <tr>
+      <td class="act-num">IV</td>
+      <td>Caturtho 'ṅkaḥ<br><span class="skt">चतुर्थोऽङ्कः</span></td>
+      <td><a href="https://claude.ai/code/artifact/9697bb5d-d722-4710-b7f5-097a3e8b23b7">認知 — Pratyabhijñāna</a></td>
+      <td>29</td>
+      <td>ジャナカとの再会、ラーマの内面の葛藤</td>
+    </tr>
+    <tr>
+      <td class="act-num">V</td>
+      <td>Pañcamo 'ṅkaḥ<br><span class="skt">पञ्चमोऽङ्कः</span></td>
+      <td><a href="https://claude.ai/code/artifact/f06b402f-7ab5-4f64-81d4-8ced20140a91">王子の武勇</a></td>
+      <td>36</td>
+      <td>ラヴァとチャンドラケートゥの戦い、神兵の発動</td>
+    </tr>
+    <tr>
+      <td class="act-num">VI</td>
+      <td>Ṣaṣṭho 'ṅkaḥ<br><span class="skt">षष्ठोऽङ्कः</span></td>
+      <td><a href="https://claude.ai/code/artifact/4859a602-9274-4dd3-bb90-d97e063a2976">王子認知</a></td>
+      <td>42</td>
+      <td>ラーマが戦闘を止め、クシャ・ラヴァに父の面影を見る</td>
+    </tr>
+    <tr>
+      <td class="act-num">VII</td>
+      <td>Saptamo 'ṅkaḥ<br><span class="skt">सप्तमोऽङ्कः</span></td>
+      <td><a href="https://claude.ai/code/artifact/aea8165b-cd96-48f8-b710-7ab7454732ec">邂逅 — Sammelana</a></td>
+      <td>20</td>
+      <td>劇中劇、シーターの名誉回復、家族の再会</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2><span class="emoji">🗺️</span>劇の構造 — 時系列と場面展開</h2>
+
+<div class="diagram-wrap">
+<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Serif','Noto Serif JP',Georgia,serif;">
+  <!-- Background bands -->
+  <rect x="0" y="0" width="800" height="340" fill="none"/>
+
+  <!-- Time axis -->
+  <line x1="60" y1="280" x2="760" y2="280" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="400" y="320" text-anchor="middle" fill="currentColor" font-size="11" opacity="0.5">劇中の時間経過 →</text>
+
+  <!-- Phase labels -->
+  <rect x="60" y="20" width="200" height="24" rx="4" fill="currentColor" fill-opacity="0.08"/>
+  <text x="160" y="36" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.05em" fill="currentColor" opacity="0.6">序 — 追放と別離</text>
+
+  <rect x="280" y="20" width="240" height="24" rx="4" fill="currentColor" fill-opacity="0.08"/>
+  <text x="400" y="36" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.05em" fill="currentColor" opacity="0.6">展 — 12年後の森と戦い</text>
+
+  <rect x="540" y="20" width="220" height="24" rx="4" fill="currentColor" fill-opacity="0.08"/>
+  <text x="650" y="36" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.05em" fill="currentColor" opacity="0.6">結 — 認知と再会</text>
+
+  <!-- Act boxes -->
+  <!-- Act I -->
+  <rect x="60" y="60" width="90" height="60" rx="5" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.25"/>
+  <text x="105" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity="0.8">第一幕</text>
+  <text x="105" y="96" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">アヨーディヤー</text>
+  <text x="105" y="110" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">追放の決断</text>
+
+  <!-- Act II -->
+  <rect x="170" y="60" width="90" height="60" rx="5" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.25"/>
+  <text x="215" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity="0.8">第二幕</text>
+  <text x="215" y="96" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">パンチャヴァティー</text>
+  <text x="215" y="110" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">森の記憶</text>
+
+  <!-- Act III -->
+  <rect x="280" y="60" width="90" height="60" rx="5" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.25"/>
+  <text x="325" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity="0.8">第三幕</text>
+  <text x="325" y="96" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">ダンダカの森</text>
+  <text x="325" y="110" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">影との対話</text>
+
+  <!-- Act IV -->
+  <rect x="390" y="60" width="90" height="60" rx="5" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.25"/>
+  <text x="435" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity="0.8">第四幕</text>
+  <text x="435" y="96" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">ジャナカ再会</text>
+  <text x="435" y="110" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">内面の葛藤</text>
+
+  <!-- Act V -->
+  <rect x="500" y="60" width="90" height="60" rx="5" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.25"/>
+  <text x="545" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity="0.8">第五幕</text>
+  <text x="545" y="96" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">戦場</text>
+  <text x="545" y="110" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">ラヴァの戦い</text>
+
+  <!-- Act VI -->
+  <rect x="610" y="60" width="90" height="60" rx="5" fill="currentColor" fill-opacity="0.06" stroke="currentColor" stroke-opacity="0.25"/>
+  <text x="655" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity="0.8">第六幕</text>
+  <text x="655" y="96" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">戦闘停止</text>
+  <text x="655" y="110" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.5">父子の予感</text>
+
+  <!-- Act VII -->
+  <rect x="710" y="55" width="50" height="70" rx="5" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="735" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" opacity="0.9">第七幕</text>
+  <text x="735" y="96" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.5">ガンガー河畔</text>
+  <text x="735" y="110" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.5">大団円</text>
+
+  <!-- Arrows -->
+  <path d="M150,90 L170,90" stroke="currentColor" stroke-opacity="0.3" fill="none" marker-end="url(#arr)"/>
+  <path d="M260,90 L280,90" stroke="currentColor" stroke-opacity="0.3" fill="none" marker-end="url(#arr)"/>
+  <path d="M370,90 L390,90" stroke="currentColor" stroke-opacity="0.3" fill="none" marker-end="url(#arr)"/>
+  <path d="M480,90 L500,90" stroke="currentColor" stroke-opacity="0.3" fill="none" marker-end="url(#arr)"/>
+  <path d="M590,90 L610,90" stroke="currentColor" stroke-opacity="0.3" fill="none" marker-end="url(#arr)"/>
+  <path d="M700,90 L710,90" stroke="currentColor" stroke-opacity="0.3" fill="none" marker-end="url(#arr)"/>
+  <defs><marker id="arr" viewBox="0 0 6 6" refX="6" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L6,3 L0,6" fill="currentColor" opacity="0.3"/></marker></defs>
+
+  <!-- Emotional arc curve -->
+  <text x="60" y="155" font-size="10" font-weight="700" fill="currentColor" opacity="0.5">感情の推移（karuṇa rasa）</text>
+  <path d="M80,220 C120,200 160,240 215,250 S310,210 325,190 S400,230 435,240 S510,170 545,160 S620,200 655,210 S720,170 740,180"
+        stroke="currentColor" stroke-opacity="0.4" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+  <!-- Labels on curve -->
+  <text x="105" y="215" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.4">苦悩</text>
+  <text x="215" y="265" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.4">郷愁</text>
+  <text x="325" y="185" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.4">悲嘆</text>
+  <text x="435" y="255" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.4">慙愧</text>
+  <text x="545" y="152" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.4">緊迫</text>
+  <text x="655" y="224" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.4">予感</text>
+  <text x="740" y="172" text-anchor="middle" font-size="8" fill="currentColor" opacity="0.4">歓喜</text>
+
+  <!-- Time markers -->
+  <text x="105" y="295" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.4">シーター追放</text>
+  <line x1="105" y1="270" x2="105" y2="282" stroke="currentColor" stroke-opacity="0.2"/>
+  <text x="300" y="295" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.4">— 12年後 —</text>
+  <line x1="215" y1="270" x2="215" y2="282" stroke="currentColor" stroke-opacity="0.2"/>
+  <text x="545" y="295" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.4">クシャ・ラヴァ登場</text>
+  <line x1="545" y1="270" x2="545" y2="282" stroke="currentColor" stroke-opacity="0.2"/>
+  <text x="735" y="295" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.4">大団円</text>
+  <line x1="735" y1="270" x2="735" y2="282" stroke="currentColor" stroke-opacity="0.2"/>
+</svg>
+</div>
+
+<h2><span class="emoji">👥</span>登場人物</h2>
+
+<div class="char-grid">
+  <div class="char-group">
+    <h4>ラーマの家族</h4>
+    <ul>
+      <li><strong>ラーマ</strong> <span class="skt">Rāma</span> — コーサラ国王、主人公</li>
+      <li><strong>シーター</strong> <span class="skt">Sītā</span> — ラーマの妃、大地の娘</li>
+      <li><strong>ラクシュマナ</strong> <span class="skt">Lakṣmaṇa</span> — ラーマの弟</li>
+      <li><strong>クシャ</strong> <span class="skt">Kuśa</span> — ラーマとシーターの長子</li>
+      <li><strong>ラヴァ</strong> <span class="skt">Lava</span> — ラーマとシーターの次子</li>
+      <li><strong>チャンドラケートゥ</strong> <span class="skt">Candraketu</span> — ラクシュマナの子</li>
+    </ul>
+  </div>
+  <div class="char-group">
+    <h4>聖仙・神格</h4>
+    <ul>
+      <li><strong>ヴァールミーキ</strong> <span class="skt">Vālmīki</span> — ラーマーヤナの作者</li>
+      <li><strong>ジャナカ</strong> <span class="skt">Janaka</span> — シーターの養父</li>
+      <li><strong>アルンダティー</strong> <span class="skt">Arundhatī</span> — ヴァシシュタの妻</li>
+      <li><strong>プリティヴィー</strong> <span class="skt">Pṛthivī</span> — 大地女神、シーターの母</li>
+      <li><strong>ガンガー</strong> <span class="skt">Gaṅgā</span> — 河の女神</li>
+      <li><strong>ヴァスンティー</strong> <span class="skt">Vasantī</span> — 森の精霊</li>
+    </ul>
+  </div>
+</div>
+
+<h2><span class="emoji">📖</span>各幕梗概</h2>
+
+<div class="synopsis">
+  <div class="act-head">
+    <span class="act-label">第一幕</span>
+    <span class="act-title">序幕 — 追放の決断</span>
+  </div>
+  <div class="act-sub">Prathamo 'ṅkaḥ — アヨーディヤー王宮</div>
+  <p>即位式後の祝典の中、ラーマは侍女からシーターの懐妊の報を聞き喜ぶ。しかし直後、シーターの貞節を疑う民衆の醜聞（apavāda）を知らされる。王としての義務（rājadharma）と夫としての愛情の間で引き裂かれたラーマは、断腸の思いで身重のシーターの追放を決断。ラクシュマナに密かにシーターを森へ連れて行くよう命じる。シーターは何も知らず、追放の真意を知ったラクシュマナは苦悩する。アトレーヤとヴァシシュタが第2幕以降の展開を予告。</p>
+  <div class="key-verses">
+    <strong>名偈 :</strong> I.39 advaitaṃ sukhaduḥkhayoḥ（苦楽一如——夫婦の絆）/ I.46 apūrvakarma-caṇḍāla（前代未聞の残酷な行い——ラーマの自己断罪）/ I.47 duḥkhasaṃvedanāyaiva（苦しみを感じるためだけに心は作られた）
+  </div>
+</div>
+
+<div class="synopsis">
+  <div class="act-head">
+    <span class="act-label">第二幕</span>
+    <span class="act-title">修行林逍遥 — Āśramapadavihāra</span>
+  </div>
+  <div class="act-sub">Dvitīyo 'ṅkaḥ — パンチャヴァティーの森（12年後）</div>
+  <p>12年後。馬祀祭（aśvamedha）の準備のためダンダカの森を訪れたラーマは、かつてシーターと過ごした場所を再び巡り、草木一本、河の流れ一つにも彼女の思い出を見出す。森の自然描写はサンスクリット文学随一の叙景詩として名高い。ガンガーが化身としてシーターの運命を暗示。ラーマはシーターの不在を嘆き、自然と記憶が織りなす深い郷愁に沈む。</p>
+  <div class="key-verses">
+    <strong>名偈 :</strong> II.2 priyaprāyā vṛttiḥ（愛に満ちた振る舞い——シーターの美徳）/ II.22 etat tad eva hi vanaṃ（これがまさにあの森——記憶と現実の重なり）/ II.29 kūjatkuñjakuṭīra（クージャット・クンジャ——森の壮大な叙景）
+  </div>
+</div>
+
+<div class="synopsis">
+  <div class="act-head">
+    <span class="act-label">第三幕</span>
+    <span class="act-title">影 — Chāyā</span>
+  </div>
+  <div class="act-sub">Tṛtīyo 'ṅkaḥ — ダンダカの森の奥深く</div>
+  <p>ラーマは森の精霊ヴァサンティーに導かれ、シーターの「影」（chāyā）と出会う。シーターの影は12年間の苦しみを語り、ラーマへの変わらぬ愛と、追放の苦痛を訴える。森の木々や蔓草までがシーターの嘆きに応え、自然全体が悲しみに包まれる。ラーマとシーターの影の対話は、離別の苦しみの極致を描く。最後に影は消え、ラーマはさらに深い悲嘆に沈む。本幕はバヴァブーティの karuṇa rasa の真骨頂。</p>
+  <div class="key-verses">
+    <strong>名偈 :</strong> III.1 anabhinnaḥ gabhīratvāt（深さゆえに途切れぬ——心の比喩）/ III.47 eko rasaḥ karuṇa eva（ラサはただ一つ、カルナのみ——バヴァブーティの詩学宣言）/ III.26 tvaṃ jīvitaṃ（お前は命そのもの——ラーマのシーターへの告白）
+  </div>
+</div>
+
+<div class="synopsis">
+  <div class="act-head">
+    <span class="act-label">第四幕</span>
+    <span class="act-title">認知 — Pratyabhijñāna</span>
+  </div>
+  <div class="act-sub">Caturtho 'ṅkaḥ — ジャナスターナ付近</div>
+  <p>ラーマの義父ジャナカ王が修行林に到着し、二人は再会する。ジャナカはラーマの追放の決断を理解しつつも、娘シーターへの深い愛情を隠せない。二人は dharma（法）と prīti（愛情）の相克について語り合う。カウサリヤー妃らの手紙が届き、シーターを懐かしむ宮廷の女性たちの嘆きが伝えられる。双子の少年（まだ正体不明のクシャとラヴァ）がヴァールミーキの弟子として登場し始め、ラーマは彼らに不思議な親しみを感じる。</p>
+  <div class="key-verses">
+    <strong>名偈 :</strong> IV.3 apatye yat tādṛd（子に対するあのような苦しみ——親の愛）/ IV.6 āsīd iyaṃ Daśarathasya（ダシャラタ王の……——王家の運命の連鎖）/ IV.18 āvirbhūtajyotiṣāṃ（輝ける光をもつバラモンの言葉——聖仙への信頼）
+  </div>
+</div>
+
+<div class="synopsis">
+  <div class="act-head">
+    <span class="act-label">第五幕</span>
+    <span class="act-title">王子の武勇 — Kumāravikrama</span>
+  </div>
+  <div class="act-sub">Pañcamo 'ṅkaḥ — 馬祀祭の祭馬をめぐる戦場</div>
+  <p>馬祀祭の祭馬が森に入り、ヴァールミーキの弟子ラヴァがそれを捕獲。護衛のチャンドラケートゥ（ラクシュマナの子）との間に壮絶な戦闘が始まる。ラヴァは生まれながらの神兵（divyāstra）を次々と発動し、チャンドラケートゥを圧倒。シャトルグナの軍も加わるが、少年の力は侮れない。ラーマ軍の諸将が驚愕する中、ラヴァの正体をめぐる疑念が深まる。ヴァールミーキが戦闘の仲裁に入る。</p>
+  <div class="key-verses">
+    <strong>名偈 :</strong> V.9 ayaṃ śailāghāta（岩を砕く——戦闘の激しさ）/ V.22 eṣa sāṃprātiko nyāyaḥ（これこそ道理というもの——クシャトリヤの法）/ V.28 devas tvāṃ Savitā（太陽神サヴィトリよ——祝福の偈）
+  </div>
+</div>
+
+<div class="synopsis">
+  <div class="act-head">
+    <span class="act-label">第六幕</span>
+    <span class="act-title">王子認知 — Kumārapratyabhijñāna</span>
+  </div>
+  <div class="act-sub">Ṣaṣṭho 'ṅkaḥ — 戦場からガンガー河畔へ</div>
+  <p>ヴィディヤーダラの夫婦が天空から戦況を語る幕開け（miśra-viṣkambhaka）。戦闘はさらに激化し、アーグネーヤ（火）・ヴァールナ（水）・ヴァーヤヴィヤ（風）の神兵が激突。ラーマ自ら戦場に赴き、ラヴァとクシャに出会う。二人の少年にシーターの面影を見出し、心を揺さぶられる。少年たちがラーマーヤナの一節を朗唱すると、ラーマは抑えきれない感情に襲われる。ジャナカ、ヴァシシュタ、母たちが到着し、第七幕の大団円への舞台が整う。</p>
+  <div class="key-verses">
+    <strong>名偈 :</strong> VI.14 na tejas tejasvī（輝ける者の光は——太陽の比喩）/ VI.31 prakṛtyaiva priyā Sītā（本来シーターは愛しき者——ラーマの本心）/ VI.38 ciraṃ dhyātvā dhyātvā（長く長く想い続けて——離別の苦しみの極み）
+  </div>
+</div>
+
+<div class="synopsis">
+  <div class="act-head">
+    <span class="act-label">第七幕</span>
+    <span class="act-title">邂逅 — Sammelana</span>
+  </div>
+  <div class="act-sub">Saptamo 'ṅkaḥ — ガンガー河畔の劇場</div>
+  <p>ヴァールミーキの劇を天女が演じるという劇中劇（antar-nāṭaka）形式で、シーター追放後の真実が明かされる。ラーマは観客として見るが、感情に圧倒され何度も失神する。劇中では、ガンガーとプリティヴィー（大地女神）がシーターを救い、水中で双子クシャ・ラヴァを出産させたことが描かれる。プリティヴィーはラーマを非難し、ガンガーがラーマの dharmasaṅkaṭa（義務の板挟み）を弁護する。シーターは大地に消えようとするが、ガンガーの水から再び浮かび上がり、アルンダティーが民衆の前でシーターの潔白を公に宣言。ラーマとシーターは再会し、ヴァールミーキがクシャ・ラヴァの父子関係を明かす。家族全員が再び結ばれ、バラタヴァーキャ（結語）でラーマーヤナの物語が讃えられ、劇は幕を閉じる。</p>
+  <div class="key-verses">
+    <strong>名偈 :</strong> VII.6 ghoraṃ loke vitatam ayaśaḥ（世に広がる醜聞——ラーマの板挟み）/ VII.12 kṣubhitāḥ kām api daśām（揺り動かされた感情——ラーマの内面）/ VII.20 pāpmabhyaś ca punāti（罪から清め——バラタヴァーキャ）
+  </div>
+</div>
+
+<h2><span class="emoji">🎭</span>ラサ（情趣）の分布</h2>
+
+<table class="rasa-table">
+  <thead>
+    <tr><th>幕</th><th>主要ラサ</th><th>分布</th><th>備考</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>I</td>
+      <td>Karuṇa（悲愍）</td>
+      <td><span class="rasa-bar" style="width:85%;background:currentColor;opacity:0.5"></span></td>
+      <td>追放の決断に伴う苦悩が支配的</td>
+    </tr>
+    <tr>
+      <td>II</td>
+      <td>Śṛṅgāra-vipralambha（離別の恋情）</td>
+      <td><span class="rasa-bar" style="width:70%;background:currentColor;opacity:0.4"></span></td>
+      <td>自然描写と郷愁が混ざり合う</td>
+    </tr>
+    <tr>
+      <td>III</td>
+      <td>Karuṇa（悲愍）最高潮</td>
+      <td><span class="rasa-bar" style="width:95%;background:currentColor;opacity:0.6"></span></td>
+      <td>「ラサは唯一つ、カルナのみ」宣言</td>
+    </tr>
+    <tr>
+      <td>IV</td>
+      <td>Karuṇa + Vātsalya（慈愛）</td>
+      <td><span class="rasa-bar" style="width:65%;background:currentColor;opacity:0.4"></span></td>
+      <td>親子の情愛と義務の相克</td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td>Vīra（勇壮）+ Raudra（忿怒）</td>
+      <td><span class="rasa-bar" style="width:75%;background:currentColor;opacity:0.45"></span></td>
+      <td>戦闘場面が中心、劇的転調</td>
+    </tr>
+    <tr>
+      <td>VI</td>
+      <td>Adbhuta（驚異）+ Karuṇa</td>
+      <td><span class="rasa-bar" style="width:70%;background:currentColor;opacity:0.4"></span></td>
+      <td>認知の予感と感動が交錯</td>
+    </tr>
+    <tr>
+      <td>VII</td>
+      <td>Karuṇa → Adbhuta → Śānta（寂静）</td>
+      <td><span class="rasa-bar" style="width:90%;background:currentColor;opacity:0.55"></span></td>
+      <td>悲愍から驚異を経て平安へ至る</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2><span class="emoji">✨</span>劇の特色</h2>
+
+<div class="char-grid">
+  <div class="char-group">
+    <h4>詩学上の特徴</h4>
+    <ul>
+      <li>主情（aṅgī-rasa）は <strong>karuṇa</strong>（悲愍）——III.47の有名な宣言</li>
+      <li>ラーマーヤナの「後日譚」を独自に再構成</li>
+      <li>シーターの大地への吸収→再出現という独創的結末</li>
+      <li>劇中劇（antar-nāṭaka）の手法</li>
+      <li>自然描写の卓越——森の叙景詩は文学史上の金字塔</li>
+    </ul>
+  </div>
+  <div class="char-group">
+    <h4>テーマ</h4>
+    <ul>
+      <li><strong>dharma の相克</strong> — 王の義務 vs. 夫の愛情</li>
+      <li><strong>親子の愛</strong> — apatyasneha の力の普遍性</li>
+      <li><strong>女性の名誉</strong> — シーターの潔白の公的回復</li>
+      <li><strong>記憶と自然</strong> — 風景が感情を喚起する力</li>
+      <li><strong>言葉の力</strong> — śabdabrahman としての詩</li>
+    </ul>
+  </div>
+</div>
+
+<div style="text-align:center; margin:2.5rem 0 1rem; padding-top:1.5rem; border-top:2px solid var(--gold); color:var(--text-light); font-size:0.85rem;">
+  <p style="margin:0.2rem 0;">इति महाकविश्रीभवभूतिविरचितम् उत्तररामचरितं नाम नाटकम्</p>
+  <p style="margin:0.2rem 0;">Uttararāmacaritaṃ nāma nāṭakam — M.R. Kale 校訂版対訳全七幕</p>
+</div>
