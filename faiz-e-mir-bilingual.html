@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fayż-i Mīr 対訳 — ファイズ・ミール LC式ローマナイズ・和訳</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #efece5;
+    --bg-header: #e4e0d7;
+    --text-primary: #1e2118;
+    --text-roman: #2e3d50;
+    --text-jp: #1e2118;
+    --text-secondary: #6b665e;
+    --accent: #7a6234;
+    --accent-light: #b8a274;
+    --rule: #c5bfb2;
+    --rule-vert: #d0c9ba;
+    --verse-bg: #e7e3da;
+    --verse-border: #b8a274;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #171a13;
+      --bg-header: #1e211a;
+      --text-primary: #d4cfc4;
+      --text-roman: #a8bdd4;
+      --text-jp: #d4cfc4;
+      --text-secondary: #8a8578;
+      --accent: #c4a660;
+      --accent-light: #7a6a40;
+      --rule: #3a3830;
+      --rule-vert: #33312a;
+      --verse-bg: #1f221a;
+      --verse-border: #7a6a40;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #171a13;
+    --bg-header: #1e211a;
+    --text-primary: #d4cfc4;
+    --text-roman: #a8bdd4;
+    --text-jp: #d4cfc4;
+    --text-secondary: #8a8578;
+    --accent: #c4a660;
+    --accent-light: #7a6a40;
+    --rule: #3a3830;
+    --rule-vert: #33312a;
+    --verse-bg: #1f221a;
+    --verse-border: #7a6a40;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+    line-height: 1.85;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  header {
+    text-align: center;
+    padding: 2.5rem 1rem 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2rem;
+  }
+  header h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    margin: 0 0 0.3rem;
+  }
+  header .subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0 0 0.5rem;
+  }
+  header .meta {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+
+  nav.toc {
+    margin: 1.5rem 0 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--rule);
+    background: var(--bg-header);
+  }
+  nav.toc h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding: 0 0 0 1.2rem;
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+  nav.toc a {
+    color: var(--text-roman);
+    text-decoration: none;
+    font-family: 'EB Garamond', serif;
+  }
+  nav.toc a:hover { text-decoration: underline; }
+  nav.toc .jp-label {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+  }
+
+  .section-label {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .pair {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 0;
+    margin-bottom: 1.2rem;
+    align-items: start;
+  }
+  .pair .col-left { padding-right: 1.4rem; }
+  .pair .col-right { padding-left: 1.4rem; }
+  .pair .divider {
+    background: var(--rule-vert);
+    width: 1px;
+    min-height: 100%;
+  }
+
+  .roman {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--text-roman);
+  }
+  .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    line-height: 2;
+    color: var(--text-jp);
+  }
+
+  .verse {
+    margin: 0.6rem 0;
+    padding: 0.5rem 1rem;
+    background: var(--verse-bg);
+    border-left: 2px solid var(--verse-border);
+  }
+  .verse .roman { font-style: italic; font-size: 0.98rem; }
+  .verse .jp { font-style: normal; font-size: 0.86rem; }
+
+  .bismillah { text-align: center; margin: 1.5rem 0; }
+  .bismillah .roman { font-size: 1.12rem; font-weight: 500; letter-spacing: 0.04em; }
+
+  .ornament {
+    text-align: center;
+    color: var(--accent-light);
+    font-size: 1rem;
+    letter-spacing: 0.5em;
+    margin: 1.8rem 0 1rem;
+  }
+
+  .note {
+    font-size: 0.76rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 0.2rem;
+    line-height: 1.4;
+  }
+
+  footer.colophon {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+  footer.colophon h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+  }
+  footer.colophon ul { margin: 0; padding: 0 0 0 1.2rem; }
+  footer.colophon li { margin-bottom: 0.3rem; }
+
+  @media (max-width: 700px) {
+    body { padding: 1rem; }
+    .pair { grid-template-columns: 1fr; }
+    .pair .divider { display: none; }
+    .pair .col-left {
+      padding-right: 0;
+      margin-bottom: 0.4rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px dashed var(--rule);
+    }
+    .pair .col-right { padding-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fayż-i Mīr</h1>
+  <p class="subtitle">『ファイズ・ミール』対訳 ── ミール・ムハンマド・タキー・ミール</p>
+  <p class="meta">Mīr Muḥammad Taqī Mīr (1722–1810) · LC Romanization &amp; Japanese Translation</p>
+</header>
+
+<nav class="toc">
+  <h2>目次 — Contents</h2>
+  <ol>
+    <li><a href="#muqaddimah">Muqaddimah</a> <span class="jp-label">序文</span></li>
+    <li><a href="#hikayat1">Ḥikāyat-i Avval</a> <span class="jp-label">第一話 ── シールアーフーハーネの托鉢僧</span></li>
+    <li><a href="#hikayat2">Ḥikāyat-i Duvvum</a> <span class="jp-label">第二話 ── ムムターズ・ガンジの狂者とアフサヌッラー・ラーム</span></li>
+    <li><a href="#hikayat3">Ḥikāyat-i Sivvum</a> <span class="jp-label">第三話 ── シャー・ブルハーンとシャー・マダン</span></li>
+    <li><a href="#hikayat4">Ḥikāyat-i Chahārum</a> <span class="jp-label">第四話 ── 廃墟の狂者アサド</span></li>
+    <li><a href="#hikayat5">Ḥikāyat-i Panjum</a> <span class="jp-label">第五話 ── ミヤーン・サイード・ハーン</span></li>
+  </ol>
+</nav>
+
+<!-- ═══════════════════ BISMILLAH ═══════════════════ -->
+
+<div class="pair bismillah">
+  <div class="col-left"><div class="roman">Bismi Allāh al-Raḥmān al-Raḥīm</div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">慈悲あまねく慈悲深きアッラーの御名において</div></div>
+</div>
+
+<div class="ornament">· · ·</div>
+
+<!-- ═══════════════════ MUQADDIMAH ═══════════════════ -->
+
+<div class="section-label" id="muqaddimah">Muqaddimah — 序文</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Baʻd-i ḥamd va s̱anā-yi Qādir-i Subḥānī kih bih yak ḥarf jarīdah-ʼi ʻālam rā az qalamraw-i ʻadam bih ṣafḥah-ʼi hastī jilvah dād. Va taḥīyāt-i zākīyāt-i ān kasī kih āshnā bih ḥarf-i mufaṣṣal nabūd va avval Bismi Allāh sar bih jahān-i maʻnī nihād.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    全能にして超越なる御方への讃美と称賛の後に——一つの文字をもって世界という紙面を、無の領域から存在の頁へと顕現させ給うた御方。そして、個々の文字には通じておらず、「ビスミッラー」の一語をもって初めて意味の世界に足を踏み入れた御方に、清浄なる祈りを捧げて。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Mīgūyad faqīr-i ḥaqīr Mīr Muḥammad Taqī mutakhalliṣ bih Mīr kih darīn ayyām Fayż-i ʻAlī pisar-i man ẕawq-i khvāndan-i tarassul paydā kardah būd, liẕā ḥikāyāt-i khamsah mutażammin-i favāʼid-i bisyār rā bih andak furṣat nigāshtam. Va murāʻāt-i ism-i ū namūdah nām-i nuskhah "Fayż-i Mīr" guẕāshtam. Har kih īn ḥikāyāt-i khamsah rā bih dil bikhvānad, ghālib kih dar ranj va sakhtī namānad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    卑しき貧者ミール・ムハンマド・タキー、号をミールと申す者が語る。このたび、わが息子ファイズ・アリーが書簡文を読むことに興味を抱いたので、多くの教訓を含む五つの物語を短い時間のうちに書き記した。そして彼の名に因んで、この写本を「ファイズ・ミール」と名づけた。この五つの物語を心をこめて読む者は、おそらく苦難と困難の中にとどまることはあるまい。
+  </div></div>
+</div>
+
+<!-- ═══════════════════ HIKAYAT 1 ═══════════════════ -->
+
+<div class="section-label" id="hikayat1">Ḥikāyat-i Avval — 第一話</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Rūzī bā darvīshī Shāh Sāhānām mustaghraqi shawq-i ṣubḥ va shām, ḥālātash bar alsinah maẕkūr, bih Shīrāhūkhānah-ʼi mashhūr barkhūrdam. Iltifāt-i bisyārī kard va guft kih ay javān dar chih khayālī kih īn hamah parīshān-ḥālī.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある日、シャー・サーハーナームという名の托鉢僧に出会った。朝に夕に恍惚の境にあり、その様は人々の口の端にのぼっていた——名高きシールアーフーハーネにて、私は彼に出くわした。彼は大いに親しく接し、こう言った——「おお若者よ、何を考えているのか、かくも取り乱しているとは。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Agar bih ān sarāpā-nāz sarī dārī, bāyad kih bikhud naẓarī dāshtah bāshī. Bā īn hamah nāz va niyāz, ʻalāqah-ʼī dārad kih ū rā az tū farq tvān kard? Īn nīst kih paydā nīst. Yā īnjā hast va ānjā nīst.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「あの気高き美に心を寄せるならば、まず自らに目を向けるべきであろう。これほどの媚態と懇請をもってしても、彼の者を汝から分かつ絆があろうか。見えぬのではない——ここにはあり、彼処にはないというのでもない。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Harchand az kamāl-i ẓuhūr-i ḥusn chūn āftāb-i niṣf al-nahār dar ḥijāb ast, ammā kudām ẕarrah az ẕarrāt-i ʻālam dīdah-ʼī kih bī-partaw-i ān āftāb ast. Zamān zamān bīndīsh va bikhud furū raw; maqṣūd tūyī bih kām-i jān vāṣil shaw:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「美の完全なる顕現は、真昼の太陽のように明白でありながら覆い隠されている。しかし、この世の塵のうち、あの太陽の光を帯びぬものを見たことがあるか。折にふれ思索し、自らの内に沈潜せよ。求めるものは汝自身なのだ——魂の望みに到達せよ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Judā az khud chih mījūyī tuvahum kardah mahjūrat<br>
+    Agar maʻnī hamīn maʻnī digar ṣūrat hamīn ṣūrat
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    己を離れて何を求めるのか　汝は妄想にて遠ざけられたり<br>
+    もし意味がこの意味ならば　姿もまたこの姿なり
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Shāmgāh mashkīzah-ʼī bar dūsh giriftah bih bāzār mīāmad va āvāz mīdād kih ay jashk-dahānān, sāḥil-i daryā-yi kam-āb-i hastī! Agar az shumā kasī lab tar kardanī manẓūr dārad, khush bāshad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    夕暮れどき、彼は革水袋を肩にかけて市場にやって来ては、こう叫んだ——「おお小さき口の者たちよ、存在という浅き海の岸辺よ！　おまえたちのうち、唇を潤したいと望む者があれば、よきことだ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Hargāh mardumān bar ū gird mīāmadand, kasī rā sharbat-i shakar-i khām va kasī rā pur az shīr jām mīdād. Riyākārī nabūd. Āb dar shīr nimīkard. Qadam pīsh mīnihād.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    人々が彼のまわりに集まると、ある者には粗糖の冷飲を、またある者には乳を満たした杯を与えた。偽善ではなかった。乳に水をまぜることもなかった。一歩また一歩と前に進んでいった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Yakī pāsī az shab guẕashtah rūy-i sukhan bih sūy-i man kard kih ay ʻazīz! Agar nān-i javīn dast dihad īn pīr-i żaʻīf sīr khurd. Chūn barkhāstam guft: Kujā? Guftam: Muvāfiq-i ishārah kārband mīshavam. Guftā: Biraw ammā gumān nakhvāhī burd kih nān mīgūyam va jān mīdiham.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    夜更け、彼は私に向かって言った——「おお友よ！　大麦のパンが手に入れば、この弱き老人は腹を満たそう。」私が立ち上がると彼は言った——「どこへ？」私は答えた——「仰せのとおりに致します。」彼は言った——「行け、だがパンと言って命をくれてやるのだとは思うなよ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Man shīram. Shikam rā nān-i simāṭ mīkunam. Nān gurbah rā bih tīr nimīzanam. Guftam: Istaghfiru Allāh! Īn chih maʻnī dārad. Āb bar dast-i chūn tū darvīshī rīkhtan nān pukhtan ast. Va nān rā tar kardan nān bih rawghan uftādan.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「わしは獅子だ。腹には食卓布のパンを敷く。猫のパンを矢では射ぬ。」私は言った——「アスタグフィルッラー！　それは何の意味でしょう。あなたのような托鉢僧の手に水を注ぐことは、パンを焼くことであり、パンを潤すことは油に浸ることでございます。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Damī kih bih khānah āmadam, dīdam kih mardumān hamah dar khvāband. Magar kuhnah-dāʼī kih ʻalaṭ va āghalaṭ mīkard. Iltijā bih ū burdam. Ān murdah-shūy-burdah baʻd-i rukūdat bisyār nān rā pukhta bih dast-i man dād. Chūn pīsh-i faqīr burdam guft kih īn nān qābil-i khurd-i ādamī nīst. Bar īn māddah sagī ʻafafī kardah ast. Zūd azīnjā bardār va pīsh-i sagān bīndāz. Gharaż kih ū hargiz nakhurd va marā īn maʻnī az hūsh burd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    家に戻ると、人々はみな眠っていた。ただ古着売りの老婆だけが寝返りを打っていた。彼女に頼み込んだ。その死体洗いの老婆は、しばらくして焼いたパンを私の手に渡した。しかし、托鉢僧の前に持って行くと彼は言った——「このパンは人が食うに値しない。この生地に犬が汚したのだ。すぐここから持ち去り、犬どもの前に投げよ。」要するに、彼は決して食べず、その意味に私は気を失った。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    ʻAjūz-i rawghan-furūshī muʻtaqid dāsht. Aks̱ar churb-zabānī bih kār mīburd. Pārah-ʼi nānī va dam-i ābī az khānah-ash mīkhūrd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    油売りの老婆が彼を信奉していた。しばしばお世辞を使っていた。彼女の家からパン切れと水を得ていた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Yakī bar faqīr ḥālatī būd band az band judā, sar muʻallaq dar havā. Ān sālkhūrdah bih sar-i vaqt-i ū uftād. Va az mushāhadah-ʼi īn ḥālat faryād barāvard. Az shūr va ghawghā-yi mardum azān ḥālat bih ḥāl-i aṣlī-yi khud āmadah har dū dast bar zamīn zadan va nafrīn kardan āghāz nihād:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある時、托鉢僧は恍惚状態にあった——節々がばらばらになり、頭は宙に浮いていた。あの老婆がその場に居合わせ、この様を見て叫び声をあげた。人々の騒ぎで彼はもとの状態に戻り、両手を地に打ちつけ、呪いの言葉を唱え始めた——
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Az har kih īn rāz bar rūy-i rūz uftādah va man-i mahjūr rā bikhiyah bar chihrah raft. Imshab pisar-i ū rā khūn bigīrad. Va khudash bih khvārī bimīrad. Nāgahān ātash dar uftad. Mār bih ʻaṣā rāh ravad va mardumān tabāh va khānah-hā siyāh. Va tā bih ān sar-i vīrānah. Īn bāham nishastanhā afsānah. Maḥallah rā āb burad. Īnjā qū napurad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「この秘密を白日のもとに曝した者が誰であれ、この見捨てられた者の顔に縫い目が走った。今宵、その女の息子に瀉血あれ。そして彼女自身、屈辱のうちに死すべし。突然の火が降り注ぐであろう。蛇が杖を伝って道を行き、人々は滅び、家々は闇に沈む。あの廃墟の果てまで——この集いは物語となるだろう。町を水が流し去り、ここには白鳥も舞い降りぬ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Dar īn miyān rūz bih ākhir rasīd. Dast va dahan bih āb kashīd. Qaṣd-i namāz-i dīgar kard va luṭf bā man sar kard kih ay ʻazīz! Bāz imrūz pīsh az shām biraw. Mūjib-i tashvīsh-i faqīr mashaw. Maḥallah maḥall-i nuzūl-i ḥādis̱āt bih naẓar mīāyad. Qarīb ast kih ʻāfiyat bār banbadad va balā rū numāyad. Ḥāṣil kih marā dil dād va dar fikr-i namāz uftād.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    そうしているうちに日が暮れた。手と口を水で清め、午後の礼拝の支度をし、優しく私に言った——「友よ、今日も日没前に去るがよい。托鉢僧を煩わせてくれるな。この町は災厄の降る場所に見える。安寧が荷をまとめ、災いが顔を出す日も近い。」かくして私を安心させ、礼拝に向かった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Chūn shab pardah-ʼi ẓalām furūhisht, qarīb-i duvīst duzd bih sarhanagī-yi tamām shamshīrhā kashīdah darāmadand. Va dū sih kas kamand-hā andākhtah bālā-yi bām-i ʻajūz barāmadand. Pisar-i khūn-giriftah-ʼi ū khud rā bar rūy-i ānhā kashīd va bih yak żarbat-i tīgh-i ābgīrī kardah bih khāk va khūn ghalṭīd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    夜が闇の帳を降ろすと、およそ二百人の盗賊が完全武装で抜刀して押し寄せた。二、三人が投げ縄を投げて老婆の家の屋根に上った。瀉血をされた彼女の息子が盗賊たちの上に身を投げたが、鋭い一太刀を浴びて土と血にまみれた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Mashʻal afrūkhtah khānah-hā rā ātash dādand. Va bih khāṭir-i jamʻ dast-i ghārat kushādand. Kasī rūy-i ghurabā nadīd. Kār bih tamāmī kashīd. Tā dil-i shab kull-i mukull būd. Shabgard rū siyah rū nanumūd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    松明に火をつけ家々を焼き払い、悠然と略奪の手を広げた。誰も異邦人の顔を見なかった。事態は極まった。夜半まですべてが混乱のうちにあり、夜回りも恥ずかしげに姿を見せなかった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Vaqtī kih hangāmah furū shud, yaʻnī duzdān khānah-hā rā bār kardah burdand. Kasān az farṭ-i harās maḥallah rā khālī guẕāshtah bih dar zadand. Hanūz jā-yi bāsh muqarrar nashadah būd kih abr-i siyāhī safīd shudah pahn gasht. Va daryā daryā bārīdan girift. Bināʼī namānd kih bih āb narasīd. Matāʻī nayāftand kih āb nadīd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    騒動がおさまった頃——つまり盗賊たちが家々を荷にして運び去った後——人々は恐怖のあまり町を空にして逃げ出した。まだ避難先も定まらぬうちに、黒い雲が白く広がり、海のように雨が降り始めた。水に届かぬ建物はなく、水を見ぬ品物もなかった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Mardumān mānand-i ābbāzān barāy-i najāt dast va pā mīzadand. Ammā az shiddat-i bārish har laḥẓah naumīdtar mīshadand:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    人々は水泳者のように救いを求めて手足をばたつかせたが、激しい雨のため刻々と絶望が深まった——
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Pāsī bar īn naraftah bāshad kih ṣaḥrā ṣaḥrā āb az dasht rū bih shahr āvardah aks̱ar-i ābādī rā burd. Va bih yak muzhgān baham zadan ʻimārāt-i ān maḥallah barham khurd. Khānah-hā nishishtand. Dīvārhā shikastend. Chūn āb rā zamīn furū burd, az dar va bām nishānī nayāftam. Az bināhā ās̱ārī nadīdam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    さほど時も経たぬうちに、野から野へと水が平原から街に押し寄せ、大方の居住地を押し流した。まばたきする間にその地区の建物は崩壊し、家々は沈み、壁は砕けた。水が地に吸い込まれた後には、門も屋根も痕跡を見出せなかった。建物の跡形もなかった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Ḥayrān-i kār rāh-i takiyah-ʼi faqīr pīsh giriftam. Dar as̱nā-yi rāh nigāham bar ān zan-i rawghan-furūsh uftād kih bar khāk uftādah pīsh-i kas va nākasash rū mīandākht. Guftam: Ḥarf-i dīrūzah ast kih dast dar rawghan dāshtī. Pisarat javān-i khūbī būd. Chih vāqiʻ shud kih dafʻatan bih chunīn balā mubtilā shudī?
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    呆然として、私は托鉢僧の庵への道をたどった。途中、あの油売りの老婆に目が止まった。地に伏し、知る人にも知らぬ人にも顔を向けていた。私は言った——「昨日の話だが、あなたは油に手を入れていた。息子はよい若者だった。何が起こって突然かくも災難に見舞われたのか。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Tū khud sardastī bih har kas mīgiriftī. Chih kardī kih bih jazā-yi ān angushtar-i pā shudī? Dam-i sard barāvard va guft kih ay ʻazīz! Chigūyam; tafṣīl luṭf nadārad. Nafrīn-i faqīr-i Khudā garm sākht. Āsmān rūy-i marā bar khāk andākht.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「あなた自身、誰にでも手を差し伸べていたではないか。何をしたら、その報いとして足の指輪になったのか。」彼女は冷たいため息をつき、言った——「ああ友よ、何と申しましょう。詳しくは語るに忍びません。神の托鉢僧の呪いが炎と燃えました。天が私の顔を地に叩きつけたのです。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Agar bā ū barkhūrī, az man-i khāk-uftādah bigū kih nākashīdanīhā kashīdam. Bih sazā-yi kardah rasīdam. Aknūn ʻuẕr-i marā bipẕīr. Az khāk-i maẕallat bargīr. Duʻā kun kih jahān-i āb va gil rā duʻā bigūyam. Raḥm ār kih chārah-ʼi kār az marg bijūyam. Zindagānī marg ast va murdan zīst. Yaʻnī ṭāqat-i sitam kashīdan nīst.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「もし彼に会うなら、この地に伏した者から伝えてくれ——耐えがたきことを耐えた、報いを受けた、今は許しを乞う、屈辱の土から引き上げてくれと。祈ってくれ、この水と土の世界に祈りの言葉を捧げよう。憐れんでくれ、死にしか解決を見出せぬのだから。生きることが死であり、死ぬことが生なのだ——つまり、苦しみに耐える力はもうない。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guftam: Dil jamʻ kun. Agar vaqt musāʻadat mīkunad, bih ū mīrasānam. Yak tīr-partāb raftah bāsham kih tīr-i mārī kafchah pahn kardah chūn tand-bād rasīd, az shāhrāh kinārah kardam va bālā bālā bih takiyah āmadam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    私は言った——「心を落ち着けなさい。時が許すなら、彼に伝えよう。」矢の一飛びほど歩いたところで、コブラが鎌首をもたげた蛇のように突風が吹き、私は大道を外れて高みを伝い庵に着いた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Dīdam kih faqīr jāmah-ʼi palīdī bih bar dārad, rū bar pūst-i shīr nishistah ast. Haybat-i haybat-nākash chunān dar man as̱ar kard kih pāyam az pīsh bih dar raft. Har ṭaraf az chashm-i ātash-fishān bih vażʻī mīdīd kih bīnandah rā zahrah āb mīgardīd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    見ると、托鉢僧は汚れた衣をまとい、獅子の皮の上に座っていた。その恐ろしき威厳は私に深く作用し、足がすくんだ。火を噴く目であらゆる方角を見つめるその様に、見る者の胆は水と化した。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guftam kih bih havā-yi sūdā khirābah-ʼi tāzah raftah būdam va bih ān zāl-i żaʻīfah nīz mulāqāt namūdam. Rūy darham kashīd va guft: Gap dīgar bizan. Mārī raftah ast kār-i ū khvāhad sākht.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    私は告げた——狂おしい思いに駆られて新たな廃墟に行き、あの弱き老婆にも会ったと。彼は眉をひそめて言った——「ほかの話をせよ。蛇が行った——あの女の仕事は片がつくであろう。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Pas az sāʻatī khabar rasīd kih ʻajūz-i rawghan-furūsh rā mārguzīd. Chūn man ḥayrān-i īn vāqiʻah māndam, guft: ʻAynī āfatī niqāhāyī? Mār digar kasān rā nīz khvāhad guzīd. Ḥayrāntar shudam va guftam: Īn chih ḥālat ast. Guftā: Magar nashnīdah-ʼī! Damī kih ghażab-i faqīrān ātash mīafrūzad, khushk va tar harchih darū mīuftad mīsūzad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    しばらくして、油売りの老婆が蛇に噛まれたとの知らせが届いた。私がこの出来事に茫然としていると、彼は言った——「まだ不思議がっているのか？　蛇は他の者たちも噛むであろう。」ますます驚いて言った——「これは一体何事なのですか。」彼は言った——「聞いたことがないのか！　托鉢僧の怒りが火を灯すとき、乾いたものも濡れたものも、すべて燃え尽きるのだ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Furṣat-i ʻumr-i man kam va ḥāl bisyār darham. Dū sih ḥarf bishnaw va yād gīr va biraw. Guft kih ay ʻazīz! Dunyā kārvāngāh-i dilkashīst. Azīnjā bih juz ḥasrat hamrāh nimīravad. Ḥayf-i awqāt-i ān ʻazīz kih zūd āgāh nimīshavad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「わしの命の余白は短く、ありさまは甚だ乱れている。二、三の言葉を聞き、覚えて、去れ。」彼は言った——「おお友よ！　この世は心ひかれる隊商宿にすぎぬ。ここからは悔恨しか道連れにならぬ。早く悟らぬ者の時が惜しい。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Shīrānah bizī va bih kār-i gūr bipardāz. Vaqtī kih chūn āhū garm-i ram ast żāyiʻ masāz. Aflāṭūn bā ān kamāl gharībānah zīstī. Va zamān zamān zār giristī. Shāgirdī pursīd kih sabab-i giryah ẓāhir nimīshavad. Guftā: Ay nā-fahm! Kasī kih chūn marg istiḥālah-ʼī dar pīsh dāshtah bāshad, chirā nagiryad:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「獅子のように生き、墓場の備えに取りかかれ。鹿のように走ることに夢中なうちに無駄にするな。プラトンほどの知者でさえ、異国の旅人のように暮らし、折々に激しく泣いた。弟子が『泣く理由が見えません』と尋ねると、彼は言った——『愚か者め！　死という変容を控えた者が、どうして泣かずにおれようか。』」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Khandah mīāyadam chih mīpursī sabab-i giryah-hā-yi zār-i marā
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    笑いが込み上げる　なぜ問うのか　わが激しき慟哭の理由を
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Bidānkih ān sarmāyah-ʼi jān āyīnah dar pīsh dārad va sarī bā khvīsh. Garm-i tamāshā-yi khud ast va maḥv-i sarāpā-yi khud. Agar bar āsmān-i haftum ravī, bīparvāst. Dar khāk shavī, hamān garm-i istighnā. Nayranghā dārad va sāz va āhanghā.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「知れ、あの魂の資本は鏡を前にし、自らと語らう。己の観照に心を奪われ、己の全身に陶酔する。七天に昇ろうとも、無関心。土に帰しても、なお自足の熱を帯びる。幻術を持ち、楽器と旋律を奏でる。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Shafaq yād mīdihad az rang-i ālash. Gul mīgūyad kih gul bih jamālash. Dar pardah-ʼi kas̱rat navāsāzī mīnumāyad. Az shish jihat āvāz-i ū mīāyad. Ḥarf-i marg mīguftah bāsh. Bih gūristān mīraftah bāsh. Tā az raftan-i khud ghāfil nashavī va bih laʻb-i ṭiflānah māʼil nashavī.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「夕焼けがその色を思い出させ、花がその美を讃える。多様性の帳の中で楽を奏で、六方からその声が聞こえる。死を語り続けよ。墓地に通い続けよ。自らの旅立ちを忘れぬように、子供じみた遊びに心を傾けぬように。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Biraw shām ast va rāh pur-i gul. Marā tashvīsh-i raftanī dar dil. Umīd kih ṣubḥ bar janāzah-ʼi man bīāyī. Ḥaqq-i ṣuḥbat-i dīrīn farāmūsh nanumāyī. Majāl-i tikrār nayāftam. Naumīd barkhāstah āmadam. Az farṭ-i gham hīch nakhurdam. Shab dar talvāsah bih sar burdam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「行け、夕暮れだ、道は花に満ちている。私には旅立ちの心配が胸にある。願わくば明朝、わが葬儀に来てくれ。久しき交わりの恩義を忘れるな。」反論の余地はなかった。絶望して立ち去った。悲しみのあまり何も食べず、夜は苦悶のうちに過ごした。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Hanūz khayṭ al-aswad az kinārah-ʼi dārbast-i sabz-i falak furūnihishtah būd, shūrī barkhāst kih Shīrāhūkhānah rā mār guzīd va halāk gardīd. Dil az jā raft. Ṭāqat az pā raft. Gham-i jānguzā būd. Gudāz gashtam. Ashkrīzān sharīk-i namāz gashtam. Janāzahkashān kadkhudāyān shudand. Dū khvānandah numāyān shudand. Īn bayt rā surūdand:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    夜明けの黒い糸がまだ蒼穹の緑の天幕の端から降り切らぬうちに、騒ぎが起こった——シールアーフーハーネの主が蛇に噛まれて死んだと。心は動転し、気力は尽きた。胸を刺す悲しみであった。私は溶けてしまった。涙を流しながら葬儀の礼拝に加わった。町の長老たちが棺を担ぎ、二人の唱誦者が現れ、この詩句を詠じた——
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Hamrah-i tāʻush biyā tā bih sar-i turbatam
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    棺とともに来たれ　わが墓のもとまで
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Giryān giryān murdah-ʼi ū rā burdand va bih khirābah-ʼi tāzah bih khāk sipurdand. Nanivīsam kih az marg-i faqīr chih qadr malālat kashīdam. Va az mārgīrī-yi arqam-i rūzgār chih ḥālat! Māh-hā sīnah-ʼi man tuft. Sāl-hā az khāṭir naraft.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    泣きながら彼の遺体を運び、新たな廃墟に埋葬した。托鉢僧の死からどれほどの悲嘆を味わったか、筆に尽くせない。時代の大蛇の毒牙からいかなる苦しみを受けたことか！　幾月もの間、胸は焼け、幾年もの間、心から消えなかった。
+  </div></div>
+</div>
+
+<!-- ═══════════════════ HIKAYAT 2 ═══════════════════ -->
+
+<div class="section-label" id="hikayat2">Ḥikāyat-i Duvvum — 第二話</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Shanīdam kih dar khirābah-ʼi Mumtāz Ganj kih maḥallah-ʼīst az Akbarābād, darvīshī dāgh-i sawdā bar sar, mūy-i zhūlīdah tā kamar, az dūr chūn tīr-i khākī gard mīkunad va az bas vaḥshat chūn shikār dūr-i gard. Gāh bih chashm mīāyad va gāh pinhān mīgardad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    聞くところでは、アクバラーバードの一地区ムムターズ・ガンジの廃墟に、狂気の烙印を額に帯びた托鉢僧がいた。もつれた髪は腰まで垂れ、遠くから見ると土煙の矢のように舞い回り、あまりの野性ゆえに獲物のように姿を現しては消えた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Mushtāq shudah andāz-i dīdanash kardam. Ittifāqan hamān rūz rāh-i ū az vīrānah bih bāzār-i maḥallah-ʼi maẕkūr uftādah būd. Dīdam kih chūn girdbād vilāyat andar sar va ʻibārāt-i dīgar bīqarār. Sangbārān-i mardum bar ū. Guftand kih mabādā āsībī bih mā rasad va īn maḥallah pāk bisūzad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    私は彼に会いたくなり、そのつもりでいた。たまたまその日、彼の道が廃墟から件の地区の市場に通じていた。見ると、旋風のように頭の中に聖なる力を宿し、落ち着きがなかった。人々が石を投げつけ、こう言った——「どうか災いがわれわれに及ばぬように、この町が焼き払われませんように。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Chūn baḥs̱ bih ṭūl kashīd, sangī bih dūshash rasīd. Parkālah-ʼi ātashī az havā dar anbāz bā uftād, shuʻlah-ʼī barkhāstah pahn shud. Sar bih bāzār nihād. Bih yakdam hangāmah-ʼi ātash chunān garmī paẕīraft kih dast va dil-i bāzāriyān sard shud. Yaʻnī ān qadr āb kih īn ātash-i tīz rā furū nishand, ham narasīd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    論争が長引くと、石が彼の肩に当たった。空から火の粉が落ち、炎が立ち上がって広がった。市場に向かって進んだ。たちまち火事の騒ぎが激しくなり、商人たちの手も心も冷えた——つまり、この猛火を消すだけの水もなかったのだ。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Bih andak zamānī bar lab-i daryā āmad va nishast. Daryā ṭurfah daryāʼī bih jūy-i khud bast. Har dū pā dar āb dar āvīkht. Daryāʼī bih daryā barāmīkht. Man kih pā bih pā davīdah āmadah būdam, pīsh raftam va rūy-i khud numūdam. Dīd va pursīd. Mutafaḥḥiṣ-i nām shudam bih jurʼat-i tamām. Guftā: Aḥsan Allāh va laqab Rām.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ほどなくして川岸に来て座った。川は不思議な海を自らの水路に結んだ。両足を水に浸した——海のような者が海に混じった。足早に駆けてきた私は前に進み、顔を見せた。彼は見て、尋ねた。勇気を出して名を聞いた。彼は言った——「アフサヌッラー、号はラーム。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guftam: Vaṭan? Guftā: Dakan. Guftam: Chih pīsh āmad kih īnjā rasīdī? Guftā: Hamīn āvāragīhā kih dīdī. Guftam: Dast va dahan gardālūd bishū va bā man andakī vāżiḥtar bigū.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「故郷は？」「デカン。」「何があってここに来たのか？」「見てのとおりの放浪さ。」「土埃にまみれた手と口を洗い、もう少しわかりやすく話してくれ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Chūn bih simājat-i man naẓar kard, nāchār ḥarf sar kard kih ay ʻazīz! Javānī būd shūr dar sar dāshtam. Shabī az khānah pā bīrūn guẕāshtam. Qalandarī jigar-kabāʼī dar bāzār kamar sīkh kardah bih naẓar darāmad. Shīr-i qulāb-i sīmīn-i khud rā kih bar panjah-ʼi ū az ittifāqāt shikastī rasīdah būd, bih dukān-i zargar durust mīkunānīd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    私のしつこさを見て、やむなく話し始めた——「おお友よ！　若い頃、頭に熱狂を抱いていた。ある夜、家から足を踏み出した。苦行者が一人、腸が焼けるような面持ちで腰を据えて市場に現れた。銀の獅子の留め金——偶然の事故で壊れていた——を金細工師の店で直させていた。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Subḥah dar dast dāsht, muttaṣil mīsāyīd va bih ḥasrat-i tamām īn tasbīḥ rā mīkhvānd kih "Subḥān man laysa lil-khalq ilā maʻrifatihi sabīl." Bisyār bih dilam khurd. Dast dar garībān zadah az shahr barāmadam. Va chūn ghubār sarāsīmah bih dāman-i kūhī darāmadam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「数珠を手にし、絶えず擦りながら、深い憧憬をもってこの讃美の句を唱えていた——『被造物にはその認識への道なき御方の栄光あれ。』深く心に響いた。襟に手を入れて街を出、塵のように取り乱して山の裾に駆け込んだ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Chandī darān sanglākh sakht khurdam. Dandān bar jigar afshurdam. Ghiẕā barg-i tar kardam. Rūz va shab zār nālīdam. Rūy bar khāk mālīdam. Ḥarf naguftam giriftam. Tark-i khuftan giriftam. Dīvānvār gashtam. Shumār bisyār gashtam. Sar rā bar har sang zadam. Ṣad murdah faryād shudam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「しばらくその岩場で苦しんだ。肝に歯を噛みしめた。食糧は青葉にした。昼も夜も激しく嘆いた。顔を土にこすりつけた。口をきかぬことを習い、眠ることをやめた。狂人のようにさまよった。数え切れぬほどさまよった。頭をあらゆる石に打ちつけ、百人の死者の叫びとなった。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Yakī baʻd az namāz-i ṣubḥ īn rūsiyāh-i jumlagī qabīḥ bar takhtah-ʼi sangī nishistah bar sabīl-i tah-pā barg-i darakhtān-i sabz rā mīkhurd. Nāgāh siyāḥat-pīshah-ʼī rīsh-i jav va gandum, bar kirdār, dū sih zabānah bālā-yi sar, chatar-i ṭāʼūs bar sar, az jānib-i dast-i rāst paydā shudah guft kih tah-dārān tanhā tah-bandī nimīkunand.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「ある朝の礼拝の後、この顔黒き醜悪な者が石の板に座り、裸足で緑の木の葉を食べていた。突然、旅を生業とする者が現れた——大麦と小麦まじりの髭、二、三の分かれた髪が頭上に、孔雀の傘を頭にさして——右手から現れ、言った——『腰紐をつける者たちは独りでは結ばぬものだ。』」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Va guft kih ay ʻazīz! Magar dildādah-ʼi ān yār-i parīshān-ikhtilāṭī kih jāy-i ū dar har dil paydāst. Ān sarmāyah-ʼi nāz rangīn raftanī dārad kih az ṭarz-i raftārash chaman chaman jān mībārad. Istighnāyash bih ḥaddīst kih agar az bād dāman-i bulandash jahānī barbād ravad, parvā nadārad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「そして言った——『おお友よ！　あの気紛れなる恋人に心を奪われたのか？　その居場所はあらゆる心に見出されるというのに。あの嬌態の資本は麗しい歩みを持ち、その足取りから庭園ごとに魂が降り注ぐ。その自足は極みに達し、風がその長き裾から世界をさらっても意に介さない。』」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Yār-i mā ān dārad va īn nīz ham
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    われらの恋人はあれもこれも持っている
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Az lab-hā-yi shakīrīnash bih sabab-i talkhī-yi nākāmī dilzadah nabāyad shud. Naumīdī az barāy-i chih maqṣūd hamkinārist. Diltang chirā nishistah-ʼī kih ʻālam hamah yārist. Barkhīz va siyāḥat kun. Khush bāsh va farāghat kun. Barkhvāstam. Hamrāh shudam. Āgāhī būd āgāh shudam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「その甘き唇から、失意の苦さゆえにうんざりしてはならぬ。絶望は何のためか——目的はすぐそばにある。なぜ胸を狭めて座っているのか、世界はすべて恋人だ。立ち上がり、旅をせよ。楽しめ、心安らかにあれ。」私は立ち上がった。道連れになった。覚醒があった——私は目覚めた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Rūzī dar navāḥī-yi Gvāliyār takiyah-ʼi faqīrī rā manzil numūdīm. Nāgāh ṭūṭī-yi qafasī kih zabān-dād-i ṣāḥib-i ān makān būd, dū sih bār Subḥāna Allāh bih ḥuzn-i tamām guft. Ghayrat-i ʻishq dar man ḥālatī naguẕāsht. Hūsh az saram dast-i luṭf bardāsht.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある日、グワーリヤール近郊の托鉢僧の庵に宿を取った。突然、そこの主の雄弁な籠の鸚鵡が、深い悲哀をもって二、三度「スブハーナッラー」と唱えた。恋の嫉妬が私に堪えがたき状態をもたらし、正気が頭から優しく去った。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Siyāḥ āb bar chihrah-am zad. Ṭāqat-i raftah bāz āmad. Guft: Chih būd? Guftam: Ẕikr kardan-i ṭūṭī bar dimāgham khurd. Ghayrat-i ʻishq az jāyam burd. Guftā: Ān maḥbūb rā nīz bih ʻāshiq hamīn muʻāmalat ast. Agar ū rā mashghūl bih ghayr mībīnad, bā īn bidil-i nazdīkī dūrī mīguzīnad. Fitnah bih īmā-yi ū bar sarash mīdavad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    旅の僧が私の顔に水をかけた。失われた気力が戻った。「何があった？」「鸚鵡が讃美の言葉を唱えたのが心に堪えました。恋の嫉妬に我を忘れました。」彼は言った——「あの恋人も恋する者に同じ扱いをする。もし他に気を取られているのを見れば、心変わりした者には近づきながら遠ざかる。災いがその合図で頭上に降りかかる。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    ʻAvām kal-anʻām īnjā tishnah-khūn shudand. Langar az kaf dādah bih daryā rasīdam. Aknūn dil bih daryā afkandah muntaẓir-i ishārah-ʼi ān ṭaraf nishistah-am. Chūn shām khandīd, mashghūl-i namāz gardīd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「下賤の者たちはここで血に飢えた。碇を手から放して海に達した。今は心を海に投じ、あちらからの合図を待って座っている。」夕暮れが微笑むと、彼は礼拝に向かった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Dam-i ṣubḥ bāz bih khidmat-i ū rasīdam. Dīdam kih bih hamān ṭawr nishistah ast. Ṭaʻām bā khud dāshtam, pīsh guẕāshtam. Dū sih luqmah khurd. Guftam: Ṭasht va āftābah ḥāżir ast. Guftā: Man darvīsham. Marā dar band-i īnhā nabāyad būd. Magar guftah-ʼi Mawlānā bih kāghaẕī nadīdah-ʼī:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    翌朝、再び彼のもとに参上した。見ると同じ姿勢で座っていた。持参した食事を差し出し、二、三口食べた。私は言った——「たらいと水差しがございます。」彼は言った——「わしは托鉢僧だ。そんなものに囚われるべきではない。モウラーナーの詩を紙に見たことはないか——」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Dar qaṣr-i lājavardī khaṭṭī-st bar kitābah<br>
+    K'ay bīzarān chih ḥāṣil az ganj dar kharābah<br>
+    Pāyān-i kār bāyad az jumlah dast shustan<br>
+    Gāh māh ṭashtdārī var mihr āftābah
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    瑠璃の宮殿の額に銘が刻まれている<br>
+    「おお無一物の者たちよ、廃墟の宝から何を得る」<br>
+    最後にはすべてから手を洗わねばならぬ<br>
+    月がたらいを持ち　太陽が水差しを持とうとも
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guftam: Būriyāʼī barāy-i farsh āvardah-am. Guft: Man bā khāk sarī dāram. Guftam: Ridāʼī-yi naw biham rasānīdah-am. Guft: Ān bār rā bar dūsh nimīguẕāram. Guftam: Kāsah barāy-i āb khurdan kharīdah-am. Guft: Kāsah bar sar shikastah-am. Guftam: Qadr-i qalīlī barāy-i kharj bā khud dāram. Guft: Dil bih īn nah bastah-am. Guftam: Chīzī azīn qabūl shavad. Guft: Mīkhvāhī kih faqīr malūl shavad. Dīgar dam nazadam yaʻnī sākit shudam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「敷物用のむしろを持ってまいりました。」「わしは土と縁がある。」「新しい外套を手に入れました。」「その荷を肩に載せはしない。」「水を飲む椀を買いました。」「椀は頭の上で割ったのだ。」「少しばかりの路銀を持っています。」「それに心を結んではおらぬ。」「何かお受け取りいただけませんか。」「托鉢僧を不快にさせたいのか。」私はもう何も言わなかった——黙った。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Dar ān zamān zanī-yi jamīlah chihra-rang, shūkh va shang, az qabīlah-ʼi khisht-sāzān subūchah-ʼi gilī bar dūsh, āfat-i ṣabr va hūsh, bā chihrah-ʼi ārāstah, chūn sarv-i nawkhāstah, bih bahānah-ʼi āb ṣubḥ va shām bar lab-i daryā khud rā mīnumūd. ʻĀlamī dīvānah-ʼi ū būd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    その頃、煉瓦職人の部族の美しい女がいた。色鮮やかな顔、軽やかで粋、土の水瓶を肩に載せ、忍耐と理性の災い、化粧を凝らした顔、若杉のように伸びやか。水汲みを口実に朝夕川岸に姿を見せた。世間は彼女に狂っていた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Bih sar-i zulf ḥarf zanān. Pusht-i chashm nāzuk kunān. Bā faqīr ham chihrah shud. Guft kih ay rahzan-i dīn va dil! Īn hamah khud rā gum kardan! Biraw Rām Rām mīguftah bāsh. Faqīr bih khalā har khāk-i lab-i āb bar rū mālīd. Mūy-i sar pīchīdan girift. Rām-gūyān davīdan girift. Ākhir dil hamgī shud va dūr-i murdah-ʼi kār-i junūn shud. Chand rūz hīch nakhurd. Bih hamān ḥāl jān sipurd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    髪の先を振りながら言葉を交わし、目元を細めて媚びを見せ、托鉢僧の前にも顔を出した。彼女は言った——「おお信仰と心の盗人よ！　こんなに自分を見失って！　行って、ラーム、ラームと唱えていなさい。」托鉢僧は即座に川岸の土を顔に塗りつけ、髪を振り乱し、「ラーム」と唱えながら走り出した。ついに心は取り乱し、狂気の虜となった。数日間何も食べず、そのまま息を引き取った。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Chūn īn khabar rasīd, pusht-i dast gazīd. Guftam: Īn chih rū numūd? Guft: Muqaddar chunīn būd. Hīch jurm-i faqīr nīst. Az muqaddar guzīr nīst.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    この知らせが届くと、手の甲を噛んだ。「これは何ということだ？」彼は言った——「運命がこうであった。托鉢僧に何の罪もない。定めからは逃れられぬ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Darvīshī bar ʻazā-yi aqlash chāy-i taft sāyīd. Bīmārī rū bih tazāyud āvurd. Ṭabīb dar parhīz mubālaghah az ḥadd burd. Guft kih ay ziyādah-sarā az muqaddar yā az ghayr-i muqaddar? Ghayr-i muqaddar bih man nakhvāhad rasīd. Az muqaddar dast bāz nakhvāham kashīd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「ある托鉢僧が肢体に熱い茶を擦り込んだ。病は悪化した。医者が節制を過度に強いた。托鉢僧は言った——『おお大袈裟な者よ、運命によるのか、運命によらぬのか？　運命によらぬものは私に届かない。運命によるものからは手を引かぬ。』」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Dū sih rūz-i dīgar dīdah shud. Rūzī az yakī shanīdah shud kih ān qalandar dū sih dangī bih yak dam zad va az sar-i daryā gulbāng bar qadam zad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    二、三日後にまた見かけた。ある日、誰かから聞いた——あの苦行者は二、三の小銭を一息に費やし、川の畔から凱歌を上げたと。
+  </div></div>
+</div>
+
+<!-- ═══════════════════ HIKAYAT 3 ═══════════════════ -->
+
+<div class="section-label" id="hikayat3">Ḥikāyat-i Sivvum — 第三話</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Dalīl-i rāh-i ʻirfān Miyān Shāh Burhān. Dast az dunyā bardāshtah. Qadam bih rāh-i fanā guẕāshtah. Āvārah-ʼī bih manzil rasīdah. Bih gilīm-i siyah sar dar kashīdah. Safīdgū va birāhnahttan. Bā maʻnī dar yak pīrāhan. Hargāh bih shahr āmadī sang bih sang mīzadī.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    神秘の道の導き手ミヤーン・シャー・ブルハーン。世俗から手を引き、消滅の道に足を踏み入れた。放浪者にして目的地に達した者。黒い毛布の中に頭を引き込んだ。真実を語り、裸の身。意味と一つの衣を共にする。街に来るたびに石を石にぶつけた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Rūzī dar savād-i shahr bih naẓar darāmad. Dīdam chīzī guruvī al-shakl bih ghāyat barrāq, dar miqdār-i qarīb-i nīm ās̱ār, bih dast. Dar sāyah-ʼi darakhtī nishistah tamāshā mībinad. Guftā: Bih qawl-i Murtażā ʻAlī ʻalayhi al-ṣalāh sīm ham ʻajab chīzīst. Damī kih az dast mīravad, nafʻ-i īn bardāshtah mīshavad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある日、街の郊外に彼が現れた。見ると、球形で極めて輝く何かを手に——大きさは半アーサールほど——木陰に座って眺めていた。彼は言った——「ムルタザー・アリーの言葉にあるとおり、銀もまた不思議なものだ。手から離れるとき、その恩恵が受け取られる。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guftam: Tū faqīr-i sīmāvarī. Parvāʼī nadārī. Īn sīm-i dast-afshār rā bih man bihih. Guft: Ay khāmdast! Dil bar īn manih. Sīm-i rūpūsh bih kār namīāyad. Barāy-i nān pukhtan sīm-i khām mībāyad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「あなたは銀を持つ托鉢僧だ。気にもかけない。この手搾りの銀を私にくれませんか。」「おお未熟な者よ！　これに心を懸けるな。表面を覆う銀は役に立たぬ。パンを焼くには生の銀が要る。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Rūzī Shāh Madan qalandar-i birāhnah-tan, muʻāṣir-i ū kih faqīrī būd qāmat kashīdah, darvīsh-i darvīshān dīdah, mardī ṣāḥib-i ḥāl va bā kamāl, hamrāh-i dū sih kūchak abdāl, qalandarānah bih sar burdī. Juz nān-i javīn nakhurdī.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある日、裸身の苦行者シャー・マダン——彼と同時代で、背の高い托鉢僧にして托鉢僧の中の托鉢僧、霊的状態と完成を備えた男——二、三人の小さな修行者を連れ、苦行者の暮らしをしていた。大麦のパン以外は食べなかった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Shab-i Ādīnah dar takiyah-ʼi ū kih muttaṣil-i madār-i darvāzah dāsht, sīm-bandī mīkardand. Khalqī barāy-i sayr-i chirāghān mīraft. Ṣubḥ ān bih gadāʼī bar mīkhāst. Ghayr-i fulūsī az kasī nimīkhvāst. Bidihi bidihi bar zabān rāndī. Īn bayt-i ustād barkhvāndī:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    金曜の夜、門の近くにある彼の庵では灯火の飾りつけが行われた。人々は灯火見物に出かけた。朝になると彼は物乞いに立った。小銭以外は誰にも求めなかった。「くれくれ」と口にし、師の次の詩句を読んだ——
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Āvardan-i zar bih dasht-i ustān nabūd / Khvābīdah bar rūy-i har fulūsī shīrī
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    金を手に運ぶのは師の流儀にあらず / あらゆる小銭の上に獅子が眠っている
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Qarīb-i haft hasht ās̱ār shīrīnī dar gilīm-i siyāh bāstah Shāh Burhān paydā shud. Qalandar rā āvāz dād. Ū nīz kushād. Īn hūʼī kashīd. Ū garm davīd. Dangī zadah guft kih magar dar gilīmat sag-bachagānand. Ū andākht va khud rā bih gūristān rasānīdah pinhān sākht.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    七、八アーサールほどの菓子を黒い毛布に包んでシャー・ブルハーンが現れた。苦行者を呼んだ。彼も近づいた。ブルハーンは叫んだ。マダンは走った。ぎょっとして言った——「まさかお前の毛布の中に犬の子がいるのか？」ブルハーンは毛布を投げ捨て、自ら墓地に駆け込んで身を隠した。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Tamām rūz gilīm va shīrīnī dar rāh uftādah mānd. Sagān ham nakhurdand. Ākhir bih guftah-ʼi ahl-i maḥallah kanāsān bardāshtah burdand. Rūz-i dīgar kih Burhān rā dīdand, ḥaqīqat-i ḥāl pursīdand. Guft kih ū shāh va man gadā. Nisbat miyān-i man-ū? Bikhir guẕasht kih az zabānash īn qism barāmad. Agar mīguft kih mis̱l-i sag kujā mīravī? Ustukhvān chih mīshikanī? Īn dīvānah sag mīgardīd va dar khirābah bih har sū mīdavīd. Az gilīm va shīrīnī dast afshāndam. Khudā khudā kardah ādamī māndam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    終日、毛布と菓子は道に落ちたままだった。犬さえ食べなかった。ついに町の人々の言葉に従い、清掃人が拾って運んだ。翌日ブルハーンに会い、真相を尋ねた。彼は言った——「彼は王で私は乞食。私と彼の間にどんな関係がある？　あの口からあのような言葉が出たのは幸いだった。もし『犬のようにどこへ行く？　骨を何で砕く？　何を走っている？』と言われたなら、この狂人は犬になって廃墟のあちこちを走り回っていたであろう。毛布と菓子から手を振り払い、神に祈って人間でいられたのだ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Rūzī bar sar-i bāzār juzv-i bayāżī dar dast nishistah būdam kih ān dīvānah tamām ajzā bih dast-i man uftād. Guft kih dar "Lā ʻirāż" nufūs-i insānī baʻd-i mufāraqat-i badan ham nivishtah-and. Guftam kih dar īn nuskhah rubāʻīyāt ast va abyāt-i mutafarriqah. Guftā: Agar gūsh mīdārī man bigūyam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある日、市場の端で小冊子を手に座っていると、あの狂人が全頁を手に取った。彼は言った——「『ラー・イウラーズ』の中に、人間の魂が身体と分かれた後のことも書かれている。」私は言った——「この写本にはルバーイーヤートと散見の詩句があります。」「聞く耳があるなら、わしが語ろう。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guft: Bidānkih laẕẕat-i daryāftan-i chīzī mulāʼim ast va alam vaqf ast-i munāfī-yi ān. Har quvvatī rā az quvvat-hā-yi mudrikāt laẕẕat va alam ast bih ḥasb-i ān quvvah. Chandānkih mudrik ʻaẓīmtar laẕẕat qavītar. Chūn hīch mudrik-i sharīftar az ẕāt va ṣifāt-i Vājib al-Vujūd nīst, pas hīch laẕẕatī laẕīẕtar az maʻrifat-i ū nabāshad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    彼は言った——「知れ、好ましきものを得ることの快楽は適合するものであり、苦痛はその反対に属する。知覚の諸力のそれぞれに、その力に応じた快楽と苦痛がある。知覚するものが偉大であるほど快楽は強い。必然的存在者の本質と属性より高貴なる知覚対象はないゆえ、その認識より甘美なる快楽はない。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Maʻnī-yi baʻs̱ va ḥashr nah ān bāshad kih jān rā qālib hamān bāshad. Shām nazdīk būd. Nardabānī dar rāh andākhtah ravān shud va bih gūristān-i savād-i shahr kih darān bih sar mīburd, nihān gasht. Shanīdam kih hamān shab dar mahtāb az jūsh-i dīvānagī charkh-zanān mīgasht. Qażā rā āmad bih sang-i mazārī.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「復活と集合の意味は、魂が同じ肉体に戻るということではない。」夕暮れが近かった。道に梯子を放り出して歩き去り、街外れの墓地——そこで暮らしていた——に姿を消した。聞くところによると、その夜、月光の中で狂気の衝動に駆られて旋舞していたところ、運命のさだめで墓石にぶつかったという。
+  </div></div>
+</div>
+
+<!-- ═══════════════════ HIKAYAT 4 ═══════════════════ -->
+
+<div class="section-label" id="hikayat4">Ḥikāyat-i Chahārum — 第四話</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Asad dīvānah. Sākin-i vīrānah. Sālik-i majẕūb. Darvīsh-i khūb. Rind-i būriyāpūsh. Chūn baḥr dar jūsh. Bar tālāb-i Fīrūzkhān kih mashhūr bih ābgīr-i shikastah būd, dar ashjār-i sar bih ham āvardah takiyah bih kamāl-i pākīzagī-yi ū ṣafā dāsht.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    狂者アサド。廃墟の住人。引き寄せられた行者。美しき托鉢僧。むしろをまとった風流人。海のように沸き立つ。フィールーズ・ハーンの池——壊れた貯水池として知られる——のほとり、枝が互いに寄り添う樹木の中に、清浄の極みをもって庵を構えていた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Aks̱ar-i rindān-i bāghātī dar āftāb-i garm ānjā raftah mīāsūdand. Va pīshkhidmatān-i ān dil az dunyā bardāshtah hamīn īshān būdand. Rūzī shanīdam kih dar takiyah-ʼi ū būriyākūbīst va yārān dar masjidī kih sākhtah būd sargarm-i pākūbī. Raftam va dīdam dar miyān-i hamah-hā nishistah, zang va zanjīr bar kamar bastah. Vārastah mustaghni al-ḥāl. Nīm-zabān tamām kamāl.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    庭園の風流人たちの多くが、炎天にそこへ行って憩うていた。あの世俗を捨てた者の側近こそ彼らであった。ある日、彼の庵でむしろ叩きの集いがあり、仲間たちは彼の建てたモスクで踊りに興じていると聞いた。行って見ると、皆の中央に座り、鈴と鎖を腰に巻いていた。超然として自足の境地。半ば言葉を発し、完全なる叡智。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Baʻd-i khurdan-i ṭaʻām jūgī-ʼī Nātah nām tāʼī pīrāhan dar bar, zanjīr-i qalandarānah bar sar, dar āmad. Darvīsh chunān bih mizāj-gūyī pardākht kih īn hamah vaḥshat rā maʼnūs sākht.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    食事の後、ナータフという名のジョーギーが現れた——一枚の上衣を着て、苦行者の鎖を頭にかけて。托鉢僧は巧みに話の相手をし、この荒々しい者を馴染ませた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Maẕkūr-i ḥashr-i ajsād dar miyān āmad. Jūgī kih bisyār bar masāʼil-i maʻād gashtah būd, guft kih bar ḥashr-i nufūs dalāyil-i bisyār ast. Ammā ʻawd-i nafs bih hamān badan dushvār ast.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    肉体の復活の話題が出た。来世の諸問題に通じたジョーギーは言った——「魂の復活には多くの証拠がある。しかし魂が同じ肉体に戻ることは困難だ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guft kih hīch mīdānam. Ammā īn qadr mīdānam kih ḥaqīqat-i jān-i ādam qadīm ast bih ẕāt-i khvīshtan. Va guftugūy-i qālib dar īnjā bar qālib zadan. Gumān mabar kih maʻnī-yi marg nīstī-yi jān-i ʻazīz ast. Īn inqiṭāʻ-i taṣarruf-i āvāz-i qālib-i nāchīz ast. Maʻnī-yi baʻs̱ va ḥashr nah ān bāshad kih jān rā qālib hamān bāshad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    彼は言った——「わしには何もわからぬ。しかし、人間の魂の真実はその本質において永遠であることだけは知っている。肉体についての議論はここでは枠組みを叩くようなものだ。死の意味が尊き魂の無化だと思うな。これは取るに足らない肉体の支配が途絶えることだ。復活と集合の意味は、魂が同じ肉体に戻るということではない。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Bā ān darvīsh chunān bih mizāj-gūyī pardākht kih ānhā kih ḥālat dārand, mīkunand, turhāt mīgūyand va zanakh mīzanand.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    あの托鉢僧とともに談笑に興じ、霊的状態を持つ者たちは実践し、たわごとを語り、顎を打ち合わせた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Barkhurd-i nakhust būd. Rukhṣat khvāstīm. Man va jūgī bāham barkhāstīm. Va mīguft kih ay ʻazīz! Dil rā bih dilbarī dādah-am kih dīdanash bih īn naẓar muyassar nimīshavad va dil-i bīqarār az badgumānī-yi bisyār har dam bih ṣad jā mīravad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    初めての出会いであった。暇を請い、私とジョーギーは一緒に立ち上がった。彼は言った——「おお友よ！　この目では見ることのかなわぬ恋人に心を捧げた。落ち着きなき心は、猜疑心のあまり一瞬ごとに百の場所へ走る。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Mīkunam ānchih shawq mīgūyad / Mutaʻarriż bih man nabāyad būd
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    恋慕が命ずるままにする / 私に異を唱えてはならぬ
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Agar shawq dar ḥadd-i kamāl ast, ʻāshiq bih manzil-i viṣāl ast. Shawq-i kāmil bih kām-i dil mīrasānad. ʻĀshiq rā maʻshūq mīgardānad. Kamāl-i insān maʻrifat ast va kamāl-i maʻrifat ḥayrat. Agar ḥayrān-i kamālāt-i ūyī, khushā ḥāl.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    「もし恋慕が完成の域にあるなら、恋する者は逢瀬の宿に着いている。完全なる恋慕は心の望みに到達させる。恋する者を恋される者に変える。人間の完成は認識であり、認識の完成は驚嘆である。もし彼の完全さに驚嘆しているなら、なんと幸いなことか。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Tabā bih kī gūyī zi dunyā bigẕaram<br>
+    Chūn jaras bāyad sukhan dar rāh guft
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    いつまで言い続けるのか「この世を去ろう」と<br>
+    駱駝の鈴のように、道すがら語らねばならぬ
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Faqīrī hamishtah qaṣr-i namāz mīkard. Shakhṣī guft kih qaṣr dar safar ast nah dar vaṭan. Guftā: Har nafas va har ān az martabah-ʼi khud mīravam va chūn āb-i bārīk zamān zamān talaf mīshavam:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある托鉢僧が常に礼拝を短縮して行った。ある者が「短縮礼拝は旅先でのもので、故郷でするものではない」と言った。彼は答えた——「一息ごと、一瞬ごとに自分の段階から去っていく。細い水の流れのように、刻々と消えていくのだ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Rūzī nishistah būdam kih guft: Ay javān! Dūsh vāqiʻah-ʼī dīdah-am kih mushʻir bar vāqiʻah-ʼi man ast. Mībīnam kih marā pīr dar baghal mīkashad va shikāyat-i judāʼī mīkunad. Ghālib kih ḥinnā-yi ʻishrat-i zindagānī bar sar-i nākhun rasīd. Guftam: Khudā turā ṣad sāl salāmat dārad. Khvāb khayāl ast, dil bar ān nabāyad nihād. Dar hamān haftah gūshzad shud kih bih sarsām mubtilā gasht va azīn jahān-i guẕarān dargẕasht. Mard-i khushī būd. Khudāyash biyāmurzād.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある日座っていると、彼は言った——「おお若者よ！　昨夜、夢を見た。それは私の運命を示している。見ると、長老が私を胸に抱き、別離を嘆いている。おそらく人生の享楽のヘンナが指先に達したのだ。」私は言った——「神があなたを百年もお守りくださいますように。夢は幻想です、心にかけてはなりません。」同じ週のうちに、脳炎にかかりこの移ろいゆく世を去ったと知らされた。よき人であった。神よ、赦し給え。
+  </div></div>
+</div>
+
+<!-- ═══════════════════ HIKAYAT 5 ═══════════════════ -->
+
+<div class="section-label" id="hikayat5">Ḥikāyat-i Panjum — 第五話</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Hargāh rūzgār-i nāsāzgār badpākht va marā az Akbarābād āvārah sākht, rakht-i khud bih Shāhjahānābād-i Dihlī kashīdam. Īnjā bih khidmat-i sharīf-i Miyān Saʻīd Khān rasīdam. Ū mardī būd kāmil, hamah tan dast va dil, bālā buland, diqqatpasand, garmjūsh, sarāpā hūsh.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    不実なる運命が災いを煮て、私をアクバラーバードから追い出したとき、荷物をシャージャハーナーバード・デリーに移した。ここでミヤーン・サイード・ハーンの高貴なるもとに参上した。彼は完成した人であり、全身が手と心、背が高く、繊細、情熱的で、全身が理知であった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Chaspān-i ikhtilāṭ, khush irtibāṭ. Vażʻ-i marbūṭ, ḥāl-i mażbūṭ. Dil bā yār, dast dar kārah. Qāʼim al-layl. Ṣāʼim al-nahār. Dast az dihish bāz nadāshtī. Madār bar tavakkul guẕāshtī. Sīr-i chashm-i tamām ḥayā, gursunah-dil nām-i Khudā.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    交際に親密、結びつきは良好。態度は整い、状態は確か。心は友とともにあり、手は仕事にある。夜は起きて祈り、昼は断食する。施しの手を止めることなく、信頼に拠って立つ。目は満ち足りて慎み深く、心は飢えて神の名を求める。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Harjā khastah-jānī mīdīd, sar-i zakhmash mīmālīd. Gūsh bar ṣadā-yi gadā būdī. Gūshdārī-yi ʻājizān numūdī. Rū az dunyā bartāftah. ʻĀrif qarār yāftah. Qalandar-i muʼas̱s̱ir-i dam. Guft va qadam hamrāh-i ham. Chādar bar dūsh bā yak sarpūsh. Pā bīkafsh. Sar ʻuryān. Gāhī khandān gāhī giryān.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    傷ついた者を見れば傷口を撫で、乞食の声に耳を傾け、弱き者に気を配った。世俗から顔を背け、認識者として安らぎを得た。息吹の効く苦行者。言葉と足取りが一致する。肩に布をかけ、帽子一つ。裸足で、頭は露わ。時に笑い時に泣く。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Aks̱ar dar majlis-hā-yi shaykhān-i shahr mīraft va pāyīn mīnishat. ʻAzīzān basqih pās-i ū mīkardand raftah raftah ṣaf-i niʻāl ṣadr mīshud. Bā sabzān-i nawkhaṭ rabṭ baham rasānīdī. Dar barzan va bāzār chashm charānīdī.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    しばしば街の長老たちの集会に行き、末席に座った。尊敬する者たちが彼をいたわると、次第に最後尾から最上座に上がった。若き薄髭の者たちと交わりを結び、路地や市場で目を楽しませた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Yakī chihil hazār rūpiyah az vazīr girift va ḥawż-i shikastah-ʼi Qadam-i Sharīf rā kih āb mīandākht marrammat kard. Va zar-i bāqiyah bar fuqarā va ghurabā vusʻat namūd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある者が大臣から四万ルピーを得て、水が漏れていた聖足跡の壊れた池を修繕した。残りの金を貧者と異邦人に分配した。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Chūn ʻumr bih panjāh rasīd, pāy bih dāman kashīd. Har rūz baʻd-i namāz-i ṣubḥ bih gūristān mīraft va qarīb-i nīmrūz mīāmad. Yakī rūz dunbālash giriftah ravān shudam. Dīdam kih bar sar-i har gūr naẓar bih ʻibrat mīkunad va pīsh mīravad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    五十歳に達すると、裾に足を引き込んだ（隠遁した）。毎日、朝の礼拝の後に墓地に行き、正午近くに戻った。ある日、後をつけて行った。見ると、一つ一つの墓の前で教訓を込めた眼差しを向けては先に進んでいた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Nāgāh āvāz-i pāy-i man bih gūshash rasīd. Rū pas kardah bih khushūnat guft kih ikhtilāṭ-i ziyādah bar āshnāyī marā khush namīāyad. Chunān khawf bar man ghālib āmad kih dīgar ṭāqat-i bardāshtan-i pā namānd.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    突然、私の足音が彼の耳に届いた。振り返って厳しく言った——「過度の馴れ合いは私の好むところではない。」恐怖が私を圧倒し、もう足を動かす気力もなくなった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Vaqtī kih bāz āmad, mībīnam kih chīzī bih chādar-i khud bastah mīārad. Pīsh raftam va pursīdam kih chih āvardah-ʼī? Guft: Qadrī shīrīnī barāy-i ʻajūz-i shikastah-pāy kih darīn maḥallah bih talkhkāmī-yi tamām chūn sarnishīnān bih khāk uftādah "bidihi bidihi" mīkunad, firistādah-and. Biyā kih ū rā bikhurānam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    戻ったとき、見ると布に何かを包んで持ってくる。進み出て尋ねた——「何を持ってこられましたか？」「少々の菓子を、この町で苦渋の極みにあって、名士たちのように地に伏して『くれくれ』と叫んでいる足の折れた老婆のために送ってきたのだ。来なさい、彼女に食べさせよう。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Raftam va bih hamān ḥālī kih guftah būd pīrzanī rā bar sar-i rāh muʻāyanah kardam. Barābar-i rūy-i ū raftah guft kih barkhīz va shīrīnī bikhur. Ān żaʻīfah az muddat-i madīd nām-i shīrīnī nashunīdah būd tā bikhurdan chih rasad. Darvīsh hamah rā pīsh-i rūyash guẕāsht. Ū shikam sīr khurd va bikhvuft. Īn rū bih man āvard va biguft:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    行ってみると、彼の言ったとおり、道端に老婆がいた。彼女の前に進み出て言った——「立ち上がって菓子を食べなさい。」あの弱き女は久しく菓子の名さえ聞いたことがなかった、まして食べることなど。托鉢僧はすべてを彼女の前に置いた。彼女は腹いっぱい食べて眠った。彼は私に向き直って言った——
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Rāḥat bih dil rasān kih hamīn manzilast va bas
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    心に安らぎを届けよ　ここが最後の宿なのだから
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Rūzī sagī dar bāzār az farṭ-i jūʻ bar ustukhvān-i khushk dandān mīzad. Nāgāh rīz-i ustukhvān bih jā-yi dandānash khalīd va khūn barāmad. Chūn chāshnī dar bandān uftādah shiddat-i gursunagī farīhash dād, yaʻnī sag gumān burd kih īn khūn az ustukhvān mīāyad, bih dandān khāʼīdan girift.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある日、市場で犬が空腹のあまり乾いた骨に歯を立てていた。突然、骨の欠片が歯茎に刺さって血が出た。味が歯の間に入り、激しい空腹が犬を騙した——つまり犬は、この血が骨から出ていると思い込み、噛み続けた。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Darvīsh īn ḥālat-i iżṭirārī dīdah mużṭarib shud. Mukhannas̱ī dar ān ḥāl az dukān-i nānbānān nān va shūrbā giriftah mīraft. Dīd va bih ū guft: Dīrīst kih man va tū hammaḥallah-ʼīm. Ammā tā imrūz ḥājat-ravāʼī-yi man nakardah-ʼī. Agar dast azīn nān va shūrbā bardārī minnat-hā-yi bīḥadd bar man guẕārī.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    托鉢僧はこの窮状を見て心を痛めた。ちょうどその時、両性具有の者がパン屋からパンとスープを手にして通りかかった。見て言った——「長らくわれわれは同じ町内だ。だが今日まで私の願いを叶えてくれたことがない。もしそのパンとスープを手放してくれたなら、限りない恩義を感じるのだが。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Ū az ḥālash bākhabar būd. Guft: Balāgardānat shavam! Jān kih dar dunyā bisyār ʻazīz ast, agar mīkhvāstī mużāyaqah nimīkardam. Nān va shūrbā chih chīz ast. Ḥāṣil kih azū giriftah pīsh-i sag burd va ān sag-i bīṭāqat hamagī khurd. Ārī kasān kih rāhī bih dil dārand.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    彼の状況を知っていた者は言った——「あなたの身代わりになりましょう！　この世でこれほど貴い命でさえ、お望みなら惜しみません。パンとスープなど何ほどのことがありましょう。」かくして受け取り、犬の前に持って行くと、あの疲れ果てた犬はすべてを食べた。まことに、心への道を持つ者たちは——
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Yakī barādar-i girāmī-qadr Muḥammad Ḥusayn Kalīm takhalluṣ shikāyat kard kih az bīrūzgārī jāmah bar tan nadāram. Ākhir man ham az pīsh-dāmanānam. Gāhī murāʻāt-i gūnah-ʼī yā bih kasī ishārah-ʼī kih zindah khud bimānam.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある時、敬愛する兄弟ムハンマド・フサイン、号をカリームという者が嘆いた——「時運のなさゆえ身にまとう衣もない。私もあなたの門弟の一人なのに。時には多少の配慮や誰かへの口添えがあれば、生きていけるものを。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Guftā: Shukūh-i murāʻāt bināst līkin marā iḥtiyāj-i kasānāt. Guft: Īn dast-i man āstīn-i dast-i digar ast.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    彼は答えた——「配慮の格式は高いが、私には人の世話は必要ない。」そして言った——「この手は他の手の袖にすぎぬ。」
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Īn dast-i man āstīn-i dast-i digar ast
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    この手はわが手にあらず　別の手の袖にすぎぬ
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Raft va hamān shab bih khvāb dīd kih darvīsh bā Mīrzā Muḥammad ʻAlī barādar-i khurd-i Isḥāq Khān-i Shahīd barāy-i nawkarī-yi man guft va ū qabūl namūd. Pas az dū sih rūz nawkarī-yi chihil yā panjāh rūpiyah-ʼi ū shudah āmad.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    彼は去り、その夜、夢を見た——托鉢僧がイスハーク・ハーン殉教者の弟ミールザー・ムハンマド・アリーに私の仕官を頼み、彼が承諾した。二、三日後、四十か五十ルピーの俸禄を得る仕官の話が決まった。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Ān kas-i yakī-yi almī mariz-i barq-i āftāb-i rū-yi daryā bih shitr va shāyirī dāshtī. Shab-i yakkī marā khvāst. Chūn binishistam guft kih khafaqān bih shiddat dāram. Kushādgī nimīshavad. Shiʻrhā-yi ʻāshiqānah bikhvān kih zār bigirīyam. Ittifāqan īn shiʻr az zabān-i man barāmad:
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    ある月の明るい夜、ある者——太陽の閃光と川面の光に魅了された詩人——が私を招いた。座ると彼は言った——「動悸が激しい。楽にならない。恋の詩を読んでくれ、激しく泣きたいのだ。」たまたま私の口からこの詩が出た——
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Mabar bih pīsh-i dil-i nawshikīb-i man nāmash<br>
+    Kih az barāy-i ṭapīdan bahānah mīṭalabad
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    まだ耐え忍んでいるわが心の前にその名を出すな<br>
+    胸騒ぎの口実を探しているのだから
+  </div></div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Dast bar dil nihād va ghash kard. Mardumān bih dū dastash bardāshtah andarūn-i khānah burdand. Azān bāz bīrūn nayāmad. Dū sih rūz ḥāl-i ʻajabī dāsht. Ākhir dargẕasht. Khallāq biāmurzād va gharīq-i baḥr-i raḥmat gardānād.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    彼は心臓に手を当てて気を失った。人々が両手で彼を抱え上げ、奥の部屋に運んだ。それ以来二度と外に出なかった。二、三日、奇妙な状態が続いた。ついに旅立った。造物主よ、赦し給え。慈悲の海に沈め給え。
+  </div></div>
+</div>
+
+<!-- ═══════════════════ COLOPHON ═══════════════════ -->
+
+<div class="ornament">· · ·</div>
+
+<div class="pair">
+  <div class="col-left"><div class="roman">
+    Naḥmadahu va nashkurahu kih risālah-ʼi musammā bih "Fayż-i Mīr" tamām shud. Umīd az yārān-i zamān ānast kih agar jāʼī ʻayb va khaṭā mulāḥaẓah numāyand, naẓar bar vaqt-i tang va furṣat-i kam-i man numāyand.
+  </div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="jp">
+    神を讃え、感謝する。「ファイズ・ミール」と名づけられたこの小冊子がここに完結した。同時代の友人たちに望むのは、もし誤りや欠点を見つけたならば、私の時間の乏しさと余暇の少なさに免じてくださることである。
+  </div></div>
+</div>
+
+<div class="pair">
+  <div class="col-left"><div class="verse"><div class="roman">
+    Hast istigfār-i mā muḥtāj-i istigfār-i mā
+  </div></div></div>
+  <div class="divider"></div>
+  <div class="col-right"><div class="verse"><div class="jp">
+    われらの赦しの祈りもまた　赦しの祈りを必要としている
+  </div></div></div>
+</div>
+
+<footer class="colophon">
+  <h3>凡例 — Notes on Romanization</h3>
+  <ul>
+    <li>ローマナイズはALA-LC（米国議会図書館）方式によるペルシア語転写に準拠</li>
+    <li>イザーファ（属格接続）：<em>-i</em>（子音後）、<em>-yi</em>（長母音後）、<em>-ʼi</em>（黙音 h 後）</li>
+    <li>ʻ = ع（アイン）、ʼ = ء（ハムザ）</li>
+    <li>長母音：ā, ī, ū ／ 特殊子音：ḥ, kh, sh, gh, ṣ, ż, ṭ, ẓ, s̱, ẕ</li>
+    <li>底本：Sayyid Ḥusām al-Dīn Rażavī 校訂版（Idārah-ʼi Farūgh-i Urdū, 第2版）</li>
+    <li>OCR原文の判読困難箇所は文脈・校訂注から復元した</li>
+  </ul>
+  <h3>書誌 — Bibliographic Note</h3>
+  <ul>
+    <li>Mīr Muḥammad Taqī Mīr（1722/23–1810）、ムガル後期デリーの詩人</li>
+    <li>『ファイズ・ミール』は息子ファイズ・アリーのために書かれたペルシア語散文作品</li>
+    <li>五つの物語（ḥikāyāt-i khamsah）から成り、托鉢僧・狂者・神秘家との出会いを描く</li>
+  </ul>
+</footer>
+
+</body>
+</html>
