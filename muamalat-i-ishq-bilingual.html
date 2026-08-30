@@ -1,0 +1,951 @@
+<title>Muʻāmalāt-i ʻIshq 恋の諸相</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+  :root {
+    --bg: #f6f1e9;
+    --bg-card: #fffefa;
+    --text: #2a231a;
+    --text-muted: #6b5e4f;
+    --text-light: #8a7d6e;
+    --accent: #8b2a1a;
+    --accent-light: #b84a38;
+    --gold: #a67c3d;
+    --gold-light: #d4a95a;
+    --border: #d9ceb8;
+    --border-light: #e8dfcf;
+    --section-bg: rgba(166,124,61,0.04);
+    --shadow: rgba(44,36,25,0.06);
+    --urdu-color: #3a2c1a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1714;
+      --bg-card: #252119;
+      --text: #e0d8cc;
+      --text-muted: #a09582;
+      --text-light: #7a6f60;
+      --accent: #d4735e;
+      --accent-light: #e8967f;
+      --gold: #d4a95a;
+      --gold-light: #a67c3d;
+      --border: #3d362c;
+      --border-light: #302a22;
+      --section-bg: rgba(166,124,61,0.06);
+      --shadow: rgba(0,0,0,0.2);
+      --urdu-color: #e8ddd0;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1714;
+    --bg-card: #252119;
+    --text: #e0d8cc;
+    --text-muted: #a09582;
+    --text-light: #7a6f60;
+    --accent: #d4735e;
+    --accent-light: #e8967f;
+    --gold: #d4a95a;
+    --gold-light: #a67c3d;
+    --border: #3d362c;
+    --border-light: #302a22;
+    --section-bg: rgba(166,124,61,0.06);
+    --shadow: rgba(0,0,0,0.2);
+    --urdu-color: #e8ddd0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', 'Georgia', serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.7;
+  }
+
+  .title-block {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+  }
+  .bismillah {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.6rem;
+    color: var(--gold);
+    direction: rtl;
+    margin-bottom: 1.5rem;
+    line-height: 2.2;
+  }
+  .title-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    direction: rtl;
+    margin-bottom: 0.8rem;
+    line-height: 2;
+  }
+  .title-roman {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+  }
+  .title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  .title-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+  }
+  .title-meta .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-style: normal;
+    font-size: 0.85rem;
+  }
+
+  /* Section headings */
+  .section-head {
+    text-align: center;
+    margin: 3rem 0 1.5rem;
+    padding: 1.2rem 1rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--section-bg);
+  }
+  .section-head .urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    direction: rtl;
+    line-height: 2;
+    margin-bottom: 0.3rem;
+  }
+  .section-head .roman {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.03em;
+  }
+  .section-head .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+  .section-head .page-ref {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+  }
+
+  /* Couplet block */
+  .bayt {
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    background: var(--bg-card);
+    border-radius: 4px;
+    border-left: 3px solid var(--border-light);
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .bayt .urdu-line {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.25rem;
+    color: var(--urdu-color);
+    direction: rtl;
+    text-align: center;
+    line-height: 2.2;
+    padding: 0.15rem 0;
+  }
+  .bayt .roman-line {
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.6;
+    padding: 0.1rem 0;
+    font-style: italic;
+  }
+  .bayt .jp-line {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.7;
+    padding: 0.1rem 0;
+    margin-top: 0.3rem;
+  }
+  .bayt .divider {
+    text-align: center;
+    color: var(--border);
+    font-size: 0.7rem;
+    margin: 0.15rem 0;
+    letter-spacing: 0.5em;
+  }
+
+  /* Prose summary blocks */
+  .summary {
+    margin: 1rem 0 1.5rem;
+    padding: 1rem 1.2rem;
+    background: var(--section-bg);
+    border-radius: 4px;
+    border-left: 3px solid var(--gold);
+  }
+  .summary p {
+    margin: 0.4rem 0;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .summary .label {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Page marker */
+  .page-marker {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin: 1.5rem 0 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .page-marker::before,
+  .page-marker::after {
+    content: '—';
+    margin: 0 0.5em;
+    color: var(--border);
+  }
+
+  /* Section intro */
+  .section-intro {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-muted);
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  /* End ornament */
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin: 2rem 0;
+    letter-spacing: 0.3em;
+  }
+
+  /* Note block */
+  .note {
+    margin: 2rem 0;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    line-height: 1.7;
+  }
+  .note .jp { font-family: 'Noto Serif JP', serif; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    body { padding: 1rem 1rem 3rem; }
+    .title-urdu { font-size: 1.5rem; }
+    .title-roman { font-size: 1.2rem; }
+    .bayt { padding: 0.8rem 1rem; }
+    .bayt .urdu-line { font-size: 1.1rem; }
+  }
+</style>
+
+<div class="title-block">
+  <div class="bismillah">بسم اللہ الرحمٰن الرحیم</div>
+  <div class="title-urdu">مثنوی معاملاتِ عشق</div>
+  <div class="title-roman">Mas̱navī Muʻāmalāt-i ʻIshq</div>
+  <div class="title-jp">恋の諸相</div>
+  <div class="title-meta">
+    Mīr Muḥammad Taqī Mīr (1722–1810)<br>
+    <span class="jp">ミール・ムハンマド・タキー・ミール</span><br>
+    <span class="jp" style="font-size:0.8rem; color:var(--text-light)">
+      底本：Kulliyāt-i Mīr Taqī Mīr, Tartīb-i Jadīd,<br>
+      ed. Maulānā ʻAbd al-Bārī Āsī (1931), pp. 918–928
+    </span>
+  </div>
+</div>
+
+<!-- ===== PROLOGUE ===== -->
+<div class="section-head">
+  <div class="urdu">در بیانِ عشق</div>
+  <div class="roman">Dar Bayān-i ʻIshq</div>
+  <div class="jp">恋について</div>
+  <div class="page-ref">pp. 918–920</div>
+</div>
+
+<div class="section-intro">
+  <span class="jp" style="font-family:'Noto Serif JP',serif; font-style:normal;">
+    冒頭にて詩人は、恋（ʻishq）の形而上的・神秘的本質を詠嘆する。<br>
+    恋は真理であり、預言者であり、世界の庇護者であると讃えたのち、<br>
+    恋がもたらす苦悩と変容を列挙し、自らの七つの恋の物語へと導く。
+  </span>
+</div>
+
+<div class="page-marker">p. 918</div>
+
+<div class="bayt">
+  <div class="urdu-line">کچھ حقیقت نہ پوچھو کیا ہے عشق</div>
+  <div class="urdu-line">حق مگر سمجھو نہ خدا ہے عشق</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kuchh ḥaqīqat na pūchho kyā hai ʻishq</div>
+  <div class="roman-line">Ḥaqq magar samjho na Khudā hai ʻishq</div>
+  <div class="jp-line">恋とは何かとその真実を問うな<br>真理と知れ、されど神そのものとは思うな——これは恋</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق ہی عشق ہے نہیں ہے کچھ</div>
+  <div class="urdu-line">عشق بن تم کو کہیں ہے کچھ</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq hī ʻishq hai nahīṅ hai kuchh</div>
+  <div class="roman-line">ʻIshq bin tum ko kahīṅ hai kuchh</div>
+  <div class="jp-line">恋こそすべて、他に何もない<br>恋なくば汝に何があろうか</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق تھا جو رسول ہو آیا</div>
+  <div class="urdu-line">اُن سے پیغامِ عشق ہو آیا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq thā jo rasūl ho āyā</div>
+  <div class="roman-line">Un se paighām-i ʻishq ho āyā</div>
+  <div class="jp-line">恋こそ預言者となりて現れしもの<br>彼より恋の伝言がもたらされた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق حق ہے کہیں نبی ہے کہیں</div>
+  <div class="urdu-line">ہے محمد تمہیں علی ہے کہیں</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq ḥaqq hai kahīṅ nabī hai kahīṅ</div>
+  <div class="roman-line">Hai Muḥammad tumhīṅ ʻAlī hai kahīṅ</div>
+  <div class="jp-line">恋はある処で真理、ある処で預言者<br>ムハンマドは汝ら自身、アリーはまた別の処に</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق عالمپناہ باب رکھتا ہے</div>
+  <div class="urdu-line">جبرئیل و کتاب رکھتا ہے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq ʻālam-panāh bāb rakhtā hai</div>
+  <div class="roman-line">Jibrāʼīl o kitāb rakhtā hai</div>
+  <div class="jp-line">恋は世界の庇護者として門を構え<br>天使ジブリールと聖典を備える</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق حاضر ہے عشق غائب بھی</div>
+  <div class="urdu-line">عشق ہی نظریہ عجائب ہے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq ḥāẓir hai ʻishq ghāʼib bhī</div>
+  <div class="roman-line">ʻIshq hī naẓrīyah-yi ʻajāʼib hai</div>
+  <div class="jp-line">恋は顕在し、恋は不在でもある<br>恋こそ驚異の光景そのもの</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق کیا کیا مصیبتیں لائے</div>
+  <div class="urdu-line">روز کو رات کر کے دکھلائے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq kyā kyā muṣībatēṅ lāʼe</div>
+  <div class="roman-line">Roz ko rāt kar ke dikhlāʼe</div>
+  <div class="jp-line">恋はいかなる災難をもたらしたか<br>昼を夜に変えて見せた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق میں لوگ زہر کھاتے ہیں</div>
+  <div class="urdu-line">عشق سے رنگ سبز آتے ہیں</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq mēṅ log zahr khātē haiṅ</div>
+  <div class="roman-line">ʻIshq se rang sabz ātē haiṅ</div>
+  <div class="jp-line">恋ゆえに人は毒を飲む<br>恋ゆえに顔色は青ざめる</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق سرتا قدم امید ہوا</div>
+  <div class="urdu-line">زیرِ پنجِ ستم شدید ہوا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq sar-tā-qadam umīd huʼā</div>
+  <div class="roman-line">Zēr-i panj-i sitam shadīd huʼā</div>
+  <div class="jp-line">恋は頭から爪先まで希望となった<br>が、苛烈なる圧政の手の下に</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">بجھ سے مت پوچھ پر کہیں ہے عشق</div>
+  <div class="urdu-line">عشق ہے ان ہی کو جنہیں ہو عشق</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kuchh se mat pūchh par kahīṅ hai ʻishq</div>
+  <div class="roman-line">ʻIshq hai un hī ko jinhēṅ ho ʻishq</div>
+  <div class="jp-line">誰にも問うな、されどどこかに恋はある<br>恋はただ恋する者のみのもの</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق سے رنگ زرد ہوتا ہے</div>
+  <div class="urdu-line">عشق سے دل میں درد ہوتا ہے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq se rang zard hotā hai</div>
+  <div class="roman-line">ʻIshq se dil mēṅ dard hotā hai</div>
+  <div class="jp-line">恋により顔は蒼白となり<br>恋により心に痛みが生まれる</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق ہی کا خراب ہے کاشانہ</div>
+  <div class="urdu-line">عشق سے ایک خانہ آباد واں</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq hī kā kharāb hai kāshānah</div>
+  <div class="roman-line">ʻIshq se ēk khānah ābād vahāṅ</div>
+  <div class="jp-line">恋によって荒廃する家もあり<br>恋によって栄える家もある</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق لایا ہے آفتیں کیا کیا</div>
+  <div class="urdu-line">اس سے اٹھیں قیامتیں کیا کیا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq lāyā hai āfatēṅ kyā kyā</div>
+  <div class="roman-line">Is se uṭhīṅ qiyāmatēṅ kyā kyā</div>
+  <div class="jp-line">恋はいかなる災厄をもたらしたか<br>これにより幾多の審判の日が訪れた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق نے چھاتیاں جلائی ہیں</div>
+  <div class="urdu-line">آگئیں کس کس ضم لگائی میں</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq ne chhātiyāṅ jalāʼī haiṅ</div>
+  <div class="roman-line">Ā gaʼīṅ kis kis ẓamm lagāʼī mēṅ</div>
+  <div class="jp-line">恋は胸を焼き尽くした<br>いかなる非難がわが身に降りかかったか</div>
+</div>
+
+<div class="page-marker">p. 919</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>序文の続き（p. 919）では、恋に落ちた者たちの姿が列挙される。ある者は涙で目を潰し、ある者は頭に灰をかぶり、理知ある者は狂人となり、富める者は乞食に堕ちた。恋は人を故郷から追い、分断と再会の苦しみをもたらし、夜鶯（ʻandalīb）を枝から引き離す。恋にはある処で損失、ある処で完成がある。ミールは自らもこの恋の災いに巻き込まれたと告白し、七つの恋の体験を語り始める。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق میں ایک جی کو کھو بیٹھے</div>
+  <div class="urdu-line">ایک آنکھوں کو روئے رو بیٹھے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq mēṅ ēk jī ko kho baiṭhe</div>
+  <div class="roman-line">Ēk āṅkhoṅ ko roʼe ro baiṭhe</div>
+  <div class="jp-line">恋のなかである者は命を失い<br>ある者は泣いて泣いて目を潰した</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق باعث ہوا وطن چھوڑے</div>
+  <div class="urdu-line">پرمرغ کپڑے گئے جین چھوڑے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq bāʻis̱ huʼā vaṭan chhoṛe</div>
+  <div class="roman-line">Par-murgh kaṛpe gaʼe jīn chhoṛe</div>
+  <div class="jp-line">恋が原因で故郷を捨て<br>鳥のように翼を失い、すべてを捨てた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">منفصل رونے کا سبب ہے عشق</div>
+  <div class="urdu-line">عشق سے تفری ہے حریفہ سرد</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Munfaṣil rone kā sabab hai ʻishq</div>
+  <div class="roman-line">ʻIshq se tafrī hai ḥarīfah-yi sard</div>
+  <div class="jp-line">絶え間なき涙の原因は恋<br>恋からの逃避は冷たき競争相手</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">عشق کے دل نگار ستارے ہیں</div>
+  <div class="urdu-line">ان نے کیا کیا بجو ان یارے ہیں</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻIshq ke dil-nigār sitāre haiṅ</div>
+  <div class="roman-line">Un ne kyā kyā bujū un yāre haiṅ</div>
+  <div class="jp-line">恋の心に描かれし者たちは星のよう<br>彼らは何と探し求めることか、あの恋人たちは</div>
+</div>
+
+<div class="page-marker">p. 920</div>
+
+<div class="bayt">
+  <div class="urdu-line">عاشقِ زار مسیدا نام ہوا</div>
+  <div class="urdu-line">اس بلا سے مجھے بھی کام ہوا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">ʻĀshiq-i zār masīdā nām huʼā</div>
+  <div class="roman-line">Is balā se mujhe bhī kām huʼā</div>
+  <div class="jp-line">嘆く恋人の名は知られるようになった<br>この災いのうちに我もまた巻き込まれた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">قصّہ میرا بھی سانحہ ہے عجب</div>
+  <div class="urdu-line">کہ محبت سے یاں ہے حریبِ کلام</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Qiṣṣah mērā bhī sāniḥah hai ʻajab</div>
+  <div class="roman-line">Kih muḥabbat se yāṅ hai gharīb-i kalām</div>
+  <div class="jp-line">わが物語もまた驚くべき出来事<br>愛ゆえにここに奇妙な言葉がある</div>
+</div>
+
+<!-- ===== MU'AMALAH I ===== -->
+<div class="section-head">
+  <div class="urdu">معاملہ اوّل</div>
+  <div class="roman">Muʻāmalah-yi Avval</div>
+  <div class="jp">第一の恋</div>
+  <div class="page-ref">pp. 920–921</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>ある人と親しくなる。はじめは穏やかな交友だったが、やがて相手の仕草と魅力に心を奪われる。相手の気まぐれな視線、約束と裏切り——恋人は時に親しく、時に冷たく、詩人の心は翻弄される。やがて恋人は去り、詩人はひとり残される。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">ایک صاحب سے جی لگا سیدا</div>
+  <div class="urdu-line">اُن کے عشوہ دل نے دل ٹھگا میرا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ēk ṣāḥib se jī lagā sīdhā</div>
+  <div class="roman-line">Un ke ʻishvah-yi dil ne dil ṭhagā mērā</div>
+  <div class="jp-line">ある人にまっすぐ心を寄せた<br>その人の媚態がわが心を騙した</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">ابتدا میں تو یہ رہی صحبت</div>
+  <div class="urdu-line">نام سے اُن کے تھی مجھے الفت</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ibtidā mēṅ to yih rahī ṣuḥbat</div>
+  <div class="roman-line">Nām se un ke thī mujhe ulfat</div>
+  <div class="jp-line">はじめはこのような交友であった<br>名前だけで私はその人に愛着を覚えた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">بخت برگشتہ پھر جو بار ہوئے</div>
+  <div class="urdu-line">الگ طریح مجھ سے وسے رد پاریئے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Bakht bar-gashtah phir jo bār huʼe</div>
+  <div class="roman-line">Alag ṭarīḥ mujh se ... pārīʼe</div>
+  <div class="jp-line">運命が翻ると再び重荷となり<br>別の仕方で私から離れていった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">وسے تو ہر چند اپنے طور کے تھے</div>
+  <div class="urdu-line">کرتے ظاہر میں اختیاط بہت</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Vaise to har chand apne ṭaur ke the</div>
+  <div class="roman-line">Karte ẓāhir mēṅ iḥtiyāṭ bahut</div>
+  <div class="jp-line">表向きは自分の流儀に従いながらも<br>人前では極めて慎重に振る舞っていた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">بات کی طرز میری ہی دھاتی</div>
+  <div class="urdu-line">میر ہی آ زوردگی نہ خوشی تو تی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Bāt kī ṭarz mērī hī dhātī</div>
+  <div class="roman-line">Mērī āzurdagī na khushī to tī</div>
+  <div class="jp-line">話し方は私に寄り添うようでいて<br>私の悲しみも喜びも気にかけなかった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">پیار چندن سے پھر نکلنے لگا</div>
+  <div class="urdu-line">کہیں دیکھوں تو بات دیر کہیں</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Pyār chandan se phir nikalne lagā</div>
+  <div class="roman-line">Kahīṅ dēkhoṅ to bāt dēr kahīṅ</div>
+  <div class="jp-line">やがて愛が表に現れ始め<br>見つめれば話は長くなり</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کچھ بچھا ازا مجھ کو دینے لگے</div>
+  <div class="urdu-line">میں جو ملتا آتا قسم تو ہو مرحم</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kuchh bichhā āzā mujh ko dēne lage</div>
+  <div class="roman-line">Mēṅ jo miltā ātā qasam to ho marḥam</div>
+  <div class="jp-line">少しずつ私に何かを与え始め<br>私が会いに行けば誓って慰めとなった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">ایک دو دن میں بعد رنج خیال</div>
+  <div class="urdu-line">جو گذرتی تھی کچھ یہ میں کمت</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ēk do din mēṅ baʻd ranj-i khayāl</div>
+  <div class="roman-line">Jo guzartī thī kuchh yih mēṅ kumat</div>
+  <div class="jp-line">一日二日のうちに想像の苦しみの後<br>過ぎ去ったものは何か、この逆境のなかで</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">دیکھو کر روئے آپ بھی روئے</div>
+  <div class="urdu-line">دل دہی کرتے جتنک سوئے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Dēkho kar roʼe āp bhī roʼe</div>
+  <div class="roman-line">Dil-dahī karte jatnak soʼe</div>
+  <div class="jp-line">見て泣いた、自分もまた泣いた<br>心を励ましながらもついに眠りに落ちた</div>
+</div>
+
+<!-- ===== MU'AMALAH II ===== -->
+<div class="section-head">
+  <div class="urdu">معاملہ دوم</div>
+  <div class="roman">Muʻāmalah-yi Duvvum</div>
+  <div class="jp">第二の恋</div>
+  <div class="page-ref">pp. 921–924</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>最も長い物語。長い交際（ṣuḥbat）を経て、恋人の美しさに深く魅了される。唇はシーリーン（甘美）のごとく、頬は薔薇のごとく、まつ毛は矢のごとし。恋人との親密な日々、秘密の逢瀬、そして突然の別離——恋人は旅立ち、詩人は狂気と嘆きに沈む。やがて再会の望みも断たれ、絶望のうちに物語は終わる。</p>
+</div>
+
+<div class="page-marker">p. 921</div>
+
+<div class="bayt">
+  <div class="urdu-line">ایک مدت تلک یہ صحبت تھی</div>
+  <div class="urdu-line">کبھو الفت کبھو یہ کلفت تھی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ēk muddat talak yih ṣuḥbat thī</div>
+  <div class="roman-line">Kabhū ulfat kabhū yih kulfat thī</div>
+  <div class="jp-line">しばらくの間このような交友があった<br>時に愛情、時にこのような苦悩であった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">رفتہ رفتہ سلوک پیچ آیا</div>
+  <div class="urdu-line">ہاتھ پاؤں کو اپنے لگوایا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Raftah raftah sulūk pēch āyā</div>
+  <div class="roman-line">Hāth pāʼoṅ ko apne lagvāyā</div>
+  <div class="jp-line">次第に態度がねじれてきた<br>手足を〔マッサージに〕あてがわせた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">گاہ بیگاہ پاؤں پھیلاتے</div>
+  <div class="urdu-line">میری آنکھوں سے تلوے ملواتے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Gāh bē-gāh pāʼoṅ phailāte</div>
+  <div class="roman-line">Mērī āṅkhoṅ se talve malvāte</div>
+  <div class="jp-line">時折足を伸ばしては<br>私の目で足裏を揉ませた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">دیکھنے میں تو پالسا لی تھی</div>
+  <div class="urdu-line">حسن سے چاں یہ نہ خالی تھی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Dēkhne mēṅ to pālsā lī thī</div>
+  <div class="roman-line">Ḥusn se chāṅ yih na khālī thī</div>
+  <div class="jp-line">見た目は磨き抜かれて<br>美の月は欠けることなく</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کیا کہوں کم ہیں ایسے شیریں گو</div>
+  <div class="urdu-line">وہ زباں کا خلش میرے منھ میں ہو</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kyā kahoṅ kam haiṅ aise shīrīṅ-go</div>
+  <div class="roman-line">Vuh zabāṅ kā khalish mēre muṅh mēṅ ho</div>
+  <div class="jp-line">何と言おう、あれほど甘美な話し手は稀<br>あの舌の棘が我が口に</div>
+</div>
+
+<div class="page-marker">pp. 922–923</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>第二の恋の続き。恋人の唇、歯、えくぼ、髪——その美の描写が展開される。恋人の眼差しは酒杯のごとく詩人を酔わせ、恋人のそっけない態度は詩人の心を引き裂く。夜ごとの逢瀬、朝の別れ、嫉妬と猜疑。やがて恋人の態度が冷え、訪れが途絶え、詩人は荒れた心のまま取り残される。長い嘆きの後、この恋は「もはや詳述する場ではない（یاں نہ تفصیل کرنے کا تھا مقام）」と結ばれる。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">وہ کعبت دست راحت جاں ہے</div>
+  <div class="urdu-line">کیا بیاں خوبی شکم کو کرے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Vuh kaʻbat-i dast-i rāḥat-i jāṅ hai</div>
+  <div class="roman-line">Kyā bayāṅ khūbī-yi shakam ko kare</div>
+  <div class="jp-line">あの手は魂の安らぎのカアバ神殿<br>その腹の美しさを如何に語ろうか</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">یاں نہ تفصیل کرنے کا تھا مقام</div>
+  <div class="urdu-line">کہ محبت سے یاں ہے حریبِ کلام</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Yāṅ na tafṣīl karne kā thā maqām</div>
+  <div class="roman-line">Kih muḥabbat se yāṅ hai gharīb-i kalām</div>
+  <div class="jp-line">ここは詳述する場ではなかった<br>愛ゆえにここには言葉にならぬものがある</div>
+</div>
+
+<!-- ===== MU'AMALAH III ===== -->
+<div class="section-head">
+  <div class="urdu">معاملہ سوم</div>
+  <div class="roman">Muʻāmalah-yi Sivvum</div>
+  <div class="jp">第三の恋</div>
+  <div class="page-ref">p. 924</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>ある日、絨毯の上に座っていると、相手が足で杯を倒した——何気ない仕草から恋が始まる。痛みと優しさが入り混じる交わり。絨毯の上の二人。彼の人の仕草を思い出すたび、懐かしさが込み上げる。やがて態度が変わり、互いの「実」（ḥāl）を隠すようになる。短い恋。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">ایک دن فرش پر بیٹھا میرا ہاتھ</div>
+  <div class="urdu-line">پاؤں سے ایک قابنکلی ہل ڈالی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ēk din farsh par baiṭhā mērā hāth</div>
+  <div class="roman-line">Pāʼoṅ se ēk ... hal ḍālī</div>
+  <div class="jp-line">ある日、絨毯の上に私の手が置かれていた<br>足で一つの杯を倒してみせた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">یاد آتے ہیں ایسے لطف جواب</div>
+  <div class="urdu-line">دروسے کی جو ایں سنے بیتا بلی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Yād āte haiṅ aise luṭf javāb</div>
+  <div class="roman-line">Dar-vasē kī jo ēṅ sune bītā balī</div>
+  <div class="jp-line">あのような優美な返答が思い出される<br>あちらの方の語りを聞いた者は</div>
+</div>
+
+<!-- ===== MU'AMALAH IV ===== -->
+<div class="section-head">
+  <div class="urdu">معاملہ چہارم</div>
+  <div class="roman">Muʻāmalah-yi Chahārum</div>
+  <div class="jp">第四の恋</div>
+  <div class="page-ref">p. 924</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>ある日、パーン（betel leaf）を差し出す者がいた。その唇は紅く、口元の赤さは夕映えのよう。しかしその出会いは束の間——わずか数行の詩のなかで、恋は燃え上がり、そして消える。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">ایک دن پان وسے چباتے تھے</div>
+  <div class="urdu-line">سرخ لب اُن کے بھکرکے بھاتے تھے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ēk din pān vaise chabāte the</div>
+  <div class="roman-line">Surkh lab un ke bhakr ke bhāte the</div>
+  <div class="jp-line">ある日、そのようにパーンを噛んでいた<br>紅い唇がきらめいて魅力的であった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کہہ اُٹھا ہیں اگر اگال مجھے</div>
+  <div class="urdu-line">بوسے پو نہیں ہے میں کماہاں تیج</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kah uṭhā haiṅ agar agāl mujhe</div>
+  <div class="roman-line">Bose pū nahīṅ hai mēṅ ... tēj</div>
+  <div class="jp-line">思わず言ってしまった——もし吐き出すなら私に<br>口づけだけでは足りないのだ、この渇望は</div>
+</div>
+
+<!-- ===== MU'AMALAH V ===== -->
+<div class="section-head">
+  <div class="urdu">معاملہ پنجم</div>
+  <div class="roman">Muʻāmalah-yi Panjum</div>
+  <div class="jp">第五の恋</div>
+  <div class="page-ref">pp. 924–925</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>美の語り手との恋。この恋人の美しさは「歴史にも例がない（منقبت）」と讃えられる。ある者の息を呑む美貌——頬は花園、目は水仙——を前にして、詩人は言葉を失う。この恋は片想いか相思か、定かでないまま語られる。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">منقبت ایک مجھ سے کہسر ایا</div>
+  <div class="urdu-line">جس کا ایں نے صلہ نہیں پایا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Manqabat ēk mujh se kah-sar āyā</div>
+  <div class="roman-line">Jis kā ēṅ ne ṣilah nahīṅ pāyā</div>
+  <div class="jp-line">一つの讃辞が私の口から零れ出た<br>その報いを誰も受け取らなかった</div>
+</div>
+
+<!-- ===== MU'AMALAH VI ===== -->
+<div class="section-head">
+  <div class="urdu">معاملہ ششم</div>
+  <div class="roman">Muʻāmalah-yi Shashum</div>
+  <div class="jp">第六の恋</div>
+  <div class="page-ref">pp. 925–926</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>最も劇的な恋。燃える肝臓（jigar）、焼けた胸（dāgh-i kabāb）——恋人の面影が夢にまで現れる。月のように美しい顔、闇夜の逢瀬、星のような瞳。寝床の上での優美な姿、花の薫りに満ちた部屋——しかし夜明けとともにすべては消え去る。恋人の素っ気ない態度、戯れの約束、そして裏切り。詩人は心を砕かれ、廃墟のように荒れ果てる。</p>
+</div>
+
+<div class="page-marker">p. 925</div>
+
+<div class="bayt">
+  <div class="urdu-line">نگروں بن جگر تب داغ کباب</div>
+  <div class="urdu-line">صورت اُن کی خیال میں ہر دم</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Nigroṅ bin jigar tab dāgh-i kabāb</div>
+  <div class="roman-line">Ṣūrat un kī khayāl mēṅ har dam</div>
+  <div class="jp-line">見なければ肝臓は焼き肉の烙印のよう<br>あの人の姿が常に想像のなかに</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">فرش پر پاؤں یہ غبار آ اود</div>
+  <div class="urdu-line">میں تو انشا وہ عوجمز دنیاز</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Farsh par pāʼoṅ yih ghubār ā ūd</div>
+  <div class="roman-line">Mēṅ to ānshā vuh ʻawjmaz danyāz</div>
+  <div class="jp-line">絨毯の上に足跡が埃のように<br>私は——あの方の秘められた祈り</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">شب کنھی صورت خیالی سے</div>
+  <div class="urdu-line">دن کو ہوں میں شکست حال سے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Shab kunhī ṣūrat-i khayālī se</div>
+  <div class="roman-line">Din ko hoṅ mēṅ shikast-i ḥāl se</div>
+  <div class="jp-line">夜は想像の姿によって〔慰められ〕<br>昼は打ちひしがれた状態にある</div>
+</div>
+
+<!-- ===== MU'AMALAH VII ===== -->
+<div class="section-head">
+  <div class="urdu">معاملہ ہفتم</div>
+  <div class="roman">Muʻāmalah-yi Haftum</div>
+  <div class="jp">第七の恋</div>
+  <div class="page-ref">pp. 926–928</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>最後の恋にして最も深い恋。長い別離（firāq）を経て、ついに再会——しかしそれは幻のようにはかない。恋人の姿を追い求めて街を彷徨い、噂に惑わされ、旅人の報せに一喜一憂する。やがて自らの老いと衰えを自覚し、恋の終わりを悟る。最終連節では、すべての恋が過ぎ去った今、詩人は静かな諦念のうちに筆を置く。</p>
+</div>
+
+<div class="page-marker">p. 926</div>
+
+<div class="bayt">
+  <div class="urdu-line">بارے کچھ بڑھ گیا ہمارا رابط</div>
+  <div class="urdu-line">تب ہو انیچ سے یہ رفع حجاب</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Bāre kuchh baṛh gayā hamārā rābiṭ</div>
+  <div class="roman-line">Tab ho anēch se yih rafʻ-i ḥijāb</div>
+  <div class="jp-line">やがて我らの絆はいくらか深まった<br>そしてついにこの面紗（ヴェール）が取り除かれた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">ایک دن ہم وسے منفصل نیٹھے</div>
+  <div class="urdu-line">ہو سکا پھر نہ دو طرف سے ضبط</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ēk din ham vaise munfaṣil baiṭhe</div>
+  <div class="roman-line">Ho sakā phir na do ṭaraf se ẓabṭ</div>
+  <div class="jp-line">ある日、我々は離れて座っていたが<br>双方とも自制することができなくなった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">شوق کا سب کسا قبول ہوا</div>
+  <div class="urdu-line">واسطے جیکے تھا میں آ داوزه</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Shauq kā sab kisā qabūl huʼā</div>
+  <div class="roman-line">Vāsiṭe jēke thā mēṅ ā dāvazah</div>
+  <div class="jp-line">熱望のすべてが受け入れられ<br>仲介の手はずは整った</div>
+</div>
+
+<div class="page-marker">p. 927</div>
+
+<div class="summary">
+  <div class="label">Synopsis · 梗概</div>
+  <p>p. 927では、第七の恋のなかで最も私的な場面が展開される。恋人の姿が「肖像画（taṣvīr）」のように心に焼きついていること、毎日毎夜想い続けること、友人や知人からの噂話に翻弄されること。やがて「時の手（dast-i dahr）」が二人を引き裂き、詩人は再び孤独に陥る。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">گر چہ روزانہ بھی تصور تھا</div>
+  <div class="urdu-line">لیکن اندوہ سے کمتر تھا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Gar chih rozānah bhī taṣavvur thā</div>
+  <div class="roman-line">Lēkin andoh se kamtar thā</div>
+  <div class="jp-line">たとえ日々想像のなかにいたとしても<br>しかし悲しみには及ばなかった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کہیں تصویر سی نظر آئی</div>
+  <div class="urdu-line">کبھی دل اُن کے رو ہوئیں ہے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kahīṅ taṣvīr sī naẓar āʼī</div>
+  <div class="roman-line">Kabhī dil un ke rū huʼīṅ hai</div>
+  <div class="jp-line">ある処で肖像画のような姿が目に映った<br>時折、心はあの人の方を向く</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کتنے روز دن جدا تو مجھ سے رہ</div>
+  <div class="urdu-line">کہ نشانِ بلا ہوں الفت و کیش</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kitne roz din judā to mujh se rah</div>
+  <div class="roman-line">Kih nishān-i balā hoṅ ulfat o kēsh</div>
+  <div class="jp-line">何日、私から離れていたことか<br>災いの印となった愛情と愛着よ</div>
+</div>
+
+<div class="page-marker">p. 928</div>
+
+<div class="bayt">
+  <div class="urdu-line">جی میں کچھ آیا رو کے بیٹھے ر ما</div>
+  <div class="urdu-line">دل زردہ چپکا ہو کے بیٹھے رہا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Jī mēṅ kuchh āyā ro ke baiṭhe rahā</div>
+  <div class="roman-line">Dil-zurdah chapkā ho ke baiṭhe rahā</div>
+  <div class="jp-line">心に何かが去来し、泣いて座ったまま<br>傷ついた心を抱えて、黙って座り続けた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کوئی آیا جو واں سے جی آیا</div>
+  <div class="urdu-line">سونہ آیا کبھی کبھی آ یا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Koʼī āyā jo vāṅ se jī āyā</div>
+  <div class="roman-line">Sonah āyā kabhī kabhī āyā</div>
+  <div class="jp-line">誰かがあちらから来れば心が生き返り<br>眠りが来た、時折やって来た</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">خون دل کب تلک پئیں گے ہم</div>
+  <div class="urdu-line">آہ کیا کیا بیاں کروں خوبی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Khūn-i dil kab talak pīʼēṅ ge ham</div>
+  <div class="roman-line">Āh kyā kyā bayāṅ karoṅ khūbī</div>
+  <div class="jp-line">いつまで心の血を飲み続けるのか<br>ああ、いかなる美しさを語ればよいのか</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">لطف سبزہ دل حسال پر ہر آں</div>
+  <div class="urdu-line">تنگ ہو کر نہ باست کو کمست</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Luṭf-i sabzah-yi dil-i ḥāl par har āṅ</div>
+  <div class="roman-line">Tang ho kar na bāst ko kumast</div>
+  <div class="jp-line">心の緑地の優美さが常に目の前にあり<br>苦しくなっても弱音を吐かず</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">تازہ ہر دم مروّت و احسان</div>
+  <div class="urdu-line">لطف سے یو جھکنا کہ خوش ہے تو</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Tāzah har dam muruvvat o iḥsān</div>
+  <div class="roman-line">Luṭf se yūṅ jhuknā kih khush hai to</div>
+  <div class="jp-line">常に新鮮な礼節と恩恵<br>優しさでこう身をかがめる——汝が幸せなら</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کس طرح کاغذوں بھر کے ادغات</div>
+  <div class="urdu-line">آتے جیٹو ں میں جا نئے ہم بھی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kis ṭaraḥ kāghaz̤oṅ bhar ke idghāt</div>
+  <div class="roman-line">Āte jēṭoṅ mēṅ jā naʼe ham bhī</div>
+  <div class="jp-line">いかにして紙を書き連ねた手紙を<br>夏の季節にも我々は行き来した</div>
+</div>
+
+<!-- Final couplet -->
+<div class="bayt" style="border-left-color: var(--accent);">
+  <div class="urdu-line">مدّت بحر اگر بستا م ہو لی</div>
+  <div class="urdu-line">ورنہ اپنی تو وسع شام ہو لی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Muddat bahr agar bistām holī</div>
+  <div class="roman-line">Varnah apnī to vasʻ-i shām holī</div>
+  <div class="jp-line">もし海の広さほどの時があったなら——<br>さもなくば、わが力はここ黄昏に尽きた</div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<div class="note">
+  <strong>Editorial Note / <span class="jp">編集注記</span></strong><br><br>
+  <span class="jp">本テキストは、Kulliyāt-i Mīr Taqī Mīr（アースィー版、1931年）pp. 918–928 の画像（ナスタアリーク体活字）から目視で読み取り、転写したものです。底本は画像のみのPDF（テキストレイヤーなし）であり、OCR処理は行っておりません。</span><br><br>
+  <span class="jp">ナスタアリーク体の手書き風活字は解読が困難な箇所があり、一部の語句には読み取りの不確実性が残ります。確定的な校訂テキストが必要な場合は、以下の版と比較照合されることをお勧めします：</span><br><br>
+  <em>Kulliyāt-i Mīr</em>, ed. Maulvī ʻAbd al-Ḥaq (Aurangabad, 1928)<br>
+  <em>Kulliyāt-i Mīr</em>, ed. Maulānā ʻAbd al-Bārī Āsī, Tartīb-i Jadīd (1931) — <span class="jp">本底本</span><br><br>
+  <span class="jp">ALA-LCローマ字化はLibrary of Congress の Urdu Romanization Table に準拠しています。日本語訳は逐語訳ではなく、詩の意味と雰囲気を伝えることを目指した意訳です。</span>
+</div>

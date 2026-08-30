@@ -1,0 +1,854 @@
+<title>Kulliyāt-i Mīr 目次</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+  :root {
+    --bg: #f6f1e9;
+    --bg-card: #fff;
+    --text: #2c2419;
+    --text-muted: #6b5e4f;
+    --text-light: #8a7d6e;
+    --accent: #8b2a1a;
+    --accent-light: #c4533f;
+    --gold: #a67c3d;
+    --gold-light: #d4a95a;
+    --border: #d9ceb8;
+    --border-light: #e8dfcf;
+    --section-bg: rgba(166,124,61,0.05);
+    --shadow: rgba(44,36,25,0.08);
+    --masnavi: #5b6e3e;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1712;
+      --bg-card: #252017;
+      --text: #e2d9c9;
+      --text-muted: #a99d8a;
+      --text-light: #7d7164;
+      --accent: #d4735f;
+      --accent-light: #e8967e;
+      --gold: #d4a95a;
+      --gold-light: #a67c3d;
+      --border: #3d3529;
+      --border-light: #2f2a20;
+      --section-bg: rgba(212,169,90,0.06);
+      --shadow: rgba(0,0,0,0.3);
+      --masnavi: #9db87a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1712;
+    --bg-card: #252017;
+    --text: #e2d9c9;
+    --text-muted: #a99d8a;
+    --text-light: #7d7164;
+    --accent: #d4735f;
+    --accent-light: #e8967e;
+    --gold: #d4a95a;
+    --gold-light: #a67c3d;
+    --border: #3d3529;
+    --border-light: #2f2a20;
+    --section-bg: rgba(212,169,90,0.06);
+    --shadow: rgba(0,0,0,0.3);
+    --masnavi: #9db87a;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', 'Noto Serif JP', Georgia, serif;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    line-height: 1.6;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .header .urdu-title {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--accent);
+    direction: rtl;
+    margin-bottom: 0.3rem;
+    line-height: 1.8;
+  }
+  .header .roman-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    margin-bottom: 0.15rem;
+  }
+  .header .jp-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+  }
+  .header .author {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 0.15rem;
+  }
+  .header .author-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    direction: rtl;
+    line-height: 1.8;
+  }
+  .header .dates {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+  }
+  .header .edition {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .toc-label {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .toc-label .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.3em;
+    display: block;
+    margin-top: 0.15rem;
+    font-weight: 500;
+  }
+  .toc-source {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+
+  /* Section headings */
+  .volume {
+    margin: 2.5rem 0 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--gold);
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+  }
+  .volume .roman {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+  }
+  .volume .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* TOC entries */
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .toc-entry {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border-light);
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0 0.5rem;
+    align-items: start;
+  }
+  .toc-entry:last-child { border-bottom: none; }
+
+  .entry-num {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    padding-top: 0.15rem;
+    text-align: right;
+  }
+  .entry-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .entry-main {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0 0.8rem;
+  }
+  .entry-roman {
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .entry-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    direction: rtl;
+    line-height: 1.8;
+  }
+  .entry-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  /* Divan highlight */
+  .divan-entry .entry-roman {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Masnavi sub-group */
+  .sub-group {
+    margin: 0.6rem 0 0.3rem 2.5rem;
+    padding: 0.6rem 0.9rem;
+    background: var(--section-bg);
+    border-left: 2px solid var(--border);
+    border-radius: 0 4px 4px 0;
+  }
+  .sub-group .sub-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .sub-group .sub-title .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+  }
+  .sub-entry {
+    padding: 0.3rem 0;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    gap: 0 0.4rem;
+    font-size: 0.9rem;
+  }
+  .sub-entry .sub-num {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.78rem;
+    color: var(--text-light);
+    text-align: right;
+    padding-top: 0.1rem;
+  }
+  .sub-entry .sub-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+  }
+  .sub-entry .sub-roman {
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .sub-entry .sub-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+  }
+  .sub-entry.highlight .sub-roman {
+    color: var(--masnavi);
+    font-weight: 600;
+  }
+
+  .section-divider {
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--border);
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+  }
+
+  .footer-note {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+  .footer-note p { margin: 0.4rem 0; }
+  .footer-note .label {
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 500px) {
+    body { padding: 2rem 1rem 3rem; }
+    .header .urdu-title { font-size: 1.8rem; }
+    .header .roman-title { font-size: 1.3rem; }
+    .sub-group { margin-left: 1.2rem; padding: 0.5rem 0.7rem; }
+  }
+</style>
+
+<div class="header">
+  <div class="urdu-title">کلیاتِ میر</div>
+  <div class="roman-title">Kulliyāt-i Mīr</div>
+  <div class="jp-title">ミール全集</div>
+  <div class="author">Mīr Muḥammad Taqī Mīr</div>
+  <div class="author-urdu">میر محمد تقی میر</div>
+  <div class="dates">1122–1225 AH / 1722–1810 CE</div>
+  <div class="edition">Fihrist based on Maulānā ʻAbd al-Bārī Āsī edition (Tartīb-i Jadīd, 1931)<br>Cross-referenced with Maulvī ʻAbd al-Ḥaq edition (Aurangabad, 1928)</div>
+</div>
+
+<div class="toc-label">
+  فہرست مضامین
+  <span class="jp">目　次</span>
+</div>
+<div class="toc-source">55 sections · approx. 970 pages</div>
+
+<!-- I. Muqaddimah -->
+<ol class="toc-list">
+  <li class="toc-entry">
+    <span class="entry-num">1</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Muqaddimah</span>
+        <span class="entry-urdu">مقدمہ</span>
+      </div>
+      <div class="entry-jp">序文──伝記的・文献学的解説（家系図 Shajara-yi Khāndān-i Mīr 付き）</div>
+    </div>
+  </li>
+</ol>
+
+<!-- Ghazaliyat: Six Divans -->
+<div class="volume">
+  <span class="roman">Ghazalīyāt — Shish Dīvān</span>
+  <span class="jp">ガザル詩集──六巻のディーヴァーン</span>
+</div>
+
+<ol class="toc-list">
+  <li class="toc-entry divan-entry">
+    <span class="entry-num">2</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Dīvān-i Avval</span>
+        <span class="entry-urdu">دیوانِ اوّل</span>
+      </div>
+      <div class="entry-jp">第一詩集──ウルドゥー・ガザル集（字母順配列）</div>
+    </div>
+  </li>
+  <li class="toc-entry divan-entry">
+    <span class="entry-num">3</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Dīvān-i Duvvum</span>
+        <span class="entry-urdu">دیوانِ دوم</span>
+      </div>
+      <div class="entry-jp">第二詩集──ウルドゥー・ガザル集</div>
+    </div>
+  </li>
+  <li class="toc-entry divan-entry">
+    <span class="entry-num">4</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Dīvān-i Sivvum</span>
+        <span class="entry-urdu">دیوانِ سوم</span>
+      </div>
+      <div class="entry-jp">第三詩集──ウルドゥー・ガザル集</div>
+    </div>
+  </li>
+  <li class="toc-entry divan-entry">
+    <span class="entry-num">5</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Dīvān-i Chahārum</span>
+        <span class="entry-urdu">دیوانِ چہارم</span>
+      </div>
+      <div class="entry-jp">第四詩集──ウルドゥー・ガザル集</div>
+    </div>
+  </li>
+  <li class="toc-entry divan-entry">
+    <span class="entry-num">6</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Dīvān-i Panjum</span>
+        <span class="entry-urdu">دیوانِ پنجم</span>
+      </div>
+      <div class="entry-jp">第五詩集──ウルドゥー・ガザル集</div>
+    </div>
+  </li>
+  <li class="toc-entry divan-entry">
+    <span class="entry-num">7</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Dīvān-i Shishum</span>
+        <span class="entry-urdu">دیوانِ ششم</span>
+      </div>
+      <div class="entry-jp">第六詩集──ウルドゥー・ガザル集（ラクナウ時代）</div>
+    </div>
+  </li>
+</ol>
+
+<!-- Other poetic forms -->
+<div class="volume">
+  <span class="roman">Aṣnāf-i Dīgar</span>
+  <span class="jp">その他の詩形</span>
+</div>
+
+<ol class="toc-list">
+  <li class="toc-entry">
+    <span class="entry-num">8</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Ghazalīyāt (Mutafarriq)</span>
+        <span class="entry-urdu">غزلیات</span>
+      </div>
+      <div class="entry-jp">ガザル（諸ディーヴァーン未収録分）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">9</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Taẓmīn</span>
+        <span class="entry-urdu">تضمین</span>
+      </div>
+      <div class="entry-jp">タズミーン（引用挿入詩）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">10</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Musaddas</span>
+        <span class="entry-urdu">مسدس</span>
+      </div>
+      <div class="entry-jp">ムサッダス（六行詩）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">11</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Mukhammas</span>
+        <span class="entry-urdu">مخمس</span>
+      </div>
+      <div class="entry-jp">ムハンマス（五行詩）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">12</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Rubāʻīyāt</span>
+        <span class="entry-urdu">رباعیات</span>
+      </div>
+      <div class="entry-jp">ルバーイー（四行詩）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">13</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Rubāʻīyāt-i Mustazād</span>
+        <span class="entry-urdu">رباعیات مستزاد</span>
+      </div>
+      <div class="entry-jp">ルバーイー・ムスタザード（増補四行詩）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">14</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Qiṭaʻāt</span>
+        <span class="entry-urdu">قطعات</span>
+      </div>
+      <div class="entry-jp">キトア（断章詩）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">15</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Tarkīb Band</span>
+        <span class="entry-urdu">ترکیب بند</span>
+      </div>
+      <div class="entry-jp">タルキーブ・バンド（連詩）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">16</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Naʻt va Manqabat</span>
+        <span class="entry-urdu">نعت و منقبت</span>
+      </div>
+      <div class="entry-jp">ナアト（預言者讃歌）・マンカバト（聖者讃歌）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">17</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Muṣaḥḥaf Band</span>
+        <span class="entry-urdu">مصحف بند</span>
+      </div>
+      <div class="entry-jp">ムサッハフ・バンド</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">18</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Mars̱iyāt</span>
+        <span class="entry-urdu">مرثیات</span>
+      </div>
+      <div class="entry-jp">マルスィヤ（挽歌──カルバラーの殉教者哀悼）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">19</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Sitā'ishā-yi Guz̤ārgān</span>
+        <span class="entry-urdu">ستائشہائے گذارگان</span>
+      </div>
+      <div class="entry-jp">故人讃辞</div>
+    </div>
+  </li>
+</ol>
+
+<div class="section-divider">· · ·</div>
+
+<!-- Masnaviyat -->
+<div class="volume">
+  <span class="roman">Mas̱navīyāt</span>
+  <span class="jp">マスナヴィー（叙事長詩）群</span>
+</div>
+
+<div class="sub-group">
+  <div class="sub-title">Mas̱navīyāt-i Mutafarriq <span class="jp">各種マスナヴィー</span></div>
+  <div class="sub-entry">
+    <span class="sub-num">20</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Jashn-i Maulūd va Gandhā'ī</span>
+      <span class="sub-jp">聖誕祭と香料の詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">21</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī darbayān-i Hōlī</span>
+      <span class="sub-jp">ホーリー祭の詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">22</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Taʻrīf-i Sang va Guhar</span>
+      <span class="sub-jp">宝石と石の讃</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">23</span>
+    <div class="sub-body">
+      <span class="sub-roman">Dar Taʻrīf-i Ālāt-i Sang</span>
+      <span class="sub-jp">石の器具の讃</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">24</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mars̱iyah-i Khurōsh kih dar Khānah-yi Faqīr…</span>
+      <span class="sub-jp">貧者の家の鶏の挽歌</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">25</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī darbayān-i Shahr</span>
+      <span class="sub-jp">都市の叙述</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">26</span>
+    <div class="sub-body">
+      <span class="sub-roman">Hajvīyāt</span>
+      <span class="sub-jp">ハジュヴィヤート（風刺詩）</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">27</span>
+    <div class="sub-body">
+      <span class="sub-roman">Takhmīs dar Baḥr-i Dīgar</span>
+      <span class="sub-jp">タフミース（別韻律）</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">28</span>
+    <div class="sub-body">
+      <span class="sub-roman">Qiṭʻah dar Bāb-i Khvājah Sarā</span>
+      <span class="sub-jp">宦官についての断章</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">29</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī darbayān-i Murgh-i Bāzāñ</span>
+      <span class="sub-jp">鷹狩りの鳥の詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">30</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Bāb-i Khānah-yi Khūd</span>
+      <span class="sub-jp">わが家についての詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">31</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Bāb-i Fānūs-i Nakhud…</span>
+      <span class="sub-jp">灯籠と夜の詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">32</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Vafāt bar Shakl kih Bārāñ…</span>
+      <span class="sub-jp">雨季と洪水の年の詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">33</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Bāb-i… ba-Zabān-i ʻĀm</span>
+      <span class="sub-jp">俗語によるマスナヴィー</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">34</span>
+    <div class="sub-body">
+      <span class="sub-roman">Har chū ʻĀqil nām-i nasī… Tamām-i Vāsht</span>
+      <span class="sub-jp">賢者のあだ名──完</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">35</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Tanbīh al-Juhāl</span>
+      <span class="sub-jp">愚者への訓戒</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">36</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Azhdarnāmah</span>
+      <span class="sub-jp">龍の書</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">37</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Vaqt-i Ātish-bandvār</span>
+      <span class="sub-jp">花火の夜の詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">38</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī dar Bāb-i Gul</span>
+      <span class="sub-jp">薔薇の詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">39</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī darbayān-i Kaz̤ib</span>
+      <span class="sub-jp">虚偽についての詩</span>
+    </div>
+  </div>
+</div>
+
+<!-- Wasokht -->
+<ol class="toc-list" style="margin-top:0.5rem;">
+  <li class="toc-entry">
+    <span class="entry-num">40</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Vāsokht</span>
+        <span class="entry-urdu">واسوخت</span>
+      </div>
+      <div class="entry-jp">ヴァーソーフト（恋人への恨みの詩）</div>
+    </div>
+  </li>
+</ol>
+
+<!-- Masnaviyat-i Shikarnama and other hunting/nature poems -->
+<div class="sub-group">
+  <div class="sub-title">Mas̱navīyāt-i Shikārnāmah <span class="jp">狩猟詩集</span></div>
+  <div class="sub-entry">
+    <span class="sub-num">41</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navīyāt-i Shikārnāmah</span>
+      <span class="sub-jp">狩猟のマスナヴィー群</span>
+    </div>
+  </div>
+</div>
+
+<!-- Love Masnavis — the four great ones -->
+<div class="sub-group" style="border-left-color: var(--masnavi);">
+  <div class="sub-title" style="color: var(--masnavi);">Mas̱navīyāt-i ʻIshqīyah <span class="jp">恋愛マスナヴィー群──四大叙事詩</span></div>
+  <div class="sub-entry">
+    <span class="sub-num">42</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Sāqīnāmah</span>
+      <span class="sub-jp">酒注ぎの歌</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">43</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navīyāt-i Jaz̤bāt-i ʻIshq</span>
+      <span class="sub-jp">恋の激情</span>
+    </div>
+  </div>
+  <div class="sub-entry highlight">
+    <span class="sub-num">44</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Shuʻlah-yi ʻIshq</span>
+      <span class="sub-jp">恋の焔 ★</span>
+    </div>
+  </div>
+  <div class="sub-entry highlight">
+    <span class="sub-num">45</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Daryā-yi ʻIshq</span>
+      <span class="sub-jp">恋の大河 ★</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">46</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī ʻIshqīyah</span>
+      <span class="sub-jp">恋愛詩</span>
+    </div>
+  </div>
+  <div class="sub-entry highlight">
+    <span class="sub-num">47</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Muʻāmalāt-i ʻIshq</span>
+      <span class="sub-jp">恋の諸相 ★ ウルドゥー文学最高峰の恋愛叙事詩</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">48</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Josh-i ʻIshq</span>
+      <span class="sub-jp">恋の熱情</span>
+    </div>
+  </div>
+  <div class="sub-entry">
+    <span class="sub-num">49</span>
+    <div class="sub-body">
+      <span class="sub-roman">Mas̱navī Iʻjāz-i ʻIshq</span>
+      <span class="sub-jp">恋の奇跡</span>
+    </div>
+  </div>
+</ol>
+
+<div class="section-divider">· · ·</div>
+
+<!-- Final sections -->
+<div class="volume">
+  <span class="roman">Mutafarriqāt va Savāniḥ</span>
+  <span class="jp">雑纂・伝記</span>
+</div>
+
+<ol class="toc-list">
+  <li class="toc-entry">
+    <span class="entry-num">50</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Baʻẓ Savāniḥāt-i Mīr</span>
+        <span class="entry-urdu">بعض سوانحات میر</span>
+      </div>
+      <div class="entry-jp">ミールの逸話集</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">51</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Takhmīs dar Bāb-i Shikār… Ḥasb-i Ḥāl-i Khūd</span>
+        <span class="entry-urdu">تخمس دربحر شکار کا حسب حال خود</span>
+      </div>
+      <div class="entry-jp">狩猟に関するタフミース（自伝的）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">52</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Mukhammas dar Ḥāl-i Lashkar</span>
+        <span class="entry-urdu">مخمس در حال لشکر</span>
+      </div>
+      <div class="entry-jp">軍営の五行詩</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">53</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Mas̱navī Fangnāmah</span>
+        <span class="entry-urdu">مثنوی فنگ نامہ</span>
+      </div>
+      <div class="entry-jp">ファング・ナーメ（奇譚）</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">54</span>
+    <div class="entry-body">
+      <div class="entry-main" style="color: var(--masnavi);">
+        <span class="entry-roman" style="color: var(--masnavi); font-weight:600;">Mas̱navī Khvāb-i Khayyāl-i Mīr</span>
+        <span class="entry-urdu">مثنوی خواب خیال میر</span>
+      </div>
+      <div class="entry-jp">ミールの夢と幻想 ★ 四大マスナヴィーの一</div>
+    </div>
+  </li>
+  <li class="toc-entry">
+    <span class="entry-num">55</span>
+    <div class="entry-body">
+      <div class="entry-main">
+        <span class="entry-roman">Mas̱navī Furqat va Duniyā</span>
+        <span class="entry-urdu">مثنوی فرقت و دنیا</span>
+      </div>
+      <div class="entry-jp">別離と現世</div>
+    </div>
+  </li>
+</ol>
+
+<div class="footer-note">
+  <p><span class="label">底本：</span>Kulliyāt-i Mīr, Tartīb-i Jadīd (新編), ed. Maulānā ʻAbd al-Bārī Āsī, 1931. Lytton Library, Aligarh Muslim University所蔵（U32226）。Rekhta.org より PDF（80ページ・目次と序文のみ）。</p>
+  <p><span class="label">参照：</span>Kulliyāt-i Mīr, ed. Maulvī ʻAbd al-Ḥaq, Anjuman-i Taraqqī-yi Urdū, Aurangabad, 1928. Archive.org OCR scan（37,294行・六巻ガザル詩集を収録）。</p>
+  <p><span class="label">★印：</span>四大マスナヴィー──Muʻāmalāt-i ʻIshq（恋の諸相）、Shuʻlah-yi ʻIshq（恋の焔）、Daryā-yi ʻIshq（恋の大河）、Khvāb-i Khayyāl-i Mīr（夢と幻想）。</p>
+  <p><span class="label">凡例：</span>ローマ字表記はALA-LC方式（米国議会図書館翻字法）に準拠。ʻ = ع, ā/ī/ū = 長母音, ḥ/s̱/ṭ/ẓ = 強勢子音, kh/sh/gh = 複合子音。</p>
+</div>
