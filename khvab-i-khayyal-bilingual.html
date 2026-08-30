@@ -1,0 +1,485 @@
+<title>Khvāb-i Khayyāl-i Mīr ミールの夢と幻想</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+  :root {
+    --bg: #f6f1e9;
+    --bg-card: #fffefa;
+    --text: #2a231a;
+    --text-muted: #6b5e4f;
+    --text-light: #8a7d6e;
+    --accent: #8b2a1a;
+    --accent-light: #b84a38;
+    --gold: #a67c3d;
+    --gold-light: #d4a95a;
+    --border: #d9ceb8;
+    --border-light: #e8dfcf;
+    --section-bg: rgba(166,124,61,0.04);
+    --shadow: rgba(44,36,25,0.06);
+    --urdu-color: #3a2c1a;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1714;
+      --bg-card: #252119;
+      --text: #e0d8cc;
+      --text-muted: #a09582;
+      --text-light: #7a6f60;
+      --accent: #d4735e;
+      --accent-light: #e8967f;
+      --gold: #d4a95a;
+      --gold-light: #a67c3d;
+      --border: #3d362c;
+      --border-light: #302a22;
+      --section-bg: rgba(166,124,61,0.06);
+      --shadow: rgba(0,0,0,0.2);
+      --urdu-color: #e8ddd0;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1714;
+    --bg-card: #252119;
+    --text: #e0d8cc;
+    --text-muted: #a09582;
+    --text-light: #7a6f60;
+    --accent: #d4735e;
+    --accent-light: #e8967f;
+    --gold: #d4a95a;
+    --gold-light: #a67c3d;
+    --border: #3d362c;
+    --border-light: #302a22;
+    --section-bg: rgba(166,124,61,0.06);
+    --shadow: rgba(0,0,0,0.2);
+    --urdu-color: #e8ddd0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', 'Georgia', serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.7;
+  }
+
+  .title-block {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+  }
+  .title-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    direction: rtl;
+    margin-bottom: 0.8rem;
+    line-height: 2;
+  }
+  .title-roman {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+  }
+  .title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  .title-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+  }
+  .title-meta .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-style: normal;
+    font-size: 0.85rem;
+  }
+
+  .section-head {
+    text-align: center;
+    margin: 3rem 0 1.5rem;
+    padding: 1.2rem 1rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--section-bg);
+  }
+  .section-head .urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    direction: rtl;
+    line-height: 2;
+    margin-bottom: 0.3rem;
+  }
+  .section-head .roman {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.03em;
+  }
+  .section-head .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+  }
+  .section-head .page-ref {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+  }
+
+  .bayt {
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    background: var(--bg-card);
+    border-radius: 4px;
+    border-left: 3px solid var(--border-light);
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .bayt .urdu-line {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 1.25rem;
+    color: var(--urdu-color);
+    direction: rtl;
+    text-align: center;
+    line-height: 2.2;
+    padding: 0.15rem 0;
+  }
+  .bayt .roman-line {
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.6;
+    padding: 0.1rem 0;
+    font-style: italic;
+  }
+  .bayt .jp-line {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.7;
+    padding: 0.1rem 0;
+    margin-top: 0.3rem;
+  }
+  .bayt .divider {
+    text-align: center;
+    color: var(--border);
+    font-size: 0.7rem;
+    margin: 0.15rem 0;
+    letter-spacing: 0.5em;
+  }
+
+  .summary {
+    margin: 1rem 0 1.5rem;
+    padding: 1rem 1.2rem;
+    background: var(--section-bg);
+    border-radius: 4px;
+    border-left: 3px solid var(--gold);
+  }
+  .summary p {
+    margin: 0.4rem 0;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .summary .label {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+
+  .page-marker {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin: 1.5rem 0 0.5rem;
+    letter-spacing: 0.05em;
+  }
+  .page-marker::before,
+  .page-marker::after {
+    content: '—';
+    margin: 0 0.5em;
+    color: var(--border);
+  }
+
+  .section-intro {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-muted);
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin: 2rem 0;
+    letter-spacing: 0.3em;
+  }
+
+  .note {
+    margin: 2rem 0;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    line-height: 1.7;
+  }
+  .note .jp { font-family: 'Noto Serif JP', serif; }
+
+  @media (max-width: 600px) {
+    body { padding: 1rem 1rem 3rem; }
+    .title-urdu { font-size: 1.5rem; }
+    .title-roman { font-size: 1.2rem; }
+    .bayt { padding: 0.8rem 1rem; }
+    .bayt .urdu-line { font-size: 1.1rem; }
+  }
+</style>
+
+<div class="title-block">
+  <div class="title-urdu">مثنوی خوابِ خیالِ میر</div>
+  <div class="title-roman">Mas̱navī Khvāb-i Khayyāl-i Mīr</div>
+  <div class="title-jp">ミールの夢と幻想</div>
+  <div class="title-meta">
+    Mīr Muḥammad Taqī Mīr (1722–1810)<br>
+    <span class="jp">ミール・ムハンマド・タキー・ミール</span><br>
+    <span class="jp" style="font-size:0.8rem; color:var(--text-light)">
+      底本：Kulliyāt-i Mīr Taqī Mīr, Tartīb-i Jadīd,<br>
+      ed. Maulānā ʻAbd al-Bārī Āsī (1931), pp. 961–964
+    </span>
+  </div>
+</div>
+
+<div class="note">
+  <span class="jp">
+    本作はミールの「四大マスナヴィー」の一つ。詩人の内的世界──夢（khvāb）と幻想（khayyāl）──を詠う自伝的・瞑想的な叙事長詩である。恋の病に蝕まれた詩人が、現実と夢の境界をさまよい、幻想のなかで恋人の姿を追い求める。最後は「あの交わりは夢と幻であった」と結ばれる、ミール晩年の回想的作品。<br><br>
+    注：本版（Āsī 版）では、本作の前に位置する Mas̱navī Fangnāmah（p. 959 開始）との間に独立した標題頁（بسم الله）が設けられていない。内容の主題的転換（冒険譚から夢・恋・病の内省へ）に基づき、p. 961 を本作の起点とした。
+  </span>
+</div>
+
+<!-- ===== Section 1: Bīmārī va Junūn ===== -->
+<div class="section-head">
+  <div class="urdu">بیماری و جنون</div>
+  <div class="roman">Bīmārī va Junūn</div>
+  <div class="jp">病と狂気</div>
+  <div class="page-ref">pp. 961–962</div>
+</div>
+
+<div class="section-intro">
+  <span class="jp" style="font-family:'Noto Serif JP',serif; font-style:normal;">
+    詩人は恋の病に臥している。医師（ṭabīb）が呼ばれるが治療の甲斐はない。心は乱れ、理性は失われ、狂気（junūn）が支配する。周囲の人々は詩人の惨状に嘆く。
+  </span>
+</div>
+
+<div class="page-marker">p. 961</div>
+
+<div class="bayt">
+  <div class="urdu-line">رہبون زرد میں کگاہ بیسار سیا</div>
+  <div class="urdu-line">اپری خوان کو لا کوئی افسوں پڑھیا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Rahbūn-i zard meṅ kagāh baisār siyā</div>
+  <div class="roman-line">Aprī khvān ko lā koʼī afsūṅ paṛhiyā</div>
+  <div class="jp-line">蒼ざめた案内人たちのなかで黒き不幸の視線<br>食卓を前にして誰かが呪文を唱えた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">طبیبوں کو آخر دکھلا یا سمجھے</div>
+  <div class="urdu-line">دوا جو لکھی سو خسلات مزاج</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ṭabīboṅ ko ākhir dikhlāyā samjhe</div>
+  <div class="roman-line">Davā jo likhī sū khaslāt-i mizāj</div>
+  <div class="jp-line">遂に医師たちに見せたが理解されず<br>処方された薬は気質の特性に過ぎなかった</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کہ سر رشتۂ تدبیر کا گم ہو ا</div>
+  <div class="urdu-line">دوادوں خود بخود بخود اسی رہی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kih sar-rishtah-yi tadbīr kā gum huā</div>
+  <div class="roman-line">Davādoṅ khūd ba-khūd ba-khūd isī rahī</div>
+  <div class="jp-line">計らいの糸口が見失われた<br>薬はただ空しく同じところに留まった</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis</div>
+  <p>詩人は重い病に伏し、食事も取れず、医師の処方も効かない。恋の狂気（junūn）が彼を支配し、心は恋人への想いに焼かれている。周囲は離散し、友は去り、孤独のなかで夢と幻が始まる。</p>
+</div>
+
+<div class="page-marker">p. 962</div>
+
+<div class="bayt">
+  <div class="urdu-line">نگے فرشتہ ایسے کہ ملتے منسیں</div>
+  <div class="urdu-line">ہوا خوں سے دامن وجہیب تر</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Nage firishtah aise kih milte munsīṅ</div>
+  <div class="roman-line">Huā khūṅ se dāman vajhīb tar</div>
+  <div class="jp-line">天使のように現れて見えぬ者たち<br>血で裾が一層濡れた</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">سخن ضعف سے سخت دشوار تھا</div>
+  <div class="urdu-line">کسی روز بالیں پہ یہ سر رہا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Sukhan ẓaʻf se sakht dushvār thā</div>
+  <div class="roman-line">Kisī roz bālīṅ pah yih sar rahā</div>
+  <div class="jp-line">言葉は衰弱のために甚だ困難であった<br>ある日、枕の上にこの頭を置いたままであった</div>
+</div>
+
+<!-- ===== Section 2: Khvāb va Khayyāl ===== -->
+<div class="section-head">
+  <div class="urdu">خواب و خیال</div>
+  <div class="roman">Khvāb va Khayyāl</div>
+  <div class="jp">夢と幻想</div>
+  <div class="page-ref">pp. 962–963</div>
+</div>
+
+<div class="section-intro">
+  <span class="jp" style="font-family:'Noto Serif JP',serif; font-style:normal;">
+    詩人は夢の世界に入る。現実と夢の境界が融解し、幻想のなかで恋人の幻影が現れる。恋のあらゆる相が夢の論理で展開する。
+  </span>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">بندھعانا تو انی کا رخصت سفر</div>
+  <div class="urdu-line">کیسے تھا مری از ندرکا نی کا وضعیان</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Bandhaʻānā to ānī kā rukhṣat-i safar</div>
+  <div class="roman-line">Kaise thā marī az nadr kā nī kā vaẓʻiyān</div>
+  <div class="jp-line">旅立ちの許しを得る支度をして<br>私の視界からの消え去り方はいかなるものか</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">غلط کار لی نہ ہم کچھ کم بنو لی</div>
+  <div class="urdu-line">وہ صورت کا وہیم ادیر و لیو اکچھی</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Ghalaṭ kār lī na ham kuchh kam banūlī</div>
+  <div class="roman-line">Vuh ṣūrat kā vahīm adīr o layū akchī</div>
+  <div class="jp-line">過ちを犯したのではない、我らは些かも劣らなかった<br>あの姿の幻影よ、やがて来たりて善きものとなれ</div>
+</div>
+
+<div class="page-marker">p. 963</div>
+
+<div class="bayt">
+  <div class="urdu-line">کہیں وہ ادا جس سے معلوم ہو</div>
+  <div class="urdu-line">کہیں وہ سخن جو حسیں گر خوں کرے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kahīṅ vuh adā jis se maʻlūm ho</div>
+  <div class="roman-line">Kahīṅ vuh sukhan jo ḥasīṅ gar khūṅ kare</div>
+  <div class="jp-line">或るところではそのしぐさから知られるもの<br>或るところでは美しくも血を流させる言葉</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کہیں سب ہے وہ مشکدہ خوں چکاں</div>
+  <div class="urdu-line">کہیں وہ نگم جس سے یہ پائیے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kahīṅ sab hai vuh mushkidah khūṅ chakāṅ</div>
+  <div class="roman-line">Kahīṅ vuh naghm jis se yih pāʼiye</div>
+  <div class="jp-line">或るところでは全てがあの麝香嚢から血が滴り<br>或るところではその旋律からこれを見出す</div>
+</div>
+
+<div class="summary">
+  <div class="label">Synopsis</div>
+  <p>夢の世界で恋人の幻影が現れる──仕草（adā）、言葉（sukhan）、眼差し（nigāh）。畳句「或るところでは……」（kahīṅ…kahīṅ…）で恋人の諸相が展開する。恋の苦しみも喜びも、夢のなかでは一層鮮烈に体験される。夢と現実の境界が溶け合い、詩人は幻想のなかを彷徨う。</p>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کہیں آشنا ہے تو دیو انہ ہے</div>
+  <div class="urdu-line">کہ شرم محبت سے مجھ سے ہے</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kahīṅ āshnā hai to dīvānah hai</div>
+  <div class="roman-line">Kih sharm-i muḥabbat se mujh se hai</div>
+  <div class="jp-line">或る所では親しき者がいれば狂人がいる<br>愛の恥じらいから私から逃れるのだ</div>
+</div>
+
+<!-- ===== Section 3: Bīdārī ===== -->
+<div class="section-head">
+  <div class="urdu">بیداری──خواب کا انجام</div>
+  <div class="roman">Bīdārī — Khvāb kā Anjām</div>
+  <div class="jp">覚醒──夢の終わり</div>
+  <div class="page-ref">pp. 963–964</div>
+</div>
+
+<div class="section-intro">
+  <span class="jp" style="font-family:'Noto Serif JP',serif; font-style:normal;">
+    夢から覚めた詩人は、幻想のなかで垣間見た美を失い、再び孤独な現実に戻る。恋人の姿は二度と夢にすら現れない。「あの交わりは夢と幻であった」と結ばれる。
+  </span>
+</div>
+
+<div class="page-marker">p. 963</div>
+
+<div class="bayt">
+  <div class="urdu-line">کبھو بادے یا تھہ بنا م سے</div>
+  <div class="urdu-line">محبت کی بھی سمجھ سے کچھ شرم گر</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kabhū bāde yā thah banām se</div>
+  <div class="roman-line">Muḥabbat kī bhī samajh se kuchh sharm gar</div>
+  <div class="jp-line">いつか酒盃の、あるいは名によって<br>愛の理解からも幾分の恥じらいがあれば</div>
+</div>
+
+<div class="bayt">
+  <div class="urdu-line">کبھو وہ خواب میں رو زرو دشتیبع و قم</div>
+  <div class="urdu-line">ولیکن وہی خواب کا جوش تھا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Kabhū vuh khvāb meṅ roz rū dashtībiʻ va qam</div>
+  <div class="roman-line">Va-laikin vahī khvāb kā josh thā</div>
+  <div class="jp-line">時にあの方が夢のなかで日ごとに心を慰め<br>しかしそれもまた夢の激情に過ぎなかった</div>
+</div>
+
+<div class="page-marker">p. 964</div>
+
+<div class="bayt">
+  <div class="urdu-line">دکھایا نہ اس میر نے رو خواب میں</div>
+  <div class="urdu-line">بہت بیچارہ دبیچنبہ ہو چکا</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Dikhāyā na us Mīr ne rū khvāb meṅ</div>
+  <div class="roman-line">Bahut bīchārah da-bīchanbah ho chukā</div>
+  <div class="jp-line">ミールにはもう夢のなかでも顔を見せなかった<br>哀れな者はすっかり打ちのめされていた</div>
+</div>
+
+<div class="bayt" style="border-left: 3px solid var(--accent);">
+  <div class="urdu-line">نہ دیکھا کبھو پھر وہ جمال</div>
+  <div class="urdu-line">وہ صحبت تھی گو یا گر خواب و خیال</div>
+  <div class="divider">· · ·</div>
+  <div class="roman-line">Na dīkhā kabhū phir vuh jamāl</div>
+  <div class="roman-line">Vuh ṣuḥbat thī goyā gar khvāb o khayyāl</div>
+  <div class="jp-line">二度とあの美しき姿を見ることはなかった<br>あの交わりはまさしく夢と幻であった</div>
+</div>
+
+<div class="ornament">✦ ❖ ✦</div>
+
+<div class="summary">
+  <div class="label">Synopsis — 全体の要旨</div>
+  <p>『ミールの夢と幻想』は、恋の病に伏した詩人が夢と現実の狭間を彷徨う自伝的マスナヴィーである。冒頭で重い病に臥し、医師も匙を投げた後、詩人は夢の世界に入る。そこで恋人の幻影が現れ、恋のあらゆる相が鮮烈に体験される。しかし目覚めれば恋人の姿はなく、「あの交わりは夢と幻であった」という結語が、恋の儚さと人生の無常を凝縮する。タイトルそのものが作品の主題を表している──khvāb（夢）と khayyāl（幻想）の二語が、現実と虚構、記憶と願望、存在と不在の間に揺れる詩人の内的世界を照らす。</p>
+</div>
+
+<div class="note">
+  <span class="jp">
+    ローマ字表記は ALA-LC 方式（米国議会図書館翻字法）に準拠。<br>
+    ʻ = ع（アイン）, ʼ = ء（ハムザ）, ā/ī/ū = 長母音, ḥ = ح, kh = خ, gh = غ, sh = ش, s̱ = ث, ṭ = ط, ẓ = ظ, ṣ = ص, ẕ = ذ, ṅ = ں（ヌーン・グンナ）<br>
+    イザーフェ（修飾連結）：-i（子音の後）/ -yi（母音の後）
+  </span>
+</div>
+
+<p style="text-align:center; margin-top:2rem;">
+  <a href="kulliyat-toc.html" style="color:var(--gold); text-decoration:none; font-size:0.95rem;">
+    ← Kulliyāt-i Mīr 目次に戻る
+  </a>
+</p>
