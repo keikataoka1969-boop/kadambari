@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 3.2</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+  --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+  --table-header: #e8dfd2; --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612; --bg-card: #242019; --text: #e8e0d4; --text-secondary: #a89a88;
+    --accent: #d4845a; --accent-light: #b8734e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0935a;
+    --table-header: #2e2820; --table-stripe: #1e1a15;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1612; --bg-card: #242019; --text: #e8e0d4; --text-secondary: #a89a88;
+  --accent: #d4845a; --accent-light: #b8734e; --border: #3d362c; --border-light: #2e2820;
+  --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0935a;
+  --table-header: #2e2820; --table-stripe: #1e1a15;
+}
+body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.9; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1 { font-family: 'Noto Serif JP', serif; font-weight: 700; font-size: 1.6rem; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 0.75rem; margin-bottom: 0.5rem; text-wrap: balance; }
+.subtitle { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2rem; }
+h2 { font-family: 'Noto Serif JP', serif; font-weight: 600; font-size: 1.25rem; color: var(--highlight); margin-top: 2.5rem; margin-bottom: 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border-light); }
+h3 { font-family: 'Noto Serif JP', serif; font-weight: 600; font-size: 1.1rem; color: var(--accent); margin-top: 2rem; margin-bottom: 0.75rem; }
+.sutra-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.25rem; padding: 1rem 1.25rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 6px; }
+.sutra-num { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 0.25rem; font-family: 'Noto Serif Devanagari', serif; }
+.sanskrit { font-family: 'Noto Serif Devanagari', 'Noto Serif', serif; font-size: 0.95rem; line-height: 1.85; color: var(--text); background: var(--sanskrit-bg); padding: 0.75rem; border-radius: 4px; }
+.japanese { font-family: 'Shippori Mincho', 'Noto Serif JP', serif; font-size: 0.98rem; line-height: 1.95; color: var(--text); }
+.note-box { background: var(--note-bg); border-left: 3px solid var(--accent); padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 6px 6px 0; font-size: 0.9rem; line-height: 1.8; }
+.note-box-title { font-weight: 600; color: var(--accent); margin-bottom: 0.5rem; font-size: 0.85rem; }
+.verse-block { background: var(--sanskrit-bg); border: 1px solid var(--border-light); padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 6px; }
+.verse-block .sanskrit { background: transparent; padding: 0; }
+.section-intro { color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.5rem; font-style: italic; }
+.colophon { margin-top: 3rem; padding-top: 1rem; border-top: 2px solid var(--border); color: var(--text-secondary); font-size: 0.85rem; text-align: center; }
+@media (max-width: 640px) { .sutra-pair { grid-template-columns: 1fr; gap: 0.75rem; } body { padding: 1rem; } h1 { font-size: 1.35rem; } }
+</style>
+</head>
+<body>
+
+<h1>第三篇 第二章 花嫁の信頼を得ること</h1>
+<div class="subtitle">
+  Kanyā-saṃprayuktakam — Adhyāya 2: Kanyā-visrambhaṇam<br>
+  第三篇（Kanyā-saṃprayuktaka・未婚女性篇）第二章（第二十五prakaraṇa）
+</div>
+
+<p class="section-intro">婚姻直後の儀礼と、新妻の信頼を段階的に獲得する方法を詳述する。三夜の禁欲、七日間の儀式、そして徐々に親密さを深めてゆく具体的手法が語られる。</p>
+
+<h2>婚姻後の儀礼（Daśarātrika）</h2>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.1</div>
+    <div class="sanskrit">saṃgatayos tri-rātram adhaḥ śayyā brahmacaryaṃ kṣāra-lavaṇa-varjam āhāras tathā saptāhaṃ satūrya-maṅgala-snānaṃ prasādhanaṃ saha-bhojanaṃ ca prekṣā saṃbandhināṃ ca pūjanam. iti sārvavarṇikam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.1</div>
+    <div class="japanese">結ばれた二人は、三夜の間——床の上ではなく地面に寝て、禁欲を守り、辛味（kṣāra）と塩（lavaṇa）を除いた食事をとる。同様に七日間——楽器を伴う吉祥の沐浴、化粧、共食、見世物、そして親族の供養を行う。これはすべてのヴァルナに共通である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara はこの期間を daśarātrika（十夜の儀式）と呼ぶ。三夜は夜の行事、七日は昼の行事を示す。三夜の禁欲は caturthika-homa（第四日の護摩）が終わるまで。食事は蜂蜜・乳・酥油（ghṛta）で調理したものに限り、夜のみ摂る。七日間の共食は以前と異なり kṣāra-lavaṇa の制限がない。kanyā（花嫁）は二種——saṃsarga-yogyā（交際に適した年齢の娘）と itarā（それ以外の幼い娘）。前者への信頼獲得は rati（交合）を目的とし、後者は bhaya-lajjā-apagama（恐怖と羞恥の除去）を目的とする。
+</div>
+
+<h2>信頼獲得の手法</h2>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.2–4</div>
+    <div class="sanskrit">tasminn etāṃ niśi vi:jane mṛdubhir upacārair upakrameta. tri-rātram a:vacanaṃ hi stambham iva nāyakaṃ paśyantī kanyā nirvidyeta paribhavec ca tṛtīyām iva prakṛtim. iti bābhravīyāḥ. upakrameta visrambhayec ca na tu brahmacaryam ativarteta. iti vātsyāyanaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.2–4</div>
+    <div class="japanese">この〔十夜の〕期間中、夜、二人きりの時に、穏やかな振る舞いで彼女に働きかけるべきである。三夜の間、一言も発しない男を柱のように見て、花嫁は嫌気がさし、「第三の性」（napuṃsaka）のように軽蔑するであろう——とBābhravīya学派は言う。働きかけ、信頼を得るべきだが、しかし禁欲を破ってはならない——とVātsyāyanaは言う。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.5–6</div>
+    <div class="sanskrit">upakramamāṇaś ca na prasahya kiṃ cid ācaret. kusuma-sa:dharmāṇo hi yoṣitaḥ su:kumāropakramāḥ. tās tv an:adhigata-viśvāsaiḥ prasabham upakramyamāṇāḥ saṃprayoga-dveṣiṇyo bhavanti. tasmāt sāmnaivopacaret.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.5–6</div>
+    <div class="japanese">働きかける際にも、強引に何事もなすべきではない。女性は花と同じ性質を持ち（kusuma-sadharmāṇaḥ）、繊細な扱いを要する。信頼を得ていない者が強引に迫れば、交合を嫌悪する者となる。それゆえ、穏やかさ（sāman）のみで接すべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.7–10</div>
+    <div class="sanskrit">yuktyāpi tu yataḥ prasaram upalabhet tenaivānu praviśet. tat-priyeṇāliṅgenācaritena nāti:kālatvāt. pūrva-kāyeṇa copakramet. viṣahyatvāt. dīpāloke vigāḍha-yauvanāyāḥ pūrva-saṃstutāyāḥ. bālāyā a:pūrvāyāś cāndhakāre.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.7–10</div>
+    <div class="japanese">巧みに、接近の機会を得たところからそのまま入り込むべきである。彼女が好む抱擁で——しかし長すぎないように（nātikālatvāt）。上半身から始めるべきである——耐えられるからである（viṣahyatvāt）。灯火のもとでは——十分に成熟した、以前から面識のある女性に対して。幼い、あるいは初めての女性には暗闇の中で。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara は viṣahyatvāt（耐えられるから）について、「臍より上の部分（pūrva-kāya）への接触は耐えられるが、下半身への接触は恐怖を生む」と説明する。抱擁は「与えた後すぐに離す（datvā anantaram eva apanīyate）」のが原則で、長く持続させると恐怖を生む。暗闇での行為は bālā（幼い娘）と apūrvā（初めての娘）の lajjā（羞恥）が強いため。成熟した面識のある女性は灯火のもとで行うのは bhaya-lajjā-abhāvāt（恐怖と羞恥がないから）。
+</div>
+
+<h2>嚙みタバコ・接吻・会話</h2>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.11</div>
+    <div class="sanskrit">aṅgī-kṛta-pariṣvaṅgāyāś ca vadanena tāmbūla-dānam. tad-a:pratipadyamānāṃ ca sāntvanair vākyaiḥ śapathaiḥ pratiyācitaiḥ pāda-patanaiś ca grāhayet. vrīḍā-yuktāpi yoṣid aty:anta-kruddhāpi na pāda-patanam ativartate iti sārvatrikam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.11</div>
+    <div class="japanese">抱擁を受け入れた女性に対し、口移しで嚙みタバコ（tāmbūla）を与える。受け入れない場合は——優しい言葉で、誓いの言葉で、「どうか受け取って」という懇願で、足下にひれ伏す（pāda-patana）ことで——受け取らせる。たとえ恥じらいの中にあっても、たとえ極度に怒っていても、女性は足下へのひれ伏しを無視できない——これは普遍的な法則（sārvatrika）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.12–16</div>
+    <div class="sanskrit">tad-dāna-prasaṅgeṇa mṛdu viśadam a:kāhalam asyāś cumbanam. tatra siddhām ālāpayet. tac-chravaṇārthaṃ yat kiṃ cid alpākṣaram abhidheyam a:jānann iva pṛcchet. tatra niṣ:pratipattim an:udvejayan sāntvanā-yuktaṃ bahuśa eva pṛcchet. yatrāpi a:vadantīṃ nirbadhnīyāt.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.12–16</div>
+    <div class="japanese">その〔tāmbūlaの〕授受の流れで、柔らかく、はっきりと、音を立てずに（akāhala）接吻する。それで打ち解けた彼女に話しかけさせる。彼女に話させるために、何か短い言葉で答えられる問いを、知らないふりをして尋ねる。答えに窮しても、動揺させることなく、優しく何度も尋ねる。それでも話さない場合は、しつこく問い続ける。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.17</div>
+    <div class="sanskrit">sarvā eva hi kanyāḥ puruṣeṇa prayujyamānaṃ vacanaṃ viṣahante. na tu laghu-miśrām api vācaṃ vadanti. iti ghoṭakamukhaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.17</div>
+    <div class="japanese">すべての花嫁は、男が繰り返す言葉を耐えて聞く。しかし、ほんの短い言葉さえ口にしない。とGhoṭakamukhaは言う。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  vadanena tāmbūla-dānam は「自分の口から」の意で、これは cumbana（接吻）の口実である。akāhala（無音の）接吻とするのは、音を立てると羞恥が増すため。alpākṣara-abhidheya（短い言葉で答えられる問い）を ajānann iva（知らないふりをして）尋ねるのは、花嫁に「この人は私に試されている」と思わせず、自然な会話の流れを作るため。Ghoṭakamukha の言葉は、花嫁が沈黙するのは kāma が内に生じていないからではなく、lajjā-paratantratvāt（羞恥に支配されているから）であることを示す。
+</div>
+
+<h2>会話の引き出し方（Ālāpa-yojanam）</h2>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.18–19</div>
+    <div class="sanskrit">nirbadhyamānā tu śiraḥ-kampena prativacanāni yojayet. kalahe tu na śiraḥ kampayet. icchasi māṃ necchasi vā kiṃ te 'ham rucito na rucito veti pṛṣṭā ciraṃ sthitvā nirbadhyamānā tad-ānukulyena śiraḥ kampayet. prapañcyamānā tu vivadet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.18–19</div>
+    <div class="japanese">しつこく問われると、頭の動き（śiraḥ-kampa）で返答を示す。ただし口論の時には頭を振らない。「私を望むか？望まないか？私はあなたに気に入ったか？気に入らなかったか？」と問われ、長い沈黙の後、なお問い続けられると、〔その問いに〕肯定的に頭を動かす。しかし詳しく問い詰められると、言い返す。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.20</div>
+    <div class="sanskrit">saṃstutā cet sakhīm anukūlām ubhayato 'pi visrabdhāṃ tām antarā kṛtvā kathāṃ yojayet. tasminn adho-mukhī vihaset. tāṃ cāti:vādinīm adhikṣiped vivadec ca. sā tu parihāsārtham idam anayoktam iti cānuktam api brūyāt. tatra tām apanudya prativacanārtham abhyarthyamānā tūṣṇīm āsīta. nirbadhyamānā tu nāham evaṃ bravīmīty a:vyaktākṣaram an:avasitārthaṃ vacanaṃ brūyāt. nāyakaṃ tu vihasantī kadā cit kaṭākṣaiḥ prekṣeta. ity ālāpa-yojanam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.20</div>
+    <div class="japanese">もし〔以前からの〕知り合いならば、双方に打ち解けた友人（sakhī）を間に入れて会話を仕組む。その〔友人の話の〕中で、うつむいて微笑む。おしゃべりすぎる友人を叱り、言い争う。すると友人は「冗談でこの二人がこう言った」と——言っていないことまで言う。そこで友人を押しのけて、返答を求められても沈黙する。しつこく問われると「私はそんなこと言っていない」と、不明瞭な発音で、意味の定まらない言葉を言う。男に対しては微笑みながら、時おり流し目（kaṭākṣa）で見る。これが会話の引き出し方（ālāpa-yojanam）である。</div>
+  </div>
+</div>
+
+<h2>身体的な親密さの段階</h2>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.21–24</div>
+    <div class="sanskrit">evaṃ jāta-paricayā cā:nirvadantī tat-samīpe yācitaṃ tāmbūlaṃ vilepanaṃ srajaṃ nidadhyāt. uttarīye vāsya nibadhnīyāt. yathā:yuktām ācchuritakena stana-mukulayor upari spṛśet. vāryamāṇaś ca tvam api māṃ pariṣvajasva tato naivam ācariṣyāmīti sthityā pariṣvañjayet. svaṃ ca hastam ā nābhideśāt prasārya nirvartayet. krameṇa cainām utsaṅgam āropyādhikam adhikam upakramet. a:pratipadyamānāṃ ca bhīṣayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.21–24</div>
+    <div class="japanese">このように親しみが生じ、拒まなくなった彼女は、求められた嚙みタバコ、塗香、花輪を彼の近くに置く。あるいは上着に結びつける。適切な時に ācchuritaka（くすぐり技法）で乳房の蕾（stana-mukula）の上を触れる。制止されると、「あなたも私を抱擁しなさい。そうすればもうこのようなことはしない」という条件で抱擁させる。自分の手を臍のあたりまで伸ばしては引っ込める。徐々に彼女を膝に乗せ、さらに大胆に進める。応じない場合は脅かす。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.25</div>
+    <div class="sanskrit">ahaṃ khalu tava dantapadāny adhare kariṣyāmi stana-pṛṣṭhe ca nakha-padam. ātmanaś ca svayaṃ kṛtvā tvayā kṛtam iti te sakhī-janasya purataḥ kathayiṣyāmi. sā tvaṃ kim atra vakṣyasīti bāla-vibhīṣikair bāla-pratyāyanaiś ca śanair enāṃ pratārayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.25</div>
+    <div class="japanese">「私はあなたの唇に歯型をつけ、胸に爪痕をつけよう。そして自分でつけたものを、あなたがつけたのだと友人たちの前で話そう。あなたはそのとき何と言い訳するのか？」——このような子供だましの脅し（bāla-vibhīṣikā）と子供だましの説得（bāla-pratyāyana）で、徐々に彼女を誘導する。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.26–29</div>
+    <div class="sanskrit">dvitīyasyāṃ tṛtīyasyāṃ ca rātrau kiṃ cid adhikaṃ visrambhitāṃ hastena yojayet. sarvāṅgikaṃ cumbanam upakrameta. ūrvoś copari vinyasta-hastaḥ saṃvāhana-kriyāyāṃ siddhāyāṃ krameṇoru-mūlam api saṃvāhayet. nivārite saṃvāhane ko doṣa ity ākulayed enām. tac ca sthirī:kuryāt. tatra siddhāyā guhya-deśābhimarśanam. raśana-viyojanaṃ nīvī-visraṃsanaṃ vasana-parivartanam ūru-mūla-saṃvāhanaṃ ca. ete cāsyānyāpadeśāḥ. yukta-yantrāṃ rañjayet. na tv a:kāle vrata-khaṇḍanam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.26–29</div>
+    <div class="japanese">第二夜、第三夜には、もう少し信頼を深めた彼女に手で触れる。全身への接吻を始める。太腿の上に手を置き、揉みほぐし（saṃvāhana）の技が受け入れられたら、徐々に太腿の付け根（ūru-mūla）まで揉む。制止されたら「何が悪いのか」と困惑させる。そして揉みほぐしを定着させる。それに慣れたら、秘所に触れる（guhya-deśābhimarśana）。帯の解き、腰紐の緩め、衣の移動、太腿の付け根の揉みほぐし——これらは彼の口実（anyāpadeśa）である。適切な制約のもとで楽しませるべきだが、〔三夜の誓いの〕時期でないのに禁欲を破ってはならない。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.2.30</div>
+    <div class="sanskrit">anuśiṣyāc ca. ātmānurāgaṃ darśayet. manorathāṃś ca pūrva-kālikān anuvarṇayet. āyatyāṃ ca tad-ānukūlyena pravṛttiṃ pratijānīyāt. sa:patnībhyaś ca sādhvasam avacchindyāt. kālena ca krameṇa vimukta-kanyā-bhāvām an:udvejayann upakrameta. iti kanyā-visrambhanam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.2.30</div>
+    <div class="japanese">〔六十四技法を〕教えるべきである。自らの愛情を示す。以前からの恋心を語る。将来もその意向に従うことを約束する。共妻たちへの不安を取り除く。そして時が経ち、徐々に花嫁の境地（kanyā-bhāva）を脱した彼女を、動揺させることなく〔交合へと〕導く。これが花嫁の信頼獲得（kanyā-visrambhaṇa）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara は信頼獲得の段階を以下のように整理する。第一夜は会話・接吻・抱擁まで。第二夜・第三夜は手の接触（hasta-yojana）を加える。手順は pūrva-kāya-saṃvāhana（上半身の揉みほぐし）→ ūru-mūla（太腿の付け根）→ guhya-deśa（秘所への接触）。三夜が過ぎるまでの行為はすべて anyāpadeśa（口実）であって、vrata-khaṇḍana（禁欲の破棄）ではない。caturthika-homa（第四日の護摩）後に rañjana（楽しませること）が可能となる。rañjana は「動揺させずに快楽を生むこと」（anudvejya sukhotpādana）と定義される。manorathān paurvakālīnān（以前からの恋心）として「彼女の唇を飲むこと等、思い描いていたこと」を語る。
+</div>
+
+<h2>結びの詩節（Śloka 3.2.31–35）</h2>
+
+<div class="verse-block">
+  <div class="sutra-num">3.2.31</div>
+  <div class="sanskrit">evaṃ cittānurāgo bālām upāyena prasādhayet |<br>tathāsya sānuraktā ca su:visrabdhā prajāyate ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">このように心に寄り添いながら、方便（upāya）で花嫁を整えるならば、彼女は愛着を持ち、深い信頼を持つ者となる。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.2.32</div>
+  <div class="sanskrit">nāty:antam ānulomyena na cāti:prātilomyataḥ |<br>siddhiṃ gacchati kanyāsu tasmān madhyena sādhayet ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">過度の従順でも、過度の反抗でもなく——花嫁に対しては中庸（madhya）によって成就する。それゆえ中道で成し遂げるべきである。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.2.33</div>
+  <div class="sanskrit">ātmanaḥ prīti-jananaṃ yoṣitāṃ māna-vardhanam |<br>kanyā-visrambhaṇaṃ vetti yaḥ sa tāsāṃ priyo bhavet ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">自らの喜びを生み出し、女性の誇りを高めること——花嫁の信頼獲得を知る者は、彼女たちに愛される。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.2.34–35</div>
+  <div class="sanskrit">ati:lajjānvītety evaṃ yas tu kanyām upekṣate |<br>so 'n:abhiprāya-vedīti paśuvat paribhūyate ||<br>sahasā vāpy upakrāntā kanyā-cittam a:vindatā |<br>bhayaṃ vitrāsam udvegaṃ sadyo dveṣaṃ ca gacchati ||<br>sā prīti-yogam a:prāptā tenodvegena dūṣitā |<br>puruṣa-dveṣiṇī vā syād vidviṣṭā vā tato 'nya-gā ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">「恥じらいが強すぎる」として花嫁を放置する者は、心の機微を知らぬ者として獣のように軽蔑される。<br><br>一方、花嫁の心を知らずに突然迫られた花嫁は、恐怖、戦慄、動揺、そしてたちまち嫌悪に至る。<br><br>喜びの絆（prīti-yoga）を得られず、その動揺によって傷つけられた彼女は、すべての男を憎む者（puruṣa-dveṣiṇī）となるか、あるいはその男を嫌い、別の男のもとへ去る。</div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  結びの三詩節は二つの極端を戒める。最初の詩節は無関心（upekṣā）の害で、これは 3.2.3 の「三夜の沈黙は柱のように見える」の敷衍。第二・第三の詩節は強引な行為（sahasopakrama）の害で、3.2.5 の「強引にしてはならない」の敷衍。puruṣa-dveṣiṇī は「すべての男を憎む者」（sarvān puruṣān dveṣṭi）、すなわちすべての男がそのような者だと思い込む。あるいは prīti-yoga を得られなかったために tato 'nyagā（その男を離れて他の男のもとへ行く）。Yaśodhara は「この教えは kanyā だけでなく prathama-samāgama（初めての出会い）すべてに適用される」と述べる。
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre kanyā-saṃprayuktake tṛtīye 'dhikaraṇe<br>
+  kanyā-visrambhaṇaṃ dvitīyo 'dhyāyaḥ ||<br><br>
+  ヴァーツヤーヤナのカーマスートラ　第三篇「未婚女性篇」<br>
+  第二章　花嫁の信頼を得ること<br>
+  （通算第十七章）
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

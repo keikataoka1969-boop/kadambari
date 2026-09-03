@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 2.3</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+  --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+  --table-header: #e8dfd2; --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+    --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+    --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+    --table-header: #302a22; --table-stripe: #222019;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+  --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+  --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+  --table-header: #302a22; --table-stripe: #222019;
+}
+
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 3rem;
+  line-height: 1.85;
+}
+
+header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--accent); }
+header .book { font-size: 0.85rem; color: var(--text-secondary); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.25rem; }
+header h1 { font-family: 'Noto Serif JP', serif; font-size: 1.75rem; font-weight: 700; color: var(--accent); margin: 0.25rem 0; }
+header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-top: 0.25rem; }
+header .chapter-info { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.75rem; }
+
+.section-title {
+  font-size: 1.15rem; font-weight: 600; color: var(--accent); margin: 2rem 0 1rem;
+  padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+}
+
+.sutra-block {
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 6px;
+  margin-bottom: 1rem; overflow: hidden;
+}
+.sutra-num {
+  font-size: 0.75rem; font-weight: 600; color: var(--accent); padding: 0.5rem 0.75rem 0;
+  font-family: 'Noto Serif Devanagari', serif;
+}
+.sutra-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+}
+.sutra-grid .sanskrit {
+  padding: 0.4rem 0.75rem 0.6rem; background: var(--sanskrit-bg);
+  font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+  font-size: 0.92rem; line-height: 1.8; border-right: 1px solid var(--border-light);
+}
+.sutra-grid .japanese {
+  padding: 0.4rem 0.75rem 0.6rem; font-size: 0.92rem; line-height: 1.85;
+}
+
+.note-box {
+  background: var(--note-bg); border-left: 3px solid var(--accent-light);
+  padding: 0.6rem 0.85rem; margin: 0.75rem 0 1.25rem; border-radius: 0 4px 4px 0;
+  font-size: 0.82rem; line-height: 1.75; color: var(--text-secondary);
+}
+.note-box strong { color: var(--accent); font-weight: 600; }
+.note-box .note-label { font-weight: 600; color: var(--highlight); margin-right: 0.35em; font-size: 0.78rem; }
+
+.verse-block {
+  background: var(--sanskrit-bg); border: 1px solid var(--border-light); border-radius: 6px;
+  padding: 1rem; margin: 1rem 0; text-align: center;
+}
+.verse-block .sanskrit-verse {
+  font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem;
+  line-height: 2; color: var(--accent); margin-bottom: 0.5rem;
+}
+.verse-block .verse-trans { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
+
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+th { background: var(--table-header); color: var(--accent); font-weight: 600; padding: 0.5rem 0.6rem; text-align: left; }
+td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border-light); }
+tr:nth-child(even) td { background: var(--table-stripe); }
+.term { font-family: 'Noto Serif Devanagari', serif; color: var(--highlight); font-weight: 500; }
+
+.colophon {
+  text-align: center; margin-top: 2.5rem; padding-top: 1rem;
+  border-top: 2px solid var(--accent); font-size: 0.8rem; color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .sutra-grid { grid-template-columns: 1fr; }
+  .sutra-grid .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+  header h1 { font-size: 1.4rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book">第二篇 sāṃprayogikam — 性愛の実践</div>
+  <h1>第三章　接吻の種類</h1>
+  <div class="subtitle">Cumbanavikalpāḥ — cumbana-vikalpāḥ</div>
+  <div class="chapter-info">adhyāya 2.3｜sūtra 2.3.1–2.3.32｜prakaraṇa 9</div>
+</header>
+
+<!-- 序論：順序について -->
+<div class="section-title">接吻・爪痕・噛み痕の順序 — paurvāparyam</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.1</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">cumbana-nakha-daśana-cchedyānāṃ na paurvāparyam asti. rāga-yogāt prāk saṃyogād eṣāṃ prādhānyena prayogaḥ. prahaṇa-sītkṛtayoś ca saṃprayoge.</div>
+    <div class="japanese">接吻（cumbana）、爪痕（nakha-cchedya）、噛み痕（daśana-cchedya）には、決まった順序はない。情欲（rāga）にまかせて行うからである。性交（saṃyoga）の前には、これらを主として用いる。打擲（prahaṇana）と嘆息（sītkṛta）は性交中に行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.2</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sarvaṃ sarvatra. rāgasyān-apekṣitatvāt. iti vātsyāyanaḥ.</div>
+    <div class="japanese">すべて（の行為を）、あらゆる場面で（行ってよい）。情欲は（順序を）顧みないからである。これがヴァーツヤーヤナの見解である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  先の経文は穏やかな情熱（manda-vega）・中程度の情熱（madhya-vega）の場合の規則。ヴァーツヤーヤナの見解は、激しい情熱（caṇḍa-vega）の者には順序は不要とするもの。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.3</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tāni prathama-rate nātivyaktāni viśrabdhikāyāṃ vikalpena ca prayuñjīta. tathā-bhūtatvād rāgasya. tataḥ param atitvarayā viśeṣavat samuccayena rāga-saṃdhukṣaṇārtham.</div>
+    <div class="japanese">初めての交わり（prathama-rata）では、これらをあまり顕著にせず、親密さが増した段階（viśrabdhikā）では一つずつ（vikalpena）用いるべきである。情欲がそのような性質であるから。その後は、急きこんで、特色をつけて組み合わせて（samuccayena）、情欲を燃え上がらせる（rāga-saṃdhukṣaṇa）ために行う。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  ヤショーダラは、vikalpena（一つずつ）の組合せを詳細に計算する。接吻（cumbana）・爪痕（nakha-cchedya）・噛み痕（daśana-cchedya）・打擲（prahaṇana）・嘆息（sītkṛta）の五行為から二つずつ選ぶ組合せは、順序（anuloma）で10通り、逆順（pratiloma）で10通り、合わせて20通りの用法がある。後段（samuccayena）でもまた20通りの組合せとなる。
+</div>
+
+<!-- 接吻の部位 -->
+<div class="section-title">接吻の部位 — cumbana-sthānāni</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.4</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">lalāṭālaka-kapola-nayana-vakṣaḥ-stanoṣṭhāntar-mukheṣu cumbanam.</div>
+    <div class="japanese">接吻を行う部位は、額（lalāṭa）、前髪（alaka）、頬（kapola）、眼（nayana）、胸（vakṣas）、乳房（stana）、唇（oṣṭha）、口の内部（antarmukha）である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.5</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ūru-saṃdhi-bāhu-nābhi-mūlayor lāṭānām.</div>
+    <div class="japanese">股の付け根（ūru-saṃdhi）、腕（bāhu）、臍の下方（nābhi-mūla）への接吻は、ラータ地方の人々の風習である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.6</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">rāga-vaśād deśa-pravṛtteś ca santi tāni tāni sthānāni na tu sarva-jana-prayojānīti vātsyāyanaḥ.</div>
+    <div class="japanese">情欲のままに、また地方の慣習によって、さまざまな部位がある。しかし、すべての人に適用されるわけではない。これがヴァーツヤーヤナの見解である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  先師たちは8箇所（額・前髪・頬・眼・胸・乳房・唇・口内）を認める。ラータ地方の人々は11箇所を認める。ヴァーツヤーヤナは、情欲に溺れた者（rāgāndha）や地方の慣習による部位は存在するが、すべての人に適用すべきではないとし、上品な人々（śiṣṭa）は不浄（aśuci）の部位は避けるべきとする。唇の接吻（oṣṭha-cumbana）が最も重要であり、vakṣas（胸）は男性、stana（乳房）は女性に適用される。
+</div>
+
+<!-- 処女の三種の接吻 -->
+<div class="section-title">処女の三種の接吻 — kanyā-cumbanāni</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.7</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tad yathā — [1] nimittikaṃ [2] sphuritakaṃ [3] ghaṭṭitakam iti trīṇi kanyā-cumbanāni.</div>
+    <div class="japanese">（唇の接吻には）以下の三種がある。すなわち、[1] ニミッティカ（nimmitika）、[2] スプリタカ（sphuritaka）、[3] ガッティタカ（ghaṭṭitaka）。これらを処女の接吻（kanyā-cumbana）という。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  kanyā とは、たとえ既に交際していても、まだ十分な親密さ（viśrambha）が生まれていない女性を意味する。この三種の接吻は女性（nāyikā）が行為者である。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.8</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">balāt-kāreṇa niyuktā mukham ādhatte na tu viceṣṭata iti [1] nimittakam.</div>
+    <div class="japanese">[1] <strong>ニミッティカ</strong>：無理に促されて口を近づけるが、自分からは動かない接吻。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.9</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">vadane praveśitaṃ cauṣṭhaṃ manāg apatrapāvagrahītum icchantī spandayati svam oṣṭhaṃ nottaram utsahata iti [2] sphuritakam.</div>
+    <div class="japanese">[2] <strong>スプリタカ</strong>：口に差し入れられた（男の）下唇を、少し羞じらいを解いて受け入れようとし、自分の唇を震わせるが、上唇は動かせない接吻。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.10</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">īṣat parigṛhya vi-nimīlita-nayanā kareṇa ca tasya nayane avacchādayanti jihvāgreṇa ghaṭṭayatīti [3] ghaṭṭitakam.</div>
+    <div class="japanese">[3] <strong>ガッティタカ</strong>：（男の下唇を）わずかに捉え、目を半ば閉じ、手で相手の目を覆いながら、舌先で触れる接吻。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  ghaṭṭitaka では、まだ完全には羞じらいが消えていない（sarvathā trapā-anapagamāt）ため、相手の下唇を軽く取る。明確に捉える（spaṣṭa-grahaṇa）接吻は後述の sama-grahaṇa。目を閉じるのは恥じらいから、手で相手の目を覆うのは「このような状態を見られたくない」という心理。三種は段階的に親密さが増していく順序（ānupūrvya）で実践する。
+</div>
+
+<!-- 処女の接吻一覧表 -->
+<table>
+  <tr><th>名称</th><th>サンスクリット</th><th>行為者</th><th>特徴</th></tr>
+  <tr><td>ニミッティカ</td><td class="term">nimittaka</td><td>女性</td><td>口を近づけるだけで動かない</td></tr>
+  <tr><td>スプリタカ</td><td class="term">sphuritaka</td><td>女性</td><td>下唇のみ微かに動かす</td></tr>
+  <tr><td>ガッティタカ</td><td class="term">ghaṭṭitaka</td><td>女性</td><td>目を閉じ手で覆い舌先で触れる</td></tr>
+</table>
+
+<!-- 五種の下唇の接吻 -->
+<div class="section-title">下唇の接吻（五種の捉え方）— adhara-grahaṇa</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.11</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">samaṃ tiryag udbhrāntam avapīḍitakam iti caturvidham apare.</div>
+    <div class="japanese">他の師たちによれば、（下唇の接吻には）四種がある。すなわち、[1] サマ（sama＝平らに）、[2] ティリヤク（tiryak＝斜めに）、[3] ウドブラーンタ（udbhrānta＝回転して）、[4] アヴァピーディタカ（avapīḍitaka＝押しつけて）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.12</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">aṅguli-saṃpuṭena piṇḍī-kṛtya nirdaśanam oṣṭha-puṭenāvapīḍayed ity avapīḍitakaṃ pañcamam api karaṇam.</div>
+    <div class="japanese">[5] 指で輪を作って（aṅguli-saṃpuṭa）（相手の下唇を）つまみ上げ、歯を使わずに唇で押さえつける。これがアヴァピーディタカ（avapīḍitaka）で、第五の方法である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  ヤショーダラは五種の grahaṇa（捉え方）を詳しく説明する。<strong>sama</strong>（平らに捉える）は正面からの接吻、<strong>tiryak</strong>（斜めに）は唇を傾けて丸く捉える、<strong>udbhrānta</strong>（回転）は顎と頭を掴んで顔を回転させて捉える。最初の三種に pīḍana（押圧）を加えたものが <strong>avapīḍitaka</strong> で、さらに純粋な押圧（śuddha-pīḍita）と舌を伴う押圧（avalīḍha-pīḍita）に分かれる。後者は cūṣaṇa（吸い取り）・adhara-pāna（唇の飲み）とも呼ばれる。第五の ākṛṣṭa-cumbana（引き寄せ接吻）は指でつまみ出して行う。
+</div>
+
+<table>
+  <tr><th>番号</th><th>名称</th><th>サンスクリット</th><th>方法</th></tr>
+  <tr><td>1</td><td>平らに</td><td class="term">sama</td><td>正面からまっすぐ捉える</td></tr>
+  <tr><td>2</td><td>斜めに</td><td class="term">tiryak</td><td>唇を傾けて捉える</td></tr>
+  <tr><td>3</td><td>回転して</td><td class="term">udbhrānta</td><td>顔を回して捉える</td></tr>
+  <tr><td>4</td><td>押しつけて</td><td class="term">avapīḍitaka</td><td>強く押さえつけて捉える</td></tr>
+  <tr><td>5</td><td>引き出して</td><td class="term">ākṛṣṭa (avapīḍitaka)</td><td>指でつまみ出し唇で押さえる</td></tr>
+</table>
+
+<!-- 接吻の賭け事 -->
+<div class="section-title">接吻の賭け事 — cumbana-dyūta-kalahaḥ</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.13</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">dyūtaṃ cātra pravartayet.</div>
+    <div class="japanese">ここで賭け事（dyūta）を始めるとよい。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.14</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">pūrvam adhara-saṃpādanena jitam idaṃ syāt.</div>
+    <div class="japanese">先に（相手の）下唇を捉えた者が勝ちとする。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.15</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tatra jitā sārdha-ruditaṃ karaṃ vidhunuyāt praṇuded daśet parivartayed balād āhṛtā vivadet punar apy astu paṇa iti brūyāt. tatrāpi jitā dvi-guṇam āyasyet.</div>
+    <div class="japanese">そこで負けた女は、涙まじりに手を振り、（相手を）押し、噛み、身をよじり、無理に引き寄せられれば口論し、「もう一度賭けましょう」（punar apy astu paṇa）と言う。二度目にも負ければ、二倍の激しさでこれらを行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.16</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">viśrabdhasya pramattasya vādharam avagṛhya daśanāntargatam a-nirgamaṃ kṛtvā hased utkrośet tarjayed valged āhlayet pranartitat-bhrūṇā ca vicala-nayanena mukhena vihasantī tāni tāni ca brūyāt. iti cumbana-dyūta-kalahaḥ.</div>
+    <div class="japanese">（女が策略により勝つ場合：）信頼している者、あるいは油断している者の下唇を捉え、歯の間に挟んで逃がさないようにする。そして笑い、叫び、脅かし、跳ね回り、喜び踊り、眉を動かし、目を揺らして微笑みながら、あれこれ言う。これが接吻の賭け事と争い（cumbana-dyūta-kalahaḥ）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  賭け事には誠実な賭け（akapaṭa-dyūta）と策略の賭け（kapaṭa-dyūta）がある。誠実な賭けでは、女性は身体的に弱い（abalā）ため負けるのが自然。策略の賭けでは、女性が信頼や油断を利用して勝つ。男もまた勝者・敗者として対応を行い、口論が生じるのは情欲を増す（rāga-uddoṣaṇa）ためである。ヤショーダラは男の対応として、強く下唇を押さえて嘆息し（sasītkṛta）、押し返す女に近づき、噛む女に噛み返し、口論する女に口論し返すなどの行為を列挙する。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.17</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">etena nakha-daśana-cchedya-prahaṇana-dyūta-kalahā vyākhyātāḥ.</div>
+    <div class="japanese">これにより、爪痕・噛み痕・打擲の賭け事と争いもまた説明されたことになる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.18</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">caṇḍa-vegayor eva tv eṣāṃ prayogaḥ. tat-sātmyāt.</div>
+    <div class="japanese">ただし、これら（争い）の実践は激しい情熱の者たち（caṇḍa-vega）にのみ適する。それが彼らの性に合っている（sātmya）からである。</div>
+  </div>
+</div>
+
+<!-- 上唇の接吻・合わせ接吻・舌合戦 -->
+<div class="section-title">上唇の接吻・合わせ接吻・舌合戦</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.19</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tasyāṃ cumbantyām ayam apy uttaraṃ gṛhṇīyāt. ity uttara-cumbitam.</div>
+    <div class="japanese"><strong>ウッタラ・チュンビタ</strong>（uttara-cumbita）：彼女が（下唇を）接吻しているとき、男もまた上唇を捉える。これが上唇の接吻である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.20</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">oṣṭha-saṃdaṃśenāvagṛhya oṣṭha-dvayam api cumbeta. iti saṃpuṭakaṃ striyāḥ puṃso vā ajāta-vyañjanasya.</div>
+    <div class="japanese"><strong>サンプタカ</strong>（saṃpuṭaka＝合わせ接吻）：両唇の挟み（oṣṭha-saṃdaṃśa）で（相手の）両唇を捉えて接吻する。女性が行うか、ひげのない（ajāta-vyañjana）男性が行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.21</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tasminn itaro 'pi jihvayāsyā daśanān ghaṭṭayet tālu jihvāṃ ceti jihvā-yuddham.</div>
+    <div class="japanese"><strong>ジフヴァー・ユッダ</strong>（jihvā-yuddha＝舌合戦）：その（合わせ接吻の）さなか、もう一方も舌で相手の歯を打ち、口蓋（tālu）と舌を触る。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.22</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">etena balād vadana-radana-grahaṇaṃ dānaṃ ca vyākhyātam.</div>
+    <div class="japanese">これにより、力ずくで口と歯を捉えること、また与えること（相手に捉えさせること）もまた説明されたことになる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  <strong>saṃpuṭaka</strong>（合わせ接吻）は sama, tiryak, udbhrānta, avapīḍita の四方法で行えるが、ākṛṣṭa（引き出し）は不格好なので行わない。男性の髭（loma）が口に入ると不快であるため、女性が行うか、ひげのまだ生えていない（aprarūḍha-śmaśru）男性が行う。<strong>jihvā-yuddha</strong>（舌合戦）には四つの要素がある：antarmukha-cumbana（口内の接吻）、daśana-cumbana（歯の接吻）、jihvā-cumbana（舌の接吻）、tālu-cumbana（口蓋の接吻）。
+</div>
+
+<!-- 他の部位の接吻 -->
+<div class="section-title">他の部位への四種の接吻 — śeṣāṅga-cumbana</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.23</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">samaṃ pīḍitam añcitaṃ mṛdu śeṣāṅgeṣu cumbanaṃ sthāna-viśeṣa-yogāt. iti cumbana-viśeṣāḥ.</div>
+    <div class="japanese">唇と口内以外の部位（śeṣāṅga）への接吻は、場所に応じて（sthāna-viśeṣa）次の四種がある。[1] サマ（sama＝平らに）、[2] ピーディタ（pīḍita＝圧して）、[3] アンチタ（añcita＝曲げて）、[4] ムリドゥ（mṛdu＝柔らかに）。以上が接吻の種類（cumbana-viśeṣāḥ）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  部位ごとの適用：股の付け根（ūru-saṃdhi）・脇（kakṣā）・胸（vakṣas）には sama（平らな接吻）、乳房（stana）・頬（kapola）・臍の下（nābhi-mūla）には pīḍita（押す接吻）、乳房の両側・脇の端には añcita（曲げる接吻）、額（lalāṭa）・眼（nayana）には mṛdu（柔らかい接吻、ごく軽く触れるだけ）。
+</div>
+
+<!-- 状況に応じた接吻 -->
+<div class="section-title">状況に応じた接吻 — āvasthika-cumbanāni</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.24</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">suptasya mukham avalokayantyā svābhiprāyeṇa cumbanaṃ rāga-dīpanam.</div>
+    <div class="japanese"><strong>ラーガ・ディーパナ</strong>（rāga-dīpana＝情欲を灯す接吻）：眠っている男の顔を見つめながら、自らの思いにまかせて接吻する。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.25</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">pramattasya vivadamānasya vānyato 'bhimukhasya suptābhimukhasya vā nidrā-vyāghātārthaṃ calitakam.</div>
+    <div class="japanese"><strong>チャリタカ</strong>（calitaka＝動揺させる接吻）：注意をそらしている者、言い争っている者、よそを向いている者、あるいは眠ろうとしている者に対して、眠りを妨げるために行う接吻。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.26</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">cira-rātrāv āgatasya śayana-suptāyāḥ svābhiprāya-cumbanaṃ prātibodhakam.</div>
+    <div class="japanese"><strong>プラーティボーダカ</strong>（prātibodhaka＝目覚めさせる接吻）：深夜に帰宅した男が、寝台で眠っている女に、自らの思いで行う接吻。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.27</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sāpi tu bhāva-jijñāsārthinī nāyakasyāgamana-kālaṃ saṃlakṣya vyājena suptā syāt.</div>
+    <div class="japanese">しかし、女もまた、（男の）心情を知りたいと思えば、男の帰宅の時刻を見計らって、わざと眠ったふりをする。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  bhāva-jijñāsā（心情を知ろうとすること）とは、「私に対して愛情があるかどうか見てみよう」という尊重への渇望（sammāna-arthinī）。もし男に愛情があれば prātibodhaka（目覚めの接吻）を行うか、あるいは怒っているふり（māna）の女に対しては足元にひれ伏すなどして宥めて起こすであろう。この三種（rāga-dīpana, calitaka, prātibodhaka）は āvasthika（状況に応じた接吻）と呼ばれる。
+</div>
+
+<table>
+  <tr><th>名称</th><th>サンスクリット</th><th>状況</th><th>行為者</th></tr>
+  <tr><td>情欲を灯す</td><td class="term">rāga-dīpana</td><td>相手が眠っている</td><td>女性</td></tr>
+  <tr><td>動揺させる</td><td class="term">calitaka</td><td>相手が他事に気を取られている</td><td>女性</td></tr>
+  <tr><td>目覚めさせる</td><td class="term">prātibodhaka</td><td>深夜に帰宅して眠っている女に</td><td>男性</td></tr>
+</table>
+
+<!-- 間接的な接吻 -->
+<div class="section-title">間接的な接吻 — ābhiyogika-cumbanāni</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.28</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ādarśe kuḍye salile vā prayojyāyāś chāyā-cumbanam ākāra-pradarśanārtham eva kāryam.</div>
+    <div class="japanese"><strong>チャーヤー・チュンバナ</strong>（chāyā-cumbana＝影の接吻）：鏡（ādarśa）、壁（kuḍya）、または水面（salila）に映った恋人の影に接吻する。心情の表れ（ākāra-pradarśana）を示すために行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.29</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">bālasya citra-karmaṇaḥ pratimāyāś ca cumbanaṃ saṃkrāntakam āliṅganaṃ ca.</div>
+    <div class="japanese"><strong>サンクラーンタカ</strong>（saṃkrāntaka＝転移の接吻）：幼児（bāla）、絵画（citra-karman）、あるいは像（pratimā）に接吻すること。また同様に抱擁すること。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.30</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tathā niśi prekṣaṇake svajana-samāje vā samīpe gatasya prayojyāyā hastāṅguli-cumbanaṃ saṃviṣṭasya vā pādāṅguli-cumbanam.</div>
+    <div class="japanese">夜（niśi）、劇場（prekṣaṇaka）、親族の集まり（svajana-samāja）などで、近くにいる恋人の手の指に接吻する。また、横になっている者の足の指に接吻する。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.31</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">saṃvāhikāyās tu nāyakam ākārayantyā nidrā-vaśād a-kāmāyā iva tasyorvor vadanasya nidhānam ūru-cumbanaṃ cety ābhiyogikāni.</div>
+    <div class="japanese"><strong>アービヨーギカ</strong>（ābhiyogika＝接近の接吻）：按摩女（saṃvāhikā）が、男に心情を示しながら、眠気のためにあたかも望まぬかのように、男の太腿に顔を置き、太腿に接吻する。これらが接近の接吻である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  chāyā-cumbana（影の接吻）と saṃkrāntaka（転移の接吻）は、まだ身体の接触がなく（sparśa-gocara-atīta）、言葉を交わすこともまだ十分でない（anabhivṛtta-saṃbhāṣaṇa）、まだ交際に至っていない（asamāgata）二人の間で見られる。壁への接吻は、灯火の光に映った影の顔に自分の顔を重ねること。鏡・水面への接吻は戯れとして映像に接吻すること。手の指への接吻は男女どちらも行えるが、足の指への接吻は女性のみが行い（nāyikaiva）、男が行うのは卑しい（garhita）とされる。ābhiyogika（接近の接吻）は、すでに身体の接触を経ているがまだ正式な交際には至っていない段階のもの。
+</div>
+
+<!-- 結頌 -->
+<div class="section-title">結頌 — saṃhāra-śloka</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.3.32</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">bhavati cātra ślokaḥ.</div>
+    <div class="japanese">ここに詩頌がある。</div>
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    kṛte pratikṛtaṃ kuryāt tāḍite pratitāḍitam /<br>
+    karaṇena ca tenaiva cumbite praticumbitam //
+  </div>
+  <div class="verse-trans">
+    なされたことには、なし返すべし。打たれたならば、打ち返すべし。<br>
+    そのまさに同じ方法で、接吻されたならば、接吻し返すべし。
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  この原則は性交時（sāṃprayogika）にも、接近の段階（ābhiyogika）にも適用される。行為者（prayoktṛ）が行ったことを、対象者（prayojyā）はそのまま返すべきである。さもなくば、相手は柱のようだと思い嫌気が差す（stambham iva manyamānā nirvidyate）。また接近の段階でも、誘われても応じなければ、家畜のように蔑まれる（paśum iva paribhavet）。
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  cumbana-vikalpās tṛtīyo 'dhyāyaḥ.<br><br>
+  ヴァーツヤーヤナのカーマスートラ　第二篇「性愛の実践」<br>
+  第三章「接吻の種類」終わり
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

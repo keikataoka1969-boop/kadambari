@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 5.2</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Shippori+Mincho:wght@400;600&display=swap');
+
+:root {
+  --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+  --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+  --table-header: #e8dfd2; --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612; --bg-card: #242019; --text: #e0d5c4; --text-secondary: #a89880;
+    --accent: #c4845c; --accent-light: #d4a07a; --border: #3d362c; --border-light: #302a22;
+    --sanskrit-bg: #1e1a14; --note-bg: #2a2520; --highlight: #d4a07a;
+    --table-header: #2e2822; --table-stripe: #221e18;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1612; --bg-card: #242019; --text: #e0d5c4; --text-secondary: #a89880;
+  --accent: #c4845c; --accent-light: #d4a07a; --border: #3d362c; --border-light: #302a22;
+  --sanskrit-bg: #1e1a14; --note-bg: #2a2520; --highlight: #d4a07a;
+  --table-header: #2e2822; --table-stripe: #221e18;
+}
+body { background: var(--bg); color: var(--text); font-family: 'Noto Serif JP', 'Shippori Mincho', serif; line-height: 1.9; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--accent); }
+header h1 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.6rem; font-weight: 600; color: var(--accent); margin: 0 0 0.3rem; text-wrap: balance; }
+header .subtitle { font-size: 1.1rem; color: var(--text-secondary); margin: 0.3rem 0; }
+header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; }
+.prakarana { margin-bottom: 2.5rem; }
+.prakarana-header { background: var(--accent); color: #fff; padding: 0.6rem 1rem; border-radius: 6px 6px 0 0; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.3rem; }
+.prakarana-header h2 { font-size: 1.1rem; margin: 0; font-weight: 600; }
+.prakarana-header .number { font-size: 0.85rem; opacity: 0.85; }
+.sutra-block { background: var(--bg-card); border: 1px solid var(--border); border-top: none; padding: 0; }
+.sutra-block:last-child { border-radius: 0 0 6px 6px; }
+.sutra-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-bottom: 1px solid var(--border-light); }
+.sutra-row:last-child { border-bottom: none; }
+.sutra-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 1rem; font-size: 0.8rem; font-weight: 600; color: var(--accent); letter-spacing: 0.04em; }
+.sanskrit { padding: 0.5rem 1rem; font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 1.85; color: var(--text); background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); }
+.japanese { padding: 0.5rem 1rem; font-size: 0.95rem; line-height: 1.85; color: var(--text); }
+.note-section { background: var(--note-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.2rem; margin-top: 0.8rem; margin-bottom: 1.5rem; }
+.note-section h3 { font-size: 0.9rem; color: var(--accent); margin: 0 0 0.6rem; font-weight: 600; }
+.note-section ul { margin: 0; padding-left: 1.2rem; }
+.note-section li { font-size: 0.88rem; line-height: 1.75; color: var(--text-secondary); margin-bottom: 0.3rem; }
+.note-section li strong { color: var(--text); }
+.verse-block { background: var(--sanskrit-bg); border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.2rem; margin-bottom: 0.8rem; }
+.verse-block .verse-sanskrit { font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 1.85; margin-bottom: 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+.verse-block .verse-japanese { font-size: 0.95rem; line-height: 1.85; }
+footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); }
+@media (max-width: 600px) { body { padding: 1rem; } header h1 { font-size: 1.3rem; } .sutra-row { grid-template-columns: 1fr; } .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>कामसूत्र — Kāmasūtra 5.2</h1>
+  <div class="subtitle">第五篇 第二章｜Pāradārika — Dvitīyo 'dhyāyaḥ</div>
+  <div class="meta">
+    親交の手段と接近の方法<br>
+    prakaraṇa 43–44｜sūtra 5.2.1–5.2.28
+  </div>
+</header>
+
+<!-- ===== Prakaraṇa 43: Paricaya-kāraṇa ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第四十三節　親交の手段（Paricaya-kāraṇa）</h2>
+    <span class="number">prakaraṇa 43</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.1</div>
+      <div class="sanskrit">yathā kanyā svayam abhi-yoga-sādhyā na tathā dūtyā. para-striyas tu sūkṣma-bhāvā dūtī-sādhyā na tathātmanety ācāryāḥ.</div>
+      <div class="japanese">娘は自ら接近して成就できるが、仲介者（dūtī）ではできない。一方、他人の妻は微妙な心情（sūkṣma-bhāva）ゆえに仲介者を通じて成就でき、自分では同様にいかない、と師たちは言う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.2–3</div>
+      <div class="sanskrit">sarvatra śakti-viṣaye svayaṃ sādhanam upapannatarakaṃ dur:upapādatvāt tasya dūtī-prayoga iti vātsyāyanaḥ. prathama-sāhasā a:niyantraṇa-saṃbhāṣāś ca svayaṃ pratāryāḥ. tad-viparītāś ca dūtyeti prāyo-vādaḥ.</div>
+      <div class="japanese">どこであれ能力の及ぶ限り、自らの手段がより適切である。困難な場合に仲介者を用いる、とヴァーツヤーヤナは言う。最初から大胆で、会話に制約のない女は自分で口説くべきである。その反対の女には仲介者を使う、というのが一般的見解である。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.4–6</div>
+      <div class="sanskrit">svayam abhiyokṣyamāṇas tv ādāv eva paricayaṃ kuryāt. tasyāḥ svābhāvikaṃ darśanaṃ prāyatnikaṃ ca. svābhāvikam ātmano bhavana-saṃnikarṣe prāyatnikaṃ mitra-jñāti-mahāmātra-vaidya-bhavana-saṃnikarṣe vivāha-yajñotsava-vyasanodyāna-gamanādiṣu.</div>
+      <div class="japanese">自ら接近しようとする者は、まず親交（paricaya）を結ぶべきである。彼女を見る機会には自然なもの（svābhāvika）と意図的なもの（prāyatnika）がある。自然なものは自分の家の近くで。意図的なものは友人・親族・大臣・医師の家の近くで、婚礼・祭祀・祝祭・災難・庭園の散策などにおいて。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.7</div>
+      <div class="sanskrit">darśane cāsyāḥ satataṃ sākāraṃ prekṣaṇaṃ keśa-saṃyamanaṃ nakhācchuraṇam ābharaṇa-prahlādanam adharauṣṭha-vimardanaṃ tās tāś ca līlā vayasyaiḥ saha prekṣamāṇāyās tat-saṃbaddhāḥ parāpadeśinyaś ca kathās tyāgopabhoga-prakāśanaṃ sakhyur utsaṅga-niṣaṇṇasya sāṅga-bhaṅgaṃ jṛmbhaṇam eka-bhrū-kṣepaṇaṃ manda-vākyatā tad-vākya-śravaṇaṃ tām uddiśya bālenānya-janena vā sahānyopadiṣṭā vyarthā kathā tasyāṃ svayaṃ manorathāvedanam anyāpadeśena tām evoddiśya bāla-cumbanam āliṅganaṃ ca jihvayā cāsya tāmbūla-dānaṃ pradeśinyā hanu-deśa-ghaṭṭanaṃ tat tad-yathā-yogaṃ yathāvakāśaṃ ca prayoktavyam.</div>
+      <div class="japanese">彼女を見る際には ── 常に意味ありげな視線（sākāra prekṣaṇa）、髪を整えること、爪を磨くこと、装身具を鳴らすこと、下唇を擦ること、そして様々な戯れ。友人たちと共に彼女が見ているとき、彼女にまつわる話や遠回しの話。気前の良さと享楽の誇示。友人の膝に座って身体を伸ばすこと、欠伸、片眉を上げること、言葉少なにすること、彼女の言葉に耳を傾けること。彼女を念頭に子どもや他の者を使って別の話を語らせ、その中で自ら望みを他に仮託して告げること。彼女を思って子どもに接吻し抱擁すること。舌でビンロウジュの実（tāmbūla）を与え、人差し指で顎を触ること ── これらを機会と場所に応じて用いるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.8</div>
+      <div class="sanskrit">tasyāś cāṅka-gatasya bālasya lālanaṃ bāla-krīḍanakānāṃ cāsya dānaṃ grahaṇaṃ tena saṃnikṛṣṭatvāt kathā-yojanaṃ tat-saṃbhāṣaṇa-kṣameṇa janena ca prītim āsādya kāryaṃ tad-anubandhaṃ ca gamanāgamanasya yojanaṃ saṃśraye cāsyās tām a:paśyato nāma kāma-sūtra-saṃkathā.</div>
+      <div class="japanese">彼女の膝の上の子どもを可愛がり、玩具（bāla-krīḍanaka）を与え受け取ること。それにより近づいて会話を結び、彼女と話せる人と親しくなって目的を進めること。訪問と再訪の口実を作ること。彼女が聞こえる範囲で、しかし見ていないふりをしてカーマスートラの話をすること。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.9–11</div>
+      <div class="sanskrit">prasṛte tu paricaye tasyā haste nyāsaṃ nikṣepaṃ ca nidadhyāt. tat prati-dinaṃ prati-kṣaṇaṃ caikadeśato gṛhṇīyāt. saugandhikaṃ pūga-phalāni ca. tām ātmano dāraiḥ saha visrambha-goṣṭhyāṃ viviktāsane ca yojayet.</div>
+      <div class="japanese">親交が進んだら、彼女の手に預け物（nyāsa）と一時的な寄託物（nikṣepa）を委ねるべきである。毎日少しずつ取りに行く ── 香料（saugandhika）やビンロウジュの実など。自分の妻と共に信頼ある集まりや隠れた席に彼女を招くべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.12–15</div>
+      <div class="sanskrit">suvarṇakāra-maṇikāra-vaikaṭika-nīlī-kusumbha-rañjakādiṣu ca kāmārthinyāṃ sahātmano vaśyaiś caiṣāṃ tat-saṃpādane svayaṃ prayateta. tad-anuṣṭhāna-niratasya loka-vidito dīrgha-kālaṃ saṃdarśana-yogaḥ. tasmiṃś cānyeṣām api karmaṇām anusandhānam. yena karmaṇā dravyeṇa kauśalena cārthinī syāt tasya prayogam utpattim āgamam upāyaṃ vijñānaṃ cātmāyattaṃ darśayet.</div>
+      <div class="japanese">金細工師・宝石商・染物師などのもとで、彼女が何か求めている場合は、自分の手の者を使い自ら取りなすべきである。その仕事に専念していれば、長期間の面会が世間に知られた形で可能となる。その間に他の用事も結びつけるべきである。彼女が求める仕事・材料・技術について、その使い方・入手法・方法・知識が自分に属することを示すべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.16–18</div>
+      <div class="sanskrit">pūrva-pravṛtteṣu loka-cariteṣu dravya-guṇa-parīkṣāsu ca tayā tat-parijanena ca saha vivādaḥ. tatra nirdiṣṭāni paṇitāni teṣv enāṃ prāśnikatvena yojayet. tayā tu vivadamāno 'ty:antādbhūtam iti brūyāt.</div>
+      <div class="japanese">古くからの世間話や品物の品質鑑定について、彼女やその従者と議論すべきである。賭けごとにおいて彼女を審判者にすべきである。彼女と議論しながら「実に驚嘆すべきことだ」と言うべきである。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>svayam vs. dūtī</strong>（5.2.1–3）：先師たちは娘には自分で、他人の妻には仲介者でと二分するが、Vātsyāyana はどちらでも能力の及ぶ限り自分でやるべきとする。prathama-sāhasā（最初から大胆な女）は自分で、niyantraṇa-sambhāṣiṇī（会話が制限される女）は仲介者で。</li>
+      <li><strong>paricaya の二段階</strong>：bāhya（外的な親交 — 5.2.7–8の身振りや間接的な接触）と ābhyantara（内的な親交 — 5.2.9以降の預け物・面会・共同作業）。</li>
+      <li><strong>sākāra prekṣaṇa</strong>（意味ありげな視線）：mukhanayana-gata ākāra（顔と目に現れた態度）を伴って常に見つめること。</li>
+      <li><strong>kāmasūtra-saṃkathā</strong>（5.2.8）：彼女に聞こえる範囲でカーマスートラの話をする — ただし「彼女を見ていないふり」をする。見ながら語れば durvidagdhatā（不器用さ）となる。</li>
+      <li><strong>nyāsa と nikṣepa の区別</strong>（5.2.9）：nyāsa は長期間預けるもの（sugandhika 香料など）、nikṣepa は短期間のもの（pūga-phala ビンロウジュなど）。少しずつ取りに行くことで訪問の口実を作る。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 44: Abhiyoga ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第四十四節　接近の方法（Abhiyoga）</h2>
+    <span class="number">prakaraṇa 44</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.19</div>
+      <div class="sanskrit">kṛta-paricayāṃ darśiteṅitākārāṃ kanyām ivopāyato 'bhiyuñjīteti. prāyeṇa tatra sūkṣmā abhiyogāḥ. kanyānām a:saṃprayuktatvāt. itarāsu tān eva sphuṭam upadadhyāt. saṃprayuktatvāt.</div>
+      <div class="japanese">親交を結び態度と仕草を見せた女には、娘の場合と同様に方法をもって接近すべきである。娘の場合は概して微妙な（sūkṣma）接近法を用いる。娘は未経験だからである。他方、他人の妻にはそれらを明瞭に（sphuṭa）用いるべきである。経験があるからである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.20–22</div>
+      <div class="sanskrit">saṃdarśitākārāyāṃ nirbhinna-sad-bhāvāyāṃ samupabhoga-vyatikare tadīyāny upayuñjīta. tatra mahārha-gandham uttarīyaṃ kusumaṃ syād aṅgulīyakaṃ ca. tad-dhastād gṛhīta-tāmbūlayā goṣṭhī-gamanodyatasya keśa-hasta-puṣpa-yācanam. tatra mahārha-gandhaṃ spṛhaṇīyaṃ sva-nakha-daśana-pada-cihnitaṃ sākāraṃ dadyāt.</div>
+      <div class="japanese">態度を見せ、真心が明らかになった女とは、享楽の品々を交換すべきである ── 高価な香料・上衣・花・指輪など。彼女の手からビンロウジュを受け取った女は、集まりに行こうとする彼の髪や手の花を求めるであろう。高価で望ましい香料を、自分の爪跡と歯跡をつけて、意味を込めて贈るべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.23–24</div>
+      <div class="sanskrit">adhikair adhikaiś cābhiyogaiḥ sādhvasa-vicchedanam. krameṇa ca vivikta-deśe gamanam āliṅganaṃ cumbanaṃ tāmbūlasya grāhaṇaṃ dānānte dravyāṇāṃ parivartanaṃ guhya-deśābhimarśanaṃ cety abhiyogāḥ.</div>
+      <div class="japanese">ますます増す接近によって畏怖（sādhvasa）を断つべきである。段階的に ── 人目のない場所への移動、抱擁、接吻、ビンロウジュの受け渡し、贈り物の後の品物交換、秘所への接触 ── これらが接近の方法である。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.2.25–26</div>
+      <div class="sanskrit">yatra caikābhiyuktā na tatrāparām abhiyuñjīta. tatra yā vṛddhānubhūta-viṣayā priyopagrahaiś ca tām upagṛhṇīyāt.</div>
+      <div class="japanese">一人の女に接近しているところで別の女に接近してはならない。年長で経験豊かな女には、親切な贈り物をもって迎えるべきである。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>sūkṣma vs. sphuṭa</strong>（5.2.19）：娘（kanyā）への接近法（kanyā-saṃprayuktaka で述べられたもの）は微妙（anabhivyakta-bhāva）であるべきだが、他人の妻は経験済み（saṃprayukta）なのでより明瞭に用いる。</li>
+      <li><strong>nakha-daśana-pada-cihnita</strong>（5.2.22）：自分の爪跡と歯跡のついた香料を贈る — これは間接的な身体的親密さの表現。sākāra（意味を込めて）渡す。</li>
+      <li><strong>abhiyoga の段階性</strong>（5.2.23–24）：6段階を経る — (1) vivikta-deśa-gamana（隠れた場所への移動）→ (2) āliṅgana（抱擁）→ (3) cumbana（接吻）→ (4) tāmbūla-grāhaṇa（ビンロウジュの受け渡し）→ (5) dravyāṇāṃ parivartana（品物交換）→ (6) guhya-deśābhimarśana（秘所への接触）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 結偈 ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>結偈（Ślokau）</h2>
+    <span class="number">5.2.27–28</span>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      5.2.27 anyatra dṛṣṭa-saṃcāras tad-bhartā yatra nāyakaḥ |<br>
+      na tatra yoṣitaṃ kāṃ cit su:prāpām api laṅghayet ||
+    </div>
+    <div class="verse-japanese">
+      その夫が別の場所で活動しているのを見たところ、<br>
+      そこにいるいかなる女にも、たとえ容易に得られる者であっても、近づいてはならない。
+    </div>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      5.2.28 śaṅkitāṃ rakṣitāṃ bhītāṃ sa:śvaśrūkāṃ ca yoṣitam |<br>
+      na tarkayeta medhāvī jānan pratyayam ātmanaḥ ||
+    </div>
+    <div class="verse-japanese">
+      疑い深い女、監視されている女、恐れている女、姑と同居する女には、<br>
+      賢者は自分の信頼を知りつつも、企ててはならない。
+    </div>
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>結偈の警告</strong>：この二偈は pāradārika（他人の妻への接近）に対する制限的警告である。夫が近くにいる場合、および四種の女（疑い深い・監視されている・怯えている・姑と同居）については、たとえ成功できそうでも避けるべきとする。</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Vātsyāyanīya Kāmasūtra 5.2 — Bilingual Sanskrit (IAST) – Japanese Translation<br>
+  Commentary notes based on Yaśodhara's Jayamaṅgalā (Chaukhamba 1929 ed.)<br>
+  第五篇第二章 完
+</footer>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

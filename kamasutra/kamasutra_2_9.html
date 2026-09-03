@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 2.9</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --bg-card: #fffdf8;
+  --text: #2c2418;
+  --text-secondary: #6b5d4d;
+  --accent: #a0522d;
+  --accent-light: #c4845c;
+  --border: #ddd5c8;
+  --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3;
+  --note-bg: #f2ede4;
+  --highlight: #8b4513;
+  --table-header: #e8dfd2;
+  --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612;
+    --bg-card: #242019;
+    --text: #e8e0d4;
+    --text-secondary: #a89880;
+    --accent: #d4845c;
+    --accent-light: #b0714e;
+    --border: #3d362c;
+    --border-light: #2e2820;
+    --sanskrit-bg: #1e1a14;
+    --note-bg: #2a2418;
+    --highlight: #e89860;
+    --table-header: #2e2820;
+    --table-stripe: #221e18;
+  }
+}
+[data-theme="dark"] {
+  --bg: #1a1612;
+  --bg-card: #242019;
+  --text: #e8e0d4;
+  --text-secondary: #a89880;
+  --accent: #d4845c;
+  --accent-light: #b0714e;
+  --border: #3d362c;
+  --border-light: #2e2820;
+  --sanskrit-bg: #1e1a14;
+  --note-bg: #2a2418;
+  --highlight: #e89860;
+  --table-header: #2e2820;
+  --table-stripe: #221e18;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  line-height: 1.9;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+header .book-label { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+header h1 { font-family: 'Noto Serif JP', serif; font-size: 1.6rem; font-weight: 700; color: var(--text); margin: 0.4rem 0; text-wrap: balance; }
+header .subtitle { font-family: 'Noto Serif Devanagari', serif; font-size: 1.05rem; color: var(--accent); margin-top: 0.3rem; }
+header .chapter-info { font-size: 0.82rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+
+.section-heading { font-family: 'Noto Serif JP', serif; font-size: 1.15rem; font-weight: 600; color: var(--accent); margin: 2.5rem 0 1.2rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-light); }
+
+.sutra-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.4rem; padding: 1rem 1.2rem; background: var(--bg-card); border-radius: 6px; border-left: 3px solid var(--accent); }
+.sutra-num { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.3rem; letter-spacing: 0.05em; }
+.sanskrit { font-family: 'Noto Serif Devanagari', 'Noto Serif', serif; font-size: 0.95rem; line-height: 1.85; color: var(--text); background: var(--sanskrit-bg); padding: 0.6rem 0.8rem; border-radius: 4px; }
+.japanese { font-family: 'Noto Serif JP', 'Shippori Mincho', serif; font-size: 0.95rem; line-height: 1.9; color: var(--text); }
+
+.note-block { background: var(--note-bg); border-radius: 6px; padding: 1rem 1.2rem; margin: 1.5rem 0 2rem; border-left: 3px solid var(--accent-light); }
+.note-block .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.note-block p, .note-block ul { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.75; margin: 0.4rem 0; }
+.note-block ul { padding-left: 1.2rem; }
+.note-block li { margin-bottom: 0.3rem; }
+
+.verse-block { background: var(--sanskrit-bg); border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.2rem 0; border-left: 3px solid var(--highlight); }
+.verse-block .verse-label { font-size: 0.75rem; font-weight: 600; color: var(--highlight); margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+.verse-block .sanskrit-verse { font-family: 'Noto Serif Devanagari', serif; font-size: 0.93rem; line-height: 1.8; color: var(--text); margin-bottom: 0.6rem; }
+.verse-block .japanese-verse { font-family: 'Noto Serif JP', serif; font-size: 0.9rem; line-height: 1.8; color: var(--text-secondary); }
+
+.info-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.88rem; }
+.info-table th { background: var(--table-header); font-weight: 600; text-align: left; padding: 0.5rem 0.8rem; border: 1px solid var(--border); color: var(--text); white-space: nowrap; }
+.info-table td { padding: 0.5rem 0.8rem; border: 1px solid var(--border-light); color: var(--text); vertical-align: top; }
+.info-table tr:nth-child(even) td { background: var(--table-stripe); }
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+
+.colophon { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-secondary); font-family: 'Noto Serif Devanagari', serif; }
+
+@media (max-width: 640px) {
+  .sutra-pair { grid-template-columns: 1fr; gap: 0.8rem; }
+  body { padding: 1.2rem 1rem 3rem; }
+  header h1 { font-size: 1.35rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book-label">Kāmasūtra — Sāṃprayogikam (第二篇 交合論)</div>
+  <h1>第九章　口唇行為</h1>
+  <div class="subtitle">Aupariṣṭakam</div>
+  <div class="chapter-info">
+    第二篇 第九章（通算第十四章）｜全45節｜第19節目（prakaraṇa）<br>
+    第三の性（tṛtīya-prakṛti）による口唇行為と、その是非をめぐる議論を含む
+  </div>
+</header>
+
+<!-- ===== 第三の性：二つの型 ===== -->
+<div class="section-heading">第三の性（tṛtīya-prakṛti）の二つの型（2.9.1–2.9.5）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.1</div>
+    <div class="sanskrit">dvividhā tṛtīya-prakṛtiḥ strī-rūpiṇī puruṣa-rūpiṇī ca |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">第三の性（tṛtīya-prakṛti）は二種類ある。女性の姿をした者（strī-rūpiṇī）と男性の姿をした者（puruṣa-rūpiṇī）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.2</div>
+    <div class="sanskrit">tatra strī-rūpiṇī striyā veṣam ālāpaṃ līlāṃ bhāvaṃ mṛdutvaṃ bhīrutvaṃ mugdhatām asahiṣṇutāṃ vrīḍāṃ cānukurvīta |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">そのうち、女性型（strī-rūpiṇī）の者は、女性の装い（veṣa）、話し方（ālāpa）、仕草（līlā）、感情表現（bhāva）、柔らかさ（mṛdutva）、臆病さ（bhīrutva）、純朴さ（mugdhatā）、耐えられなさ（asahiṣṇutā）、恥じらい（vrīḍā）を模倣する（anukurvīta）。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.3–5</div>
+    <div class="sanskrit">tasya vadane jaghana-karma | tad aupariṣṭakam ācakṣate | sā tato ratim ābhimānikīṃ vṛttiṃ ca lipset | veśyāvac caritaṃ prakāśayet | iti strī-rūpiṇī |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">彼〔男性〕の口で腰の行為（jaghana-karma）を行う。これを aupariṣṭaka（口唇行為）と呼ぶ。そこから快楽（rati）と、名誉ある生計（ābhimānikī vṛtti）を得ようとする。遊女（veśyā）のように振る舞いを公にする。これが女性型である。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>tṛtīya-prakṛti（第三の性）は napuṃsaka（非男性）と同義。strī-rūpiṇī は stana（乳房）等の身体的特徴により女性の姿をした者、puruṣa-rūpiṇī は śmaśru-loma（髭・体毛）等の特徴により男性の姿をした者。aupariṣṭaka の語源は upariṣṭāt（上方から）：口が（下方の行為である）jaghana-karma（腰の行為）を上方で行うため。</p>
+  <p>strī-rūpiṇī の模倣項目の詳細：veṣa は keśa-paridhāna（髪・衣装）の整え方、ālāpa は kākalya（甲高い声）、līlā は manthara-gamana（ゆっくりした歩き方）、bhāva は hāsa（笑い）等の表現、mṛdutva は akārkaśya（柔らかさ）、bhīrutva は bhaya-śīlatā（怖がりな性格）、mugdhatā は ṛjutā（素直さ）、asahiṣṇutā は prahaṇana-vāta-ātapa 等に耐えられないこと。</p>
+</div>
+
+<!-- ===== 男性型の第三の性 ===== -->
+<div class="section-heading">男性型の第三の性と接近法（2.9.6–2.9.11）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.6</div>
+    <div class="sanskrit">puruṣa-rūpiṇī tu prachanna-kāmā puruṣaṃ lipsamānā saṃvāhaka-bhāvam upajīvet |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">男性型（puruṣa-rūpiṇī）の者は、欲望を秘めて（prachanna-kāma）、男性を得ようとして（lipsamānā）、按摩師（saṃvāhaka）の仕事で生計を立てる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.7–8</div>
+    <div class="sanskrit">saṃvāhane pariṣvajamāneva gātrair ūrū nāyakasya mṛdnīyāt | prasṛta-paricayā coru-mūlaṃ sajaghanam iti saṃspṛśet |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">按摩の際に、まるで抱擁するかのように（pariṣvajamānā iva）身体で主人（nāyaka）の両腿を揉む。慣れが進めば（prasṛta-paricayā）、腿の付け根（ūru-mūla）にまで、腰（jaghana）を含めて触れる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.9</div>
+    <div class="sanskrit">tatra sthira-liṅgatām upalabhya cāsya pāṇi-manthena parighaṭṭayet | cāpalam asya kutsayantīva haset |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">そこで、硬くなっていること（sthira-liṅgatā）を察し、手で揉んで（pāṇi-manthena）刺激する。そして彼の軽率さ（cāpala）を、あたかも非難するかのように（kutsayantī iva）笑う。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.10–11</div>
+    <div class="sanskrit">kṛta-lakṣaṇenāpy upalabdha-vaikṛtenāpi na codyata iti cet svayam upakramet | puruṣeṇa ca codyamānā vivadet | kṛcchreṇa cābhyupagacchet |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">〔男性が〕徴候を示し（kṛta-lakṣaṇa）、変化が見て取れるにもかかわらず（upalabdha-vaikṛta）、促されなければ、自ら始める。男性に促された場合は抵抗し（vivadet）、渋々ながら（kṛcchreṇa）応じる。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>puruṣa-rūpiṇī は prachanna-kāma（欲望を隠した）であり、男性の身体を持つため、すぐには saṃprayoga（交合）に至らない。そこで saṃvāhaka-bhāva（按摩師としての立場）を利用して、aṅga-mardana-karman（身体の揉みほぐし）により接近する。</p>
+  <p>sthira-liṅgatā（男根の硬直）は sajaghanabhāga-ūrumūla-saṃsparśa（腰部と腿の付け根への接触）から生じる。pāṇi-manthena は ā-gopāla-prasiddha（牧者にまで周知の）手の動き。「軽率さを非難するように笑う」のは、svābhiprāyādhyāpana（自分の意図を知らせる）ためであり、怒るのではない。</p>
+  <p>strī-rūpiṇī は prakaṭa-kāma（欲望が明らか）であるため、促されなくても最初から始める。puruṣa-rūpiṇī は codanā（促し）を待ち、促されても vivāda（抵抗）を見せる。</p>
+</div>
+
+<!-- ===== 八種の口唇技法 ===== -->
+<div class="section-heading">八種の口唇技法（2.9.12–2.9.24）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.12–13</div>
+    <div class="sanskrit">tatra karmāṣṭa-vidhaṃ samuccaya-prayojyam | nimitaṃ pārśvato-daṣṭaṃ bahiḥ-saṃdaṃśo antaḥ-saṃdaṃśaś cumbitakaṃ parimṛṣṭakam āmra-cūṣitakaṃ saṃgara iti |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">この行為（karma）は八種で、段階的に組み合わせて行う（samuccaya-prayojya）。⑴ nimita（接触）、⑵ pārśvato-daṣṭa（側面の咬み）、⑶ bahiḥ-saṃdaṃśa（外側の挟み）、⑷ antaḥ-saṃdaṃśa（内側の挟み）、⑸ cumbitaka（口づけ）、⑹ parimṛṣṭaka（舐め回し）、⑺ āmra-cūṣitaka（マンゴー吸い）、⑻ saṃgara（呑み込み）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.14–15</div>
+    <div class="sanskrit">teṣv ekaikam abhyupagamya virāmābhīpsāṃ darśayet | itaraś ca pūrvasminn abhyupagate tad uttaram evāparaṃ nirdiśet | tasminn api siddhe tad-uttaram iti |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">それぞれの技法を一つ行うごとに、やめたいという気持ち（virāmābhīpsā）を見せる。男性は、前の技法が終わったら、次のものを指示する。それも終わったら、その次を〔指示する〕。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.16</div>
+    <div class="sanskrit">karāvalambitam oṣṭhayor upari vinyastam apavidhya mukhaṃ vidhunuyāt | tan nimitam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">手で支え（karāvalambita）、唇の上に置いて（oṣṭhayor upari vinyasta）、口を動かす（mukhaṃ vidhunuyāt）。これが nimita（接触）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.17</div>
+    <div class="sanskrit">hastenāgram avacchādya pārśvato nirdaśanam oṣṭhābhyām avapīḍya bhavatv etāvad iti sāntvayet | tat pārśvato-daṣṭam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">手で先端を覆い（hastenāgram avacchādya）、側面を歯を立てずに（nirdaśana）唇で圧迫し（oṣṭhābhyām avapīḍya）、「これくらいにしましょう」と宥める（sāntvayet）。これが pārśvato-daṣṭa（側面の咬み）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.18</div>
+    <div class="sanskrit">bhūyaś coditā saṃmīlitauṣṭhī tasyāgraṃ niṣpīḍya karṣayantīva cumbet | iti bahiḥ-saṃdaṃśaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">さらに促されて、唇を閉じたまま（saṃmīlitauṣṭhī）先端を圧し出して（niṣpīḍya）、引っ張るかのように（karṣayantī iva）口づけする。これが bahiḥ-saṃdaṃśa（外側の挟み）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.19</div>
+    <div class="sanskrit">tasminn evābhyarthanayā kiṃ cid adhikaṃ praveśayet | sāpi cāgram oṣṭhābhyāṃ niṣpīḍya niṣṭhīvet | iti antaḥ-saṃdaṃśaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">懇願によって（abhyarthanayā）さらに少し深く入れさせる（adhikaṃ praveśayet）。その者もまた先端を唇で圧し、吐き出す（niṣṭhīvet）。これが antaḥ-saṃdaṃśa（内側の挟み）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.20–21</div>
+    <div class="sanskrit">karāvalambitasyauṣṭhavad grahaṇaṃ cumbitakam | tat kṛtvā jihvāgreṇa sarvato ghaṭṭanam agre ca vyadhanam iti parimṛṣṭakam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">手で支えた状態で、下唇のように咥えるのが cumbitaka（口づけ）である。それを行った上で、舌先（jihvāgra）であらゆる方向から擦り（ghaṭṭana）、先端を突く（vyadhana）のが parimṛṣṭaka（舐め回し）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.22</div>
+    <div class="sanskrit">tathābhūtam eva rāga-vaśād ardha-praviṣṭaṃ nirdayam avapīḍyāvapīḍya muñcet | ity āmra-cūṣitakam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">そのままの状態で、情熱（rāga）に駆られて半ば入れた状態で（ardha-praviṣṭa）、容赦なく（nirdaya）繰り返し圧迫しては（avapīḍya avapīḍya）放す。これが āmra-cūṣitaka（マンゴー吸い）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.23–24</div>
+    <div class="sanskrit">puruṣābhiprāyād eva giret pīḍayec cāparisamāpteḥ | iti saṃgaraḥ | yathārthaṃ cātra stanana-prahaṇanayoḥ prayogaḥ | ity aupariṣṭakam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">男性の意向（puruṣābhiprāya）を読み取って、呑み込み（giret）、満足に至るまで（āparisamāpteḥ）圧迫する。これが saṃgara（呑み込み）である。状況に応じて、声（stanana）と打擲（prahaṇana）の技法も用いる。以上が aupariṣṭaka（口唇行為）である。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>八種の技法は samuccaya-prayojya（段階的に積み重ねて行うべきもの）であり、順序を守る。各技法の間に virāmābhīpsā（やめたいという意思表示）を見せるのは、kautuka-janana（好奇心の喚起）のためであり、nāyaka が次を abhyarthana（懇願）することで進む。svayam upakrama（自発的に始める者）の場合は、自らの意志で samuccaya-prayojya（全段階を通して）行う。</p>
+  <ul>
+    <li><strong>nimita</strong>：oṣṭhayor upari vinyasta（唇の上に置いた）状態で口を動かす（vidhunuyāt = kampayet）</li>
+    <li><strong>pārśvato-daṣṭa</strong>：nirdaśanam（歯を使わず）唇のみで側面を圧す。hastena-avacchādya は muṣṭi-grahaṇa（拳で握る）</li>
+    <li><strong>bahiḥ-saṃdaṃśa</strong>：carman（皮膚）の bahiḥ（外側）を挟むため</li>
+    <li><strong>antaḥ-saṃdaṃśa</strong>：niṣkośita（包皮を剥いた）状態で、maṇi-bandha（亀頭の帯）まで唇で挟む</li>
+    <li><strong>cumbitaka</strong>：samagrahaṇa（均等に咥える）とも呼ばれる。下唇を咥えるのと同じ方法</li>
+    <li><strong>parimṛṣṭaka</strong>：jihvāgra（舌先）で内側から回り、srotas-sthāna（開口部）を突く</li>
+    <li><strong>āmra-cūṣitaka</strong>：āmra（マンゴー）を吸うように、jihvā-aṣṭapuṭena（舌を八つに折って）繰り返し圧す</li>
+    <li><strong>saṃgara</strong>：samantāt giraṇa（全体を呑み込む）。śukra-visṛṣṭi（射精）まで続ける</li>
+  </ul>
+</div>
+
+<div class="table-wrap">
+  <table class="info-table">
+    <tr><th>No.</th><th>技法名</th><th>Sanskrit</th><th>方法</th></tr>
+    <tr><td>①</td><td>接触</td><td>nimita</td><td>唇の上に置き口を動かす</td></tr>
+    <tr><td>②</td><td>側面の咬み</td><td>pārśvato-daṣṭa</td><td>先端を覆い側面を唇で圧す</td></tr>
+    <tr><td>③</td><td>外側の挟み</td><td>bahiḥ-saṃdaṃśa</td><td>閉じた唇で先端を圧し引く</td></tr>
+    <tr><td>④</td><td>内側の挟み</td><td>antaḥ-saṃdaṃśa</td><td>より深く入れ唇で圧し出す</td></tr>
+    <tr><td>⑤</td><td>口づけ</td><td>cumbitaka</td><td>下唇のように均等に咥える</td></tr>
+    <tr><td>⑥</td><td>舐め回し</td><td>parimṛṣṭaka</td><td>舌先で全方向から擦り先端を突く</td></tr>
+    <tr><td>⑦</td><td>マンゴー吸い</td><td>āmra-cūṣitaka</td><td>半ば入れた状態で繰り返し圧す</td></tr>
+    <tr><td>⑧</td><td>呑み込み</td><td>saṃgara</td><td>全体を呑み込み満足まで圧す</td></tr>
+  </table>
+</div>
+
+<!-- ===== 実践者たち ===== -->
+<div class="section-heading">実践者たちと倫理的議論（2.9.25–2.9.34）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.25</div>
+    <div class="sanskrit">kulaṭāḥ svairiṇyaḥ paricārikāḥ saṃvāhikāś cāpy etat prayojayanti |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">不品行な女性（kulaṭā）、自由奔放な女性（svairiṇī）、侍女（paricārikā）、按摩婦（saṃvāhikā）もまた、これ〔口唇行為〕を行わせる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.26</div>
+    <div class="sanskrit">tad etat tu na kāryam | samaya-virodhād asabhyatvāc ca | punar api hy āsāṃ vadana-saṃsarge svayam evārtiṃ prapadyeta | ity ācāryāḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">しかしこれは行うべきではない。法規（samaya）に反し（virodha）、品位を欠く（asabhya）からである。また、これらの女性たちの口との接触（vadana-saṃsarga）において、自ら苦しみ（ārti）を感じるであろう。これが諸師（ācārya）の見解である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.27</div>
+    <div class="sanskrit">veśyā-kāmino 'yam adoṣaḥ | anyato 'pi parihāryaḥ syāt | iti vātsyāyanaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">遊女を好む者にとって（veśyā-kāmin）、これは過失でない（adoṣa）。他の点についても回避可能である（parihārya）。これが Vātsyāyana の見解である。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>諸師（ācāryāḥ）が挙げる三つの doṣa（欠点）：</p>
+  <ul>
+    <li><strong>samaya-virodha</strong>（法規違反）：dharma-śāstra に「na mukhe meheta」（口に排泄してはならない）という禁令がある。Vasiṣṭha も「結婚した妻の口で性行為を行う者は、祖先が十五年間食を断つ」と述べる</li>
+    <li><strong>asabhyatva</strong>（品位の欠如）：sajjana（善良な人々）に非難される行為</li>
+    <li><strong>vadana-saṃsarga の苦痛</strong>：口唇行為を行った女性の口に、後に rāga-vaśāt（情熱に駆られて）接吻する際に嫌悪を感じる</li>
+  </ul>
+  <p>Vātsyāyana の反論：veśyā-kāmin（遊女の客）にとっては samaya-virodha の doṣa は適用されない（dharma-śāstra の禁令は patnī＝正妻の口についてのものであり、veśyā には適用されない）。asabhyatva と ārti は gupti（秘密の保持）と vakra-saṃrakṣaṇa（注意深い口の保護）により parihārya（回避可能）である。</p>
+</div>
+
+<!-- ===== 地域の慣習 ===== -->
+<div class="section-heading">地域の慣習（2.9.28–2.9.32）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.28</div>
+    <div class="sanskrit">tasmād yās tv aupariṣṭakam ācaranti na tābhiḥ saha saṃsṛjyante prācyāḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">したがって、口唇行為を行う〔遊女〕たちとは交わらない — これが東方の人々（prācya）の〔慣習〕である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.29</div>
+    <div class="sanskrit">veśyābhir eva na saṃsṛjyante āhicchatrikāḥ saṃsṛṣṭā api mukha-karma tāsāṃ pariharanti |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">Āhicchatra の人々は遊女との交際自体を避ける。交際しても、口の行為（mukha-karma）は避ける。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.30–31</div>
+    <div class="sanskrit">nirapekṣāḥ sāketāḥ saṃsṛjyante | na tu svayam aupariṣṭakam ācaranti nāgarakāḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">Sāketa（Ayodhyā）の人々は気にせず交わる。しかし Pāṭaliputra の都市人（nāgaraka）は、自ら口唇行為を行うことはない。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.32</div>
+    <div class="sanskrit">sarvam aviśaṅkayā prayojayanti saurasenāḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">Saurasena（Mathurā 地方）の人々は、すべてを何の躊躇もなく（aviśaṅkayā）行わせる。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>各地域の態度の差異：</p>
+  <ul>
+    <li><strong>Prācya</strong>（東方、Aṅga 以東）：aupariṣṭaka を行う遊女とは交際しない。見聞きしたことがなくとも、その可能性を疑う</li>
+    <li><strong>Āhicchatra</strong>（北方都市）：遊女自体とは交わらない。交わった場合でも mukha-karma（接吻）は避ける（口に対する嫌悪）</li>
+    <li><strong>Sāketa</strong>（Ayodhyā）：nirapekṣa（無頓着）で、śauca-aśauca（浄・不浄）の区別なく交わる</li>
+    <li><strong>Nāgaraka</strong>（Pāṭaliputra の都市人）：遊女とは交わり、遊女に口唇行為をさせるが、自ら遊女に対して行うことはない。vadana-saṃsarga-varja（口の接触を除いて）</li>
+    <li><strong>Saurasena</strong>（Mathurā 地方）：すべて — saṃprayoga（交合）も aupariṣṭaka も mukha-karma も — śucī（浄）と見なし躊躇なく行う</li>
+  </ul>
+</div>
+
+<!-- ===== 浄・不浄の議論 ===== -->
+<div class="section-heading">浄・不浄の議論と結論（2.9.33–2.9.34）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.33</div>
+    <div class="sanskrit">evaṃ hy āhuḥ — ko hi yoṣitāṃ ācāraṃ caritraṃ pratyayaṃ vacanaṃ vā śraddhātum arhati | nisargād eva hi malina-dṛṣṭayo bhavanty etā na parityājyāḥ | tasmād āsāṃ smṛtita eva śaucam anveṣṭavyam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">〔Saurasena の人々は〕こう言う — いったい誰が女性の行状（ācāra）、品行（caritra）、信用（pratyaya）、言葉（vacana）を信じることができようか。本性として（nisargāt）不浄な視点（malina-dṛṣṭi）を持つ彼女たちは、それでも棄てるべきでない。したがって、彼女たちの浄（śauca）は聖典の記憶（smṛti）にのみ求めるべきである。</div>
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.33v</div>
+  <div class="sanskrit-verse">vatsaḥ prasravaṇe medhyaḥ śvā mṛga-grahaṇe śuciḥ |<br>śakuniḥ phala-pāte tu strī-mukhaṃ rati-saṃgame ||</div>
+  <div class="japanese-verse">仔牛は乳の流れる時に浄であり、犬は獲物を捕る時に浄であり、<br>鳥は果実を落とす時に浄である。同様に、女性の口は交合の際に浄である。</div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.9.34</div>
+    <div class="sanskrit">śiṣṭa-vipratipatteḥ smṛti-vākyasya ca sāvakāśatvād deśa-sthiter ātmanaś ca vṛtti-pratyayānurūpaṃ pravarteta | iti vātsyāyanaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">学者たちの見解が分かれており（śiṣṭa-vipratipatti）、聖典の言葉（smṛti-vākya）にも余地がある（sāvakāśa）ため、地域の慣習（deśa-sthiti）と、自身の生き方（vṛtti）と信念（pratyaya）に応じて行動すべきである。これが Vātsyāyana の〔結論〕である。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>この節は Kāmasūtra の中でも特に注目される倫理的議論を含む。仔牛・犬・鳥の比喩は、ある行為の浄・不浄が状況に依存することを示す smṛti の一節。Vātsyāyana は最終的に dogmatic な判断を避け、deśa（地域）・vṛtti（生き方）・pratyaya（信念）に委ねる相対主義的結論を採る。</p>
+</div>
+
+<!-- ===== 結びの韻文 ===== -->
+<div class="section-heading">結びの韻文（2.9.35–2.9.45）</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.35</div>
+  <div class="sanskrit-verse">pramṛṣṭa-kuṇḍalāś cāpi yuvānaḥ paricārakāḥ |<br>keṣāṃ cid eva kurvanti narāṇām aupariṣṭakam ||</div>
+  <div class="japanese-verse">耳飾りを磨いた若い侍従（paricāraka）たちも、<br>ある種の男性たちに対して口唇行為を行う。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.36</div>
+  <div class="sanskrit-verse">tathā nāgarakāḥ ke cid anyonyasya hitaiṣiṇaḥ |<br>kurvanti rūḍha-viśvāsāḥ paraspara-parigraham ||</div>
+  <div class="japanese-verse">また都市人（nāgaraka）の中にも、互いの幸福を願い（hitaiṣin）、<br>深い信頼（rūḍha-viśvāsa）のもとに、互いに受け入れ合う者たちがいる。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.37</div>
+  <div class="sanskrit-verse">puruṣāś ca tathā strīṣu karmaitat kila kurvate |<br>vyāsas tasya ca vijñeyo mukha-cumbanavad vidhiḥ ||</div>
+  <div class="japanese-verse">また男性が女性に対してもこの行為を行うという。<br>その方法は、口への接吻（mukha-cumbana）と同じく理解されるべきである。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.38</div>
+  <div class="sanskrit-verse">parivartita-dehau tu strī-puṃsau yat parasparam |<br>yugapat saṃprayujyete sa kāmaḥ kākilaḥ smṛtaḥ ||</div>
+  <div class="japanese-verse">男女が身体を反転させて（parivartita-deha）、互いに<br>同時に交わる（yugapat saṃprayujyete）のは、kākila（カラスの交合）と呼ばれる。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.39</div>
+  <div class="sanskrit-verse">tasmād guṇavatas tyaktvā caturāṃs tyāgino narān |<br>veśyāḥ khaleṣu rajyante dāsa-hastipakādiṣu ||</div>
+  <div class="japanese-verse">そのため遊女たちは、徳（guṇa）ある者、巧みな者、気前のよい者を差し置いて、<br>奴隷や象使い（hastipaka）などの下賤な者（khala）に愛着する。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.40</div>
+  <div class="sanskrit-verse">na tv etad brāhmaṇo vidvān mantrī vā rāja-dhūrdharaḥ |<br>gṛhīta-pratyayo vāpi kārayed aupariṣṭakam ||</div>
+  <div class="japanese-verse">しかし、学識あるバラモン（brāhmaṇa vidvān）、大臣（mantrī）、国王の重臣（rāja-dhūrdhara）、<br>信望ある者（gṛhīta-pratyaya）は、口唇行為を行わせるべきでない。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.41</div>
+  <div class="sanskrit-verse">na śāstram astīty etāvat prayoge kāraṇaṃ bhavet |<br>śāstrārthān vyāpino vidyāt prayogāṃs tv eka-deśikān ||</div>
+  <div class="japanese-verse">「聖典にあるから」というだけでは、実行の理由にはならない。<br>聖典の教えは普遍的（vyāpin）であるが、実行は場合による（eka-deśika）と知るべきである。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.42</div>
+  <div class="sanskrit-verse">rasa-vīrya-vipākā hi śva-māṃsasyāpi vaidyake |<br>kīrtitā iti tat kiṃ syād bhakṣaṇīyaṃ vicakṣaṇaiḥ ||</div>
+  <div class="japanese-verse">犬の肉でさえ医学書（vaidyaka）では味（rasa）・効力（vīrya）・消化後の性質（vipāka）が述べられている。<br>だからといって、賢者（vicakṣaṇa）はそれを食べるべきだろうか。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.43–44</div>
+  <div class="sanskrit-verse">santy eva puruṣāḥ kecit santi deśās tathāvidhāḥ |<br>santi kālāś ca yeṣv ete yogā na syur nirarthakāḥ ||<br>tasmād deśaṃ ca kālaṃ ca prayogaṃ śāstram eva ca |<br>ātmānaṃ cāpi saṃprekṣya yogān yuñjīta vā na vā ||</div>
+  <div class="japanese-verse">ある種の人々、ある種の土地、ある種の時がある。<br>それらにおいて、これらの技法が無意味ではない場合もある。<br>したがって、地域（deśa）、時（kāla）、技法（prayoga）、聖典（śāstra）、<br>そして自分自身をよく見て、技法を用いるか用いないかを決めるべきである。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.9.45</div>
+  <div class="sanskrit-verse">arthasyāsya rahasyatvāc calatvān manasas tathā |<br>kaḥ kadā kiṃ kutaḥ kuryād iti ko jñātum arhati ||</div>
+  <div class="japanese-verse">この事柄の秘密性（rahasya）と、心の動揺性（calatva）のゆえに、<br>誰が、いつ、何を、どこで行うか — それを誰が知りうるであろうか。</div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>結びの韻文群は aupariṣṭaka の多様な実践と倫理的判断を総括する。</p>
+  <ul>
+    <li>2.9.36 の「互いに受け入れ合う都市人」は男性同士の口唇行為（parasparaparigraha）を示す</li>
+    <li>2.9.37 は男性が女性に対して行う aupariṣṭaka（cunnilingus に相当）を述べる。vyāsa は mukha-cumbana と同様の方法と理解される</li>
+    <li>2.9.38 の kākila は parivartita-deha（六十九体位）：男女が互いに同時に行う</li>
+    <li>2.9.41–42 は重要な methodological 原則：śāstra（理論）は vyāpin（普遍的）だが prayoga（実践）は eka-deśika（限定的・状況依存的）。犬の肉の比喩は、知識の存在が実行の義務を意味しないことを示す</li>
+    <li>2.9.45 は Kāmasūtra の中でも最も哲学的な一節：性の領域における予測不可能性と秘密性を認め、絶対的な規範の限界を示す</li>
+  </ul>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  aupariṣṭakaṃ navamo 'dhyāyaḥ | āditaś caturdaśaḥ |<br><br>
+  <span style="font-family:'Noto Serif JP',serif; font-size:0.8rem; color:var(--text-secondary);">
+    Vātsyāyanakāmasūtra 第二篇第九章（通算第十四章）終<br>
+    GRETIL テキストおよび Jayamaṅgalā 注釈（Chaukhamba 1929年版）に基づく
+  </span>
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

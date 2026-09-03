@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 2.10</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --bg-card: #fffdf8;
+  --text: #2c2418;
+  --text-secondary: #6b5d4d;
+  --accent: #a0522d;
+  --accent-light: #c4845c;
+  --border: #ddd5c8;
+  --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3;
+  --note-bg: #f2ede4;
+  --highlight: #8b4513;
+  --table-header: #e8dfd2;
+  --table-stripe: #faf7f1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612;
+    --bg-card: #242019;
+    --text: #e8e0d4;
+    --text-secondary: #a89a88;
+    --accent: #d4845a;
+    --accent-light: #b8734e;
+    --border: #3d362c;
+    --border-light: #2e2820;
+    --sanskrit-bg: #1e1a15;
+    --note-bg: #2a2520;
+    --highlight: #e0935a;
+    --table-header: #2e2820;
+    --table-stripe: #1e1a15;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a1612;
+  --bg-card: #242019;
+  --text: #e8e0d4;
+  --text-secondary: #a89a88;
+  --accent: #d4845a;
+  --accent-light: #b8734e;
+  --border: #3d362c;
+  --border-light: #2e2820;
+  --sanskrit-bg: #1e1a15;
+  --note-bg: #2a2520;
+  --highlight: #e0935a;
+  --table-header: #2e2820;
+  --table-stripe: #1e1a15;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  line-height: 1.9;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--highlight);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sutra-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+}
+
+.sutra-num {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-family: 'Noto Serif Devanagari', serif;
+}
+
+.sanskrit {
+  font-family: 'Noto Serif Devanagari', 'Noto Serif', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--sanskrit-bg);
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.japanese {
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  font-size: 0.98rem;
+  line-height: 1.95;
+  color: var(--text);
+}
+
+.note-box {
+  background: var(--note-bg);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.note-box-title {
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.verse-block {
+  background: var(--sanskrit-bg);
+  border: 1px solid var(--border-light);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+.verse-block .sanskrit {
+  background: transparent;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+th {
+  background: var(--table-header);
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+tr:nth-child(even) td {
+  background: var(--table-stripe);
+}
+
+.section-intro {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.colophon {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .sutra-pair {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  body { padding: 1rem; }
+  h1 { font-size: 1.35rem; }
+}
+</style>
+</head>
+<body>
+
+<h1>第二篇 第十章 交合の始めと終わり・交合の種類・愛の口論</h1>
+<div class="subtitle">
+  Sāṃprayogikam — Adhyāya 10: Ratārambhāvasānikam, Rata-viśeṣāḥ, Praṇaya-kalahaḥ<br>
+  第二篇（Sāṃprayogika）第十章（全三節：第二十・二十一・二十二prakaraṇa）
+</div>
+
+<!-- ========== Prakarana 20: Ratārambhāvasānika ========== -->
+<h2>第一節 交合の始めと終わり（Ratārambhāvasānika-prakaraṇam — 第20prakaraṇa）</h2>
+
+<p class="section-intro">交合に際しての前準備と事後の作法を述べる。前半は交合の開始にあたっての段階的な手順、後半は事後の親愛の行為を説く。</p>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.1</div>
+    <div class="sanskrit">nāgarakaḥ saha mitra-janena paricārakaiś ca kṛta-puṣpopahāre saṃcārita-surabhi-dhūpe raty-āvāse prasādhite vāsa-gṛhe kṛta-snāna-prasādhanāṃ yuktyā pītāṃ striyaṃ sāntvanaiḥ punaḥ pānena copakramet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.1</div>
+    <div class="japanese">都会人（nāgaraka）は、友人や侍者と共に、花で飾り、芳しい香を焚いた情交の部屋——整えられた寝室において、沐浴と化粧を済ませ、適度に酒を飲んだ女性に対し、まず優しい言葉で、次に再び飲酒をもって事を始めるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.2–4</div>
+    <div class="sanskrit">dakṣiṇataś cāsyā upaveśanam. keśa-haste vastrānte nīvyām ity avalambanam. raty-arthaṃ savyena bāhunānuddhataḥ pariṣvaṅgaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.2–4</div>
+    <div class="japanese">女の右側に座る。髪、手、衣の端、腰紐に触れる。交合を目的として、左腕でそっと——驚かせることなく——抱擁する。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.5–6</div>
+    <div class="sanskrit">pūrva-prakaraṇa-saṃbaddhaiḥ parihāsānurāgair vacobhir anuvṛttiḥ. gūḍhāślīlānāṃ ca vastūnāṃ samasyayā paribhāṣaṇam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.5–6</div>
+    <div class="japanese">以前の話題に関連した冗談や愛情の言葉で会話を続ける。隠れた卑俗な事柄については、ほのめかしの形で語る。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.7–9</div>
+    <div class="sanskrit">sa:nṛttaṃ a:nṛtaṃ vā gītaṃ vāditram. kalāsu saṃkathāḥ. punaḥ pānenopacchandanam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.7–9</div>
+    <div class="japanese">舞踊を伴う、あるいは伴わない歌、楽器の演奏。諸芸術について語り合う。再び飲酒で気分を高揚させる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.10–12</div>
+    <div class="sanskrit">jātānurāgāyāṃ kusumānulepana-tāmbūla-dānena ca śeṣa-jana-visṛṣṭiḥ. vi:jane ca yathoktair āliṅganādibhir enām uddharṣayet. tato nīvī-viśleṣaṇādi yathoktam upakrameta. ity ayaṃ ratārambhaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.10–12</div>
+    <div class="japanese">愛情が生じた女に対し、花・塗香・嚙みタバコ（tāmbūla）を贈り、残りの人々を退出させる。二人きりになったら、先に述べた抱擁などで彼女を高揚させる。それから腰紐を解くなど、先に述べた通りに事を始める。これが交合の開始（ratārambha）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara は ratārambha の手順を「外的準備」と「内的準備」に分ける。puṣpopahāra（花の供え物）は raty-āvāsa（情交の部屋）の装飾であり、vāsa-gṛha（寝室）とは別の外室。yuktyā pītām は「適度に飲ませた」の意で、泥酔させてはならない（nātipītāṃ vibhramakaratvāt）。右側に座るのは、右手で杯を持ち左腕で抱擁するため。gūḍhāślīla（隠された卑俗事）は gāthā-skandhaka（民謡・説話集）の中の表現を用い、直接的でなく暗示で語る。
+</div>
+
+<h3>交合の終わり（Ratāvasānikam）</h3>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.13</div>
+    <div class="sanskrit">ratāvasānikaṃ rāgam ativāhyā:saṃstutayor iva sa:vrīḍayoḥ parasparam a:paśyatoḥ pṛthak pṛthag ācāra-bhūmi-gamanam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.13</div>
+    <div class="japanese">交合の終わりについて——情欲を遂げ終えた後、あたかも初対面のように恥じらいつつ、互いに見つめ合わず、別々に身繕いの場へ行く。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.14–15</div>
+    <div class="sanskrit">pratinivṛttya cā:vrīḍāyamānayor ucita-deśopaviṣṭayos tāmbūla-grahaṇam acchī-kṛtaṃ candanam anyad vānulepanaṃ tasyā gātre svayam eva niveśayet. savyena bāhunā caināṃ parirabhya caṣaka-hastaḥ sāntvayan pāyayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.14–15</div>
+    <div class="japanese">戻ってきて、なお恥じらいつつ適切な場所に座り、嚙みタバコを取る。透明な白檀、あるいは他の塗香を彼女の身体に自ら塗ってやる。左腕で抱き、杯を手に、優しい言葉をかけながら飲ませる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.16–18</div>
+    <div class="sanskrit">jalānupānaṃ vā khaṇḍaka-khādyakam anyad vā prakṛti-sātmya-yuktam ubhāv apy upayuñjīyātām. accha-rasaka-yūṣam amla-yavāgūṃ bhṛṣṭa-māṃsopadaṃśāni pānakāni cūta-phalāni śuṣka-māṃsaṃ mātuluṅga-cukrakāṇi sa:śarkarāṇi ca yathā:deśa-sātmyaṃ ca. tatra madhuram idaṃ mṛdu viśadam iti ca vidaśya vidaśya tat tad upahāret.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.16–18</div>
+    <div class="japanese">水で口を潤す飲み物、あるいは砂糖菓子、その他体質に合ったものを二人とも食すべきである。すなわち——澄んだ肉汁のスープ（rasaka-yūṣa）、酸味のある粥（amla-yavāgū）、炒った肉の副菜（bhṛṣṭa-māṃsopadaṃśa）、果汁飲料（pānaka）、マンゴー（cūta-phala）、干し肉（śuṣka-māṃsa）、マーtuluṅga（枸橘）の砂糖漬け薄切りなど、土地の習慣に応じて。「これは甘い」「これは柔らかい」「これは爽やかだ」と一口ずつ味わいながら差し出す。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.19–22</div>
+    <div class="sanskrit">harmya-tala-sthitayor vā candrikāsevanārtham āsanam. tatrānukūlābhiḥ kathābhir anuvarteta. tad-aṅka-saṃlīnāyāś candramasaṃ paśyantyā nakṣatra-paṅkti-vyaktī:karaṇam. arundhatī-dhruva-saptarṣi-mālā-darśanaṃ ca. iti ratāvasānikam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.19–22</div>
+    <div class="japanese">あるいは楼閣の屋上に出て月光を楽しむために座る。そこで心地よい話題で語り合う。彼の膝にもたれて月を眺める彼女に、星座の配列を教える——Arundhatī（アルンダティー星）、Dhruva（北極星）、Saptarṣi（北斗七星）の連なりを示す。これが交合の終わり（ratāvasānika）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara によれば、事後の恥じらい（vrīḍā）は、不作法な行為への羞恥によるもの。ācāra-bhūmi は「身繕いの場」で、同じ場所で二人が身を清めてはならない。事後の飲食は身体回復（bṛṃhaṇa）のためとされ、外的回復は candana などの塗香、内的回復は pāna（飲料）や māṃsa-yūṣa（肉汁）による。Arundhatī について、「この微かな星を見えない者は六ヶ月以内に死ぬ」という俗信に触れ、Dhruva は「十五星からなる」、Saptarṣi は「一列に並ぶ」と説明する。
+</div>
+
+<h3>詩節（Śloka 2.10.23–27）</h3>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.23</div>
+  <div class="sanskrit">avasāne 'pi ca prītir upacārair upaskṛtā |<br>sa:visrambha-kathā-yogai ratiṃ janayate parām ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">終わりにおいても、心遣い（upacāra）によって飾られ、打ち解けた語らい（visrambha-kathā）を伴う愛情は、最高の歓び（parā rati）を生む。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.24–25</div>
+  <div class="sanskrit">paraspara-prīti-karair ātma-bhāvānuvartanaiḥ |<br>kṣaṇāt krodha-parāvṛttaiḥ kṣaṇāt prīti-vilokitaiḥ ||<br>hallīsaka-krīḍanakair gāyanair lāṭa-rāsakaiḥ |<br>rāga-lolārdra-nayanaiś candra-maṇḍala-vīkṣaṇaiḥ ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">互いに喜びをもたらす行為、心の動きに寄り添うこと、一瞬の怒りの後のすばやい和解、一瞬の愛の眼差し——hallīsaka の輪舞遊び、歌、lāṭa-rāsaka の踊り、情愛に潤んだ瞳で月輪を仰ぎ見ること——</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.26–27</div>
+  <div class="sanskrit">ādye saṃdarśane jāte pūrvaṃ ye syur manorathāḥ |<br>punar-viyoge duḥkhaṃ ca tasya sarvasya kīrtanaiḥ ||<br>kīrtanānte ca rāgeṇa pariṣvaṅgaiḥ sa:cumbanaiḥ |<br>tais taiś ca bhāvaiḥ saṃyukto yūno rāgo vivardhate ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">初めて出会った時に抱いた願望、再びの別離の苦しみ——それらすべてを語り合い、語り終えた後の情熱に満ちた接吻を伴う抱擁、それぞれの感情の表出によって、若き二人の愛（rāga）は増してゆく。</div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  hallīsaka は女性たちが輪になって踊る舞踊で、「一人の男が導く。牧女たちに対するHari（Kṛṣṇa）のように」と引用される。lāṭa-rāsaka は地方舞踊。visrambha-yoga（打ち解けた交流）は信頼に基づいて行われるもので、visrambha-kathā（打ち解けた語らい）とは区別される。詩節は始まりと終わりの両方に適用される（ārambhe 'vasāne cobhayatrāpy etad bhavati）。
+</div>
+
+<!-- ========== Prakarana 21: Rata-viśeṣāḥ ========== -->
+<h2>第二節 交合の種類（Rata-viśeṣāḥ — 第21prakaraṇa）</h2>
+
+<p class="section-intro">rāga（情愛）の性質の違いに応じた七種の交合を分類する。</p>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.28</div>
+    <div class="sanskrit">[1] rāgavad [2] āhārya-rāgaṃ [3] kṛtrima-rāgaṃ [4] vyavahita-rāgaṃ [5] poṭā-rataṃ [6] khala-ratam [7] a:yantrita-ratam iti rata-viśeṣāḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.28</div>
+    <div class="japanese">交合の種類は以下の七つである——[1] 情愛によるもの（rāgavat）、[2] 誘発された情愛によるもの（āhārya-rāga）、[3] 人工的な情愛によるもの（kṛtrima-rāga）、[4] 代替の情愛によるもの（vyavahita-rāga）、[5] 下女との交合（poṭā-rata）、[6] 賤しい交合（khala-rata）、[7] 自在な交合（ayantrita-rata）。</div>
+  </div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>番号</th>
+      <th>名称</th>
+      <th>定義</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>rāgavat</td>
+      <td>最初の出会いから双方に生じた本来の情愛（svābhāvika-rāga）に基づく交合。旅からの帰還時、口論後の和解時なども含む。</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>āhārya-rāga</td>
+      <td>中程度の情愛を持つ二人が、交合を始めた後に次第に情愛を募らせてゆく交合。情愛は「誘発される」（āhārya）もの。</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>kṛtrima-rāga</td>
+      <td>義務上の理由や、心が別の相手に向いている場合の交合。六十四技法を体系的に用いて情愛を「製造する」。</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>vyavahita-rāga</td>
+      <td>心に別の愛しい人を思い浮かべながら行う交合。情愛は「隔てられた」（vyavahita）ものとなる。</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>poṭā-rata</td>
+      <td>身分の低い下女（kumbha-dāsī）や侍女との、欲望の解消のみを目的とする交合。前戯の作法（upacāra）を重視しない。</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>khala-rata</td>
+      <td>遊女（veśyā）と田舎者（grāmīṇa）の交合。また都会人（nāgaraka）と田舎・遊牧民・辺境の女たちとの交合。</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>ayantrita-rata</td>
+      <td>長い交際から深い信頼（visrambha）が生じた二人の、制約なき自在な交合。puruṣāyita（女性上位）など多様な形態を含む。</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.29–30</div>
+    <div class="sanskrit">saṃdarśanāt prabhṛty ubhayor api pravṛddha-rāgayoḥ prayatna-kṛte samāgame pravāsa-pratyāgamane vā kalaha-viyoga-yoge tad [1] rāgavat. tatrātmābhiprāyād yāvad-arthaṃ ca pravṛttiḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.29–30</div>
+    <div class="japanese">最初の出会いから双方に増大した情愛により、努力して実現した逢瀬、あるいは旅からの帰還、口論による離別からの再会——これが[1]情愛によるもの（rāgavat）である。そこでは自らの欲するままに、望むだけ行為が行われる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.31–33</div>
+    <div class="sanskrit">madhyastha-rāgayor ārabdhaṃ yad anurajyate tad [2] āhārya-rāgam. tatra cātuḥṣaṣṭikair yogaiḥ sātmyānuviddhaiḥ saṃdhukṣya saṃdhukṣya rāgam pravarteta. tat kārya-hetor anyatra saktayor vā [3] kṛtrima-rāgam. tatra samuccayena yogāñ śāstrataḥ paśyet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.31–33</div>
+    <div class="japanese">中程度の情愛を持つ二人が、始めた後に愛着を増すのが[2]誘発された情愛（āhārya-rāga）である。そこでは六十四技法のうち体質に合ったものを用い、情愛を繰り返し燃え上がらせながら行う。義務のためか、あるいは別の相手に心を奪われている場合が[3]人工的な情愛（kṛtrima-rāga）である。そこでは技法を組み合わせて体系的に用いるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.34</div>
+    <div class="sanskrit">puruṣas tu hṛdaya-priyām anyāṃ manasi nidhāya vyavaharet. saṃprayogāt prabhṛti ratiṃ yāvat. atas tad [4] vyavahita-rāgam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.34</div>
+    <div class="japanese">しかし男が心に愛する別の女を思い浮かべて行為するとき——交合の始めから終わりまで——それが[4]代替の情愛（vyavahita-rāga）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.35–38</div>
+    <div class="sanskrit">nyūnāyāṃ kumbha-dāsyāṃ paricārikāyāṃ vā yāvad-arthaṃ saṃprayogas tat [5] poṭā-ratam. tatropacarān nādriyeta. tathā veśyāyā grāmīṇena saha yāvad-artham [6] khala-ratam. grāma-vraja-pratyanta-yoṣidbhiś ca nāgarasya.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.35–38</div>
+    <div class="japanese">身分の低い壺造りの下女（kumbha-dāsī）や侍女との、欲望を満たすだけの交合が[5]下女との交合（poṭā-rata）である。そこでは前戯の作法を重視しない。同様に、遊女が田舎者と欲望を満たすだけに行うのが[6]賤しい交合（khala-rata）である。また都会人が村・遊牧集落・辺境の女たちと行うのも同様である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.39</div>
+    <div class="sanskrit">utpanna-visrambhayoś ca parasparānukūlyād [7] a:yantrita-ratam. iti ratāni.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.39</div>
+    <div class="japanese">信頼（visrambha）が生じた二人が、互いに相手に順応して行うのが[7]自在な交合（ayantrita-rata）である。以上が交合の種類である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara は rāga（情愛）の種類として svābhāvika（自然な）、āhārya（誘発された）、kṛtrima（人工的な）、darpaja（傲慢から生じた）、visrambhaja（信頼から生じた）の五種を挙げる。poṭā は「両性具有者」（ubhaya-vyañjanā）を意味するとも解し、napuṃsaka（中性者）を指すとする。khala-rata における grāmīṇa について「田舎者の khala（粗野さ）ゆえに恥辱をもたらす」と説明する。ayantrita-rata は「制約の欠如」（yantraṇā-abhāva）に由来し、puruṣāyita（女性上位）などの多様な形態を含むとして複数形 ratāni を説明する。
+</div>
+
+<!-- ========== Prakarana 22: Praṇaya-kalaha ========== -->
+<h2>第三節 愛の口論（Praṇaya-kalahaḥ — 第22prakaraṇa）</h2>
+
+<p class="section-intro">信頼の深まりとともに生じる、嫉妬による口論とその和解の作法を述べる。</p>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.40</div>
+    <div class="sanskrit">vardhamāṇa-praṇayā tu nāyikā sapatnī-nāma-grahaṇaṃ tad-āśrayam ālāpaṃ vā gotra-skhalitaṃ vā na marṣayet. nāyaka-vyalīkaṃ ca.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.40</div>
+    <div class="japanese">愛情（praṇaya）が増してゆくと、女主人公（nāyikā）は以下を許さなくなる——共妻（sapatnī）の名を口にすること、共妻に関する話題、名前の呼び間違い（gotra-skhalita）、そして男の不誠実な行為（vyalīka）を。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.41</div>
+    <div class="sanskrit">tatra su:bhṛśaḥ kalaho ruditam āyāsaḥ śiro-ruhāṇām avakṣodanaṃ prahaṇanam āsanāc chayanād vā mahyāṃ patanaṃ mālya-bhūṣaṇāvamokṣo bhūmau śayyā ca.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.41</div>
+    <div class="japanese">その場合——激しい口論、泣くこと、身もだえ、髪を振り乱すこと、自分を打つこと、座席や寝台から床に身を投げること、花飾りや装飾品を外し捨てること、そして床に臥すこと。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.42</div>
+    <div class="sanskrit">tatra yukta-rūpeṇa sāmnā pāda-patanena vā prasanna-manās tām anunayann upakramya śayanam ārohayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.42</div>
+    <div class="japanese">その際、適切な程度の宥めの言葉、あるいは足下にひれ伏す（pāda-patana）ことにより、動揺を見せず、彼女をなだめて起き上がらせ、寝台に上がらせるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.43–44</div>
+    <div class="sanskrit">tasya ca vacanam uttareṇa yojayantī vivṛddha-krodhā sa:kaca-graham asyāsyam unnamayya pādena bāhau śirasi vakṣasi pṛṣṭhe vā sakṛd dvis trir hanyāt. dvāra-deśaṃ gacchet. tatropaviśyāśru-karaṇam iti.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.43–44</div>
+    <div class="japanese">彼の言葉に言い返しながら、怒りが増大し、髪を掴んで顔を上に向けさせ、足で腕・頭・胸・背中を一度、二度、三度と打つ。戸口のところへ行く。そこに座り込んで涙を流す。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.45</div>
+    <div class="sanskrit">ati:kruddhāpi tu na dvāra-deśād bhūyo gacchet. doṣavattvāt. iti dattakaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.45</div>
+    <div class="japanese">しかしどれほど怒っていても、戸口からさらに外へは行ってはならない。過失となるからである。とDattakaは言う。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.46</div>
+    <div class="sanskrit">tatra yuktito 'nunīyamānā prasādam ākāṅkṣet. prasannāpi tu sa:kaṣāyair eva vākyair enaṃ tudatīva prasanna-rati-kāṅkṣiṇī nāyakena parirabhyeta.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.46</div>
+    <div class="japanese">そこで適切になだめられると、許しを求める。許したとはいえ、なお辛辣な（kaṣāya）言葉で彼を刺すかのように——しかし実は和解の交合を望んでいる——男に抱擁されるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.47</div>
+    <div class="sanskrit">sva-bhavanasthā tu nimittāt kalahitā tathā:vida-ceṣṭaiva nāyakam abhigacchet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.47</div>
+    <div class="japanese">自分の家にいる場合は、原因があって口論した後、同様の振る舞いをしつつ男のもとへ行くべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.10.48</div>
+    <div class="sanskrit">tatra pīṭhamarda-viṭa-vidūṣakair nāyaka-prayuktair upaśamita-roṣā tair evāninītā taiḥ sahaiva tad-bhavanam adhigacchet. tatra ca vaset. iti praṇaya-kalahaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.10.48</div>
+    <div class="japanese">その場合、pīṭhamarda（腹心の友）、viṭa（遊び仲間）、vidūṣaka（道化）——男が遣わした者たちによって怒りを鎮められ、彼らに連れられて、彼らと共に男の家へ行く。そこに滞在する。これが愛の口論（praṇaya-kalaha）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara は口論の原因を言葉（vācā）と行為（kriyā）の二種に分ける。言葉によるものは sapatnī-nāma-grahaṇa（共妻の名の呼称）、gotra-skhalita（名前の呼び間違い）、sapatnī に関する讃辞。行為によるものは共妻の家への訪問、tāmbūla の贈り物、交際など。praṇaya（愛情）の増大に伴い、口論の程度も mṛdu（軽い）、madhya（中程度）、adhimātra（激しい）の三段階がある。pāda-patana（足下にひれ伏すこと）は「外では女性の前でひれ伏すことは禁じられている」ため室内に限る。頭を足で打つことは「怒りに起因するもので過失にはならず、むしろ幸運の印（saubhāgya-cihna）と都会の長老たちは言う」。戸口から外に出てはならないのは、「怒りを口実に別の場所へ行く疑い」が生じるため。
+</div>
+
+<!-- ========== Concluding verses ========== -->
+<h2>結びの詩節（Śloka 2.10.49–54）</h2>
+
+<p class="section-intro">第二篇全体を締めくくる詩節。六十四技法（catuḥṣaṣṭi）の意義と学ぶ者への讃辞。</p>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.49</div>
+  <div class="sanskrit">evam etāṃ catuḥṣaṣṭiṃ bābhravyeṇa prakīrtitām |<br>prayuñjāno vara-strīṣu siddhiṃ gacchati nāyakaḥ ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">このようにBābhravya が説いた六十四〔技法〕を、優れた女性たちに対して実践する男は、成就（siddhi）を得る。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.50</div>
+  <div class="sanskrit">bruvann api anya-śāstrāṇi catuḥṣaṣṭi-vivarjitaḥ |<br>vidvat-saṃsadi nāty:arthaṃ kathāsu paripūjyate ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">他の学問を語ろうとも、六十四〔技法〕を欠く者は、学者の集いにおいて話題の中で大いに尊敬されることはない。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.51</div>
+  <div class="sanskrit">varjito 'py anya-vijñānair etayā yas tv alaṃkṛtaḥ |<br>sa goṣṭhyāṃ nara-nārīṇāṃ kathāsv agraṃ vigāhate ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">他の知識を欠いていても、この〔六十四技法〕で飾られた者は、男女の集いにおいて話題の最前列に立つ。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.52</div>
+  <div class="sanskrit">vidvadbhiḥ pūjitām enāṃ khalair api su:pūjitām |<br>pūjitāṃ gaṇikā-saṅghair nandinīṃ ko na pūjayet ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">学者に尊ばれ、粗野な者にも大いに尊ばれ、遊女の集団にも尊ばれる——この「喜びをもたらすもの」（nandinī）を、誰が尊ばないだろうか。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.53</div>
+  <div class="sanskrit">nandinī su:bhagā siddhā su:bhagaṃ-karaṇīti ca |<br>nārī-priyeti cācāryaiḥ śāstreṣv eṣā nirucyate ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">「喜びをもたらすもの」（nandinī）、「幸福なるもの」（subhagā）、「成就したるもの」（siddhā）、「幸福をつくるもの」（subhagaṃ-karaṇī）、「女性に愛されるもの」（nārī-priyā）——と諸師はこの〔技法〕を学問書において語り伝える。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">2.10.54</div>
+  <div class="sanskrit">kanyābhiḥ para-yoṣidbhir gaṇikābhiś ca bhāvataḥ |<br>vīkṣyate bahu-mānena catuḥṣaṣṭi-vicakṣaṇaḥ ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">未婚の娘に、人妻に、遊女に——心からの尊敬をもって見つめられる、六十四〔技法〕に通じた者は。</div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara は catuḥṣaṣṭi の五つの名称を解説する。nandinī は「歓喜（nanda）を有するもの」、subhagā は「すべての家庭人に実践されるから」、siddhā は「学問（vidyā）のように人を征服する力を持つから」、subhagaṃ-karaṇī は「男女双方に幸福をもたらすから」、nārī-priyā は「特に女性に快楽をもたらすから」。para-yoṣit（人妻）には再婚者（punarbhū）や寡婦も含まれるとする。gaṇikā を veśyā（遊女）の代わりに用いるのは「女性もまた catuḥṣaṣṭi-vicakṣaṇā（六十四に通じた者）たりうること」を示すため。
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  ratārambhāvasānikaṃ rata-viśeṣāḥ praṇaya-kalahaś ca<br>
+  daśamo 'dhyāyaḥ | āditaḥ pañcadaśaḥ ||<br><br>
+  ヴァーツヤーヤナのカーマスートラ　第二篇「交合論」<br>
+  第十章　交合の始めと終わり・交合の種類・愛の口論<br>
+  （通算第十五章）<br><br>
+  <strong>samāptam idaṃ sāṃprayogikaṃ dvitīyam adhikaraṇam</strong><br>
+  ここに第二篇「交合論」（Sāṃprayogika）は完結する。
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 1.5 主人公・助力者・使者の考察</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+    --table-header: #e8dfd2;
+    --table-stripe: #faf7f1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612;
+      --bg-card: #241f19;
+      --text: #e0d6c8;
+      --text-secondary: #a89880;
+      --accent: #c4845c;
+      --accent-light: #d4a07a;
+      --border: #3d3428;
+      --border-light: #2e271e;
+      --sanskrit-bg: #1e1a14;
+      --note-bg: #2a2318;
+      --highlight: #d4a07a;
+      --table-header: #2e271e;
+      --table-stripe: #211c16;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1a1612;
+    --bg-card: #241f19;
+    --text: #e0d6c8;
+    --text-secondary: #a89880;
+    --accent: #c4845c;
+    --accent-light: #d4a07a;
+    --border: #3d3428;
+    --border-light: #2e271e;
+    --sanskrit-bg: #1e1a14;
+    --note-bg: #2a2318;
+    --highlight: #d4a07a;
+    --table-header: #2e271e;
+    --table-stripe: #211c16;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+    line-height: 1.9;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  header .book-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  header h1 {
+    font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0.5rem 0 0.25rem;
+    text-wrap: balance;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0.25rem 0;
+  }
+
+  header .chapter-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sutra-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+    padding: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+  }
+
+  .sutra-num {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+    font-family: 'Noto Serif Devanagari', serif;
+  }
+
+  .sanskrit {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text);
+    background: var(--sanskrit-bg);
+    padding: 0.75rem;
+    border-radius: 4px;
+    hyphens: none;
+  }
+
+  .japanese {
+    font-size: 0.95rem;
+    line-height: 1.95;
+    color: var(--text);
+  }
+
+  .japanese .term {
+    color: var(--highlight);
+    font-weight: 600;
+  }
+
+  .note-box {
+    background: var(--note-bg);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0 2rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.88rem;
+    line-height: 1.85;
+  }
+
+  .note-box .note-title {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+  }
+
+  .note-box ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+
+  .note-box li {
+    margin-bottom: 0.35rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.88rem;
+  }
+
+  table th {
+    background: var(--table-header);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+  }
+
+  table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+  }
+
+  table tr:nth-child(even) td {
+    background: var(--table-stripe);
+  }
+
+  .verse {
+    font-style: italic;
+    padding: 0.5rem 0;
+    border-left: 2px solid var(--accent-light);
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .colophon {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--accent);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 640px) {
+    .sutra-block {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    body { padding: 1rem; }
+    header h1 { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book-label">Vātsyāyanakāmasūtra — 第一篇 総論（Sādhāraṇam）</div>
+  <h1>nāyaka-sahāya-dūtī-karma-vimarśaḥ</h1>
+  <h2>第五章　主人公・助力者・使者の考察</h2>
+  <div class="chapter-desc">男女の類型、友人の条件、使者の資質を論じ、第一篇を締め括る</div>
+</header>
+
+<!-- ===== Section 1: 女性の類型（nāyikā） ===== -->
+<div class="section-title">一、女性の類型（nāyikā-vimarśa）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.1</div>
+    <div class="sanskrit">kāmaś caturṣu varṇeṣu sa-varṇataḥ śāstrataś cān-anya-pūrvāyāṃ prayujyamānaḥ putrīyo yaśasyo laukikaś ca bhavati.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.1</div>
+    <div class="japanese">四つの<span class="term">varṇa</span>（種姓）において、同じ種姓の者同士で（<span class="term">sa-varṇataḥ</span>）、聖典の規定に従い（<span class="term">śāstrataḥ</span>）、他の男と関係をもったことのない女に対して（<span class="term">an-anya-pūrvāyām</span>）行われる<span class="term">kāma</span>（愛欲）は、息子をもたらすもの（<span class="term">putrīya</span>）、名声をもたらすもの（<span class="term">yaśasya</span>）、世間に認められるもの（<span class="term">laukika</span>）である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.2</div>
+    <div class="sanskrit">tad-viparīta uttama-varṇāsu para-parigṛhītāsu ca pratiṣiddho 'vara-varṇāsv a-niravasitāsu. veśyāsu punarbhūṣu ca na śiṣṭo na pratiṣiddhaḥ. sukhārthatvāt.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.2</div>
+    <div class="japanese">それと反対に、自分より上の種姓の女（<span class="term">uttama-varṇā</span>）や他人の妻（<span class="term">para-parigṛhītā</span>）に対しては禁じられている（<span class="term">pratiṣiddha</span>）。下の種姓の女で排斥されていない者（<span class="term">a-niravasitā</span>）、遊女（<span class="term">veśyā</span>）、再婚した女（<span class="term">punarbhū</span>）に対しては、勧められもせず禁じられもしない。快楽のみを目的とするからである（<span class="term">sukhārthatvāt</span>）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.3</div>
+    <div class="sanskrit">tatra nāyikās tisraḥ kanyā punarbhūr veśyā ca. iti.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.3</div>
+    <div class="japanese">そこで<span class="term">nāyikā</span>（女性の主人公）は三種類である——<span class="term">kanyā</span>（未婚の娘）、<span class="term">punarbhū</span>（再婚した女）、<span class="term">veśyā</span>（遊女）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】三種の nāyikā の序列</div>
+  <ul>
+    <li><span class="term">kanyā</span> は二種に分かれる——息子をもたらす目的の者（<span class="term">putra-phalā</span>、同種姓が最良）と、快楽を目的とする者（<span class="term">sukha-phalā</span>、下位種姓）。</li>
+    <li><span class="term">punarbhū</span> は kanyā より劣る——たとえ正式に娶っても、以前に他の男と関わりがあるため（<span class="term">anya-pūrvatvāt</span>）。ただし処女性が損なわれていない再婚（<span class="term">a-kṣata-yoni</span>）は kanyā に等しい。</li>
+    <li><span class="term">veśyā</span> は共有の女（<span class="term">sāmānya</span>）であるため、さらに劣る。</li>
+  </ul>
+</div>
+
+<!-- ===== Section 2: 他人の妻に近づく理由 ===== -->
+<div class="section-title">二、他人の妻に近づく理由（para-parigṛhītā-gamaṇa-kāraṇāni）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.4</div>
+    <div class="sanskrit">anya-kāraṇa-vaśāt para-parigṛhītāpi pākṣikī caturthīti goṇikāputraḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.4</div>
+    <div class="japanese">別の理由がある場合（<span class="term">anya-kāraṇa-vaśāt</span>）、他人の妻であっても、条件付きの（<span class="term">pākṣikī</span>）第四の nāyikā であると<span class="term">Goṇikāputra</span> は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.5–6</div>
+    <div class="sanskrit">sa yadā manyate svairiṇīyam anyato 'pi bahuśo vyavasita-cāritrā tasyāṃ veśyāyām iva gamanam uttama-varṇinyām api na dharma-pīḍāṃ kariṣyati punarbhūr iyam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.5–6</div>
+    <div class="japanese">男がこう考えるとき——「この女は自由奔放な女（<span class="term">svairiṇī</span>）である。他の男とも何度も関係をもち、品行が定まっている。この女に対しては遊女と同様の接近であり、たとえ上位種姓の女であっても<span class="term">dharma</span>を損なうことはない。この女は実質的に<span class="term">punarbhū</span>（再婚した女）である」と。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.7</div>
+    <div class="sanskrit">anya-pūrvāvaruddhā nātra śaṅkāsti.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.7</div>
+    <div class="japanese">以前に他の男と関わり、今は（夫に）囲い込まれている女である——ここに（dharma 違反の）疑いはない。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.8–9</div>
+    <div class="sanskrit">patiṃ vā mahāntam īśvaram asmad-a-mitra-saṃsṛṣṭam iyam avagṛhya prabhutvena carati. sā mayā saṃsṛṣṭā snehād enaṃ vyāvartayiṣyati. vi-rasaṃ vā mayi śaktam apakartu-kāmaṃ ca prakṛtim āpādayiṣyati.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.8–9</div>
+    <div class="japanese">「この女の夫は強大な権力者で、我が敵と結託している。この女は夫を掌握して権勢を振るっている。彼女が私と関係をもてば、愛情から夫を（敵から）引き離してくれるだろう」——あるいは——「私に反感をもち、害を加えようとする有力な夫を、彼女が元の態度に戻してくれるだろう」。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.10–11</div>
+    <div class="sanskrit">tayā vā mitrī-kṛtena mitra-kāryam a-mitra-pratīghātam anyad vā duṣ-pratipādakaṃ kāryaṃ sādhayiṣyāmi. saṃsṛṣṭo vānayā hatvāsyāḥ patim asmad-bhāvyaṃ tad-aiśvaryam evam adhigamiṣyāmi.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.10–11</div>
+    <div class="japanese">「彼女を通じて味方にした夫によって、味方の利益を図り、敵を排除し、あるいは他の達成困難な事業を成し遂げよう」——あるいは——「彼女と結ばれ、彼女の夫を殺し、我がものとなるべき財産と権力を手に入れよう」。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.12</div>
+    <div class="sanskrit">nir-atyayaṃ vāsyā gamanam arthānubaddham. ahaṃ ca niḥ-sāratvāt kṣīṇa-vṛtty-upāyaḥ. so 'ham anenopāyena tad-dhanam atimahadakṛcchrād adhigamiṣyāmi.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.12</div>
+    <div class="japanese">「この女に近づくことは危険がなく、財を伴う。私は無一文で（<span class="term">niḥ-sāra</span>）、生計の手段も尽きている。この方法により、彼女の莫大な財産を苦もなく手に入れよう」。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.13–14</div>
+    <div class="sanskrit">marma-jñā vā mayi dṛḍham abhikāmā sā mām an-icchantaṃ doṣa-vikhyāpanena dūṣayiṣyati. a-sad-bhūtaṃ vā doṣaṃ śraddheyaṃ duṣ-parihāraṃ mayi kṣepsyati yena me vināśaḥ syāt.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.13–14</div>
+    <div class="japanese">「この女は私の急所を知り（<span class="term">marma-jñā</span>）、私を強く欲している。もし私が拒めば、私の欠点を暴いて世間で貶めるだろう」——あるいは——「実在しない欠点であるが信じられやすく反論しがたい罪を私にかぶせ、それにより私は破滅するだろう」。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.15–16</div>
+    <div class="sanskrit">āyatimantaṃ vā vaśyaṃ patiṃ matto vibhidya dviṣataḥ saṃgrāhayiṣyati. svayaṃ vā taiḥ saha saṃsṛjyeta. mad-avarodhānāṃ vā dūṣayitā patir asyās tad asyāham api dārān eva dūṣayan pratikariṣyāmi.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.15–16</div>
+    <div class="japanese">「この女は将来有望で従順な夫を私から引き離し、敵方に味方させるだろう。あるいは自ら敵と結ぶだろう」——あるいは——「この女の夫は私の妻たちを辱めた者である。ならば私もこの男の妻を辱めて報復しよう」。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.17–19</div>
+    <div class="sanskrit">rāja-niyogāc cāntar-vartinaṃ śatruṃ vāsya nirhaniṣyāmi. yām anyāṃ kāmayiṣye sāsyā vaśagā. tām anena saṃkrameṇādhigamiṣyāmi. kanyām a-labhyāṃ vātmādhīnām artha-rūpavatīṃ mayi saṃkrāmayiṣyati.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.17–19</div>
+    <div class="japanese">「王の命により、この女の夫の内部にいる敵を排除しよう」——「私が望む別の女がこの女の支配下にある。この手段を通じてその女を手に入れよう」——「私が得られない、財と美貌を備えた娘を、この女が私のもとへ連れてきてくれるだろう」。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.20–21</div>
+    <div class="sanskrit">mamā-mitro vāsyāḥ patyā sahaikī-bhāvam upagatas tam anayā rasena yojayiṣyāmīty evam-ādibhiḥ kāraṇaiḥ para-striyam api prakurvīta. iti sāhasikyaṃ na kevalaṃ rāgād eva.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.20–21</div>
+    <div class="japanese">「私の敵がこの女の夫と一体となっている。この女を通じて彼に毒を盛ろう」——このような理由により、他人の妻にも近づくことがある。この大胆な行為（<span class="term">sāhasikya</span>）は、単なる情欲（<span class="term">rāga</span>）からだけではない。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】para-parigṛhītā に近づく正当化</div>
+  Yaśodhara は、これらの理由は情欲の正当化ではなく、<span class="term">viṣaya-viśuddhi</span>（対象の浄化、すなわち倫理的文脈の明確化）のために述べられていると説明する。まず対象の清浄さを確認し、次に理由の真実性を見極め、そのうえで行動すべきであって、感情に流されて行動してはならない（<span class="term">na bhāvataḥ</span>）と強調する。引用偈：「まず対象の清浄さを、次に理由の真実性を見極め、他人の妻に対しては感情ではなく熟慮のうえ行動せよ」。1.5.20 の「毒を盛る」（<span class="term">rasa</span> = <span class="term">viṣa</span>）について、注釈は <span class="term">kālāntara-prāṇahārin viṣa</span>（時間をおいて命を奪う毒）と明示する。
+</div>
+
+<!-- ===== Section 3: 他の学者による追加類型 ===== -->
+<div class="section-title">三、諸学者による追加類型</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.22</div>
+    <div class="sanskrit">etair eva kāraṇair mahā-mātra-saṃbaddhā rāja-saṃbaddhā vā tatraika-deśa-cāriṇī kā cid anyā vā kārya-saṃpādinī vidhavā pañcamīti cārāyaṇaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.22</div>
+    <div class="japanese">同じ理由により、大臣に関係ある者、あるいは王に関係ある者、その一族の一部に関わる者、あるいは任務を遂行する別の女——このような寡婦（<span class="term">vidhavā</span>）が第五の nāyikā であると<span class="term">Cārāyaṇa</span> は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.23</div>
+    <div class="sanskrit">saiva pravrajitā ṣaṣṭhīti suvarṇanābhaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.23</div>
+    <div class="japanese">その同じ者が出家女（<span class="term">pravrajitā</span>）であれば第六であると<span class="term">Suvarṇanābha</span> は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.24</div>
+    <div class="sanskrit">gaṇikāyā duhitā paricārikā vān-anya-pūrvā saptamīti ghoṭakamukhaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.24</div>
+    <div class="japanese">遊女（<span class="term">gaṇikā</span>）の娘、あるいはまだ男と関わったことのない侍女（<span class="term">paricārikā</span>）が第七であると<span class="term">Ghoṭakamukha</span> は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.25</div>
+    <div class="sanskrit">utkrānta-bāla-bhāvā kula-yuvatir upacārānyatvād aṣṭamīti gonardīyaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.25</div>
+    <div class="japanese">幼年期を脱した良家の若い女（<span class="term">kula-yuvati</span>）は、接し方が異なるため（<span class="term">upacārānyatvāt</span>）第八であると<span class="term">Gonardīya</span> は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.26</div>
+    <div class="sanskrit">kāryāntarā-bhāvād etāsām api pūrvāsv evopalakṣaṇam tasmāc catasra eva nāyikā iti vātsyāyanaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.26</div>
+    <div class="japanese">別の扱いがないため、これらの者も先の分類に含めて見るべきである（<span class="term">upalakṣaṇam</span>）。したがって<span class="term">nāyikā</span> は四種類のみであると<span class="term">Vātsyāyana</span> は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.27</div>
+    <div class="sanskrit">bhinnatvāt tṛtīya-prakṛtiḥ pañcamīty eke.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.27</div>
+    <div class="japanese">性質が異なるため、<span class="term">tṛtīya-prakṛti</span>（第三の性）が第五であると一部の者たちは言う。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】nāyikā の分類一覧</div>
+  <table>
+    <tr><th>学者</th><th>追加された類型</th><th>Vātsyāyana の見解</th></tr>
+    <tr><td>Goṇikāputra</td><td>第4：他人の妻（条件付き）</td><td>認める（<span class="term">pākṣikī</span>）</td></tr>
+    <tr><td>Cārāyaṇa</td><td>第5：寡婦（<span class="term">vidhavā</span>）</td><td rowspan="4">先の四種に包含される（<span class="term">upalakṣaṇam</span>）</td></tr>
+    <tr><td>Suvarṇanābha</td><td>第6：出家女（<span class="term">pravrajitā</span>）</td></tr>
+    <tr><td>Ghoṭakamukha</td><td>第7：遊女の娘・侍女</td></tr>
+    <tr><td>Gonardīya</td><td>第8：良家の若い女</td></tr>
+    <tr><td>一部の者</td><td>第5：第三の性（<span class="term">tṛtīya-prakṛti</span>）</td><td>快楽目的なら veśyā に含む</td></tr>
+  </table>
+  <p>Yaśodhara の整理：vidhavā・pravrajitā は <span class="term">para-parigṛhītā</span> の項で見るべし、gaṇikā の娘・侍女は快楽目的ゆえ veśyā に含む、kula-yuvati は息子・妻の果報のため kanyā に含むが、接し方は異なる。</p>
+</div>
+
+<!-- ===== Section 4: 男性の類型 ===== -->
+<div class="section-title">四、男性の類型（nāyaka-vimarśa）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.28</div>
+    <div class="sanskrit">eka eva tu sārvalaukiko nāyakaḥ. pracchannas tu dvitīyaḥ. viśeṣālābhāt. uttamādhama-madhyamatāṃ tu guṇa-guṇato vidyāt. tāṃs tūbhayor api guṇā-guṇān vaiśike vakṣyāmaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.28</div>
+    <div class="japanese"><span class="term">nāyaka</span>（男性の主人公）は実に一種類のみであり、すべての人に知られる者（<span class="term">sārvalaukika</span>）である。しかし隠れて行動する者（<span class="term">pracchanna</span>）が第二である——特別な成果を得るためである。上・中・下の区別は徳と不徳（<span class="term">guṇa-guṇa</span>）によって知るべきである。両者の徳と不徳については、遊女篇（<span class="term">vaiśika</span>）で述べる。</div>
+  </div>
+</div>
+
+<!-- ===== Section 5: 近づくべきでない女 ===== -->
+<div class="section-title">五、近づくべきでない女（a-gamyā）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.29</div>
+    <div class="sanskrit">a-gamyās tv evaitāḥ kuṣṭhiny unmattā patitā bhinna-rahasyā prakāśa-prārthinī gata-prāya-yauvanātiśvetātikṛṣṇā dur-gandhā saṃbandhinī sakhī pravrajitā saṃbandhi-sakhi-śrotriya-rāja-dārāś ca.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.29</div>
+    <div class="japanese">しかし、近づくべきでない女（<span class="term">a-gamyā</span>）は以下の者である——皮膚病の者（<span class="term">kuṣṭhinī</span>）、狂った者（<span class="term">unmattā</span>）、種姓から落ちた者（<span class="term">patitā</span>）、秘密を暴露する者（<span class="term">bhinna-rahasyā</span>）、公然と求愛する者（<span class="term">prakāśa-prārthinī</span>）、若さがほぼ失われた者（<span class="term">gata-prāya-yauvanā</span>）、色が極端に白い者（<span class="term">ati-śvetā</span>）、極端に黒い者（<span class="term">ati-kṛṣṇā</span>）、悪臭のある者（<span class="term">dur-gandhā</span>）、親戚の女（<span class="term">saṃbandhinī</span>）、女友達（<span class="term">sakhī</span>）、出家女（<span class="term">pravrajitā</span>）、親戚・友人・学者・王の妻たちである。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.30</div>
+    <div class="sanskrit">dṛṣṭa-pañca-puruṣā nā-gamyā kā cid astīti bābhravīyāḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.30</div>
+    <div class="japanese">五人の男と関係をもったことが知られている女に、近づくべきでない者はいないと<span class="term">Bābhravīya</span> 派は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.31</div>
+    <div class="sanskrit">saṃbandhi-sakhi-śrotriya-rāja-dāra-varjam iti goṇikāputraḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.31</div>
+    <div class="japanese">ただし親戚・友人・学者・王の妻を除いてであると<span class="term">Goṇikāputra</span> は言う。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】a-gamyā の理由</div>
+  <ul>
+    <li><span class="term">kuṣṭhinī</span>——嫌悪すべき病気の代表例（他の忌避すべき病も含意する）。</li>
+    <li><span class="term">unmattā</span>——何をするかわからず、快楽をもたらさない。</li>
+    <li><span class="term">patitā</span>——交際すると自分も堕落する。</li>
+    <li><span class="term">bhinna-rahasyā</span>——秘密を漏らし男を辱める。</li>
+    <li><span class="term">prakāśa-prārthinī</span>——公然と求愛し、災いを招く。</li>
+    <li><span class="term">sakhī</span>（妻の女友達）——不義により友情の裏切りとなる。</li>
+    <li><span class="term">śrotriya-dārā</span>（学者の妻）——聖火のごとく（<span class="term">jvalad-agni-prakhyā</span>）。dharma の喪失を招く。</li>
+    <li><span class="term">rāja-dārā</span>（王の妻）——現世と来世の両方で危険（<span class="term">dṛṣṭa-adṛṣṭa-virodha</span>）。</li>
+    <li>Bābhravīya 派：五人以上の男と関係した女は <span class="term">bandhakī</span>（淫婦）であり、Parāśara も五人を超えた女は bandhakī と述べる。ただし Draupadī は夫たちが正式な夫であるため例外。</li>
+  </ul>
+</div>
+
+<!-- ===== Section 6: 友人（mitra） ===== -->
+<div class="section-title">六、友人の考察（sahāya-vimarśa）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.32</div>
+    <div class="sanskrit">saha-pāṃsu-krīḍitam upakāra-saṃbaddhaṃ samāna-śīla-vyasanaṃ sahādhyāyinaṃ yaś cāsya marmaṇi rahasyāni ca vidyāt yasya cāyaṃ vidyād vā dhātr-apatyaṃ saha-saṃvṛddhaṃ mitram.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.32</div>
+    <div class="japanese"><span class="term">mitra</span>（友人）とは——幼少時にともに砂遊びをした者（<span class="term">saha-pāṃsu-krīḍita</span>）、恩義で結ばれた者（<span class="term">upakāra-saṃbaddha</span>）、同じ性格と趣味をもつ者（<span class="term">samāna-śīla-vyasana</span>）、同門の学友（<span class="term">sahādhyāyin</span>）、互いの急所と秘密を知る者、あるいは乳母の子で共に育った者（<span class="term">dhātr-apatya, saha-saṃvṛddha</span>）である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.33</div>
+    <div class="sanskrit">pitṛ-paitāmaham a-visaṃvādakam a-dṛṣṭa-vaikṛtaṃ vaśyaṃ dhruvam a-lobha-śīlam a-parihāryam a-mantra-visrāvīti mitra-saṃpat.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.33</div>
+    <div class="japanese">良い友人の条件（<span class="term">mitra-saṃpat</span>）とは——父祖の代からの付き合い（<span class="term">pitṛ-paitāmaha</span>）、欺かない（<span class="term">a-visaṃvādaka</span>）、変心したことがない（<span class="term">a-dṛṣṭa-vaikṛta</span>）、従順（<span class="term">vaśya</span>）、堅実（<span class="term">dhruva</span>）、貪欲でない（<span class="term">a-lobha-śīla</span>）、奪い去られない（<span class="term">a-parihārya</span>）、秘密を漏らさない（<span class="term">a-mantra-visrāvin</span>）ことである。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】九種の mitra</div>
+  <p>Yaśodhara は友情の起源を九種に数える：</p>
+  <table>
+    <tr><th>種類</th><th>説明</th></tr>
+    <tr><td><span class="term">saha-pāṃsu-krīḍita</span></td><td>同じ場所で幼年期を過ごした</td></tr>
+    <tr><td><span class="term">upakāra-saṃbaddha</span></td><td>金銭や命を救うなどの恩義で結ばれた</td></tr>
+    <tr><td><span class="term">samāna-śīla-vyasana</span></td><td>同じ性格・同じ運命の共有者</td></tr>
+    <tr><td><span class="term">sahādhyāyin</span></td><td>同じ師のもとで学んだ</td></tr>
+    <tr><td><span class="term">marma-jña</span></td><td>互いの弱点を知る</td></tr>
+    <tr><td><span class="term">rahasya-dhara</span></td><td>互いの秘密を守る</td></tr>
+    <tr><td><span class="term">parasparatara-jña</span></td><td>相手の弱点と秘密の両方を知り、尊重される</td></tr>
+    <tr><td><span class="term">dhātr-apatya</span></td><td>乳母の子——saha-pāṃsu-krīḍita の最上位</td></tr>
+    <tr><td><span class="term">saha-saṃvṛddha</span></td><td>同じ村で育った——上記と同類だが独立して挙げられる</td></tr>
+  </table>
+  <p><span class="term">mitra-saṃpat</span>（友人の条件）について：<span class="term">pitṛ-paitāmaha</span> は nāyaka の曾祖父の代から続く友情を意味する。<span class="term">a-parihārya</span> は愛着ゆえに他に奪われないこと。</p>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.34</div>
+    <div class="sanskrit">rajaka-nāpita-mālākāra-gāndhika-saurika-bhikṣuka-gopālaka-tāmbūlika-sauvarṇika-pīṭhamarda-viṭa-vidūṣakādayo mitrāṇi. tad-yoṣin mitrāś ca nāgarakāḥ syur iti vātsyāyanaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.34</div>
+    <div class="japanese">洗濯人（<span class="term">rajaka</span>）、理髪師（<span class="term">nāpita</span>）、花輪師（<span class="term">mālākāra</span>）、香料商（<span class="term">gāndhika</span>）、酒商（<span class="term">saurika</span>）、托鉢者（<span class="term">bhikṣuka</span>）、牛飼い（<span class="term">gopālaka</span>）、嗜好品商（<span class="term">tāmbūlika</span>）、金細工師（<span class="term">sauvarṇika</span>）、<span class="term">pīṭhamarda</span>（相談役）、<span class="term">viṭa</span>（色事師）、<span class="term">vidūṣaka</span>（道化役）などが友人である。彼らの妻たちも友人であると<span class="term">Vātsyāyana</span> は言う。都会人（<span class="term">nāgaraka</span>）はそうあるべきである。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】職業的友人</div>
+  これらの者は自分の仕事を通じて nāyaka を助け、他人の家にも出入りできる。Yaśodhara は <span class="term">gāndhika</span> を「香料を商品とする者」（<span class="term">gandhaḥ paṇyam asya</span>）、<span class="term">saurika</span> を「酒商」（<span class="term">śauṇḍika</span>）と説明する。女性たちについて：「男性ほどには女性の方が他人の家に入りやすく、信頼を得やすい」（<span class="term">na tathā puruṣā yathā yoṣitaḥ para-bhavanaṃ viśanti viśvāsayanti ca</span>）。
+</div>
+
+<!-- ===== Section 7: 使者（dūta） ===== -->
+<div class="section-title">七、使者の考察（dūta-karma-vimarśa）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.35</div>
+    <div class="sanskrit">yad ubhayoḥ sādhāraṇam ubhayatrodāraṃ viśeṣato nāyikāyāḥ su-visrabdhaṃ tatra dūta-karma.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.35</div>
+    <div class="japanese">両者（nāyaka と nāyikā）に共通の友であり、両者に対して誠実で、とりわけ女性から深く信頼されている者——そのような者に使者の役割（<span class="term">dūta-karma</span>）がある。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.36</div>
+    <div class="sanskrit">paṭutā dhāṣṭryam iṅgitākāra-jñatā pratāraṇa-kāla-jñatā viṣahya-buddhitvaṃ laghvī pratipattiḥ sopāyā ca. iti dūta-guṇāḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.36</div>
+    <div class="japanese">使者の資質（<span class="term">dūta-guṇa</span>）は——弁舌の巧みさ（<span class="term">paṭutā</span>）、大胆さ（<span class="term">dhāṣṭrya</span>）、表情や身振りを読む力（<span class="term">iṅgitākāra-jñatā</span>）、説得の好機を知ること（<span class="term">pratāraṇa-kāla-jñatā</span>）、困難に耐える知性（<span class="term">viṣahya-buddhitva</span>）、素早く的確な判断力（<span class="term">laghvī pratipattiḥ</span>）、そして方策を伴うこと（<span class="term">sopāyā</span>）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】dūta-guṇa の解説</div>
+  <ul>
+    <li><span class="term">paṭutā</span>——知恵に裏打ちされた巧みな話術（<span class="term">prajñānubaddhayā vācā vaktuṃ kuśalatā</span>）。</li>
+    <li><span class="term">dhāṣṭrya</span>——図太さ、臆せぬこと（<span class="term">prāgalabhya</span>）。</li>
+    <li><span class="term">iṅgitākāra-jñatā</span>——<span class="term">iṅgita</span> は隠れた意図の表出、<span class="term">ākāra</span> は顔や目に現れる変化。これらを読み取って適切に対応する。</li>
+    <li><span class="term">kāla-jñatā</span>——「今こそ説得すべき時だ」と見極める能力。</li>
+    <li><span class="term">laghvī pratipattiḥ sopāyā</span>——事態を見極めたうえで方策を伴う迅速な対処。事を遅らせてはならない（<span class="term">na kāryātipātanam</span>）。</li>
+  </ul>
+</div>
+
+<!-- ===== Section 8: 結びの偈 ===== -->
+<div class="section-title">八、結びの偈（samāpana-śloka）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">1.5.37</div>
+    <div class="sanskrit">
+      bhavati cātra ślokaḥ.
+      <div class="verse">
+        ātmavān mitravān yukto<br>
+        bhāvajño deśa-kāla-vit /<br>
+        a-labhyām apy a-yatnena<br>
+        striyaṃ saṃsādhayen naraḥ //
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="sutra-num">1.5.37</div>
+    <div class="japanese">
+      ここに偈がある。
+      <div class="verse">
+        自己を修めた者（<span class="term">ātmavān</span>）、友に恵まれた者（<span class="term">mitravān</span>）、<br>
+        務めに精通し（<span class="term">yukta</span>）、心情を知り（<span class="term">bhāvajña</span>）、<br>
+        場所と時を弁える者（<span class="term">deśa-kāla-vit</span>）は、<br>
+        得がたき女をも苦もなく成就する。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】結びの偈と第一篇の総括</div>
+  Yaśodhara はこの偈の各語を第一篇の各章に対応させる：
+  <table>
+    <tr><th>語</th><th>対応する章</th></tr>
+    <tr><td><span class="term">ātmavān</span></td><td>1.2 三目的の実践 + 1.3 学芸の概説（自己の修養）</td></tr>
+    <tr><td><span class="term">mitravān</span></td><td>1.5 前半：友人の考察（<span class="term">sahāya-vimarśa</span>）</td></tr>
+    <tr><td><span class="term">yukta</span></td><td>1.4 都会人の生活（<span class="term">nāgaraka-vṛtta</span> の実践）</td></tr>
+    <tr><td><span class="term">bhāvajña</span></td><td>1.5 前半：男女の類型の考察</td></tr>
+    <tr><td><span class="term">deśa-kāla-vit</span></td><td>1.5 後半：使者の資質（心情の読取り）</td></tr>
+  </table>
+  <p>こうして第一篇「総論」（<span class="term">Sādhāraṇa</span>）は完結する。この篇は kāma の学問的基礎——学問体系、三目的の調和、六十四芸の修得、都会人の生活規範、恋愛の登場人物——を論じた。次の第二篇「性的結合」（<span class="term">Sāṃprayogika</span>）は、具体的な性愛の技法に入る。</p>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sādhāraṇe prathame 'dhikaraṇe<br>
+  nāyaka-sahāya-dūtī-karma-vimarśaḥ pañcamo 'dhyāyaḥ<br><br>
+  ——第一篇 総論（Sādhāraṇam）完——<br>
+  <span style="font-size:0.8rem;color:var(--text-secondary)">カーマスートラ対訳　底本：GRETIL / 注釈：Jayamaṅgalā (Yaśodhara)</span>
+</div><div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 2.2 抱擁の考察</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+    --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+    --table-header: #e8dfd2; --table-stripe: #faf7f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #241f19; --text: #e0d6c8; --text-secondary: #a89880;
+      --accent: #c4845c; --accent-light: #d4a07a; --border: #3d3428; --border-light: #2e271e;
+      --sanskrit-bg: #1e1a14; --note-bg: #2a2318; --highlight: #d4a07a;
+      --table-header: #2e271e; --table-stripe: #211c16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #241f19; --text: #e0d6c8; --text-secondary: #a89880;
+    --accent: #c4845c; --accent-light: #d4a07a; --border: #3d3428; --border-light: #2e271e;
+    --sanskrit-bg: #1e1a14; --note-bg: #2a2318; --highlight: #d4a07a;
+    --table-header: #2e271e; --table-stripe: #211c16;
+  }
+
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.9; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+  header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid var(--accent); }
+  header .book-label { font-size: 0.85rem; color: var(--text-secondary); letter-spacing: 0.15em; text-transform: uppercase; }
+  header h1 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.75rem; font-weight: 700; color: var(--accent); margin: 0.5rem 0 0.25rem; text-wrap: balance; }
+  header h2 { font-size: 1.2rem; font-weight: 600; color: var(--text); margin: 0.25rem 0; }
+  header .chapter-desc { font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem; }
+  .section-title { font-size: 1.15rem; font-weight: 700; color: var(--accent); margin: 2.5rem 0 1.25rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+  .sutra-block { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.75rem; padding: 1.25rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 6px; }
+  .sutra-num { font-size: 0.75rem; font-weight: 600; color: var(--accent); margin-bottom: 0.35rem; font-family: 'Noto Serif Devanagari', serif; }
+  .sanskrit { font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 1.85; color: var(--text); background: var(--sanskrit-bg); padding: 0.75rem; border-radius: 4px; hyphens: none; }
+  .japanese { font-size: 0.95rem; line-height: 1.95; color: var(--text); }
+  .japanese .term { color: var(--highlight); font-weight: 600; }
+  .note-box { background: var(--note-bg); border-left: 3px solid var(--accent); padding: 1rem 1.25rem; margin: 1.5rem 0 2rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; line-height: 1.85; }
+  .note-box .note-title { font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; font-size: 0.82rem; letter-spacing: 0.08em; }
+  .note-box ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+  .note-box li { margin-bottom: 0.35rem; }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.88rem; }
+  table th { background: var(--table-header); padding: 0.6rem 0.75rem; text-align: left; font-weight: 600; color: var(--accent); border-bottom: 2px solid var(--border); }
+  table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+  table tr:nth-child(even) td { background: var(--table-stripe); }
+  .verse { font-style: italic; padding: 0.5rem 0; border-left: 2px solid var(--accent-light); padding-left: 1rem; margin: 0.5rem 0; }
+  .colophon { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--accent); font-size: 0.85rem; color: var(--text-secondary); }
+  @media (max-width: 640px) { .sutra-block { grid-template-columns: 1fr; gap: 0.75rem; } body { padding: 1rem; } header h1 { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book-label">Vātsyāyanakāmasūtra — 第二篇 性的結合（Sāṃprayogikam）</div>
+  <h1>āliṅgana-vicāra-prakaraṇam</h1>
+  <h2>第二章　抱擁の考察</h2>
+  <div class="chapter-desc">「六十四芸」の名称の由来と、十二種の抱擁の技法</div>
+</header>
+
+<!-- ===== Section 1: 六十四の意味 ===== -->
+<div class="section-title">一、「六十四」の名称について</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.1–3</div>
+    <div class="sanskrit">saṃprayogāṅgaṃ catuḥṣaṣṭir ity ācakṣate. catuḥṣaṣṭi-prakaraṇatvāt. śāstram evedaṃ catuḥṣaṣṭir ity ācārya-vādaḥ. kalānāṃ catuḥṣaṣṭitvāt tāsāṃ ca saṃprayogāṅga-bhūtatvāt kalā-samūho vā catuḥṣaṣṭir iti.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.1–3</div>
+    <div class="japanese">性的結合の補助的技法（<span class="term">saṃprayogāṅga</span>）が「六十四（<span class="term">catuḥṣaṣṭi</span>）」と呼ばれる。節（<span class="term">prakaraṇa</span>）が六十四あるからである。この学問（<span class="term">śāstra</span>）そのものが「六十四」であるとは師たちの説。あるいは芸術（<span class="term">kalā</span>）が六十四あり、それらが性的結合の一部をなすことから、芸術の集合が「六十四」と呼ばれるとも。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.4–5</div>
+    <div class="sanskrit">āliṅgana-cumbana-nakha-cchedya-daśana-cchedya-saṃveśana-sīt-kṛta-puruṣāyitopariṣṭakānām āṣṭānām aṣṭadhā vikalpa-bhedād aṣṭāv aṣṭakāś catuḥṣaṣṭir iti bābhravīyāḥ. vikalpa-vargāṇām aṣṭānāṃ nyūnādikatva-darśanāt prahaṇa-viruta-puruṣopasṛpti-citra-ratādīnām anyeṣām api vargāṇām iha praveśanāt prāyo-vādo 'yam. yathā sapta-parṇo vṛkṣaḥ pañca-varṇo balir iti vātsyāyanaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.4–5</div>
+    <div class="japanese"><span class="term">Bābhravīya</span> 派によれば、抱擁（<span class="term">āliṅgana</span>）・接吻（<span class="term">cumbana</span>）・爪痕（<span class="term">nakha-cchedya</span>）・歯痕（<span class="term">daśana-cchedya</span>）・体位（<span class="term">saṃveśana</span>）・嘆声（<span class="term">sīt-kṛta</span>）・女上位（<span class="term">puruṣāyita</span>）・口腔技法（<span class="term">upariṣṭaka</span>）の八部門がそれぞれ八種の変形をもち、8×8＝64 である。しかし<span class="term">Vātsyāyana</span> は言う——八部門の下位分類は八より多かったり少なかったりし、また打擲（<span class="term">prahaṇa</span>）・叫声（<span class="term">viruta</span>）・男の攻め（<span class="term">puruṣopasṛpti</span>）・特殊体位（<span class="term">citra-rata</span>）など他の部門も含まれる。これは大まかな言い方である——「七葉樹」が実は七葉でないように、「五色供物」が実は五色でないように。</div>
+  </div>
+</div>
+
+<!-- ===== Section 2: 初対面の四つの抱擁 ===== -->
+<div class="section-title">二、まだ結ばれていない二人の抱擁（a-samāgatayoḥ）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.6–7</div>
+    <div class="sanskrit">tatrā-samāgatayoḥ prīti-liṅga-dyotanārtham āliṅgana-catuṣṭayam. [1] spṛṣṭakam [2] viddhakam [3] udghṛṣṭakam [4] pīḍitakam iti. sarvatra saṃjñārthenaiva karmātideśaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.6–7</div>
+    <div class="japanese">まだ結ばれていない二人において、愛情の徴（<span class="term">prīti-liṅga</span>）を示すために四種の抱擁がある——[1]<span class="term">spṛṣṭaka</span>（触れる）、[2]<span class="term">viddhaka</span>（刺す）、[3]<span class="term">udghṛṣṭaka</span>（擦る）、[4]<span class="term">pīḍitaka</span>（押し付ける）である。すべてにおいて名称がそのまま行為を示す。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.8–9</div>
+    <div class="sanskrit">saṃmukhāgatāyāṃ prayojyāyām anyāpadeśena gacchato gātreṇa gātrasya sparśanaṃ [1] spṛṣṭakam. prayojyaṃ sthitam upaviṣṭaṃ vā vi-jane kiṃ cid gṛhṇāti payo-dhareṇa viddhyet. nāyako 'pi tām avapīḍya gṛhṇīyād iti [2] viddhakam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.8–9</div>
+    <div class="japanese">[1]<span class="term">spṛṣṭaka</span>——向かい合って来た女に対し、何かの口実で通りすがりに体で体に触れること。[2]<span class="term">viddhaka</span>——人目のない場所で、立っている、あるいは座っている女が何かを取ろうとするとき、乳房で（男の体を）突く。男もまた彼女を押さえるようにして受け取ること。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.10–13</div>
+    <div class="sanskrit">tad ubhayam an-ati-pravṛtta-saṃbhāṣaṇayoḥ. tamasi jana-saṃbādhe vi-jane vātha śanakair gacchator nāti-hrasva-kālam udgharṣaṇaṃ paras-parasya gātrāṇām [3] udghṛṣṭakam. tad eva kuḍya-saṃdeśena stambha-saṃdeśena vā sphuṭakam avapīḍayed iti [4] pīḍitakam. tad ubhayam avagata-parasparākārayoḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.10–13</div>
+    <div class="japanese">前者の二つ（spṛṣṭaka・viddhaka）はまだ深い会話をしていない段階の者同士に。[3]<span class="term">udghṛṣṭaka</span>——暗闘の中で、人混みで、あるいは人目のない所で、ゆっくり歩く二人が、さほど短くない時間、互いの体を擦り合わせること。[4]<span class="term">pīḍitaka</span>——同じ行為を壁際（<span class="term">kuḍya-saṃdeśa</span>）か柱のそば（<span class="term">stambha-saṃdeśa</span>）で、体を強く押し付けること。後者の二つ（udghṛṣṭaka・pīḍitaka）は互いの意図を了解した者同士に。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【図表】初対面の四つの抱擁</div>
+  <div class="table-wrap">
+  <table>
+    <tr><th>名称</th><th>意味</th><th>場面</th><th>段階</th></tr>
+    <tr><td><span class="term">spṛṣṭaka</span></td><td>通りすがりに体が触れる</td><td>出会いの場</td><td rowspan="2">会話が始まる前</td></tr>
+    <tr><td><span class="term">viddhaka</span></td><td>乳房で突く／押さえるように受け取る</td><td>人目のない場所</td></tr>
+    <tr><td><span class="term">udghṛṣṭaka</span></td><td>ゆっくり体を擦り合わせる</td><td>暗がり・人混み・密室</td><td rowspan="2">互いの意図を了解済み</td></tr>
+    <tr><td><span class="term">pīḍitaka</span></td><td>壁・柱に押し付ける</td><td>壁際・柱のそば</td></tr>
+  </table>
+  </div>
+</div>
+
+<!-- ===== Section 3: 性交時の四つの抱擁 ===== -->
+<div class="section-title">三、性交時の抱擁（saṃprayoga-kāle）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.14–15</div>
+    <div class="sanskrit">[1] latāveṣṭitakaṃ [2] vṛkṣādhirūḍhakaṃ [3] tila-taṇḍulakaṃ [4] kṣīra-nīrakam iti catvāri saṃprayoga-kāle. lateva śālam āveṣṭayantī cumbanārthaṃ mukham avanamayet. uddhṛtya manda-sītkṛtā tam āśritā vā kiṃcid rāmaṇīyakaṃ paśyet tal [1] latāveṣṭitakam.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.14–15</div>
+    <div class="japanese">性交時の抱擁は四種——[1]<span class="term">latāveṣṭitaka</span>（蔓の巻きつき）、[2]<span class="term">vṛkṣādhirūḍhaka</span>（木に登る）、[3]<span class="term">tila-taṇḍulaka</span>（胡麻と米）、[4]<span class="term">kṣīra-nīraka</span>（乳と水）。[1]<span class="term">latāveṣṭitaka</span>——蔓（<span class="term">latā</span>）がシャーラ樹に巻きつくように、接吻のために彼の顔を引き寄せ、わずかに身を反らせて柔らかく嘆息し（<span class="term">manda-sītkṛtā</span>）、彼に寄りかかって何か愛らしいものを見る——これが「蔓の巻きつき」である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.16–17</div>
+    <div class="sanskrit">caraṇena caraṇam ākramya dvitīyenoru-deśam ākramantī veṣṭayantī vā tat-pṛṣṭha-saktaika-bāhur dvitīyenāṃsam avanamayantī īṣan manda-sītkṛta-kūjitā cumbanārtham evādhiroḍhum icched iti [2] vṛkṣādhirūḍhakam. tad ubhayam sthita-karma.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.16–17</div>
+    <div class="japanese">[2]<span class="term">vṛkṣādhirūḍhaka</span>——片足で彼の足を踏み、もう片方の足で彼の太腿を踏むか巻きつけ、片腕を彼の背に掛け、もう片方で肩を引き下げ、わずかに柔らかく嘆息し低く鳴きながら、接吻のために登ろうとする——これが「木に登る」である。前者二つ（latāveṣṭitaka・vṛkṣādhirūḍhaka）は立ったまま行う（<span class="term">sthita-karma</span>）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.18–20</div>
+    <div class="sanskrit">śayana-gatāv evoru-vyatyāsaṃ bhuja-vyatyāsaṃ ca sa-saṃgharṣam iva ghanaṃ saṃsvajete tat [3] tila-taṇḍulakam. rāgāndhāv an-apekṣitātyayau parasparam anuviśata ivotsaṅga-gatāyām abhimukhopaviṣṭāyāṃ śayane veti [4] kṣīra-jalakam. tad ubhayaṃ rāga-kāle.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.18–20</div>
+    <div class="japanese">[3]<span class="term">tila-taṇḍulaka</span>（胡麻と米）——臥所に入り、太腿を絡ませ、腕を交差させ、擦り合わせるように密着して抱き合うこと。[4]<span class="term">kṣīra-jalaka</span>（乳と水）——情欲に盲目となり（<span class="term">rāgāndha</span>）、危険を顧みず、互いの中に入り込むかのように——膝の上に向かい合って座る場合でも、横になる場合でも。後者二つ（tila-taṇḍulaka・kṣīra-jalaka）は情欲の高まった時に。</div>
+  </div>
+</div>
+
+<!-- ===== Section 4: 個別の部位の抱擁 ===== -->
+<div class="section-title">四、Suvarṇanābha による追加——部位別の抱擁</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.22–26</div>
+    <div class="sanskrit">suvarṇanābhasya tv adhikam ekāṅgopagūhana-catuṣṭayam. tatroru-saṃdaṃśenaikam ūrum ūrudvayaṃ vā sarvaprāṇaṃ pīḍayed ity ūrūpagūhanam[1]. jaghanena jaghanam avapīḍya prakīryamāṇa-keśa-hastā nakha-daśana-prahaṇana-cumbana-prayojanāya tad upari laṅghayet taj jaghanopagūhanam[2]. stanābhyām uraḥ praviśya tatraiva bhāram āropayed iti stanāliṅganam[3]. mukhe mukham āsajyākṣiṇī akṣṇor lalāṭena lalāṭam āhanyāt sālalāṭikā[4].</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.22–26</div>
+    <div class="japanese"><span class="term">Suvarṇanābha</span> はさらに四つの部位別抱擁（<span class="term">ekāṅgopagūhana</span>）を加える。[1]<span class="term">ūrūpagūhana</span>（太腿の抱擁）——太腿の挟みで相手の片腿あるいは両腿を全力で（<span class="term">sarvaprāṇam</span>）締めつける。[2]<span class="term">jaghanopagūhana</span>（腰の抱擁）——腰で腰を押し付け、髪を乱して、爪・歯・打擲・接吻のために相手の上に乗り上がる。[3]<span class="term">stanāliṅgana</span>（乳房の抱擁）——両乳房で胸に入り込み、その重みを預ける。[4]<span class="term">lalāṭikā</span>（額の接触）——口に口を合わせ、目を目に、額を額に打ち当てる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【図表】十二種の抱擁の全体像</div>
+  <div class="table-wrap">
+  <table>
+    <tr><th>段階</th><th>名称（IAST）</th><th>和名</th><th>特徴</th></tr>
+    <tr><td rowspan="4">初対面</td><td><span class="term">spṛṣṭaka</span></td><td>触れる</td><td>通りすがりの身体接触</td></tr>
+    <tr><td><span class="term">viddhaka</span></td><td>刺す</td><td>乳房による接触</td></tr>
+    <tr><td><span class="term">udghṛṣṭaka</span></td><td>擦る</td><td>暗がりでの擦り合い</td></tr>
+    <tr><td><span class="term">pīḍitaka</span></td><td>押す</td><td>壁・柱に押し付ける</td></tr>
+    <tr><td rowspan="4">性交時</td><td><span class="term">latāveṣṭitaka</span></td><td>蔓の巻きつき</td><td>蔓のように巻きつき身を反らす（立位）</td></tr>
+    <tr><td><span class="term">vṛkṣādhirūḍhaka</span></td><td>木に登る</td><td>足で踏み登ろうとする（立位）</td></tr>
+    <tr><td><span class="term">tila-taṇḍulaka</span></td><td>胡麻と米</td><td>臥所で四肢を絡ませ密着（臥位）</td></tr>
+    <tr><td><span class="term">kṣīra-jalaka</span></td><td>乳と水</td><td>互いに融け込む無我の抱擁（臥位/座位）</td></tr>
+    <tr><td rowspan="4">部位別<br>(Suvarṇanābha)</td><td><span class="term">ūrūpagūhana</span></td><td>太腿の抱擁</td><td>太腿で挟みつける</td></tr>
+    <tr><td><span class="term">jaghanopagūhana</span></td><td>腰の抱擁</td><td>腰を押し付け上に乗る</td></tr>
+    <tr><td><span class="term">stanāliṅgana</span></td><td>乳房の抱擁</td><td>乳房で胸に重みを預ける</td></tr>
+    <tr><td><span class="term">lalāṭikā</span></td><td>額の接触</td><td>口・目・額を合わせる</td></tr>
+  </table>
+  </div>
+  <p>Yaśodhara の補足：<span class="term">jaghanopagūhana</span> では「女の腰は特に色気があるため（<span class="term">atiśṛṅgāratvāt</span>）、女がこれを行うと美しい。特に豊かな腰の女に」。<span class="term">stanāliṅgana</span> は座位または横臥位で行い、背を反らして乳房を胸に押し当て、男は「塊のような触覚の快楽」を胸に受ける。</p>
+</div>
+
+<!-- ===== Section 5: 按摩と結びの偈 ===== -->
+<div class="section-title">五、按摩と結びの偈</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.27–28</div>
+    <div class="sanskrit">saṃvāhanam apy upagūhana-prakāram ity eke manyante. saṃsparśatvāt. pṛthak-kālatvād bhinna-prayojanatvād a-sādhāraṇatvān neti vātsyāyanaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.27–28</div>
+    <div class="japanese">按摩（<span class="term">saṃvāhana</span>）もまた抱擁の一種であると一部の者は考える——接触を伴うため。しかし<span class="term">Vātsyāyana</span> は否定する——時が異なり（<span class="term">pṛthak-kāla</span>）、目的が異なり（<span class="term">bhinna-prayojana</span>）、相互的でない（<span class="term">a-sādhāraṇa</span>）からである。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.2.29–31</div>
+    <div class="sanskrit">pṛcchatāṃ śṛṇvatāṃ vāpi tathā kathayatām api. upagūha-vidhiṃ kṛtsnaṃ riraṃsā jāyate nṛṇām. ye 'pi hy a-śāstritāḥ kecit saṃyogā rāga-vardhanāḥ. ādareṇaiva te 'py atra prayojyāḥ sāṃprayogikāḥ. śāstrāṇāṃ viṣayas tāvad yāvan manda-rasā narāḥ. raticakre-pravṛtte tu naiva śāstram na ca kramaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.2.29–31 【結びの三偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        抱擁の技法について問い、聞き、語るだけでも<br>
+        人には愛欲の欲求（<span class="term">riraṃsā</span>）が生じる。<br><br>
+        学問に記されていなくとも、<br>
+        欲情を増す結合があれば<br>
+        敬意をもってここに用いるべきである。<br><br>
+        学問の対象となるのは欲情の薄い者までである。<br>
+        情欲の車輪が回り始めれば（<span class="term">raticakre pravṛtte</span>）、<br>
+        もはや学問もなく、順序もない。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】結びの偈の含意</div>
+  <ul>
+    <li>最後の偈は本書の全体的な姿勢を象徴する——学問（<span class="term">śāstra</span>）は情欲がまだ目覚めていない段階にある者の手引きであり、一度欲情の車輪が回り始めれば、書物に頼る必要はないし、書物に記された順序に従う義務もない。</li>
+    <li>Yaśodhara は按摩について：接触的であることは接吻なども同様であり、按摩を抱擁に含めるなら接吻も含めねばならず、分類が混乱する。按摩は六十四芸の中の「<span class="term">utsādane keśa-mardane ca kauśalam</span>」（按摩と頭髪揉みの巧みさ）に属すと整理する。</li>
+    <li>抱擁の共通特性（<span class="term">sādhāraṇatva</span>）について：抱擁はどちらが仕掛けても双方に同時に効果がある。按摩は施す者と受ける者が分かれる一方向的行為（<span class="term">a-sādhāraṇa</span>）であるため抱擁ではない。</li>
+  </ul>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  āliṅgana-vicārā dvitīyo 'dhyāyaḥ<br><br>
+  <span style="font-size:0.8rem;color:var(--text-secondary)">カーマスートラ対訳　底本：GRETIL / 注釈：Jayamaṅgalā (Yaśodhara)</span>
+</div><div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

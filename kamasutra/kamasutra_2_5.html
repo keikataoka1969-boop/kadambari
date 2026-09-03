@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 2.5</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+  --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+  --table-header: #e8dfd2; --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+    --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+    --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+    --table-header: #302a22; --table-stripe: #222019;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+  --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+  --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+  --table-header: #302a22; --table-stripe: #222019;
+}
+
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 3rem;
+  line-height: 1.85;
+}
+
+header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--accent); }
+header .book { font-size: 0.85rem; color: var(--text-secondary); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.25rem; }
+header h1 { font-family: 'Noto Serif JP', serif; font-size: 1.75rem; font-weight: 700; color: var(--accent); margin: 0.25rem 0; }
+header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-top: 0.25rem; }
+header .chapter-info { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.75rem; }
+
+.section-title {
+  font-size: 1.15rem; font-weight: 600; color: var(--accent); margin: 2rem 0 1rem;
+  padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+}
+
+.sutra-block {
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 6px;
+  margin-bottom: 1rem; overflow: hidden;
+}
+.sutra-num {
+  font-size: 0.75rem; font-weight: 600; color: var(--accent); padding: 0.5rem 0.75rem 0;
+  font-family: 'Noto Serif Devanagari', serif;
+}
+.sutra-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+}
+.sutra-grid .sanskrit {
+  padding: 0.4rem 0.75rem 0.6rem; background: var(--sanskrit-bg);
+  font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+  font-size: 0.92rem; line-height: 1.8; border-right: 1px solid var(--border-light);
+}
+.sutra-grid .japanese {
+  padding: 0.4rem 0.75rem 0.6rem; font-size: 0.92rem; line-height: 1.85;
+}
+
+.note-box {
+  background: var(--note-bg); border-left: 3px solid var(--accent-light);
+  padding: 0.6rem 0.85rem; margin: 0.75rem 0 1.25rem; border-radius: 0 4px 4px 0;
+  font-size: 0.82rem; line-height: 1.75; color: var(--text-secondary);
+}
+.note-box strong { color: var(--accent); font-weight: 600; }
+.note-box .note-label { font-weight: 600; color: var(--highlight); margin-right: 0.35em; font-size: 0.78rem; }
+
+.verse-block {
+  background: var(--sanskrit-bg); border: 1px solid var(--border-light); border-radius: 6px;
+  padding: 1rem; margin: 1rem 0; text-align: center;
+}
+.verse-block .sanskrit-verse {
+  font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem;
+  line-height: 2; color: var(--accent); margin-bottom: 0.5rem;
+}
+.verse-block .verse-trans { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
+
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+th { background: var(--table-header); color: var(--accent); font-weight: 600; padding: 0.5rem 0.6rem; text-align: left; }
+td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+.term { font-family: 'Noto Serif Devanagari', serif; color: var(--highlight); font-weight: 500; }
+
+.colophon {
+  text-align: center; margin-top: 2.5rem; padding-top: 1rem;
+  border-top: 2px solid var(--accent); font-size: 0.8rem; color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .sutra-grid { grid-template-columns: 1fr; }
+  .sutra-grid .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+  header h1 { font-size: 1.4rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book">第二篇 sāṃprayogikam — 性愛の実践</div>
+  <h1>第五章　噛み痕の法と地方の風習</h1>
+  <div class="subtitle">Daśana-cchedya-vidhayaḥ / Deśyāś copacārāḥ</div>
+  <div class="chapter-info">adhyāya 2.5｜sūtra 2.5.1–2.5.43｜prakaraṇa 11–12</div>
+</header>
+
+<!-- 第一節：噛み痕の法 prakaraṇa 11 -->
+<div class="section-title">噛み痕の部位と歯の性質 — daśana-sthāna / daśana-guṇa</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.1</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">uttarauṣṭham antar-mukhaṃ nayanam iti muktvā cumbanavad daśana-radana-sthānāni.</div>
+    <div class="japanese">上唇（uttara-oṣṭha）、口の内部（antar-mukha）、および眼（nayana）を除けば、噛み痕の部位は接吻の部位と同じである。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  上唇は噛むと不快であり、口の内部（舌など）は歯が届かず、眼は噛めず・痛みが強く・容貌を損なう。残る部位は額・下唇・頸・頬・胸・乳房。ラータ地方の人々の部位（股の付け根・腕の付け根・臍の下）も同様に適用されるが、万人向けではない。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.2</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">samāḥ snigdha-cchāyā rāga-grāhiṇo yukta-pramāṇā niś-chidrās tīkṣṇāgrā iti daśana-guṇāḥ.</div>
+    <div class="japanese">歯の良い性質（daśana-guṇa）は、揃っている（sama）、滑らかな光沢がある（snigdha-cchāya）、色がよく映る（rāga-grāhin）、適度な大きさ（yukta-pramāṇa）、隙間がない（niś-chidra）、先が鋭い（tīkṣṇāgra）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.3</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">kuṇṭhā rājy-udgatāḥ paruṣāḥ viṣamāḥ ślakṣṇāḥ pṛthavo viralā iti ca doṣāḥ.</div>
+    <div class="japanese">歯の欠点（doṣa）は、鈍い（kuṇṭha）、筋が浮き出ている（rājy-udgata）、粗い（paruṣa）、不揃い（viṣama）、滑らかすぎる（ślakṣṇa）、幅広い（pṛthu）、隙間がある（virala）。</div>
+  </div>
+</div>
+
+<!-- 八種の噛み痕 -->
+<div class="section-title">八種の噛み痕 — daśana-cchedana-vikalpāḥ</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.4</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">[1] gūḍhakam [2] ucchūnakaṃ [3] bindur [4] bindu-mālā [5] pravāla-maṇir [6] maṇi-mālā [7] khaṇḍābhrakaṃ [8] varāha-carvitakam iti daśana-cchedana-vikalpāḥ.</div>
+    <div class="japanese">噛み痕の種類は八つ。[1] グーダカ（gūḍhaka＝隠れた痕）、[2] ウッチューナカ（ucchūnaka＝腫れた痕）、[3] ビンドゥ（bindu＝点）、[4] ビンドゥ・マーラー（bindu-mālā＝点の連なり）、[5] プラヴァーラ・マニ（pravāla-maṇi＝珊瑚と宝石）、[6] マニ・マーラー（maṇi-mālā＝宝石の首飾り）、[7] カンダーブラカ（khaṇḍābhraka＝千切れ雲）、[8] ヴァラーハ・チャルヴィタカ（varāha-carvitaka＝猪の噛み跡）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.5</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">nātilohitena rāga-mātreṇa vibhāvanīyaṃ [1] gūḍhakam.</div>
+    <div class="japanese">[1] <strong>グーダカ</strong>（gūḍhaka）：あまり赤くならず、わずかな赤み（rāga-mātra）だけで認識できる痕。傷にはならない。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.6</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tad eva pīḍanād [2] ucchūnakam.</div>
+    <div class="japanese">[2] <strong>ウッチューナカ</strong>（ucchūnaka）：同じものを強く押すと腫れが生じる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.7</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tad ubhayaṃ bindur adhara-madhya iti.</div>
+    <div class="japanese">その両方（gūḍhaka と ucchūnaka）、および [3] <strong>ビンドゥ</strong>（bindu＝点）は、下唇の中央（adhara-madhya）に行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.8</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ucchūnakaṃ pravāla-maṇiś ca kapole.</div>
+    <div class="japanese">ウッチューナカと [5] <strong>プラヴァーラ・マニ</strong>（pravāla-maṇi＝珊瑚と宝石）は、頬（kapola）に行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.9</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">karṇapūra-cumbanaṃ nakha-daśana-cchedyam iti savya-kapola-maṇḍanāni.</div>
+    <div class="japanese">耳飾りの接吻（karṇapūra-cumbana）、爪痕と噛み痕——これらが左の頬の飾り（savya-kapola-maṇḍana）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  耳飾り（karṇapūra）が左耳に飾られて左頬を美しくするように、接吻・噛み痕・爪痕もまた左頬の飾りとなる。引用句に「噛み痕と嚙檳榔を伴う接吻は、赤い飾り（rāga-maṇḍana）である」とある。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.10</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">dantauṣṭha-saṃyogābhyāsa-niṣpādanatvāt [5] pravāla-maṇi-siddhiḥ.</div>
+    <div class="japanese">[5] <strong>プラヴァーラ・マニ</strong>（pravāla-maṇi）は、歯と唇の組み合わせ（danta-oṣṭha-saṃyoga）の繰り返し（abhyāsa）によって作られる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  上の歯と下唇、あるいは上唇と下の歯で、捉えて押す（gṛhītvā pīḍana）行為を繰り返すことにより、珊瑚の宝石のような赤い痕（lohita）が傷（kṣata）なしに生じる。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.11</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sarvasyeyaṃ [6] maṇi-mālāyāś ca.</div>
+    <div class="japanese">この方法はすべてに（適用され）、[6] <strong>マニ・マーラー</strong>（maṇi-mālā＝宝石の首飾り）にも同様である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.12</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">alpa-deśāyāś ca tvaco daśana-dvaya-saṃdaṃśa-jā [3] bindu-siddhiḥ.</div>
+    <div class="japanese">[3] <strong>ビンドゥ</strong>（bindu＝点）は、小さな部分の皮膚を二本の歯で挟んで（daśana-dvaya-saṃdaṃśa）作る。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.13</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sarvair [4] bindu-mālāyāś ca.</div>
+    <div class="japanese">[4] <strong>ビンドゥ・マーラー</strong>（bindu-mālā＝点の連なり）は、すべての歯で行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.14</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tasmān mālā-dvayam api gala-kakṣa-vaṃkṣaṇa-pradeśeṣu.</div>
+    <div class="japanese">したがって、二種の連なり（maṇi-mālā と bindu-mālā）は、頸（gala）、脇（kakṣa）、鼠蹊部（vaṃkṣaṇa）に行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.15</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">lalāṭe corvor bindu-mālā.</div>
+    <div class="japanese">額（lalāṭa）と太腿（ūru）にはビンドゥ・マーラー（点の連なり）を行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.16</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">maṇḍalam iva viṣama-kūṭaka-yuktaṃ [7] khaṇḍābhrakaṃ stana-pṛṣṭha eva.</div>
+    <div class="japanese">[7] <strong>カンダーブラカ</strong>（khaṇḍābhraka＝千切れ雲）：円形のような、不揃いの突起を伴った痕。乳房の側面（stana-pṛṣṭha）にのみ行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.17</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">saṃhatāḥ pradīrghā bahvyo daśana-pada-rājayas tāmrāntarālā [8] varāha-carvitakam. stana-pṛṣṭha eva.</div>
+    <div class="japanese">[8] <strong>ヴァラーハ・チャルヴィタカ</strong>（varāha-carvitaka＝猪の噛み跡）：密接して長く多数の歯痕の列が、銅色の間隔をおいて並ぶ。乳房の側面にのみ行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.18</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tad ubhayam api caṇḍa-vegayoḥ. iti daśana-cchedyāni.</div>
+    <div class="japanese">その両方（khaṇḍābhraka と varāha-carvitaka）は激しい情熱の者（caṇḍa-vega）にのみ適する。以上が噛み痕である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  <strong>khaṇḍābhraka</strong> は頸を抱えて（kaṇṭha-upagrahaṇa）行う。不揃いの歯痕（viṣama-kūṭaka）が全体として円形になる。<strong>varāha-carvitaka</strong> は乳房の一方の端から少しずつ皮膚を噛んで（carvayati）、もう一方まで連続して4列か6列の歯痕を作り、その間が充血して銅色になる。猪が噛んだような跡。これらの噛み痕の行為者は女性（nāyikā）でもありうる。最初の六種は性交時（sāṃprayogika）のもの。
+</div>
+
+<!-- 八種一覧表 -->
+<table>
+  <tr><th>番号</th><th>名称</th><th>サンスクリット</th><th>形状</th><th>部位</th></tr>
+  <tr><td>1</td><td>隠れた痕</td><td class="term">gūḍhaka</td><td>わずかな赤み、傷なし</td><td>下唇中央</td></tr>
+  <tr><td>2</td><td>腫れた痕</td><td class="term">ucchūnaka</td><td>押圧で腫れる</td><td>下唇中央・頬</td></tr>
+  <tr><td>3</td><td>点</td><td class="term">bindu</td><td>二本の歯で小皮膚を挟む</td><td>下唇中央・額・太腿</td></tr>
+  <tr><td>4</td><td>点の連なり</td><td class="term">bindu-mālā</td><td>全歯で連続する点</td><td>頸・脇・鼠蹊部・額・太腿</td></tr>
+  <tr><td>5</td><td>珊瑚と宝石</td><td class="term">pravāla-maṇi</td><td>歯と唇の繰り返しで赤い痕</td><td>頬</td></tr>
+  <tr><td>6</td><td>宝石の首飾り</td><td class="term">maṇi-mālā</td><td>珊瑚宝石の連なり</td><td>頸・脇・鼠蹊部</td></tr>
+  <tr><td>7</td><td>千切れ雲</td><td class="term">khaṇḍābhraka</td><td>不揃い突起の円形痕</td><td>乳房側面</td></tr>
+  <tr><td>8</td><td>猪の噛み跡</td><td class="term">varāha-carvitaka</td><td>銅色の間隔で並ぶ列痕</td><td>乳房側面</td></tr>
+</table>
+
+<!-- 接近の噛み痕 -->
+<div class="sutra-block">
+  <div class="sutra-num">2.5.19</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">viśeṣake karṇapūre puṣpa-pīḍe tāmbūla-palāśe tamāla-pattre ceti prayojyāgāmiṣu nakha-daśana-cchedyādīny abhiyogikāni.</div>
+    <div class="japanese">ティラカ飾り（viśeṣaka）、耳飾りの花（karṇapūra）、花冠（puṣpa-pīḍa）、嚙檳榔の葉（tāmbūla-palāśa）、タマーラの葉（tamāla-pattra）など——恋人のもとに届けるものに、爪痕・噛み痕を付ける。これが接近の痕（ābhiyogika）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  これらは saṃkrāntaka（転移の行為、2.3.29参照）の一種。白樺の皮（bhūrja-pattra）で作ったティラカ飾り、青蓮花の耳飾り、花冠、美しく整えた嚙檳榔の葉、香りの良いタマーラの葉——これらは恋人のもとに届けられるもの（prayojyā-gāmin）であり、それらに爪痕・噛み痕を付けることで、心情（ākāra）を間接的に示す。
+</div>
+
+<!-- 第二節：地方の風習 prakaraṇa 12 -->
+<div class="section-title">地方の風習 — deśyāḥ upacārāḥ（prakaraṇa 12）</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.20</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">deśa-sātmyāc ca yoṣita upacaret.</div>
+    <div class="japanese">地方の慣習（deśa-sātmya）に応じて、女性を扱うべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.21</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">madhya-deśyā ārya-prāyāḥ śucy-upacārāś cumbana-nakha-danta-pada-dveṣiṇyaḥ.</div>
+    <div class="japanese"><strong>中央地方</strong>（madhya-deśa）の女性は、高貴で（ārya-prāya）、清浄な振る舞い（śuci-upacāra）を好み、接吻・爪痕・噛み痕を嫌う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.22</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">bāhlīka-deśyā āvāntikāś ca.</div>
+    <div class="japanese"><strong>バーフリーカ</strong>（Bāhlīka＝北西地方）と<strong>アーヴァンティカー</strong>（Āvāntikā＝ウッジャイニー地方）の女性も同様である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.23</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">citra-rateṣu tv āsām abhiniveśaḥ.</div>
+    <div class="japanese">ただし、彼女たちは多彩な体位（citra-rata）に執着（abhiniveśa）する。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.24</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">pariṣvaṅga-cumbana-nakha-danta-cūṣaṇa-pradhānāḥ kṣata-varjitāḥ prahaṇana-sādhyā mālavya ābhīryaś ca.</div>
+    <div class="japanese"><strong>マーラヴィヤー</strong>（Mālavya＝マールワー地方）と<strong>アービーリヤー</strong>（Ābhīrya＝アービーラ地方）の女性は、抱擁・接吻・爪・歯・吸い付きを主とし、傷は好まず（kṣata-varjita）、打擲によって（性的に）満たされる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.25</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sindhuṣaṣṭhānāṃ ca nadīnām antarālīyā aupariṣṭaka-sātmyāḥ.</div>
+    <div class="japanese"><strong>五河地方</strong>（Pañcanada＝パンジャーブ）——インダス河を六番目とする諸河の間——の女性は、口によるもの（aupariṣṭaka）に慣れている。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.26</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">caṇḍa-vegā manda-sītkṛtā āparāntikā lāṭyaś ca.</div>
+    <div class="japanese"><strong>アーパラーンティカー</strong>（Āparāntikā＝西海岸地方）と<strong>ラーティヤー</strong>（Lāṭya）の女性は、激しい情熱（caṇḍa-vega）で、嘆息は微か（manda-sītkṛta）である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.27</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">dṛḍha-prahaṇana-yoginyaḥ khara-vegā eva apadravya-pradhānāḥ strīrājye kośalāyāṃ ca.</div>
+    <div class="japanese"><strong>ストリーラージヤ</strong>（Strīrājya＝女人国）と<strong>コーシャラー</strong>（Kośalā）の女性は、強い打擲を好み、常に激しく（khara-vega）、人工具（apadravya）を主として用いる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.28</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">prakṛtyā mṛdvyo rati-priyā a-śuci-rucayo nir-ācārāś ca āndhryaḥ.</div>
+    <div class="japanese"><strong>アーンドラ</strong>（Āndhra）の女性は、生来柔らかく（mṛdvī）、情交を好み（rati-priya）、不浄を厭わず（a-śuci-ruci）、礼法に拘束されない（nir-ācāra）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.29</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sakala-catuḥṣaṣṭi-prayoga-rāgiṇyo 'ślīla-paruṣa-vākya-priyāḥ śayane ca sa-rabhasopakramā mahārāṣṭrikāḥ.</div>
+    <div class="japanese"><strong>マハーラーシュトリカー</strong>（Mahārāṣṭrikā）の女性は、完全な六十四芸（catuḥṣaṣṭi）の実践を楽しみ、卑猥で粗い言葉（aślīla-paruṣa-vākya）を好み、寝所では激しく主導する（sa-rabhasa-upakrama）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.30</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tathā-vidhā eva rahasi prakāśante nāgarikāḥ.</div>
+    <div class="japanese"><strong>ナーガリカー</strong>（Nāgarikā＝パータリプトラの都市女性）は同様であるが、密かに（rahasi）のみそれを表す。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.31</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">mṛdyamānāś cābhiyogān mandaṃ mandaṃ prasiñcante draviḍyaḥ.</div>
+    <div class="japanese"><strong>ドラヴィダ</strong>（Draviḍa）の女性は、揉みほぐされると（mṛdyamānā）、求愛の段階（abhiyoga）から少しずつ（mandaṃ mandaṃ）潤う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.32</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">madhyama-vegāḥ sarva-sahāḥ svāṅga-pracchādinyaḥ parāṅga-hāsinyaḥ kutsitāślīla-paruṣa-parihāriṇyo vānavāsikāḥ.</div>
+    <div class="japanese"><strong>ヴァナヴァーシカー</strong>（Vānavāsikā）の女性は、中程度の情熱で、あらゆることを受け入れ（sarva-saha）、自分の身体を隠し、他人の身体を笑い、卑猥・粗暴な者を避ける。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.33</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">mṛdu-bhāṣiṇyo 'nurāgavatyo mṛdvaṅgyaś ca gauḍyaḥ.</div>
+    <div class="japanese"><strong>ガウディヤー</strong>（Gauḍya＝東方）の女性は、柔らかな言葉を話し（mṛdu-bhāṣin）、愛情深く（anurāgavatī）、身体が柔らかい（mṛdu-aṅgī）。</div>
+  </div>
+</div>
+
+<!-- 地方一覧表 -->
+<table>
+  <tr><th>地方</th><th>サンスクリット</th><th>特徴</th></tr>
+  <tr><td>中央地方</td><td class="term">Madhya-deśa</td><td>高貴・清浄・接吻や痕を嫌う</td></tr>
+  <tr><td>バーフリーカ／アーヴァンティ</td><td class="term">Bāhlīka / Āvantikā</td><td>同上。ただし多彩な体位を好む</td></tr>
+  <tr><td>マールワー／アービーラ</td><td class="term">Mālavya / Ābhīrya</td><td>抱擁・接吻・爪・歯・吸い主体、打擲で満たされる</td></tr>
+  <tr><td>五河地方</td><td class="term">Pañcanada</td><td>口による行為に慣れる</td></tr>
+  <tr><td>西海岸／ラータ</td><td class="term">Āparāntikā / Lāṭya</td><td>激しい情熱、微かな嘆息</td></tr>
+  <tr><td>女人国／コーシャラー</td><td class="term">Strīrājya / Kośalā</td><td>強い打擲・常に激しい・人工具</td></tr>
+  <tr><td>アーンドラ</td><td class="term">Āndhra</td><td>柔らか・情交好き・不浄を厭わず</td></tr>
+  <tr><td>マハーラーシュトラ</td><td class="term">Mahārāṣṭrikā</td><td>六十四芸全体・粗い言葉・激しい主導</td></tr>
+  <tr><td>ナーガリカー（都市）</td><td class="term">Nāgarikā</td><td>同上だが密かにのみ</td></tr>
+  <tr><td>ドラヴィダ</td><td class="term">Drāviḍya</td><td>揉みで少しずつ潤う</td></tr>
+  <tr><td>ヴァナヴァーシカー</td><td class="term">Vānavāsikā</td><td>中程度・何でも受容・卑猥を避ける</td></tr>
+  <tr><td>ガウダ（東方）</td><td class="term">Gauḍya</td><td>柔らかな言葉・愛情深い・柔らかい身体</td></tr>
+</table>
+
+<!-- 体質と地方 -->
+<div class="section-title">体質と地方の優先 — prakṛti-sātmya</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.34</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">deśa-sātmyāt prakṛti-sātmyaṃ balīya iti suvarṇanābhaḥ. na tatra deśyā upacārāḥ.</div>
+    <div class="japanese">地方の慣習（deśa-sātmya）よりも個人の体質（prakṛti-sātmya）が強い（balīyas）、とスヴァルナナーバは言う。その場合、地方の慣習は適用されない。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.5.35</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">kāla-yogāc ca deśād deśāntaram upacāra-veṣa-līlāś cānugacchanti tac ca vidyāt.</div>
+    <div class="japanese">時の流れ（kāla-yoga）によって、風習・装い・遊びは一つの地方から別の地方へ伝わる。このことも知っておくべきである。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  スヴァルナナーバの見解：deśa-sātmya（地方の慣習）と prakṛti-sātmya（個人の体質）が対立する場合、個人の体質が優先する。それはより内的（antaraṅga）であるから。先師たちは地方の慣習を優先する見解を持つが、教典の著者（ヴァーツヤーヤナ）もスヴァルナナーバの見解を否定していないので、それが採用される。また、旅人が別の地方に移動すると、その地方の風習・装い・振る舞いを持ち帰るため、地方の特徴は時代とともに混交する。しかし判断は旅行による表面的な変化ではなく、恒久の地方の慣習（sthāyi-deśa-pracāra）に基づくべきであり、体質（prakṛti-sātmya）によって扱うべきである。
+</div>
+
+<!-- 情欲増進の段階 -->
+<div class="sutra-block">
+  <div class="sutra-num">2.5.36</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">upagūhanādiṣu ca rāga-vardhanaṃ pūrvaṃ pūrvaṃ vicitram uttaram uttaraṃ ca.</div>
+    <div class="japanese">抱擁（upagūhana）から始まる一連の行為において、情欲の増進（rāga-vardhana）は、前の行為から後の行為へ、また後の行為から前の行為へと、より多彩になる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  六つの外的行為の順序：抱擁（āliṅgana）→接吻（cumbana）→爪痕（nakha-cchedya）→噛み痕（daśana-cchedya）→打擲（prahaṇana）→嘆息（sītkṛta）。前から後へ（pūrvam pūrvam）の多彩さ：嘆息より打擲が身体的刺激として強く、それより噛み痕、それより爪痕、それより接吻（繊細な刺激として）、それより抱擁（全身的な刺激として）、というように各々がそれぞれの仕方で情欲を増す。逆方向（uttaram uttaram）の多彩さ：抱擁は粗い行為であり、接吻は巧妙、爪痕はさらに巧妙、噛み痕はさらに、打擲は軽さで、嘆息は教えがたい（durgraha）ほどに巧妙。
+</div>
+
+<!-- 結頌 -->
+<div class="section-title">結頌 — saṃhāra-ślokāḥ</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    vāryamāṇaś ca puruṣo yat kuryāt tad anu kṣatam /<br>
+    a-mṛṣyamāṇā dvi-guṇaṃ tad eva pratiyojayet // 2.5.37
+  </div>
+  <div class="verse-trans">
+    制止されても男が行うこと——その痕を、<br>
+    女は我慢ならずに、二倍にしてやり返す。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    bindoḥ pratikriyā mālā mālāyāś cābhrakhaṇḍakam /<br>
+    iti krodhād ivāviṣṭā kalahān pratiyojayet // 2.5.38
+  </div>
+  <div class="verse-trans">
+    点（bindu）へのお返しは連なり（mālā）、連なりへのお返しは千切れ雲（abhrakhaṇḍa）。<br>
+    こうして怒りに満ちたかのように、争いを仕掛ける。
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  二倍の応酬の体系：bindu → bindu-mālā → khaṇḍābhraka → varāha-carvitaka / gūḍhaka → ucchūnaka → pravāla-maṇi → maṇi-mālā → bindu と循環する。最初の四つは皮膚表面、残りは皮膚を超える。krodhād iva（怒りのように）とは、作り事の怒り（kṛtaka-kopa）による演出。
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    sakacagraham unnamya mukhaṃ tasya tataḥ pibet /<br>
+    nilīyeta daśec caiva tatra tatra maderitā // 2.5.39
+  </div>
+  <div class="verse-trans">
+    髪を掴んで顔を仰向かせ、その口を飲む（唇を吸う）。<br>
+    酒の酔いに促されて、身を寄せ、あちこちを噛む。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    unnamya kaṇṭhe kāntasya saṃśritā vakṣasaḥ sthalīm /<br>
+    maṇi-mālāṃ prayuñjīta yac cānyad api lakṣitam // 2.5.40
+  </div>
+  <div class="verse-trans">
+    恋人の首を引き寄せ、胸の上にもたれかかり、<br>
+    宝石の首飾り（maṇi-mālā）をつけるべし。その他の美しい痕も。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    divāpi janasaṃbādhe nāyakena pradarśitam /<br>
+    uddiśya sva-kṛtaṃ cihnaṃ hased anyair a-lakṣitā // 2.5.41
+  </div>
+  <div class="verse-trans">
+    昼間、人混みの中で、男が（夜の痕を）示したら、<br>
+    自分が付けた印を指して、他の人に気づかれぬよう笑う。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    vikūṇayantīva mukhaṃ kutsayantīva nāyakam /<br>
+    sva-gātra-sthāni cihnāni sāsūyeva pradarśayet // 2.5.42
+  </div>
+  <div class="verse-trans">
+    顔をしかめるふりをし、男を咎めるふりをして、<br>
+    嫉妬するかのように、自分の身体の印を見せる。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    parasparānukūlyena tad evaṃ lajjamānayoḥ /<br>
+    saṃvatsara-śatenāpi prītir na parihīyate // 2.5.43
+  </div>
+  <div class="verse-trans">
+    互いに思いやりながら、このように恥じらう二人の間では、<br>
+    百年（saṃvatsara-śata）が経っても、愛は衰えない。
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  saṃvatsara-śata（百年）とは人の寿命の尺度。愛は衰えない（prītir na parihīyate）とは、安定する（sthirī-bhavati）の意。食事も一つの味だけを食べ続ければ飽きが来る（virāga）。多様性（vaicitrya）こそが愛を保つ。
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  daśana-cchedya-vidhayo deśyāś copacārāḥ pañcamo 'dhyāyaḥ.<br><br>
+  ヴァーツヤーヤナのカーマスートラ　第二篇「性愛の実践」<br>
+  第五章「噛み痕の法と地方の風習」終わり
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

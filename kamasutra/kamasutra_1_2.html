@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 1.2 三目的の実践</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+    --table-header: #e8dfd2;
+    --table-stripe: #faf7f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+      --table-header: #2e2820; --table-stripe: #221e16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    --table-header: #2e2820; --table-stripe: #221e16;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 700; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.04em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .section-label { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin: 1.5rem 0 0.5rem; padding-left: 0.3rem; letter-spacing: 0.05em; }
+  .sutra-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--bg-card); }
+  .sutra-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; }
+  .sanskrit { padding: 0.6rem 0.9rem; font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .japanese { padding: 0.6rem 0.9rem; font-size: 0.92rem; line-height: 1.9; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0 1.5rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.85rem; line-height: 1.75; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.2rem 0; }
+  .iast { font-family: 'Noto Serif Devanagari', serif; font-style: italic; color: var(--highlight); }
+  .verse { font-style: italic; margin: 0.3rem 0; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-style: italic; }
+  .section-break { text-align: center; padding: 0.8rem 0; color: var(--accent-light); font-size: 0.9rem; letter-spacing: 0.3em; }
+  @media (max-width: 640px) { .sutra-block { grid-template-columns: 1fr; } .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); } body { padding: 1rem 1rem 3rem; } .header h1 { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>कामसूत्रम् — カーマスートラ 対訳</h1>
+  <p class="subtitle">第1篇 総論（<span class="iast">Sādhāraṇa</span>）</p>
+  <p class="meta">ヴァーツヤーヤナ著 ・ ジャヤマンガラー注釈参照</p>
+</div>
+
+<div class="chapter-title">
+  <h2>द्वितीयोऽध्यायः — 第2章</h2>
+  <p class="ch-sub">त्रिवर्गप्रतिपत्तिः ― 三目的の実践（<span class="iast">Trivargapratipattiḥ</span>）</p>
+</div>
+
+<p class="section-label">（a）実践（<span class="iast">anuṣṭhāna</span>）</p>
+
+<!-- 1.2.1 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.1</div>
+  <div class="sanskrit">śatāyur vai puruṣo vibhajya kālam anyonyānubaddhaṃ parasparasyānupaghātakaṃ trivargaṃ seveta</div>
+  <div class="japanese">人は百年の寿命をもつ。時期を分けて、互いに関連し合い、かつ互いに損なうことのないように三目的を追求すべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">anyonyānubaddha</span>（互いに関連した）：注釈は「一つの目的が他の二つまたは一つと結びついた状態」と説明し、具体例を挙げる。例えば「子を欲する者が法妻と交わるのは、法（<span class="iast">dharma</span>）であり財（<span class="iast">artha</span>）と結びついている」。<span class="iast">parasparasyānupaghātaka</span>（互いに損なわない）：一方の追求が他方を妨げないようにせよという原則。</p>
+</div>
+
+<!-- 1.2.2-6 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.2–6</div>
+  <div class="sanskrit">bālye vidyāgrahaṇādīn arthān | kāmaṃ ca yauvane | sthāvire dharmaṃ mokṣaṃ ca | anityatvād āyuṣo yathopapādaṃ vā seveta | brahmacaryam eva tv ā vidyāgrahaṇāt |</div>
+  <div class="japanese">少年期には学問の習得などの実利を〔追求せよ〕。青年期には愛欲を。老年期には法と解脱を。ただし、寿命は定まらないから、機会に応じて〔随時〕追求してもよい。しかし、学問を修得するまでは禁欲の生活を送るべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は他の文献から年齢区分を引用する：<br>
+  ・少年期（<span class="iast">bālya</span>）：16歳まで<br>
+  ・青年期（<span class="iast">yauvana</span>）：70歳まで<br>
+  ・老年期（<span class="iast">sthāvira</span>）：それ以降<br>
+  <span class="iast">mokṣa</span>（解脱）の言及は、「知識の道」（<span class="iast">jñānavādin</span>）を信奉する人々にとっての四目的（<span class="iast">caturvarga</span>）への配慮。<span class="iast">yathopapādam</span>（機会に応じて）は、百年を待たずに死ぬ者もいるので、厳密な時期区分に囚われるなという趣旨。<span class="iast">brahmacarya</span>（禁欲学生期）は学問修了まで必須とされる。</p>
+</div>
+
+<p class="section-label">（b）了解（<span class="iast">avabodha</span>）</p>
+
+<!-- 1.2.7-8 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.7–8</div>
+  <div class="sanskrit">alaukikatvād adṛṣṭārthatvād apravṛttānāṃ yajñādīnāṃ śāstrāt pravartanaṃ; laukikatvād dṛṣṭārthatvāc ca pravṛttebhyaś ca māṃsabhakṣaṇādibhyaḥ śāstrād eva nivāraṇaṃ dharmaḥ | taṃ śruter dharmajñasamavāyāc ca pratipadyeta |</div>
+  <div class="japanese">世俗を超えており、目に見えない結果をもたらすために〔人々が自ら〕行わない祭祀などの行為へと、聖典によって向かわせること。また、世俗的であり目に見える結果があるために〔すでに〕行われている肉食などの行為から、聖典によって禁止すること。これが法（ダルマ）である。それ〔法〕は、天啓聖典（ヴェーダ）から、また法に通じた人々との交わりから、理解すべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>法（<span class="iast">dharma</span>）の二面的定義：<br>
+  ① 積極面（<span class="iast">pravṛttirūpa</span>）：超世俗的で結果が見えない祭祀等を聖典の権威によって行わせること<br>
+  ② 消極面（<span class="iast">nivṛttirūpa</span>）：世俗的で目に見える結果のある肉食等を聖典の権威によって禁止すること<br>
+  <span class="iast">śruti</span>（天啓聖典＝ヴェーダ）は「<span class="iast">smṛtyanugata</span>（聖伝に裏打ちされた）」ものとされ、<span class="iast">dharmajñasamavāya</span>は法に通じた聖者の集まりからの口伝を指す。</p>
+</div>
+
+<!-- 1.2.9-10 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.9–10</div>
+  <div class="sanskrit">vidyābhūmihiraṇyapaśudhānyabhāṇḍopaskaramitrādīnām arjanam arjitasya vivardhanam arthaḥ | tam adhyakṣapracārād vārtāsamayavidbhyo vaṇigbhyaś ceti |</div>
+  <div class="japanese">学問・土地・黄金・家畜・穀物・器具・道具・友人などを獲得すること、および獲得したものを増やすこと。これが実利（アルタ）である。それ〔実利〕は、監督官の行政術（アルタシャーストラ）から、また商業の規範に通じた商人などから学ぶべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は <span class="iast">arjana</span>（獲得）を二種に分ける：既に存在するもの（象馬など）の入手と、未だ存在しないもの（穀物など）の生産。<span class="iast">adhyakṣapracāra</span> は監督官の制度 = 実利学の典籍（カウティリヤの『アルタシャーストラ』等）を指す。<span class="iast">vārtā</span>（生業）は農業（<span class="iast">kṛṣi</span>）・牧畜（<span class="iast">pāśupālya</span>）・商業（<span class="iast">vāṇijya</span>）を含む。</p>
+</div>
+
+<!-- 1.2.11-13 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.11–13</div>
+  <div class="sanskrit">śrotratvakcakṣurjihvāghrāṇānām ātmasaṃyuktena manasādhiṣṭhitānāṃ sveṣu sveṣu viṣayeṣv ānukūlyataḥ pravṛttiḥ kāmaḥ | sparśaviśeṣaviṣayāt tv asyābhimānikasukhānuviddhā phalavaty arthapratītiḥ prādhānyāt kāmaḥ | taṃ kāmasūtrān nāgarikajanasamavāyāc ca pratipadyeta |</div>
+  <div class="japanese">耳・皮膚・目・舌・鼻の〔五つの感官〕が、自己と結合した意（マナス）に統御されて、それぞれの対象に対して好ましく働くこと。これが愛欲（カーマ）である。しかし特に、触覚の特殊な対象（性的接触）において、心理的な快楽を伴い、実を結ぶ感覚的経験こそが、主要な意味でのカーマである。それ〔カーマ〕は、カーマスートラから、また都会の人々との交わりから学ぶべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>カーマの定義は二段階：<br>
+  ① 広義（<span class="iast">sāmānya</span>）：五感の対象に対する快い経験全般<br>
+  ② 狭義（<span class="iast">viśeṣa</span>）：触覚の特殊な対象（<span class="iast">sparśaviśeṣa</span>）すなわち性的接触に基づく快楽<br>
+  注釈は狭義のカーマをさらに主要（<span class="iast">pradhāna</span>）と副次的（<span class="iast">apradhāna</span>）に分け、<span class="iast">ābhimānikasukha</span>（接吻・爪傷等の心理的快楽）に裏打ちされた経験のみが主要なカーマだとする。<span class="iast">nāgarikajana</span>（都会人）は、愛の作法に通じた風流人の集まり。</p>
+</div>
+
+<!-- 1.2.14-15 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.14–15</div>
+  <div class="sanskrit">eṣāṃ samavāye pūrvaḥ pūrvo garīyān | arthaś ca rājñaḥ tanmūlatvāl lokayātrāyāḥ | veśyāyāś ca | iti trivargapratipattiḥ |</div>
+  <div class="japanese">これら〔三目的〕が競合する場合、先に挙げたものが〔後のものより〕重要である。ただし、王にとっては実利が〔最も重要である〕。社会生活がそれに基づくからである。遊女にとっても〔実利が最も重要である〕。以上が三目的の実践である。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>優先順位の原則：<span class="iast">dharma</span> > <span class="iast">artha</span> > <span class="iast">kāma</span>。ただし二つの例外がある。王（<span class="iast">rājan</span>）は社会秩序の維持者であり、その力（<span class="iast">prabhuśakti</span>）は国庫（<span class="iast">koṣa</span>）と軍事力（<span class="iast">daṇḍabala</span>）に基づくから、実利が最優先。遊女（<span class="iast">veśyā</span>）は生計が財に依存するので同様。注釈は「遊女は欲情の婆羅門や都会人からの法やカーマの機会が自ら来ても、それを捨てて、この者は将来財を与えてくれると不快な者にも近づく」と説明する。</p>
+</div>
+
+<p class="section-label">（c）承認（<span class="iast">saṃpratipattiḥ</span>）— 各学問の必要性に関する議論</p>
+
+<!-- 1.2.16-20 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.16–20</div>
+  <div class="sanskrit">dharmasyālaukikatvāt tadabhidāyakaṃ śāstraṃ yuktam | upāyapūrvakatvād arthasiddheḥ | upāyapratipattiḥ śāstrāt | tiryagyoniṣv api tu svayaṃ pravṛttatvāt kāmasya nityatvāc ca na śāstreṇa kṛtyam astīty ācāryāḥ | saṃprayogaparādhīnatvāt strīpuṃsayor upāyam apekṣate | sā copāyapratipattiḥ kāmasūtrād iti vātsyāyanaḥ | tiryagyoniṣu punar anāvṛtatvāt strījāteś ca ṛtau yāvad arthaṃ pravṛtter abuddhipūrvakatvāc ca pravṛttīnām anupāyaḥ pratyayaḥ |</div>
+  <div class="japanese">法は世俗を超えたものであるから、それを教示する聖典は必要である。実利の成就には方法が先行するから、方法の理解は学問から得る。<br><br>「しかし、動物においてすらカーマは自ら生じ、常に存在するものであるから、学問による教えは不要である」と〔旧来の〕師たちは言う。<br><br>〔ヴァーツヤーヤナの反論：〕性交は他者に依存するから、男女は方法を必要とする。その方法の理解はカーマスートラから得られる、とヴァーツヤーヤナは言う。動物においては、女が覆い隠されていないこと、発情期にのみ必要なだけ交わること、また行為が知性に基づかないことから、方法は不要なのである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>カーマスートラの存在意義をめぐる重要な議論。旧来の師（<span class="iast">ācārya</span> = 法・財・解脱の擁護者）は「動物でさえ教えなしにカーマを実践する以上、学問は不要」と主張する。ヴァーツヤーヤナはこれに反論：<br>
+  ① <span class="iast">saṃprayogaparādhīnatva</span>（性交の相互依存性）：人間の性は他者の同意・羞恥・恐怖・保護などに制約される<br>
+  ② 動物と異なり、人間の性行為は <span class="iast">buddhipūrvaka</span>（知性に基づく）ものであるべき<br>
+  ③ 同意・愛情に基づく結合（<span class="iast">samānārthatā</span>）こそが妻の貞節を守る真の手段。マヌが定めた家事労働等による拘束は、逆効果（<span class="iast">udvegajanana</span>）をもたらすとする。</p>
+</div>
+
+<!-- 1.2.21-24 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.21–24</div>
+  <div class="sanskrit">na dharmāṃś caret | eṣyatphalatvāt | saṃśayikatvāc ca | ko hy abāliśo hastagataṃ paragataṃ kuryāt | varam adya kapotaḥ śvo mayūrāt | varaṃ sāṃśayikān niṣkād asāṃśayikaḥ kārṣāpaṇaḥ | iti laukāyatikāḥ |</div>
+  <div class="japanese">「法を行うべきでない。その結果は来世にあるからである。また不確かだからである。愚かでない者が、手中にあるものをわざわざ他人に渡すだろうか。明日の孔雀より今日の鳩のほうがましだ。不確かな金貨（ニシュカ）よりも確かな銅貨（カールシャーパナ）のほうがましだ」とローカーヤティカ（唯物論者）は言う。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>唯物論者（<span class="iast">laukāyatika</span>）の反法論。二つの比喩が有名：<br>
+  ① <span class="iast">varam adya kapotaḥ śvo mayūrāt</span>：「明日の孔雀より今日の鳩」— 確実な現世の小さな利益は、不確かな来世の大きな利益に勝る<br>
+  ② <span class="iast">varaṃ ... asāṃśayikaḥ kārṣāpaṇaḥ</span>：確実な銅貨（<span class="iast">kārṣāpaṇa</span>）は不確実な金貨（<span class="iast">niṣka</span>）に勝る<br>
+  これはインド唯物論（<span class="iast">lokāyata</span>）の核心的主張で、祭祀の超自然的効果を否定する立場。</p>
+</div>
+
+<!-- 1.2.25 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.25</div>
+  <div class="sanskrit">śāstrasyānabhiśaṅkyatvād abhicārānuvyāhārayoś ca kva cit phaladarśanān nakṣatracandrasūryatārāgrahacakrasya lokārthaṃ buddhipūrvakam iva pravṛtter darśanād varṇāśramācārasthitilakṣaṇatvāc ca lokayātrāyā hastagatasya ca bījasya bhaviṣyataḥ sasyārthe tyāgadarśanāc cared dharmān iti vātsyāyanaḥ |</div>
+  <div class="japanese">〔ヴァーツヤーヤナの反論：〕聖典は疑いえないものであるから。呪詛と調伏の儀式にはときに結果が見られるから。星辰・月・太陽・星・惑星の配置が、世のために知性によるかのように運行するのが観察されるから。社会の営みは四姓（ヴァルナ）と四住期（アーシュラマ）の行為規範に基づく秩序を本質とするから。また、手中にある種子を、将来の穀物のために捨てる（播種する）ことが見られるから。法を行うべきである、とヴァーツヤーヤナは言う。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>ヴァーツヤーヤナの五つの反論：<br>
+  ① 聖典（ヴェーダ）は人為によらない（<span class="iast">apauruṣeya</span>）ものであり、疑いの余地がない<br>
+  ② 呪術（<span class="iast">abhicāra</span>）と吉祥儀礼（<span class="iast">anuvyāhāra</span>）には目に見える効果がある<br>
+  ③ 天体の運行は「知性あるかのように」（<span class="iast">buddhipūrvakam iva</span>）規則的であり、目に見えない力（<span class="iast">adṛṣṭa</span>）の存在を示す<br>
+  ④ 社会秩序は法に基づく<br>
+  ⑤ 農夫が種子を播くのは、手中のものを将来のために捨てる行為であり、来世の果報を信じて法を行うことの世俗的な類例</p>
+</div>
+
+<!-- 1.2.26-31 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.26–31</div>
+  <div class="sanskrit">nārthāṃś caret | prayatnato 'pi hy ete 'nuṣṭhīyamānā naiva kadā cit syuḥ ananuṣṭhīyamānā api yadṛcchayā bhaveyuḥ | tat sarvaṃ kālakāritam iti | kāla eva hi puruṣān arthānarthayor jayaparājayayoḥ sukhaduḥkhayoś ca sthāpayati | kālena balir indraḥ kṛtaḥ kālena vyaparopitaḥ kāla eva punar apy enaṃ karteti kālakāraṇikāḥ | puruṣakārapūrvakatvāt sarvapravṛttīnām upāyaḥ pratyayaḥ | avaśyaṃbhāvino 'py arthasyopāyapūrvakatvād eva na niṣkarmaṇo bhadram astīti vātsyāyanaḥ |</div>
+  <div class="japanese">「実利を追求すべきでない。努力しても決して得られないこともあれば、努力しなくても偶然に得られることもある。すべては時（カーラ）のなせる業である。時こそが人を利と損、勝利と敗北、幸と不幸に置くのだ。時によってバリは帝釈天にされ、時によってその地位を追われ、時がまた彼を帝釈天にするであろう」と時間論者は言う。<br><br>〔ヴァーツヤーヤナの反論：〕すべての行為には人間の努力が先行するから、方法こそが〔成功の〕根拠である。必然的に生じる結果であっても、方法が先行するからこそである。行為なき者に幸福はない、とヴァーツヤーヤナは言う。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>宿命論者（<span class="iast">kālakāraṇika</span>）の主張への反論。バリ（<span class="iast">Bali</span>）は元来アスラ（阿修羅）の王であったが、時の力で帝釈天の座を得、また時の力で奪われるという神話を引用。ヴァーツヤーヤナは <span class="iast">puruṣakāra</span>（人間の努力）の不可欠性を主張し、「運命と人間の努力は相互依存する」（<span class="iast">daivaṃ mānuṣaṃ karma lokaṃ pālayati</span>）という格言を引く。同様の議論は『マハーバーラタ』等にも見られる。</p>
+</div>
+
+<!-- 1.2.32-38 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.32–38</div>
+  <div class="sanskrit">na kāmāṃś caret | dharmārthayoḥ pradhānayor evam anyeṣāṃ ca satāṃ pratyanīkatvāt | anarthajanasaṃsargam asadvyavasāyam aśaucam anāyatiṃ caite puruṣasya janayanti | tathā pramādaṃ lāghavam apratyayam agrāhyatāṃ ca | bahavaś ca kāmavaśagāḥ sagaṇā eva vinaṣṭāḥ śrūyante | yathā dāṇḍakyo nāma bhojaḥ kāmād brāhmaṇakanyām abhimanyamānaḥ sabandhurāṣṭro vinanāśa | devarājaś cāhalyām atibalaś ca kīcako draupadīṃ rāvaṇaś ca sītām apare cānye ca bahavo dṛśyante kāmavaśagā vinaṣṭā ity arthacintakāḥ | śarīrasthitihetutvād āhārasadharmāṇo hi kāmāḥ | phalabhūtāś ca dharmārthayoḥ | boddhavyaṃ tu doṣeṣv iva | na hi bhikṣukāḥ santīti sthālyo nādhiśrīyante | na hi mṛgāḥ santīti yavā nopyanta iti vātsyāyanaḥ |</div>
+  <div class="japanese">「愛欲を追求すべきではない。法と実利というより重要なもの、および善良な人々と敵対するからである。カーマは人に、不良との交わり、悪い計画、不浄、将来の見通しの欠如を生む。さらに、不注意、軽薄、不信用、排斥をもたらす。カーマに支配された多くの者が、眷属もろとも滅んだと伝えられている。ダーンダキヤという名のボージャ王は、欲望のため婆羅門の娘を犯し、親族と国もろとも滅んだ。また神々の王（インドラ）はアハリヤーに、怪力のキーチャカはドラウパディーに、ラーヴァナはシーターに〔手を出して滅んだ〕」と実利論者は言う。<br><br>〔ヴァーツヤーヤナの反論：〕カーマは身体の維持に関わるから、食物と同質のものである。また、法と実利の果実でもある。ただし、欠点については〔食物の消化不良と同じく〕対処法を知るべきである。「托鉢僧がいるからといって鍋を火にかけないわけではない。鹿がいるからといって大麦を蒔かないわけではない」とヴァーツヤーヤナは言う。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>反カーマ論への反論で、二つの有名な比喩が登場：<br>
+  ① <span class="iast">na hi bhikṣukāḥ santīti sthālyo nādhiśrīyante</span>：「托鉢僧が来て食を奪うからといって、料理をやめはしない」<br>
+  ② <span class="iast">na hi mṛgāḥ santīti yavā nopyante</span>：「鹿が畑を荒らすからといって、大麦を蒔くのをやめはしない」<br>
+  カーマの害悪の実例として挙げられる神話的事例：<br>
+  ・<span class="iast">Dāṇḍakya</span>（ダーンダキヤ王）：婆羅門の娘を略奪し、呪いで砂塵に覆われて国ごと滅んだ。その地が現在のダンダカーラニヤ（ダンダカの森）<br>
+  ・<span class="iast">Indra</span>（インドラ）とアハリヤー：聖仙ガウタマの妻アハリヤーを誘惑し、「千の傷跡の身体」の呪いを受けた<br>
+  ・<span class="iast">Kīcaka</span>：超人的な力を持つがドラウパディーへの欲望でビーマに殺された<br>
+  ・<span class="iast">Rāvaṇa</span>：シーターを略奪しラーマに滅ぼされた</p>
+</div>
+
+<!-- 1.2.39-40 結びの偈 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.2.39–40（結びの偈）</div>
+  <div class="sanskrit">evam arthaṃ ca kāmaṃ ca dharmaṃ copācaran naraḥ |<br>ihāmutra ca niḥśalyam atyantaṃ sukham aśnute ||<br><br>kiṃ syāt paratrety āśaṅkā kārye yasmin na jāyate |<br>na cārthahnaṃ sukhaṃ ceti śiṣṭās tatra vyavasthitāḥ ||<br><br>trivargasādhakaṃ yat syād dvayor ekasya vā punaḥ |<br>kāryaṃ tad api kurvīta na tv ekārthaṃ dvibādhakam ||</div>
+  <div class="japanese">このように実利・愛欲・法を正しく実践する人は、<br>現世にも来世にも、棘なき究極の幸福を享受する。<br><br>「来世にどうなるか」という不安が生じず、<br>かつ財を損なわず、しかも快いこと――賢者はそこに立脚する。<br><br>三目的すべて、または二つ、あるいは一つを達成するような行為は、<br>それを行うべきである。しかし一つのために他の二つを害する行為は行うべきではない。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>三偈は三目的の相互関係の実践原則をまとめる。特に第三偈は重要な行動原則：<br>
+  ・最上（<span class="iast">uttama</span>）：三目的すべてを達成する行為（例：適切な相手との法的婚姻）<br>
+  ・中等（<span class="iast">madhyama</span>）：二つを達成する行為<br>
+  ・下等（<span class="iast">jaghanya</span>）：一つのみを達成する行為（例：大祭祀の奉仕は法のみ）<br>
+  ・禁止：一つのために他の二つを害する行為（例：過度の布施は法のために財とカーマを損なう。ダーンダキヤ王はカーマのために法と財を滅ぼした）</p>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sādhāraṇe prathame 'dhikaraṇe<br>
+  trivargapratipattiḥ dvitīyo 'dhyāyaḥ<br><br>
+  ヴァーツヤーヤナのカーマスートラ・総論・第1篇において<br>
+  三目的の実践・第2章〔終わり〕
+</div>
+
+<div class="section-break">— ❖ —</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

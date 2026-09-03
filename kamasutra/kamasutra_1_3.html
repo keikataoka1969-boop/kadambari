@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 1.3 学芸の概説</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+    --table-header: #e8dfd2;
+    --table-stripe: #faf7f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+      --table-header: #2e2820; --table-stripe: #221e16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    --table-header: #2e2820; --table-stripe: #221e16;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 700; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.04em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .section-label { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin: 1.5rem 0 0.5rem; padding-left: 0.3rem; letter-spacing: 0.05em; }
+  .sutra-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--bg-card); }
+  .sutra-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; }
+  .sanskrit { padding: 0.6rem 0.9rem; font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .japanese { padding: 0.6rem 0.9rem; font-size: 0.92rem; line-height: 1.9; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0 1.5rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.85rem; line-height: 1.75; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.2rem 0; }
+  .iast { font-family: 'Noto Serif Devanagari', serif; font-style: italic; color: var(--highlight); }
+  .verse { font-style: italic; margin: 0.3rem 0; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-style: italic; }
+  .section-break { text-align: center; padding: 0.8rem 0; color: var(--accent-light); font-size: 0.9rem; letter-spacing: 0.3em; }
+
+  /* 64 arts table */
+  .arts-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+  .arts-table th { background: var(--table-header); color: var(--accent); font-weight: 600; padding: 0.5rem 0.6rem; text-align: left; border: 1px solid var(--border); font-size: 0.78rem; letter-spacing: 0.04em; }
+  .arts-table td { padding: 0.35rem 0.6rem; border: 1px solid var(--border-light); vertical-align: top; }
+  .arts-table tr:nth-child(even) td { background: var(--table-stripe); }
+  .arts-table .num { color: var(--accent); font-weight: 600; text-align: center; width: 2rem; font-variant-numeric: tabular-nums; }
+  .arts-table .sk { font-family: 'Noto Serif Devanagari', serif; color: var(--highlight); font-size: 0.83rem; }
+  .arts-table .jp { font-size: 0.83rem; }
+  .arts-container { overflow-x: auto; }
+  .cat-header td { background: var(--table-header) !important; font-weight: 600; color: var(--accent); font-size: 0.8rem; letter-spacing: 0.04em; }
+
+  @media (max-width: 640px) { .sutra-block { grid-template-columns: 1fr; } .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); } body { padding: 1rem 1rem 3rem; } .header h1 { font-size: 1.4rem; } .arts-table { font-size: 0.78rem; } .arts-table .sk, .arts-table .jp { font-size: 0.76rem; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>कामसूत्रम् — カーマスートラ 対訳</h1>
+  <p class="subtitle">第1篇 総論（<span class="iast">Sādhāraṇa</span>）</p>
+  <p class="meta">ヴァーツヤーヤナ著 ・ ジャヤマンガラー注釈参照</p>
+</div>
+
+<div class="chapter-title">
+  <h2>तृतीयोऽध्यायः — 第3章</h2>
+  <p class="ch-sub">विद्यासमुद्देशः ― 学芸の概説（<span class="iast">Vidyāsamuddeśaḥ</span>）</p>
+</div>
+
+<!-- 1.3.1 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.1</div>
+  <div class="sanskrit">dharmārthāṅgavidyākālān anuparodhayan kāmasūtraṃ tadaṅgavidyāś ca puruṣo 'dhīyīta</div>
+  <div class="japanese">法（ダルマ）・実利（アルタ）の補助学問の修学時期を妨げることなく、男子はカーマスートラとその補助学芸を学ぶべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は三目的の実践が確立された者にとって、愛の成就のための第一の手段は学芸の習得（<span class="iast">vidyāgrahaṇa</span>）であると述べる。<span class="iast">samuddeśa</span>（概説）とは簡略な説明であり、詳細な教示（<span class="iast">nirdeśa</span>）は各専門の学問から得るべきものである。<span class="iast">dharmavidyā</span>は天啓聖典（<span class="iast">śruti</span>）と聖伝（<span class="iast">smṛti</span>）、<span class="iast">arthavidyā</span>は経済学（<span class="iast">vārtāśāstra</span>）を指す。<span class="iast">tadaṅgavidyā</span>は歌・舞踊等の64芸を指す。</p>
+</div>
+
+<!-- 1.3.2-3 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.2–3</div>
+  <div class="sanskrit">prāg yauvanāt strī | prattā ca patyur abhiprāyāt | yoṣitāṃ śāstragrahaṇasyābhāvād anarthakaṃ iha śāstre strīśāsanam ity ācāryāḥ</div>
+  <div class="japanese">女性は、青年期より前に〔これを学ぶべきである〕。嫁いでからは夫の意向に従って〔学ぶ〕。「女性には学問を修得する能力がないから、この学問における女性への教示は無意味である」と諸師は〔言う〕。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は <span class="iast">prāg yauvanāt</span>（青年期以前に）について、女性は実家にいるうちに学ぶべきとし、嫁いでからは独立性がないため学ぶ機会がなくなると述べる。<span class="iast">prattā</span>は「嫁がされた者」を意味し、三種の婚姻（心・言葉・行為による贈与）に触れる。ここで「諸師」（<span class="iast">ācāryāḥ</span>）は反論の立場として引用されている。</p>
+</div>
+
+<!-- 1.3.4-6 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.4–6</div>
+  <div class="sanskrit">prayogagrahaṇaṃ tv āsām | prayogasya ca śāstrapūrvakatvād iti vātsyāyanaḥ | tan na kevalam ihaiva | sarvatra hi loke kati cid eva śāstrajñāḥ | sarvajanavīṣayaś ca prayogaḥ</div>
+  <div class="japanese">「しかし、女性には実践の習得がある。そして実践は学問に基づくものだからである」とヴァーツヤーヤナは〔反論する〕。これは、ここ〔カーマ学〕に限ったことではない。あらゆる分野において、学問を知る者はわずかであり、実践は万人に関わるものである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>ヴァーツヤーヤナの反論の要点：学問そのものを修得できなくても、実践（<span class="iast">prayoga</span>）を通じて学ぶことは可能である。学問に通じた者から間接的に実践知が伝わる。注釈は「実践の習得は学問の習得よりも重要（<span class="iast">pradhāna</span>）である。学問を修めた者にとっても、その成果は実践を知ることにあるからだ」と付言する。</p>
+</div>
+
+<!-- 1.3.7-10 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.7–10</div>
+  <div class="sanskrit">asti vyākaraṇam ity avaiyākaraṇā api yājñikā ūhaṃ kratuṣu prayuñjate | asti jyautiṣam iti puṇyāheṣu karma kurvate | tathāśvārohā gajārohāś cāśvān gajāṃś cānadhigataśāstrā api vinayante | tathāsti rājeti dūrasthā api janapadā na maryādām ativartante tadvad etat</div>
+  <div class="japanese">「文法学がある」からこそ、文法学者でない祭官たちも祭祀において推論（ウーハ）を用いる。「天文学がある」からこそ、人々は吉日に儀式を行う。同様に、馬乗りや象乗りは、専門の学問を修めなくても馬や象を調教する。また「王がいる」からこそ、遠方の地方民も規律を逸脱しない。それと同様のことである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>四つの類例によって、直接に学問を修めなくても学問の存在が間接的に実践を導くことを示す：<br>
+  ① <span class="iast">vyākaraṇa</span>（文法学）→ <span class="iast">ūha</span>（推論）：ヴェーダ祭式での応用変形は文法に基づくが、祭官は文法学者でなくとも用いる<br>
+  ② <span class="iast">jyautiṣa</span>（天文学）→ 吉日の判定：天文学を修めなくとも伝承により吉日を知る<br>
+  ③ 馬術・象術 → 調教：実践的な訓練による伝承<br>
+  ④ 王の存在 → 社会秩序：王を直接見なくとも、その存在が秩序を保つ</p>
+</div>
+
+<!-- 1.3.11-12 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.11–12</div>
+  <div class="sanskrit">santy api khalu śāstraprahatabuddhayo gaṇikā rājaputryo mahāmātraduhitaraś ca | tasmād vaiśvāsikāj janād rahasi prayogāñ śāstram ekadeśaṃ vā strī gṛhṇīyāt</div>
+  <div class="japanese">実際、学問に精通した知性をもつ遊女（ガニカー）、王女、大臣の娘たちもいる。そこで、信頼のおける人物から、秘密裡に、実践を、あるいは学問の一部を、女性は学ぶべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">śāstraprahatabuddhi</span>は「学問によって練磨された知性」の意。<span class="iast">mahāmātra</span>（大臣）について注釈は「偉大なる分量を有する者」すなわち大封建領主（<span class="iast">sāmanta</span>）と解する。<span class="iast">vaiśvāsika</span>（信頼のおける）人物からの秘密の学びが強調されるのは、羞恥心を取り除くため（<span class="iast">lajjānivṛttyartham</span>）。女性の能力に応じて、実践のみ・学問の全体・学問の一部のいずれかを学ぶべきとする。</p>
+</div>
+
+<!-- 1.3.13 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.13</div>
+  <div class="sanskrit">abhyāsaprayojyāṃś ca cātuḥṣaṣṭikān yogān kanyā rahasy ekākiny abhyaset</div>
+  <div class="japanese">そして、練習によって修得すべき64種の技芸を、処女（カンヤー）は秘密裡にひとりで練習すべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は <span class="iast">abhyāsaprayojya</span>（練習により修得すべきもの）として性的技法（<span class="iast">bāḍavaka</span>、<span class="iast">bhramaraka</span> 等）を含む実践を挙げる。<span class="iast">cātuḥṣaṣṭika</span>は「64に属する」の意。処女の段階で練習したものが青年期に実践されるとし、<span class="iast">rahasya</span>（秘密裡）は羞恥心への配慮、<span class="iast">ekākinī</span>（ひとりで）は師を必要としないことを意味する。</p>
+</div>
+
+<!-- 1.3.14 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.14</div>
+  <div class="sanskrit">ācāryās tu kanyānāṃ pravṛttapuruṣasaṃprayogā sahasaṃpravṛddhā dhātreyikā | tathābhūtā vā niratyayasaṃbhāṣaṇā sakhī | savayāś ca mātṛṣvasā | visrabdhā tatsthānīyā vṛddhadāsī | pūrvasaṃsṛṣṭā vā bhikṣukī | svasā ca viśvāsasaṃprayogāt</div>
+  <div class="japanese">処女たちの師は〔次の者たちである〕：男性との交わりの経験があり、ともに育った乳母の娘。同様の経験があり、安心して語り合える女友達。同年の母方の叔母（マートリシュヴァサー）。信頼のおける、叔母と同等の地位にある年長の女奴隷。以前から親しくしている托鉢尼（ビクシュキー）。そして姉妹——信頼に基づく〔性の〕経験から。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>6種の師が列挙される：<br>
+  ① <span class="iast">dhātreyikā</span>（乳母の娘）：幼少時から共に育ち信頼がある。性的経験があり知識を有する<br>
+  ② <span class="iast">sakhī</span>（女友達）：同様の経験があり、無害な会話ができる者<br>
+  ③ <span class="iast">mātṛṣvasā</span>（母の姉妹）：同年齢で、愛情と信頼の基盤がある<br>
+  ④ <span class="iast">vṛddhadāsī</span>（年長の女奴隷）：母の姉妹に相当する信頼ある者で、多くの事情に通じている<br>
+  ⑤ <span class="iast">bhikṣukī</span>（托鉢尼）：以前から親交があり、各地を巡っているため事情に通じている<br>
+  ⑥ <span class="iast">svasā</span>（姉妹）：信頼に基づく経験を共有した場合に限る</p>
+</div>
+
+<!-- 1.3.15 — the 64 arts -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.15</div>
+  <div class="sanskrit">gītaṃ, vādyaṃ, nṛtyam … iti catuḥṣaṣṭir aṅgavidyāḥ | kāmasūtrāvayavinyaḥ</div>
+  <div class="japanese">歌、器楽、舞踊……〔以下64種〕これらが64の補助学芸であり、カーマスートラの構成要素である。</div>
+</div>
+
+<p class="section-label">六十四芸一覧（<span class="iast">catuḥṣaṣṭir aṅgavidyāḥ</span>）</p>
+
+<div class="arts-container">
+<table class="arts-table">
+  <thead>
+    <tr><th class="num">№</th><th class="sk">サンスクリット（IAST）</th><th class="jp">日本語</th></tr>
+  </thead>
+  <tbody>
+    <tr class="cat-header"><td colspan="3">◆ 音楽・舞踊・造形芸術</td></tr>
+    <tr><td class="num">1</td><td class="sk">gīta</td><td class="jp">歌唱</td></tr>
+    <tr><td class="num">2</td><td class="sk">vādya</td><td class="jp">器楽演奏</td></tr>
+    <tr><td class="num">3</td><td class="sk">nṛtya</td><td class="jp">舞踊</td></tr>
+    <tr><td class="num">4</td><td class="sk">ālekhya</td><td class="jp">絵画</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 装飾・美容・化粧</td></tr>
+    <tr><td class="num">5</td><td class="sk">viśeṣakacchedya</td><td class="jp">額飾り（ティラカ）の切り抜き</td></tr>
+    <tr><td class="num">6</td><td class="sk">taṇḍulakusumabalivikārāḥ</td><td class="jp">米粒・花による供物紋様の制作</td></tr>
+    <tr><td class="num">7</td><td class="sk">puṣpāstaraṇa</td><td class="jp">花の敷き詰め</td></tr>
+    <tr><td class="num">8</td><td class="sk">daśanavasanāṅgarāga</td><td class="jp">歯・衣服・身体の染色</td></tr>
+    <tr><td class="num">9</td><td class="sk">maṇibhūmikākarma</td><td class="jp">宝石を用いた床面装飾</td></tr>
+    <tr><td class="num">10</td><td class="sk">śayanaracana</td><td class="jp">寝台の装飾</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 水の技芸・特殊技法</td></tr>
+    <tr><td class="num">11</td><td class="sk">udakavādya</td><td class="jp">水を用いた音楽</td></tr>
+    <tr><td class="num">12</td><td class="sk">udakāghāta</td><td class="jp">水の打ち合い（水遊び）</td></tr>
+    <tr><td class="num">13</td><td class="sk">citrāś ca yogāḥ</td><td class="jp">種々の秘術（呪法・容貌変化等）</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 花・装身具・香料</td></tr>
+    <tr><td class="num">14</td><td class="sk">mālyagrathanavikalpāḥ</td><td class="jp">花環の編み方の各種</td></tr>
+    <tr><td class="num">15</td><td class="sk">śekharakāpīḍayojana</td><td class="jp">冠飾り・頭飾りの装着</td></tr>
+    <tr><td class="num">16</td><td class="sk">nepathyaprayogāḥ</td><td class="jp">衣装・装身の技法</td></tr>
+    <tr><td class="num">17</td><td class="sk">karṇapatrabhaṅgāḥ</td><td class="jp">耳飾り（歯・貝製）の制作</td></tr>
+    <tr><td class="num">18</td><td class="sk">gandhayukti</td><td class="jp">香料の調合</td></tr>
+    <tr><td class="num">19</td><td class="sk">bhūṣaṇayojana</td><td class="jp">装身具の制作・装着</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 幻術・手品・手技</td></tr>
+    <tr><td class="num">20</td><td class="sk">aindrajālāḥ</td><td class="jp">幻術（インドラジャーラ）</td></tr>
+    <tr><td class="num">21</td><td class="sk">kaucumārāś ca yogāḥ</td><td class="jp">魅了の秘法（カウチュマーラ流）</td></tr>
+    <tr><td class="num">22</td><td class="sk">hastalāghava</td><td class="jp">手先の器用さ（手品）</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 料理・飲料</td></tr>
+    <tr><td class="num">23</td><td class="sk">vicitraśākayūṣabhakṣyavikārakriyā</td><td class="jp">種々の野菜・汁物・菓子の調理法</td></tr>
+    <tr><td class="num">24</td><td class="sk">pānakarasarāgāsavayojana</td><td class="jp">飲料・果汁・酒の調製</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 裁縫・糸芸・楽器</td></tr>
+    <tr><td class="num">25</td><td class="sk">sūcīvānakarmāṇi</td><td class="jp">針仕事（裁縫）</td></tr>
+    <tr><td class="num">26</td><td class="sk">sūtrakrīḍā</td><td class="jp">糸遊び（あやとり等）</td></tr>
+    <tr><td class="num">27</td><td class="sk">vīṇāḍamarukavādyāni</td><td class="jp">ヴィーナーとダマルカ（小太鼓）の演奏</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 言語遊戯・文芸</td></tr>
+    <tr><td class="num">28</td><td class="sk">prahelikā</td><td class="jp">謎かけ</td></tr>
+    <tr><td class="num">29</td><td class="sk">pratimālā</td><td class="jp">しりとり詩（末尾文字連鎖の詩）</td></tr>
+    <tr><td class="num">30</td><td class="sk">durvācakayogāḥ</td><td class="jp">難語の技法（発音困難な文の操り）</td></tr>
+    <tr><td class="num">31</td><td class="sk">pustakavācana</td><td class="jp">書物の朗読</td></tr>
+    <tr><td class="num">32</td><td class="sk">nāṭakākhyāyikādarśana</td><td class="jp">演劇・物語の鑑賞</td></tr>
+    <tr><td class="num">33</td><td class="sk">kāvyasamasyāpūraṇa</td><td class="jp">詩句の補完（掛句の完成）</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 工芸・建築・鑑定</td></tr>
+    <tr><td class="num">34</td><td class="sk">paṭṭikāvānavetravikalpāḥ</td><td class="jp">籐・竹の編物の技法</td></tr>
+    <tr><td class="num">35</td><td class="sk">takṣakarmāṇi</td><td class="jp">轆轤（ろくろ）の仕事</td></tr>
+    <tr><td class="num">36</td><td class="sk">takṣaṇa</td><td class="jp">大工仕事（木工）</td></tr>
+    <tr><td class="num">37</td><td class="sk">vāstuvidyā</td><td class="jp">建築学</td></tr>
+    <tr><td class="num">38</td><td class="sk">rūpyaratnaparīkṣā</td><td class="jp">銀貨・宝石の鑑定</td></tr>
+    <tr><td class="num">39</td><td class="sk">dhātuvāda</td><td class="jp">冶金術（金属加工）</td></tr>
+    <tr><td class="num">40</td><td class="sk">maṇirāgākarajñāna</td><td class="jp">宝石の染色と産地の知識</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 自然・動物</td></tr>
+    <tr><td class="num">41</td><td class="sk">vṛkṣāyurvedayogāḥ</td><td class="jp">樹木の養生法（植物学）</td></tr>
+    <tr><td class="num">42</td><td class="sk">meṣakukkuṭalāvakayuddhavidhi</td><td class="jp">羊・鶏・鶉の闘技法</td></tr>
+    <tr><td class="num">43</td><td class="sk">śukasārikāpralāpana</td><td class="jp">鸚鵡（オウム）と九官鳥に言葉を教えること</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 身体技法</td></tr>
+    <tr><td class="num">44</td><td class="sk">utsādane saṃvāhane keśamardane ca kauśala</td><td class="jp">足踏み按摩・身体按摩・髪の手入れの技術</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 暗号・言語・占い</td></tr>
+    <tr><td class="num">45</td><td class="sk">akṣaramuṣṭikākathana</td><td class="jp">手指による暗号文字の伝達</td></tr>
+    <tr><td class="num">46</td><td class="sk">mlecchitavikalpāḥ</td><td class="jp">暗号語の各種技法</td></tr>
+    <tr><td class="num">47</td><td class="sk">deśabhāṣāvijñāna</td><td class="jp">地方語の知識</td></tr>
+    <tr><td class="num">48</td><td class="sk">puṣpaśakaṭikā</td><td class="jp">花車（花を使った遊び）</td></tr>
+    <tr><td class="num">49</td><td class="sk">nimittajñāna</td><td class="jp">前兆・吉凶判断の知識</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 機械・記憶・学術</td></tr>
+    <tr><td class="num">50</td><td class="sk">yantramātṛkā</td><td class="jp">機械装置の原理</td></tr>
+    <tr><td class="num">51</td><td class="sk">dhāraṇamātṛkā</td><td class="jp">記憶術の原理</td></tr>
+    <tr><td class="num">52</td><td class="sk">sampāṭhya</td><td class="jp">合唱・暗誦（共同朗読）</td></tr>
+    <tr><td class="num">53</td><td class="sk">mānasī kāvyakriyā</td><td class="jp">即興の詩作（心中の詩作）</td></tr>
+    <tr><td class="num">54</td><td class="sk">abhidhānakoṣa</td><td class="jp">辞書学</td></tr>
+    <tr><td class="num">55</td><td class="sk">chandojñāna</td><td class="jp">韻律学の知識</td></tr>
+    <tr><td class="num">56</td><td class="sk">kriyākalpa</td><td class="jp">修辞学（詩作法）</td></tr>
+    <tr><td class="num">57</td><td class="sk">chalitakayogāḥ</td><td class="jp">変装・偽装の技術</td></tr>
+
+    <tr class="cat-header"><td colspan="3">◆ 衣服・遊戯・武芸</td></tr>
+    <tr><td class="num">58</td><td class="sk">vastragopanāni</td><td class="jp">衣服で隠す技法</td></tr>
+    <tr><td class="num">59</td><td class="sk">dyūtaviśeṣa</td><td class="jp">各種の賭け事</td></tr>
+    <tr><td class="num">60</td><td class="sk">ākarṣakrīḍā</td><td class="jp">骰子遊び</td></tr>
+    <tr><td class="num">61</td><td class="sk">bālakrīḍanakāni</td><td class="jp">子供の遊び（人形・鞠など）</td></tr>
+    <tr><td class="num">62</td><td class="sk">vainayikīnāṃ vidyānāṃ jñāna</td><td class="jp">礼法・作法の学問の知識</td></tr>
+    <tr><td class="num">63</td><td class="sk">vaijayikīnāṃ vidyānāṃ jñāna</td><td class="jp">戦勝の学問（武術・兵法）の知識</td></tr>
+    <tr><td class="num">64</td><td class="sk">vyāyāmikīnāṃ vidyānāṃ jñāna</td><td class="jp">体育（鍛錬・狩猟等）の学問の知識</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ ― 64芸の分類と詳細</div>
+  <p>注釈（ジャヤマンガラー）は、別の伝承から「64種の根本芸（<span class="iast">mūlakalā</span>）」の分類を引用する：<br>
+  ・<strong>行為に基づく芸（<span class="iast">karmāśrayā</span>）</strong>：24種 — 歌・舞踊・器楽・書道・雄弁・絵画・書物・葉切り・花環・香料調合・宝石鑑定・裁縫・色彩学・道具制作・計量・生業学・獣医学・魔術知識・遊戯・世間知・機知・按摩・身繕い・特殊技巧<br>
+  ・<strong>賭け事に基づく芸（<span class="iast">dyūtāśrayā</span>）</strong>：20種（無生物15種＋生物5種）<br>
+  ・<strong>閨房の芸（<span class="iast">śayanopacārikā</span>）</strong>：16種<br>
+  ・<strong>上位の芸（<span class="iast">uttarakalā</span>）</strong>：4種（涙を流しながらの呪い・自己誓約・出発する男の追跡・繰り返しの凝視）</p>
+  <p>注釈の各項目についての詳細：<br>
+  ・<span class="iast">viśeṣakacchedya</span>（5番）：額飾り（ティラカ）を樺皮等で様々な形に切り出すこと。女性にとって特に好まれた技芸<br>
+  ・<span class="iast">citrāś ca yogāḥ</span>（13番）：白髪化・老化偽装等の呪術的技法。嫉妬による陰謀の手段とされ、<span class="iast">kaucumāra</span> の秘法と区別して列挙<br>
+  ・<span class="iast">kaucumārāḥ</span>（21番）：カウチュマーラ仙の伝えた魅了の秘法。他の方法では成し遂げられないことを達成するための手段<br>
+  ・<span class="iast">akṣaramuṣṭikā</span>（45番）：注釈は手指暗号には二種あると述べる — ①手指信号（<span class="iast">akṣaramudrā</span>、見て分かるもの）と②仏典式暗号（<span class="iast">bhūtamudrā</span>、視覚に依存しない）<br>
+  ・<span class="iast">mlecchitavikalpāḥ</span>（46番）：正しいサンスクリットで綴られていても文字の入れ替えにより難解となる暗号文。カウティリヤ（『実利論』著者）の方式が引用される<br>
+  ・<span class="iast">mānasī kāvyakriyā</span>（53番）：二種ある — ①視覚的（文字記号を使って暗号的に詩を書く）②聴覚的（口頭で聞いた要素から詩を再構成する「空中の心中詩」<span class="iast">ākāśamānasī</span>）</p>
+</div>
+
+<!-- 1.3.16 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.16</div>
+  <div class="sanskrit">pāñcālikī ca catuḥṣaṣṭir aparā | tasyāḥ prayogān anvavetya sāṃprayogike vakṣyāmaḥ | kāmasya tadātmakatvāt</div>
+  <div class="japanese">またパーンチャーリカ流の64芸が別にある。その実践については、対象に従って交合篇（サーンプラヨーギカ）で述べるであろう。愛（カーマ）がその〔64種の〕本質をもつがゆえに。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">pāñcālikī</span>はパンチャーラ地方に由来する、あるいはパンチャーラ地方の賢者によって伝えられたもう一つの64芸。これは性的技法の64種であり、第2篇で詳述される。ここで列挙された学芸の64種とは別体系である。注釈は「カーマの本質が64芸にあるからこそ、これら学芸の存在なくしてカーマスートラは成り立たない」と述べる。</p>
+</div>
+
+<div class="section-break">— ❖ —</div>
+
+<p class="section-label">学芸習得の効果（<span class="iast">kalāgrahaṇaphala</span>）</p>
+
+<!-- 1.3.17-18 (verses) -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.17–18〔韻文〕</div>
+  <div class="sanskrit"><span class="verse">ābhir abhyucchritā veśyā śīlarūpaguṇānvitā |<br>labhate gaṇikāśabdaṃ sthānaṃ ca janasaṃsadi ||</span><br><span class="verse">pūjitā sā sadā rājñā guṇavadbhiś ca saṃstutā |<br>prārthanīyābhigamyā ca lakṣyabhūtā ca jāyate ||</span></div>
+  <div class="japanese">これら〔の学芸〕によって高められた遊女（ヴェーシャー）は、品性・容姿・徳性を備え、「ガニカー」（高級遊女）の称号と、人々の集いにおける地位を得る。<br><br>彼女は常に王に尊敬され、有徳の人々に讃えられ、望まれる相手となり、訪ねられる存在となり、模範的な存在となる。</div>
+</div>
+
+<!-- 1.3.19-20 (verses) -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.19–20〔韻文〕</div>
+  <div class="sanskrit"><span class="verse">yogajñā rājaputrī ca mahāmātrasutā tathā |<br>sahasrāntaḥpuram api svavaśe kurute patim ||</span><br><span class="verse">tathā pativiyoge ca vyasanaṃ dāruṇaṃ gatā |<br>deśāntare 'pi vidyābhiḥ sā sukhenaiva jīvati ||</span></div>
+  <div class="japanese">学芸に通じた王女や大臣の娘は、千人の後宮をもつ夫をも自らの意のままにする。<br><br>また、夫と離れ、あるいは恐ろしい不幸に遭っても、異国の地においてさえ、学芸によって安楽に暮らすことができる。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は <span class="iast">sahasrāntaḥpura</span>（千人の後宮）を「多数の妻を有することの形容」とし、学芸の力で夫の心を独占できることを示すと述べる。また <span class="iast">pativiyoga</span>（夫との離別）には夫の旅立ちと死別（<span class="iast">vaidhavya</span>、寡婦となること）の両方を含み、学芸の教授によって生計を立てられると説明する。</p>
+</div>
+
+<!-- 1.3.21-22 (verses) -->
+<div class="sutra-block">
+  <div class="sutra-num">1.3.21–22〔韻文〕</div>
+  <div class="sanskrit"><span class="verse">naraḥ kalāsu kuśalo vācālaś cāṭukārakaḥ |<br>asaṃstuto 'pi nārīṇāṃ cittam āśv eva vindati ||</span><br><span class="verse">kalānāṃ grahaṇād eva saubhāgyam upajāyate |<br>deśakālau tv apekṣyāsāṃ prayogaḥ saṃbhaven na vā ||</span></div>
+  <div class="japanese">学芸に巧みで、雄弁で、愛嬌ある男は、知己でなくとも、たちまち女性の心を掴む。<br><br>学芸の習得からこそ幸運（サウバーギャ）が生まれる。しかし、場所と時を考慮して、これらの実践が可能かどうかは〔判断すべきである〕。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は <span class="iast">vācāla</span>（雄弁）を「学芸に関連して多く語る者」と限定し、単なるおしゃべりとは区別する。<span class="iast">cāṭukāraka</span>は「愛しいことを行う者」すなわち愛嬌のある者。<br>最終句 <span class="iast">deśakālau tv apekṣya</span> について注釈は、学芸の実践には場所と時の制約があることを強調する。教養人（<span class="iast">nāgaraka</span>）がいない土地、あるいは教養を嫌う人々のいる場所、不幸の時期などでは実践が不可能となり、かえってその知識が害をもたらしうるとする。</p>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sādhāraṇe prathame 'dhikaraṇe<br>
+  vidyāsamuddeśas tṛtīyo 'dhyāyaḥ<br><br>
+  シュリー・ヴァーツヤーヤナのカーマスートラ・総論篇・第1篇において<br>
+  学芸の概説・第3章〔了〕
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

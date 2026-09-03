@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 4.2</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Shippori+Mincho:wght@400;600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --bg-card: #fffdf8;
+  --text: #2c2418;
+  --text-secondary: #6b5d4d;
+  --accent: #a0522d;
+  --accent-light: #c4845c;
+  --border: #ddd5c8;
+  --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3;
+  --note-bg: #f2ede4;
+  --highlight: #8b4513;
+  --table-header: #e8dfd2;
+  --table-stripe: #faf7f1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612;
+    --bg-card: #242019;
+    --text: #e0d5c4;
+    --text-secondary: #a89880;
+    --accent: #c4845c;
+    --accent-light: #d4a07a;
+    --border: #3d362c;
+    --border-light: #302a22;
+    --sanskrit-bg: #1e1a14;
+    --note-bg: #2a2520;
+    --highlight: #d4a07a;
+    --table-header: #2e2822;
+    --table-stripe: #221e18;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a1612;
+  --bg-card: #242019;
+  --text: #e0d5c4;
+  --text-secondary: #a89880;
+  --accent: #c4845c;
+  --accent-light: #d4a07a;
+  --border: #3d362c;
+  --border-light: #302a22;
+  --sanskrit-bg: #1e1a14;
+  --note-bg: #2a2520;
+  --highlight: #d4a07a;
+  --table-header: #2e2822;
+  --table-stripe: #221e18;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+  line-height: 1.9;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+header h1 {
+  font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.3rem;
+  text-wrap: balance;
+}
+
+header .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0.3rem 0;
+}
+
+header .meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.prakarana {
+  margin-bottom: 2.5rem;
+}
+
+.prakarana-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.prakarana-header h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.prakarana-header .number {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.sutra-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 0;
+}
+
+.sutra-block:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+.sutra-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sutra-row:last-child {
+  border-bottom: none;
+}
+
+.sutra-num {
+  grid-column: 1 / -1;
+  background: var(--note-bg);
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.sanskrit {
+  padding: 0.5rem 1rem;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--sanskrit-bg);
+  border-right: 1px solid var(--border-light);
+}
+
+.japanese {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.note-section {
+  background: var(--note-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.note-section h3 {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+}
+
+.note-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.note-section li {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.note-section li strong {
+  color: var(--text);
+}
+
+.verse-block {
+  background: var(--sanskrit-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.verse-block .verse-sanskrit {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.verse-block .verse-japanese {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  background: var(--table-header);
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+td {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-stripe);
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  body { padding: 1rem; }
+  header h1 { font-size: 1.3rem; }
+  .sutra-row { grid-template-columns: 1fr; }
+  .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>कामसूत्र — Kāmasūtra 4.2</h1>
+  <div class="subtitle">第四篇 第二章｜Bhāryādhikaraṇa — Dvitīyo 'dhyāyaḥ</div>
+  <div class="meta">
+    共妻に対する振る舞い：年長の妻・年少の妻・再婚した妻・不幸な妻・後宮・夫の心得<br>
+    prakaraṇa 34–39｜sūtra 4.2.1–4.2.72
+  </div>
+</header>
+
+<!-- ===== Prakaraṇa 34: Jyeṣṭhā-vṛtta ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第三十四節　年長の妻の振る舞い（Jyeṣṭhā-vṛtta）</h2>
+    <span class="number">prakaraṇa 34</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.1</div>
+      <div class="sanskrit">jāḍya-dauḥśīlya-daurbhāgyebhyaḥ prajān:utpatter ābhīkṣṇyena dārikotpatter nāyaka-cāpalād vā sapatny-adhivedanam.</div>
+      <div class="japanese">愚鈍（jāḍya）、悪行（dauḥśīlya）、不運（daurbhāgya）のゆえに、あるいは子が生まれないゆえに、頻繁に娘ばかり生まれるゆえに、または夫（nāyaka）の気まぐれ（cāpala）により、共妻を迎えること（sapatny-adhivedana）が起こる。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.2</div>
+      <div class="sanskrit">tad ādita eva bhakti-śīla-vaidagdhya-khyāpanena parijihīrṣet. prajā:nutpattau ca svayam eva sāpatnake codayet.</div>
+      <div class="japanese">それゆえ、初めから献身（bhakti）、品行（śīla）、才知（vaidagdhya）を示してそれを避けるべきである。子がない場合は、自ら共妻を迎えるよう促すべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.3</div>
+      <div class="sanskrit">adhividyamānā ca yāvac chakti-yogād ātmano 'dhikatvena sthitiṃ kārayet.</div>
+      <div class="japanese">共妻を迎えられようとしている間は、力の限り自らの優位を保つべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.4</div>
+      <div class="sanskrit">āgatāṃ caināṃ bhaginīvad īkṣeta. nāyaka-viditaṃ ca prādoṣikaṃ vidhimatīva yatnād asyāḥ kārayet. saubhāgyajaṃ vaikṛtam utsekaṃ vāsyā nādriyeta.</div>
+      <div class="japanese">やって来た共妻を妹のように見るべきである。夫の知るところで、夕べの儀礼（prādoṣika）を丁寧にその女に行わせるべきである。彼女の幸運から生じた高慢や興奮を気にかけてはならない。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.5</div>
+      <div class="sanskrit">bhartari pramādyantīm upekṣeta. yatra manyetārtham iyaṃ svayam api pratipatsyata iti tatrainām ādarata evānuśiṣyāt.</div>
+      <div class="japanese">夫に対して不注意な共妻は見過ごすべきである。「この事柄は彼女自身も理解するだろう」と思うところでは、好意をもって教え諭すべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.6</div>
+      <div class="sanskrit">nāyaka-saṃśrave ca rahasi viśeṣān adhikān darśayet.</div>
+      <div class="japanese">夫に聞こえるところで、また密かに、特別な優れた技芸（viśeṣa）を見せるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.7</div>
+      <div class="sanskrit">tad-apatyesv a:viśeṣaḥ. parijana-varge 'dhikānukampā. mitra-varge prītiḥ. ātma-jñātiṣu nāty:ādaraḥ. taj-jñātiṣu cāti:saṃbhramaḥ.</div>
+      <div class="japanese">その子どもたちには分け隔てなく接する。従者の群には特別な慈悲を。友人の群には親愛を。自分の親族にはあまり偏らず、共妻の親族には格別の敬意を示すべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.8–9</div>
+      <div class="sanskrit">bahvībhis tv adhivinnā a:vyavahitayā saṃsṛjyeta. yāṃ tu nāyako 'dhikāṃ cikīrṣet tāṃ bhūta-pūrva-subhagayā protsāhya kalahayet.</div>
+      <div class="japanese">多くの共妻がいる場合は、隣り合う（直近の）妻と親しくすべきである。夫が特に愛そうとする妻に対しては、かつて夫に愛された妻を唆して争わせるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.10–12</div>
+      <div class="sanskrit">tataś cānukampeta. tābhir ekatvenādhikāṃ cikīrṣītāṃ svayam a:vivadamānā dur:janī:kuryāt. nāyakena tu kalahitām enāṃ pakṣapātāvalambanopabṛmhitām āśvāsayet.</div>
+      <div class="japanese">その後、同情を示すべきである。共妻たちが一致して寵愛を得ようとする妻を、自分は争わず悪評を立てるべきである。夫に叱られた妻には、味方をして慰めるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.13–15</div>
+      <div class="sanskrit">kalahaṃ ca vardhayet. mandaṃ vā kalaham upalabhya svayam eva saṃdhukṣayet. yadi nāyako 'syām adyāpi sānunaya iti manyeta tadā svayam eva sandhau prayateta.</div>
+      <div class="japanese">争いを激化させるべきである。争いが弱まったと見れば、自ら煽り立てるべきである。もし夫がまだその女に宥和的だと考えるなら、自ら和解に努めるべきである。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>sapatny-adhivedana の原因</strong>：jāḍya（愚鈍・不誠実）、dauḥśīlya（品行の欠如）、daurbhāgya（不運）が女性側の原因。nāyaka-cāpala（夫の浮気心）が男性側の原因。</li>
+      <li><strong>bhakti-śīla-vaidagdhya</strong>：この三つはそれぞれ jāḍya・dauḥśīlya・daurbhāgya を打ち消す手段と対応する。vaidagdhya（才知）によって nāyaka-cāpala も制する。</li>
+      <li><strong>prādoṣika</strong>（夕べの儀礼）：「嫌がっていても侍女を通じてやらせる」とあり、これは好意を示すためとされる。</li>
+      <li><strong>策略の本質</strong>：4.2.9–14は、他の共妻に対する政治的操作。Yaśodhara は「以前寵愛を受けていた妻（bhūta-pūrva-subhagā）を唆し、寵愛の種（saubhāgya-bīja）を巡って争わせる」と説明。自分は中立を装う（madhyasthā）。</li>
+      <li><strong>和解の戦術</strong>（4.2.15）：夫がその妻への愛情を変えそうにない場合は、争いを続けても無駄なので自ら和解を申し出る。Yaśodhara は「『私のような者を見捨てないで』と懇願せよ」と述べる。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 35: Kaniṣṭhā-vṛtta ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第三十五節　年少の妻の振る舞い（Kaniṣṭhā-vṛtta）</h2>
+    <span class="number">prakaraṇa 35</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.16</div>
+      <div class="sanskrit">kaniṣṭhā tu mātṛvat sa:patnīṃ paśyet.</div>
+      <div class="japanese">年少の妻は、共妻（年長の妻）を母のように見るべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.17</div>
+      <div class="sanskrit">jñāti-dāyam api tasyā a:viditaṃ nopayuñjīta.</div>
+      <div class="japanese">親族からの贈り物（jñāti-dāya）でさえ、年長の妻に知らせずに使ってはならない。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.18–19</div>
+      <div class="sanskrit">ātma-vṛttāntāṃs tad-adhiṣṭhitān kuryāt. anujñātā patim adhiśayīta.</div>
+      <div class="japanese">自分の用事は年長の妻に監督してもらって行うべきである。年長の妻に許されてから、夫のもとに臥すべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.20–21</div>
+      <div class="sanskrit">na vā tasyā vacanam anyasyāḥ kathayet. tad-apatyāni svebhyo 'dhikāni paśyet.</div>
+      <div class="japanese">年長の妻の言葉を他の妻に語ってはならない。年長の妻の子どもたちを自分の子より大切にすべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.22–24</div>
+      <div class="sanskrit">rahasi patim adhikam upacaret. ātmanaś ca sapatnī-vikāra-jaṃ duḥkhaṃ nācakṣīta. patyuś ca sa:viśeṣakaṃ gūḍhaṃ mānaṃ lipset.</div>
+      <div class="japanese">密かに夫に格別に仕えるべきである。共妻からの虐待による苦痛は自ら言ってはならない。夫から特別な、ひそかな敬意（māna）を求めるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.25–27</div>
+      <div class="sanskrit">anena khalu pathya-dānena jīvāmīti brūyāt. tat tu ślāghayā rāgeṇa vā bāhir nācakṣīta. bhinna-rahasyā hi bhartur avajñāṃ labhate.</div>
+      <div class="japanese">「この（特別な）恵みによって私は生きております」と言うべきである。しかしそれを自慢や怒りで外に漏らしてはならない。秘密を破った者は夫の軽蔑を受けるからである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.28</div>
+      <div class="sanskrit">jyeṣṭhā-bhayāc ca nigūḍha-saṃmānārthinī syād iti gonardīyaḥ.</div>
+      <div class="japanese">年長の妻を恐れて、ひそかに敬意を求めるべきである、とゴーナルディーヤは言う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.29–30</div>
+      <div class="sanskrit">dur:bhāgam an:apatyāṃ ca jyeṣṭhām anukampeta nāyakena cānukampayet. prasahya tv enām ekacāriṇī-vṛttam anutiṣṭhet.</div>
+      <div class="japanese">不運で子のない年長の妻には同情すべきであり、夫にも同情させるべきである。しかし力を得れば、一人の妻としての振る舞い（ekacāriṇī-vṛtta）に従うべきである。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>jñāti-dāya</strong>：「親から与えられたもの、さらに夫から与えられたもの（api-śabda による追加）も、知らせずに使ってはならない」。これは年長の妻に取り入る方法（aṅgārpaṇa-upāya）とされる。</li>
+      <li><strong>adhiśayīta</strong>（4.2.19）：文法注記として「adhiśīṅ（横たわる）」は karmasaṃjñā（対格支配）と説明。年長の妻から順番の許可を得てから夫のもとへ行く。</li>
+      <li><strong>sapatnī-vikāra-ja duḥkha</strong>（4.2.23）：共妻からの虐待の苦痛は自分では言わず、他人に語らせる。自分で語ると夫が信じない、と Yaśodhara は述べる。</li>
+      <li><strong>Gonardīya の見解</strong>（4.2.28）：年長の妻が特別な扱いを見て怒ったり害を企てたりする恐れがあるため、敬意は隠すべき。Vātsyāyana はこの見解に反対していないので、暗黙に承認。</li>
+      <li><strong>prasahya の解釈</strong>（4.2.30）：「力を得て（年長の妻を）圧倒し」ekacāriṇī-vṛtta を実践する。中間の妻は前後関係に応じて年長・年少いずれかの振る舞いをとる。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 36: Punarbhū-vṛtta ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第三十六節　再婚した妻の振る舞い（Punarbhū-vṛtta）</h2>
+    <span class="number">prakaraṇa 36</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.31</div>
+      <div class="sanskrit">vidhavā tv indriya-daurbalyād āturā bhoginaṃ guṇa-saṃpannaṃ ca yā punar vindet sā punarbhūḥ.</div>
+      <div class="japanese">寡婦（vidhavā）が、感覚器官の弱さ（indriya-daurbalya）により苦しみ、享楽に富み徳を備えた男を再び得るならば、それが再婚した妻（punarbhū）である。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.32</div>
+      <div class="sanskrit">yatas tu svecchayā punar api niṣkramaṇaṃ nir:guṇo 'yam iti tadānyaṃ kāṅkṣed iti bābhravīyāḥ.</div>
+      <div class="japanese">しかし自らの意志で再び去ることもある。「彼は徳がない」と思えば別の者を求める、とバーブラヴィーヤ派は言う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.33–34</div>
+      <div class="sanskrit">saukhyārthinī sā kilānyaṃ punar vindeta. guṇeṣu sopabhogeṣu sukha-sākalyaṃ tasmāt tato viśeṣa iti gonardīyaḥ.</div>
+      <div class="japanese">快楽を求める彼女は確かに別の夫を得るかもしれない。しかし徳と享楽の両方を備えた者にこそ完全な幸福があり、そこに優越がある、とゴーナルディーヤは言う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.35</div>
+      <div class="sanskrit">ātmanaś cittānukūlyād iti vātsyāyanaḥ.</div>
+      <div class="japanese">自らの心の適合（cittānukūlya）によるのだ、とヴァーツヤーヤナは言う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.36</div>
+      <div class="sanskrit">sā bāndhavair nāyakād āpānakodyāna-śraddhā-dāna-mitra-pūjanādi vyaya-sahiṣṇu karma lipseta.</div>
+      <div class="japanese">彼女は親族を通じて、夫から宴席（āpānaka）・庭園（udyāna）・信施（śraddhā-dāna）・友人の供養などの出費を許容する権限を得るべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.37–39</div>
+      <div class="sanskrit">ātmanaḥ sāreṇa vālaṅkāraṃ tadīyam ātmīyaṃ vā bibhṛyāt. prīti-dāyeṣv a:niyamaḥ. svecchayā ca gṛhān nirgacchatī prīti-dāyād anyan nāyaka-dattaṃ jīyeta. niṣkāsyamānā tu na kiṃ cid dadyāt.</div>
+      <div class="japanese">自分の財産から、あるいは夫のものであれ自分のものであれ装身具を着けるべきである。愛情から与えられたものには制限がない。自らの意志で去る場合は、愛情からの贈り物以外の夫からの財を返すべきである。追い出される場合は何も返す必要がない。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.40–42</div>
+      <div class="sanskrit">sā prabhaviṣṇur iva tasya bhavanam āpnuyāt. kulajāsu tu prītyā varteta. dākṣiṇyena parijane sarvatra sa:parihāsā mitreṣu pratipattiḥ. kalāsu kauśalam adhikasya ca jñānam.</div>
+      <div class="japanese">女主人のようにその家を支配すべきである。正妻たちに対しては愛情をもって振る舞うべきである。従者には優しく、友人にはいつも冗談を交えて。技芸に巧みであり、また優れた知識を示すべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.43–44</div>
+      <div class="sanskrit">kalaha-sthāneṣu ca nāyakaṃ svayam upalabheta. rahasi ca kalayā catuḥṣaṣṭyānuvarteta. sa:patnīnāṃ ca svayam upakuryāt. tāsām apatyeṣv ābhāraṇa-dānam. teṣu svāmivad upacāraḥ. maṇḍanakāni veṣānādareṇa kurvīta. parijane mitravarge cādhikaṃ viśrāṇanam. samājāpānakodyāna-yātrā-vihāra-śīlatā ca.</div>
+      <div class="japanese">争いの原因がある場所では自ら夫を咎めるべきである。密かには六十四の技芸（catuḥṣaṣṭi-kalā）で夫に従うべきである。共妻たちには自ら助力すべきである。その子どもたちに装身具を贈り、主人のように世話する。装飾は丁重に行う。従者と友人の群にはより多く施す。集会・宴席・庭園・巡遊・遊楽を好むべきである。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>punarbhū の定義</strong>：Yaśodhara は二種類を区別する。akṣata-yoni（処女性を保った再婚者）は正式な婚礼を受ける資格がある。kṣata-yoni は svīkāra（受容）のみで、loka（世間）では avaruddhā（囲われた女）と呼ばれる。Vasiṣṭha の七種の punarbhū が引用される。</li>
+      <li><strong>三派の議論</strong>：Bābhravīya 派は「快楽のために自由に去る」ことを許容。Gonardīya は「徳（guṇa）と享楽（upabhoga）の両方があってこそ幸福」と反論。Vātsyāyana は「心の適合（cittānukūlya）が決定的」と調停する。何度も去る者は veśyā（遊女）と区別がなくなるとも。</li>
+      <li><strong>経済的権利</strong>（4.2.36–39）：上級（uttama-prakṛti）の再婚妻は祝宴や施しの費用を認めさせ、中級・下級（madhyama-adhama）は装身具の管理にとどまる。自発的離別と追放では財産の返還義務が異なる。</li>
+      <li><strong>kalaha-sthāna</strong>（4.2.43）：Yaśodhara は争いの原因を具体的に挙げる — svairiṇī-saṃsarga（気ままな女との交わり）、不相応な時間の外出、vāsaka（閨房）からの外出など。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 37: Durbhagā-vṛtta ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第三十七節　不幸な妻の振る舞い（Durbhagā-vṛtta）</h2>
+    <span class="number">prakaraṇa 37</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.45</div>
+      <div class="sanskrit">durbhagā tu sāpatnaka-pīḍitā yā tāsām adhikam iva patyāv upacaret tām āśrayet. prakāśyāni ca kalā-vijñānāni darśayet. daurbhāgyād rahasyānām a:bhāvaḥ.</div>
+      <div class="japanese">不幸な妻（durbhagā）は共妻に苦しめられ、その中で夫に最も仕える者に頼るべきである。技芸の知識を公に示すべきである。不幸のゆえに秘密がないからである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.46–48</div>
+      <div class="sanskrit">nāyakāpatyānāṃ dhātreyikāni kuryāt. tan-mitrāṇi copagṛhya tair bhaktim ātmanaḥ prakāśayet. dharma-kṛtyeṣu ca puraś-cāriṇī syād vratopavāsayoś ca.</div>
+      <div class="japanese">夫の子どもたちの乳母役（dhātreyika）を務めるべきである。夫の友人たちを親切にもてなし、それによって自分の献身を知らしめるべきである。宗教的行事（dharma-kṛtya）においては率先者となり、誓願と断食にも先んじるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.49–51</div>
+      <div class="sanskrit">parijane dākṣiṇyam. na cādhikam ātmānaṃ paśyet. śayane tat-sātmyenātmano 'nurāga-pratyānayanam. na copālabheta vāmatāṃ ca na darśayet.</div>
+      <div class="japanese">従者には優しくすべきである。自分を過大に見てはならない。閨においては夫に合わせて自らの愛情を示すべきである。叱ってはならず、不機嫌を見せてはならない。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.52–54</div>
+      <div class="sanskrit">yayā ca kalahitaḥ syāt kāmaṃ tām āvartayet. yāṃ ca pracchannāṃ kāmayet tām anena saha saṃgamayed gopayec ca. yathā ca pativratātvam a:śāṭhyaṃ nāyako manyeta tathā pratividadhyāt.</div>
+      <div class="japanese">争った妻のもとへ夫を連れ戻すべきである。夫がひそかに望む女を夫と逢わせ、秘密を守るべきである。夫が「この妻は貞節で偽りがない」と思うように振る舞うべきである。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>durbhagā の戦略</strong>：不幸な妻の根本戦略は vaidagdhya-khyāpana（才知の誇示）であり、これが daurbhāgya の最大の解決策である。</li>
+      <li><strong>dhātreyika</strong>（乳母の務め）：abhyañjana（塗油）、uddharatana（沐浴）、strapana（授乳の補助）など具体的な世話を指す。</li>
+      <li><strong>tat-sātmya</strong>（4.2.50）：「夫に合わせて（nāyakānukūlyena）」— 嫌がっていても愛情を示し、満足させるべきとある。</li>
+      <li><strong>dūtī-karma</strong>（4.2.53）：秘密の女を夫と逢わせる仲介（dūtī-karma）を行い、夫の急所（marman）を床の中で知り、それにより従順にさせる。秘密は他者に語らない。</li>
+      <li><strong>外面と内面</strong>：Yaśodhara は外の振る舞い（bāhya vṛtta, 4.2.45–49）と内の振る舞い（ābhyantara, 4.2.50–54）を明確に区別して論じる。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 38: Āntaḥpurika ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第三十八節　後宮の規範（Āntaḥpurika）</h2>
+    <span class="number">prakaraṇa 38</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.55</div>
+      <div class="sanskrit">antaḥ-purāṇāṃ ca vṛttam eteṣv eva prakaraṇeṣu lakṣayet.</div>
+      <div class="japanese">後宮の女たち（antaḥpura）の振る舞いも、これらの節において理解すべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.56–57</div>
+      <div class="sanskrit">mālyānulepana-vāsāṃśi cāsāṃ kañcukīyā mahattarikā vā rājño nivedayeyur devībhiḥ prahitam iti. tad ādāya rājā nirmālyam āsāṃ pratiprābhṛtakaṃ dadyāt.</div>
+      <div class="japanese">彼女たちの花飾り・塗香・衣服を、侍従（kañcukīya）または女官長（mahattarikā）が「王妃たちからの贈り物」として王に伝えるべきである。王はそれを受け取り、自分の使い古しの花飾りなどを返礼として与えるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.58–59</div>
+      <div class="sanskrit">alaṃkṛtaś ca sv:alaṃkṛtāni cāparāhne sarvāṇy antaḥpurāṇy aikadhyena paśyet. tāsāṃ yathā-kālaṃ yathārhaṃ ca sthāna-mānānuvṛttiḥ sa:parihāsāś ca kathāḥ kuryāt.</div>
+      <div class="japanese">着飾って、午後に美しく飾られた後宮の全員を一堂に見るべきである。時と身分に応じて地位と名誉を守り、冗談を交えた話をすべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.60–62</div>
+      <div class="sanskrit">tad-an:antaraṃ punarbhuvas tathaiva paśyet. tato veśyā ābhyantarikā nāṭakīyāś ca. tāsāṃ yathokta-kakṣāṇi sthānāni.</div>
+      <div class="japanese">その直後に再婚した妻たちを同様に見る。次に遊女（veśyā）・後宮の女（ābhyantarikā）・舞台女優（nāṭakīya）たちを。彼女たちの席は定められた序列に従う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.63–64</div>
+      <div class="sanskrit">vāsakapālyas tu yasyā vāsako yasyāś cātīto yasyāś ca ṛtus tat-paricārikānugatā divā śayyotthitasya rājñas tābhyāṃ prahitam aṅgulīyakāṅkam anulepanam ṛtuṃ vāsakaṃ ca nivedayeyuḥ. tatra rājā yad gṛhṇīyāt tasyā vāsakam ājñāpayet.</div>
+      <div class="japanese">夜伽の管理者（vāsakapālī）は、今夜の番の者、番が過ぎた者、月経の者の侍女を伴い、昼食後の王に、印の指輪・塗香・月経の報告・夜伽の報告を伝えるべきである。王がどの指輪を取るかで、その妻の夜伽を命じるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">4.2.65–66</div>
+      <div class="sanskrit">utsaveṣu ca sarvāsām anurūpeṇa pūjāpānakaṃ ca. saṃgīta-darśaneṣu ca. antaḥ-pura-cāriṇīnāṃ bahir a:niṣkramo bāhyānāṃ cā:praveśaḥ. anyatra vidita-śaucābhyaḥ. a:parikliṣṭaś ca karmayogaḥ.</div>
+      <div class="japanese">祝祭においては全員にふさわしい供養と酒宴を、音楽鑑賞においても同様に。後宮の女たちは外出してはならず、外部の者は入ってはならない。ただし身元の確かな者は例外である。行為における過度の苦痛があってはならない。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>後宮の序列</strong>（4.2.62）：中心に devī（正妃）、その外の区画に punarbhū（再婚妻）、さらに外に veśyā（遊女）、最も外に nāṭakīyā（女優）。</li>
+      <li><strong>aikadhyena</strong>（4.2.58）：「一堂に」全員を見る — 個別ではない。これは公平な扱い（tulya-vṛttasya）を示すためとされる。</li>
+      <li><strong>aṅgulīyaka</strong>（指輪の制度, 4.2.63）：各妻の侍女が mudrā（印章付き指輪）と anulepana（塗香）を王に提示し、王が選んだ指輪の持ち主の vāsaka（夜伽）が決まる。</li>
+      <li><strong>a:parikliṣṭa karmayoga</strong>（4.2.66）：「情事において過度に苦しめてはならない。苦しめれば不正なことをしかねないからである」とYaśodharaは警告。</li>
+      <li><strong>外部者の侵入防止</strong>：音楽の集まりの際、歌舞衣装を着た nāgarika（都会人）が紛れ込む可能性があるため警戒が必要とされる。</li>
+    </ul>
+  </div>
+
+  <div class="note-section">
+    <h3>🏛️ 後宮の序列と夜伽制度</h3>
+    <div class="table-wrap">
+      <table>
+        <tr>
+          <th>区画</th>
+          <th>身分</th>
+          <th>Sanskrit</th>
+          <th>説明</th>
+        </tr>
+        <tr>
+          <td>最内</td>
+          <td>正妃</td>
+          <td>devī</td>
+          <td>正式に婚姻した王妃たち</td>
+        </tr>
+        <tr>
+          <td>第二</td>
+          <td>再婚妻</td>
+          <td>punarbhū</td>
+          <td>再婚によって後宮に入った女性</td>
+        </tr>
+        <tr>
+          <td>第三</td>
+          <td>遊女</td>
+          <td>veśyā</td>
+          <td>公的に認められた遊女</td>
+        </tr>
+        <tr>
+          <td>最外</td>
+          <td>女優</td>
+          <td>nāṭakīyā</td>
+          <td>舞台芸術に携わる女性</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 39: Puruṣasya bahvīṣu pratipattiḥ ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第三十九節　多くの妻に対する夫の心得（Puruṣasya bahvīṣu pratipattiḥ）</h2>
+    <span class="number">prakaraṇa 39</span>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      4.2.67 puruṣas tu bahūn darān samāhṛtya samo bhavet |<br>
+      na cāvajñāṃ cared āsu vyālikān na saheta ca ||
+    </div>
+    <div class="verse-japanese">
+      男は多くの妻を娶り、平等に振る舞うべきである。<br>
+      彼女たちを軽蔑してはならず、過ちを容認してもならない。
+    </div>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      4.2.68 ekasyāṃ yā rati-krīḍā vaikṛtaṃ vā śarīrajam |<br>
+      visrambhād vāpy upālambhas tam anyāsu na kīrtayet ||
+    </div>
+    <div class="verse-japanese">
+      一人の妻との情戯（rati-krīḍā）、身体の秘密（vaikṛta）、<br>
+      あるいは信頼から生じた叱責を、他の妻に語ってはならない。
+    </div>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      4.2.69 na dadyāt prasaraṃ strīṇāṃ sa:patnyāḥ kāraṇe kva cit |<br>
+      tathopālabhamānāṃ ca doṣais tām eva yojayet ||
+    </div>
+    <div class="verse-japanese">
+      共妻のことで女たちに自由にさせてはならない。<br>
+      そのように咎める者にも、その者自身の過ちを指摘すべきである。
+    </div>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      4.2.70 anyāṃ rahasi visrambhair anyāṃ pratyakṣa-pūjanaiḥ |<br>
+      bahu-mānais tathā cānyām ity evaṃ rañjayet striyaḥ ||
+    </div>
+    <div class="verse-japanese">
+      ある妻には密かな信頼で、別の妻には公の敬意で、<br>
+      また別の妻には大いなる尊敬で — このように妻たちを喜ばせるべきである。
+    </div>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      4.2.71 udyāna-gamanair bhogair dānais taj-jñāti-pūjanaiḥ |<br>
+      rahasyaiḥ prīti-yogaiś cety ekaikām anurañjayet ||
+    </div>
+    <div class="verse-japanese">
+      庭園への外出、享楽、贈り物、親族の供養、<br>
+      密かな愛の行為によって、一人一人を喜ばせるべきである。
+    </div>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      4.2.72 yuvatiś ca jita-krodhā yathā-śāstra-pravartinī |<br>
+      karoti vaśyaṃ bhartāraṃ sa:patnīś cādhitiṣṭhati ||
+    </div>
+    <div class="verse-japanese">
+      怒りを制し、教典どおりに振る舞う若い妻は、<br>
+      夫を従順にし、共妻たちの上に立つのである。
+    </div>
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>sama（平等）</strong>（4.2.67）：一人の妻だけに偏愛してはならない。容姿（rūpa）に欠ける者をも軽蔑してはならない。過ちを放置すると増長する。</li>
+      <li><strong>vaikṛta（4.2.68）</strong>：身体の秘密の部位に関すること。rati-krīḍā は citra-rata（変わった情事）などを含む。一人の妻の秘密を他に語ると strīṇāṃ vairāgya-hetu（女たちの嫌悪の原因）となる。</li>
+      <li><strong>妻ごとの対応法</strong>（4.2.70）：Yaśodhara は三類を区別する。lajjāvatī（恥じらう妻）には rahasi visrambha（密かな信頼）、sapatnīṣu bhakti-icchā（共妻の中で敬意を求める妻）には pratyakṣa-pūjana（公の供養）、manasvinī（高慢な妻）には bahu-māna（大いなる尊敬）を。</li>
+      <li><strong>4.2.71の具体例</strong>：udyāna-gamana を好む者、paribhoga（享楽）に溺れる者、親族を大切にする者、秘密の愛を好む者 — それぞれの性格に合わせた対応。</li>
+      <li><strong>結語</strong>（4.2.72）：jita-krodhā（怒りを制した）yathā-śāstra-pravartinī（教典に従う者）が最高の妻。adhitiṣṭhati は「上に立つ」で karmasaṃjñā（対格支配）。</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Vātsyāyanīya Kāmasūtra 4.2 — Bilingual Sanskrit (IAST) – Japanese Translation<br>
+  Commentary notes based on Yaśodhara's Jayamaṅgalā (Chaukhamba 1929 ed.)<br>
+  第四篇第二章 完
+</footer>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

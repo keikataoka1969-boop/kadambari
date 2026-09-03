@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 2.6</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+  --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+  --table-header: #e8dfd2; --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+    --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+    --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+    --table-header: #302a22; --table-stripe: #222019;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+  --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+  --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+  --table-header: #302a22; --table-stripe: #222019;
+}
+
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 3rem;
+  line-height: 1.85;
+}
+
+header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--accent); }
+header .book { font-size: 0.85rem; color: var(--text-secondary); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.25rem; }
+header h1 { font-family: 'Noto Serif JP', serif; font-size: 1.7rem; font-weight: 700; color: var(--accent); margin: 0.25rem 0; }
+header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-top: 0.25rem; }
+header .chapter-info { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.75rem; }
+
+.section-title { font-size: 1.15rem; font-weight: 600; color: var(--accent); margin: 2rem 0 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+.sutra-block { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 6px; margin-bottom: 1rem; overflow: hidden; }
+.sutra-num { font-size: 0.75rem; font-weight: 600; color: var(--accent); padding: 0.5rem 0.75rem 0; font-family: 'Noto Serif Devanagari', serif; }
+.sutra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.sutra-grid .sanskrit { padding: 0.4rem 0.75rem 0.6rem; background: var(--sanskrit-bg); font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 0.92rem; line-height: 1.8; border-right: 1px solid var(--border-light); }
+.sutra-grid .japanese { padding: 0.4rem 0.75rem 0.6rem; font-size: 0.92rem; line-height: 1.85; }
+
+.note-box { background: var(--note-bg); border-left: 3px solid var(--accent-light); padding: 0.6rem 0.85rem; margin: 0.75rem 0 1.25rem; border-radius: 0 4px 4px 0; font-size: 0.82rem; line-height: 1.75; color: var(--text-secondary); }
+.note-box strong { color: var(--accent); font-weight: 600; }
+.note-box .note-label { font-weight: 600; color: var(--highlight); margin-right: 0.35em; font-size: 0.78rem; }
+
+.verse-block { background: var(--sanskrit-bg); border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem; margin: 1rem 0; text-align: center; }
+.verse-block .sanskrit-verse { font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 2; color: var(--accent); margin-bottom: 0.5rem; }
+.verse-block .verse-trans { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
+
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+th { background: var(--table-header); color: var(--accent); font-weight: 600; padding: 0.5rem 0.6rem; text-align: left; }
+td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border-light); vertical-align: top; }
+tr:nth-child(even) td { background: var(--table-stripe); }
+.term { font-family: 'Noto Serif Devanagari', serif; color: var(--highlight); font-weight: 500; }
+.colophon { text-align: center; margin-top: 2.5rem; padding-top: 1rem; border-top: 2px solid var(--accent); font-size: 0.8rem; color: var(--text-secondary); }
+
+@media (max-width: 600px) {
+  .sutra-grid { grid-template-columns: 1fr; }
+  .sutra-grid .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+  header h1 { font-size: 1.35rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book">第二篇 sāṃprayogikam — 性愛の実践</div>
+  <h1>第六章　体位と多彩な交合</h1>
+  <div class="subtitle">Saṃveśana-prakārāḥ / Citra-ratāni</div>
+  <div class="chapter-info">adhyāya 2.6｜sūtra 2.6.1–2.6.52｜prakaraṇa 13–14</div>
+</header>
+
+<!-- 第一節：体位 prakaraṇa 13 -->
+<div class="section-title">三種の女性と基本的な横臥 — saṃveśana-prakārāḥ</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.1</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">rāga-kāle viśālayanty eva jaghanaṃ mṛgī saṃviśed uccarate.</div>
+    <div class="japanese">情欲のとき、鹿型の女性（mṛgī）は腰（jaghana）を広げて横たわる。高い交合（ucca-rata＝自分より大きい相手との結合）のとき〔もそうする〕。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.2</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">avahrāsayantīva hastinī nīca-rate.</div>
+    <div class="japanese">象型の女性（hastinī）は、縮めるようにして横たわる。低い交合（nīca-rata＝自分より小さい相手との結合）のとき。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.3</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">nyāyyo yatra yogas tatra samapṛṣṭham.</div>
+    <div class="japanese">自然な結合（nyāyya yoga＝同等の組み合わせ）の場合は、背を平らにして（sama-pṛṣṭha）横たわる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.4</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ābhyāṃ baḍavā vyākhyātā.</div>
+    <div class="japanese">これら二つ（鹿型と象型の規則）によって、牝馬型（baḍavā）も説明される。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  体格の不一致を調整するための横臥法。mṛgī（鹿型＝小さい女性器）は広げて受け入れ、hastinī（象型＝大きい女性器）は縮めて密着させる。baḍavā（牝馬型＝中程度）は、vṛṣa（牡牛型＝中程度の男性）との同等の結合では平らに、aśva（馬型＝大きい男性）との結合では広げ、śaśa（兎型＝小さい男性）との結合では縮める。引用詩句：「太腿を広げて高く、太腿を閉じて低く、太腿をそのままにして平らに——同等の交合に」。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.5</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tatra jaghanena nāyakaṃ pratigṛhṇīyāt.</div>
+    <div class="japanese">その際、腰（jaghana）で男性を受け入れるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.6</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">apadravyāṇi ca sa-viśeṣaṃ nīcarate.</div>
+    <div class="japanese">人工具（apadravya）も、低い交合においてはとりわけ〔用いられる〕。</div>
+  </div>
+</div>
+
+<!-- 鹿型の三種 -->
+<div class="section-title">鹿型の三種の体位（バーブラヴィヤ説）</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.7</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">[1] utphullakaṃ [2] vijṛmbhitakam [3] indrāṇikaṃ ceti tritayaṃ mṛgyāḥ prāyeṇa.</div>
+    <div class="japanese">鹿型の女性のための体位は主に三種。[1] ウトプッラカ（utphullaka＝花開き）、[2] ヴィジュリンビタカ（vijṛmbhitaka＝大あくび）、[3] インドラーニカ（indrāṇika＝インドラーニー）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.8–9</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">śiro vinipātyordhvaṃ jaghanam [1] utphullakam. tatrāpasāraṃ dadyāt.</div>
+    <div class="japanese">[1] <strong>ウトプッラカ</strong>：頭を下げ、腰を上にあげる。その際、（男は）徐々に導き入れるべきである（apasāra）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.10</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">a-nīce sakthinī tiryag avasajya pratīched iti [2] vijṛmbhitakam.</div>
+    <div class="japanese">[2] <strong>ヴィジュリンビタカ</strong>：両太腿を低くせず（a-nīce）、横に広げて（tiryak）受け入れる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.11</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">pārśvayoḥ samam ūrū vinyasya pārśvayor jānunī nidadhyād ity abhyāsa-yogād [3] indrāṇī.</div>
+    <div class="japanese">[3] <strong>インドラーニー</strong>：両太腿を（身体の）両側に沿って上げ、両膝を脇に置く。これは練習（abhyāsa）によって可能となる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.12</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tayoccatara-ratasyāpi parigrahaḥ.</div>
+    <div class="japanese">インドラーニーによって、（鹿型の女性は）さらに高い交合（uccatara-rata＝馬型の男性との結合）をも受け入れることができる。</div>
+  </div>
+</div>
+
+<!-- 象型の四種 -->
+<div class="section-title">象型の四種の体位（バーブラヴィヤ説）</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.13–14</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">saṃpuṭena pratigraho nīca-rate. etena nīca-tara-rate 'pi hastinyāḥ.</div>
+    <div class="japanese">低い交合（nīca-rata）では合わせ（saṃpuṭa）によって受け入れる。これにより、さらに低い交合（nīcatara-rata）での象型の女性の体位も説明される。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.15–16</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">[1] saṃpuṭakaṃ [2] pīḍitakaṃ [3] veṣṭitakaṃ [4] bāḍavakam iti. ṛju-prasāritāv ubhāv apy ubhayoḥ caraṇāv iti [1] saṃpuṭaḥ.</div>
+    <div class="japanese">[1] <strong>サンプタカ</strong>（saṃpuṭaka＝合わせ）：男女双方の両足をまっすぐ伸ばす。[2] ピーディタカ（pīḍitaka＝圧迫）、[3] ヴェーシュティタカ（veṣṭitaka＝巻きつけ）、[4] バーダヴァカ（bāḍavaka＝牝馬の技）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.17–18</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sa dvi-vidhaḥ — pārśva-saṃpuṭa uttāna-saṃpuṭāś ca. tathā karma-yogāt. pārśveṇa tu śayāno dakṣiṇena nārīm adhiśayīteti sārvatrikam etat.</div>
+    <div class="japanese">サンプタカには二種がある——横向きの合わせ（pārśva-saṃpuṭa）と仰向けの合わせ（uttāna-saṃpuṭa）。横向きに臥すとき、男は右側を上にして女の上に横たわる。これはすべてに共通の規則である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.19</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">saṃpuṭaka-prayukta-yantreṇaiva dṛḍham ūrū pīḍayed iti [2] pīḍitakam.</div>
+    <div class="japanese">[2] <strong>ピーディタカ</strong>：サンプタカの姿勢のまま、両太腿を強く圧迫する。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.20</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ūrū vyatyasyed iti [3] veṣṭitakam.</div>
+    <div class="japanese">[3] <strong>ヴェーシュティタカ</strong>：両太腿を交差させる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.21</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">baḍaveva niṣṭhuram avagṛhṇīyād iti [4] bāḍavakam ābhyāsikam.</div>
+    <div class="japanese">[4] <strong>バーダヴァカ</strong>（牝馬の技）：牝馬のように強固に（niṣṭhura）締めつける。これは練習（abhyāsa）を要する。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.22</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tad āndhrīṣu prāyeṇa. iti saṃveśana-prakārā bābhravīyāḥ.</div>
+    <div class="japanese">それ（バーダヴァカ）は主としてアーンドラの女性に見られる。以上がバーブラヴィヤ（Bābhravya）による体位の分類である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  バーブラヴィヤによる体位は計7種。鹿型向け3種（utphullaka, vijṛmbhitaka, indrāṇī）と象型向け4種（saṃpuṭaka, pīḍitaka, veṣṭitaka, bāḍavaka）。bāḍavaka は saṃbādha-oṣṭha-puṭa（密着した女性器の唇）で道具を締めつける技で、練習なしには不可能。アーンドラの女性に多いのは、彼女たちが努力を惜しまない（yatna-para）ため。
+</div>
+
+<!-- バーブラヴィヤ説一覧 -->
+<table>
+  <tr><th>名称</th><th>サンスクリット</th><th>適用</th><th>特徴</th></tr>
+  <tr><td>花開き</td><td class="term">utphullaka</td><td>鹿型</td><td>頭を下げ腰を上げる</td></tr>
+  <tr><td>大あくび</td><td class="term">vijṛmbhitaka</td><td>鹿型</td><td>太腿を横に広げる</td></tr>
+  <tr><td>インドラーニー</td><td class="term">indrāṇī</td><td>鹿型</td><td>膝を脇に置く（要練習）</td></tr>
+  <tr><td>合わせ</td><td class="term">saṃpuṭaka</td><td>象型</td><td>両足をまっすぐ伸ばす</td></tr>
+  <tr><td>圧迫</td><td class="term">pīḍitaka</td><td>象型</td><td>太腿を強く押しつける</td></tr>
+  <tr><td>巻きつけ</td><td class="term">veṣṭitaka</td><td>象型</td><td>太腿を交差させる</td></tr>
+  <tr><td>牝馬の技</td><td class="term">bāḍavaka</td><td>象型</td><td>強固に締めつける（要練習）</td></tr>
+</table>
+
+<!-- スヴァルナナーバ説 -->
+<div class="section-title">スヴァルナナーバによる追加体位</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.23–24</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sauvarṇanābhās tu. ubhāv apy ūrū ūrdhvāv iti tad bhugnakam.</div>
+    <div class="japanese">スヴァルナナーバ（Suvarṇanābha）の説では——両太腿をともに上にあげる。これが<strong>ブグナカ</strong>（bhugnaka＝曲がった体位）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.25</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">caraṇāv ūrdhvaṃ nāyako 'syā dhārayed iti jṛmbhitakam.</div>
+    <div class="japanese"><strong>ジュリンビタカ</strong>（jṛmbhitaka＝あくび）：男が女の両足を上に持ち上げて支える。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.26</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tat-kuñcitāv utpīḍitakam.</div>
+    <div class="japanese"><strong>ウトピーディタカ</strong>（utpīḍitaka＝押し上げ）：（足を）曲げた状態で〔上に持ち上げる〕。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.27</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tad ekasmin prasārite 'rdha-pīḍitakam.</div>
+    <div class="japanese"><strong>アルダ・ピーディタカ</strong>（ardha-pīḍitaka＝半押し上げ）：一方の足を伸ばし、もう一方を曲げる。交互に行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.28</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">nāyakasyāṃsa eko dvitīyakaḥ prasārita iti punaḥ punar vyatyāsena veṇu-dāritakam.</div>
+    <div class="japanese"><strong>ヴェーヌ・ダーリタカ</strong>（veṇu-dāritaka＝竹割り）：一方の足を男の肩に載せ、もう一方を伸ばす。交互に入れ替える。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.29</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ekaḥ śirasa upari gacched dvitīyaḥ prasārita iti śūlacitakam ābhyāsikam.</div>
+    <div class="japanese"><strong>シューラチタカ</strong>（śūlacitaka＝串刺し）：一方の足が頭の上にゆき、もう一方を伸ばす。練習（abhyāsa）を要する。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.30</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">saṃkucitau svasti-deśe nidadhyād iti kārkaṭakam.</div>
+    <div class="japanese"><strong>カールカタカ</strong>（kārkaṭaka＝蟹）：両足を曲げて臍の辺り（svasti-deśa）に置く。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.31</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ūrdhvāv ūrū vyatyasyed iti pīḍitakam.</div>
+    <div class="japanese"><strong>ピーディタカ</strong>（pīḍitaka＝圧迫）：両太腿を上げて交差させる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.32</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">jaṅghā-vyatyāsena padmāsanavat.</div>
+    <div class="japanese"><strong>パドマーサナヴァット</strong>：脛を交差させて蓮華座（padmāsana）のようにする。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.33</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">pṛṣṭhaṃ pariṣvajamānāyāḥ parāṅmukheṇa parāvṛttakam ābhyāsikam.</div>
+    <div class="japanese"><strong>パラーヴリッタカ</strong>（parāvṛttaka＝背向き）：（女が男の）背を抱く形で、背を向けて交合する。練習を要する。</div>
+  </div>
+</div>
+
+<!-- スヴァルナナーバ説一覧 -->
+<table>
+  <tr><th>名称</th><th>サンスクリット</th><th>特徴</th></tr>
+  <tr><td>曲がり</td><td class="term">bhugnaka</td><td>両太腿を上に</td></tr>
+  <tr><td>あくび</td><td class="term">jṛmbhitaka</td><td>男が女の両足を支える</td></tr>
+  <tr><td>押し上げ</td><td class="term">utpīḍitaka</td><td>足を曲げて上に</td></tr>
+  <tr><td>半押し上げ</td><td class="term">ardha-pīḍitaka</td><td>一方だけ曲げる</td></tr>
+  <tr><td>竹割り</td><td class="term">veṇu-dāritaka</td><td>肩に載せ交互に入替え</td></tr>
+  <tr><td>串刺し</td><td class="term">śūlacitaka</td><td>足を頭の上に（要練習）</td></tr>
+  <tr><td>蟹</td><td class="term">kārkaṭaka</td><td>足を曲げ臍に置く</td></tr>
+  <tr><td>圧迫</td><td class="term">pīḍitaka</td><td>太腿を上げ交差</td></tr>
+  <tr><td>蓮華座</td><td class="term">padmāsanavat</td><td>脛を交差し蓮華座状</td></tr>
+  <tr><td>背向き</td><td class="term">parāvṛttaka</td><td>背を向けて（要練習）</td></tr>
+</table>
+
+<!-- 水中について -->
+<div class="sutra-block">
+  <div class="sutra-num">2.6.34</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">jale ca saṃviṣṭopaviṣṭa-sthitātmakāṃś citrān yogān upalakṣayet. tathā su-karatvād iti suvarṇanābhaḥ.</div>
+    <div class="japanese">水中（jala）でも、臥位・坐位・立位の多彩な結合を試みるべきである。水中ではそれが容易であるから、とスヴァルナナーバは言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.35</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">vārtaṃ tu tat. śiṣṭair apasmṛtatvād iti vātsyāyanaḥ.</div>
+    <div class="japanese">しかしそれは空論（vārta）である。賢者たち（śiṣṭa）の法典（smṛti）に禁じられているから、とヴァーツヤーヤナは言う。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  ヤショーダラはガウタマの法典「水中の交合は地獄に堕ちる」とブリグの規定「水中に精を出した者は月齢苦行（cāndrāyaṇa）を行うべし」を引用し、ヴァーツヤーヤナの禁止を支持する。陸上で行うべし。
+</div>
+
+<!-- 第二節：多彩な交合 prakaraṇa 14 -->
+<div class="section-title">多彩な交合 — citra-ratāni（prakaraṇa 14）</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.36–37</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">atha citra-ratāni. ūrdhva-sthitayor yūnoḥ parasparāpāśrayayoḥ kuḍya-stambhāpāśritayor vā sthita-ratam.</div>
+    <div class="japanese">さて、多彩な交合（citra-rata）について。二人が立って互いにもたれかかるか、壁（kuḍya）や柱（stambha）にもたれかかって行う<strong>立位</strong>（sthita-rata）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.38</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">kuḍyāpāśritasya kaṇṭhāvasakta-bāhu-pāśāyās tad-dhasta-pañjaropaviṣṭāyā ūru-pāśena jaghanam abhiveṣṭayantyā kuḍye caraṇa-krameṇa valantyā avalambitakaṃ ratam.</div>
+    <div class="japanese"><strong>アヴァランビタカ</strong>（avalambitaka＝吊り下がり）：壁にもたれた男の首に腕を巻きつけ、男の手の籠に坐り、太腿で腰を巻きつけ、壁に足を踏みかえながら揺れる交合。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.39–40</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">bhūmau vā catuṣpadavad āsthitāyā vṛṣalīlayāvaskandanaṃ dhenukam. tatra pṛṣṭham uraḥ-karmāṇi labhate.</div>
+    <div class="japanese"><strong>ダイヌカ</strong>（dhenuka＝牝牛）：女が地面に四つ這いになり、男が牡牛のように後ろからのる。この場合、背中に対して胸への行為（接吻・爪痕・噛み痕等）を行う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.41</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">etenaiva yogena śaunam aiṇeyaṃ chāgalaṃ gardabhākrāntaṃ mārjāra-lalitakaṃ vyāghrāvaskandanaṃ gajopamarditaṃ varāha-ghṛṣṭakaṃ turagādhirūḍhakam iti yatra yatra viśeṣo yogo 'pūrvas tat tad upalakṣayet.</div>
+    <div class="japanese">同じ方法で、犬の（śauna）、鹿の（aiṇeya）、山羊の（chāgala）、驢馬の乗りかかり（gardabhākrānta）、猫の戯れ（mārjāra-lalitaka）、虎の跳びかかり（vyāghrāvaskandana）、象の押しつぶし（gajopamarditam）、猪の擦りつけ（varāha-ghṛṣṭaka）、馬の騎乗（turagādhirūḍhaka）——それぞれ特有の動きを観察して取り入れる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  これらの動物の名を冠する体位は、四足獣の声と身体の動き（svara-gata / kāya-gata ceṣṭita）を模倣する。直接観察して（pratyakṣataḥ）学ぶべきであり、観察していないものは実践できない。
+</div>
+
+<!-- 集団の交合 -->
+<div class="sutra-block">
+  <div class="sutra-num">2.6.42</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">miśrī-kṛta-sadbhāvābhyāṃ dvābhyāṃ saha saṃghāṭakaṃ ratam.</div>
+    <div class="japanese"><strong>サンガータカ</strong>（saṃghāṭaka＝合体）：互いに信頼を固めた（miśrī-kṛta-sadbhāva）二人の女性と一人の男性の交合。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.43</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">bahvībhiś ca saha go-yūthikam.</div>
+    <div class="japanese"><strong>ゴーユーティカ</strong>（go-yūthika＝牛の群れ）：多くの女性と一人の男性の交合。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.44</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">vāri-krīḍitakaṃ chāgalam aiṇeyam iti tat-karmānukṛti-yogāt.</div>
+    <div class="japanese">水遊び（vāri-krīḍitaka）、山羊の（chāgala）、鹿の（aiṇeya）——それぞれの行為の模倣による。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.45–48</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">grāmanārī-viṣaye strīrājye ca bāhlīke bahavo yuvāno 'ntaḥpura-sa-dharmāṇa ekaikasyāḥ parigraha-bhūtāḥ. teṣām ekaikaśo yugapac ca yathā-sātmyaṃ yathā-yogaṃ ca rañjayeyuḥ ... etayā goṣṭhī-parigrahā veśyā rāja-yoṣā-parigrāhaś ca vyākhyātaḥ.</div>
+    <div class="japanese">村の女性の風習、女人国（strīrājya）、バーフリーカ地方では、多くの若者が後宮の法に従い一人の女性に属する。彼らは一人ずつ、あるいは同時に、体質と方法に応じて楽しませる。……これにより、集会の接待者（goṣṭhī-parigraha）、遊女、王妃の接待の方法も説明される。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.49</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">adhorataṃ pāyāv api dākṣiṇatyānām. iti citra-ratāni.</div>
+    <div class="japanese">南方の人々（dākṣiṇātya）には、下方の交合、すなわち肛門における交合もある。以上が多彩な交合（citra-ratāni）である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.6.50</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">puruṣopasṛptakāni puruṣāyite vakṣyāmaḥ.</div>
+    <div class="japanese">男性の挿入法（puruṣopasṛptaka）については、女性上位（puruṣāyita）の章で述べる。</div>
+  </div>
+</div>
+
+<!-- 結頌 -->
+<div class="section-title">結頌 — saṃhāra-ślokau</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    paśūnāṃ mṛga-jātīnāṃ pataṅgānāṃ ca vibhramaiḥ /<br>
+    tais tair upāyaiś cittajño rati-yogān vivardhayet // 2.6.51
+  </div>
+  <div class="verse-trans">
+    家畜、鹿の類、鳥たちの戯れを観察し、<br>
+    それぞれの工夫によって、心を知る者は交合の技を増やすべきである。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    tat-sātmyād deśa-sātmyāc ca tais tair bhāvaiḥ prayojitaiḥ /<br>
+    strīṇāṃ snehaś ca rāgaś ca bahumānaś ca jāyate // 2.6.52
+  </div>
+  <div class="verse-trans">
+    個人の体質（tat-sātmya）と地方の慣習（deśa-sātmya）に応じて、<br>
+    さまざまな心情（bhāva）をもって接すれば、女性の愛情・情欲・敬意が生じる。
+  </div>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  saṃveśana-prakārāś citra-ratāni ca ṣaṣṭho 'dhyāyaḥ.<br><br>
+  ヴァーツヤーヤナのカーマスートラ　第二篇「性愛の実践」<br>
+  第六章「体位と多彩な交合」終わり
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

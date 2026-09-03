@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 対訳</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+    --table-header: #e8dfd2;
+    --table-stripe: #faf7f1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612;
+      --bg-card: #242018;
+      --text: #e0d8cc;
+      --text-secondary: #a69880;
+      --accent: #d4845c;
+      --accent-light: #b0764e;
+      --border: #3d362c;
+      --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15;
+      --note-bg: #2a2419;
+      --highlight: #e09050;
+      --table-header: #2e2820;
+      --table-stripe: #221e16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612;
+    --bg-card: #242018;
+    --text: #e0d8cc;
+    --text-secondary: #a69880;
+    --accent: #d4845c;
+    --accent-light: #b0764e;
+    --border: #3d362c;
+    --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15;
+    --note-bg: #2a2419;
+    --highlight: #e09050;
+    --table-header: #2e2820;
+    --table-stripe: #221e16;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+    line-height: 1.85;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  .header {
+    text-align: center;
+    padding: 2.5rem 0 2rem;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  .header h1 {
+    font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.04em;
+    text-wrap: balance;
+  }
+
+  .header .subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin: 0.2rem 0;
+  }
+
+  .header .meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .chapter-title {
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .chapter-title h2 {
+    font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 0.2rem;
+  }
+
+  .chapter-title .ch-sub {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .sutra-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 1rem 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg-card);
+  }
+
+  .sutra-num {
+    grid-column: 1 / -1;
+    background: var(--note-bg);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border-light);
+    letter-spacing: 0.06em;
+  }
+
+  .sanskrit {
+    padding: 0.6rem 0.9rem;
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    background: var(--sanskrit-bg);
+    border-right: 1px solid var(--border-light);
+    color: var(--text);
+  }
+
+  .japanese {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.92rem;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  .note-section {
+    background: var(--note-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .note-section .note-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  .note-section p, .note-section ul {
+    font-size: 0.85rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin: 0.3rem 0;
+  }
+
+  .note-section ul {
+    padding-left: 1.2em;
+  }
+
+  .note-section li {
+    margin: 0.2rem 0;
+  }
+
+  .iast {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-style: italic;
+    color: var(--highlight);
+  }
+
+  /* Structure table */
+  .structure-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0;
+    font-size: 0.82rem;
+  }
+
+  .structure-table th {
+    background: var(--table-header);
+    text-align: left;
+    padding: 0.4rem 0.6rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+  }
+
+  .structure-table td {
+    padding: 0.35rem 0.6rem;
+    border-bottom: 1px solid var(--border-light);
+    color: var(--text);
+  }
+
+  .structure-table tr:nth-child(even) td {
+    background: var(--table-stripe);
+  }
+
+  .structure-table .num {
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    width: 2.5rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .section-break {
+    text-align: center;
+    padding: 0.8rem 0;
+    color: var(--accent-light);
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+  }
+
+  .colophon {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-style: italic;
+  }
+
+  /* Diagram: transmission lineage */
+  .lineage-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 1rem 0;
+    font-size: 0.82rem;
+  }
+
+  .lineage-node {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.25rem 0.8rem;
+    text-align: center;
+    color: var(--text);
+    min-width: 180px;
+  }
+
+  .lineage-node .name {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  .lineage-node .detail {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .lineage-arrow {
+    color: var(--accent-light);
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .lineage-branches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.2rem;
+  }
+
+  .lineage-branches .lineage-node {
+    min-width: 120px;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .sutra-block {
+      grid-template-columns: 1fr;
+    }
+    .sanskrit {
+      border-right: none;
+      border-bottom: 1px solid var(--border-light);
+    }
+    body { padding: 1rem 1rem 3rem; }
+    .header h1 { font-size: 1.4rem; }
+    .lineage-branches { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>कामसूत्रम् — カーマスートラ 対訳</h1>
+  <p class="subtitle">Vātsyāyanakāmasūtra</p>
+  <p class="meta">
+    ヴァーツヤーヤナ著 ・ ジャヤマンガラー注釈（ヤショーダラ著）参照<br>
+    第1篇 総論（<span class="iast">Sādhāraṇa</span>）
+  </p>
+</div>
+
+<!-- ═══════ 第1章 ═══════ -->
+
+<div class="chapter-title">
+  <h2>प्रथमोऽध्यायः — 第1章</h2>
+  <p class="ch-sub">शास्त्रसंग्रहः ― 学問の概要（<span class="iast">Śāstrasaṃgrahaḥ</span>）</p>
+</div>
+
+<!-- 1.1.1 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.1</div>
+  <div class="sanskrit">dharmārthakāmebhyo namaḥ</div>
+  <div class="japanese">法（ダルマ）・財（アルタ）・愛欲（カーマ）に敬礼する。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>冒頭の帰敬偈。<span class="iast">dharma</span>（法・道徳）、<span class="iast">artha</span>（実利・財）、<span class="iast">kāma</span>（愛欲・快楽）の三目的（<span class="iast">trivarga</span>）に対する礼拝。ジャヤマンガラーによれば、<span class="iast">artha</span>が語形上先に来るべきところ（<span class="iast">ajādyantam</span>の規則）、<span class="iast">dharma</span>が最も尊いため先頭に置かれている。</p>
+</div>
+
+<!-- 1.1.2-4 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.2–4</div>
+  <div class="sanskrit">śāstre prakṛtatvāt | tatsamayāvabodhakebhyaś cācāryebhyaḥ | tatsaṃbandhāt |</div>
+  <div class="japanese">〔法・財・愛欲に帰敬するのは〕この学問において、それらが主題であるからである。また、それら〔三目的〕の真理を教示する諸師にも〔帰敬する〕。〔諸師に帰敬するのは〕この学問と関係があるからである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">prakṛtatvāt</span>（主題であるから）：法・財・愛欲は本書の主題（<span class="iast">adhikṛta</span>）。注釈は「主題とされたものとされないものとでは、主題とされたものの了解がより有力である」（<span class="iast">adhikṛtānādhikṛtayor adhikṛte pratipattir balīyasī</span>）という原則を引く。<span class="iast">ācārya</span>（師）とは、以下に述べられるプラジャーパティ以下の教伝の系譜を指す。</p>
+</div>
+
+<!-- 1.1.5 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.5</div>
+  <div class="sanskrit">prajāpatir hi prajāḥ sṛṣṭvā tāsāṃ sthitinibandhanaṃ trivargasya sādhanamadhyāyānāṃ śatasahasreṇāgre provāca</div>
+  <div class="japanese">プラジャーパティ（造物主）は、生き物たちを創造した後、それらの存続の基盤である三目的の達成手段を、十万章をもって最初に説いた。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">sthitinibandhana</span>（存続の基盤）：注釈は、生き物には創造（<span class="iast">sarga</span>）・存続（<span class="iast">sthiti</span>）・消滅（<span class="iast">pralaya</span>）の三つの状態があると説明。存続には善い存続と悪い存続があり、三目的にも取るべきもの（<span class="iast">upādeya</span>）と取るべきでないもの（<span class="iast">anupādeya</span>）がある。<br>
+  取るべき三目的：<span class="iast">dharma</span>（法）、<span class="iast">artha</span>（実利）、<span class="iast">kāma</span>（愛欲）<br>
+  取るべきでない三目的：<span class="iast">adharma</span>（不法）、<span class="iast">anartha</span>（損害）、<span class="iast">dveṣa</span>（憎悪）</p>
+</div>
+
+<!-- 1.1.6-8 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.6–8</div>
+  <div class="sanskrit">tasyaikadeśikaṃ manuḥ svāyaṃbhuvo dharmādhikārikaṃ pṛthak cakāra | bṛhaspatir arthādhikārikam | mahādevānucaraś ca nandī sahasreṇādhyāyānāṃ pṛthak kāmasūtraṃ provāca |</div>
+  <div class="japanese">その〔十万章の〕一部を、スヴァーヤンブヴァ・マヌは法に関する部分として別に著した。ブリハスパティは実利に関する部分を〔別に著した〕。そしてマハーデーヴァ（シヴァ）の侍者ナンディンは、千章をもって別にカーマスートラを説いた。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>学問の三分化：プラジャーパティの原典から、三つの領域がそれぞれ独立。注釈はナンディンについて「マハーデーヴァがウマーと共に千年の間、性愛の快楽を味わっている間、居室の門に立つナンディンがカーマスートラを説いた」という古伝を引用する。<span class="iast">svāyaṃbhuva</span>（スヴァーヤンブヴァ）は、現行のヴァイヴァスヴァタ・マヌではなく、それ以前のマンヴァンタラのマヌを指すとされる。</p>
+</div>
+
+<!-- 1.1.9-10 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.9–10</div>
+  <div class="sanskrit">tad eva tu pañcabhir adhyāyaśatair auddālakiḥ śvetaketuḥ saṃcikṣepa | tad eva tu punar adhyarthenādhyāyaśatena sādhāraṇa-sāṃprayogika-kanyāsaṃprayuktaka-bhāryādhikārika-pāradārika-vaiśika-aupaniṣadikaiḥ saptabhir adhikaraṇair bābhravyaḥ pāñcālaḥ saṃcikṣepa |</div>
+  <div class="japanese">まさにそれ〔ナンディンの千章〕を、ウッダーラカの子シュヴェータケートゥが五百章に要約した。さらにまさにそれを、バーブラヴィヤ・パーンチャーラが百五十章に、「総論」「性交論」「処女論」「妻論」「他人の妻論」「遊女論」「秘法論」の七篇をもって要約した。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>シュヴェータケートゥについて注釈は重要な伝承を伝える。かつて世界では他人の妻との交わり（<span class="iast">paradārābhigamana</span>）が自由に行われていたが、ウッダーラカの子（<span class="iast">auddālaki</span>）がこの慣行を廃止し、男女の交わりに関する規範（<span class="iast">gamyāgamyavyavasthā</span>）を定めた。七篇の名称は以下のとおり：</p>
+  <table class="structure-table">
+    <tr><th class="num">篇</th><th>サンスクリット名</th><th>日本語</th></tr>
+    <tr><td class="num">1</td><td><span class="iast">Sādhāraṇa</span></td><td>総論</td></tr>
+    <tr><td class="num">2</td><td><span class="iast">Sāṃprayogika</span></td><td>性交論</td></tr>
+    <tr><td class="num">3</td><td><span class="iast">Kanyāsaṃprayuktaka</span></td><td>処女論</td></tr>
+    <tr><td class="num">4</td><td><span class="iast">Bhāryādhikārika</span></td><td>妻論</td></tr>
+    <tr><td class="num">5</td><td><span class="iast">Pāradārika</span></td><td>他人の妻論</td></tr>
+    <tr><td class="num">6</td><td><span class="iast">Vaiśika</span></td><td>遊女論</td></tr>
+    <tr><td class="num">7</td><td><span class="iast">Aupaniṣadika</span></td><td>秘法論</td></tr>
+  </table>
+</div>
+
+<!-- 1.1.11-12 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.11–12</div>
+  <div class="sanskrit">tasya ṣaṣṭhaṃ vaiśikam adhikaraṇaṃ pāṭaliputrakāṇāṃ gaṇikānāṃ niyogād dattakaḥ pṛthak cakāra | tatprasaṅgāc cārāyaṇaḥ sādhāraṇam adhikaraṇaṃ provāca | suvarṇanābhaḥ sāṃprayogikam | ghoṭakamukhaḥ kanyāsaṃprayuktakam | gonardīyo bhāryādhikārikam | goṇikāputraḥ pāradārikam | kucumāra aupaniṣadikam iti |</div>
+  <div class="japanese">その〔バーブラヴィヤの著作の〕第六篇「遊女論」を、パータリプトラの遊女たちの要請により、ダッタカが別に著した。それに触発されて、チャーラーヤナが「総論」を説き、スヴァルナナーバが「性交論」を、ゴータカムカが「処女論」を、ゴナルディーヤが「妻論」を、ゴニカープトラが「他人の妻論」を、クチュマーラが「秘法論」を〔それぞれ別に著した〕。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>ダッタカ（<span class="iast">Dattaka</span>）の由来について注釈は二説を伝える。第一説：マトゥラー出身の婆羅門がパータリプトラに住み、その息子が養子（<span class="iast">dattaka</span>）として育てられ、遊女たちと交わる中で彼女たちの技術を学んだ。遊女ヴィーラセーナーらの依頼で遊女論を著した。第二説：ダッタカは呪いで一度女性になり、後に男性に戻ったため、男女両方の快楽（<span class="iast">ubhayarasa</span>）を知っていたとされる。</p>
+</div>
+
+<!-- Lineage diagram -->
+<div class="note-section">
+  <div class="note-title">教伝の系譜（図）</div>
+  <div class="lineage-diagram">
+    <div class="lineage-node"><span class="name">Prajāpati</span><br><span class="detail">プラジャーパティ — 十万章</span></div>
+    <div class="lineage-arrow">↓</div>
+    <div style="display:flex; gap:1.5rem; flex-wrap:wrap; justify-content:center;">
+      <div class="lineage-node"><span class="name">Manu</span><br><span class="detail">マヌ — 法</span></div>
+      <div class="lineage-node"><span class="name">Bṛhaspati</span><br><span class="detail">ブリハスパティ — 実利</span></div>
+      <div class="lineage-node"><span class="name">Nandin</span><br><span class="detail">ナンディン — 愛欲（千章）</span></div>
+    </div>
+    <div class="lineage-arrow">↓</div>
+    <div class="lineage-node"><span class="name">Śvetaketu Auddālaki</span><br><span class="detail">シュヴェータケートゥ — 五百章に要約</span></div>
+    <div class="lineage-arrow">↓</div>
+    <div class="lineage-node"><span class="name">Bābhravya Pāñcāla</span><br><span class="detail">バーブラヴィヤ — 百五十章・七篇に要約</span></div>
+    <div class="lineage-arrow">↓</div>
+    <div class="lineage-branches">
+      <div class="lineage-node"><span class="name">Dattaka</span><br><span class="detail">遊女論</span></div>
+      <div class="lineage-node"><span class="name">Cārāyaṇa</span><br><span class="detail">総論</span></div>
+      <div class="lineage-node"><span class="name">Suvarṇanābha</span><br><span class="detail">性交論</span></div>
+      <div class="lineage-node"><span class="name">Ghoṭakamukha</span><br><span class="detail">処女論</span></div>
+      <div class="lineage-node"><span class="name">Gonardīya</span><br><span class="detail">妻論</span></div>
+      <div class="lineage-node"><span class="name">Goṇikāputra</span><br><span class="detail">他人の妻論</span></div>
+      <div class="lineage-node"><span class="name">Kucumāra</span><br><span class="detail">秘法論</span></div>
+    </div>
+    <div class="lineage-arrow">↓</div>
+    <div class="lineage-node" style="border-color:var(--accent);"><span class="name">Vātsyāyana</span><br><span class="detail">ヴァーツヤーヤナ — 三十六章・六十四節・七篇に統合</span></div>
+  </div>
+</div>
+
+<!-- 1.1.13-14 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.13–14</div>
+  <div class="sanskrit">evaṃ bahubhir ācāryais tac chāstraṃ khaṇḍaśaḥ praṇītam utsannakalpam abhūt | tatra dattakādibhiḥ praṇītānāṃ śāstrāvayavānām ekadeśatvāt mahad iti ca bābhravīyasya duradhyeyatvāt saṃkṣipya sarvam artham alpena granthena kāmasūtram idaṃ praṇītam |</div>
+  <div class="japanese">このように多くの師によって、その学問が断片的に著されたため、ほとんど失われたも同然となった。そこで、ダッタカらが著した部分的な著作は全体の一部にすぎないこと、また、バーブラヴィヤの著作は大部であるため学びにくいことから、全ての内容を要約して、簡潔な書としてこのカーマスートラを著した。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">utsannakalpam</span>（ほとんど失われた）：注釈は「<span class="iast">īṣadutsannam iva</span>（ほぼ失われたかのように）」と説明。ナンディン以下の原著は完全に失われ、バーブラヴィヤの著作の断片がわずかに残っていた状態。ヴァーツヤーヤナが七篇三十六章に統合・再編した。</p>
+</div>
+
+<!-- 1.1.15-23: 目次部分 → 表で表示 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.15–23</div>
+  <div class="sanskrit">tasyāyaṃ prakaraṇādhikaraṇasamuddeśaḥ —</div>
+  <div class="japanese">以下は、この〔カーマスートラの〕節と篇の目次である——</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">カーマスートラ全体の構成</div>
+  <table class="structure-table">
+    <tr><th class="num">篇</th><th>名称</th><th>章数</th><th>節数</th></tr>
+    <tr><td class="num">1</td><td><span class="iast">Sādhāraṇa</span>（総論）</td><td>5</td><td>5</td></tr>
+    <tr><td class="num">2</td><td><span class="iast">Sāṃprayogika</span>（性交論）</td><td>10</td><td>17</td></tr>
+    <tr><td class="num">3</td><td><span class="iast">Kanyāsaṃprayuktaka</span>（処女論）</td><td>5</td><td>9</td></tr>
+    <tr><td class="num">4</td><td><span class="iast">Bhāryādhikārika</span>（妻論）</td><td>2</td><td>8</td></tr>
+    <tr><td class="num">5</td><td><span class="iast">Pāradārika</span>（他人の妻論）</td><td>6</td><td>10</td></tr>
+    <tr><td class="num">6</td><td><span class="iast">Vaiśika</span>（遊女論）</td><td>6</td><td>12</td></tr>
+    <tr><td class="num">7</td><td><span class="iast">Aupaniṣadika</span>（秘法論）</td><td>2</td><td>6</td></tr>
+    <tr style="font-weight:600"><td class="num"></td><td>合計</td><td>36章</td><td>64節・約1250偈</td></tr>
+  </table>
+  <p>注釈は <span class="iast">tantra</span>（技法 = 第2篇）と <span class="iast">āvāpa</span>（手段 = 第3〜6篇）の二大区分を示す。第1篇はその基礎として先行し、第7篇は両者で得られない場合の補助手段。</p>
+</div>
+
+<!-- 1.1.24 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.1.24</div>
+  <div class="sanskrit">saṃkṣepam imam uktvāsya vistāro 'taḥ pravakṣyate |<br>iṣṭaṃ hi viduṣāṃ loke samāsavyāsabhāṣaṇam ||</div>
+  <div class="japanese">この要約を述べた後、これ以降、その詳細を説く。<br>世において学者たちは、要約と詳述の両方を語ることを好むからである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>結びの偈（<span class="iast">śloka</span>）。<span class="iast">samāsavyāsabhāṣaṇa</span>（要約と詳述）という方法は、インドの学問伝統における標準的な叙述法。先に全体の目次（<span class="iast">uddeśa</span>）を示し、次いで個別の定義（<span class="iast">lakṣaṇa</span>）と考察（<span class="iast">parīkṣā</span>）を行うという三段階の学問構造に基づく。</p>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sādhāraṇe prathame 'dhikaraṇe<br>
+  śāstrasaṃgrahaḥ prathamo 'dhyāyaḥ<br><br>
+  ヴァーツヤーヤナのカーマスートラ・総論・第1篇において<br>
+  学問の概要・第1章〔終わり〕
+</div>
+
+<div class="section-break">— ❖ —</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

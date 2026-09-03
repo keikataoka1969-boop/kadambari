@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 1.4 都会人の生活</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+    --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+    --table-header: #e8dfd2; --table-stripe: #faf7f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+      --table-header: #2e2820; --table-stripe: #221e16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    --table-header: #2e2820; --table-stripe: #221e16;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 700; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.04em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .section-label { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin: 1.5rem 0 0.5rem; padding-left: 0.3rem; letter-spacing: 0.05em; }
+  .sutra-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--bg-card); }
+  .sutra-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; }
+  .sanskrit { padding: 0.6rem 0.9rem; font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .japanese { padding: 0.6rem 0.9rem; font-size: 0.92rem; line-height: 1.9; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0 1.5rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.85rem; line-height: 1.75; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.2rem 0; }
+  .iast { font-family: 'Noto Serif Devanagari', serif; font-style: italic; color: var(--highlight); }
+  .verse { font-style: italic; margin: 0.3rem 0; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-style: italic; }
+  .section-break { text-align: center; padding: 0.8rem 0; color: var(--accent-light); font-size: 0.9rem; letter-spacing: 0.3em; }
+  .schedule-table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.83rem; }
+  .schedule-table th { background: var(--table-header); color: var(--accent); font-weight: 600; padding: 0.4rem 0.6rem; text-align: left; border: 1px solid var(--border); font-size: 0.78rem; }
+  .schedule-table td { padding: 0.35rem 0.6rem; border: 1px solid var(--border-light); vertical-align: top; }
+  .schedule-table tr:nth-child(even) td { background: var(--table-stripe); }
+  @media (max-width: 640px) { .sutra-block { grid-template-columns: 1fr; } .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); } body { padding: 1rem 1rem 3rem; } .header h1 { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>कामसूत्रम् — カーマスートラ 対訳</h1>
+  <p class="subtitle">第1篇 総論（<span class="iast">Sādhāraṇa</span>）</p>
+  <p class="meta">ヴァーツヤーヤナ著 ・ ジャヤマンガラー注釈参照</p>
+</div>
+
+<div class="chapter-title">
+  <h2>चतुर्थोऽध्यायः — 第4章</h2>
+  <p class="ch-sub">नागरकवृत्तम् ― 都会人の生活（<span class="iast">Nāgarakavṛttam</span>）</p>
+</div>
+
+<p class="section-label">住居と設備</p>
+
+<!-- 1.4.1 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.1</div>
+  <div class="sanskrit">gṛhītavidyaḥ pratigrahajayakrayānirveśādhigatair arthair anvayāgatair ubhayair vā gārhasthyam adhigamya nāgarakavṛttaṃ varteta</div>
+  <div class="japanese">学芸を修めた者は、贈与・戦勝・売買・賃金によって得た財産、あるいは家伝の財産、またはその両方によって、家長の地位に就き、都会人（ナーガラカ）の生活を営むべきである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は財産取得の四方法を四ヴァルナに対応させる：<span class="iast">pratigraha</span>（贈与）はバラモン、<span class="iast">jaya</span>（戦勝）はクシャトリヤ、<span class="iast">kraya</span>（売買）はヴァイシャ、<span class="iast">nirveśa</span>（賃金）はシュードラに対応する。妻なく財産もない者にはこの規定は適用されない。<span class="iast">nāgaraka</span>（都会人）とは「教養ある人物」（<span class="iast">vidagdhajana</span>）の意。本章が全学問の実践の身体（<span class="iast">śarīra</span>）であるとされる。</p>
+</div>
+
+<!-- 1.4.2-3 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.2–3</div>
+  <div class="sanskrit">nagare pattane kharvaṭe mahati vā sajjanāśraye sthānam | yātrāvaśād vā</div>
+  <div class="japanese">都市（ナガラ）・港町（パッタナ）・城邑（カルヴァタ）・大邑（マハット）など、善良な人々が住む場所に居を定めるべきである。あるいは、生計の必要に応じて〔他の地にも〕。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈による都市の定義：<br>
+  ・<span class="iast">nagara</span>（都市）：800村の中心にある商業の拠点<br>
+  ・<span class="iast">pattana</span>（港町）：王都のある場所<br>
+  ・<span class="iast">kharvaṭa</span>（城邑）：200村の中心<br>
+  ・<span class="iast">mahat</span>（大邑）：400村の中心（<span class="iast">droṇamukha</span> とも呼ばれる）<br>
+  いずれの場合も <span class="iast">sajjanāśraya</span>（善人の住む場所）であることが条件。</p>
+</div>
+
+<!-- 1.4.4 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.4</div>
+  <div class="sanskrit">tatra bhavanam āsannodakaṃ vṛkṣavāṭikāvad vibhaktakarmakakṣaṃ dvivāsagṛhaṃ kārayet</div>
+  <div class="japanese">そこに邸宅を建てるべきである。水辺に近く、樹木の庭園を備え、作業室が区分され、二つの居室をもつものを。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">āsannodaka</span>：川や池の近くにあること。水は遊びの道具でもある。<span class="iast">dvivāsagṛha</span>（二居室）：一つは就寝用（内室、妻のため）、もう一つは情交用（外室）。<span class="iast">vibhaktakarmakakṣa</span>は各種の家事のための区画が分かれていること。建築の詳細は <span class="iast">vāstuvidyā</span>（建築学）に譲るとする。</p>
+</div>
+
+<!-- 1.4.5 (the daily routine begins) -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.4 続き ― 1.4.5</div>
+  <div class="sanskrit">bāhye ca vāsagṛhe suślakṣṇam ubhayopadhānaṃ madhye vinataṃ śuklottaracchadaṃ śayanīyaṃ syāt | pratiśayyikā ca | tasya śirobhāge kūrcasthānaṃ vedikā ca | tatra rātriśeṣam anulepanaṃ mālyaṃ sikthakaraṇḍakaṃ saugandhikapuṭikā mātuluṅgatvacas tāmbūlāni ca syuḥ | bhūmau patadgrahaḥ | nāgadantāvasaktā vīṇā | citraphalakaṃ | vartikāsamudgakaḥ | yaḥ kaścit pustakaḥ | kuraṇṭakamālāś ca | nātidūre bhūmau vṛttāstaraṇaṃ samastakam | ākarṣaphalakaṃ dyūtaphalakaṃ ca | … iti bhavanannyāsaḥ |</div>
+  <div class="japanese">外の居室には、なめらかで両端に枕のある、中央が窪んだ、白い覆い布のかかった寝台があるべきである。副寝台（プラティシャイイカー）も。その枕元に草束の台と棚を置く。棚の上には、夜の残りの塗香・花環・蜜蝋の小箱・芳香料の包み・柑橘（マートゥルンガ）の皮・嚙みタバコ（ターンブーラ）を置く。床には痰壺。壁の象牙釘にはヴィーナー。絵板。画材入れ。何か書物。クランタカの花環。遠くない床上に円い座布団と頭当て。骰子盤と賭博盤。……これが邸宅の設えである。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈はこの寝室調度を詳細に説明する：<br>
+  ・<span class="iast">pratiśayyikā</span>（副寝台）：情交用の、本寝台よりやや低い台。教養人の作法であり、遊女の愛人はこれを持たず一台で済ませる<br>
+  ・<span class="iast">kūrca</span>（草束）：神仏の想念のために枕元に置く聖なる草<br>
+  ・<span class="iast">mātuluṅga</span>（柑橘）：口臭除去と悪風防止のため。注釈は「蜂蜜を混ぜた柑橘葉のペーストを夕方に舐めれば、女性の腕の檻に包まれても悪風に悩まされない」という古詩を引用<br>
+  ・<span class="iast">kuraṇṭakamālā</span>（クランタカの花環）：この花は揉まれても萎れないため、情交中に乱れない装飾として特に選ばれる<br>
+  ・庭には藤製のブランコ（<span class="iast">preṅkhādolā</span>）と石の腰掛け（<span class="iast">sthaṇḍilapīṭhikā</span>）を花で飾って設ける</p>
+</div>
+
+<div class="section-break">— ❖ —</div>
+<p class="section-label">一日の生活（<span class="iast">āhorātrikam</span>）</p>
+
+<!-- 1.4.5-8 daily routine -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.5–8</div>
+  <div class="sanskrit">sa prātar utthāya kṛtaniyatakṛtyaḥ gṛhītadantadhāvanaḥ mātrayānulepanaṃ dhūpaṃ srajam iti ca gṛhītvā dattvā sikthakaṃ alaktakaṃ ca dṛṣṭvādarśe mukhaṃ gṛhītamukhavāsatāmbūlaḥ kāryāṇy anutiṣṭhet | nityaṃ snānam | dvitīyakam utsādanam | tṛtīyakaḥ phenakaḥ | caturthakaṃ āyuṣyam | pañcamakaṃ daśamakaṃ vā pratyāyuṣyam ity ahīnam | sātatyāc ca saṃvṛtakakṣāsvedāpanodaḥ | pūrvāhṇāparāhṇayor bhojanam | sāyaṃ cārāyaṇasya | bhojanānantaraṃ śukasārikāpralāpanavyāpārāḥ | lāvakakukkuṭameṣayuddhāni tās tāś ca kalākrīḍāḥ | pīṭhamardaviṭavidūṣakāyattā vyāpārāḥ | divāśayyā ca</div>
+  <div class="japanese">彼は朝起きて、日課の用を済ませ、歯磨きを行い、適量の塗香・薫香・花環を取り、蜜蝋と紅（アラクタカ）を〔唇に〕塗り、鏡で顔を確かめ、口の香錠と嚙みタバコを取って、諸事に取りかかる。毎日入浴する。隔日に按摩。三日ごとに石鹸（フェーナカ）。四日ごとに髭剃り。五日目または十日目に体毛の処理。これらを怠らず〔行う〕。常に脇の下の汗は拭き取る。午前と午後に食事する。あるいはチャーラーヤナ師〔の説〕によれば夕方にも。食後は鸚鵡（オウム）と九官鳥に言葉を教えること。鶉・鶏・羊の闘技。種々の学芸遊戯。随伴者たち（ピータマルダ・ヴィタ・ヴィドゥーシャカ）の指揮する催し。午睡。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ ― 都会人の一日</div>
+  <div style="overflow-x: auto;">
+  <table class="schedule-table">
+    <thead><tr><th>時間帯</th><th>活動</th></tr></thead>
+    <tbody>
+      <tr><td>早朝</td><td>起床 → 用便 → 歯磨き → 薫香・塗香 → 唇に紅（<span class="iast">alaktaka</span>）→ 鏡確認 → 嚙みタバコ → 三目的の仕事</td></tr>
+      <tr><td>午前</td><td>入浴（毎日）・身体手入れ → 食事</td></tr>
+      <tr><td>食後</td><td>鸚鵡と九官鳥の調教、闘技鑑賞、学芸遊戯、随伴者との活動</td></tr>
+      <tr><td>午後</td><td>午睡（夏季のみ許可 — 通常は不法<span class="iast">adharma</span>だが暑気による衰弱防止のため）</td></tr>
+      <tr><td>午後遅く</td><td>装い直して社交の集い（<span class="iast">goṣṭhīvihāra</span>）</td></tr>
+      <tr><td>宵</td><td>音楽会（歌・舞踊・器楽）</td></tr>
+      <tr><td>夜</td><td>居室の準備（薫香）→ 寝台の傍で待つ → 通い女（アビサーリカー）の来訪を待つ → 使者の派遣 → 自ら出向く場合も</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>注釈は身体手入れの周期を詳述する：<span class="iast">āyuṣya</span>（髭剃り）は4日ごと、<span class="iast">pratyāyuṣya</span>（体毛処理）は5日ごと（剃刀の場合）または10日ごと（毛抜きの場合）。チャーラーヤナ師は夕食を推奨するが、他の師は午後食で十分とする。「夜に食べないと人は衰える」という引用がある。</p>
+</div>
+
+<!-- 1.4.9-13 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.9–13</div>
+  <div class="sanskrit">gṛhītaprasādhanasyāparāhṇe goṣṭhīvihārāḥ | pradoṣe ca saṃgītakāni | tadante ca prasādhite vāsagṛhe saṃcāritasurabhidhūpe sasahāyasya śayyāyām abhisārikāṇāṃ pratīkṣaṇam | dūtīnāṃ preṣaṇaṃ svayaṃ vā gamanam | āgatānāṃ ca manoharair ālāpair upacāraiś ca sasahāyasyopakramāḥ | varṣapramṛṣṭanepathyānāṃ durdinābhisārikāṇāṃ svayam eva punarmaṇḍanam mitrajanena vā paricaraṇam ity āhorātrikam</div>
+  <div class="japanese">装いを整えた午後には、社交の集いに出かける。宵には音楽会。その後、居室を清め薫香を漂わせた上で、友人たちとともに寝台の傍に座り、通い女たち（アビサーリカー）の来訪を待つ。使者の女（ドゥーティー）を遣わすか、自ら出向く。来訪した女性には、魅力的な言葉と待遇で、友人たちとともに歓待する。雨に打たれて化粧の乱れた雨夜の通い女には、自ら装いを直してやるか、友人に世話をさせる。これが一日の生活である。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は来訪者への歓待の言葉の例を挙げる：「ようこそ。こちらにおかけください。よくいらしてくださった、愛しい人！あなたに命を繋いでいたのです。なぜこんなに遅くなったのですか」等。<span class="iast">durdinābhisārikā</span>（雨夜の通い女）への再化粧は、高い身分の女性の名誉と愛情を示すために自ら行う。下位の女性の場合は友人や侍者に任せる。</p>
+</div>
+
+<div class="section-break">— ❖ —</div>
+<p class="section-label">定期的催事（<span class="iast">naimittikaṃ karma</span>）</p>
+
+<!-- 1.4.14-18 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.14–18</div>
+  <div class="sanskrit">ghaṭānibandhanam goṣṭhīsamavāyaḥ samāpānakam udyānagamanaṃ samasyāḥ krīḍāś ca pravartayet | pakṣasya māsasya vā prajñāte 'hani sarasvatyā bhavane niyuktānāṃ nityaṃ samājaḥ | kuśīlavāś cāgantavaḥ prekṣaṇakam eṣāṃ dadyuḥ | … | āgantūnāṃ ca kṛtasamavāyānāṃ pūjanam abhyupattiś ca | iti gaṇadharmaḥ | etena taṃ taṃ devatāviśeṣam uddiśya saṃbhāvitasthitayo ghaṭā vyākhyātāḥ</div>
+  <div class="japanese">〔都会人は次の催事を〕開催すべきである：祭会（ガター）の組織、社交の集い、共同飲酒会、庭園への遊覧、共同遊戯や競技。半月ごとまたは毎月、知られた吉日に、サラスヴァティー神殿において任命された芸人たちの常設の集会がある。旅の芸人たちも見世物を興行する。〔二日目に芸人への〕報酬を与える。……来訪した同業の教養人たちの歓迎と援助。これが団体の規則（ガナダルマ）である。これにより、各々の守護神を祀る種々の祭会が説明される。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p><span class="iast">ghaṭā</span>（祭会）：特定の神を祀って行う催し。都会人たちが組織し、各自の役割を定める。<span class="iast">sarasvatī</span> はサラスヴァティー（弁才天）で、都会人にとっての学芸の守護神。彼女の神殿で毎月5日（パンチャミー）に集会が開かれる。<br>
+  注釈は5種の定期的催事を挙げる：① 祭会の組織、② 社交の集い（学芸の討論）、③ 共同飲酒会（各人の家で持ち回り）、④ 庭園遊覧（騎馬で遊女同伴）、⑤ 共同遊戯（祝祭日の遊び）。<br>
+  <span class="iast">kuśīlava</span>（芸人）には常駐の者と旅の者がおり、後者には見世物料（<span class="iast">prekṣaṇaka</span>）として予め定められた額を支払う。</p>
+</div>
+
+<!-- 1.4.19-23 goṣṭhī -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.19–24</div>
+  <div class="sanskrit">veśyābhavane sabhāyām anyatamasyodvasite vā samānavidyābuddhiśīlavittavayasāṃ saha veśyābhir anurūpair ālāpair āsanabandho goṣṭhī | tatra caiṣāṃ kāvyasamasyā kalāsamasyā vā | tasyām ujjvalā lokakāntāḥ pūjyāḥ | prītisamānāś cāhāritāḥ | parasparabhavaneṣu cāpānakāni | tatra madhumaireyasurān vividhalavaṇaphalaharitaśākatiktakaṭukāmlopadaṃśān veśyāḥ pāyayeyur anupibeyuś ca | etenodyānagamanaṃ vyākhyātam</div>
+  <div class="japanese">遊女の家、集会場、あるいはいずれかの者の清掃された家において、同等の学問・知性・品性・財産・年齢をもつ者たちが遊女たちとともに、相応しい会話をしながら着席する。これが社交の集い（ゴーシュティー）である。そこで彼らは詩句の討論、あるいは学芸の討論を行う。その中で傑出し人々に愛される者たちを讃える。友情に見合った贈り物をする。互いの家で飲酒会を行う。そこでは蜂蜜酒・マイレーヤ酒・蒸留酒とともに、種々の塩味・果物・野菜・苦味・辛味・酸味の肴を、遊女たちが〔男たちに〕飲ませ、自らも飲む。これにより、庭園遊覧も説明される。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は三種の酒（<span class="iast">surā</span>）を区別する：<span class="iast">gauḍī</span>（糖蜜酒）、<span class="iast">paiṣṭī</span>（穀物酒）、<span class="iast">mādhvī</span>（蜂蜜酒）。<span class="iast">maireya</span> は黒胡椒・長胡椒・薬草等を混ぜた薬味酒、<span class="iast">āsava</span> は発酵酒。飲酒の作法として、最初は遊女たちが勧め、自らも飲むが、序盤では敬意と愛情を露骨に示さないこと。<br>
+  庭園遊覧は同じ飲酒の作法で行われるが、馬に乗って出かけ、闘技を観戦し、庭園の花や若葉を頭・耳・首に飾って帰路に就く。夏季には整備された池での水遊びも加わる。</p>
+</div>
+
+<!-- 1.4.27-28 festivals -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.27–28</div>
+  <div class="sanskrit">yakṣarātriḥ | kaumudījāgaraḥ | suvasantakaḥ | sahakārabhañjikā | abhyūṣakhādikā | bisakhādikā | navapatrikā | udakakṣveḍikā | pāñcālānuyānam | ekaśālmalī | kadambayuddhāni | tās tāś ca māhimānyo deśyāś ca krīḍā janebhyo viśiṣṭam ācareyuḥ | iti saṃbhūyakrīḍāḥ</div>
+  <div class="japanese">夜叉の夜祭。月光の徹夜祭。春の祝祭。マンゴー摘み祭。炒り豆食べ祭。蓮根食べ祭。新葉祭。水吹き祭。パーンチャーラ遊び。一本木綿祭。カダンバ花合戦。このような全国的・地方的な遊戯を、一般の人々よりも優雅に行うべきである。これが共同遊戯である。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は各祭の時期と内容を詳述する：<br>
+  ・<span class="iast">yakṣarātri</span>：カールティカ月（10-11月）の新月の夜。夜叉の守護する夜で、主に賭け事<br>
+  ・<span class="iast">kaumudījāgara</span>：満月の夜、月光の下で徹夜する祭。ブランコや賭け事が中心<br>
+  ・<span class="iast">suvasantaka</span>：春の祝祭（マーガ月白分5日）。カーマ神を祀り、歌・舞踊・器楽が中心<br>
+  ・<span class="iast">holākā</span>（ホーリー祭に相当）：パールグナ月の満月。キンシュカ等の花の色水を互いにかけ合い、パタヴァーサ（香粉）も投げ合う<br>
+  ・<span class="iast">kadambayuddha</span>（カダンバ花合戦）：二組に分かれてカダンバの花を武器として戦う遊び。柔らかい花のみを使い、石や棒は禁止<br>
+  これらは <span class="iast">māhimānya</span>（全国的）と <span class="iast">deśya</span>（地方的）に分かれる。</p>
+</div>
+
+<div class="section-break">— ❖ —</div>
+<p class="section-label">随伴者たち（<span class="iast">upanāgaraka</span>）</p>
+
+<!-- 1.4.29-35 -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.31–35</div>
+  <div class="sanskrit">avibhavas tu śarīramātro mallikāphenakakāṣāyamātraparicchadaḥ pūjyād deśād āgataḥ kalāsu vicakṣaṇas tadupadeśena goṣṭhyāṃ veśocite ca vṛtte sādhayed ātmānam iti pīṭhamardaḥ | bhuktavibhavas tu guṇavān sakalatrō veśe goṣṭhyāṃ ca bahumatas tadupajīvī ca viṭaḥ | ekadeśavidyas tu krīḍanako viśvāsyaś ca vidūṣako vaihāsiko vā | ete veśyānāṃ nāgarakāṇāṃ ca mantriṇaḥ sandhivigrahāniyuktāḥ | tair bhikṣukyaḥ kalāvidagdhā muṇḍā vṛṣalyo vṛddhagaṇikāś ca vyākhyātāḥ</div>
+  <div class="japanese">財産のない者、身一つで敷物と泡立て器と袈裟色の衣服だけを持ち、名のある土地から来て学芸に長じ、その教授によって社交の集いと遊女の世界で身を立てる者 —— これがピータマルダ（指導者）である。かつて財産を享受したが今は有徳で妻帯し、遊女の世界と社交の集いで尊重され、それらに依存して生きる者 —— これがヴィタ（仲介者）である。一部の学芸のみに通じ、遊び好きで信頼される者 —— これがヴィドゥーシャカ（道化師）またはヴァイハーシカ（笑わせ役）である。これらの者たちは遊女と都会人双方の顧問であり、和議と争議に任じられる。これらの者たちを通じて、托鉢尼（ビクシュキー）、学芸に長けた剃髪の女、奴隷の女、老齢の遊女たちも〔和議と争議に〕用いられる。</div>
+</div>
+
+<div class="note-section">
+  <div class="note-title">注釈メモ</div>
+  <p>注釈は三種の随伴者を詳細に区別する：<br>
+  ・<span class="iast">pīṭhamarda</span>：財産なし。<span class="iast">mallikā</span>は背もたれ付き敷物（語源は「支える」の意の動詞 <span class="iast">√mal</span>）。名高い土地の出身で64芸とパーンチャーリカの64技を修めている。学芸の教師として身を立てる<br>
+  ・<span class="iast">viṭa</span>：かつての富裕者で今は没落。妻がいるため定住。遊女と都会人の間の仲介役（<span class="iast">sandeśa</span>、使い走り）で生計を立てる。語源は「語る」の意の動詞 <span class="iast">√viṭ</span><br>
+  ・<span class="iast">vidūṣaka</span>：学芸の一部のみに通じ、親しみやすい性格で冗談や皮肉を言う。三種の笑い（<span class="iast">hāsya</span>）で生きる<br>
+  女性の仲介者は <span class="iast">kuṭṭanī</span>（取り持ち女）と総称される。和議と争議（<span class="iast">sandhivigraha</span>）は恋愛関係の成立と解消を政治用語で表現したもの。</p>
+</div>
+
+<!-- 1.4.36 rural adaptation -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.36</div>
+  <div class="sanskrit">grāmavāsī ca sajātān vicakṣaṇān kautūhalikān protsāhya nāgarakajanasya vṛttaṃ varṇayañ śraddhāṃś ca janayaṃs tad evānukurvīta | goṣṭhīś ca pravartayet | saṃgatyā janam anurañjayet | karmasu ca sāhāyyenānugṛhṇīyāt | upakārayec ca</div>
+  <div class="japanese">村に住む者も、同族で聡明・好奇心旺盛な者たちを励まし、都会人の生活ぶりを語り聞かせ、信頼を集めつつ、同じことを模倣すべきである。社交の集いを開催し、交際によって人々を楽しませ、仕事において援助をもって恩恵を施し、助力すべきである。</div>
+</div>
+
+<div class="section-break">— ❖ —</div>
+
+<!-- 1.4.37-39 (closing verses) -->
+<div class="sutra-block">
+  <div class="sutra-num">1.4.37–39〔韻文〕</div>
+  <div class="sanskrit"><span class="verse">nātyantaṃ saṃskṛtenaiva nātyantaṃ deśabhāṣayā |<br>kathāṃ goṣṭhīṣu kathayan loke bahumato bhavet ||</span><br><span class="verse">yā goṣṭhī lokavidviṣṭā yā ca svairavisarpiṇī |<br>parahiṃsātmikā yā ca na tām avatared budhaḥ ||</span><br><span class="verse">lokacittānuvartinyā krīḍāmātraikakāryayā |<br>goṣṭhyā sahacaran vidvāṃl loke siddhiṃ niyacchati ||</span></div>
+  <div class="japanese">あまりにサンスクリットばかりでもなく、あまりに俗語ばかりでもなく、社交の集いで語る者は、世間で尊敬される。<br><br>世人に嫌われる集い、放縦に流れる集い、他者を害する集い —— そのような場に賢者は加わるべきではない。<br><br>人々の心に沿い、遊びだけを目的とする集いとともに歩む学者は、世間で成功を収める。</div>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sādhāraṇe prathame 'dhikaraṇe<br>
+  nāgarakavṛttaṃ caturtho 'dhyāyaḥ<br><br>
+  シュリー・ヴァーツヤーヤナのカーマスートラ・総論篇・第1篇において<br>
+  都会人の生活・第4章〔了〕
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

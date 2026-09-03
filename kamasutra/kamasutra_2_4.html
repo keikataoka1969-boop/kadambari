@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 2.4</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef; --bg-card: #fffdf8; --text: #2c2418; --text-secondary: #6b5d4d;
+  --accent: #a0522d; --accent-light: #c4845c; --border: #ddd5c8; --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3; --note-bg: #f2ede4; --highlight: #8b4513;
+  --table-header: #e8dfd2; --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+    --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+    --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+    --table-header: #302a22; --table-stripe: #222019;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a1612; --bg-card: #242019; --text: #e0d6c8; --text-secondary: #9a8e7e;
+  --accent: #d4845c; --accent-light: #b06a3a; --border: #3d362c; --border-light: #302a22;
+  --sanskrit-bg: #1e1a15; --note-bg: #2a2520; --highlight: #e0a070;
+  --table-header: #302a22; --table-stripe: #222019;
+}
+
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 3rem;
+  line-height: 1.85;
+}
+
+header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--accent); }
+header .book { font-size: 0.85rem; color: var(--text-secondary); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.25rem; }
+header h1 { font-family: 'Noto Serif JP', serif; font-size: 1.75rem; font-weight: 700; color: var(--accent); margin: 0.25rem 0; }
+header .subtitle { font-size: 1rem; color: var(--text-secondary); margin-top: 0.25rem; }
+header .chapter-info { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.75rem; }
+
+.section-title {
+  font-size: 1.15rem; font-weight: 600; color: var(--accent); margin: 2rem 0 1rem;
+  padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+}
+
+.sutra-block {
+  background: var(--bg-card); border: 1px solid var(--border-light); border-radius: 6px;
+  margin-bottom: 1rem; overflow: hidden;
+}
+.sutra-num {
+  font-size: 0.75rem; font-weight: 600; color: var(--accent); padding: 0.5rem 0.75rem 0;
+  font-family: 'Noto Serif Devanagari', serif;
+}
+.sutra-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+}
+.sutra-grid .sanskrit {
+  padding: 0.4rem 0.75rem 0.6rem; background: var(--sanskrit-bg);
+  font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+  font-size: 0.92rem; line-height: 1.8; border-right: 1px solid var(--border-light);
+}
+.sutra-grid .japanese {
+  padding: 0.4rem 0.75rem 0.6rem; font-size: 0.92rem; line-height: 1.85;
+}
+
+.note-box {
+  background: var(--note-bg); border-left: 3px solid var(--accent-light);
+  padding: 0.6rem 0.85rem; margin: 0.75rem 0 1.25rem; border-radius: 0 4px 4px 0;
+  font-size: 0.82rem; line-height: 1.75; color: var(--text-secondary);
+}
+.note-box strong { color: var(--accent); font-weight: 600; }
+.note-box .note-label { font-weight: 600; color: var(--highlight); margin-right: 0.35em; font-size: 0.78rem; }
+
+.verse-block {
+  background: var(--sanskrit-bg); border: 1px solid var(--border-light); border-radius: 6px;
+  padding: 1rem; margin: 1rem 0; text-align: center;
+}
+.verse-block .sanskrit-verse {
+  font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem;
+  line-height: 2; color: var(--accent); margin-bottom: 0.5rem;
+}
+.verse-block .verse-trans { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
+
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
+th { background: var(--table-header); color: var(--accent); font-weight: 600; padding: 0.5rem 0.6rem; text-align: left; }
+td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border-light); }
+tr:nth-child(even) td { background: var(--table-stripe); }
+.term { font-family: 'Noto Serif Devanagari', serif; color: var(--highlight); font-weight: 500; }
+
+.colophon {
+  text-align: center; margin-top: 2.5rem; padding-top: 1rem;
+  border-top: 2px solid var(--accent); font-size: 0.8rem; color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .sutra-grid { grid-template-columns: 1fr; }
+  .sutra-grid .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+  header h1 { font-size: 1.4rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book">第二篇 sāṃprayogikam — 性愛の実践</div>
+  <h1>第四章　爪痕の章</h1>
+  <div class="subtitle">Nakha-cchedya-prakaraṇam — nakha-cchedya-prakaraṇam</div>
+  <div class="chapter-info">adhyāya 2.4｜sūtra 2.4.1–2.4.31｜prakaraṇa 10</div>
+</header>
+
+<!-- 総説 -->
+<div class="section-title">爪による刻みの本質と時機 — nakha-vilekhanam</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.1</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">rāga-vṛddhau saṃgharṣātmakaṃ nakha-vilekhanam.</div>
+    <div class="japanese">情欲が高まったとき（rāga-vṛddhi）に、擦りつける性質（saṃgharṣātmaka）をもつものが爪による刻み（nakha-vilekhanam）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  saṃgharṣātmaka（擦りつける）とは、爪で一面を擦り引くことであり、肌を分離させる行為。これが rāga-vṛddhi（情欲の高まり）のときに行われる。一方、爪先で軽く突く（tudana）のは情欲が弱いとき（rāga-māndya）であり、これは cchedya（刻み）にはならない。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.2</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tasya prathama-samāgame pravāsa-pratyāgamane pravāsa-gamane kruddha-prasannāyāṃ mattāyāṃ ca prayogaḥ. na nityam a-caṇḍa-vegayoḥ.</div>
+    <div class="japanese">その（爪痕の）実践は、初めての逢瀬（prathama-samāgama）、旅からの帰還（pravāsa-pratyāgamana）、旅への出発（pravāsa-gamana）、怒りが解けたとき（kruddha-prasanna）、酔ったとき（mattā）に行う。ただし、穏やかな情熱の二人（a-caṇḍa-vega）には常時行うべきではない。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  穏やかな情熱（manda-vega）・中程度の情熱（madhya-vega）の者には常時の実践はない。初めての逢瀬と旅からの帰還では、切望（utkaṇṭhita）により情欲が高まるため。旅への出発では、記憶に残すため（smaraṇārtham）。怒りが解けたときは、男に宥められて歓びにより情欲が再燃する。酔ったときは酒の酔い（madya-mada）により情欲が昂揚する。激しい情熱の者にはいつでも実践される。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.3</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tathā daśana-cchedyasya sātmya-vaśād vā.</div>
+    <div class="japanese">噛み痕（daśana-cchedya）についても同様である。ただし体質への適合（sātmya）に応じて。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  噛み痕もまた同じ規則に従う（atideśa＝類推適用）。本質の定義も同様で、rāga-vibṛddhi（情欲の高揚）のときは saṃgharṣātmaka（擦りつける）な噛み、rāga-māndya（情欲が弱いとき）は単に daśana-grahaṇa（歯で捉えるだけ）。sātmya-vaśāt とは、穏やかな情熱の二人が生来の体質（prakṛti-sātmya）によって耐えられないなら行わないこと。
+</div>
+
+<!-- 八種の爪痕 -->
+<div class="section-title">八種の爪痕 — aṣṭa-vikalpam</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.4</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tad [1] ācchuritakam [2] ardha-candro [3] maṇḍalaṃ [4] rekhā [5] vyāghra-nakhaṃ [6] mayūra-padakaṃ [7] śaśa-plutakam [8] utpala-pattrakam iti rūpato 'ṣṭa-vikalpam.</div>
+    <div class="japanese">その（爪痕は）形状（rūpa）により八種に分類される。[1] アーッチュリタカ（ācchuritaka）、[2] 半月（ardha-candra）、[3] 円形（maṇḍala）、[4] 線条（rekhā）、[5] 虎爪（vyāghra-nakha）、[6] 孔雀足跡（mayūra-padaka）、[7] 兎跳び（śaśa-plutaka）、[8] 青蓮花の花弁（utpala-pattraka）。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  爪痕には rūpavat（形のあるもの）と arūpavat（形のないもの）の二種がある。形のあるもの（何かの形に似ているもの）が上記の八種。形のないものは mṛdu（柔らかい）・madhya（中程度）・atimātra（過度）の三種で、特定の形状を持たない。
+</div>
+
+<!-- 部位 -->
+<div class="section-title">爪痕の部位 — sthānāni</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.5</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">kakṣau stanau galaḥ pṛṣṭhaṃ jaghanam ūrū ca sthānāni.</div>
+    <div class="japanese">（爪痕の）部位は、脇（kakṣa）、乳房（stana）、頸（gala）、背（pṛṣṭha）、腰（jaghana）、太腿（ūru）である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.6</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">pravṛtta-rati-cakrāṇāṃ na sthānam a-sthānaṃ vā vidyata iti suvarṇanābhaḥ.</div>
+    <div class="japanese">情事の輪が回り始めた者たちにとっては、適所も不適所もない、とスヴァルナナーバは言う。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  pravṛtta-rati-cakra（情事の輪が回り始めた者）とは、情欲の高揚が始まった者のこと。あらゆる肢体・副肢体が爪痕の場所となりうる。しかし教典の著者は、形のある爪痕（rūpavat）については定められた部位を後述する。そこでこそ最高の効果（parabhāga）が得られるからである。ヤショーダラは別の詩句を引用する：「首の両側・太腿・脇・腰・背・乳房に、性交時に女性への爪痕を行うべし」。
+</div>
+
+<!-- 爪の条件 -->
+<div class="section-title">爪の条件 — nakha-guṇāḥ / nakha-pramāṇa</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.7</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tatra savya-hastāni praty-agra-śikharāṇi dvi-tri-śikharāṇi caṇḍa-vegayor nakhāni syuḥ.</div>
+    <div class="japanese">爪の行為には、左手（savya-hasta）のもので、先端が新しく尖った（pratyagra-śikhara）、二先端または三先端の爪を用いる。これは激しい情熱の者向きである。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  左手を使うのは、右手は多くの場合、他の用途に使われるため（anyavyāpāra）。二先端・三先端とは鋸の刃のように整えた爪。三先端は幅が狭い場所には素早く効くが、その逆は穏やかな情熱向き。穏やかには軽く研いだ麦穂形（śūkā-ākṛti）の爪、極めて穏やかには丸く研いだ葡萄形（drakṣā-ākṛti）の爪を用いる。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.8</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">anugata-rāji samam ujjvalam a-malinam a-vipāṭitaṃ vivardhiṣṇu mṛdu snigdha-darśanam iti nakha-guṇāḥ.</div>
+    <div class="japanese">爪の良い性質（nakha-guṇa）は、中央に筋が通り（anugata-rāji）、平ら（sama）で、輝きがあり（ujjvala）、汚れなく（a-malina）、割れておらず（a-vipāṭita）、よく伸び（vivardhiṣṇu）、柔らかく（mṛdu）、滑らかな外観（snigdha-darśana）であること。</div>
+  </div>
+</div>
+
+<!-- 地方による爪の長さ -->
+<div class="sutra-block">
+  <div class="sutra-num">2.4.9</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">dīrghāṇi hasta-śobhīny āloke ca yoṣitāṃ citta-grāhīṇi gauḍāṇāṃ nakhāni syuḥ.</div>
+    <div class="japanese">ガウダ地方（Gauḍa）の人々の爪は、長く（dīrgha）、手を美しく飾り（hasta-śobhin）、見るだけで女性の心を奪う（citta-grāhin）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.10</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">hrasvāni karma-sahiṣṇūni vikalpa-yojanāsu ca svecchāpātīni dākṣiṇatyānām.</div>
+    <div class="japanese">ダクシナーティヤ（Dākṣiṇātya＝南方）の人々の爪は、短く（hrasva）、実用に耐え（karma-sahiṣṇu）、さまざまな形を作る際に自在に落とせる（svecchā-apātin）。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.11</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">madhyamāny ubhaya-bhāñji mahārāṣṭrakāṇām iti.</div>
+    <div class="japanese">マハーラーシュトラ（Mahārāṣṭra）の人々の爪は、中程度で、両方（長短）の利点を兼ね備える（ubhaya-bhāñji）。</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>地方</th><th>サンスクリット</th><th>爪の長さ</th><th>特徴</th></tr>
+  <tr><td>ガウダ（東方）</td><td class="term">Gauḍa</td><td>長い</td><td>美観・魅力的だが刻みには不向き</td></tr>
+  <tr><td>南方</td><td class="term">Dākṣiṇātya</td><td>短い</td><td>実用的・自在に操作可能</td></tr>
+  <tr><td>マハーラーシュトラ</td><td class="term">Mahārāṣṭra</td><td>中程度</td><td>両方の利点を兼備</td></tr>
+</table>
+
+<!-- 八種の詳説 -->
+<div class="section-title">八種の爪痕の詳細 — nakha-karma-lakṣaṇa</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.12</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">taiḥ su-niyamitair hanu-deśe stanayor adhare vā laghu-karaṇam an-udgata-lekhaṃ sparśa-mātra-jananād romāñca-karam ante saṃnipāta-vardhamāna-śabdam [1] ācchuritakam.</div>
+    <div class="japanese">[1] <strong>アーッチュリタカ</strong>（ācchuritaka）：よく整えた（su-niyamita）爪で、顎（hanu）、乳房（stana）、あるいは下唇（adhara）に軽く行う（laghu-karaṇa）。痕跡は残らず（an-udgata-lekha）、触感のみ（sparśa-mātra）で鳥肌を立たせ（romāñca-kara）、最後に爪と爪を弾く増大する音を伴う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.13</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">prayojyāyāṃ ca tasyāṅga-saṃvāhane śirasaḥ kaṇḍūyane piṭaka-bhedane vyākulī-karaṇe bhīṣaṇe ca prayogaḥ.</div>
+    <div class="japanese">（初心の）恋人に対しては、按摩（aṅga-saṃvāhana）、頭を掻くこと（śiras-kaṇḍūyana）、小さな吹き出物を潰すこと（piṭaka-bhedana）、慌てさせること（vyākulī-karaṇa）、脅かすこと（bhīṣaṇa）の際に（アーッチュリタカを）用いる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  prayojyā（初心の女性）に対して用いるのは信頼を深めるため（visrambhaṇārtham）。他の爪痕は用いない。顎と下唇にはすべての女性に対して ācchuritaka のみを用い、他の爪痕は用いない。乳房には主として用いる。五本の指の爪を密着させて（susaṃśliṣṭa）行い、最後に親指の爪で他の爪を弾いてパチパチという音（caṭacaṭā-śabda）を出す。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.14</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">grīvāyāṃ stana-pṛṣṭhe ca vakro nakha-pada-niveśo [2] ardha-candraḥ.</div>
+    <div class="japanese">[2] <strong>半月</strong>（ardha-candra）：頸（grīvā）と乳房の側面（stana-pṛṣṭha）に、弧を描く爪痕を刻む。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.15</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tāv eva dvau parasparābhimukhau maṇḍalam.</div>
+    <div class="japanese">[3] <strong>円形</strong>（maṇḍala）：二つの半月を互いに向かい合わせたもの。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.16</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">nābhi-mūla-kakundara-vaṃkṣaṇeṣu tasya prayogaḥ.</div>
+    <div class="japanese">その（円形の爪痕は）、臍の下（nābhi-mūla）、臀部の窪み（kakundara）、鼠蹊部（vaṃkṣaṇa）に用いる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  <strong>ardha-candra</strong> は鑿の先端のような小指の爪（kaniṣṭhā-nakha）で刻む。<strong>maṇḍala</strong>（円形）は二つの半月を抱き合わせて（kroḍa-bhāvena）向かい合わせたもの。臍の下では帯飾りの宝石（raśanā-nāyaka）のように、臀部の窪みでは上の窪み（kūpaka）の中に対になる窪みを刻んで美しく、鼠蹊部では耳飾り（karṇikā-alaṃkāra）のように腰を飾る。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.17</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">sarva-sthāneṣu nāti-dīrghā [4] rekhā.</div>
+    <div class="japanese">[4] <strong>線条</strong>（rekhā）：あらゆる部位に用いる、あまり長くない線状の痕。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.18</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">saiva vakrā [5] vyāghra-nakhakam ā stana-mukham.</div>
+    <div class="japanese">[5] <strong>虎爪</strong>（vyāghra-nakha）：同じ線条を曲線にしたもの。乳首（stana-mukha）まで伸ばす。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.19</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">pañcabhir abhimukhair lekhā cūcukābhimukhī [6] mayūra-padakam.</div>
+    <div class="japanese">[6] <strong>孔雀足跡</strong>（mayūra-padaka）：五本の爪で乳首（cūcuka）に向かって引く線条。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.20</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">tat-saṃprayoga-ślāghāyāḥ stana-cūcuke saṃnikṛṣṭāni pañca-nakha-padāni [7] śaśa-plutakam.</div>
+    <div class="japanese">[7] <strong>兎跳び</strong>（śaśa-plutaka）：性交を喜ぶ女の乳首の近くに、五本の爪痕を密集して刻む。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.21</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">stana-pṛṣṭhe mekhalā-pathe cotpala-pattrākṛtīty [8] utpala-pattrakam.</div>
+    <div class="japanese">[8] <strong>青蓮花の花弁</strong>（utpala-pattraka）：乳房の側面（stana-pṛṣṭha）と腰帯の位置（mekhalā-patha）に、青蓮花の花弁の形に刻む。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  <strong>rekhā</strong>（線条）は特定の部位限定がないため、二指か三指の尖った爪で2–3指幅の長さで刻む。<strong>vyāghra-nakha</strong>（虎爪）はその線条を乳首から引き上げて前方で曲げたもの。<strong>mayūra-padaka</strong>（孔雀足跡）は鑿形の尖った爪で乳首の下に親指を置き、上に揃えた指爪を乳首に向けて引く。<strong>śaśa-plutaka</strong>（兎跳び）は五本の爪を束ねて（ekīkṛtya）乳首のそばに押し付ける。<strong>utpala-pattraka</strong> は一つだけを乳房の側面に、腰帯の位置では横方向に青蓮花の花弁の連なりのように飾る。臍の下の maṇḍala（円形）は中央の宝石飾りのように輝く。
+</div>
+
+<!-- 八種一覧表 -->
+<table>
+  <tr><th>番号</th><th>名称</th><th>サンスクリット</th><th>形状</th><th>部位</th></tr>
+  <tr><td>1</td><td>アーッチュリタカ</td><td class="term">ācchuritaka</td><td>痕を残さない軽い擦り</td><td>顎・乳房・下唇</td></tr>
+  <tr><td>2</td><td>半月</td><td class="term">ardha-candra</td><td>弧形</td><td>頸・乳房側面</td></tr>
+  <tr><td>3</td><td>円形</td><td class="term">maṇḍala</td><td>二つの半月を向かい合わせ</td><td>臍下・臀部窪み・鼠蹊部</td></tr>
+  <tr><td>4</td><td>線条</td><td class="term">rekhā</td><td>短い直線</td><td>全身</td></tr>
+  <tr><td>5</td><td>虎爪</td><td class="term">vyāghra-nakha</td><td>曲線</td><td>乳首まで</td></tr>
+  <tr><td>6</td><td>孔雀足跡</td><td class="term">mayūra-padaka</td><td>五本の放射線</td><td>乳首に向けて</td></tr>
+  <tr><td>7</td><td>兎跳び</td><td class="term">śaśa-plutaka</td><td>五爪の密集痕</td><td>乳首近く</td></tr>
+  <tr><td>8</td><td>青蓮花の花弁</td><td class="term">utpala-pattraka</td><td>花弁形</td><td>乳房側面・腰帯の位置</td></tr>
+</table>
+
+<!-- 旅立ちの爪痕 -->
+<div class="section-title">旅立ちの爪痕と自由な創作</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.22</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ūrvoḥ stana-pṛṣṭhe ca pravāsaṃ gacchataḥ smāraṇīyakaṃ saṃhatāś catasras tisro vā lekhāḥ. iti nakha-karmāṇi.</div>
+    <div class="japanese"><strong>スマーラニーヤカ</strong>（smāraṇīyaka＝記念の痕）：旅に出る者に対し、太腿（ūru）と乳房の側面（stana-pṛṣṭha）に、三本または四本の密接した（saṃhata）線条を刻む。以上が爪の行為（nakha-karmāṇi）である。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  smāraṇīyaka とは、旅に出た者に思い出させる（smārayati）爪痕。四本は長い旅（dīrgha-pravāsa）に、三本は短い旅（hrasva-pravāsa）に。密接（saṃhata）であるのは吉兆のため（maṅgalārtham）——長い別離がないように。太腿は秘密の恋人（pracchanna）に、乳房は公然の（sārvalaukika）恋人に。これらの半月などの爪痕は場所・時・状況に応じて女性（nāyikā）も行う。
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.23</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">ākṛti-vikāra-yuktāni cānyāny api kurvīta.</div>
+    <div class="japanese">さまざまな形の変化を加えた他の爪痕も作ってよい。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.24</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">vikalpānām an-antatvād ānantyāc ca kauśala-vidher abhyāsasya ca sarva-gāmitvād rāgātmakatvāc chedyasya prakārān ko 'bhisamīkṣitum arhatīty ācāryāḥ.</div>
+    <div class="japanese">変化は無限であり（an-anta）、技巧の法（kauśala-vidhi）も無限であり、練習（abhyāsa）はあらゆる方向に及び、刻み（cchedya）は情欲の性質を持つ（rāgātmaka）ゆえに、誰がその種類を数え尽くせようか——と師たちは言う。</div>
+  </div>
+</div>
+
+<!-- 多様性の論 -->
+<div class="section-title">多様性と工夫の必要性 — vaicitrya</div>
+
+<div class="sutra-block">
+  <div class="sutra-num">2.4.25</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">bhavati hi rāge 'pi citrāpekṣā. vaicitryāc ca parasparaṃ rāgo janayitavyaḥ. vaicakṣaṇya-yuktāś ca gaṇikās tat-kāminaś ca parasparaṃ prārthanīyā bhavanti. dhanur-vedādiṣv api hi śastra-karma-śāstreṣu vaicitryam evāpekṣyate kiṃ punar iheti vātsyāyanaḥ.</div>
+    <div class="japanese">情欲の中にも、多様性への期待（citrāpekṣā）がある。多様性（vaicitrya）によって互いに情欲を生じさせるべきである。技巧に長けた（vaicakṣaṇya-yukta）遊女（gaṇikā）と、その愛好者は、互いに求め合う。弓術などの武芸の書においても多様性が求められるのに、ましてここ（愛の術）においてはなおさらである——とヴァーツヤーヤナは言う。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  ヴァーツヤーヤナは師たちの見解（八種で十分という見方）に反論する。情欲が高まったとき（rāga-kāle）でさえ多様性を求める者がいる。ましてや穏やかなとき（arāga-kāle）にも、また作為的な情欲（āhārya-rāga＝後天的な情熱）・人為的な情欲（kṛtrima-rāga）のときにも、vaicitrya（多様性）なくしては情欲は生じない。弓術の dhanur-veda における矢の技（飛んでくる矢を矢で切る、一度に複数の矢を射るなど）もまた多様性を必要とする。
+</div>
+
+<!-- 他人の妻 -->
+<div class="sutra-block">
+  <div class="sutra-num">2.4.26</div>
+  <div class="sutra-grid">
+    <div class="sanskrit">na tu para-parigṛhītāsv evaṃ kuryāt. pracchanneṣu pradeśeṣu tāsām anusmaraṇārthaṃ rāga-vardhanāc ca viśeṣān darśayet.</div>
+    <div class="japanese">しかし、他人の妻（para-parigṛhītā）にはこのようにしてはならない。（彼女たちには）隠れた部位（pracchanna pradeśa）に、記念のため（anusmaraṇārtham）、また情欲を増すため（rāga-vardhana）に、特別な印（viśeṣa）を見せるべきである。</div>
+  </div>
+</div>
+
+<!-- 結頌 -->
+<div class="section-title">結頌 — saṃhāra-ślokāḥ</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    nakha-kṣatāni paśyantyā gūḍha-sthāneṣu yoṣitaḥ /<br>
+    cirotsṛṣṭāpy abhinavā prītir bhavati peśalā // 2.4.27
+  </div>
+  <div class="verse-trans">
+    隠れた部位の爪痕を見る女には、<br>
+    たとえ長く離れていても、新鮮で繊細な愛が生じる。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    cirotsṛṣṭeṣu rāgeṣu prītir gacchet parābhavam /<br>
+    rāgāyatana-saṃsmāri yadi na syān nakha-kṣatam // 2.4.28
+  </div>
+  <div class="verse-trans">
+    長く絶えた情欲において、愛は滅びに至るであろう。<br>
+    もし情欲の拠りどころ（rāgāyatana）を思い出させる爪痕がなければ。
+  </div>
+</div>
+
+<div class="note-box">
+  <span class="note-label">注（Jayamaṅgalā）：</span>
+  rāgāyatana（情欲の拠りどころ）とは、容姿（rūpa）・若さ（yauvana）・美質（guṇa）のこと。爪痕を見ることでそれらを思い出し、そこから愛の感覚が再び目覚める（prīti-vāsanāt prabodhaḥ）。
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    paśyato yuvatiṃ dūrān nakhocchiṣṭa-payodharām /<br>
+    bahu-mānaḥ parasyāpi rāga-yogaś ca jāyate // 2.4.29
+  </div>
+  <div class="verse-trans">
+    爪痕に飾られた乳房の若い女を遠くから見る者には、<br>
+    見知らぬ他人にも、敬意（bahu-māna）と情欲の結びつき（rāga-yoga）が生じる。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    puruṣaś ca pradeśeṣu nakha-cihnair vicihnnitaḥ /<br>
+    cittaṃ sthiram api prāyaś calayaty eva yoṣitaḥ // 2.4.30
+  </div>
+  <div class="verse-trans">
+    爪の印で身体のあちこちに飾られた男は、<br>
+    堅固な心を持つ女の心さえも、おおむね揺るがせる。
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sanskrit-verse">
+    nānyat paṭutaraṃ kiṃ cid asti rāga-vivardhanam /<br>
+    nakha-danta-samutthānāṃ karmaṇāṃ gatayo yathā // 2.4.31
+  </div>
+  <div class="verse-trans">
+    爪と歯から生じる行為の跡ほど、<br>
+    情欲を増すのに鋭いものは他にない。
+  </div>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  nakha-cchedya-prakaraṇaṃ caturtho 'dhyāyaḥ.<br><br>
+  ヴァーツヤーヤナのカーマスートラ　第二篇「性愛の実践」<br>
+  第四章「爪痕の章」終わり
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

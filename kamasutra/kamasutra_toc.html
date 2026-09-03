@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 対訳 目次</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+:root{--bg:#f7f4ef;--bg-card:#fffdf8;--text:#2c2418;--text-secondary:#6b5d4d;--accent:#a0522d;--accent-light:#c4845c;--border:#ddd5c8;--border-light:#ece6da;--sanskrit-bg:#faf8f3;--note-bg:#f2ede4;--highlight:#8b4513;--table-header:#e8dfd2;--table-stripe:#faf7f1;--book-bg:#f0ebe2}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1612;--bg-card:#231f1a;--text:#e0d6c8;--text-secondary:#a89880;--accent:#d4845c;--accent-light:#e0a47c;--border:#3d352a;--border-light:#302a22;--sanskrit-bg:#1e1a15;--note-bg:#28231c;--highlight:#e0a060;--table-header:#2e2820;--table-stripe:#252018;--book-bg:#1e1a14}}
+:root[data-theme="dark"]{--bg:#1a1612;--bg-card:#231f1a;--text:#e0d6c8;--text-secondary:#a89880;--accent:#d4845c;--accent-light:#e0a47c;--border:#3d352a;--border-light:#302a22;--sanskrit-bg:#1e1a15;--note-bg:#28231c;--highlight:#e0a060;--table-header:#2e2820;--table-stripe:#252018;--book-bg:#1e1a14}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Shippori Mincho','Noto Serif JP',serif;background:var(--bg);color:var(--text);line-height:1.9;max-width:900px;margin:0 auto;padding:2.5rem 1.5rem 3rem}
+
+/* Header */
+.header{text-align:center;margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:2px solid var(--accent)}
+.header h1{font-family:'Noto Serif JP',serif;font-size:1.7rem;font-weight:700;color:var(--accent);margin-bottom:.3rem;text-wrap:balance}
+.header .sk-title{font-family:'Noto Serif Devanagari',serif;font-size:1.15rem;color:var(--text-secondary);margin-bottom:.75rem;letter-spacing:.03em}
+.header .desc{font-size:.88rem;color:var(--text-secondary);line-height:1.7;max-width:680px;margin:0 auto}
+
+/* Stats bar */
+.stats{display:flex;justify-content:center;gap:2rem;margin:1.5rem 0 2rem;flex-wrap:wrap}
+.stat{text-align:center}
+.stat-num{font-family:'Noto Serif JP',serif;font-size:1.6rem;font-weight:700;color:var(--accent);display:block;line-height:1.2}
+.stat-label{font-size:.75rem;color:var(--text-secondary);letter-spacing:.06em}
+
+/* Book sections */
+.book{margin:2rem 0;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.book-header{background:var(--book-bg);padding:.85rem 1.25rem;display:flex;align-items:baseline;gap:.75rem;border-bottom:1px solid var(--border-light)}
+.book-num{font-family:'Noto Serif JP',serif;font-size:.75rem;font-weight:700;color:var(--bg-card);background:var(--accent);border-radius:4px;padding:.15rem .55rem;white-space:nowrap;flex-shrink:0}
+.book-title-group{flex:1;min-width:0}
+.book-title-jp{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:600;color:var(--highlight)}
+.book-title-sk{font-family:'Noto Serif Devanagari',serif;font-size:.85rem;color:var(--text-secondary);margin-left:.5rem}
+
+/* Chapter entries */
+.chapter{display:grid;grid-template-columns:3.2rem 1fr;gap:0;border-bottom:1px solid var(--border-light);transition:background .15s}
+.chapter:last-child{border-bottom:none}
+.chapter:hover{background:var(--sanskrit-bg)}
+.ch-num{font-family:'Noto Serif Devanagari',serif;font-size:.8rem;color:var(--accent);font-weight:600;padding:.75rem .5rem .75rem 1rem;text-align:right;white-space:nowrap}
+.ch-body{padding:.75rem 1rem .75rem .75rem}
+.ch-titles{margin-bottom:.25rem}
+.ch-title-jp{font-weight:600;font-size:.92rem;color:var(--text)}
+.ch-title-jp a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border-light);transition:border-color .2s,color .2s}
+.ch-title-jp a:hover{color:var(--accent);border-color:var(--accent)}
+.ch-title-sk{font-family:'Noto Serif Devanagari',serif;font-size:.82rem;color:var(--text-secondary);margin-left:.3rem}
+.ch-meta{font-size:.78rem;color:var(--text-secondary);line-height:1.6}
+.ch-prak{font-size:.72rem;color:var(--accent-light);margin-right:.5rem;font-weight:500}
+.ch-summary{font-size:.82rem;color:var(--text-secondary);line-height:1.65;margin-top:.2rem}
+
+/* Structure overview */
+.overview{background:var(--note-bg);border:1px solid var(--border-light);border-radius:8px;padding:1.25rem 1.5rem;margin:2rem 0;font-size:.88rem;color:var(--text-secondary);line-height:1.8}
+.overview strong{color:var(--accent);font-weight:600}
+.overview-title{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:600;color:var(--highlight);margin-bottom:.6rem}
+
+/* Sources */
+.sources{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.82rem;color:var(--text-secondary);line-height:1.8}
+.sources h3{font-family:'Noto Serif JP',serif;font-size:.95rem;font-weight:600;color:var(--highlight);margin-bottom:.5rem}
+
+@media(max-width:600px){
+  .book-header{flex-direction:column;gap:.3rem}
+  .chapter{grid-template-columns:2.5rem 1fr}
+  .stats{gap:1rem}
+  .stat-num{font-size:1.3rem}
+  body{padding:1.25rem 1rem 2rem}
+  .header h1{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ヴァーツヤーヤナ・カーマスートラ 対訳</h1>
+  <div class="sk-title">Vātsyāyanakāmasūtram — サンスクリット原典・和訳・ジャヤマンガラー注抄</div>
+  <p class="desc">サンスクリット語（IAST 表記）原文と和訳の対訳。各章末にヤショーダラ作『ジャヤマンガラー』注釈からの重要事項を付記。底本は GRETIL 校訂テキストおよびチャウカンバー版（1929年、ダーモーダラ・シャーストリー編）。</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><span class="stat-num">7</span><span class="stat-label">篇 adhikaraṇa</span></div>
+  <div class="stat"><span class="stat-num">36</span><span class="stat-label">章 adhyāya</span></div>
+  <div class="stat"><span class="stat-num">64</span><span class="stat-label">節 prakaraṇa</span></div>
+  <div class="stat"><span class="stat-num">≈1250</span><span class="stat-label">偈 sūtra/śloka</span></div>
+</div>
+
+<div class="overview">
+  <div class="overview-title">カーマスートラの構成</div>
+  <strong>作者：</strong>Vātsyāyana Mallanāga（ヴァーツヤーヤナ・マッラナーガ）、紀元3〜4世紀頃。<br>
+  <strong>注釈者：</strong>Yaśodhara（ヤショーダラ）、13世紀頃。注釈名『Jayamaṅgalā』（ジャヤマンガラー）。<br>
+  <strong>伝承：</strong>Nandī（シヴァの従者）→ Śvetaketu Auddālaki → Bābhravya Pāñcāla（150章に拡大）→ 各篇が専門家により独立著作化 → Vātsyāyana が再統合・簡潔化。<br>
+  <strong>三目的の教説（trivarga）：</strong>dharma（法）・artha（利）・kāma（愛）の調和ある追求が本書の根本理念。カーマの学問的考察であり、欲望の追求ではない。
+</div>
+
+<!-- 第一篇 -->
+<div class="book">
+  <div class="book-header">
+    <span class="book-num">第一篇</span>
+    <div class="book-title-group">
+      <span class="book-title-jp">総論</span>
+      <span class="book-title-sk">Sādhāraṇam</span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">1.1</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_1_1.html">論書の概要</a></span>
+        <span class="ch-title-sk">Śāstra-saṃgrahaḥ</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節1–4</span></div>
+      <div class="ch-summary">カーマ学の起源と伝承系譜。シヴァ神の従者ナンディンからバーブラヴィヤを経てヴァーツヤーヤナに至る学統。全書の構成（7篇・36章・64節）の提示。dharma・artha・kāma 三目的の定義と優先順位。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">1.2</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_1_2.html">学問の列挙</a></span>
+        <span class="ch-title-sk">Vidyā-samuddeśaḥ</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節5</span></div>
+      <div class="ch-summary">教養人が習得すべき六十四芸（catuḥṣaṣṭi-kalā）の一覧。歌・舞・楽器・絵画・料理・建築・占星術・言語学・呪術まで。芸事に通じた女性の社会的地位。gaṇikā（高級遊女）の教育体系。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">1.3</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_1_3.html">都会人の生活</a></span>
+        <span class="ch-title-sk">Nāgaraka-vṛttam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節6–7</span></div>
+      <div class="ch-summary">洗練された都会人（nāgaraka）の理想的な一日の過ごし方。住居の構造と内装。沐浴・食事・音楽鑑賞・文芸サロン。季節ごとの遊興と祭事。viṭa（洒落者）・vidūṣaka（道化）・piṭhamarda（仲介者）の役割。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">1.4</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_1_4.html">相手の仲間と交わるべき女性</a></span>
+        <span class="ch-title-sk">Nāyaka-sahāya-duṣṭā-strī-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節8–9</span></div>
+      <div class="ch-summary">男性の友人・仲間（sahāya）の四種。使者（dūtī）の類型と役割。交わるべき女性・避けるべき女性の分類。再婚女性（punarbhū）に関する規定。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">1.5</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_1_5.html">男女の性格の判定</a></span>
+        <span class="ch-title-sk">Strī-puruṣa-śīlāvasthāpanam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節10–11</span></div>
+      <div class="ch-summary">女性の四種の愛情。女性が欲情を示す外的徴候。男性が試みるべきアプローチの段階。女性が拒絶する理由の分類。離反の原因。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第二篇 -->
+<div class="book">
+  <div class="book-header">
+    <span class="book-num">第二篇</span>
+    <div class="book-title-group">
+      <span class="book-title-jp">交合論</span>
+      <span class="book-title-sk">Sāṃprayogikam</span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.1</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_1.html">寸法・種類・時間による分類</a></span>
+        <span class="ch-title-sk">Sāṃprayogika-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節12–17</span></div>
+      <div class="ch-summary">男女の性器の三段階分類（śaśa/vṛṣabha/aśva、mṛgī/vadavā/hastinī）と九種の組み合わせ。情欲の強度による三分類。交合の持続時間の三分類。各分類の組み合わせから生じる二十七種の結合型。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.2</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_2.html">抱擁法</a></span>
+        <span class="ch-title-sk">Āliṅgana-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節18</span></div>
+      <div class="ch-summary">抱擁の八種類——接触型四種（spṛṣṭaka, viddhaka, udghṛṣṭaka, pīḍitaka）と密着型四種（latāveṣṭitaka, vṛkṣādhirūḍhaka, tilataṇḍulaka, kṣīranīraka）。身体各部位による抱擁。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.3</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_3.html">接吻法</a></span>
+        <span class="ch-title-sk">Cumbana-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節19</span></div>
+      <div class="ch-summary">接吻の部位と方法の分類。三種の基本接吻（nimittaka, sphuritaka, ghaṭṭitaka）。接吻の遊戯と賭け。口内接吻の諸形態。各地方の特色ある接吻法。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.4</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_4.html">爪痕法</a></span>
+        <span class="ch-title-sk">Nakha-daśana-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節20</span></div>
+      <div class="ch-summary">爪による愛痕の八種類——ācchuritaka（圧痕）、ardhacandra（半月形）、maṇḍala（円形）等。爪の手入れと理想的な形状。爪痕を残すべき時機と場所。地方による差異。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.5</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_5.html">噛み痕法</a></span>
+        <span class="ch-title-sk">Daśana-ccheda-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節21</span></div>
+      <div class="ch-summary">噛み痕の種類——guṇa（隠れた痕）、ucchūnaka（腫脹痕）、bindu（点痕）、bindu-mālā（点列痕）等。噛むべき部位。珊瑚と宝石の装飾品のような痕の美学。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.6</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_6.html">交合の体位</a></span>
+        <span class="ch-title-sk">Rata-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節22–25</span></div>
+      <div class="ch-summary">体位の基本分類——仰臥位の諸型（uttāna, vijṛmbhitaka, indraṇika 等）。寸法差を補う体位の工夫。立位・四つ這い・側臥位。各地方の習俗。動きの種類（upasṛpta）八種。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.7</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_7.html">打擲法と叫喚法</a></span>
+        <span class="ch-title-sk">Prahaṇana-sītkṛta-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節26–27</span></div>
+      <div class="ch-summary">交合時の打擲（prahaṇana）の四種——平手打ち・拳・楔形・掌底。適切な部位。情熱の叫び（sītkṛta）の種類。南方・西方の激しい習俗。ヴァーツヤーヤナによる暴力の戒め。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.8</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_8.html">女性上位法</a></span>
+        <span class="ch-title-sk">Puruṣāyita-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節28–29</span></div>
+      <div class="ch-summary">女性が上位となる場合の理論的根拠。女性上位の諸体位——saṃpuṭaka、pārśvasaṃpuṭaka、preṅkholita（揺籃式）等。女性の疲労回復のための男性による女性上位の模倣。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.9</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_9.html">口による行為</a></span>
+        <span class="ch-title-sk">Aupariṣṭaka-prakaraṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節30</span></div>
+      <div class="ch-summary">口による行為（aupariṣṭaka）の八段階。第三の性（tṛtīyā-prakṛti）——男性型と女性型。samaya-virodha（規範との矛盾）に関する議論。各地方（サーケータ、ストラーシュトラ等）の習俗。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">2.10</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_2_10.html">交合の開始と終了・愛の種類</a></span>
+        <span class="ch-title-sk">Ratāvasānam / Rata-viśeṣa</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節31</span></div>
+      <div class="ch-summary">交合の前戯と後戯。終了後の振る舞い。月光の下での語らい。愛の四種類——習慣の愛（abhyāsikā）、想像の愛（ābhimānikā）、信仰の愛（saṃprayogajā）、自然の愛（svābhāvikā）。交合における口論の遊び（rata-kalaha）。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第三篇 -->
+<div class="book">
+  <div class="book-header">
+    <span class="book-num">第三篇</span>
+    <div class="book-title-group">
+      <span class="book-title-jp">処女論</span>
+      <span class="book-title-sk">Kanyā-saṃprayuktakam</span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">3.1</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_3_1.html">求婚と婚姻の形式</a></span>
+        <span class="ch-title-sk">Varaṇa-saṃvidhāna / Saṃbandha-niścaya</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節32–33</span></div>
+      <div class="ch-summary">花嫁選びの条件と吉凶の判断。同等の身分（tulya）との婚姻の原則。占星術的考慮。婚姻の八形式のうちの推奨される四形式。友人・親族・仲介者による交渉法。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">3.2</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_3_2.html">処女の信頼獲得</a></span>
+        <span class="ch-title-sk">Kanyā-visrambhaṇa / Saṃvanana</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節34–35</span></div>
+      <div class="ch-summary">婚姻後の最初の三夜間の行動規範。処女の心理的段階に応じた段階的アプローチ。信頼構築のための遊戯と贈物。花輪・香料による接近法。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">3.3</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_3_3.html">少女への接近法</a></span>
+        <span class="ch-title-sk">Bālā-upakramaṇam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節36–37</span></div>
+      <div class="ch-summary">幼い花嫁との段階的親密化。子供の遊び・花摘み・人形遊びを通じた接近。少女の心理的な準備段階。家族の目を避けた秘密の接触法。少女の情緒的徴候の観察。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">3.4</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_3_4.html">一人の求愛者の努力</a></span>
+        <span class="ch-title-sk">Ekapuruṣābhiyogāḥ</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節38–40</span></div>
+      <div class="ch-summary">父親の仲介なしに一人で娘を追求する方法。出会いの場の作り方。幼馴染・乳母・侍女・友人を通じた接近法。少女の態度から好意を読み取る方法。成功の徴候と最終的な結合法。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">3.5</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_3_5.html">婚姻の形式</a></span>
+        <span class="ch-title-sk">Vivāha-yogāḥ</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節41</span></div>
+      <div class="ch-summary">婚姻の各形式の詳説——ブラーフマ婚・ガーンダルヴァ婚・ラークシャサ婚等。駆け落ち婚の手続き。夜間の侵入による秘密婚。各婚姻形式の法的・宗教的地位。シャクンタラーの物語への言及。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第四篇 -->
+<div class="book">
+  <div class="book-header">
+    <span class="book-num">第四篇</span>
+    <div class="book-title-group">
+      <span class="book-title-jp">人妻論</span>
+      <span class="book-title-sk">Bhāryādhikarikam</span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">4.1</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_4_1.html">貞節なる妻の行い</a></span>
+        <span class="ch-title-sk">Ekacāriṇī-vṛttam / Pravāsa-caryā</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節42–43</span></div>
+      <div class="ch-summary">一人の夫に仕える妻（ekacāriṇī）の理想的な振る舞い。家政の管理——庭園・家畜・財務。夫の旅行中の行動規範。宗教的義務と誓願。夫の帰還時の迎え方。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">4.2</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_4_2.html">年長妻・年少妻・再婚妻・後宮の妻</a></span>
+        <span class="ch-title-sk">Jyeṣṭhā / Kaniṣṭhā / Punarbhū / Antaḥpurikā</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節44–49</span></div>
+      <div class="ch-summary">年長の妻と年少の妻の振る舞い。再婚女性（punarbhū）の処世法。寵愛を失った妻の対策。後宮（antaḥpura）の女性たちの生活。複数の妻を持つ夫の行動指針。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第五篇 -->
+<div class="book">
+  <div class="book-header">
+    <span class="book-num">第五篇</span>
+    <div class="book-title-group">
+      <span class="book-title-jp">他人の妻</span>
+      <span class="book-title-sk">Pāradārikam</span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">5.1</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_5_1.html">性格の判定と交際すべき女性</a></span>
+        <span class="ch-title-sk">Strī-puruṣa-śīlāvasthāpanam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節50–51</span></div>
+      <div class="ch-summary">他人の妻への接近が許される場合についての dharma 的議論。ヴァーツヤーヤナの留保。成功しやすい女性の特徴。近づきやすい女性の分類。親しくなるきっかけの作り方。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">5.2</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_5_2.html">接近の方法</a></span>
+        <span class="ch-title-sk">Abhiyogāḥ</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節52–54</span></div>
+      <div class="ch-summary">段階的接近法の詳細。身振り・視線・暗示による意思疎通。侍女を通じた接近。秘密の合図と暗号。贈物の種類と方法。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">5.3</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_5_3.html">心情の観察</a></span>
+        <span class="ch-title-sk">Bhāva-parīkṣā</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節55</span></div>
+      <div class="ch-summary">相手の女性の心情（bhāva）を観察・判定する方法。好意の微細な徴候の読み取り方。態度の変化から推測される心理。接近の成否の判断基準。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">5.4</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_5_4.html">使者の役割</a></span>
+        <span class="ch-title-sk">Dūtī-karmāṇi</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節56</span></div>
+      <div class="ch-summary">使者（dūtī）の種類——双方を知る使者・片方のみの使者・自ら使者となる女性・風を使者とする方法・無言の使者。使者の選定基準と資質。伝言の技法。使者の報酬。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">5.5</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_5_5.html">王の愛欲と後宮の女性</a></span>
+        <span class="ch-title-sk">Īśvara-kāmitam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節57</span></div>
+      <div class="ch-summary">王（īśvara）の特権と責任。後宮の女性への接近法。kāma-upadhā（欲望の試練）による臣下の忠誠検証。王の臣民の妻への接近の是非。歴史上の暴君の事例。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">5.6</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_5_6.html">後宮の秘密</a></span>
+        <span class="ch-title-sk">Antaḥpurikāvṛttam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節58</span></div>
+      <div class="ch-summary">後宮の守護体制。女性たちが外部の男性と接触する方法。後宮内の秘密の伝達法。門番の買収。変装による侵入。他国の後宮の風習。後宮の女性たちの孤独と欲求不満。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第六篇 -->
+<div class="book">
+  <div class="book-header">
+    <span class="book-num">第六篇</span>
+    <div class="book-title-group">
+      <span class="book-title-jp">遊女論</span>
+      <span class="book-title-sk">Vaiśikam</span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">6.1</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_6_1.html">客の選定と交際の理由</a></span>
+        <span class="ch-title-sk">Veśyā-gamana / Gamana-kāraṇa</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節49–50</span></div>
+      <div class="ch-summary">遊女（veśyā）が客を選ぶ基準。客と交わる十六の理由——愛情・恐怖・金銭・快楽・敵意・好奇心等。好ましい客・避けるべき客の分類。遊女の仲介者（piṭhamarda, viṭa, vidūṣaka）の役割。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">6.2</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_6_2.html">客との同棲</a></span>
+        <span class="ch-title-sk">Kānta-anuvṛttam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節51</span></div>
+      <div class="ch-summary">遊女が客と妻のように暮らす方法。信頼獲得のための行動——食事・入浴・就寝の共有。嫉妬の演出。相手の好みへの適応。金銭面の処世。客を「夫」のように扱う技法。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">6.3</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_6_3.html">金銭の獲得と客の追い出し</a></span>
+        <span class="ch-title-sk">Artha-āgama / Vivāha-bheda</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節52–53</span></div>
+      <div class="ch-summary">遊女が客から金銭を引き出すための策略。債務の回収法。不要になった客の追い出し方の段階的方法。客を怒らせて自ら去らせる技法。金銭詐取の巧妙な手口。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">6.4</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_6_4.html">去った客との復縁</a></span>
+        <span class="ch-title-sk">Viśīrṇa-pratisandhānam</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節54</span></div>
+      <div class="ch-summary">別れた客を呼び戻す方法。復縁の動機の分析——金銭・愛情・復讐・将来の利益。遊女の母や仲間による仲介法。復縁を避けるべき場合。再結合のための心理的戦略。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">6.5</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_6_5.html">利益の種類と特殊な利益</a></span>
+        <span class="ch-title-sk">Lābha-viśeṣa</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節55–56</span></div>
+      <div class="ch-summary">利益（lābha）の体系的分類——金銭的利益・付随的利益・疑惑的利益。二人の客の間での選択基準。利益の大小を計る方法。将来の利益と現在の利益の比較衡量。特殊状況での判断法。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">6.6</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_6_6.html">利益と不利益の考察・遊女の種類</a></span>
+        <span class="ch-title-sk">Arthānarthānubandha-saṃśaya-vicāra / Veśyā-viśeṣa</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節57–58</span></div>
+      <div class="ch-summary">利益に随伴する不利益（anartha）の十の原因。利益と不利益の六種の結合型。純粋な疑惑（śuddha-saṃśaya）と混合的疑惑（saṃkīrṇa-saṃśaya）の分析。遊女の九種の分類——kumbhadāsī（壺女奴隷）から rūpajīvā（容姿で生きる者）まで。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第七篇 -->
+<div class="book">
+  <div class="book-header">
+    <span class="book-num">第七篇</span>
+    <div class="book-title-group">
+      <span class="book-title-jp">秘術篇</span>
+      <span class="book-title-sk">Aupaniṣadikam</span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">7.1</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_7_1.html">魅力増進法・呪縛法・精力増強法</a></span>
+        <span class="ch-title-sk">Subhagaṃkaraṇa / Vaśīkaraṇa / Vṛṣya-yoga</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節59–61</span></div>
+      <div class="ch-summary">通常の方法では目的を達しえない場合の秘術（upaniṣad）。魅力を高める薬草・塗香・点眼薬。呪縛法——dhattūra・manaḥśilā 等による秘薬。三種の神秘的塗香（devakānta, gandharvakānta, nāgakānta）。遊女の娘の婚姻法。精力増強の食餌療法と薬方。倫理的制約——疑わしきもの・有害なもの・殺生に関わるもの・不浄物の禁止。</div>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="ch-num">7.2</div>
+    <div class="ch-body">
+      <div class="ch-titles">
+        <span class="ch-title-jp"><a href="kamasutra_7_2.html">情熱回復法・増大法・種々の秘方と結語</a></span>
+        <span class="ch-title-sk">Naṣṭa-rāga-pratyānayana / Vardhana-yoga / Citra-yoga</span>
+      </div>
+      <div class="ch-meta"><span class="ch-prak">節62–64</span></div>
+      <div class="ch-summary">衰えた情欲の回復法——手技・口技・補助器具（apadravya）。補助器具の種類と素材。南方の穿孔法（vyadhana-yoga）の詳細。男根の物理的増大法。種々の雑方——独占の秘薬・情欲消失剤・染毛法・透明化の術・幻術。結語八偈——ヴァーツヤーヤナの宣言：「この書は梵行と集中によって著された。世間の営みのためであり、欲望の追求が目的ではない。」</div>
+    </div>
+  </div>
+</div>
+
+<div class="sources">
+  <h3>底本と参考文献</h3>
+  <p><strong>主要底本：</strong>GRETIL（Göttingen Register of Electronic Texts in Indian Languages）所収、Vātsyāyanakāmasūtra テキスト。IAST 表記。</p>
+  <p><strong>注釈底本：</strong>Dāmodara Śāstrī 編『Kāmasūtra with Jayamaṅgalā commentary of Yaśodhara』Chaukhamba Sanskrit Series, Benares, 1929年。OCR テキスト使用。</p>
+  <p><strong>注釈について：</strong>各章末の「注」は、ヤショーダラ（Yaśodhara, 13世紀）の注釈『ジャヤマンガラー』（Jayamaṅgalā）からの重要事項の抄録であり、注釈全文の対訳ではない。原語はすべて IAST 方式で表記した。</p>
+</div>
+</body>
+</html>

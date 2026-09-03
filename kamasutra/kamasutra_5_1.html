@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 5.1</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600&family=Shippori+Mincho:wght@400;600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --bg-card: #fffdf8;
+  --text: #2c2418;
+  --text-secondary: #6b5d4d;
+  --accent: #a0522d;
+  --accent-light: #c4845c;
+  --border: #ddd5c8;
+  --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3;
+  --note-bg: #f2ede4;
+  --highlight: #8b4513;
+  --table-header: #e8dfd2;
+  --table-stripe: #faf7f1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612;
+    --bg-card: #242019;
+    --text: #e0d5c4;
+    --text-secondary: #a89880;
+    --accent: #c4845c;
+    --accent-light: #d4a07a;
+    --border: #3d362c;
+    --border-light: #302a22;
+    --sanskrit-bg: #1e1a14;
+    --note-bg: #2a2520;
+    --highlight: #d4a07a;
+    --table-header: #2e2822;
+    --table-stripe: #221e18;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a1612;
+  --bg-card: #242019;
+  --text: #e0d5c4;
+  --text-secondary: #a89880;
+  --accent: #c4845c;
+  --accent-light: #d4a07a;
+  --border: #3d362c;
+  --border-light: #302a22;
+  --sanskrit-bg: #1e1a14;
+  --note-bg: #2a2520;
+  --highlight: #d4a07a;
+  --table-header: #2e2822;
+  --table-stripe: #221e18;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+  line-height: 1.9;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+header h1 {
+  font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 0.3rem;
+  text-wrap: balance;
+}
+
+header .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin: 0.3rem 0;
+}
+
+header .meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.prakarana {
+  margin-bottom: 2.5rem;
+}
+
+.prakarana-header {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.prakarana-header h2 {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.prakarana-header .number {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.sutra-block {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 0;
+}
+
+.sutra-block:last-child {
+  border-radius: 0 0 6px 6px;
+}
+
+.sutra-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sutra-row:last-child {
+  border-bottom: none;
+}
+
+.sutra-num {
+  grid-column: 1 / -1;
+  background: var(--note-bg);
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.sanskrit {
+  padding: 0.5rem 1rem;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--sanskrit-bg);
+  border-right: 1px solid var(--border-light);
+}
+
+.japanese {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.note-section {
+  background: var(--note-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.note-section h3 {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+}
+
+.note-section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.note-section li {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.note-section li strong {
+  color: var(--text);
+}
+
+.verse-block {
+  background: var(--sanskrit-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.verse-block .verse-sanskrit {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.verse-block .verse-japanese {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  background: var(--table-header);
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+td {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tr:nth-child(even) td {
+  background: var(--table-stripe);
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  body { padding: 1rem; }
+  header h1 { font-size: 1.3rem; }
+  .sutra-row { grid-template-columns: 1fr; }
+  .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>कामसूत्र — Kāmasūtra 5.1</h1>
+  <div class="subtitle">第五篇 第一章｜Pāradārika — Prathamo 'dhyāyaḥ</div>
+  <div class="meta">
+    他人の妻について：男女の性質・退却の原因・成功する男・容易に得られる女<br>
+    prakaraṇa 39–42｜sūtra 5.1.1–5.1.56
+  </div>
+</header>
+
+<!-- ===== Prakaraṇa 39: Strī-puruṣa-śīlāvasthāpana ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第三十九節　男女の性質の確定（Strī-puruṣa-śīlāvasthāpana）</h2>
+    <span class="number">prakaraṇa 39</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.1</div>
+      <div class="sanskrit">vyākhyāta-kāraṇāḥ para-parigrahopagamāḥ.</div>
+      <div class="japanese">他人の妻に近づく理由はすでに説かれている。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.2</div>
+      <div class="sanskrit">teṣu sādhyatvam an:atyayaṃ gamyatvam āyatiṃ vṛttiṃ cādita eva parīkṣeta.</div>
+      <div class="japanese">それら（他人の妻）について、達成の可能性（sādhyatva）、危険のなさ（anatyaya）、近づき得ること（gamyatva）、将来への影響（āyati）、および自らの行動（vṛtti）を、初めからよく調べるべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.3</div>
+      <div class="sanskrit">yadā tu sthānāt sthānāntaraṃ kāmaṃ pratipadyamānaṃ paśyet tadātma-śarīropaghāta-trāṇārthaṃ para-parigrahān abhyupagacchet.</div>
+      <div class="japanese">しかし欲望（kāma）が段階から段階へと進んでゆくのを見れば、自らの身体の害を防ぐために他人の妻に近づくべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.4–5</div>
+      <div class="sanskrit">daśa tu kāmasya sthānāni. [1]cakṣuḥ-prītir [2]manaḥ-saṅgaḥ [3]saṃkalpotpattir [4]nidrācchedas [5]tanutā [6]viṣayebhyo vyāvṛttir [7]lajjā-pranāśa [8]unmādo [9]mūrcchā [10]maraṇam iti teṣāṃ liṅgāni.</div>
+      <div class="japanese">欲望には十の段階がある。[1]目の喜び（cakṣuḥ-prīti）、[2]心の執着（manaḥ-saṅga）、[3]決意の生起（saṃkalpotpatti）、[4]不眠（nidrāccheda）、[5]痩せ（tanutā）、[6]感覚対象からの離脱（viṣayebhyo vyāvṛtti）、[7]恥の喪失（lajjā-pranāśa）、[8]狂気（unmāda）、[9]卒倒（mūrcchā）、[10]死（maraṇa）。これらがその徴候である。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.6–7</div>
+      <div class="sanskrit">tatrākṛtito lakṣaṇataś ca yuvatyāḥ śīlaṃ satyaṃ śaucaṃ sādhyatāṃ caṇḍavegatāṃ ca lakṣayed ity ācāryāḥ. vyabhicārād ākṛti-lakṣaṇa-yogānām iṅgitākārābhyām eva pravṛttir boddhavyā yoṣita iti vātsyāyanaḥ.</div>
+      <div class="japanese">容姿（ākṛti）と身体的特徴（lakṣaṇa）から、若い女の性質（śīla）・誠実さ（satya）・潔白さ（śauca）・達成しやすさ（sādhyatā）・欲望の強さ（caṇḍavegatā）を見極めるべきである、と師たちは言う。しかし容姿と特徴の対応は不確かであるから、仕草（iṅgita）と態度（ākāra）からのみ女の傾向を知るべきである、とヴァーツヤーヤナは言う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.8</div>
+      <div class="sanskrit">yaṃ kiṃ cid ujjvalaṃ puruṣaṃ dṛṣṭvā strī kāmayate. tathā puruṣo 'pi yoṣitām. apekṣayā tu na pravartate iti goṇikāputraḥ.</div>
+      <div class="japanese">どんな輝かしい（ujjvala）男を見ても女は欲する。男もまた女に対して同様である。しかし考慮（apekṣā）のゆえに行動には移らない、とゴーニカープトラは言う。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.9–12</div>
+      <div class="sanskrit">tatra striyaṃ prati viśeṣaḥ. na strī dharmam a:dharmaṃ cāpekṣate kāmayata eva. kāryāpekṣayā tu nābhiyuṅkte. svabhāvāc ca puruṣeṇābhiyujyamānā cikīrṣanty api vyāvartate. punaḥ punar abhiyuktā siddhyati.</div>
+      <div class="japanese">女に関しては特別な事情がある。女は法（dharma）も非法（adharma）も顧みず、ただ欲する。しかし世間の考慮から行動に移さない。本性上、男に迫られても望みながらも退く。しかし繰り返し迫られれば応じる。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.13–15</div>
+      <div class="sanskrit">puruṣas tu dharma-sthitim ārya-samayaṃ cāpekṣya kāmayamāno 'pi vyāvartate. tathā-buddhiś cābhiyujyamāno 'pi na siddhyati. niṣ:kāraṇam abhiyuṅkte. abhiyujyāpi punar nābhiyuṅkte. siddhāyāṃ ca mādhyasthyaṃ gacchati.</div>
+      <div class="japanese">男は法の規範（dharma-sthiti）と良家の慣行（ārya-samaya）を考慮して、欲しながらも退く。そのような心持ちの者は迫られても応じない。理由なく迫り、迫っても再び迫らず、成就しても無関心になる。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.16</div>
+      <div class="sanskrit">su:labhām avamanyate. dur:labhām ākaṅkṣata iti prāyovādaḥ.</div>
+      <div class="japanese">容易に得られる者を軽んじ、得がたい者を望む。これが一般的な言い方（prāyovāda）である。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>para-parigrahopagama の正当化</strong>（5.1.1）：nāyikā-vimarśa（第一篇の女主人公の考察）で既に述べられた理由を指す。快楽と子を除く清浄な動機のみが認められる。</li>
+      <li><strong>kāma の十段階</strong>（5.1.5）：Yaśodhara は各段階を詳述する — cakṣuḥ-prīti（女を見て目が潤む）から始まり、manaḥ-saṅga（対象を得られないときの心の執着）、saṃkalpa（どう得るか・得たらどうするかの計画）、nidrāccheda（計画で眠れなくなる）、tanutā（眠れないことによる痩身）、viṣayebhyo vyāvṛtti（他の一切の対象への無関心）、lajjā-pranāśa（師にも恥じない、財を失っても恐れない）、unmāda（恥も恐れもなくなった後の狂気）、mūrcchā（心身の不調）、maraṇa（命を落とす）へと至る。</li>
+      <li><strong>ākṛti-lakṣaṇa vs. iṅgitākāra</strong>（5.1.6–7）：先師たちは体つきや相貌から性質を判断できるとしたが、Vātsyāyana はこれを否定し、仕草と態度のみが信頼できるとする。vyabhicāra（不確実性）のため。</li>
+      <li><strong>男女の性質の違い</strong>：女は dharma-adharma を考慮しないが kārya-apekṣā（世間体）で行動しない。男は adṛṣṭa-doṣa（見えない罪）と dṛṣṭa-doṣa（世間的な非難）の両方を見る。punaḥ punar abhiyuktā siddhyati（繰り返し迫れば成就する）は女の性質。</li>
+      <li><strong>Goṇikāputra の見解</strong>（5.1.8）：男女とも ujjvala（輝かしい）者を見れば欲するが、apekṣā（考慮）のため行動しない。ujjvala は varṇa-veṣa（容姿と装い）の両面での輝き。</li>
+    </ul>
+  </div>
+
+  <div class="note-section">
+    <h3>📊 欲望の十段階（Daśa kāma-sthānāni）</h3>
+    <div class="table-wrap">
+      <table>
+        <tr><th>段階</th><th>Sanskrit</th><th>日本語</th><th>徴候</th></tr>
+        <tr><td>1</td><td>cakṣuḥ-prīti</td><td>目の喜び</td><td>見て潤んだ目になる</td></tr>
+        <tr><td>2</td><td>manaḥ-saṅga</td><td>心の執着</td><td>得られない対象への執念</td></tr>
+        <tr><td>3</td><td>saṃkalpotpatti</td><td>決意の生起</td><td>獲得の計画を巡らす</td></tr>
+        <tr><td>4</td><td>nidrāccheda</td><td>不眠</td><td>計画で眠れなくなる</td></tr>
+        <tr><td>5</td><td>tanutā</td><td>痩身</td><td>不眠による身体の衰え</td></tr>
+        <tr><td>6</td><td>viṣayebhyo vyāvṛtti</td><td>感覚対象からの離脱</td><td>他の一切に無関心</td></tr>
+        <tr><td>7</td><td>lajjā-pranāśa</td><td>恥の喪失</td><td>師にも恥じず、財を恐れず</td></tr>
+        <tr><td>8</td><td>unmāda</td><td>狂気</td><td>恥も恐れも消えた後の狂態</td></tr>
+        <tr><td>9</td><td>mūrcchā</td><td>卒倒</td><td>心身の不調・失神</td></tr>
+        <tr><td>10</td><td>maraṇa</td><td>死</td><td>命を落とす</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 40: Vyāvartana-kāraṇāni ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第四十節　退却の原因（Vyāvartana-kāraṇāni）</h2>
+    <span class="number">prakaraṇa 40</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.17–22</div>
+      <div class="sanskrit">tatra vyāvartana-kāraṇāni. patyāv anurāgaḥ. apatyāpekṣā. atikrāntavayastvam. duḥkhābhibhavaḥ. virahān:upalambhaḥ.</div>
+      <div class="japanese">そこで退却の原因は以下の通りである。[1]夫への愛情（patyāv anurāga）。[2]子への考慮（apatyāpekṣā）。[3]年齢が過ぎていること（atikrānta-vayastva）。[4]苦痛に圧倒されること（duḥkhābhibhava）。[5]離別の機会がないこと（virahānupalambha）。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.23–28</div>
+      <div class="sanskrit">avajñayopamantrayata iti krodhaḥ. a:pratarkya iti saṃkalpa-varjanam. gamiṣyatīty an:āyatir anyatra prasakta-matir iti ca. asaṃvṛtākāra ity udvegaḥ. mitreṣu nisṛṣṭa-bhāva iti teṣv apekṣā. śuṣkābhiyogīty āśaṅkā.</div>
+      <div class="japanese">[6]「軽蔑して誘っている」という怒り（krodha）。[7]「見通せない」と決意を避けること（saṃkalpa-varjana）。[8]「去ってしまう」という将来への不安（anāyati）、または「別の者に夢中」ということ。[9]「態度を隠さない」という動揺（udvega）。[10]「友人たちに打ち明けている」という友人への警戒（apekṣā）。[11]「実のない求愛者だ」という疑い（āśaṅkā）。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.29–36</div>
+      <div class="sanskrit">tejasvīti sādhvasam. caṇḍa-vegaḥ samartho veti bhayaṃ mṛgyāḥ. nāgarakaḥ kalāsu vicakṣaṇa iti vrīḍā. sakhitvenopacarita iti ca. a:deśa-kāla-jña ity asūyā. paribhava-sthānam ity a:bahu-mānaḥ. ākārito 'pi nāvabudhyata ity avajñā. śaso manda-vega iti ca hastinyāḥ.</div>
+      <div class="japanese">[12]「威厳がある」という畏怖（sādhvasa）。[13]「激しく有能だ」という鹿型（mṛgī）の女の恐怖（bhaya）。[14]「都会人で技芸に通じている」という恥じらい（vrīḍā）。[15]「友人として接する」ということ。[16]「場所と時を知らない」という不快（asūyā）。[17]「侮辱の的になる」という不信（abahu-māna）。[18]「合図しても気づかない」という軽蔑（avajñā）。[19]「兎型（śaśa）で弱い」という象型（hastinī）の女の態度。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.37–42</div>
+      <div class="sanskrit">matto 'sya mā bhūd an:iṣṭam ity anukampā. ātmani doṣa-darśanān nirvedaḥ. viditā satī sva-jana-bahiṣ:kṛtā bhaviṣyāmīti bhayam. palita ity an:ādaraḥ. patyā prayuktaḥ parīkṣata iti vimarśaḥ. dharmāpekṣā ceti.</div>
+      <div class="japanese">[20]「酔って彼に悪いことが起こるかも」という同情（anukampā）。[21]自分に欠点を見て嫌悪（nirveda）。[22]「知られれば一族から追放される」という恐怖（bhaya）。[23]「白髪だ」という無関心（anādara）。[24]「夫に遣わされて試している」という猜疑（vimarśa）。[25]法への配慮（dharmāpekṣā）。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.43–49</div>
+      <div class="sanskrit">teṣu yadātmani lakṣayet tadādita eva paricchindyāt. āryatva-yuktāni rāga-vardhanāt. a:śakti-jāny upāya-pradarśanāt. bahu-māna-kṛtāny ati:paricayāt. paribhava-kṛtāny ati:śauṇḍīryād vaicakṣaṇyāc ca. tat-paribhava-jāni praṇatyā. bhaya-yuktāny āśvasanād iti.</div>
+      <div class="japanese">これらのうち自分について認められるものは、初めから断つべきである。[1]高貴さに基づくものは情熱（rāga）を増すことで。[2]無力に基づくものは手段（upāya）を示すことで。[3]尊敬に基づくものは過度の親しみ（atiparicaya）で。[4]侮辱に基づくものは過度の勇敢さと巧みさで。[5]侮蔑に基づくものは平伏して。[6]恐怖に基づくものは安心させることで。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>退却原因の分類</strong>：25の原因は女の側にある心理的障壁であり、それぞれに対処法がある。Yaśodhara は各原因を具体的に解説する。</li>
+      <li><strong>mṛgī と hastinī の恐怖</strong>（5.1.30, 36）：鹿型（mṛgī）の女は激しい（caṇḍa-vega）男を恐れ、象型（hastinī）の女は兎型（śaśa）で弱い（manda-vega）男を軽蔑する。身体的適合の問題。</li>
+      <li><strong>対処法の六種</strong>（5.1.43–49）：(1) āryatva-yukta（高貴さ由来）→ rāga-vardhana（情熱増加）、(2) aśakti-ja（無力由来）→ upāya-pradarśana（手段提示）、(3) bahu-māna-kṛta（尊敬由来）→ atiparicaya（過度の馴れ親しみ）、(4) paribhava-kṛta（軽蔑由来）→ atiśauṇḍīrya（大胆さ）と vaicakṣaṇya（巧みさ）、(5) tat-paribhava-ja（侮蔑由来）→ praṇati（跪拝）、(6) bhaya-yukta（恐怖由来）→ āśvasana（安心させること）。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 41: Strīṣu siddhāḥ puruṣāḥ ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第四十一節　女に成功する男たち（Strīṣu siddhāḥ puruṣāḥ）</h2>
+    <span class="number">prakaraṇa 41</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.50</div>
+      <div class="sanskrit">puruṣās tv amī prāyeṇa siddhāḥ — kāmasūtra-jñaḥ, kathākhyāna-kuśalo, bālyāt prabhṛti saṃsṛṣṭaḥ, pravṛddha-yauvanaḥ, krīḍana-karmādināgata-viśvāsaḥ, preṣaṇasya kartā, ucita-saṃbhāṣaṇaḥ, priyasya kartā, anyasya bhūta-pūrvo dūto, marma-jña, uttamayā prārthitaḥ, sakhyā pracchannaṃ saṃsṛṣṭaḥ, subhagābhikhyātaḥ, saha-saṃvṛddhaḥ, prātiveśyaḥ, kāma-śīlas tathā-bhūtaś ca paricārako, dhātreyikā-parigraho, nava-varakaḥ, prekṣodyāna-tyāga-śīlo, vṛṣa iti siddha-pratāpaḥ, sāhasikaḥ, śūro, vidyā-rūpa-guṇopabhogaiḥ patyur atiśayitā, mahārha-veṣopacāraś ceti.</div>
+      <div class="japanese">次の男たちは概して女に成功する ── カーマスートラに通じた者、物語に巧みな者、幼少時から親しい者、青年期を過ぎた者、遊戯によって信頼を得た者、使者の役をする者、適切な会話ができる者、好意を示す者、かつて別の女の仲介者であった者、急所（marman）を知る者、高貴な女に求められた者、友人の女とひそかに交わった者、幸運で名高い者、ともに育った者、隣人、好色な性質の召使い、乳母の息子、新婚者、見物・庭園・贈り物を好む者、牡牛（vṛṣa）と呼ばれるほどの名声ある者、大胆な者、勇者、学問・容姿・徳・享楽において夫に勝る者、華麗な装いと振る舞いの者。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>kāmasūtra-jña</strong>：本書に通じた者が第一に挙げられる。理論的知識が実践を導く。</li>
+      <li><strong>marma-jña</strong>（急所を知る者）：女の心理的弱点を見抜く能力。</li>
+      <li><strong>dhātreyikā-parigraha</strong>：乳母の息子。幼少時から共に育ち、自然な親密さがある。</li>
+      <li><strong>vṛṣa</strong>（牡牛）：siddha-pratāpa（証明された威力）を持つ者。性的能力の名声。</li>
+      <li><strong>patyur atiśayita</strong>：夫を学問（vidyā）・容姿（rūpa）・徳（guṇa）・享楽（upabhoga）のすべてで凌駕する者。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Prakaraṇa 42: Ayatna-sādhyā yoṣitaḥ ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>第四十二節　容易に得られる女たち（Ayatna-sādhyā yoṣitaḥ）</h2>
+    <span class="number">prakaraṇa 42</span>
+  </div>
+  <div class="sutra-block">
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.51</div>
+      <div class="sanskrit">yathātmanaḥ siddhatāṃ paśyed evaṃ yoṣito 'pi.</div>
+      <div class="japanese">自分の成功しやすさを見るように、女の側についても見るべきである。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.52</div>
+      <div class="sanskrit">a:yatna-sādhyā yoṣitas tv imāḥ — abhiyoga-mātra-sādhyāḥ: dvāra-deśāvasthāyinī, prāsādād rāja-mārgāvalokinī, taruṇa-prātiveśya-gṛhe goṣṭhī-yojinī, satata-prekṣiṇī, prekṣitā pārśva-vilokinī, niṣ:kāraṇaṃ sa:patnyādhivinnā, bhartṛ-dveṣiṇī vidviṣṭā ca, parihāra-hīnā, nir:apatyā.</div>
+      <div class="japanese">努力せずに得られる女は次の通りである ── ただ誘うだけで得られる者：[1]戸口に立ち続ける者、[2]高殿から大通りを見下ろす者、[3]若い隣人の家で集まりを催す者、[4]絶えず見つめる者、[5]見つめられると横を向く者、[6]理由なく共妻に替えられた者、[7]夫を嫌う者・夫に嫌われている者、[8]遠慮のない者、[9]子のない者。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.53</div>
+      <div class="sanskrit">jñāti-kula-nityā, vipannāpatyā, goṣṭhī-yojinī, prīti-yojinī, kuśīlava-bhāryā, mṛta-patikā bālā, daridrā bahūpabhogā, jyeṣṭha-bhāryā bahu-devarakā, bahu-māninī nyūna-bhartṛkā, kauśalābhimāninī bhartur maurkhyeṇodvignā, a:viśeṣatayā lobhena.</div>
+      <div class="japanese">[10]常に親族の家にいる者、[11]子を亡くした者、[12]集まり好きの者、[13]愛情に飢えた者、[14]旅芸人の妻、[15]夫を亡くした若い女、[16]貧しく多くの享楽を求める者、[17]年長の妻で小姑が多い者、[18]自尊心が高く劣った夫を持つ者、[19]技芸に誇りがあり夫の愚かさに悩む者、[20]無関心と貪欲のゆえに。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.54</div>
+      <div class="sanskrit">kanyā-kāle yatnena vāritā kathaṃ cid a:labdhābhiyuktā ca sā tadānīm. samāna-buddhi-śīla-medhā-pratipatti-sātmyā. prakṛtyā pakṣapātinī. an:aparādhe vimānitā. tulya-rūpābhiś cādhaḥ kṛtā. proṣita-patiketi.</div>
+      <div class="japanese">[21]娘時代に無理に引き離された者、何とか得られなかった者で今その機会がある者。[22]知性・性格・理解力が同質の者。[23]本性から偏愛する者。[24]罪なくして辱められた者。[25]同等の容姿の者に見下された者。[26]夫が旅に出ている者。</div>
+    </div>
+
+    <div class="sutra-row">
+      <div class="sutra-num">5.1.54 (続)</div>
+      <div class="sanskrit">īrṣyālu-pūti-cokṣa-klība-dīrgha-sūtra-kāpuruṣa-kubja-vāmana-virūpa-maṇikāra-grāmya-dur:gandhi-rogi-vṛddha-bhāryāś ceti.</div>
+      <div class="japanese">そして、嫉妬深い・不潔な・潔癖すぎる・性的不能の・のろまな・卑怯な・背の曲がった・矮小な・醜い・宝石商の・粗野な・悪臭のする・病気の・老いた夫の妻たち。</div>
+    </div>
+
+  </div>
+
+  <div class="note-section">
+    <h3>📝 Jayamaṅgalā 註釈要点</h3>
+    <ul>
+      <li><strong>分類の意図</strong>：これは「すべき」ことの教えではなく、事実の観察（prāyovāda）として記される。実際の行動は dharma-artha-kāma の三目的の衡量による。</li>
+      <li><strong>maṇikāra-bhāryā</strong>（宝石商の妻）：Yaśodhara は宝石商が常に他人の家を訪れる職業であるため、妻が放置されやすいと説明。</li>
+      <li><strong>proṣita-patikā</strong>（夫が旅中の女）：八種の nāyikā（女主人公）の一つに数えられる重要な類型。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 結偈 ===== -->
+<section class="prakarana">
+  <div class="prakarana-header">
+    <h2>結偈（Ślokau）</h2>
+    <span class="number">5.1.55–56</span>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      5.1.55 icchā svabhāvato jātā kriyayā paribṛṃhitā |<br>
+      buddhyā saṃśodhitodvegā sthirā syād an:apāyinī ||
+    </div>
+    <div class="verse-japanese">
+      欲望（icchā）は本性から生じ、行為によって育まれ、<br>
+      知性によって不安を浄めれば、堅固で失われないものとなる。
+    </div>
+  </div>
+
+  <div class="verse-block">
+    <div class="verse-sanskrit">
+      5.1.56 siddhatām ātmano jñātvā liṅgāny unnīya yoṣitām |<br>
+      vyāvṛtti-kāraṇocchedī naro yoṣitsu sidhyati ||
+    </div>
+    <div class="verse-japanese">
+      自らの成功しやすさを知り、女たちの徴候を見極め、<br>
+      退却の原因を断ち切る男は、女において成就する。
+    </div>
+  </div>
+</section>
+
+<footer>
+  Vātsyāyanīya Kāmasūtra 5.1 — Bilingual Sanskrit (IAST) – Japanese Translation<br>
+  Commentary notes based on Yaśodhara's Jayamaṅgalā (Chaukhamba 1929 ed.)<br>
+  第五篇第一章 完
+</footer>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

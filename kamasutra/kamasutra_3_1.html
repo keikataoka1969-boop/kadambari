@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 3.1</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --bg-card: #fffdf8;
+  --text: #2c2418;
+  --text-secondary: #6b5d4d;
+  --accent: #a0522d;
+  --accent-light: #c4845c;
+  --border: #ddd5c8;
+  --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3;
+  --note-bg: #f2ede4;
+  --highlight: #8b4513;
+  --table-header: #e8dfd2;
+  --table-stripe: #faf7f1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612;
+    --bg-card: #242019;
+    --text: #e8e0d4;
+    --text-secondary: #a89a88;
+    --accent: #d4845a;
+    --accent-light: #b8734e;
+    --border: #3d362c;
+    --border-light: #2e2820;
+    --sanskrit-bg: #1e1a15;
+    --note-bg: #2a2520;
+    --highlight: #e0935a;
+    --table-header: #2e2820;
+    --table-stripe: #1e1a15;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #1a1612;
+  --bg-card: #242019;
+  --text: #e8e0d4;
+  --text-secondary: #a89a88;
+  --accent: #d4845a;
+  --accent-light: #b8734e;
+  --border: #3d362c;
+  --border-light: #2e2820;
+  --sanskrit-bg: #1e1a15;
+  --note-bg: #2a2520;
+  --highlight: #e0935a;
+  --table-header: #2e2820;
+  --table-stripe: #1e1a15;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  line-height: 1.9;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-wrap: balance;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--highlight);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sutra-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+}
+
+.sutra-num {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-family: 'Noto Serif Devanagari', serif;
+}
+
+.sanskrit {
+  font-family: 'Noto Serif Devanagari', 'Noto Serif', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--sanskrit-bg);
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.japanese {
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  font-size: 0.98rem;
+  line-height: 1.95;
+  color: var(--text);
+}
+
+.note-box {
+  background: var(--note-bg);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.note-box-title {
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.verse-block {
+  background: var(--sanskrit-bg);
+  border: 1px solid var(--border-light);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+.verse-block .sanskrit {
+  background: transparent;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+th {
+  background: var(--table-header);
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+tr:nth-child(even) td {
+  background: var(--table-stripe);
+}
+
+.section-intro {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.colophon {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .sutra-pair {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  body { padding: 1rem; }
+  h1 { font-size: 1.35rem; }
+}
+</style>
+</head>
+<body>
+
+<h1>第三篇 第一章 花嫁選びの手続きと婚姻の確定</h1>
+<div class="subtitle">
+  Kanyā-saṃprayuktakam — Adhyāya 1: Varaṇa-saṃvidhānam, Saṃbandha-niścayaḥ<br>
+  第三篇（Kanyā-saṃprayuktaka・未婚女性篇）第一章（第二十三・二十四prakaraṇa）
+</div>
+
+<p class="section-intro">第三篇は未婚女性（kanyā）との関わりを扱う。第一章は花嫁選び（varaṇa）の手続きと、適切な婚姻相手の条件を詳述し、さらに婚姻の種類と格差について述べる。</p>
+
+<!-- ========== Prakarana 23: Varaṇa-saṃvidhāna ========== -->
+<h2>第一節 花嫁選びの手続き（Varaṇa-saṃvidhāna-prakaraṇam — 第23prakaraṇa）</h2>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.1</div>
+    <div class="sanskrit">sa:varṇāyām an:anyapūrvāyāṃ śāstrato 'dhigatāyāṃ dharmo 'rthaḥ putrāḥ saṃbandhaḥ pakṣa-vṛddhir an:upaskṛtā ratiś ca.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.1</div>
+    <div class="japanese">同じヴァルナ（sa-varṇā）の、他の者に未だ属していない（ananyapūrvā）、教典に従って娶った女性からは——法（dharma）、財（artha）、息子たち（putrāḥ）、姻戚関係（saṃbandha）、党派の増大（pakṣa-vṛddhi）、そして偽りなき歓び（anupaskṛtā rati）が得られる。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  ananyapūrvā は「心・行為・言葉のいずれにおいても他の男に与えられていない」の意。これは嫡出の子（pragūḍham apatyam）の父性を確実にするためとされる。anupaskṛtā rati は「作為のない歓び」で、深い信頼（viśvāsātiśaya）から生じるもの。savarṇā の定義は brāhmaṇa 等それぞれの身分に応じた同じヴァルナの女性。
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.2</div>
+    <div class="sanskrit">tasmāt kanyām abhijanopetāṃ mātā-pitṛmatīṃ tri-varṣāt prabhṛti nyūna-vayasaṃ ślāghyācāre dhanavati pakṣavati kule saṃbandhi-priye saṃbandhibhir ākule prasūtāṃ prabhūta-mātṛ-pitṛ-pakṣāṃ rūpa-śīla-lakṣaṇa-saṃpannām a:nyūnādhikā:vinaṣṭa-danta-nakha-karṇa-keśākṣi-stanīm a:rogi-prakṛti-śarīrāṃ tathā:vidha eva śrutavāñ śīlayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.2</div>
+    <div class="japanese">それゆえ、花嫁として以下の女性を心に留めるべきである——良家の出（abhijanopetā）で、両親が健在で、〔自分より〕三歳以上年下で、賞賛される行いの家・裕福な家・有力な一族に生まれ、姻戚を大切にし、姻戚に囲まれ、父方・母方ともに多くの親族を持ち、容姿・性格・吉相に恵まれ、歯・爪・耳・髪・目・乳房に過不足も欠損もなく、生来健康な体の持ち主を。そして同様の資質を持つ学識ある男が、その女性を心に留める（śīlayet）べきである。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  śīlana（心に留めること）は十の観点から行う——abhijanataḥ（家柄）、sanāthataḥ（後見人の有無）、vayasaḥ（年齢）、kulācārataḥ（家の風習）、dravyataḥ（財産）、anurāgataḥ（愛情）、rūpataḥ（容姿）、śīlataḥ（性格）、bāhya-lakṣaṇataḥ（外的吉相）、ārogyataḥ（健康）。tri-varṣāt nyūna-vayasam は「三年以上年下」の意。lakṣaṇa は avaidhavyādi-sūcaka（非寡婦であること等を示す吉相）。śrutavān は「学識ある者」——相応しくなければ到達不可能な存在となる。
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.3</div>
+    <div class="sanskrit">yā gṛhītvā kṛtinam ātmānaṃ manyeta na ca samānair nindyeta tasyāṃ pravṛttir iti ghoṭakamukhaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.3</div>
+    <div class="japanese">娶ることで自分を満足（kṛtin）と感じ、同輩から非難されることのない女性——その女性に対して求婚すべきである、とGhoṭakamukhaは言う。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.4–5</div>
+    <div class="sanskrit">tasyā varaṇe mātā-pitarau saṃbandhinaś ca prayateran. mitrāṇi ca gṛhīta-vākyāny ubhaya-saṃbaddhāni. tāny anyeṣāṃ varayitṝṇāṃ doṣān pratyakṣān āgamikāṃś ca śrāvayeyuḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.4–5</div>
+    <div class="japanese">その娘の求婚にあたっては、〔男の〕両親と親族が尽力すべきである。そして両家に繋がりのある、言葉を預かった（gṛhīta-vākya）友人たちが。彼ら友人たちは、他の求婚者の欠点——目に見えるもの（pratyakṣa）も、伝聞によるもの（āgamika）も——を伝えるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.6</div>
+    <div class="sanskrit">kaulān pauruṣeyān abhiprāya-saṃvardhakāṃś ca nāyaka-guṇān. viśeṣataś ca kanyā-mātur anukūlāṃs tadātvāyati-yuktān darśayeyuḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.6</div>
+    <div class="japanese">〔友人たちは〕男の長所を示すべきである——家柄に由来するもの（kaula）、個人の努力によるもの（pauruṣeya）、〔相手の両親の〕意向を増進させるもの。とりわけ花嫁の母に好ましい、現在と将来に関わる利点を示すべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.7–8</div>
+    <div class="sanskrit">daiva-cintaka-rūpaś ca śakuna-nimitta-graha-lagna-bala-lakṣaṇa-darśanena nāyakasya bhaviṣyantam artha-saṃyogaṃ kalyāṇam anuvarṇayet. apare punar asyānyato viśiṣṭena kanyā-lābhena kanyā-mātaram unmādayeyuḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.7–8</div>
+    <div class="japanese">占星術師の姿をした者が、鳥占い（śakuna）、前兆（nimitta）、惑星（graha）、昇点（lagna）の力、相術（lakṣaṇa）を示して、男の将来の繁栄と幸福を讃えるべきである。また別の者たちは、他の〔求婚者〕よりも優れた花嫁の獲得〔の見込み〕を示して、花嫁の母を喜ばせるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.9–10</div>
+    <div class="sanskrit">daiva-nimitta-śakunopaśrutīnām ānulomyena kanyāṃ varayed dadyāc ca. na yadṛcchayā kevala-mānuṣāyeti ghoṭakamukhaḥ. suptāṃ rudatīṃ niṣkrāntāṃ varaṇe parivarjayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.9–10</div>
+    <div class="japanese">天象（daiva）、前兆、鳥占い、夜に聞こえる音（upaśruti）が順調であるときに、花嫁を求め、また与えるべきである。偶然や、人間の力だけで行うべきではない、とGhoṭakamukhaは言う。眠っている娘、泣いている娘、〔部屋を〕出ていった娘は、求婚の際に避けるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.11</div>
+    <div class="sanskrit">a:praśasta-nāmadheyāṃ ca guptāṃ dattāṃ ghonāṃ pṛṣatām ṛṣabhāṃ vinatāṃ vikaṭāṃ vimuṇḍāṃ śuci-dūṣitāṃ sāṃkarikīṃ rākāṃ phalinīṃ mitrāṃ svanujāṃ varṣakarīṃ ca varjayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.11</div>
+    <div class="japanese">不吉な名前の娘も避けるべきである——Guptā（隠された）、Dattā（与えられた）、Ghonā（鼻の低い）、Pṛṣatā（斑点のある）、Ṛṣabhā（雄牛〔のような〕）、Vinatā（曲がった）、Vikaṭā（醜い）、Vimuṇḍā（禿げた）、Śuci-dūṣitā（清浄を汚す）、Sāṃkarikī（混血の）、Rākā（満月）、Phalinī（実のなる）、Mitrā（友）、Svanujā（自家の娘）、Varṣakarī（雨をもたらす）を。</div>
+  </div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.1.12</div>
+  <div class="sanskrit">nakṣatrākhyāṃ nadī-nāmnīṃ vṛkṣa-nāmnīṃ ca garhitām |<br>la-kāra-rephopāntāṃ ca varaṇe parivarjayet ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">星の名を持つ娘、川の名の娘、木の名の娘も忌むべし。末尾にla音やra音（repha）がある名の娘も、求婚において避けるべし。</div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.13</div>
+    <div class="sanskrit">yasyāṃ manaś-cakṣor nibandhas tasyām ṛddhiḥ. netarām ādriyeta. ity eke.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.13</div>
+    <div class="japanese">心と目が結びつけられた女性にこそ繁栄がある。他の女性を求めるべきではない。と一部の論者は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.14</div>
+    <div class="sanskrit">tasmāt pradāna-samaye kanyām udāra-veṣāṃ sthāpayeyuḥ. aparāhṇikaṃ ca. nityaṃ prāsādhitāyāḥ sakhībhiḥ saha krīḍā. yajña-vivāhādiṣu jana-saṃdrāveṣu prāyatnikaṃ darśanam. tathotsaveṣu ca. paṇya-sa:dharmatvāt.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.14</div>
+    <div class="japanese">それゆえ、嫁がせる時期になったら、娘を立派な装いにさせるべきである。毎日午後に。常に化粧を施した上で友人たちと遊ばせる。祭祀・婚礼などの人の集まりには、わざわざ見せに連れて行く。祭りにも同様に。商品と同じ性質のものだからである（paṇya-sadharmatvāt）。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.15–17</div>
+    <div class="sanskrit">varaṇārtham upagatāṃś ca bhadra-darśanān pradakṣiṇa-vācaś ca tat-saṃbandhi-saṅgatān puruṣān maṅgalaiḥ pratigṛhṇīyuḥ. kanyāṃ caiṣām alaṃkṛtām anyāpadeśena darśayeyuḥ. daivaṃ parīkṣaṇaṃ cāvadhiṃ sthāpayeyuḥ. ā pradāna-niścayāt.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.15–17</div>
+    <div class="japanese">求婚のために訪れた、見栄えのよい、丁重な言葉遣いの、その家の関係者と繋がりのある男たちを、吉祥の儀式で迎えるべきである。飾り立てた娘を、別の口実を設けて彼らに見せる。天象の吉凶判断と確認のために期限を設ける——贈与の決定（pradāna-niścaya）に至るまで。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.18</div>
+    <div class="sanskrit">snānādiṣu niyujyamānā varayitāraḥ sarvaṃ bhaviṣyatīty uktvā na tad-ahar evābhyupagaccheyuḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.18</div>
+    <div class="japanese">沐浴などの〔儀礼的な〕もてなしを求められた求婚者たちは、「すべてうまくゆくでしょう」と言いながらも、その日のうちには承諾してはならない。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">3.1.19</div>
+    <div class="sanskrit">deśa-pravṛtti-sātmyād vā brāhma-prājāpatyārṣa-daivānām anyatamena vivāhena śāstrataḥ pariṇayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">3.1.19</div>
+    <div class="japanese">土地の慣習に応じて、Brāhma・Prājāpatya・Ārṣa・Daivaのいずれかの婚姻形式により、教典に従って婚姻を行うべきである。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  八種の婚姻形式（vivāha）が列挙される——Brāhma、Prājāpatya、Ārṣa、Daiva、Gāndharva、Āsura、Paiśāca、Rākṣasa。前四者が「法にかなう」（dharmya）とされ、本章の varaṇa-saṃvidhāna はこれらのための手続きである。paṇya-sadharmatvāt（商品と同じ性質であるから）は、娘を見せることの理由——商品が買い手に見せられるように、娘も求婚者に見せられるべきだという実践的な論理。daiva-cintaka-rūpa（占星術師の姿をした者）は男が派遣した者で、śakuna（鳥占い）、nimitta（前兆）、graha（惑星配置）、lagna（昇点の力）、lakṣaṇa（手相・相術）などを用いて男の将来の繁栄を語る。
+</div>
+
+<h3>避けるべき名前の一覧</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>名前（IAST）</th>
+      <th>意味</th>
+      <th>忌避の理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Guptā</td><td>隠された</td><td>不吉な意味合い</td></tr>
+    <tr><td>Dattā</td><td>与えられた</td><td>既に他者に与えられた暗示</td></tr>
+    <tr><td>Ghonā</td><td>鼻の低い</td><td>身体的欠陥の暗示</td></tr>
+    <tr><td>Pṛṣatā</td><td>斑点のある</td><td>不純の暗示</td></tr>
+    <tr><td>Ṛṣabhā</td><td>雄牛のような</td><td>男性的性質の暗示</td></tr>
+    <tr><td>Vinatā</td><td>曲がった・猫背の</td><td>身体的欠陥</td></tr>
+    <tr><td>Vikaṭā</td><td>醜い・恐ろしい</td><td>不吉</td></tr>
+    <tr><td>Vimuṇḍā</td><td>禿げた</td><td>寡婦の連想</td></tr>
+    <tr><td>Śuci-dūṣitā</td><td>清浄を汚す</td><td>不浄の連想</td></tr>
+    <tr><td>Sāṃkarikī</td><td>混合の・混血の</td><td>ヴァルナ混合の暗示</td></tr>
+    <tr><td>nakṣatra-ākhyā</td><td>星の名</td><td>不吉とされる</td></tr>
+    <tr><td>nadī-nāmnī</td><td>川の名</td><td>不吉とされる</td></tr>
+    <tr><td>la-kāra/repha末尾</td><td>l音・r音で終わる名</td><td>音声学的に忌避</td></tr>
+  </tbody>
+</table>
+
+<!-- ========== Prakarana 24: Saṃbandha-niścaya ========== -->
+<h2>第二節 婚姻の確定（Saṃbandha-niścayaḥ — 第24prakaraṇa）</h2>
+
+<p class="section-intro">婚姻における格差の問題を詩節で論じ、対等な婚姻の理想を説く。</p>
+
+<div class="verse-block">
+  <div class="sutra-num">3.1.20</div>
+  <div class="sanskrit">samasyādyāḥ saha-krīḍā vivāhāḥ saṅgatāni ca |<br>samānair eva karyāṇi nottamair nāpi vādhamaiḥ ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">詩の下の句付け遊びなどの共遊び、婚姻、交際は、対等な者（samāna）とのみ行うべきである。上位の者とでも、下位の者とでもなく。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.1.21</div>
+  <div class="sanskrit">kanyāṃ gṛhītvā varteta preṣyavad yatra nāyakaḥ |<br>taṃ vidyād ucca-saṃbandhaṃ parityaktaṃ manasvibhiḥ ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">花嫁を娶り、男が召使いのように振る舞わねばならないならば——それは格上婚（ucca-saṃbandha）と知れ。誇りある者たちに捨てられる。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.1.22</div>
+  <div class="sanskrit">svāmivad vicared yatra bāndhavaiḥ svaiḥ puras:kṛtaḥ |<br>a:ślāghyo hīna-saṃbandhaḥ so 'pi sadbhir vinindyate ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">自分の親族に推されて主人のように振る舞う場合——それは賞賛に値しない格下婚（hīna-saṃbandha）であり、善き人々にも非難される。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.1.23</div>
+  <div class="sanskrit">paraspara-sukhāsvādā krīḍā yatra prayujyate |<br>viśeṣayantī cānyonyaṃ saṃbandhaḥ sa vidhīyate ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">互いに喜びを味わい、互いを特別な存在とする遊び（krīḍā）が行われるところ——その婚姻こそ推奨される。</div>
+</div>
+
+<div class="verse-block">
+  <div class="sutra-num">3.1.24</div>
+  <div class="sanskrit">kṛtvāpi cocca-saṃbandhaṃ paścāj jñātiṣu saṃnamet |<br>na tv eva hīna-saṃbandhaṃ kuryāt sadbhir vininditam ||</div>
+  <div class="japanese" style="margin-top:0.5rem;">格上婚をしてしまった場合でも、後に親族の間で折り合いをつけることができる。しかし善き人々に非難される格下婚は、決してすべきではない。</div>
+</div>
+
+<div class="note-box">
+  <div class="note-box-title">📝 Jayamaṅgalā 注</div>
+  Yaśodhara は三種の婚姻格差を論じる。ucca-saṃbandha（格上婚）では男が preṣyavat（召使いのように）振る舞わねばならず、manasvibhiḥ（誇りある者たちに）軽蔑される。hīna-saṃbandha（格下婚）では男が svāmivat（主人のように）振る舞うが、sadbhiḥ（善き人々に）非難される。理想は paraspara-sukhāsvāda（互いの喜びの享受）がある対等婚である。格上婚は後から jñātiṣu saṃnamet（親族間で調整できる）が、格下婚は挽回不可能とされる。
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre kanyā-saṃprayuktake tṛtīye 'dhikaraṇe<br>
+  varaṇa-vidhānaṃ saṃbandha-niścayaś ca prathamo 'dhyāyaḥ ||<br><br>
+  ヴァーツヤーヤナのカーマスートラ　第三篇「未婚女性篇」<br>
+  第一章　花嫁選びの手続きと婚姻の確定<br>
+  （通算第十六章）
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

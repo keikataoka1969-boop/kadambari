@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カーマスートラ 2.1 性的結合の分類</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+    --table-header: #e8dfd2;
+    --table-stripe: #faf7f1;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612;
+      --bg-card: #241f19;
+      --text: #e0d6c8;
+      --text-secondary: #a89880;
+      --accent: #c4845c;
+      --accent-light: #d4a07a;
+      --border: #3d3428;
+      --border-light: #2e271e;
+      --sanskrit-bg: #1e1a14;
+      --note-bg: #2a2318;
+      --highlight: #d4a07a;
+      --table-header: #2e271e;
+      --table-stripe: #211c16;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #1a1612;
+    --bg-card: #241f19;
+    --text: #e0d6c8;
+    --text-secondary: #a89880;
+    --accent: #c4845c;
+    --accent-light: #d4a07a;
+    --border: #3d3428;
+    --border-light: #2e271e;
+    --sanskrit-bg: #1e1a14;
+    --note-bg: #2a2318;
+    --highlight: #d4a07a;
+    --table-header: #2e271e;
+    --table-stripe: #211c16;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+    line-height: 1.9;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  header .book-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  header h1 {
+    font-family: 'Noto Serif Devanagari', 'Noto Serif JP', serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0.5rem 0 0.25rem;
+    text-wrap: balance;
+  }
+
+  header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0.25rem 0;
+  }
+
+  header .chapter-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sutra-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.75rem;
+    padding: 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+  }
+
+  .sutra-num {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.35rem;
+    font-family: 'Noto Serif Devanagari', serif;
+  }
+
+  .sanskrit {
+    font-family: 'Noto Serif Devanagari', serif;
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text);
+    background: var(--sanskrit-bg);
+    padding: 0.75rem;
+    border-radius: 4px;
+    hyphens: none;
+  }
+
+  .japanese {
+    font-size: 0.95rem;
+    line-height: 1.95;
+    color: var(--text);
+  }
+
+  .japanese .term {
+    color: var(--highlight);
+    font-weight: 600;
+  }
+
+  .note-box {
+    background: var(--note-bg);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0 2rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.88rem;
+    line-height: 1.85;
+  }
+
+  .note-box .note-title {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+  }
+
+  .note-box ul {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+
+  .note-box li {
+    margin-bottom: 0.35rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0;
+    font-size: 0.88rem;
+  }
+
+  table th {
+    background: var(--table-header);
+    padding: 0.6rem 0.75rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+  }
+
+  table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  table tr:nth-child(even) td {
+    background: var(--table-stripe);
+  }
+
+  .verse {
+    font-style: italic;
+    padding: 0.5rem 0;
+    border-left: 2px solid var(--accent-light);
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .colophon {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--accent);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .best { background: rgba(76, 175, 80, 0.1); }
+  .mid { background: rgba(255, 193, 7, 0.08); }
+  .worst { background: rgba(244, 67, 54, 0.08); }
+
+  @media (max-width: 640px) {
+    .sutra-block {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    body { padding: 1rem; }
+    header h1 { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book-label">Vātsyāyanakāmasūtra — 第二篇 性的結合（Sāṃprayogikam）</div>
+  <h1>pramāṇa-kāla-bhāvebhyo ratāvasthāpanam</h1>
+  <h2>第一章　大きさ・時間・気質による性的結合の分類</h2>
+  <div class="chapter-desc">男女の身体的適合性と快楽の本質をめぐる哲学的論争を含む</div>
+</header>
+
+<!-- ===== Section 1: 大きさ（pramāṇa）による分類 ===== -->
+<div class="section-title">一、大きさによる分類（pramāṇato ratāvasthāpanam）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.1</div>
+    <div class="sanskrit">śaśo vṛṣo 'śva iti liṅgato nāyaka-viśeṣāḥ. nāyikā punar mṛgī baḍavā hastinī ceti.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.1</div>
+    <div class="japanese">性器（<span class="term">liṅga</span>）の大きさにより、男（<span class="term">nāyaka</span>）は三種に分かれる——兎（<span class="term">śaśa</span>）、牡牛（<span class="term">vṛṣa</span>）、馬（<span class="term">aśva</span>）。女（<span class="term">nāyikā</span>）は——牝鹿（<span class="term">mṛgī</span>）、牝馬（<span class="term">baḍavā</span>）、牝象（<span class="term">hastinī</span>）である。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.2–4</div>
+    <div class="sanskrit">tatra sa-dṛśa-saṃprayoge sama-ratāni trīṇi. viparyayeṇa vi-ṣamāṇi ṣaṭ. vi-ṣameṣv api puruṣādhikyaṃ ced an-antara-saṃprayoge dve ucca-rate. vyavahitam ekam ucca-tara-ratam. viparyaye punar dve nīca-rate. vyavahitam ekaṃ nīca-tara-rataṃ ca. teṣu samāni śreṣṭhāni. tara-śabdāṅkite dve kaniṣṭhe. śeṣāṇi madhyamāni. sāmye 'py uccāṅkaṃ nīcāṅkāj jyāyaḥ. iti pramāṇato nava-ratāni.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.2–4</div>
+    <div class="japanese">同じ大きさの者同士の結合（<span class="term">sa-dṛśa-saṃprayoga</span>）では、等しい結合（<span class="term">sama-rata</span>）が三つある。不釣り合いの結合（<span class="term">vi-ṣama</span>）は六つ。不釣り合いの中で、男が大きい場合——隣り合う段階では高い結合（<span class="term">ucca-rata</span>）が二つ、一段離れた場合は最高の結合（<span class="term">ucca-tara-rata</span>）が一つ。その逆の場合——低い結合（<span class="term">nīca-rata</span>）が二つ、一段離れた場合は最低の結合（<span class="term">nīca-tara-rata</span>）が一つ。これらのうち等しい結合が最良（<span class="term">śreṣṭha</span>）であり、「-tara」のつく二つが最劣（<span class="term">kaniṣṭha</span>）であり、残りは中程度（<span class="term">madhyama</span>）である。中程度のうちでも高い結合が低い結合より勝る。こうして大きさにより九種の結合がある。</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【図表】大きさによる九種の結合（pramāṇa-rata）</div>
+  <div class="table-wrap">
+  <table>
+    <tr>
+      <th></th>
+      <th>mṛgī（牝鹿）小</th>
+      <th>baḍavā（牝馬）中</th>
+      <th>hastinī（牝象）大</th>
+    </tr>
+    <tr>
+      <td style="font-weight:600;text-align:left;">śaśa（兎）小</td>
+      <td class="best"><strong>sama</strong>（等）最良</td>
+      <td class="mid">nīca（低）中</td>
+      <td class="worst">nīca-tara（最低）劣</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;text-align:left;">vṛṣa（牡牛）中</td>
+      <td class="mid">ucca（高）中</td>
+      <td class="best"><strong>sama</strong>（等）最良</td>
+      <td class="mid">nīca（低）中</td>
+    </tr>
+    <tr>
+      <td style="font-weight:600;text-align:left;">aśva（馬）大</td>
+      <td class="worst">ucca-tara（最高）劣</td>
+      <td class="mid">ucca（高）中</td>
+      <td class="best"><strong>sama</strong>（等）最良</td>
+    </tr>
+  </table>
+  </div>
+  <p>注釈：<span class="term">sama</span>（等しい結合）では器官の適合（<span class="term">yantra-sāmya</span>）により双方に最大の快楽がある。<span class="term">ucca-tara</span>（男が極端に大きい）と <span class="term">nīca-tara</span>（女が極端に大きい）は、器官の過度の圧迫あるいは弛みにより快楽が乏しい。中程度のうち <span class="term">ucca</span>（男が大きい）は <span class="term">nīca</span>（女が大きい）より勝る——男が大きい場合、女は脚を広げる体位（<span class="term">utphullaka</span>）により痒みの解消（<span class="term">kaṇḍūti-pratīkāra</span>）が得られるが、女が大きい場合は体を縮めても十分な接触が得られないため。</p>
+  <p>寸法について注釈は伝統的数値を引用：<span class="term">śaśa</span> = 6指幅、<span class="term">vṛṣa</span> = 9指幅、<span class="term">aśva</span> = 12指幅。女性も同様に三段階。</p>
+</div>
+
+<!-- ===== Section 2: 気質（bhāva）による分類 ===== -->
+<div class="section-title">二、気質による分類（bhāvato ratāvasthāpanam）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.5–7</div>
+    <div class="sanskrit">yasya saṃprayoga-kāle prītir udāsīnā vīryam alpaṃ kṣatāni ca na sahate sa manda-vegaḥ. tad-viparyayau madhyama-caṇḍa-vegau bhavataḥ. tathā nāyikāpi. tatrāpi pramāṇavad eva nava-ratāni.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.5–7</div>
+    <div class="japanese">性交時に欲求が無関心で（<span class="term">prītir udāsīnā</span>）、精力が乏しく（<span class="term">vīryam alpam</span>）、傷を耐えられない者は<span class="term">manda-vega</span>（緩やかな気質）である。その反対が<span class="term">madhyama-vega</span>（中程度）と<span class="term">caṇḍa-vega</span>（激しい気質）である。女も同様である。ここでも大きさの場合と同じく九種の結合がある。</div>
+  </div>
+</div>
+
+<!-- ===== Section 3: 持続時間（kāla）による分類 ===== -->
+<div class="section-title">三、持続時間による分類（kālato ratāvasthāpanam）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.8</div>
+    <div class="sanskrit">tadvat kālato 'pi śīghra-madhya-cira-kālā nāyakāḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.8</div>
+    <div class="japanese">同様に持続時間（<span class="term">kāla</span>）についても、男は短時間（<span class="term">śīghra</span>）・中時間（<span class="term">madhya</span>）・長時間（<span class="term">cira</span>）の三種に分かれる。〔女も同様であり、ここでも九種の結合がある。〕</div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【図表】三基準による分類の総括</div>
+  <div class="table-wrap">
+  <table>
+    <tr><th>基準</th><th>男の三類型</th><th>女の三類型</th><th>結合数</th></tr>
+    <tr><td><span class="term">pramāṇa</span>（大きさ）</td><td>śaśa / vṛṣa / aśva</td><td>mṛgī / baḍavā / hastinī</td><td>9</td></tr>
+    <tr><td><span class="term">bhāva</span>（気質）</td><td>manda / madhyama / caṇḍa</td><td>manda / madhyama / caṇḍa</td><td>9</td></tr>
+    <tr><td><span class="term">kāla</span>（持続時間）</td><td>śīghra / madhya / cira</td><td>śīghra / madhya / cira</td><td>9</td></tr>
+  </table>
+  </div>
+  <p>三基準の交差により、結合の組み合わせ数は 9×9×9 = 729 に達する（2.1.33）。</p>
+</div>
+
+<!-- ===== Section 4: 女性の快楽をめぐる論争 ===== -->
+<div class="section-title">四、女性の快楽をめぐる論争（striyāṃ vivādaḥ）</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.9</div>
+    <div class="sanskrit">tatra striyāṃ vivādaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.9</div>
+    <div class="japanese">ここで女性について論争がある。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.10–13</div>
+    <div class="sanskrit">na strī puruṣavad eva bhāvam adhigacchati. sātatyāt tv asyāḥ puruṣeṇa kaṇḍūtir apanudyate. sā punar ābhimānikena sukhena saṃsṛṣṭā rasāntaraṃ janayati tasmin sukha-buddhir asyāḥ. puruṣa-pratīteś cān-abhijñatvāt kathaṃ te sukham iti praṣṭum a-śakyatvāt.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.10–13 【Auddālaki の説】</div>
+    <div class="japanese">女は男と同じようには快感（<span class="term">bhāva</span>）を得ない。ただ継続的に（<span class="term">sātatyāt</span>）男によって痒み（<span class="term">kaṇḍūti</span>）が除かれるのである。その痒みの除去は、心理的な快楽（<span class="term">ābhimānika-sukha</span>＝抱擁・接吻などの快楽）と結びつき、別種の味わい（<span class="term">rasāntara</span>）を生む。そこに彼女の快楽の認識がある。しかも男の快楽の経験を知らないため、「あなたの快楽はどのようなものか」と問うこともできない。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.14–16</div>
+    <div class="sanskrit">katham etad upalabhyata iti cet puruṣo hi ratim adhigamya svecchayā viramati na striyam apekṣate na tv evaṃ strīty auddālikaḥ. tatraitat syāt cira-vege nāyake striyo 'nurajyante śīghra-vegasya bhāvam an-āsādyāvasāne 'bhyasūyinyo bhavanti. tat sarvaṃ bhāva-prāpter a-prāpteś ca lakṣaṇam. tac ca na. kaṇḍūti-pratīkāro 'pi hi dīrgha-kālaṃ priya iti. etad upapadyata eva. tasmāt saṃdigdhatvād a-lakṣaṇam iti.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.14–16</div>
+    <div class="japanese">「これはどうして知られるのか」と問えば——男は快楽を得ると自らの意志で（<span class="term">svecchayā</span>）止まり、女を顧みない。しかし女はそうではないと<span class="term">Auddālaki</span> は言う。〔反論：〕「長い持続の男には女が愛着し、短い男には終了時に不満を覚える。これは快感（<span class="term">bhāva</span>）の到達・不到達の証拠ではないか」。〔Auddālaki の再反論：〕そうではない——痒みの解消（<span class="term">kaṇḍūti-pratīkāra</span>）もまた長時間であれば心地よいのであって、〔不満は精液の放出がないためではなく、痒みが十分に癒されないためでもありうる。〕したがって疑わしいため、証拠とはならない。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.17</div>
+    <div class="sanskrit">saṃyoge yoṣitaḥ puṃsā kaṇḍūtir apanudyate. tac cābhimāna-saṃsṛṣṭaṃ sukham ity abhidhīyate.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.17 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        結合において、女の痒みは男によって除かれる。<br>
+        それが心理的快楽と結びついたものが<br>
+        「快楽」と呼ばれるのである。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.18</div>
+    <div class="sanskrit">sātatyād yuvatir ārambhāt prabhṛti bhāvam adhigacchati. puruṣaḥ punar anta eva. etad upapannataram. na hy a-satyāṃ bhāva-prāptau garbha-saṃbhava iti bābhravīyāḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.18 【Bābhravīya 派の説】</div>
+    <div class="japanese">継続的であるため、女は始めから（<span class="term">ārambhāt prabhṛti</span>）快感を得る。しかし男は終わりにおいてのみ（<span class="term">anta eva</span>）得る。これはより妥当である。なぜなら快感の到達がなければ、妊娠（<span class="term">garbha-saṃbhava</span>）はありえないからであると<span class="term">Bābhravīya</span> 派は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.20–21</div>
+    <div class="sanskrit">tatraitat syāt sātatyena rasa-prāptāv ārambha-kāle madhyastha-cittatā nāti-sahiṣṇutā ca. tataḥ krameṇādhiko rāga-yogaḥ śarīre nir-apekṣatvam ante ca virāmābhīpsety etad upapannam iti. tac ca na. sāmānye 'pi bhrānti-saṃskāre kulāla-cakrasya bhramarakasya vā bhrāntāv eva vartamānasya prārambhe manda-vegatā tataś ca krameṇa pūraṇaṃ vegasyety upapadyate. dhātu-kṣayāc ca virāmābhīpseti. tasmād an-ākṣepaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.20–21</div>
+    <div class="japanese">〔反論：〕「始めから継続的に快感を得ているなら、なぜ最初は無関心で（<span class="term">madhyastha-cittatā</span>）あまり耐えられず、次第に欲求が増し（<span class="term">rāga-yoga</span>）、身体を顧みなくなり（<span class="term">nir-apekṣatva</span>）、最後に停止を望むのか。これは矛盾する」。〔Bābhravīya の回答：〕そうではない——回転運動（<span class="term">bhrānti-saṃskāra</span>）という共通の性質においても、陶工の轆轤（<span class="term">kulāla-cakra</span>）や独楽（<span class="term">bhramara</span>）が、回り始めは遅く次第に速度が増すように〔連続的な快感にも段階的変化がありうる〕。そして体液の消耗（<span class="term">dhātu-kṣaya</span>）により停止の欲求が生じるのである。したがって反論は成り立たない。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.22</div>
+    <div class="sanskrit">suratānte sukhaṃ puṃsāṃ strīṇāṃ tu satataṃ sukham. dhātu-kṣaya-nimittā ca virāmecchopajāyate.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.22 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        男の快楽は性交の終わりに生じ、<br>
+        女の快楽は継続的である。<br>
+        体液の消耗を原因として<br>
+        停止の欲求が生じるのである。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.23–26</div>
+    <div class="sanskrit">tasmāt puruṣavad eva yoṣito 'pi rasa-vyaktir draṣṭavyā. kathaṃ hi samānāyām evākṛtāv ekārtham abhiprapannayoḥ kārya-vailakṣaṇyaṃ syāt. upāya-vailakṣaṇyād abhimāna-vailakṣaṇyāc ca. katham upāya-vailakṣaṇyaṃ tu sargāt. kartā hi puruṣo 'dhikaraṇaṃ yuvatiḥ. tasmāc copāya-vailakṣaṇyāt sargād abhimāna-vailakṣaṇyam api bhavati. abhiyoktāham iti puruṣo 'nurajyate. abhiyuktāham aneneti yuvatir iti vātsyāyanaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.23–26 【Vātsyāyana の結論】</div>
+    <div class="japanese">したがって、女もまた男と同じように快楽の顕現（<span class="term">rasa-vyakti</span>）を経験すると見るべきである。同じ身体構造（<span class="term">samānā ākṛti</span>）をもち、同じ目的に向かう二者に、結果の相違（<span class="term">kārya-vailakṣaṇya</span>）がどうしてありえようか。〔反論：〕手段の違い（<span class="term">upāya-vailakṣaṇya</span>）と心理的認識の違い（<span class="term">abhimāna-vailakṣaṇya</span>）による、と。〔回答：〕手段の違いは創造の本性（<span class="term">sarga</span>）による——男は行為者（<span class="term">kartṛ</span>）であり、女は受容者（<span class="term">adhikaraṇa</span>）である。そしてこの手段の違いから心理的認識の違いも生じる——男は「私は攻め手である」（<span class="term">abhiyoktā</span>）と感じ、女は「私はこの人に攻められている」（<span class="term">abhiyuktā</span>）と感じる。〔しかし快楽の本質は同じである。〕</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.27–29</div>
+    <div class="sanskrit">tatraitat syād upāya-vailakṣaṇyavad eva hi kārya-vailakṣaṇyam api kasmān na syād iti. tac ca na. hetumad upāya-vailakṣaṇyam. tatra kartr-ādhārayor bhinna-lakṣaṇatvād a-hetumat-kārya-vailakṣaṇyam anyāyyaṃ syāt. ākṛter a-bhedād iti. tac ca na. yugapad an-ekārtha-siddhir api dṛśyate. yathā meṣayor abhighāte kapitthayor bhede mallayor yuddha iti.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.27–29</div>
+    <div class="japanese">〔反論：〕「手段の違いがあるなら、結果の違いもあるのでは」。〔回答：〕そうではない。手段の違いには原因がある〔行為者と受容者の区別〕が、身体構造に違いがない以上（<span class="term">ākṛter a-bhedāt</span>）、結果の違いは根拠がなく不当である。〔再反論：〕「二者が同時に別々の結果を得ることもあるのでは」。〔最終回答：〕いや。同時に同一の結果を得ることも見られる——二匹の牡羊がぶつかり合うとき、二つの木瓜の実が割れるとき、二人の力士が闘うとき〔双方に同一の結果が生じる〕。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.30</div>
+    <div class="sanskrit">jāter a-bhedād daṃpatyoḥ sa-dṛśam sukham iṣyate. tasmāt tathopacaryā strī yathāgre prāpnuyād ratim.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.30 【偈・結論】</div>
+    <div class="japanese">
+      <div class="verse">
+        種（<span class="term">jāti</span>）に違いがないため、<br>
+        夫婦の快楽は等しいと認められる。<br>
+        したがって、女が先に快楽を得るよう<br>
+        扱うべきである。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】女性の快楽をめぐる三学説</div>
+  <table>
+    <tr><th>学者</th><th>主張</th><th>論拠</th></tr>
+    <tr><td><span class="term">Auddālaki</span></td><td>女は男と同じ快感を得ない。痒みの除去（<span class="term">kaṇḍūti-apanoda</span>）＋心理的快楽のみ。</td><td>男は射精後に自ら止まるが、女は止まらない（＝射精に相当する絶頂がない）。問うこともできない。</td></tr>
+    <tr><td><span class="term">Bābhravīya</span> 派</td><td>女も精液的体液（<span class="term">śukra</span>）の放出による快感を得る。ただし女は最初から継続的に、男は終わりにのみ。</td><td>快感なくして妊娠はありえない。Caraka・Suśruta の医学的根拠。女同士の性交でも妊娠する（骨のない子）と Suśruta は述べる。</td></tr>
+    <tr><td><span class="term">Vātsyāyana</span></td><td>男女の快楽は本質的に同一（<span class="term">sa-dṛśa sukha</span>）。違いは手段（行為者/受容者）と心理的認識のみ。</td><td>同じ身体構造で同じ目的に向かう者に結果の相違はありえない。牡羊・力士の喩え。</td></tr>
+  </table>
+  <p>Vātsyāyana の結論は画期的である——女性が先に快楽を得るよう配慮すべきだ（<span class="term">tathopacaryā strī yathāgre prāpnuyād ratim</span>）と実践的指針を与える。轆轤と独楽の喩え（<span class="term">kulāla-cakra</span>、<span class="term">bhramara</span>）は、連続的な快楽にも漸増的変化がありうることを示す巧みな比喩である。</p>
+</div>
+
+<!-- ===== Section 5: 結合の組み合わせ ===== -->
+<div class="section-title">五、結合の組み合わせと実践的指針</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.31–34</div>
+    <div class="sanskrit">sa-dṛśatvasya siddhatvāt kāla-yogīny api bhāvato 'pi kālataḥ pramāṇavad eva nava ratāni. raso ratiḥ prītir bhāvo rāgo vegaḥ samāptir iti rati-paryāyāḥ. saṃprayogo rataṃ rahaḥ śayanaṃ mohanaṃ surata-paryāyāḥ. pramāṇa-kāla-bhāva-jānāṃ saṃprayogānām ekaikasya nava-vidhatvāt teṣāṃ vyatikare surata-saṃkhyā na śakyate kartum. ati-bahutvāt. teṣu tarkād upacārān prayojayed iti vātsyāyanaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.31–34</div>
+    <div class="japanese">等しさが確立されたため、持続時間についても気質についても、大きさの場合と同様に九種の結合がある。<span class="term">rasa</span>・<span class="term">rati</span>・<span class="term">prīti</span>・<span class="term">bhāva</span>・<span class="term">rāga</span>・<span class="term">vega</span>・<span class="term">samāpti</span> は快楽の同義語であり、<span class="term">saṃprayoga</span>・<span class="term">rata</span>・<span class="term">rahas</span>・<span class="term">śayana</span>・<span class="term">mohana</span> は性交の同義語である。大きさ・時間・気質から生じる結合がそれぞれ九種であるため、それらの交差による性交の総数は算定できない——あまりに多いため。それらにおいては推論（<span class="term">tarka</span>）に基づいて適切な扱い（<span class="term">upacāra</span>）を用いるべきであると<span class="term">Vātsyāyana</span> は言う。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.35–36</div>
+    <div class="sanskrit">prathama-rate caṇḍa-vegatā śīghra-kālatā ca puruṣasya tad-viparītam uttareṣu. yoṣitaḥ punar etad eva viparītam. ā dhātu-kṣayāt. prāk ca strī-dhātu-kṣayāt puruṣa-dhātu-kṣaya iti prāyovādaḥ.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.35–36</div>
+    <div class="japanese">最初の交合において男は激しい気質で短時間であり、後の回ではその反対である。女はまさにその逆である——体液の消耗（<span class="term">dhātu-kṣaya</span>）に至るまで。そして一般的に（<span class="term">prāyovāda</span>）、女の体液が尽きる前に男の体液が尽きる。</div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.37–38</div>
+    <div class="sanskrit">mṛdutvād upamṛdyatvān nisargāc caiva yoṣitaḥ. prāpnuvanty āśu tāḥ prītim ity ācāryā vyavasthitāḥ. etāvad eva yuktānāṃ vyākhyātaṃ sāmprayogikam. mandānām avabodhārthaṃ vistaro 'taḥ pravakṣyate.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.37–38 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        柔らかさ（<span class="term">mṛdutva</span>）ゆえ、揉みしだかれるがゆえ（<span class="term">upamṛdyatva</span>）、<br>
+        そして女の本性（<span class="term">nisarga</span>）により、<br>
+        女は速やかに快楽を得ると諸師は定めた。<br><br>
+        聡明な者にはこれだけの性的結合の説明で十分である。<br>
+        理解の遅い者のために、以下に詳細を述べる。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Section 6: 四種の快楽（prīti） ===== -->
+<div class="section-title">六、四種の快楽（prīti-viśeṣāḥ）〔第七節〕</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.39</div>
+    <div class="sanskrit">abhyāsād abhimānāc ca tathā saṃpratyayād api. viṣayebhyaś ca tantra-jñāḥ prītim āhuś catur-vidhām.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.39 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        習慣（<span class="term">abhyāsa</span>）から、心理的認識（<span class="term">abhimāna</span>）から、<br>
+        信頼（<span class="term">saṃpratyaya</span>）から、そして感覚対象（<span class="term">viṣaya</span>）から——<br>
+        学理に通じた者たちは快楽を四種と言う。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.40</div>
+    <div class="sanskrit">śabdādibhyo bahir-bhūtā yā karmābhyāsa-lakṣaṇā. prītiḥ sābhyāsikī jñeyā mṛgayādiṣu karmasu.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.40 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        音などの感覚対象から離れ、行為の習慣として特徴づけられる快楽——<br>
+        それは<span class="term">ābhyāsikī</span>（習慣的快楽）と知るべきである。<br>
+        狩猟などの行為におけるように。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.41</div>
+    <div class="sanskrit">an-abhyasteṣv api purā karmasv a-viṣayātmikā. saṃkalpāj jāyate prītir yā sā syād ābhimānikī.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.41 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        以前に経験したことのない行為においても、<br>
+        感覚対象によらず、想念（<span class="term">saṃkalpa</span>）から生じる快楽——<br>
+        それは<span class="term">ābhimānikī</span>（心理的快楽）である。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.42</div>
+    <div class="sanskrit">prakṛter yā tṛtīyasyāḥ striyāś caivopariṣṭake. teṣu teṣu ca vijñeyā cumbanādiṣu karmasu.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.42 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        第三の性（<span class="term">tṛtīya-prakṛti</span>）の者の場合、<br>
+        あるいは女が上位の体位（<span class="term">upariṣṭaka</span>）をとる場合、<br>
+        また接吻などのさまざまな行為において知るべきである。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.43</div>
+    <div class="sanskrit">nānyo 'yam iti yatra syād anyasmin prīti-kāraṇe. tantra-jñaiḥ kathyate sāpi prītiḥ saṃpratyayātmikā.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.43 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        快楽の他の原因がある場合にも、<br>
+        「他でもないこの人だ」という確信があるところの快楽——<br>
+        それは<span class="term">saṃpratyayātmikā</span>（信頼に基づく快楽）と<br>
+        学理に通じた者に呼ばれる。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sutra-block">
+  <div>
+    <div class="sutra-num">2.1.44–45</div>
+    <div class="sanskrit">pratyakṣā lokataḥ siddhā yā prītir viṣayātmikā. pradhāna-phalavattvāt sā tad-arthāś cetarā api. prītīr etāḥ parāmṛśya śāstrataḥ śāstra-lakṣaṇāḥ. yo yathā vartate bhāvas taṃ tathaiva prayojayet.</div>
+  </div>
+  <div>
+    <div class="sutra-num">2.1.44–45 【偈】</div>
+    <div class="japanese">
+      <div class="verse">
+        直接知覚され、世間で成立する<br>
+        感覚対象に基づく快楽（<span class="term">viṣayātmikā</span>）——<br>
+        それが主たる果実を有するため、他の三つもこれを目的とする。<br><br>
+        これらの快楽を学問的に（<span class="term">śāstrataḥ</span>）考察し、<br>
+        学問の特徴に基づいて、<br>
+        それぞれの感情が展開するままに、<br>
+        そのように用いるべきである。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note-box">
+  <div class="note-title">【注釈メモ】四種の快楽（prīti）の分類</div>
+  <table>
+    <tr><th>種類</th><th>サンスクリット</th><th>説明</th><th>例</th></tr>
+    <tr><td>習慣的快楽</td><td><span class="term">ābhyāsikī</span></td><td>感覚対象から独立し、繰り返しの行為から生じる</td><td>狩猟、技芸の練習</td></tr>
+    <tr><td>心理的快楽</td><td><span class="term">ābhimānikī</span></td><td>経験がなくても想像から生じる</td><td>接吻の想像、女上位体位</td></tr>
+    <tr><td>信頼の快楽</td><td><span class="term">saṃpratyayātmikā</span></td><td>特定の相手への確信と信頼から生じる</td><td>「この人だけ」という一途さ</td></tr>
+    <tr><td>感覚的快楽</td><td><span class="term">viṣayātmikā</span></td><td>直接の感覚対象（触覚など）から生じる</td><td>実際の性交——最も基本的</td></tr>
+  </table>
+  <p><span class="term">viṣayātmikā</span> が主たる果実（<span class="term">pradhāna-phala</span>）を有し、他の三種はこれに奉仕する。しかし実践においては「感情が展開するままに用いよ」（<span class="term">yo yathā vartate bhāvas taṃ tathaiva prayojayet</span>）という柔軟な指針が示される。</p>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  pramāṇa-kāla-bhāvebhyo ratāvasthāpanaṃ prīti-viśeṣā iti prathamo 'dhyāyaḥ<br><br>
+  <span style="font-size:0.8rem;color:var(--text-secondary)">カーマスートラ対訳　底本：GRETIL / 注釈：Jayamaṅgalā (Yaśodhara)</span>
+</div><div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

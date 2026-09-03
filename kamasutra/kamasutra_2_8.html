@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 2.8</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --bg-card: #fffdf8;
+  --text: #2c2418;
+  --text-secondary: #6b5d4d;
+  --accent: #a0522d;
+  --accent-light: #c4845c;
+  --border: #ddd5c8;
+  --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3;
+  --note-bg: #f2ede4;
+  --highlight: #8b4513;
+  --table-header: #e8dfd2;
+  --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612;
+    --bg-card: #242019;
+    --text: #e8e0d4;
+    --text-secondary: #a89880;
+    --accent: #d4845c;
+    --accent-light: #b0714e;
+    --border: #3d362c;
+    --border-light: #2e2820;
+    --sanskrit-bg: #1e1a14;
+    --note-bg: #2a2418;
+    --highlight: #e89860;
+    --table-header: #2e2820;
+    --table-stripe: #221e18;
+  }
+}
+[data-theme="dark"] {
+  --bg: #1a1612;
+  --bg-card: #242019;
+  --text: #e8e0d4;
+  --text-secondary: #a89880;
+  --accent: #d4845c;
+  --accent-light: #b0714e;
+  --border: #3d362c;
+  --border-light: #2e2820;
+  --sanskrit-bg: #1e1a14;
+  --note-bg: #2a2418;
+  --highlight: #e89860;
+  --table-header: #2e2820;
+  --table-stripe: #221e18;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  line-height: 1.9;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header .book-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+header h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0.4rem 0;
+  text-wrap: balance;
+}
+
+header .subtitle {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+header .chapter-info {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.8rem;
+  line-height: 1.6;
+}
+
+.section-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 2.5rem 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sutra-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.4rem;
+  padding: 1rem 1.2rem;
+  background: var(--bg-card);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+}
+
+.sutra-num {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.sanskrit {
+  font-family: 'Noto Serif Devanagari', 'Noto Serif', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--sanskrit-bg);
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+}
+
+.japanese {
+  font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.note-block {
+  background: var(--note-bg);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0 2rem;
+  border-left: 3px solid var(--accent-light);
+}
+
+.note-block .note-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.note-block p, .note-block ul {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0.4rem 0;
+}
+
+.note-block ul {
+  padding-left: 1.2rem;
+}
+
+.note-block li {
+  margin-bottom: 0.3rem;
+}
+
+.verse-block {
+  background: var(--sanskrit-bg);
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem 0;
+  border-left: 3px solid var(--highlight);
+}
+
+.verse-block .verse-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.verse-block .sanskrit-verse {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.93rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.verse-block .japanese-verse {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.88rem;
+}
+
+.info-table th {
+  background: var(--table-header);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.info-table td {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border-light);
+  color: var(--text);
+  vertical-align: top;
+}
+
+.info-table tr:nth-child(even) td {
+  background: var(--table-stripe);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.colophon {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-family: 'Noto Serif Devanagari', serif;
+}
+
+@media (max-width: 640px) {
+  .sutra-pair {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  body { padding: 1.2rem 1rem 3rem; }
+  header h1 { font-size: 1.35rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book-label">Kāmasūtra — Sāṃprayogikam (第二篇 交合論)</div>
+  <h1>第八章　男性の技法と女性上位</h1>
+  <div class="subtitle">Puruṣopasṛptāni Puruṣāyitaṃ ca</div>
+  <div class="chapter-info">
+    第二篇 第八章（通算第十三章）｜全41節｜第17–18節目（prakaraṇa）<br>
+    女性上位法（puruṣāyita-prakaraṇa）と男性の挿入技法（puruṣopasṛpta-prakaraṇa）の二節を含む
+  </div>
+</header>
+
+<!-- ===== 女性上位の理由と方法 ===== -->
+<div class="section-heading">女性上位の理由と方法（2.8.1–2.8.6）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.1</div>
+    <div class="sanskrit">nāyakasya saṃtatābhyāsāt pariśramam upalabhya rāgasya cānupaśamam anumatā tena tam adho 'vapātya puruṣāyitena sāhāyyaṃ dadyāt |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">男性（nāyaka）が繰り返しの行為（saṃtatābhyāsa）により疲労（pariśrama）していること、しかし情熱（rāga）はなお鎮まっていないことを察し、彼の許可（anumata）を得て、彼を下に倒し（adho 'vapātya）、女性上位（puruṣāyita）によって助力（sāhāyya）を与えるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.2–3</div>
+    <div class="sanskrit">svābhiprāyād vā vikalpa-yojanārthinī | nāyaka-kutūhalād vā |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">あるいは自らの望み（svābhiprāya）から、変化（vikalpa）を求めて。あるいは男性の好奇心（kutūhala）から。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.4–5</div>
+    <div class="sanskrit">tatra yukta-yantreṇaivetareṇotthāpyamānā tam adhaḥ pātayet | evaṃ ca ratam avicchinna-rasaṃ tathā pravṛttam eva syāt | ity eko 'py ayaṃ mārgaḥ | punar ārambheṇādita evopakramet | iti dvitīyaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">その際、結合を解かぬまま（yukta-yantra）、相手に持ち上げられて（utthāpyamānā）彼を下に倒す。こうすれば交合は中断なき快楽（avicchinna-rasa）のまま続く。これが第一の方法。あるいは、改めて最初から（ādita eva）始める。これが第二の方法。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.6</div>
+    <div class="sanskrit">sā prakīryamāṇa-keśa-kusumā śvāsa-vicchinna-hāsinī vaktra-saṃsargārthaṃ stanābhyām uraḥ pīḍayantī punaḥ punaḥ śiro nāmayantī yāś ceṣṭāḥ pūrvam asau darśitavāṃs tā eva prakurvīta | pātitā pratipātayāmīti hasantī tarjayantī pratighnatī ca brūyāt | punaś ca vrīḍāṃ darśayet | śramaṃ virāmābhīpsāṃ ca | puruṣopasṛptair evopasarpet |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">彼女は髪と花を乱しながら（prakīryamāṇa-keśa-kusumā）、息で途切れ途切れに笑い（śvāsa-vicchinna-hāsinī）、顔を合わせるために（vaktra-saṃsarga）両乳で彼の胸を押し、繰り返し頭を下ろしながら、彼が先に見せた所作（ceṣṭā）をそのまま行うべきである。「倒されたから、今度はお返しに倒してやるわ」と笑いながら（hasantī）、脅しながら（tarjayantī）、打ち返しながら（pratighnatī）言うべきである。そしてまた恥じらい（vrīḍā）を見せ、疲れ（śrama）と休みたいという気持ち（virāmābhīpsā）を見せる。男性の挿入技法（puruṣopasṛpta）そのものを用いるべきである。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>Yaśodhara は puruṣāyita の二つの方法を明確に区別する。第一は yukta-yantra（結合を維持したまま）体位を入れ替える方法で、śrama-vṛddhi（疲労の増大）と rāgasyānupaśama（情熱の未消退）の場合に適する。第二はいったん離れて punarārambha（再開）する方法で、svābhiprāya（自発的）な場合に用いる。</p>
+  <p>女性の所作についての詳述：stanopagūhana（乳房での抱擁）は straiṇa-tejas（女性的な力）による。先に男性が pāruṣya-rabhasatva（粗暴さ・猛々しさ）で示した ceṣṭā を、今度は女性が pratīpa（逆に）行う。しかし brīḍā（恥じらい）・śrama（疲れ）・virāmābhīpsā（休息の望み）を見せるのは本性の表出で、puruṣāyita といえども完全な reversal ではない。</p>
+</div>
+
+<!-- ===== 前戯と外的接近法 ===== -->
+<div class="section-heading">前戯と外的接近法（bāhya upasṛpta）（2.8.7–2.8.16）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.7</div>
+    <div class="sanskrit">tāni ca vakṣyāmaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">それら〔男性の挿入技法〕について、以下に述べる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.8</div>
+    <div class="sanskrit">puruṣaḥ śayanasthāyā yoṣitas tad-vacana-vyākṣipta-cittāyā iva nīvīṃ viśleṣayet | tatra vivadamānāṃ kapola-cumbanena paryākulayet |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">男性は、寝台にいる女性の、言葉に気を取られているかのような隙に（tad-vacana-vyākṣipta-citta）、腰紐（nīvī）を解くべきである。抵抗する（vivadamānā）彼女を頬への接吻（kapola-cumbana）で惑わせる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.9–12</div>
+    <div class="sanskrit">sthira-liṅgaś ca tatraināṃ parispṛśet | prathama-saṃgatā cet saṃhatorvor antare ghaṭṭanam | kanyāyāś ca | tathā stanayoḥ saṃhatayor hastayoḥ kakṣayor aṃsayor grīvāyām iti ca |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">興奮して硬くなった状態で（sthira-liṅga）、あちこちを触れるべきである。初めての交合（prathama-saṃgatā）であれば、閉じた両腿の間（saṃhatayoḥ ūrvoḥ antare）を擦る（ghaṭṭana）。未婚の女性（kanyā）にも同様である。また、閉じた両乳房、両手、両脇（kakṣā）、両肩（aṃsa）、首（grīvā）なども〔同様に触れる〕。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.13</div>
+    <div class="sanskrit">svairiṇyāṃ yathā-sātmyaṃ yathā-yogaṃ ca | alake cumbanārtham enāṃ nirdayam avalambet hanudeśe cāṅguli-saṃpuṭena |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">自由奔放な女性（svairiṇī）に対しては、慣れ（sātmya）と状況（yoga）に応じて〔行う〕。接吻のために額の髪（alaka）を容赦なく（nirdaya）つかみ、顎のあたり（hanudeśa）を指の杯形（aṅguli-saṃpuṭa）で〔つかむ〕。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.14–15</div>
+    <div class="sanskrit">tatretarasya vrīḍā nimīlanaṃ ca | prathama-samāgame kanyāyāś ca | rati-saṃyoge caināṃ katham anurajyata iti pravṛttyā parīkṣeta |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">その際、相手の女性には恥じらい（vrīḍā）と目を閉じること（nimīlana）がある。初めての交合における未婚女性にも同様である。交合の結合（rati-saṃyoga）において、「どのように快楽を感じるか」と行動（pravṛtti）によって観察すべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.16</div>
+    <div class="sanskrit">yukta-yantreṇopasṛpyamānā yato dṛṣṭim āvartayet tata evaināṃ pīḍayet | etad rahasyaṃ yuvatīnām iti suvarṇanābhaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">結合の状態で刺激されている女性が、どこに視線を向ける（dṛṣṭim āvartayet）か、まさにそこを圧迫する（pīḍayet）べきである。「これが若い女性たちの秘密（rahasya）である」と Suvarṇanābha は言う。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>Yaśodhara は puruṣopasṛpta を bāhya（外的）と ābhyantara（内的）に二分する。ここまでが bāhya で、nīvī-viśleṣaṇa（腰紐を解く）、sparśana（触れる）、ghaṭṭana（擦る）、avalambana（つかむ）の四つの外的接近法から成る。</p>
+  <p>Suvarṇanābha の「秘密」について、注釈は「女性が刺激を受けて視線を向ける場所こそ彼女の快感の座（rahasya）であり、nāḍī-pradeśa（経絡の要所）とも関連する」と述べる。この観察は一箇所とも複数箇所ともとれ、特に強く視線を向ける場所をより強く刺激すべき（atyarthaṃ dṛṣṭim āvartayet tasmin atyartham eva pīḍayet）とされる。</p>
+</div>
+
+<!-- ===== 女性の快楽の徴候 ===== -->
+<div class="section-heading">女性の快楽の徴候（2.8.17–2.8.19）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.17</div>
+    <div class="sanskrit">gātrāṇāṃ sraṃsanaṃ netra-nimīlanaṃ vrīḍā-nāśaḥ samadhikā ca rati-yojaneti strīṇāṃ bhāva-lakṣaṇam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">四肢の脱力（gātrāṇāṃ sraṃsana）、目を閉じること（netra-nimīlana）、恥じらいの消失（vrīḍā-nāśa）、そしてより深い結合を求めること（samadhikā rati-yojanā） — これらが女性の快楽の徴候（bhāva-lakṣaṇa）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.18</div>
+    <div class="sanskrit">hastau vidhunoti svidyati daśaty utthātuṃ na dadāti pādenāhanti ratāvasāne ca puruṣātivartinī |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">〔快楽が極まると〕両手を振り（vidhunoti）、汗をかき（svidyati）、噛みつき（daśati）、〔男性を〕起き上がらせず（utthātuṃ na dadāti）、足で打ち（pādenāhanti）、交合の終わりには男性を超えて動き続ける（puruṣātivartinī）。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.19</div>
+    <div class="sanskrit">tasyāḥ prāg yantra-yogāt kareṇa saṃbādhaṃ gaja iva kṣobhayet | ā mṛdu-bhāvāt | tato yantra-yojanam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">結合（yantra-yoga）の前に、象の鼻のように（gaja iva）手を用いて陰部（saṃbādha）を刺激すべきである。柔らかくなるまで（ā mṛdu-bhāvāt）。その後に結合（yantra-yojana）を行う。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>bhāva-lakṣaṇa（快楽の徴候）には三段階がある。gātra-sraṃsana（四肢の脱力）と netra-nimīlana（閉眼）は bhāva が prāpta（到達した）徴候。vrīḍā-nāśa（恥じらいの消失）は pratyāsanna（接近した）徴候。samadhikā rati-yojanā（より深い結合の追求、自ら腰を男性の腰に密着させる）は sandhusthāmāṇa（持続的）な徴候。</p>
+  <p>「象のように」（gaja iva）とは、人差し指・中指・薬指を先端で合わせた gaja-hasta（象の手）の形を指し、kṛttrima（人工的器具）の使用をも示唆する。sambādha（陰部）は四種に分類される：padma-dala-sparśa（蓮弁のような感触）、guṭikāvat（小球のような）、valibhaṃ（襞のある）、gojihvā-karkaśa（牛の舌のように粗い）。最初のものを除き、刺激によって mṛdu-bhāva（柔らかい状態）にする。</p>
+</div>
+
+<!-- ===== 男性の十種の挿入技法 ===== -->
+<div class="section-heading">男性の十種の挿入技法（puruṣopasṛptāni）（2.8.20–2.8.31）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.20</div>
+    <div class="sanskrit">upasṛptakaṃ manthanaṃ hulo avamardanaṃ pīḍitakaṃ nirghāto varāha-ghāto vṛṣa-ghātaś caṭaka-vilasitaṃ saṃpuṭa iti puruṣopasṛptāni |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">男性の挿入技法（puruṣopasṛpta）は以下の十種である。⑴ upasṛptaka（直進法）、⑵ manthana（攪拌法）、⑶ hula（掻き上げ法）、⑷ avamardana（押し下し法）、⑸ pīḍitaka（圧迫法）、⑹ nirghāta（打下法）、⑺ varāha-ghāta（猪突き法）、⑻ vṛṣa-ghāta（牡牛突き法）、⑼ caṭaka-vilasita（雀の戯れ法）、⑽ saṃpuṭa（合掌法）。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.21</div>
+    <div class="sanskrit">nyāyyam ṛju-saṃmiśraṇam upasṛptakam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">通常の（nyāyya）真っ直ぐな結合（ṛju-saṃmiśraṇa）が upasṛptaka（直進法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.22</div>
+    <div class="sanskrit">hastena liṅgaṃ sarvato bhrāmayed iti manthanaṃ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">手で男根（liṅga）を持ち、あらゆる方向に回転させる（bhrāmayet）のが manthana（攪拌法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.23</div>
+    <div class="sanskrit">nīcī-kṛtya jaghanaṃ upariṣṭād ghaṭṭayed iti hulaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">腰（jaghana）を低くし（nīcī-kṛtya）、上方を突く（upariṣṭād ghaṭṭayet）のが hula（掻き上げ法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.24</div>
+    <div class="sanskrit">tad eva viparītaṃ sa-rabhasam avamardanam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">それ〔hula〕の逆で、激しく（sa-rabhasa）行うのが avamardana（押し下し法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.25</div>
+    <div class="sanskrit">liṅgena samāhatya pīḍayaṃś ciram avatiṣṭheteti pīḍitakam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">男根で打ち込んで（samāhatya）圧迫しながら（pīḍayan）長く留まる（ciram avatiṣṭheta）のが pīḍitaka（圧迫法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.26</div>
+    <div class="sanskrit">su-dūram utkṛṣya vegena sva-jaghanaṃ avapātayed iti nirghātaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">大きく引き出し（su-dūram utkṛṣya）、勢いよく（vegena）自らの腰を打ち下ろす（avapātayet）のが nirghāta（打下法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.27</div>
+    <div class="sanskrit">ekata eva bhūyiṣṭham avalikhed iti varāha-ghātaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">一方の側だけを多く（bhūyiṣṭham）擦る（avalikhet）のが varāha-ghāta（猪突き法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.28</div>
+    <div class="sanskrit">sa evobhayataḥ paryāyeṇa vṛṣāghātaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">それ〔varāha-ghāta〕を両側に交互に行う（ubhayataḥ paryāyeṇa）のが vṛṣa-ghāta（牡牛突き法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.29</div>
+    <div class="sanskrit">sakṛn miśritam aniṣkramayya dvis triś catur iti ghaṭṭayed iti caṭaka-vilasitam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">一度挿入したまま（sakṛn miśritam）抜かずに（aniṣkramayya）、二回、三回、四回と打ち込む（ghaṭṭayet）のが caṭaka-vilasita（雀の戯れ法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.30</div>
+    <div class="sanskrit">rāgāvasānikaṃ vyākhyātaṃ karaṇaṃ saṃpuṭam iti |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">〔既に第六章で〕説明された saṃpuṭa 体位の動き（karaṇa）が、絶頂時の（rāgāvasānika）〔技法〕である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.31</div>
+    <div class="sanskrit">teṣāṃ strī-sātmyād vikalpena prayogaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">これらは、女性の慣れ（strī-sātmya）に応じて、変化をつけて（vikalpena）用いるべきである。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>十種の技法の詳細：</p>
+  <ul>
+    <li><strong>upasṛptaka</strong>：ā-gopāla-aṅganā-prasiddha（牧女にまで周知の）通常の方法</li>
+    <li><strong>manthana</strong>：手で持って sambādha（陰部）の内部で「攪拌する如く」回転させる</li>
+    <li><strong>hula</strong>：腰を下げて上方（ūrdhva-bhāga）を刺激。bhaga（陰門）の上部を圧迫する</li>
+    <li><strong>avamardana</strong>：hula の逆で腰を高くして下方を激しく圧す。adho-bhāga（下部）は kaṇḍūti-bahula（強い感覚が多い）ため</li>
+    <li><strong>pīḍitaka</strong>：根元まで（ā-mūla）挿入し、圧迫したまま長く留まる</li>
+    <li><strong>nirghāta</strong>：ā-bandha（根元の境まで）引き出してから、勢いよく打ち下ろす</li>
+    <li><strong>varāha-ghāta</strong>：猪のように一方の側だけを何度も擦る</li>
+    <li><strong>vṛṣa-ghāta</strong>：牡牛が両角で突くように、両側を交互に擦る</li>
+    <li><strong>caṭaka-vilasita</strong>：雀が交尾するように、抜かずに内部で素早く短く打つ。rāgāvasānika（絶頂時）の技法で、visṛṣṭi（射精）の直前に自然とこのようになる</li>
+    <li><strong>saṃpuṭa</strong>：「両者の足がまっすぐに伸びた」体位（第六章で説明済み）での動き</li>
+  </ul>
+  <p>strī-sātmya（女性の慣れ）に応じて vikalpa（変化：mṛdu 柔、madhya 中、atimātra 強の三段階）をつけて用いる。bāhya（外的）と ābhyantara（内的）の区別について、nīvī-viśleṣaṇa（腰紐を解く）等の外的行為は第二の方法（再開法）では nāyaka-kakṣā-vandha-viśleṣaṇa（男性の腰帯を解く）等に置き換わる。ābhyantara（内的）な挿入技法は両方の方法で共通である。</p>
+</div>
+
+<div class="table-wrap">
+  <table class="info-table">
+    <tr><th>No.</th><th>技法名</th><th>Sanskrit</th><th>動作の特徴</th></tr>
+    <tr><td>①</td><td>直進法</td><td>upasṛptaka</td><td>通常のまっすぐな挿入</td></tr>
+    <tr><td>②</td><td>攪拌法</td><td>manthana</td><td>手で持って内部で回転</td></tr>
+    <tr><td>③</td><td>掻き上げ法</td><td>hula</td><td>腰を低くして上方を突く</td></tr>
+    <tr><td>④</td><td>押し下し法</td><td>avamardana</td><td>腰を高くして下方を激しく圧す</td></tr>
+    <tr><td>⑤</td><td>圧迫法</td><td>pīḍitaka</td><td>深く挿入して長く圧迫する</td></tr>
+    <tr><td>⑥</td><td>打下法</td><td>nirghāta</td><td>大きく引き出して勢いよく打ち込む</td></tr>
+    <tr><td>⑦</td><td>猪突き法</td><td>varāha-ghāta</td><td>一方の側のみを繰り返し擦る</td></tr>
+    <tr><td>⑧</td><td>牡牛突き法</td><td>vṛṣa-ghāta</td><td>両側を交互に擦る</td></tr>
+    <tr><td>⑨</td><td>雀の戯れ法</td><td>caṭaka-vilasita</td><td>抜かずに内部で素早く短打</td></tr>
+    <tr><td>⑩</td><td>合掌法</td><td>saṃpuṭa</td><td>両足伸展の体位で絶頂時に用いる</td></tr>
+  </table>
+</div>
+
+<!-- ===== 女性上位の追加技法 ===== -->
+<div class="section-heading">女性上位の追加技法（2.8.32–2.8.38）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.32</div>
+    <div class="sanskrit">puruṣāyite tu saṃdaṃśo bhramarakaḥ preṅkholitam ity adhikāni |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">女性上位（puruṣāyita）においてはさらに追加の〔三種の〕技法がある。⑴ saṃdaṃśa（挟持法）、⑵ bhramaraka（旋回法）、⑶ preṅkholita（揺動法）。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.33</div>
+    <div class="sanskrit">bāḍavena liṅgam avagṛhya niṣkarṣantyāḥ pīḍayantyā vā cirāvasthānaṃ saṃdaṃśaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">bāḍava（陰門の筋肉）で男根（liṅga）を掴み（avagṛhya）、引き込みつつ（niṣkarṣantyāḥ）あるいは圧迫しながら（pīḍayantyāḥ）長く留まる（cirāvasthāna）のが saṃdaṃśa（挟持法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.34</div>
+    <div class="sanskrit">yukta-yantrā cakravad bhramed iti bhramaraka ābhyāsikaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">結合したまま（yukta-yantrā）、轆轤（cakra）のように回転する（bhramet）のが bhramaraka（旋回法）である。これは練習（abhyāsa）を要する。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.35</div>
+    <div class="sanskrit">tatretaraḥ sva-jaghanaṃ utkṣipet |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">その際、男性は自らの腰（jaghana）を上に突き上げる（utkṣipet）。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.36</div>
+    <div class="sanskrit">jaghanaṃ eva dolāyamānaṃ sarvato bhrāmayed iti preṅkholitakam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">腰だけを（jaghanaṃ eva）揺り動かし（dolāyamāna）、あらゆる方向に回す（sarvato bhrāmayet）のが preṅkholita（揺動法）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.8.37–38</div>
+    <div class="sanskrit">yukta-yantraiva lalāṭe lalāṭaṃ nidhāya viśrāmyeta | viśrāntāyāṃ ca puruṣasya punar āvartanam | iti puruṣāyitāni |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">結合したまま（yukta-yantrā）、額を額に合わせて（lalāṭe lalāṭam）休息する（viśrāmyeta）。女性が休息したら（viśrāntāyām）、男性が再び上に戻る（punar āvartana）。以上が puruṣāyita（女性上位法）である。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>女性上位の三つの追加技法について：</p>
+  <ul>
+    <li><strong>saṃdaṃśa</strong>（挟持法）：bāḍava（＝varāṅga-oṣṭha-saṃdaṃśa、陰門の筋肉）で男根を掴み、内側に引き込む（antaḥ samākarṣaṇa）か圧迫する。長く保持（cirāvasthāna）する</li>
+    <li><strong>bhramaraka</strong>（旋回法）：陰門に男根を挿入した状態で、陶工の轆轤（kulāla-cakra）のように回転する。足を曲げ（kuñcita-caraṇā）、男性の体に手で支え（hasta-śarīrāvaṣṭambha）を取る。ābhyāsika（習熟を要する）とされる</li>
+    <li><strong>preṅkholita</strong>（揺動法）：腰を前後・左右に揺り動かす（dolāyamāna）。円形の回転は manthana に含まれるため、ここでは振り子のような前後左右の動きを指す</li>
+  </ul>
+  <p>lalāṭe lalāṭaṃ nidhāya viśrāmyeta の休息は、yukta-yantrā（結合を維持したまま）で行い、rāgasyānupaśāntatvāt（情熱がまだ鎮まっていないため）離れてはならない。女性が休んだ後の punarāvartana（男性の再開）は「再び上に行く」、すなわち通常の体位に戻ることを意味する。</p>
+</div>
+
+<div class="table-wrap">
+  <table class="info-table">
+    <tr><th>No.</th><th>技法名</th><th>Sanskrit</th><th>動作の特徴</th></tr>
+    <tr><td>⑪</td><td>挟持法</td><td>saṃdaṃśa</td><td>陰門の筋肉で男根を掴み保持する</td></tr>
+    <tr><td>⑫</td><td>旋回法</td><td>bhramaraka</td><td>結合したまま轆轤のように回転（要練習）</td></tr>
+    <tr><td>⑬</td><td>揺動法</td><td>preṅkholita</td><td>腰を前後・左右に揺り動かす</td></tr>
+  </table>
+</div>
+
+<!-- ===== 結びの韻文 ===== -->
+<div class="section-heading">結びの韻文（2.8.39–2.8.41）</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.8.39</div>
+  <div class="sanskrit-verse">pracchādita-svabhāvāpi gūḍhākārāpi kāminī |<br>vivṛṇoty eva bhāvaṃ svaṃ rāgād uparivartinī ||</div>
+  <div class="japanese-verse">本性を隠した（pracchādita-svabhāvā）女性も、態度を秘めた（gūḍhākārā）女性も、<br>情熱（rāga）から、上になって動く時に（uparivartinī）、自らの本音（bhāva）を露わにする。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.8.40</div>
+  <div class="sanskrit-verse">yathā-śīlā bhaven nārī yathā ca rati-lālasā |<br>tasyā eva viceṣṭābhis tat sarvam upalakṣayet ||</div>
+  <div class="japanese-verse">女性がどのような性格（śīla）であるか、どのように交合を渇望する（rati-lālasā）か、<br>上になった彼女自身の動き（viceṣṭā）から、そのすべてを見取るべきである。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.8.41</div>
+  <div class="sanskrit-verse">na tv evartau na prasūtāṃ na mṛgīṃ na ca garbhiṇīm |<br>na cātivyāyatāṃ nārīṃ yojayet puruṣāyite ||</div>
+  <div class="japanese-verse">月経中の女性（ṛtu）、出産直後の女性（prasūtā）、mṛgī 型の女性、妊婦（garbhiṇī）、<br>また極端に太った女性（ativyāyatā）を、女性上位に用いてはならない。</div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>結びの韻文は puruṣāyita の二つの意義を示す。第一は nāyikā の真の bhāva（本心）を知ること — 普段隠している性格と欲求が、上位で動く際に現れる。第二はそれを観察して uttara-kāla（後の機会）に同様の方法で surata（交合）を始めることができる点。</p>
+  <p>最後の禁忌について：</p>
+  <ul>
+    <li><strong>ṛtu</strong>（月経中）：garbhāgrahaṇa-bhaya（望ましくない受胎の恐れ）。また punarāvartana（体位変換）で受胎した場合、dāraka-dārikā（男女の子）が vyasta-śīla（混乱した性質）になるとされる</li>
+    <li><strong>prasūtā</strong>（出産直後の女性）：pradara-kaṭi-nirgama-bhaya（出血と腰の損傷の恐れ）</li>
+    <li><strong>mṛgī</strong>（小型の女性）：vṛṣa-aśva（牡牛型・馬型男性）との組み合わせで avapāṭikā-bhaya（裂傷の恐れ）</li>
+    <li><strong>garbhiṇī</strong>（妊婦）：garbha-srāva-bhaya（流産の恐れ）</li>
+    <li><strong>ativyāyatā</strong>（極端に太った女性）：vyāpārayitum aśakyatvāt（動かすことが困難）</li>
+  </ul>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  puruṣopasṛptāni puruṣāyitaṃ cāṣṭamo 'dhyāyaḥ | āditas trayodaśaḥ |<br><br>
+  <span style="font-family:'Noto Serif JP',serif; font-size:0.8rem; color:var(--text-secondary);">
+    Vātsyāyanakāmasūtra 第二篇第八章（通算第十三章）終<br>
+    GRETIL テキストおよび Jayamaṅgalā 注釈（Chaukhamba 1929年版）に基づく
+  </span>
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

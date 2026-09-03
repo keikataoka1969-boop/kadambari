@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 7.2</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+:root{--bg:#f7f4ef;--bg-card:#fffdf8;--text:#2c2418;--text-secondary:#6b5d4d;--accent:#a0522d;--accent-light:#c4845c;--border:#ddd5c8;--border-light:#ece6da;--sanskrit-bg:#faf8f3;--note-bg:#f2ede4;--highlight:#8b4513;--table-header:#e8dfd2;--table-stripe:#faf7f1}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1612;--bg-card:#231f1a;--text:#e0d6c8;--text-secondary:#a89880;--accent:#d4845c;--accent-light:#e0a47c;--border:#3d352a;--border-light:#302a22;--sanskrit-bg:#1e1a15;--note-bg:#28231c;--highlight:#e0a060;--table-header:#2e2820;--table-stripe:#252018}}
+:root[data-theme="dark"]{--bg:#1a1612;--bg-card:#231f1a;--text:#e0d6c8;--text-secondary:#a89880;--accent:#d4845c;--accent-light:#e0a47c;--border:#3d352a;--border-light:#302a22;--sanskrit-bg:#1e1a15;--note-bg:#28231c;--highlight:#e0a060;--table-header:#2e2820;--table-stripe:#252018}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Shippori Mincho','Noto Serif JP',serif;background:var(--bg);color:var(--text);line-height:1.9;max-width:960px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-family:'Noto Serif JP',serif;font-size:1.6rem;font-weight:700;color:var(--accent);border-bottom:2px solid var(--border);padding-bottom:.75rem;margin-bottom:.5rem;text-wrap:balance}
+.subtitle{font-size:.95rem;color:var(--text-secondary);margin-bottom:2rem}
+h2{font-family:'Noto Serif JP',serif;font-size:1.25rem;font-weight:600;color:var(--highlight);margin:2.5rem 0 1rem;padding-bottom:.4rem;border-bottom:1px solid var(--border-light)}
+h3{font-size:1.05rem;font-weight:600;color:var(--accent);margin:1.8rem 0 .8rem}
+.sutra{display:grid;grid-template-columns:1fr 1fr;gap:0 2rem;margin:1rem 0;padding:1rem 1.25rem;background:var(--bg-card);border:1px solid var(--border-light);border-radius:6px}
+.sutra-num{grid-column:1/-1;font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:.3rem;font-family:'Noto Serif Devanagari',serif}
+.sk{font-family:'Noto Serif Devanagari','Noto Serif JP',serif;font-size:.95rem;color:var(--text);line-height:1.85;hyphens:none}
+.jp{font-family:'Shippori Mincho','Noto Serif JP',serif;font-size:.95rem;line-height:1.85;color:var(--text)}
+.note-block{background:var(--note-bg);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;margin:1.2rem 0;border-radius:0 6px 6px 0;font-size:.88rem;color:var(--text-secondary);line-height:1.8}
+.note-block strong{color:var(--accent);font-weight:600}
+.verse-block{background:var(--sanskrit-bg);border:1px solid var(--border-light);padding:1rem 1.25rem;margin:1rem 0;border-radius:6px;text-align:center}
+.verse-block .sk{display:block;margin-bottom:.5rem}
+.verse-block .jp{display:block;font-size:.9rem;color:var(--text-secondary)}
+.colophon{text-align:center;margin:2.5rem 0;padding:1.5rem;font-size:.9rem;color:var(--text-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.final-colophon{text-align:center;margin:3rem 0 1rem;padding:2rem;background:var(--note-bg);border:2px solid var(--accent);border-radius:8px;font-size:1rem;color:var(--accent);line-height:2}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th{background:var(--table-header);padding:.6rem .75rem;text-align:left;font-weight:600;color:var(--accent);border:1px solid var(--border)}
+td{padding:.55rem .75rem;border:1px solid var(--border-light);vertical-align:top}
+tr:nth-child(even) td{background:var(--table-stripe)}
+.section-intro{font-size:.92rem;color:var(--text-secondary);margin:1rem 0 1.5rem;line-height:1.8;padding:.75rem 1rem;background:var(--note-bg);border-radius:6px}
+@media(max-width:700px){.sutra{grid-template-columns:1fr;gap:.5rem}.sk{padding-bottom:.5rem;border-bottom:1px dashed var(--border-light)}body{padding:1.25rem 1rem}h1{font-size:1.35rem}}
+</style>
+</head>
+<body>
+
+<h1>第七篇 第二章　失われた情熱の回復・増大法・雑方（第六十二〜六十四節）</h1>
+<p class="subtitle">Naṣṭa-rāga-pratyānayana・Vardhana-yoga・Citra-yoga — 情熱回復法・増大法・種々の秘方</p>
+
+<p class="section-intro">第七篇第二章はカーマスートラの最終章であり、三つの prakaraṇa を含む。①失われた情欲の回復法（naṣṭa-rāga-pratyānayana）は、衰えた欲情を取り戻すための補助器具（apadravya）と南方の穿孔法（vyadhana）を扱う。②増大法（vardhana-yoga）は男根の物理的増大を目的とする。③雑方（citra-yoga）は、呪術的・魔術的な雑多な秘法の集成であり、カーマスートラ全体を締めくくる結語詩を含む。</p>
+
+<p class="section-intro">注意：GRETIL テキストでは、本章（第二章）の sūtra 番号が 7.1.x と振られている（7.2.x ではない）。本対訳では原文の番号をそのまま記し、「第二章」として扱う。</p>
+
+<h2>第六十二節　失われた情熱の回復法（Naṣṭa-rāga-pratyānayanam）</h2>
+
+<div class="sutra">
+<div class="sutra-num">7.2.1（GRETIL: 7.1.1）</div>
+<div class="sk">caṇḍa-vegāṃ rañjayitum a-śaknuvan yogān ācaret.</div>
+<div class="jp">激しい情欲をもつ女性（caṇḍa-vegā）を喜ばせることができない者は、〔以下の〕方法を行うべきである。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は本章の導入で、交合（rata）には二つの果実があるとする——子孫の果実（apatya-phala）と快楽の果実（rati-phala）である。前章の精力増強法（vṛṣya-yoga）は前者に関わり、本節の情熱回復法は後者に関わる。失われた情欲（naṣṭa-rāga）は二種に分かれる：微弱なもの（manda）と滅失したもの（dhvasta）であり、微弱なものはさらに「活動に至るもの」（pravartaka）と「至らないもの」（apravartaka）に区分される。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.2（GRETIL: 7.1.2）</div>
+<div class="sk">rāgasyopakrame saṃbādhasya kareṇopamardanaṃ tasyā rasa-prāpti-kāle ca rata-yojanam iti rāga-pratyānayanam.</div>
+<div class="jp">交合の始めに、陰部（saṃbādha）を手で摩擦し、彼女が快感に達する時に〔男根を〕挿入すること——これが情欲の回復法である。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara の解説によれば、このsūtraは「微弱だが活動には至る」情欲（manda-pravartaka-rāga）に対応する。男根は硬直していても女性を満足させるには不十分な場合、まず「象の鼻」（gaja-hasta）の手技で女性の陰部（bhaga）を刺激し、彼女が快感に達する時に器械的に結合させる。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.3（GRETIL: 7.1.3）</div>
+<div class="sk">aupariṣṭakaṃ manda-vegasya gata-vayaso vyāyatasya rata-śrāntasya ca rāga-pratyānayanam.</div>
+<div class="jp">口による行為（aupariṣṭaka）は、欲情の微弱な者・老齢の者・肥満の者・交合に疲れた者にとっての情欲回復法である。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、これが「微弱で活動に至らない」情欲（manda-apravartaka）に対応するとする。欲情は生じていても男根が十分に硬直せず、口による行為（aupariṣṭaka）によってのみ射精の快楽を得ることができる。老齢者と肥満者は両者とも情欲が滅失（dhvasta）しており、男根が起立困難であるため同様に oral 行為のみが回復法となる。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.4（GRETIL: 7.1.4）</div>
+<div class="sk">apadravyāṇi vā yojayet.</div>
+<div class="jp">あるいは補助器具（apadravya）を用いるべきである。</div>
+</div>
+
+<h3>穿孔していない男根のための補助器具</h3>
+
+<div class="sutra">
+<div class="sutra-num">7.2.5（GRETIL: 7.1.5）</div>
+<div class="sk">tāni suvarṇa-rajata-tāmra-kālāyasa-gajadanta-gavala-dravya-mayāṇi.</div>
+<div class="jp">それら〔の補助器具〕は、金・銀・銅・鉄・象牙・水牛の角の素材でできている。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.6（GRETIL: 7.1.6）</div>
+<div class="sk">trāpuṣāṇi saisakāni ca mṛdūni śīta-vīryāṇi karmaṇi ca dhṛṣṇūni bhavantīti bābhravīyā yogāḥ.</div>
+<div class="jp">錫（trāpuṣa）と鉛（saisaka）のものは、柔らかく、冷性であり、使用において大胆に用いられる——これがバーブラヴィーヤ派の方法である。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、錫と鉛の利点を三つ挙げる。柔らかいので触感が良い、冷性なので挿入時にひんやりする、使用に際して大胆に扱える（atyutejakatvāt）。木製のものはこれらの点で逆であると暗示する。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.7（GRETIL: 7.1.7）</div>
+<div class="sk">dāru-mayāni sāmyataś ceti vātsyāyanaḥ.</div>
+<div class="jp">木製のものも同等であるとヴァーツヤーヤナは〔言う〕。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は「同等」（sāmyataḥ）の意味を、ある女性にとってはこちらが好ましいこともありうるため、木製のものも用いるべきとヴァーツヤーヤナは考えていると解説する。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.8（GRETIL: 7.1.8）</div>
+<div class="sk">liṅga-pramāṇāntaraṃ bindubhiḥ karkaśa-paryantaṃ bahulaṃ syāt.</div>
+<div class="jp">〔補助器具は〕硬直した男根の周径の間隙を埋め、突起（bindu）によって粗い表面をもち、十分な厚みがあるべきである。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、この器具が勃起した男根に巻き付けられるものであると説明する。bindu（突起・瘤）は utkoga とも言い、表面に凹凸をつけて刺激効果を高める。「甲羅のように」（taladraya-iva）男根に密着して固定されるとする。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.9（GRETIL: 7.1.9）</div>
+<div class="sk">ete eva dve saṃghāṭī.</div>
+<div class="jp">これら〔の器具〕の二つ組みが saṃghāṭī（対になったもの）である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.10（GRETIL: 7.1.10）</div>
+<div class="sk">tri-prabhṛti yāvat pramāṇaṃ vā cūḍakaḥ.</div>
+<div class="jp">三つ以上、男根の長さに及ぶまでのものが cūḍaka（環状の套）である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.11（GRETIL: 7.1.11）</div>
+<div class="sk">ekām eva latikāṃ pramāṇa-vaśena veṣṭayed ity eka-cūḍakaḥ.</div>
+<div class="jp">一本の蔓状の〔鉛・錫の〕帯を男根の寸法に合わせて巻き付けること——これが eka-cūḍaka（単巻き套）である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.12（GRETIL: 7.1.12）</div>
+<div class="sk">ubhayato-mukha-cchidraḥ sthūla-karkaśa-vṛṣaṇa-guṭikāyuktaḥ pramāṇa-vaśa-yogī kaṭyāṃ baddhaḥ kañcuko jālakaṃ vā.</div>
+<div class="jp">両端に穴があり、太い粗い睾丸状の球が付き、寸法に合わせて腰に紐で結ぶもの——これが kañcuka（鞘）あるいは jālaka（網状の套）である。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は kañcuka と jālaka の違いを詳述する。kañcuka は男根全体を覆う鞘であり、滑らかな表面のもの（khara-kañcuka）と粗い表面のもの（masṛṇa-pṛṣṭha）の二種がある。全体を覆うものが「全鞘」（samantāt-kañcuka）、亀頭部のみを覆うものが「半鞘」（ardha-kañcuka）あるいは maṇi-rakṣa（亀頭保護具）と呼ばれる。jālaka は穴の空いた帯を堅い紐で結び、男根の隆起した突起物で拡大した球を付けて編んだもので、さらに先端に vidhānikā（蓋）を付ける。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.13（GRETIL: 7.1.13）</div>
+<div class="sk">tad-a-bhāve 'lābūnālakaṃ veṇuś ca taila-kaṣāyaiḥ su-bhāvitaḥ sūtreṇa kaṭyāṃ baddhaḥ ślakṣṇā kāṣṭha-mālā vā grathitā bahubhir āmalakāsthibhiḥ saṃyukety apaviddha-yogāḥ.</div>
+<div class="jp">それら〔の器具〕がない場合は、瓢箪の管（alābūnālaka）や竹を油で十分に浸したものを紐で腰に結ぶか、あるいは滑らかな木製の珠を āmalaka（アムラ）の種子を多数はさんで編んだ数珠のようなもの〔を用いる〕——これらが apaviddha-yoga（放擲の補助法）と呼ばれる。</div>
+</div>
+
+<h3>穿孔した男根のための方法——南方の習俗</h3>
+
+<div class="sutra">
+<div class="sutra-num">7.2.14（GRETIL: 7.1.14）</div>
+<div class="sk">na tv a-viddhasya kasya cid vyavahṛtir astīti.</div>
+<div class="jp">しかし、穿孔されていない男根には〔南方の人々にとって〕何の使い道もないとされる。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.15（GRETIL: 7.1.15）</div>
+<div class="sk">dākṣiṇātyānāṃ liṅgasya karṇayor iva vyadhanaṃ bālasya.</div>
+<div class="jp">南方の人々（dākṣiṇātya）においては、男根の穿孔（vyadhana）は、耳の穿孔のように、幼少期に行われる。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.16（GRETIL: 7.1.16）</div>
+<div class="sk">yuvā tu śastreṇa chedayitvā yāvad rudhirasyāgamanaṃ tāvad udake tiṣṭhet.</div>
+<div class="jp">青年の場合は、刃物で切開し、血が流れる間は水の中に立っているべきである。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は穿孔の技法を詳述する。熟練者が外皮を引き寄せ別の場所に固定し、血管を避けて横方向に切開し、両側に穴が開くようにする。水中に立つのは出血を止めるためである。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.17（GRETIL: 7.1.17）</div>
+<div class="sk">vaiśadyārthaṃ ca tasyāṃ rātrau nirbandhād vyavāyaḥ.</div>
+<div class="jp">穴を開放状態に保つため、その夜に繰り返し交合すべきである。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.18（GRETIL: 7.1.18）</div>
+<div class="sk">tataḥ kaṣāyair eka-dināntaritaṃ śodhanam.</div>
+<div class="jp">その後、煎汁（kaṣāya）で一日おきに洗浄する。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.19（GRETIL: 7.1.19）</div>
+<div class="sk">vetasa-kuṭaja-śaṅkubhiḥ krameṇa vardhamānasya vardhanair bandhanam.</div>
+<div class="jp">vetasa（柳）・kuṭaja の楔（śaṅku）で、次第に大きくなるものを挿入して〔穴を〕拡大する。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.20（GRETIL: 7.1.20）</div>
+<div class="sk">yaṣṭī-madhukena madhu-yuktena śodhanam.</div>
+<div class="jp">yaṣṭīmadhuka（甘草）を蜂蜜と混ぜて〔傷の〕洗浄をする。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、甘草と蜂蜜の膏薬を塗ることで傷口を清浄に保ち、清浄な傷口のみが治癒すると述べる。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.21（GRETIL: 7.1.21）</div>
+<div class="sk">tataḥ sīsaka-pattra-karṇikayā vardhayet.</div>
+<div class="jp">その後、鉛の薄板の耳飾り（karṇikā）で〔穴を〕拡大する。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.22（GRETIL: 7.1.22）</div>
+<div class="sk">mrakṣayed bhallātaka-taileneti vyadhana-yogāḥ.</div>
+<div class="jp">bhallātaka（セメカルプス、マーキングナッツ）の油で滑らかにする——以上が穿孔法（vyadhana-yoga）である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.23（GRETIL: 7.1.23）</div>
+<div class="sk">tasminn an-ekākṛti-vikalpāny apadravyāṇi yojayet.</div>
+<div class="jp">その〔穿孔した穴〕に、さまざまな形状の補助器具を装着すべきである。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.24（GRETIL: 7.1.24）</div>
+<div class="sk">vṛttam ekato vṛttam udūkhalakaṃ kusumakaṃ kaṇṭakitaṃ kaṅkāsthi gaja-karakam aṣṭa-maṇḍalakaṃ bhramarakaṃ śṛṅgāṭakam anyāni vopāyataḥ karmataś ca bahu-karma-sahatā caiṣāṃ mṛdu-karkaśatā yathā-sātmyam.</div>
+<div class="jp">〔補助器具の形状は〕丸形（vṛtta）・片丸形（ekato-vṛtta）・臼形（udūkhalaka）・花形（kusumaka）・棘形（kaṇṭakita）・鷺骨形（kaṅkāsthi）・象鼻形（gajakaraka）・八面形（aṣṭamaṇḍalaka）・独楽形（bhramaraka）・菱形（śṛṅgāṭaka）その他、工夫と技術に応じて〔さまざま〕である。それらの柔らかさと硬さは、各人の体質に応じて〔選ぶべきである〕。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は各形状を詳述する。vṛtta（丸形）は中央に droṇikā（窪み）があり革紐で固定する。ekato-vṛtta は片側が丸く反対側が長い半月形。udūkhalaka は臼の形で中央が凹んでいる。kusumaka は蓮の蕾の形。kaṇṭakita は苦瓜の形で棘状の突起がある。bhramaraka は車輪の形で、側面に釘穴があり回転する。aṣṭamaṇḍalaka は八つの稜をもつ。これらはすべて革紐（carmapāśa）で穿孔穴に固定する。柔らかさと硬さは、女性の陰部の状態を知って、それに適したものを選ぶべきとする。
+</div>
+
+<div class="colophon">iti naṣṭa-rāga-pratyānayanam — 以上、失われた情欲の回復法（第六十二節）。</div>
+
+<h2>第六十三節　増大法（Vardhana-yogāḥ）</h2>
+
+<p class="section-intro">Yaśodhara は、補助器具によって男根を機能的にする方法に続き、物理的な形状の増大（ākārasya vardhana）も述べるとして、本節を導入する。</p>
+
+<div class="sutra">
+<div class="sutra-num">7.2.25（GRETIL: 7.1.25）</div>
+<div class="sk">evaṃ vṛkṣa-jānāṃ jantūnāṃ śūkair upahitaṃ liṅgaṃ daśarātraṃ tailena mṛditaṃ punar upatṛṃhitaṃ punaḥ pramṛditam iti jāta-śophaṃ khaṭvāyām adho-mukhas tad-antare lambayet.</div>
+<div class="jp">木生の虫（kandalikā）の刺毛（śūka）で男根を刺し、十日間油で揉み、再び刺毛で刺し、再び揉む——こうして腫れ（śopha）が生じたら、寝台に腹這いになり、〔男根を〕寝台の穴から垂らすべきである。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara の解説によれば、「木生の虫」（vṛkṣajānāṃ jantūnām）とは kandalikā（毛虫の一種）を指し、他の虫では適さない。śūka は刺毛であり、鑷子（saṃdaṃśikā）で虫を捉え、その刺毛で男根の側面を打つ。油で揉んだ後に腫れが生じたら、寝台の布の間から垂らして長さを増すのが目的である。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.26（GRETIL: 7.1.26）</div>
+<div class="sk">tatra śītaiḥ kaṣāyaiḥ kṛta-vedanā-nigrahaṃ sopakrameṇa niṣpādayet.</div>
+<div class="jp">所望の大きさに達したら、冷たい煎汁（pañca-kaṣāya）で痛みを鎮め、適切な処置で完成させるべきである。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、所望の寸法に達したら冷たい五種の煎汁（pañcakaṣāya）を繰り返しかけて痛みを除去すべきとする。さもなければ腫れが増大し痛みも増すからである。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.27（GRETIL: 7.1.27）</div>
+<div class="sk">sa yāvaj-jīvaṃ śūkajo nāma śopho viṭānām.</div>
+<div class="jp">この「刺毛による腫れ」（śūkaja-śopha）と呼ばれるものは、洒落者たち（viṭa）の間では一生涯持続するものである。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.28（GRETIL: 7.1.28）</div>
+<div class="sk">aśvagandhā-śabarakanda-jalaśūka-bṛhatīphala-mahīṣa-navanīta-hastikarṇa-vajravallī-rasair ekaikena parimardanaṃ māsikaṃ vardhanam.</div>
+<div class="jp">aśvagandhā（冬虫夏草の一種）・śabarakanda（シャバラの根）・jalaśūka（藺草の一種）・bṛhatī の果実・水牛のバター・hastikarṇa（象耳草）・vajravallī（骨接草）の液で個別に揉むことは、一ヶ月の増大法である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.29（GRETIL: 7.1.29）</div>
+<div class="sk">etair eva kaṣāyaiḥ pakvena tailena parimardanaṃ ṣāṇmāsyam.</div>
+<div class="jp">これら同じ〔薬草の〕煎汁で調理した油による揉み込みは、六ヶ月間の増大法である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.30（GRETIL: 7.1.30）</div>
+<div class="sk">dāḍima-trāpuṣa-bījāni bālukā bṛhatī-phala-rasaś ceti midv-agninā pakvena tailena parimardanaṃ pariṣeko vā.</div>
+<div class="jp">dāḍima（石榴）・trāpuṣa（胡瓜）の種子、bālukā（eḍabālukā, 一種の砂）、bṛhatī の果実の汁——これらをとろ火で調理した油による揉み込みまたは注ぎかけも〔六ヶ月間の増大法〕である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.31（GRETIL: 7.1.31）</div>
+<div class="sk">tāṃs tāṃś ca yogān āptebhyo budhyeta.</div>
+<div class="jp">その他の種々の方法は、信頼できる人々（āpta）から学ぶべきである。</div>
+</div>
+
+<div class="colophon">iti vardhana-yogāḥ — 以上、増大法（第六十三節）。</div>
+
+<h2>第六十四節　種々の秘方（Citra-yogāḥ）</h2>
+
+<p class="section-intro">Yaśodhara は、これまでに述べた以外の目的を達成するための雑多な秘方（prakīrṇaka-nyāyena citrā yogāḥ）を扱うとして本節を導入する。本節は一人への専属・情欲の消失・容姿の変化・幻術・護身など多岐にわたり、カーマスートラ全体を締めくくる結語詩で終わる。</p>
+
+<div class="sutra">
+<div class="sutra-num">7.2.32（GRETIL: 7.1.32）</div>
+<div class="sk">atha snuhī-kaṇṭaka-cūrṇaiḥ punarnavā-vānara-purīṣa-lāṅgalikā-mūla-miśrair yām avakiret sā nānyaṃ kāmayet.</div>
+<div class="jp">さて、vajra-snuhī（大戟）の棘の粉末に punarnavā（紅花草）・猿の糞・lāṅgalikā（長尾草）の根を混ぜて〔ある女性の頭に〕振りかければ、彼女は他の男を欲しなくなる。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.33（GRETIL: 7.1.33）</div>
+<div class="sk">tathā somalatāvalgujā-bhṛṅga-lohopajihvikā-cūrṇair vyādhi-ghātaka-jambū-phala-rasa-niryāsena ghanī-kṛtena ca lipta-saṃbādhāṃ gacchato rāgo naśyati.</div>
+<div class="jp">同様に、somalatā（月蔓）・avalgujā（バクチの種子）・bhṛṅga（タカサブロウ）・鉄粉・upajihvikā（蟻塚を作る蟻）の粉末を、vyādhighātaka（黄花もくせい）と jambū（ジャムン）の果実の樹液を濃縮したもので〔塗った〕陰部と交合すれば、情欲が消失する。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.34（GRETIL: 7.1.34）</div>
+<div class="sk">gopālikā-bahupādikā-jihvikā-cūrṇair māhiṣa-takra-yuktaiḥ snātāṃ gacchato rāgo naśyati.</div>
+<div class="jp">gopālikā（一種の草）・bahupādikā（ruṇḍikā, 雨季に生える多足虫の一種）・jihvikā の粉末を水牛の乳清（takra）と混ぜたもので沐浴した〔女性〕と交合すれば、情欲が消失する。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.35（GRETIL: 7.1.35）</div>
+<div class="sk">nīpāmrātaka-jambū-kusuma-yuktam anulepanaṃ daurbhāgya-karaṃ srajaś ca.</div>
+<div class="jp">nīpa（カダンバの一種）・āmrātaka（ホグプラム）・jambū（ジャムン）の花を含む塗香は不幸をもたらすものであり、〔それらの花で作った〕花環もまた〔同様〕である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.36（GRETIL: 7.1.36）</div>
+<div class="sk">kokilākṣa-pralepo hastinyāḥ saṃhatam ekarātre karoti.</div>
+<div class="jp">白い kokilākṣa（ハナスゲの一種）の塗布は、雌象〔のように広い陰部〕を一夜にして引き締める。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.37（GRETIL: 7.1.37）</div>
+<div class="sk">padmotpala-kadamba-sarjaka-sugandha-cūrṇāni madhunā piṣṭāni lepo mṛgyā viśālī-karaṇam.</div>
+<div class="jp">padma（紅蓮）・utpala（青蓮）・kadamba（カダンバ）・sarjaka・sugandha の粉末を蜂蜜で練った塗布剤は、鹿の〔陰部のように狭い〕ものを拡大する。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.38（GRETIL: 7.1.38）</div>
+<div class="sk">snuhī-somārka-kṣārair avalgujā-phalair bhāvitāny āmalakāni keśānāṃ śvetī-karaṇam.</div>
+<div class="jp">snuhī（大戟）・soma・arka（有冠花）のアルカリ液と avalgujā（バクチ）の果実に浸した āmalaka（アムラ）の実は、髪を白くする。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.39（GRETIL: 7.1.39）</div>
+<div class="sk">madayantikā-kuṭaja-kāñjanikā-girikarṇikā-ślakṣṇaparṇī-mūlaiḥ snānaṃ keśānāṃ pratyānayanam.</div>
+<div class="jp">madayantikā・kuṭaja（インドキナ皮）・kāñjanikā（黒い花の木）・girikarṇikā・ślakṣṇaparṇī（カシミール産の草）の根での沐浴は、〔白くなった〕髪の元の色への回復法である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.40（GRETIL: 7.1.40）</div>
+<div class="sk">etair eva su-pakvena tailenābhyaṅgāt kṛṣṇī-karaṇāt krameṇāsya pratyānayanam.</div>
+<div class="jp">これらの同じ〔薬草〕で十分に調理した油で塗油すれば、黒くなり、日を追って〔元の色に〕回復する。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、これらの薬草の煎汁で作った油を用いれば黒くなるが、黒さは日を追って自然に消えるとする。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.41（GRETIL: 7.1.41）</div>
+<div class="sk">śvetāśvasya muṣka-svedaiḥ sapta-kṛtvo bhāvitenālaktakena rakto 'dharaḥ śveto bhavati.</div>
+<div class="jp">白い馬の睾丸の汗に七度浸した lac 色素（ālaktaka）で赤く染めた唇は、白くなる。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.42（GRETIL: 7.1.42）</div>
+<div class="sk">madayantikādīny eva pratyānayanam.</div>
+<div class="jp">madayantikā 等〔の薬草〕がその回復法である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.43（GRETIL: 7.1.43）</div>
+<div class="sk">bahupādikā-kuṣṭha-tagara-tālīsa-devadāru-vajrakandakair upaliptaṃ vaṃśaṃ vādayato yā śabdaṃ śṛṇoti sā vaśyā bhavati.</div>
+<div class="jp">bahupādikā（多足虫）・kuṣṭha（木香）・tagara（甘松香）・tālīsa（インドイチイ）・devadāru（ヒマラヤスギ）・vajrakanda（骨接草の根）で塗った竹笛を吹き、その音を聞いた女性は、意のままになる。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.44（GRETIL: 7.1.44）</div>
+<div class="sk">dhattūra-phala-yukto 'bhyavahāra unmādakaḥ.</div>
+<div class="jp">dhattūra（朝鮮朝顔）の実を混ぜた飲食物は、狂気をもたらす。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.45（GRETIL: 7.1.45）</div>
+<div class="sk">guḍo jīrṇitaś ca pratyānayanam.</div>
+<div class="jp">黒砂糖（guḍa）を食べ、消化させることがその回復法である。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.46（GRETIL: 7.1.46）</div>
+<div class="sk">haritāla-manaḥśilā-bhakṣiṇo mayūrasya purīṣeṇa lipta-hasto yad dravyaṃ spṛśati tan na dṛśyate.</div>
+<div class="jp">haritāla（雌黄）と manaḥśilā（雄黄）を食べさせた孔雀の糞を手に塗り、その手で触れた物は見えなくなる。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、孔雀に一ヶ月間断食させてから haritāla と manaḥśilā を与えるべきとする。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.47（GRETIL: 7.1.47）</div>
+<div class="sk">aṅgāra-tṛṇa-bhasmanā tailena vimiśram udakaṃ kṣīra-varṇaṃ bhavati.</div>
+<div class="jp">aṅgāra-tṛṇa（炭草の一種）の灰を油と混ぜた水は、乳白色になる。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.48（GRETIL: 7.1.48）</div>
+<div class="sk">harītakāmrātakayoḥ śravaṇa-priyaṅgukābhiś ca piṣṭābhir liptāni loha-bhāṇḍāni tāmrī-bhavanti.</div>
+<div class="jp">harītakā（ミロバラン）と āmrātaka（ホグプラム）の〔葉を〕、śravaṇa-priyaṅgukā（jyotiṣmatī, ツルウメモドキ）の果実と共にすり潰して鉄器に塗れば、銅色になる。</div>
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.49（GRETIL: 7.1.49）</div>
+<div class="sk">śravaṇa-priyaṅgukā-tailena dukūla-sarpanirmokeṇa varttyā dīpaṃ prajvālya pārśve dīrghī-kṛtāni kāṣṭhāni sarpavad dṛśyante.</div>
+<div class="jp">śravaṇa-priyaṅgukā の油で、絹布（dukūla）と蛇の脱皮殻（sarpa-nirmoka）で作った灯芯の灯火を点せば、その傍らで長く伸ばした木片が蛇のように見える。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、この幻術的効果を vismāpana（驚嘆させるもの）と位置づける。蛇の形を見せるだけであり、実際に蛇を作り出すのではない。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.50（GRETIL: 7.1.50）</div>
+<div class="sk">śvetāyāḥ śveta-vatsāyā goḥ kṣīrasya pānaṃ yaśasyam āyuṣyam.</div>
+<div class="jp">白い仔牛をもつ白い雌牛の乳を飲むことは、名声をもたらし、寿命を延ばす。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、白い牛の乳は清浄（pavitra）であるがゆえに名誉と長寿に資するとし、常に摂取すべきとする教えを述べる。
+</div>
+
+<div class="sutra">
+<div class="sutra-num">7.2.51（GRETIL: 7.1.51）</div>
+<div class="sk">brāhmaṇānāṃ praśastānām āśiṣaḥ.</div>
+<div class="jp">賞賛すべきバラモンたちの祝福〔を受けること〕もまた〔名声と長寿に資する〕。</div>
+</div>
+
+<div class="colophon">iti citrā yogāḥ — 以上、種々の秘方（第六十四節）。</div>
+
+<h2>結語（Upasaṃhāra）</h2>
+
+<p class="section-intro">カーマスートラ全体を締めくくる八つの結語詩（śloka）。ヴァーツヤーヤナは自身の著作の目的と方法論を述べ、このテキストが欲望（rāga）の肯定ではなく、法（dharma）・利（artha）・愛（kāma）の三目的（trivarga）の調和ある実践のための学問的著作であることを宣言する。</p>
+
+<div class="verse-block">
+<div class="sk">pūrva-śāstrāṇi saṃdṛśya prayogān anusṛtya ca /<br>kāma-sūtram idaṃ yatnāt saṃkṣepeṇa niveditam // 7.2.52 //</div>
+<div class="jp">先行の諸論書を精査し、実践の事例を追究して、<br>このカーマ・スートラは努力をもって簡潔に述べられた。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は「精査し」（saṃdṛśya）を「言葉と意味の両面から見て」（śabdato 'rthataś ca dṛṣṭvā）と解説し、先行の諸論書が権威（pramāṇa）であったこと、また実践からも知識を得た（prayogataś ca jñātvā）ことを確認する。
+</div>
+
+<div class="verse-block">
+<div class="sk">dharmam arthaṃ ca kāmaṃ ca pratyayaṃ lokam eva ca /<br>paśyaty etasya tattva-jño na ca rāgāt pravartate // 7.2.53 //</div>
+<div class="jp">法（dharma）と利（artha）と愛（kāma）と信義（pratyaya）と世間（loka）を、<br>この〔カーマスートラの〕真義を知る者は見据え、欲望（rāga）に駆り立てられることはない。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、本テキストの真義（tattva）を知る者は必然的に dharma 等を見据えるのであり、害をもたらす原因である欲望（rāga）から行動することはないとする。pratyaya は「信義・信頼」、loka は「善い世間（śiṣṭa）と悪い世間（aśiṣṭa）の両方」を指す。
+</div>
+
+<div class="verse-block">
+<div class="sk">adhikāra-vaśād uktā ye citrā rāga-vardhanāḥ /<br>tad-an-antaram atraiva te yatnād vinivāritāḥ // 7.2.54 //</div>
+<div class="jp">主題の必要上述べられた、欲情を増す種々の〔方法〕は、<br>その直後にこの書の中で努力をもって制止された。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>口による行為（aupariṣṭaka）など dharma に反する内容が含まれることについて、Yaśodhara は「主題（prakaraṇa）の要請により述べられたが、述べた直後に、地域と人物への配慮によって（nirdhārita-deśa-puruṣāpekṣayā）禁止された」と説明する。
+</div>
+
+<div class="verse-block">
+<div class="sk">na śāstram astīty etena prayogo hi samīkṣyate /<br>śāstrārthān vyāpino vidyāt prayogāṃs tv eka-deśikān // 7.2.55 //</div>
+<div class="jp">「論書は〔万能〕ではない」とは言え、実践は〔論書によって〕検証される。<br>論書の教えは普遍的であると知るべきであり、実践は個別的である。</div>
+</div>
+
+<div class="verse-block">
+<div class="sk">bābhravīyāṃś ca sūtrārthān āgamayya vimṛśya ca /<br>vātsyāyanaś cakāredaṃ kāma-sūtraṃ yathā-vidhi // 7.2.56 //</div>
+<div class="jp">バーブラヴィーヤ派のスートラの意味を師から学び、自ら考察して、<br>ヴァーツヤーヤナはこのカーマ・スートラを規定通りに作った。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は「師から学び」（āgamayya gurubhyaḥ）と「自ら考察して」（vimṛśya ca svabuddhyā）の二つの知識源を確認する。ヴァーツヤーヤナはバーブラヴィーヤの著作を基礎としつつ、自らの知性で検証して本書を編纂した。
+</div>
+
+<div class="verse-block">
+<div class="sk">tad etad brahmacaryeṇa pareṇa ca samādhinā /<br>vihitaṃ loka-yātrārthaṃ na rāgārtho 'sya saṃvidhiḥ // 7.2.57 //</div>
+<div class="jp">この〔カーマスートラ〕は、至高の梵行（brahmacarya）と<br>深い集中（samādhi）によって著された。世間の営み（loka-yātrā）のためであり、<br>欲望の追求がこの書の目的ではない。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、brahmacaryeṇa（梵行によって）は著者が純潔の状態で著述したことを示し、pareṇa samādhinā（至高の集中によって）は精神の統一のうちに著されたことを示すとする。loka-yātrārtham（世間の営みのため）は、四種姓（cāturvarṇya）における在家者の生活のための教えであり、情欲の追求を目的としたものではないと明言する。
+</div>
+
+<div class="verse-block">
+<div class="sk">rakṣan dharmārtha-kāmānāṃ sthitiṃ svāṃ lokavartinīm /<br>asya śāstrasya tattva-jño bhavaty eva jitendriyaḥ // 7.2.58 //</div>
+<div class="jp">法・利・愛の世間における固有の位置づけを護りながら、<br>この論書の真義を知る者は、まさに感覚の制御者（jitendriya）となる。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara は、dharma 等を相互に害さずに守ることが重要であり、lokavartinīm は「この世と来世の道の善い面と悪い面」を意味するとする。
+</div>
+
+<div class="verse-block">
+<div class="sk">tad etat kuśalo vidvān dharmārthāv avalokayan /<br>nāti-rāgātmakaḥ kāmī prayuñjānaḥ prasidhyati // 7.2.59 //</div>
+<div class="jp">この〔教え〕に巧みで学識ある者は、法と利を見据え、<br>過度の情欲に陥ることなく、在家者として〔この書の教えを〕実践すれば、成就するであろう。</div>
+</div>
+
+<div class="note-block">
+<strong>注：</strong>Yaśodhara の最終注釈：この論書に kuśala（巧み）で vidvān（学識ある）者は、dharma と artha の両方が kāma（愛）によって害されないよう見据え、kāmī（在家者、gṛhastha）として論書の教えを実践すれば、世間において prasidhyati——権威ある人物（pramāṇa-puruṣa）となる。それは「過度の情欲に陥ることがないゆえに」（nātirāgātmakatvāt）である。
+</div>
+
+<div class="final-colophon">
+iti śrīvātsyāyanīye kāmasūtre aupaniṣadike saptame 'dhikaraṇe<br>
+naṣṭa-rāga-pratyānayanaṃ bṛddhi-yogāś citra-yogā dvitīyo 'dhyāyaḥ.<br><br>
+samāptam aupāniṣadikaṃ saptamam adhikaraṇam.<br>
+samāptaṃ vātsyāyana-sūtram.<br>
+samāptaṃ sa-vyākhyānaṃ kāma-śāstram.<br><br>
+ヴァーツヤーヤナのカーマ・スートラ、秘術篇たる第七篇において、<br>
+失われた情欲の回復法・増大法・種々の秘方、第二章〔終わる〕。<br><br>
+秘術篇たる第七篇、終了。<br>
+ヴァーツヤーヤナ・スートラ、完結。<br>
+注釈付きカーマ学の論書、ここに完結す。
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

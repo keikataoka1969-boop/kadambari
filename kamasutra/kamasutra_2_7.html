@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 2.7</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --bg-card: #fffdf8;
+  --text: #2c2418;
+  --text-secondary: #6b5d4d;
+  --accent: #a0522d;
+  --accent-light: #c4845c;
+  --border: #ddd5c8;
+  --border-light: #ece6da;
+  --sanskrit-bg: #faf8f3;
+  --note-bg: #f2ede4;
+  --highlight: #8b4513;
+  --table-header: #e8dfd2;
+  --table-stripe: #faf7f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a1612;
+    --bg-card: #242019;
+    --text: #e8e0d4;
+    --text-secondary: #a89880;
+    --accent: #d4845c;
+    --accent-light: #b0714e;
+    --border: #3d362c;
+    --border-light: #2e2820;
+    --sanskrit-bg: #1e1a14;
+    --note-bg: #2a2418;
+    --highlight: #e89860;
+    --table-header: #2e2820;
+    --table-stripe: #221e18;
+  }
+}
+[data-theme="dark"] {
+  --bg: #1a1612;
+  --bg-card: #242019;
+  --text: #e8e0d4;
+  --text-secondary: #a89880;
+  --accent: #d4845c;
+  --accent-light: #b0714e;
+  --border: #3d362c;
+  --border-light: #2e2820;
+  --sanskrit-bg: #1e1a14;
+  --note-bg: #2a2418;
+  --highlight: #e89860;
+  --table-header: #2e2820;
+  --table-stripe: #221e18;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Shippori Mincho', 'Noto Serif JP', serif;
+  line-height: 1.9;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header .book-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
+header h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0.4rem 0;
+  text-wrap: balance;
+}
+
+header .subtitle {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+header .chapter-info {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.8rem;
+  line-height: 1.6;
+}
+
+.section-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 2.5rem 0 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sutra-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.4rem;
+  padding: 1rem 1.2rem;
+  background: var(--bg-card);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+}
+
+.sutra-num {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+.sanskrit {
+  font-family: 'Noto Serif Devanagari', 'Noto Serif', serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text);
+  background: var(--sanskrit-bg);
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+}
+
+.japanese {
+  font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.note-block {
+  background: var(--note-bg);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  margin: 1.5rem 0 2rem;
+  border-left: 3px solid var(--accent-light);
+}
+
+.note-block .note-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.note-block p, .note-block ul {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0.4rem 0;
+}
+
+.note-block ul {
+  padding-left: 1.2rem;
+}
+
+.note-block li {
+  margin-bottom: 0.3rem;
+}
+
+.verse-block {
+  background: var(--sanskrit-bg);
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  margin: 1.2rem 0;
+  border-left: 3px solid var(--highlight);
+}
+
+.verse-block .verse-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.verse-block .sanskrit-verse {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 0.93rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.verse-block .japanese-verse {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Tables */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.88rem;
+  overflow-x: auto;
+  display: block;
+}
+
+.info-table th {
+  background: var(--table-header);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.info-table td {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border-light);
+  color: var(--text);
+  vertical-align: top;
+}
+
+.info-table tr:nth-child(even) td {
+  background: var(--table-stripe);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.colophon {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-family: 'Noto Serif Devanagari', serif;
+}
+
+@media (max-width: 640px) {
+  .sutra-pair {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  body { padding: 1.2rem 1rem 3rem; }
+  header h1 { font-size: 1.35rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="book-label">Kāmasūtra — Sāṃprayogikam (第二篇 交合論)</div>
+  <h1>第七章　打擲の技法と嘆声の次第</h1>
+  <div class="subtitle">Prahaṇana-prayogāḥ tad-yuktāś ca Sītkṛta-kramāḥ</div>
+  <div class="chapter-info">
+    第二篇 第七章（通算第十二章）｜全35節｜第15–16節目（prakaraṇa）<br>
+    打擲法（prahaṇana-prakaraṇa）と嘆声法（sītkṛta-prakaraṇa）の二節を含む
+  </div>
+</header>
+
+<!-- ===== 交合の本質と打擲の基礎 ===== -->
+<div class="section-heading">交合の本質と打擲の基本（2.7.1–2.7.4）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.1</div>
+    <div class="sanskrit">kalaha-rūpaṃ su-ratam ācakṣate | vivādātmakatvād vāma-śīlatvāc ca kāmasya |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">交合（surata）は口論（kalaha）に似たものであると言われる。なぜなら愛欲（kāma）は本来、争いの性質を持ち（vivādātmaka）、また気まぐれな性質（vāma-śīla）を持つからである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.2</div>
+    <div class="sanskrit">tasmāt prahaṇana-sthānam aṅgam | skandhau śiraḥ stanāntaraṃ pṛṣṭhaṃ jaghanaṃ pārśve iti sthānāni |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">それゆえ、打擲（prahaṇana）を行う身体の部位（sthāna）がある。すなわち、両肩（skandhau）、頭（śiras）、胸の間（stanāntara）、背中（pṛṣṭha）、腰（jaghana）、両脇腹（pārśve）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.3</div>
+    <div class="sanskrit">tac catur-vidham — apahastakaṃ prasṛtakaṃ muṣṭiḥ samatalakam iti |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">打擲（prahaṇana）は四種類ある。すなわち、⑴ 手の甲打ち（apahastaka）、⑵ 開き手打ち（prasṛtaka）、⑶ 拳打ち（muṣṭi）、⑷ 平手打ち（samatala）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.4</div>
+    <div class="sanskrit">tad-udbhavaṃ ca sītkṛtam | tasyāti-rūpatvāt | tad an-eka-vidham |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">打擲から生じるのが嘆声（sītkṛta）である。打擲と同類のもの（atirūpa）であるため。それは多種多様である。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>Yaśodhara は、交合が kalaha（口論）に似ていることを、Kirātārjunīya 2.49 を引いて説明する。すなわち kāma は saukumārya（繊細さ）に生まれながら、surata（交合）においては nirdaya（容赦ない）方法に駆り立てる、と。kāma の本性には二面がある：一つは saṃprayogecchā（交合への欲求）、もう一つは visṛṣṭi（放出）である。</p>
+  <p>apahastaka は「手の甲を指を伸ばしたまま打つ」こと、muṣṭi は「拳」、samatala は「安定した手のひら全体」で打つことと説明される。sītkṛta は prahaṇana（打擲）による pīḍā（苦痛）から生じるが、純粋な sītkaraṇa（スースーという音を出すこと）だけでなく、広く苦痛の表出を指す。</p>
+</div>
+
+<!-- ===== 八種の叫声 ===== -->
+<div class="section-heading">八種の叫声（viruta）と声の種類（2.7.5–2.7.8）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.5–6</div>
+    <div class="sanskrit">virutāni cāṣṭau | hiṃkāra-stanita-kūjita-rudita-sūtkṛta-dūtkṛta-phūtkṛtāni |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">叫声（viruta）は八種ある。⑴ hiṃkāra（鼻音の「ヒン」）、⑵ stanita（雷鳴のような声）、⑶ kūjita（低い唸り声）、⑷ rudita（泣き声）、⑸ sūtkṛta（息の声）、⑹ dūtkṛta（破裂音）、⑺ phūtkṛta（吹き出す音）。〔第八は ambārthāḥ śabdāḥ 等の有意味語〕</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.7</div>
+    <div class="sanskrit">ambārthāḥ śabdāḥ vāraṇārthā mokṣaṇārthāś cālam-arthās te te cārtha-yogāt |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">「お母さん！」という意味の言葉（ambārtha）、「やめて！」という制止の言葉（vāraṇārtha）、「離して！」という解放の言葉（mokṣaṇārtha）、「もう十分！」という言葉（alama-rtha）、その他状況に応じた言葉がある。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.8</div>
+    <div class="sanskrit">pārāvata-parabhṛta-hārīta-śuka-madhukara-dātyūha-haṃsa-kāraṇḍava-lāvaka-virutāni sītkṛta-bhūyiṣṭhāni vikalpaśaḥ prayuñjīta |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">鳩（pārāvata）、カッコウ（parabhṛta）、ハーリータ鳥（hārīta）、鸚鵡（śuka）、蜜蜂（madhukara）、水鶏（dātyūha）、白鳥（haṃsa）、鴛鴦（kāraṇḍava）、鶉（lāvaka）の鳴き声のような声を、嘆声を主として、一つずつ使い分けて用いるべきである。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>七種の叫声のうち、最初の七つは avyaktākṣara（不分明な音）であり、ambārthāḥ 以下の第八群は vyaktākṣara（明瞭な音声）である。</p>
+  <ul>
+    <li><strong>hiṃkāra</strong>：鼻音を伴い kaṇṭha（喉）と nāsikā（鼻）から上方へ向かう甘美な音</li>
+    <li><strong>stanita</strong>：雷鳴（megha）のように深い音で、喉から dhaṃ の音で発される</li>
+    <li><strong>kūjita</strong>：閉じた口の内で発する不明瞭な声</li>
+    <li><strong>rudita</strong>：泣き声（周知のもの）で、心に訴える</li>
+    <li><strong>sūtkṛta</strong>：息の音（śvasita の別名）</li>
+    <li><strong>dūtkṛta</strong>：竹（veṇu）が裂ける音のような音</li>
+    <li><strong>phūtkṛta</strong>：水に jujube（badara）の実が落ちるような音</li>
+  </ul>
+  <p>ambārthāḥ の具体例として、「amba mātaḥ」（お母さん！）、「mā tiṣṭha」（やめて！）、「bhavatu paryāptam」（もう十分！）、「tyaja muñca」（離して！）、さらに「mṛtāsmi paritrāyasva」（死にそう、助けて！）のような言葉も含まれる。</p>
+  <p>鳥の声は sītkṛta-bhūyiṣṭha（嘆声を主とする）であり、打擲の最中にも嘆声が主導的であることを示す。振動付きの歌（vibhāṣā-śliṣṭa-gīta）のように、異なる音色を混ぜると効果的である。</p>
+</div>
+
+<div class="table-wrap">
+  <table class="info-table">
+    <tr><th>叫声（viruta）</th><th>Sanskrit</th><th>説明</th></tr>
+    <tr><td>① 鼻音</td><td>hiṃkāra</td><td>鼻と喉から発する甘い「ヒン」という音</td></tr>
+    <tr><td>② 雷鳴声</td><td>stanita</td><td>喉の奥から発する深い響き</td></tr>
+    <tr><td>③ 唸り声</td><td>kūjita</td><td>口を閉じて内側から発する低い声</td></tr>
+    <tr><td>④ 泣き声</td><td>rudita</td><td>感極まった泣き声</td></tr>
+    <tr><td>⑤ 息の声</td><td>sūtkṛta</td><td>荒い息遣い</td></tr>
+    <tr><td>⑥ 破裂音</td><td>dūtkṛta</td><td>竹が裂けるような「ドゥッ」という音</td></tr>
+    <tr><td>⑦ 吹出音</td><td>phūtkṛta</td><td>水に物が落ちるような「プーッ」という音</td></tr>
+    <tr><td>⑧ 意味ある言葉</td><td>ambārthāḥ śabdāḥ 等</td><td>「お母さん」「やめて」「離して」「もう十分」等</td></tr>
+  </table>
+</div>
+
+<!-- ===== 打擲と嘆声の組み合わせ ===== -->
+<div class="section-heading">打擲と嘆声の実際の組み合わせ（2.7.9–2.7.21）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.9</div>
+    <div class="sanskrit">utsaṅgopaviṣṭāyāḥ pṛṣṭhe muṣṭinā prahāraḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">膝の上に座っている女性（utsaṅgopaviṣṭā）の背中に、拳（muṣṭi）で打つ。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.10</div>
+    <div class="sanskrit">tatra sāsūyāyā iva stanita-rudita-kūjitāni pratighātaś ca syāt |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">その際、打撃に耐えかねているかのように（sāsūyā iva）、雷鳴声（stanita）・泣き声（rudita）・唸り声（kūjita）を発し、打ち返し（pratighāta）も起こる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.11–12</div>
+    <div class="sanskrit">yukta-yantrāyāḥ stanāntare apahastakaena praharet | mandopakramaṃ vardhamāna-rāgam ā parisamāpteḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">結合した状態の女性の胸の間（stanāntara）に、手の甲打ち（apahastaka）で打つべきである。穏やかに始め（mandopakrama）、情熱の高まり（vardhamāna-rāga）に従い、満足（parisamāpti）に至るまで〔強めていく〕。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.13</div>
+    <div class="sanskrit">tatra hiṃkārādīnām aniyamenābhyāsena vikalpena ca tat-kālam eva prayogaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">その際、hiṃkāra 等の〔叫声〕を、特に順序を決めず（aniyamena）、繰り返し（abhyāsena）、また変化をつけて（vikalpena）、その時々に（tat-kālam eva）用いる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.14</div>
+    <div class="sanskrit">śirasi kiṃ cid ākuñcitāṅgulinā kareṇa vivadantyāḥ phūtkṛtya prahaṇanaṃ tat prasṛtakam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">頭に、少し指を曲げた手（ākuñcitāṅguli）で、抵抗する女性に対し、phūtkṛta（吹出音）を発しながら打つ。これが prasṛtaka（開き手打ち）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.15–16</div>
+    <div class="sanskrit">tatrāntarmukhena kūjitaṃ phūtkṛtaṃ ca | ratānte ca śvāsita-rudite |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">その際、口の内側で（antarmukha）発する kūjita（唸り声）と phūtkṛta（吹出音）がある。交合の終わりには、荒い息（śvāsita）と泣き声（rudita）が生じる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.17–18</div>
+    <div class="sanskrit">pheṇor iva sphuṭataḥ śabdānukaraṇaṃ dūtkṛtam | apsu badarasyeva nipatataḥ phūtkṛtam |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">泡（pheṇa）が弾けるような音を模したものが dūtkṛta（破裂音）である。水中にナツメの実（badara）が落ちるような音が phūtkṛta（吹出音）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.19</div>
+    <div class="sanskrit">sarvatra cumbanādiṣv apakrāntāyāḥ sa-sītkṛtaṃ tenaiva pratyuttaram |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">接吻（cumbana）その他すべてにおいて、〔相手から〕身をかわす女性には、嘆声（sītkṛta）を伴いつつ、同じ行為（cumbana 等）で応答する（pratyuttara）。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.20</div>
+    <div class="sanskrit">rāga-vaśāt prahaṇanābhyāse vāraṇa-mokṣaṇālam-arthānāṃ śabdānāṃ ambārthānāṃ ca sa-tānta-śvāsita-rudita-stanita-miśrī-kṛta-prayogā virutānāṃ ca | rāgāvasāna-kāle jaghana-pārśvayos tāḍanam ity atvarayā cā parisamāpteḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">情熱に駆られて打擲を繰り返す際には、制止・解放・「もう十分」・「お母さん」等の言葉を、疲労した息（tānta-śvāsita）・泣き声（rudita）・雷鳴声（stanita）と混ぜ合わせて用い、また種々の叫声も用いる。情熱が頂点に達する時（rāgāvasāna-kāla）には、腰（jaghana）と脇腹（pārśva）を叩く（tāḍana）。急がずに、満足に至るまで。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.21</div>
+    <div class="sanskrit">tatra lāvaka-haṃsa-vikūjitaṃ tvarayaiva | iti stanana-prahaṇana-yogāḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">その際、鶉（lāvaka）と白鳥（haṃsa）のような鳴き声を、速いテンポで〔用いる〕。以上が声と打擲の組み合わせ（stanana-prahaṇana-yoga）である。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>Yaśodhara は打擲と部位・叫声の対応を詳述する。膝上（utsaṅga）の場合は muṣṭi のみが適切で、他の打ち方は不適切。仰臥（uttānā）の場合は stanāntara（胸の間）に apahastaka が適する。胸の間を打つのは、そこに hṛdaya（心臓）つまり rāgāspada（情熱の座）があるためで、女性の三つの rāga の拠点は śiras（頭）・jaghana（腰）・hṛdaya（心臓）である。</p>
+  <p>kūjita は saṃvṛta（閉口）で発し、phūtkṛta は vivṛta（開口）かつ jihvā-mūla（舌根）で発する。dūtkṛta は puruṣa（男性）の動作による veṇu（竹笛）の破裂音のように発される。</p>
+  <p>rāgāvasāna（情熱の極点）において jaghana（腰）と pārśva（脇腹）を叩くのは samatala（平手）によるとされる（消去法より）。lāvaka（鶉）と haṃsa（白鳥）の声は mṛdu-madhura（柔らかく甘美）であるため、仕上げに相応しい。</p>
+</div>
+
+<div class="table-wrap">
+  <table class="info-table">
+    <tr><th>打擲法</th><th>Sanskrit</th><th>部位</th><th>状況</th></tr>
+    <tr><td>① 手の甲打ち</td><td>apahastaka</td><td>胸の間（stanāntara）</td><td>結合時（yukta-yantrā）</td></tr>
+    <tr><td>② 開き手打ち</td><td>prasṛtaka</td><td>頭（śiras）</td><td>抵抗する時</td></tr>
+    <tr><td>③ 拳打ち</td><td>muṣṭi</td><td>背中（pṛṣṭha）</td><td>膝上に座る時</td></tr>
+    <tr><td>④ 平手打ち</td><td>samatala</td><td>腰・脇腹（jaghana-pārśva）</td><td>絶頂に近い時</td></tr>
+  </table>
+</div>
+
+<!-- ===== 韻文：男女の本性 ===== -->
+<div class="section-heading">韻文：男女の本性と役割の逆転（2.7.22–2.7.23）</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.7.22</div>
+  <div class="sanskrit-verse">pāruṣyaṃ rabhasatvaṃ ca pauruṣaṃ teja ucyate |<br>aśaktir ārtir vyāvṛttir abalatvaṃ ca yoṣitaḥ ||</div>
+  <div class="japanese-verse">粗暴さ（pāruṣya）と猛々しさ（rabhasatva）は男性的な力（pauruṣa-tejas）と呼ばれる。<br>耐えられないこと（aśakti）、苦しみ（ārti）、身をかわすこと（vyāvṛtti）、弱さ（abalatva）は女性のもの。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.7.23</div>
+  <div class="sanskrit-verse">rāgāt prayoga-sātmyāc ca vyatyayo 'pi kva cid bhavet |<br>na ciraṃ tasya caivānte prakṛter eva yojanam ||</div>
+  <div class="japanese-verse">情熱と習慣（prayoga-sātmya）により、役割の逆転（vyatyaya）もときに起こりうる。<br>しかし長くは続かず、最後には自然の本性（prakṛti）に戻るべきである。</div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>prahaṇana（打つこと）は puruṣa-dharma（男性の役割）であり、sītkṛta（嘆声）は strī-dharma（女性の役割）である。rāga の高まりと deśa-sātmya（地域の習慣）により vyatyaya（逆転）が起こりうるが、それは一時的である。逆転の場合、女性が pauruṣa-tejas（男性的な力）をもって打ち、男性は sītkṛta-viruta（嘆声・叫声）を発する。ただし、rāga-prayoga-sātmya（情熱と習慣への親しみ）がなければ従来の方法による。</p>
+</div>
+
+<!-- ===== 南方の追加技法 ===== -->
+<div class="section-heading">南方（Dākṣiṇātya）の追加技法（2.7.24–2.7.27）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.24</div>
+    <div class="sanskrit">kīlām urasi kartarīṃ śirasi viddhāṃ kapolayoḥ saṃdaṃśikāṃ stanayoḥ pārśvayoś ceti pūrvaiḥ saha prahaṇanam aṣṭa-vidham iti dākṣiṇātyānām | tad-yuvatīnām urasi kīlāni dṛśyante | deśa-sātmyam etat |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">楔打ち（kīlā）を胸に、鋏打ち（kartarī）を頭に、刺し打ち（viddhā）を頬に、挟み打ち（saṃdaṃśikā）を乳房と脇腹に — これら〔四つ〕を前述の四つと合わせて、打擲は八種であると南方の人々（dākṣiṇātya）は言う。彼女たちの胸には、楔の痕（kīlāni）が見られる。これは地域の慣習（deśa-sātmya）である。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.25</div>
+    <div class="sanskrit">kaṣṭam anārya-vṛttam anādṛtam iti vātsyāyanaḥ |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">これは痛ましく（kaṣṭa）、高貴でない行い（anārya-vṛtta）であり、敬意を払うべきでない（anādṛta）と、Vātsyāyana は述べる。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.26–27</div>
+    <div class="sanskrit">tathānyad api deśa-sātmyāt prayuktam anyatra na prayuñjīta | ātyayikaṃ tu tatrāpi pariharet |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">同様に、地域の慣習（deśa-sātmya）から行われている他の技法も、他の土地では用いるべきでない。危険なもの（ātyayika）は、その土地においても避けるべきである。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>南方の追加四種の詳細：</p>
+  <ul>
+    <li><strong>kīlā</strong>（楔）：拳を作り、人差し指と中指の背を外に出し、上に親指を置いた形。これを下向きに打ち下ろす</li>
+    <li><strong>kartarī</strong>（鋏）：三種類ある。指を伸ばした片手の bhadra-kartarī、両手を合わせた yamala-kartarī、指を曲げ人差し指を親指の上に置いた śabda-kartarī（音を立てる鋏）。頭に小指の先端で打つ</li>
+    <li><strong>viddhā</strong>（刺し）：人差し指と中指の間から親指を突き出した拳の形。頬に打つ</li>
+    <li><strong>saṃdaṃśikā</strong>（挟み）：人差し指と親指（または人差し指と中指）で挟む。乳房と脇腹の肉を掴んで引っ張る</li>
+  </ul>
+  <p>Vātsyāyana はこれらを kaṣṭa（苦痛を与えるもの）、anārya-vṛtta（高貴でない行い）と非難する。「石などで叩くこと」（prastarādyāhana）も含めて地域限定と述べる。</p>
+</div>
+
+<div class="table-wrap">
+  <table class="info-table">
+    <tr><th>南方の技法</th><th>Sanskrit</th><th>部位</th><th>手の形</th></tr>
+    <tr><td>⑤ 楔打ち</td><td>kīlā</td><td>胸（uras）</td><td>指を突き出した拳</td></tr>
+    <tr><td>⑥ 鋏打ち</td><td>kartarī</td><td>頭（śiras）</td><td>鋏のような指の形</td></tr>
+    <tr><td>⑦ 刺し打ち</td><td>viddhā</td><td>頬（kapola）</td><td>親指を突き出した拳</td></tr>
+    <tr><td>⑧ 挟み打ち</td><td>saṃdaṃśikā</td><td>乳房・脇腹</td><td>指で挟む形</td></tr>
+  </table>
+</div>
+
+<!-- ===== 戒めの実話 ===== -->
+<div class="section-heading">戒めの実話 — 打擲の危険（2.7.28–2.7.30）</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.28</div>
+    <div class="sanskrit">rati-yoge hi kīlayā gaṇikāṃ citrasenāṃ colarājo jaghāna |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">Cola の王（colarāja）は、交合の際に楔打ち（kīlā）によって遊女（gaṇikā）Citrasenā を殺した。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.29</div>
+    <div class="sanskrit">kartaryā kuṇṭalaḥ śātakarṇiḥ śātavāhano mahā-devīṃ malayavatīm |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">Kuṇṭala 国の Śātakarṇi Śātavāhana 王は、鋏打ち（kartarī）によって正妃（mahādevī）Malayavatī を〔傷つけた〕。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.30</div>
+    <div class="sanskrit">naradevaḥ kupāṇir viddhayā naṭīṃ kāṇāṃ cakāra |</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">Naradeva は武器傷で硬くなった手（kupāṇi）で、刺し打ち（viddhā）を誤って用い、女優（naṭī）を片目にしてしまった。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>三つの実例は打擲の危険性を示す歴史的事例である。</p>
+  <ul>
+    <li><strong>Cola 王と Citrasenā</strong>：Cola 国の王は、繊細な体の遊女を堅く抱き、彼女が苦痛を訴えたにもかかわらず、rāgāndhya（情欲による盲目状態）のため kīlā を胸に打ち、彼女を殺してしまった</li>
+    <li><strong>Śātakarṇi と Malayavatī</strong>：Kuṇṭala 国に生まれた Śātakarṇi（Śatakarṇi の子孫、Śātavāhana 朝）は、新婚間もない、まだ力の弱い（ajāta-balā）妃 Malayavatī の頭を、nāga に憑かれたように（nāgākṣiptacetāḥ）kartarī で強打した</li>
+    <li><strong>Naradeva</strong>：Pāṇḍya 王の senāpati（将軍）で、武器の打撃で手が硬くなっていた（kiṇa-hasta）。女優 Citralekhā が踊るのを見て情欲に駆られ、viddhā を顔に打ったが手が硬いため狙いを外し（頬に当てるべきが目に当たり）、彼女を kāṇā（片目）にした。saṃdaṃśikā は本来危険でないため例が挙げられていない</li>
+  </ul>
+</div>
+
+<!-- ===== 結びの韻文 ===== -->
+<div class="section-heading">結びの韻文 — 情熱と節度（2.7.31–2.7.35）</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.7.31</div>
+  <div class="sanskrit-verse">nāsty atra kā cin na ca śāstra-parigrahaḥ |<br>pravṛtte rati-saṃyoge rāga evātra kāraṇam ||</div>
+  <div class="japanese-verse">ここには〔技法の〕数も〔聖典の〕規定もない。<br>交合が始まれば、ただ情熱（rāga）のみが原因（kāraṇa）である。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.7.32</div>
+  <div class="sanskrit-verse">svapneṣu na dṛśyante te bhāvās te ca vibhramāḥ |<br>surata-vyavahāreṣu ye syus tat-kṣaṇa-kalpitāḥ ||</div>
+  <div class="japanese-verse">夢の中でさえ見られないような感情（bhāva）や仕草（vibhrama）が、<br>交合の営みにおいて、その瞬間に生まれる（tat-kṣaṇa-kalpita）ことがある。</div>
+</div>
+
+<div class="verse-block">
+  <div class="verse-label">śloka 2.7.33</div>
+  <div class="sanskrit-verse">yathā hi pañcamīṃ dhārām āsthāya turagaḥ pathi |<br>sthāṇuṃ śvabhraṃ darīṃ vāpi vegāndho na samīkṣate ||<br>evaṃ surata-saṃmarde rāgāndhau kāmināv api |<br>caṇḍa-vegau pravartete samīkṣete na cātyayam ||</div>
+  <div class="japanese-verse">馬（turaga）が第五の疾走（pañcamī dhārā = java）に入れば、<br>道の杭（sthāṇu）も穴（śvabhra）も谷（darī）も、速さに盲いて見ない。<br>同様に、交合の激しさの中で、情熱に盲いた（rāgāndha）男女も、<br>激しい勢い（caṇḍa-vega）で突き進み、危険（ātyaya）を見ない。</div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.34</div>
+    <div class="sanskrit">tasmān mṛdutvaṃ caṇḍatvaṃ yuvatyā balam eva ca | ātmanaś ca balaṃ jñātvā tathā yuñjīta śāstravit ||</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">それゆえ、女性の柔らかさ（mṛdutva）と激しさ（caṇḍatva）と力（bala）を、そして自分自身の力をも知った上で、聖典を知る者（śāstravit）はそのように〔技法を〕用いるべきである。</div>
+  </div>
+</div>
+
+<div class="sutra-pair">
+  <div>
+    <div class="sutra-num">2.7.35</div>
+    <div class="sanskrit">na sarvadā na sarvāsu prayogāḥ sāṃprayogikāḥ | sthāne deśe ca kāle ca yoga eṣāṃ vidhīyate ||</div>
+  </div>
+  <div>
+    <div class="sutra-num">和訳</div>
+    <div class="japanese">交合の技法（sāṃprayogika-prayoga）は、常に（sarvadā）すべての女性に対して用いるものではない。部位（sthāna）と地域（deśa）と時（kāla）に応じて、これらの組み合わせ（yoga）が定められる。</div>
+  </div>
+</div>
+
+<div class="note-block">
+  <div class="note-title">注釈メモ（Jayamaṅgalā）</div>
+  <p>Yaśodhara は śāstra-tattva-jña（聖典の真理を知る者）と tad-viparīta（それに反する者）の二種の人を区別する。前者は rāga があっても jñāna（知識）が制御するため gaṇanā（計算）と śāstra-parigraha（聖典への遵守）が伴う。後者は rāga だけが原因で動くため、夢にも見ないような行為に及ぶ。</p>
+  <p>馬の疾走の比喩は五段階の馬術（aśva-śikṣā）に基づく。vikrama（歩行）、valigata（横歩き）、upakaṇṭha（小走り）、upajava（駆足）、java（全速疾走）の五段階である。pañcamī dhārā（第五の流れ＝全速疾走）に入った馬は vāyu-gati（風の速さ）になり前方の危険が見えない。</p>
+  <p>最終節は打擲の適切な運用を要約する。apahastaka は stanāntara（胸の間）に、prasṛtaka は śiras（頭）に、muṣṭi は utsaṅgopaviṣṭā（膝上に座った女性）の pṛṣṭha（背）に、という sthāna（部位）の原則。deśa（地域）の原則として、mālava 地方では prahaṇana が好まれ abhīra 地方では aupariṣṭaka が好まれる、等。kāla（時）の原則として、yukta-yantrā（結合時）に apahastaka、utsaṅgopaviṣṭā（膝上）の時に muṣṭi、等。</p>
+</div>
+
+<div class="colophon">
+  iti śrīvātsyāyanīye kāmasūtre sāṃprayogike dvitīye 'dhikaraṇe<br>
+  prahaṇana-prayogās tad-yuktāś ca sītkṛta-kramāḥ saptamo 'dhyāyaḥ | ādito dvādaśaḥ |<br><br>
+  <span style="font-family:'Noto Serif JP',serif; font-size:0.8rem; color:var(--text-secondary);">
+    Vātsyāyanakāmasūtra 第二篇第七章（通算第十二章）終<br>
+    GRETIL テキストおよび Jayamaṅgalā 注釈（Chaukhamba 1929年版）に基づく
+  </span>
+</div>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

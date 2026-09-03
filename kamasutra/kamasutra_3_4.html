@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 3.4</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+:root{--bg:#f7f4ef;--bg-card:#fffdf8;--text:#2c2418;--text-secondary:#6b5d4d;--accent:#a0522d;--accent-light:#c4845c;--border:#ddd5c8;--border-light:#ece6da;--sanskrit-bg:#faf8f3;--note-bg:#f2ede4;--highlight:#8b4513;--table-header:#e8dfd2;--table-stripe:#faf7f1}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1612;--bg-card:#231f19;--text:#e8e0d4;--text-secondary:#a89882;--accent:#d4845a;--accent-light:#b06a3a;--border:#3d362c;--border-light:#2e2822;--sanskrit-bg:#1e1a15;--note-bg:#2a2520;--highlight:#e8a46c;--table-header:#2e2822;--table-stripe:#1e1a15}}
+:root[data-theme="dark"]{--bg:#1a1612;--bg-card:#231f19;--text:#e8e0d4;--text-secondary:#a89882;--accent:#d4845a;--accent-light:#b06a3a;--border:#3d362c;--border-light:#2e2822;--sanskrit-bg:#1e1a15;--note-bg:#2a2520;--highlight:#e8a46c;--table-header:#2e2822;--table-stripe:#1e1a15}
+body{background:var(--bg);color:var(--text);font-family:'Shippori Mincho','Noto Serif JP',serif;line-height:1.9;max-width:960px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-family:'Noto Serif Devanagari','Noto Serif JP',serif;font-size:1.75rem;color:var(--accent);text-align:center;margin:0 0 .3rem;font-weight:600;letter-spacing:.02em}
+.subtitle{text-align:center;color:var(--text-secondary);font-size:1rem;margin:0 0 .5rem}
+.book-info{text-align:center;font-size:.85rem;color:var(--accent-light);margin:0 0 2rem;letter-spacing:.08em}
+.section-title{font-size:1.15rem;font-weight:600;color:var(--accent);border-bottom:2px solid var(--border);padding-bottom:.4rem;margin:2.5rem 0 1.2rem}
+.sutra-block{display:grid;grid-template-columns:1fr 1fr;gap:0 1.8rem;margin:1rem 0;padding:1rem 1.2rem;background:var(--bg-card);border-left:3px solid var(--accent);border-radius:0 6px 6px 0}
+.sutra-num{grid-column:1/-1;font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:.3rem;font-family:'Noto Serif Devanagari',serif}
+.sk{font-family:'Noto Serif Devanagari',serif;font-size:.95rem;line-height:1.85;color:var(--text)}
+.jp{font-size:.95rem;line-height:1.85;color:var(--text)}
+.note-box{background:var(--note-bg);border-radius:6px;padding:1rem 1.2rem;margin:1.5rem 0;border:1px solid var(--border-light)}
+.note-title{font-size:.85rem;font-weight:600;color:var(--accent);margin:0 0 .5rem;display:flex;align-items:center;gap:.4rem}
+.note-title::before{content:'📝';font-size:.9rem}
+.note-box p,.note-box ul{font-size:.88rem;color:var(--text-secondary);margin:.3rem 0;line-height:1.7}
+.note-box ul{padding-left:1.2rem}.note-box li{margin:.25rem 0}
+.verse{font-style:italic;border-left:3px solid var(--accent-light);padding-left:1rem;margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th{background:var(--table-header);color:var(--accent);font-weight:600;padding:.5rem .7rem;text-align:left;border:1px solid var(--border)}
+td{padding:.45rem .7rem;border:1px solid var(--border);vertical-align:top}
+tr:nth-child(even) td{background:var(--table-stripe)}
+.step-list{counter-reset:step;list-style:none;padding:0;margin:1rem 0}
+.step-list li{counter-increment:step;padding:.4rem 0 .4rem 2.2rem;position:relative;font-size:.88rem;color:var(--text-secondary);line-height:1.6}
+.step-list li::before{content:counter(step);position:absolute;left:0;top:.4rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--accent);color:var(--bg);font-size:.75rem;font-weight:600;display:flex;align-items:center;justify-content:center}
+.colophon{text-align:center;font-size:.85rem;color:var(--text-secondary);margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+@media(max-width:640px){.sutra-block{grid-template-columns:1fr;gap:.6rem 0}body{padding:1.2rem 1rem}}
+</style>
+</head>
+<body>
+
+<h1>Vātsyāyanakāmasūtra 3.4</h1>
+<p class="subtitle">第三篇 第四章 ―― 一人の男の求愛・対象の娘の転向・求愛された娘の対応</p>
+<p class="book-info">Tṛtīyam Adhikaraṇam — Kanyāsaṃprayuktakam / Caturtho 'dhyāyaḥ</p>
+
+<div class="section-title">प्रकरण २८ ― Ekapuruṣābhiyogaḥ（一人の男による求愛法）</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.1</div>
+<div class="sk">darśiteṅgitākārāṃ kanyām upāyato 'bhiyuñjīta.</div>
+<div class="jp">合図と態度（iṅgitākāra）を示した娘に対して、手段を用いて（upāyataḥ）求愛すべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>upāya（手段）こそが abhiyoga（求愛行為）である。助力なしに一人で行う場合を ekapuruṣābhiyoga（一人の男による求愛法）と呼ぶ。助力者がいる場合のものもあるが、それらは bāhya（外的）と ābhyantara（内的）の二種に分かれる。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.2</div>
+<div class="sk">dyūte krīḍanakeṣu ca vivadamānaḥ sākāram asyāḥ pāṇim avalambeta.</div>
+<div class="jp">遊びや賭け事で言い争いをしている風を装いながら、意図を込めて（sākāram）彼女の手を取るべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.3</div>
+<div class="sk">yathoktaṃ ca spṛṣṭakādikam āliṅgana-vidhiṃ vidadhyāt.</div>
+<div class="jp">先に述べた「触れる」（spṛṣṭaka）等の抱擁法を、機会に応じて行うべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>spṛṣṭakādika の四種とは、spṛṣṭaka（触れる）、viddhaka（押す）、udghṛṣṭaka（擦る）、pīḍitaka（圧する）。第二篇で述べた抱擁の方法を、機会を得た時に適宜行う。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.4–5</div>
+<div class="sk">pattra-cchedya-kriyāyāṃ ca svābhiprāya-sūcakaṃ mithunam asyā darśayet. evam anyad viralaśo darśayet.</div>
+<div class="jp">葉の切り絵細工（pattra-cchedya）の際に、自分の意図を暗示する一対の男女（mithuna）を彼女に見せるべきである。同様に、他の一対のものも、稀に見せるべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>Yaśodhara は mithuna の例として haṃsa（鵞鳥）の一対を挙げる。また tilaka（額飾り）のような一対のものも含まれる。viralaśaḥ（稀に）は重要で、頻繁に見せると品のなさ（grāmyatā）と見なされ、好奇心（kautuka）も薄れるためである。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.6</div>
+<div class="sk">jala-krīḍāyāṃ tad-dūrato 'psu nimagnaḥ samīpam asyā gatvā spṛṣṭvā caināṃ tatraivonmajjayet.</div>
+<div class="jp">水遊び（jala-krīḍā）の際、彼女から離れた所で水に潜り、彼女の近くに行って触れ、そこで水面に出るべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.7–9</div>
+<div class="sk">navapattrikādiṣu ca saviśeṣa-bhāva-nivedanam. ātma-duḥkhasyānirvedena kathanam. svapnasya ca bhāva-yuktasyānyāpadeśena.</div>
+<div class="jp">新葉祭（navapatrikā）等の地方の祭りにおいて、特別な感情を伝える。自分の苦しみを、飽きさせることなく語る。そして、愛情を含んだ夢を、別の口実を設けて語る。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>ātma-duḥkha の語り方として「何が原因か分からないが、心に苦痛がある」（na jāne kiṃ kṛtā mama cetasi pīḍā）という間接的な表現が挙げられる。夢（svapna）については、「あなたと同じ年頃で同じ容姿の女性と一緒にいる夢を見た」（tvattulyavayorūpayā sahopagamaḥ svapne mamābhūt）と、他者の話のように語るべきとする。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.10–11</div>
+<div class="sk">prekṣaṇake sva-jana-samāje vā samīpopaveśanam. tatrānyāpadiṣṭaṃ sparśanam. apāśrayārthaṃ ca caraṇena caraṇasya pīḍanam.</div>
+<div class="jp">見世物（prekṣaṇaka）や親族の集まりにおいて、彼女の近くに座る。そこで別の口実を設けて触れる。もたれかかるために足で足を押す。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.12–16</div>
+<div class="sk">tataḥ śanakair ekaikām aṅgulim abhispṛśet. pādāṅguṣṭhena ca nakhāgrāṇi ghaṭṭayet. tatra siddhaḥ padāt padam adhikam ākāṅkṣet. kṣāntyarthaṃ ca tad evābhyaset. pāda-śauce pādāṅguli-saṃdaṃśena tad-aṅguli-pīḍanam.</div>
+<div class="jp">それから、ゆっくりと一本ずつ指に触れる。足の親指で爪先を軽く触る。それが受け入れられたら、段階的に先へ進むことを求める。そして、彼女の忍耐を試すためにそれを繰り返す。足を洗う際には、自分の足の指で彼女の指を挟むようにして押す。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注 ―― 段階的接触の方法</div>
+<p>Yaśodhara は padāt padam adhikam ākāṅkṣet を sopāna-krameṇa（階段を一段ずつ登るように）と注する。すなわち、足の爪先への接触が成功したら（siddhaḥ）、次は太腿（jaghana）、臀部（uru）、腰（nitamba）へと、順を追って求めていくべきである。これは bāhya（外的）手段から ābhyantara（内的）手段への移行を示す。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.17–18</div>
+<div class="sk">dravyasya samarpaṇe pratigrahe vā tad-gato vikāraḥ. ācamanānte codakenāsekaḥ.</div>
+<div class="jp">物を手渡す時や受け取る時に、それに託して（自分の感情の）変化を示す。口すすぎの後に、水滴をかける。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>dravya は pūga-phala（檳榔子）などの品物。渡す際、あるいは受け取る際に、爪で軽く触れる（sa-nakha-sparśam arpayet pratigṛhīyād）ことで感情を伝える。ācamanānte は洗浄水を与えている時に、その後で水の飛沫をかけるという親密な戯れ。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.19–20</div>
+<div class="sk">vijane tamasi ca dvandvam āsīnaḥ kṣāntiṃ kurvīta. samāna-deśa-śayyāyāṃ ca. tatra yathārtham anudvejayato bhāva-nivedanam.</div>
+<div class="jp">人のいない場所や暗闇で、二人だけで座った時に、忍耐を試みるべきである。同じ場所で寝る時にも同様に。そこで、彼女を不安にさせないように、ありのままに感情を伝える。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>kṣānti は kara-sparśādinā（手で触れるなどして）行う。夜間は恥じらいがなくなるため（lajjā-abhāvāt kanyāyāḥ）である。bhāva-nivedana は ākāreṇa na vācā（態度によって、言葉によってではなく）行う。言葉で伝えれば拒絶される恐れがある（pratyākhyāna-bhayāt）からである。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.21</div>
+<div class="sk">vivikte ca kiṃ cid asti kathayitavyam ity uktvā nirvacanaṃ bhāvaṃ ca tatropalakṣayet. yathā pāradārike vakṣyāmaḥ.</div>
+<div class="jp">人のいない場所で「少し話したいことがある」と言い、それから沈黙して、その態度から彼女の感情を読み取る。この方法は「他人の妻に関する篇」（pāradārika）で詳述する。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.22–25</div>
+<div class="sk">vidita-bhāvas tu vyādhim apadiśyaināṃ vārtā-grahaṇārthaṃ svam udavasitam ānayet. āgatāyāś ca śiraḥ-pīḍane niyogaḥ. [...] idaṃ tvayā kartavyam. na hy etad-ṛte kanyāyā anyena kāryam iti gacchantīṃ punar āgamanānubandham enāṃ visṛjet.</div>
+<div class="jp">（彼女の）感情を知った上で、病気を口実に、見舞いのために自分の住居に彼女を招く。来た時には、頭を揉むことを頼む。手を取って、意図を込めて目と額に置く。薬の調合を口実として、彼女に仕事を命じる。「これはあなたでなければできない。他の娘には任せられない」と言い、帰る時には「また来てくれ」と約束させて見送る。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>vyādhi-apadiśya とは「偽りの頭痛（kṛtaka-śiraḥśūla）などを装って」の意。viśvāsyayā prahitayā（信頼できる者を遣わして）彼女を招く。「これは君にしかできない」（tvayā kartavyam）と言うのは再訪の口実を確立するため。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.26–28</div>
+<div class="sk">asya ca yogasya trirātraṃ trisaṃdhyaṃ ca prayuktiḥ. abhīkṣṇa-darśanārtham āgatāyāś ca goṣṭhīṃ vardhayet. anyābhir api saha viśvāsanārtham adhikam adhikaṃ cābhiyuñjīta. na tu vācā nirvadet.</div>
+<div class="jp">この方策は三日三晩（trirātra）、三回の接触時間（trisaṃdhya）にわたって用いるべきである。頻繁な面会のために訪れるようになったら、話の輪を広げる。他の女性たちとも親しくして信頼を得る。次第に求愛を強めるべきであるが、言葉で（拒絶されて）挫折してはならない。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.29</div>
+<div class="sk">dūra-gata-bhāvo 'pi hi kanyāsu na nirvedena sidhyatīti ghoṭakamukhaḥ.</div>
+<div class="jp">たとえ深い愛情が芽生えた後でも、娘に対しては挫折によって成就することはない、とゴータカムカは言う。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>dūra-gata-bhāva は atyartha-jāta-visrambha（深い信頼が生まれた状態）。それでも nirveda（言葉での直接的な告白による挫折）では成就しない。娘は多くの求愛行為を必要とするものだからである（bahuśo 'bhiyogāpekṣaṇīyatvāt kanyānāṃ）。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.30–31</div>
+<div class="sk">yadā tu bahu-siddhāṃ manyeta tadaivopakramet. pradoṣe niśi tamasi ca yoṣito manda-sādhvasāḥ surata-vyavasāyinyo rāgavatyaś ca bhavanti. na tu puruṣaṃ pratyācakṣate. tasmāt tat-kālaṃ prayojayitavyā iti prāyovādaḥ.</div>
+<div class="jp">十分に機が熟したと判断した時に、はじめて本格的に始めるべきである。宵闇・夜・暗闇においては、女性は恐怖心が薄らぎ、情事に前向きとなり、愛欲に満ちるものである。そして男を拒まない。それゆえ、その時刻に行動すべきである ―― これが一般的な傾向（prāyovāda）である。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.32–33</div>
+<div class="sk">ekapuruṣābhiyogānāṃ tv asaṃbhave gṛhītārthayā dhātreyikayā sakhyā vā tasyām antarbhūtayā tam artham anirvadantyā sahainām aṅkam ānāyayet. tato yathoktam abhiyuñjīta. svāṃ vā paricārikām ādāv eva sakhītvenāsyāḥ praṇidadhyāt.</div>
+<div class="jp">一人での求愛が不可能な場合には、（男の）意図を理解した乳母の娘や女友達で、彼女（娘）に影響力を持ち、その目的を漏らさない者の助けを借りて、彼女を自分のもとに連れて来させる。そして前述の方法で求愛する。あるいは、自分の侍女を初めから彼女の女友達として送り込んでおくべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.34–35</div>
+<div class="sk">yajñe vivāhe yātrāyām utsave vyasane prekṣaṇaka-vyāpṛte jane tatra tatra ca dṛṣṭeṅgitākārāṃ parīkṣita-bhāvām ekākinīm upakrameta. na hi dṛṣṭa-bhāvā yoṣito deśe kāle ca prayujyamānā vyāvartanta iti vātsyāyanaḥ.</div>
+<div class="jp">祭礼・婚礼・行列・祝祭・災厄のとき、人々が見世物に夢中なとき、あちこちで合図と態度を確認し、感情を試した上で、一人でいる時に近づくべきである。愛情を示した女性は、適切な場所と時に働きかけられれば、拒むことはない ―― とヴァーツヤーヤナは言う。</div>
+</div>
+
+<p style="text-align:center;color:var(--accent);font-size:.9rem;margin:2rem 0;font-style:italic;">ity ekapuruṣābhiyogāḥ ― 以上、一人の男による求愛法（第二十八の prakaraṇa）。</p>
+
+<div class="section-title">प्रकरण २९ ― Prayojyasyopāvartanam（対象の娘自身による接近）</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.36</div>
+<div class="sk">mandāpadeśā guṇavaty api kanyā dhana-hīnā kulīnāpi samānair ayācyamānā mātāpitṛ-viyuktā vā jñāti-kula-vartinī vā prāpta-yauvanā pāṇi-grahaṇaṃ svayam abhīpseta.</div>
+<div class="jp">家柄の低い娘、あるいは美質を持っていても貧しい娘、あるいは名門であっても同等の者から求められない娘、あるいは父母を失って親族の家に住む娘、あるいは成熟した娘は、自ら婚姻（pāṇi-grahaṇa）を望むべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>Yaśodhara はダルマシャーストラの一節を引用する：「月経を見た娘は三年間（夫を）待つべきである。それ以降は、自ら相応しい夫を見つけよ」（trīṇi varṣāṇy udīkṣeta kanyā ṛtumatī satī / ūrdhvaṃ tu kālād etasmād vindeta sadṛśaṃ patim）。これにより svayaṃvara（自己選択婚）が正当化される。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.37</div>
+<div class="sk">sā tu guṇavantaṃ śaktaṃ sudarśanaṃ bāla-prītyābhiyojayet.</div>
+<div class="jp">彼女は、美質を持ち、力ある、容姿端麗な男を、幼い頃からの親しみによって接近させるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.38</div>
+<div class="sk">yaṃ vā manyeta mātāpitror asamīkṣayā svayam apy ayam indriya-daurbalyān mayi pravartiṣyata iti priya-hitopacārair abhīkṣṇa-saṃdarśanena ca tam āvarjayet.</div>
+<div class="jp">あるいは、父母の思惑とは関係なく「この男は感覚の弱さから自ら私に近づくだろう」と思える男を、好意と利益を示す振る舞いと頻繁な面会によって引き寄せるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.39–40</div>
+<div class="sk">mātā caināṃ sakhībhir dhātreyikābhiś ca saha tad-abhimukhīṃ kuryāt. puṣpa-gandha-tāmbūla-hastāyā vijane vikāle ca tad-upasthānam. kalā-kauśala-prakāśane vā saṃvāhane śirasaḥ pīḍane caucitya-darśanam.</div>
+<div class="jp">母親は（あるいは養母は）、女友達や乳母の娘とともに、彼女を彼の方に向かわせるべきである。花・香料・蒟醬を手に、人のいない場所、あるいは適切な時間に、彼のもとを訪れるべきである。諸芸の技を見せる際には、また揉みや頭を押す際には、慎み深さ（aucitya）を示すべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.41</div>
+<div class="sk">na caivānturāpi puruṣaṃ svayam abhiyuñjīta. svayam abhiyoginī hi yuvatiḥ saubhāgyaṃ jahātīty ācāryāḥ.</div>
+<div class="jp">しかし、たとえ内心で激しく望んでいても、女性は自ら男に求愛すべきではない。自ら求愛する若い女性は、幸運（saubhāgya）を失う、と師たちは言う。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.42–43</div>
+<div class="sk">tat-prayuktānāṃ tv abhiyogānām ānulomyena grahaṇam. pariṣvaktā ca na vikṛtiṃ bhajet. ślakṣṇam ākāram ajānatīva pratigṛhīyāt. vadana-grahaṇe balātkāraḥ.</div>
+<div class="jp">しかし、彼が行った求愛行為は、好意をもって受け入れるべきである。抱擁された時に、嫌悪の表情を見せてはならない。微妙な（彼の）合図を、気づかないふりをして受け入れるべきである。顔を掴まれた（接吻を迫られた）時には、（彼に）力ずくで行わせるべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>ānulomyena は「彼が背を向けないように」（yathā 'yaṃ na vimukhī-bhavati）の意。ślakṣṇam ākāram ajānatīva — 微妙な意図を察知していながらも知らないふりをするのは dhāṣṭarya-parihārārtham（厚かましさを避けるため）。balātkāra（力ずく）は、彼に接吻を自力で成し遂げさせるよう、あたかも抵抗するように振る舞うこと。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.44–46</div>
+<div class="sk">rati-bhāvanām abhyarthyamānāyāḥ kṛcchrād guhya-saṃsparśanam. abhyarthitāpi nātivivṛtā svayaṃ syāt. anyatrāniścaya-kālāt. yadā tu manyetānurakto mayi na vyāvartayiṣyata iti tadaivainam abhiyuñjānaṃ bāla-bhāva-mokṣāya tvaret.</div>
+<div class="jp">情事を求められた時は、ためらいがちに秘所への接触を許すべきである。求められても、自ら過度にあらわにすべきではない ―― 確信が得られるまでは。「彼は私に愛着を持ち、離れないだろう」と確信した時に初めて、求愛する彼を処女の状態（bāla-bhāva）からの解放に向けて急がせるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.47</div>
+<div class="sk">vimukta-kanyā-bhāvā ca viśvāsyeṣu prakāśayet.</div>
+<div class="jp">処女でなくなったことを、信頼できる人々に公にすべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>viśvāsyeṣu は sakhī-dharmiyyādi（女友達や心を許せる者たち）。公にする（prakāśayet）際には「gāndharveṇa vivāhena ūḍhā aham」（ガーンダルヴァ婚によって私は嫁いだのです）と伝えるべきとする。bāla-bhāva-mokṣa は gāndharva-vidhi-pūrvakaṃ kaumāra-haraṇa（ガーンダルヴァの儀式に基づく処女性の解消）を意味する。</p>
+</div>
+
+<p style="text-align:center;color:var(--accent);font-size:.9rem;margin:2rem 0;font-style:italic;">iti prayojyasyopāvartanam ― 以上、対象の娘自身による接近（第二十九の prakaraṇa）。</p>
+
+<div class="section-title">प्रकरण ३० ― Abhiyogataḥ kanyāyāḥ pratipattiḥ（求愛された娘の対応）</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.48</div>
+<div class="sk"><span class="verse">kanyābhiyujyamānā tu yaṃ manyetāśrayaṃ sukham |<br>anukūlaṃ ca vaśyaṃ ca tasya kuryāt parigraham ||</span></div>
+<div class="jp"><span class="verse">求愛された娘は、幸福の拠り所であり、<br>従順で、自分の言うことを聞く者 ――<br>そのような者を夫として受け入れるべきである。</span></div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.49</div>
+<div class="sk"><span class="verse">anapekṣya guṇān yatra rūpam aucityam eva ca |<br>kurvīta dhana-lobhena patiṃ sāpatnakeṣv api ||</span></div>
+<div class="jp"><span class="verse">美質も容姿も相応しさも顧みず、<br>財産への欲望から、たとえ共妻の中であっても<br>夫を定めることがある ―― しかしそれはすべきではない。</span></div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.50</div>
+<div class="sk"><span class="verse">tatra yukta-guṇaṃ vaśyaṃ śaktaṃ balavad arthinam |<br>upāyair abhiyuñjānaṃ kanyā na pratilomayet ||</span></div>
+<div class="jp"><span class="verse">美質を備え、従順で、有能で、熱心に求愛する男を、<br>方策を用いて近づいてくる者を、<br>娘は拒むべきではない。</span></div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.51</div>
+<div class="sk"><span class="verse">varaṃ vaśyo daridro 'pi nirguṇo 'py ātma-dhāraṇaḥ |<br>guṇair yukto 'pi na tv evaṃ bahu-sādhāraṇaḥ patiḥ ||</span></div>
+<div class="jp"><span class="verse">従順で貧しくとも、美質に欠けても一家を支える者こそ良い。<br>美質に富んでも多くの女に共有される夫は、そうではない。</span></div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.52</div>
+<div class="sk"><span class="verse">prāyeṇa dhanināṃ dārā bahavo niravagrahāḥ |<br>bāhye saty upabhoge 'pi nirvisrambhā bahiḥ-sukhāḥ ||</span></div>
+<div class="jp"><span class="verse">富者の妻は多くが自由を奪われている。<br>外面的な享受はあっても、<br>信頼はなく、幸福は表面的なものに過ぎない。</span></div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>bāhya-upabhoga（外面的な享受）は aśana-ādi（食事等の物質的享受）を指す。nirvisrambhā は āntareṇa rata-ākhya-sukhena varjitā（内なる情愛による幸福を欠いている）の意。多妻の夫は一人一人の妻に親密な愛情を注ぐことができないと Yaśodhara は注す。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.53</div>
+<div class="sk"><span class="verse">nīco yas tv abhiyuñjīta puruṣaḥ palito 'pi vā |<br>videśa-gati-śīlaś ca na sa saṃyogam arhati ||</span></div>
+<div class="jp"><span class="verse">卑しい身分の者、白髪の老人、<br>あるいは外国に旅立つ性向のある者 ――<br>このような者は結合に値しない。</span></div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.54</div>
+<div class="sk"><span class="verse">yadṛcchayābhiyukto yo dambha-dyūtādhiko 'pi vā |<br>sapatnīkaś ca sāpatyo na sa saṃyogam arhati ||</span></div>
+<div class="jp"><span class="verse">気まぐれに求愛する者、虚偽や博打に耽る者、<br>あるいは既に妻子ある者 ――<br>このような者も結合に値しない。</span></div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.4.55</div>
+<div class="sk"><span class="verse">guṇa-sāmye 'bhiyoktṝṇām eko varayitā varaḥ |<br>tatrābhiyoktari śraiṣṭhyam anurāgātmako hi saḥ ||</span></div>
+<div class="jp"><span class="verse">美質が等しい求婚者たちの中では、<br>選ぶことのできる者が最良の花婿である。<br>求婚者の中での卓越は愛情に基づくものだからである。</span></div>
+</div>
+
+<div class="note-box">
+<div class="note-title">求婚者選びのまとめ</div>
+<table>
+<tr><th>望ましい資質</th><th>避けるべき相手</th></tr>
+<tr><td>āśraya sukham（幸福の拠り所）</td><td>nīca（卑しい身分の者）</td></tr>
+<tr><td>anukūla（従順）</td><td>palita（老人）</td></tr>
+<tr><td>vaśya（言うことを聞く）</td><td>videśa-gati-śīla（外国旅好き）</td></tr>
+<tr><td>śakta（有能・力ある）</td><td>dambha-dyūtādhika（虚偽・博打好き）</td></tr>
+<tr><td>balavad arthin（熱心に求める）</td><td>sapatnīka / sāpatya（既婚者・子持ち）</td></tr>
+<tr><td>ātma-dhāraṇa（一家を支える）</td><td>bahu-sādhāraṇa（多妻者）</td></tr>
+<tr><td>anurāgātmaka（真の愛情）</td><td>yadṛcchayā abhiyukta（気まぐれな者）</td></tr>
+</table>
+</div>
+
+<p class="colophon">
+iti śrīvātsyāyanīye kāmasūtre kanyāsaṃprayuktake tṛtīye 'dhikaraṇe<br>
+ekapuruṣābhiyogāḥ prayojyasyopāvartanam abhiyogataś ca kanyāyāḥ pratipattiś<br>
+caturtho 'dhyāyaḥ<br><br>
+ヴァーツヤーヤナのカーマスートラ 第三篇「少女との結合」<br>
+第四章「一人の男の求愛・対象の娘の転向・求愛された娘の対応」 了
+</p>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>

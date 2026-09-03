@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kāmasūtra 3.3</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap');
+:root{--bg:#f7f4ef;--bg-card:#fffdf8;--text:#2c2418;--text-secondary:#6b5d4d;--accent:#a0522d;--accent-light:#c4845c;--border:#ddd5c8;--border-light:#ece6da;--sanskrit-bg:#faf8f3;--note-bg:#f2ede4;--highlight:#8b4513;--table-header:#e8dfd2;--table-stripe:#faf7f1}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1612;--bg-card:#231f19;--text:#e8e0d4;--text-secondary:#a89882;--accent:#d4845a;--accent-light:#b06a3a;--border:#3d362c;--border-light:#2e2822;--sanskrit-bg:#1e1a15;--note-bg:#2a2520;--highlight:#e8a46c;--table-header:#2e2822;--table-stripe:#1e1a15}}
+:root[data-theme="dark"]{--bg:#1a1612;--bg-card:#231f19;--text:#e8e0d4;--text-secondary:#a89882;--accent:#d4845a;--accent-light:#b06a3a;--border:#3d362c;--border-light:#2e2822;--sanskrit-bg:#1e1a15;--note-bg:#2a2520;--highlight:#e8a46c;--table-header:#2e2822;--table-stripe:#1e1a15}
+body{background:var(--bg);color:var(--text);font-family:'Shippori Mincho','Noto Serif JP',serif;line-height:1.9;max-width:960px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-family:'Noto Serif Devanagari','Noto Serif JP',serif;font-size:1.75rem;color:var(--accent);text-align:center;margin:0 0 .3rem;font-weight:600;letter-spacing:.02em}
+.subtitle{text-align:center;color:var(--text-secondary);font-size:1rem;margin:0 0 .5rem}
+.book-info{text-align:center;font-size:.85rem;color:var(--accent-light);margin:0 0 2rem;letter-spacing:.08em}
+.section-title{font-size:1.15rem;font-weight:600;color:var(--accent);border-bottom:2px solid var(--border);padding-bottom:.4rem;margin:2.5rem 0 1.2rem}
+.sutra-block{display:grid;grid-template-columns:1fr 1fr;gap:0 1.8rem;margin:1rem 0;padding:1rem 1.2rem;background:var(--bg-card);border-left:3px solid var(--accent);border-radius:0 6px 6px 0}
+.sutra-num{grid-column:1/-1;font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:.3rem;font-family:'Noto Serif Devanagari',serif}
+.sk{font-family:'Noto Serif Devanagari',serif;font-size:.95rem;line-height:1.85;color:var(--text)}
+.jp{font-size:.95rem;line-height:1.85;color:var(--text)}
+.note-box{background:var(--note-bg);border-radius:6px;padding:1rem 1.2rem;margin:1.5rem 0;border:1px solid var(--border-light)}
+.note-title{font-size:.85rem;font-weight:600;color:var(--accent);margin:0 0 .5rem;display:flex;align-items:center;gap:.4rem}
+.note-title::before{content:'📝';font-size:.9rem}
+.note-box p,.note-box ul{font-size:.88rem;color:var(--text-secondary);margin:.3rem 0;line-height:1.7}
+.note-box ul{padding-left:1.2rem}.note-box li{margin:.25rem 0}
+.verse{font-style:italic;border-left:3px solid var(--accent-light);padding-left:1rem;margin:.5rem 0}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th{background:var(--table-header);color:var(--accent);font-weight:600;padding:.5rem .7rem;text-align:left;border:1px solid var(--border)}
+td{padding:.45rem .7rem;border:1px solid var(--border);vertical-align:top}
+tr:nth-child(even) td{background:var(--table-stripe)}
+.signs-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1rem 0}
+.sign-card{background:var(--bg-card);border:1px solid var(--border-light);border-radius:6px;padding:.7rem .9rem}
+.sign-label{font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:.2rem}
+.sign-desc{font-size:.85rem;color:var(--text-secondary);line-height:1.6}
+.colophon{text-align:center;font-size:.85rem;color:var(--text-secondary);margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+@media(max-width:640px){.sutra-block{grid-template-columns:1fr;gap:.6rem 0}.signs-grid{grid-template-columns:1fr}body{padding:1.2rem 1rem}}
+</style>
+</head>
+<body>
+
+<h1>Vātsyāyanakāmasūtra 3.3</h1>
+<p class="subtitle">第三篇 第三章 ―― 幼い娘への接近法と合図・態度の読み取り</p>
+<p class="book-info">Tṛtīyam Adhikaraṇam — Kanyāsaṃprayuktakam / Tṛtīyo 'dhyāyaḥ</p>
+
+<div class="section-title">प्रकरण २६ ― Bālopakramaṇam（幼い娘への接近法）</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.1</div>
+<div class="sk">dhana-hīnas tu guṇa-yukto 'pi madhyastha-guṇo hīnāpadeśo vā sadhano vā prātiveśyaḥ mātṛ-pitṛ-bhrātṛṣu ca paratantraḥ bāla-vṛttir ucita-praveśo vā kanyām alabhyatvān na varayet.</div>
+<div class="jp">財産に乏しい者は、たとえ美質を備えていても、あるいは諸々の美質が平凡で家柄が卑しい者、あるいは財産はあっても隣人（近所に住む者）、あるいは父母・兄弟に従属する者、あるいは子供のように扱われ出入りが自由な者は、娘を（正式に）得ることができないので、（別の方法で）求婚すべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.2</div>
+<div class="sk">bālyāt prabhṛti caināṃ svayam evānurañjayet.</div>
+<div class="jp">幼い頃から、彼自ら彼女の心を惹きつけるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.3</div>
+<div class="sk">tathā-yuktaś ca mātula-kulānuvartī dakṣiṇapathe bāla eva mātrā pitrā ca viyuktaḥ paribhūta-kalpo dhanotkarṣād alabhyāṃ mātula-duhitaram anyasmai vā pūrva-dattāṃ sādhayet.</div>
+<div class="jp">そのような状況にある者で、母方の家に属し、南方（dakṣiṇāpatha）において幼くして母と父を失い、軽んじられた者は、財力の増大により、得がたい母方の従姉妹（mātula-duhitā）を、あるいは他の者に既に与えられた娘をも獲得すべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.4–5</div>
+<div class="sk">anyām api bāhyāṃ spṛhayet. bālāyām evaṃ sati dharmādhigame saṃvananaṃ ślāghyam iti ghoṭakamukhaḥ.</div>
+<div class="jp">また、母方の血縁に属さない外部の娘をも望むべきである。幼い娘に対して、法（dharma）に従った交際のもとで、懐柔すること（saṃvanana）は賞賛すべきである、とゴータカムカは言う。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>Yaśodhara は、正式に娘を得られない六つの原因を解説する：①貧困（dhana-hīna）、②家柄の卑しさ（hīnāpadeśa）、③隣人関係（prātiveśya — 近隣に住むことによる争いの原因）、④父母・兄弟への従属、⑤子供のように見られること（loḍīka-vat — 人形のように扱われる者）、⑥財力があっても傲慢さ。これらの場合、gāndharva-vivāha（恋愛婚）が推奨される。南方では母方の従姉妹との婚姻が一般的であった（tatra hi mātula-duhitā pariṇīyate）。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.6</div>
+<div class="sk">tayā saha puṣpāvacayaṃ grathanaṃ gṛhakaṃ duhitṛkā-krīḍā-yojanaṃ bhakta-pāna-karaṇam iti kurvīta. paricayasya vayasaś cānurūpyāt.</div>
+<div class="jp">彼女と共に、花摘み（puṣpāvacaya）、花輪編み（grathana）、家ごっこ（gṛhaka）、人形遊び（duhitṛkā-krīḍā）、食事の用意ごっこ（bhakta-pāna-karaṇa）などを行うべきである。親しさと年齢に応じて。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.7</div>
+<div class="sk">ākarṣa-krīḍā paṭṭikā-krīḍā muṣṭi-dyūta-kṣullakādi-dyūtāni madhyamāṅguli-grahaṇaṃ ṣaṭ-pāṣāṇakādīni ca deśyāni tat-sātmyāt tad-āpta-dāsa-ceṭībhis tayā ca sahānukrīḍeta.</div>
+<div class="jp">賽子の遊び（ākarṣa-krīḍā）、紐織り遊び（paṭṭikā-krīḍā）、握り拳の当て遊び（muṣṭi-dyūta）、小銭遊び（kṣullaka-dyūta）、中指を捕まえる遊び（madhyamāṅguli-grahaṇa）、六つの小石の遊び（ṣaṭ-pāṣāṇaka）など、その地方に特有の遊びを、彼女の好みに合わせ、彼女が信頼する召使いたちや彼女自身と共に楽しむべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">遊びの一覧（Jayamaṅgalā 注による解説）</div>
+<table>
+<tr><th>遊びの名称</th><th>内容</th></tr>
+<tr><td>ākarṣa-krīḍā</td><td>賽子（pāśaka）の遊び</td></tr>
+<tr><td>paṭṭikā-krīḍā</td><td>紐（paṭṭikā）を編む遊び</td></tr>
+<tr><td>muṣṭi-dyūta</td><td>握りこぶしの中に何かを隠し当てる遊び</td></tr>
+<tr><td>kṣullaka-dyūta</td><td>五つのコマ（pañca-samaya）を使う遊び</td></tr>
+<tr><td>madhyamāṅguli-grahaṇa</td><td>指を入れ替え、相手の中指を捕まえる遊び</td></tr>
+<tr><td>ṣaṭ-pāṣāṇaka</td><td>六つの小石を手の甲に投げ上げて受ける遊び（お手玉の原型）</td></tr>
+<tr><td>pañcikā, prasṛtaka 等</td><td>ādi-śabda（等）に含まれる地方固有の遊び</td></tr>
+</table>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.8</div>
+<div class="sk">kṣveḍitakāni su-nimilita-kām ārabdhikāṃ lavaṇa-vīthikām anila-tāḍitakāṃ godhūma-pañjikām aṅguli-tāḍikāṃ sakhībhir anyāni ca deśyāni.</div>
+<div class="jp">身体を使う遊び（kṣveḍitaka）も行うべきである ―― 目隠し鬼ごっこ（su-nimilitikā）、鬼ごっこ（ārabdhikā）、塩の道遊び（lavaṇa-vīthikā）、風になる遊び（anila-tāḍitaka）、小麦合わせ遊び（godhūma-pañjikā）、指叩き遊び（aṅguli-tāḍikā）など、女友達と一緒に、またその地方に特有のもの。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">身体遊びの詳細（Jayamaṅgalā 注）</div>
+<table>
+<tr><th>遊びの名称</th><th>Yaśodhara の解説</th></tr>
+<tr><td>su-nimilitikā</td><td>一人が目を閉じ、他の者が隠れる。目を開けた者が誰かを捕まえ、捕まった者が次に目を閉じる（かくれんぼ）</td></tr>
+<tr><td>ārabdhikā</td><td>手を叩いて合図し（choṭikā）、逃げる。相手が追いかけて捕まえる（鬼ごっこ）</td></tr>
+<tr><td>lavaṇa-vīthikā</td><td>二本の線（lavaṇa-vīthikā）を引き、その間を通る際に自分の場所を占める遊び。lavaṇa-hāra とも呼ばれる</td></tr>
+<tr><td>anila-tāḍitaka</td><td>翼のように手を広げて回転する遊び（風に打たれたように）</td></tr>
+<tr><td>godhūma-pañjikā</td><td>各人が小銭を出し合い、穀物（godhūma は小麦、brīhi は米も含む）の山に混ぜ、分けた山から小銭を探す遊び</td></tr>
+<tr><td>aṅguli-tāḍikā</td><td>一人が目を閉じ、他の者が額を叩き「誰が叩いたか？」と問い、当てる遊び</td></tr>
+<tr><td>maṇḍūkikā, ekapādikā 等</td><td>蛙跳び、片足立ちなど地方固有の遊び</td></tr>
+</table>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.9</div>
+<div class="sk">yāṃ ca viśvāsyām asyāṃ manyeta tayā saha nirantarāṃ prītiṃ kuryāt. paricayāṃś ca budhyeta.</div>
+<div class="jp">彼女（対象の娘）のもとで信頼できると思われる女性（乳母の娘など）とは、絶え間ない友情を結ぶべきである。そしてその交際から（娘の心情を）察知すべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.10</div>
+<div class="sk">dhātreyikāṃ cāsyāḥ priya-hitābhyām adhikam upagṛhṇīyāt. sā hi prīyamāṇā viditākārāpy apratyādiśantī taṃ tāṃ ca yojayituṃ śaknuyāt. anabhihitāpi pratyācāryakam.</div>
+<div class="jp">彼女の乳母の娘（dhātreyikā）を、好意と利益の両方によって、とりわけ厚く遇すべきである。彼女（乳母の娘）は愛着を持つようになれば、（男の）意図を知っていても拒絶せず、彼と彼女（娘）を結びつけることができるであろう。（男から）頼まれなくとも仲介役（pratyācāryaka）となる。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>dhātreyikā（乳母の娘）の役割が極めて重要であることを Yaśodhara は強調する。priya（現在の快楽を与えること）と hita（将来の利益を約束すること）の両面で遇すべきとする。彼女が nāyaka の意図を知っても（viditākārā api）拒絶しない（apratyādiśantī）のは、恐怖や恥じらいを取り除いて（bhaya-lajjā-vyapanayanena）娘を説得できるからである。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.11</div>
+<div class="sk">aviditākārāpi hi guṇān evānurāgāt prakāśayet. yathā prayojyānurajyeta.</div>
+<div class="jp">（男の）意図を知らない場合であっても、（乳母の娘は）好意から彼の美質だけを（娘に）示すであろう。そうすれば、対象の娘が惹かれるようになる。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.12</div>
+<div class="sk">yatra yatra ca kautukaṃ prayojyāyās tad anu praviśya sādhayet.</div>
+<div class="jp">娘が関心を持つことがらには何であれ、それに入り込んで（乳母の娘を通じて）目的を達成すべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.13</div>
+<div class="sk">krīḍanaka-dravyāṇi yāny apūrvāṇi yāny anyāsāṃ viralaśo vidyeraṃs tāny asyā ayatnena saṃpādayet.</div>
+<div class="jp">珍しい遊び道具で、他の娘たちにも滅多に見られないものを、容易に手に入れて彼女に与えるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.14</div>
+<div class="sk">tatra kandukam aneka-bhakti-citram alpa-kālāntaritam anyad anyac ca saṃdarśayet. tathā sūtra-dāru-gavala-gaja-dantamayīr duhitṛkā madhūcchiṣṭa-piṣṭa-mṛnmayīś ca.</div>
+<div class="jp">色とりどりに彩られた毬（kanduka）を、短い間隔で次々と見せるべきである。また、糸製・木製・角製・象牙製の人形（duhitṛkā）、そして蜜蝋・練り粉・粘土製のものも。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">贈り物の一覧（sūtra 13–16）</div>
+<table>
+<tr><th>分類</th><th>品目</th></tr>
+<tr><td>毬（kanduka）</td><td>多彩に彩られた毬。短い間隔で新しいものを次々と見せる</td></tr>
+<tr><td>人形（duhitṛkā）</td><td>糸製（sūtra）、木製（dāru）、角製（gavala）、象牙製（gaja-danta）、蜜蝋製（madhūcchiṣṭa）、練り粉製（piṣṭa）、粘土製（mṛnmaya）</td></tr>
+<tr><td>調理道具</td><td>料理を見せるための台所道具（mahānasika） ―― 料理は女性の主要な学芸（pradhāna-vidyā）であった</td></tr>
+<tr><td>男女一対の木偶</td><td>木でつくった分離できない一組の男女像（kāṣṭha-meḍhraka）</td></tr>
+<tr><td>動物模型</td><td>木・粘土製の山羊（aja）、羊（eḍaka）、馬、牛など</td></tr>
+<tr><td>小さな神殿</td><td>粘土・竹・木でつくった小さな祠（deva-kula-gṛhaka）</td></tr>
+<tr><td>鳥籠</td><td>鸚鵡（śuka）、郭公（parabhṛta）、九官鳥（madana-sārikā）、鶉（lāva）、鶏（kukkuṭa）、鷓鴣（tittiri）の籠</td></tr>
+<tr><td>水器・楽器ほか</td><td>精巧な形の水差し、小さな琴（vīṇikā）、人形台（piṇḍolikā）、化粧箱（paṭolikā）</td></tr>
+<tr><td>化粧料</td><td>紅（alaktaka）、雄黄（manaḥśilā）、石黄（haritāla）、辰砂（hiṅgulaka）、藍（śyāma-varṇaka）、白檀（candana）、番紅花（kuṅkuma）</td></tr>
+<tr><td>嗜好品</td><td>檳榔子（pūga-phala）、蒟醬の葉（pattra）</td></tr>
+</table>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.15–17</div>
+<div class="sk">bhakta-pākārtham asyā mahānasikasya ca darśanam. [...] śakti-viṣaye pracchannaṃ dānaṃ prakāśa-dravyāṇāṃ ca prakāśam. yathā ca sarvābhiprāya-saṃvardhakam enaṃ manyeta tathā prayatitavyam.</div>
+<div class="jp">料理のために台所の技（mahānasika）を見せ、一対の男女像、小さな動物の模型、鳥籠、精巧な水器、小琴、化粧箱、化粧料（紅・雄黄・石黄・辰砂・藍）、白檀・番紅花、檳榔子・蒟醬の葉などを ―― 時宜に応じて、密かに渡すべきものは密かに、公然としてよいものは公然と贈るべきである。そして、あらゆる望みを叶えてくれる者だと彼女が思うように努めるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.18</div>
+<div class="sk">pracchanna-dānasya tu kāraṇam ātmano guru-janād bhayaṃ khyāpayet. deyasya cānyena spṛhaṇīyatvam iti.</div>
+<div class="jp">密かな贈り物の理由としては、自分の目上の者（guru-jana）からの叱責を恐れていると伝えるべきである。また、贈り物が他の者にも欲しがられるほど貴重であるからだ、と。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.19</div>
+<div class="sk">vardhamānānurāgaṃ cākhyānake manaḥ kurvatīm anvarthābhiḥ kathābhiś citta-hāriṇībhiś ca rañjayet.</div>
+<div class="jp">愛着が増してきて物語に心を傾けるようになったら、目的に適った物語（anvarthā kathā）と心を魅了する物語（citta-hāriṇī）とで楽しませるべきである。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>anvarthā kathā（目的に適った物語）として、Yaśodhara は Śakuntalā（シャクンタラー）や Rāja-dārikā（王女物語）などの恋愛譚を挙げる。citta-hāriṇī（心を魅了する物語）はそれ以外の一般的な恋愛にまつわる話を指す。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.20</div>
+<div class="sk">vismayeṣu prasahyamānām indra-jālaiḥ prayogair vismāpayet. kalāsu kautukinīṃ tat-kauśalena gīta-priyāṃ śruti-harair gītaiḥ. āśva-yujyām aṣṭamī-candrake kaumudyām utsaveṣu yātrāyāṃ grahaṇe gṛhācāre vā vicitrair āpīḍaiḥ karṇa-pattra-bhaṅgaiḥ sikthaka-pradhānair vastrāṅgulīyaka-bhūṣaṇa-dānaiś ca. no ced doṣa-karāṇi manyeta.</div>
+<div class="jp">驚きを好む娘には、手品（indra-jāla）の実演で驚嘆させるべきである。諸芸に興味を持つ娘には芸の巧みさで、歌好きの娘には耳に心地よい歌で。Āśvayujī 祭、八日月（aṣṭamī-candraka）、Kaumudī 祭、その他の祭り・行列・日蝕月蝕の際・家への訪問の折には、精巧な花飾り（āpīḍa）、耳飾りの型（karṇa-pattra-bhaṅga）、蝋細工の品を贈り、衣服・指輪・装身具なども贈るべきである ―― ただし、問題を引き起こさないと判断できる場合に限る。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注 ―― 祭りの解説</div>
+<ul>
+<li><strong>āśvayujī</strong> — āśvina 月（九〜十月）の祭り。Yaśodhara は kījāgara（守夜祭）と注す</li>
+<li><strong>aṣṭamī-candraka</strong> — mārgaśīrṣa 月暗半八日（十一〜十二月）。昼に断食し、月の出とともに食事する祭り</li>
+<li><strong>kaumudī</strong> — 一般には月光祭だが、Yaśodhara は kārtikī（kārttika 月）に娘たちが月光のもとで maṇḍalaka（輪舞）の供養を行う祭りとする</li>
+<li><strong>no ced doṣa-karāṇi manyeta</strong> — 贈り物が自分に害をもたらさない（ātmano 'pāyam）場合にのみ行うべきとの警告</li>
+</ul>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.21</div>
+<div class="sk">anya-puruṣa-viśeṣābhijñatayā dhātreyikāsyāḥ puruṣa-pravṛttau cātuḥ-ṣaṣṭikān yogān grāhayet.</div>
+<div class="jp">他の男との違いを認識させるために、彼女の乳母の娘を通じて、男女の営み（puruṣa-pravṛtti）における六十四の技法（cātuḥṣaṣṭika yoga）を習得させるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.22</div>
+<div class="sk">tad-grahaṇopadeśena ca prayojyāyāṃ rati-kauśalam ātmanaḥ prakāśayet.</div>
+<div class="jp">それらの技法の教授を口実として、対象の娘に対して、自分の情愛の巧みさ（rati-kauśala）を示すべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.23</div>
+<div class="sk">udāra-veṣaś ca svayam anupahata-darśanaś ca syāt. bhāvaṃ ca kurvatīm iṅgitākāraiḥ sūcayet.</div>
+<div class="jp">自らは立派な装い（udāra-veṣa）で、容姿に欠点のない（anupahata-darśana）ようにすべきである。そして、愛情を抱きつつある娘を、その合図と態度（iṅgitākāra）によって見分けるべきである。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.24</div>
+<div class="sk">yuvatayo hi saṃsṛṣṭam abhīkṣṇa-darśanaṃ ca puruṣaṃ prathamaṃ kāmayante. kāmayamānā api tu nābhiyuñjata iti prāyovādaḥ.</div>
+<div class="jp">若い女性（yuvatī）は、親しく交わり、しばしば顔を合わせる男を最初に愛するものである。しかし、愛していても自ら積極的に求愛はしない ―― これが一般的な傾向（prāyovāda）である。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>yuvatī は jāta-yauvanā（成熟した娘）を指す。saṃsṛṣṭa は jāta-paricaya（すでに親しくなった者）、abhīkṣṇa-darśana は sadā dṛśyamāna（常に見かける者）。彼女たちは kācil lajjā-ādyartha-yuktyā（恥じらいなどの理由から）自ら求愛しない、と Yaśodhara は注する。</p>
+</div>
+
+<p style="text-align:center;color:var(--accent);font-size:.9rem;margin:2rem 0;font-style:italic;">iti bālāyām upakramāḥ ― 以上、幼い娘への接近法（第二十六の prakaraṇa）。</p>
+
+<div class="section-title">प्रकरण २७ ― Iṅgitākāra-sūcanam（合図と態度の読み取り）</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.25</div>
+<div class="sk">tān iṅgitākārān vakṣyāmaḥ.</div>
+<div class="jp">では、それらの合図と態度（iṅgitākāra）を述べよう。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>iṅgita は「通常と異なるふるまい」（anyathā vṛttiḥ）を意味し、ākāra は「顔や目の表情の変化」（mukha-nayana-rāga）を意味する。以下の徴候は、この両方の観点から読み取るべきものである。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.26</div>
+<div class="sk">saṃmukhaṃ taṃ tu na vīkṣate. vīkṣitā vrīḍāṃ darśayati. rucyam ātmano 'ṅgam apadeśena prakāśayati. pramattaṃ pracchannaṃ nāyakam atikrāntaṃ ca vīkṣate.</div>
+<div class="jp">面と向かって彼を見ない。見つめられると恥じらいを見せる。美しい自分の身体の部分を、口実をもうけてさりげなく見せる。彼が注意していない時、人目につかない時、通り過ぎた後に、彼を見つめる。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.27</div>
+<div class="sk">pṛṣṭā ca kiṃ cit sa-smitam avyaktākṣaram anavasitārthaṃ ca mandaṃ mandam adho-mukhī kathayati. tat-samīpe ciraṃ sthānam abhinandati. dūre sthitā paśyatu mām iti manyamānā parijanaṃ sa-vadana-vikāram ābhāṣate. taṃ deśaṃ na muñcati.</div>
+<div class="jp">尋ねられると、少し微笑みながら、不明瞭な言葉で、意味が定まらぬようにして、ゆっくりと、うつむきながら話す。彼の近くに長くいることを喜ぶ。遠くに立って「彼が私を見ますように」と思いながら、顔の表情を変えて身近な者に話しかける。その場所を離れない。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.28</div>
+<div class="sk">yat kiṃ cid dṛṣṭvā vihasitaṃ karoti. tatra kathām avasthānārtham anubadhnāti. bālasyāṅka-gatasyāliṅganaṃ cumbanaṃ ca karoti. paricārikāyās tilakaṃ ca racayati. parijanān avaṣṭabhya tās tāś ca līlā darśayati.</div>
+<div class="jp">何かを見ては笑う。そこに留まるために話を継ぎ足す。膝の上の幼い子を抱き寄せ接吻する（愛情の転移）。侍女の額に点飾り（tilaka）を描く。身近な者に寄りかかって、さまざまな仕草を見せる。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注</div>
+<p>bālasya āliṅgana-cumbana は saṃkrāntaka（転移行為）と注される。すなわち、幼い子への愛撫は、実は nāyaka への感情の間接的表現である。paricārikāyāḥ tilaka-racana（侍女への化粧）も同様に、nāyaka を意識しつつ行う行為である。līlā として Yaśodhara は、髪をいじること（keśa-viracana）、身体をくねらせること（aṅga-valana）、伸びをすること（vijṛmbhikā）を挙げる。</p>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.29</div>
+<div class="sk">tan-mitreṣu viśvāsiti. vacanaṃ caiṣāṃ bahu manyate karoti ca. tat-paricārakaiḥ saha prītiṃ saṃkathāṃ dyūtam iti ca karoti. sva-karmasu ca prabhaviṣṇur ivaitān niyuṅkte. teṣu ca nāyaka-saṃkathām anyasya kathayatsv avahitātāṃ śṛṇoti.</div>
+<div class="jp">彼の友人たちを信頼する。彼らの言葉を重んじ、それに従う。彼の召使いたちと親しくし、話をし、遊びをする。自分の用事に、あたかも権限があるかのように彼らを使う。そして彼らの中で、誰かが彼の話をする時には、注意深く聞き入る。</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.30</div>
+<div class="sk">dhātreyikā coditā nāyakasyodavasitaṃ praviśati. tām antarā kṛtvā tena saha dyūtaṃ krīḍām ālāpaṃ cāyojayitum icchati. analaṃkṛtā darśana-pathaṃ pariharati. karṇa-pattram aṅgulīyakaṃ srajaṃ vā tena yācitā sa-dhīram eva gātrād avatārya sakhyā haste dadāti. tena ca dattaṃ nityaṃ dhārayati. anya-vara-saṃkathāsu viṣaṇṇā bhavati. tat-pakṣakaiś ca saha na saṃsṛjyate iti.</div>
+<div class="jp">乳母の娘に促されて、彼の住居に入る。彼女（乳母の娘）を間に挟んで、彼と遊び・おしゃべり・賭け事をしたがる。飾り立てていない時には、彼の視界に入ることを避ける。耳飾り（karṇa-pattra）・指輪（aṅgulīyaka）・花輪（sraj）を彼に求められると、ためらいがちに身体から外して女友達の手に渡す。彼が贈ったものは常に身に着ける。他の求婚者の話になると落胆する。そして、彼に敵対する者たちとは交わらない。</div>
+</div>
+
+<div class="note-box">
+<div class="note-title">愛情の合図のまとめ（sūtra 26–30）</div>
+<div class="signs-grid">
+<div class="sign-card">
+<div class="sign-label">視線に関する徴候</div>
+<div class="sign-desc">正面から見ない／見つめられると恥じらう／油断した時に見つめる／通り過ぎた後に見る</div>
+</div>
+<div class="sign-card">
+<div class="sign-label">言葉に関する徴候</div>
+<div class="sign-desc">微笑みながら不明瞭に話す／話を引き延ばす／彼の話に注意深く聞き入る</div>
+</div>
+<div class="sign-card">
+<div class="sign-label">態度に関する徴候</div>
+<div class="sign-desc">彼の近くに長くいる／その場を離れない／彼の友人を信頼する／彼の召使いを使う</div>
+</div>
+<div class="sign-card">
+<div class="sign-label">転移的な行為</div>
+<div class="sign-desc">幼児を抱いて接吻する／侍女に化粧する／仕草を見せる／飾りのない姿を見せまいとする</div>
+</div>
+<div class="sign-card">
+<div class="sign-label">贈り物に関する徴候</div>
+<div class="sign-desc">求められた飾りをためらいつつ渡す／彼の贈り物を常に身に着ける</div>
+</div>
+<div class="sign-card">
+<div class="sign-label">拒絶の徴候</div>
+<div class="sign-desc">他の求婚者の話に落胆する／彼に敵対する者と交わらない</div>
+</div>
+</div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.31</div>
+<div class="sk">bhavataś cātra ślokau —<br>
+<span class="verse">dṛṣṭvaitān bhāva-saṃyuktān ākārān iṅgitāni ca |<br>
+kanyāyāḥ saṃprayogārthaṃ tāṃs tān yogān vicintayet ||</span></div>
+<div class="jp">ここに二つの偈頌がある ――<br>
+<span class="verse">これらの、愛情をともなった態度（ākāra）と合図（iṅgita）を見て、<br>
+娘との結合（saṃprayoga）のために、種々の方法（yoga）を考案すべきである。</span></div>
+</div>
+
+<div class="sutra-block">
+<div class="sutra-num">3.3.32</div>
+<div class="sk"><span class="verse">bāla-krīḍanakair bālā kalābhir yauvane sthitā |<br>
+vatsalā cāpi saṃgrāhyā viśvāsya-jana-saṃgrahāt ||</span></div>
+<div class="jp"><span class="verse">幼い娘（bālā）は子供の遊びで、<br>
+青春期にある娘（taruṇī）は諸芸（kalā）で、<br>
+年長の娘（vatsalā = prauḍhā）は信頼できる人々を味方につけることで、<br>
+心を掴むべきである。</span></div>
+</div>
+
+<div class="note-box">
+<div class="note-title">Jayamaṅgalā 注 ―― 三種の娘</div>
+<table>
+<tr><th>類型</th><th>Sanskrit</th><th>接近法</th></tr>
+<tr><td>幼い娘</td><td>bālā</td><td>bāla-krīḍanaka（子供の遊び）</td></tr>
+<tr><td>青春期の娘</td><td>taruṇī（yauvane sthitā）</td><td>kalā（六十四芸）</td></tr>
+<tr><td>年長の娘</td><td>prauḍhā（vatsalā）</td><td>viśvāsya-jana-saṃgraha（信頼できる人々の取り込み）</td></tr>
+</table>
+<p>Yaśodhara は vatsalā を prauḍhā と同定し、彼女の場合は彼女が信頼する者（viśvāsya）を通じて取り込むべきだと注す。kalā による接近は taruṇī（anurāgiṇī）の場合に特に効果的とする。</p>
+</div>
+
+<p class="colophon">
+iti śrīvātsyāyanīye kāmasūtre kanyāsaṃprayuktake tṛtīye 'dhikaraṇe<br>
+bālopakramā iṅgitākārasūcanaṃ ca tṛtīyo 'dhyāyaḥ<br><br>
+ヴァーツヤーヤナのカーマスートラ 第三篇「少女との結合」<br>
+第三章「幼い娘への接近法と合図・態度の読み取り」 了
+</p>
+<div style="text-align:center;padding:2em 0 1em;"><a href="kamasutra_toc.html" style="color:var(--accent,#a0522d);text-decoration:none;font-family:sans-serif;font-size:0.9em;">📜 目次に戻る</a></div>
+</body>
+</html>
