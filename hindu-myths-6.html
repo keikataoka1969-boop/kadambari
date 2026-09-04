@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第六弾 — 変容と覚醒の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'शक्ति';
+  position: absolute;
+  font-size: 14rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第六弾</div>
+  <h1>変容と覚醒の物語</h1>
+  <div class="line"></div>
+  <p class="sub">バラモンでありながら斧を取ったパラシュラーマ、神々の怒りが結晶した女神ドゥルガー、三歩で宇宙を奪われた魔王マハーバリ、過去の呪いに縛られた父王ダシャラタ、石にされた貞女アハリヤー、そして人里を知らぬ一角仙人リシュヤシュリンガ——変容を生きた六柱の物語を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p><a href="hindu-myths.html">第一弾</a>ではガネーシャやシヴァなど七柱、<a href="hindu-myths-2.html">第二弾</a>ではヴィシュヌやハヌマーンなど六柱、<a href="hindu-myths-3.html">第三弾</a>ではアグニやアルジュナなど六柱、<a href="hindu-myths-4.html">第四弾</a>ではビーシュマやカルナなど六柱、<a href="hindu-myths-5.html">第五弾</a>ではヴィシュヴァーミトラやプラフラーダなど六柱を紹介しました。第六弾のテーマは「変容」と「覚醒」。生まれ持った姿や立場を根底から覆され、まったく異なる存在へと変わってゆく——その激変の瞬間をプラーナ百科事典（Vettam Mani著）から厳選してお届けします。</p>
+  </div>
+
+  <!-- ═══════ パラシュラーマ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🪓</div>
+      <div>
+        <h2>パラシュラーマ（Paraśurāma）</h2>
+        <div class="sanskrit">ヴィシュヌの第六化身・斧を持つバラモン・不死の戦士聖仙</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ブリグ族の聖仙ジャマダグニと妻レーヌカーの末子。「パラシュ（斧）」を持つラーマという名が示すとおり、バラモン（祭司階級）でありながら武器を取り、全地上のクシャトリヤ（武人階級）を二十一回滅ぼしたヴィシュヌの化身です。怒りと正義、暴力と苦行が同居する、プラーナ文献でも最も苛烈な英雄の一人です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>シヴァの斧——バラモンが武器を取るとき</div>
+      <p>パラシュラーマは幼少のころからシヴァに帰依し、厳しい苦行を積みました。その苦行に応えたシヴァは、<span class="highlight">パラシュ</span>と呼ばれる神聖な戦斧を授けます。この斧は何者をも切り裂く力を持ち、投げればかならず手元に戻る神器でした。</p>
+      <p>さらにシヴァは彼に<span class="highlight">あらゆる武術と天界の武器（アストラ）</span>の使い方を伝授します。バラモンが武器を持つことは異例でしたが、シヴァは「やがてその力が必要になる時が来る」と告げました。穏やかな苦行者の息子は、こうして史上最強の戦士バラモンに変わったのです。</p>
+      <div class="aside">パラシュラーマの武勇は後の時代にも響きます。第四弾で紹介したビーシュマに武術を教え、カルナにもアストラを伝授したのはパラシュラーマです。ただしカルナが「バラモンではない」と見抜いたとき、パラシュラーマは呪いました——「最も必要な瞬間に、教えた武器を忘れるだろう」と。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>二十一回の殲滅——地上からクシャトリヤが消えた日</div>
+      <p>パラシュラーマの父ジャマダグニは<span class="highlight">カーマデーヌ（願いの牛）</span>を所有していました。ハイハヤ族のクシャトリヤ王カールタヴィーリヤ・アルジュナ（千本の腕を持つ王）は、その牛を力ずくで奪いました。怒ったジャマダグニは抗議しましたが、王は聖仙の庵を焼き、使者を通じて脅迫します。</p>
+      <p>パラシュラーマは単身で王のもとに乗り込み、シヴァの斧で<span class="highlight">千本の腕を切り落として</span>王を殺しました。しかし復讐の連鎖は続きます——カールタヴィーリヤの息子たちがジャマダグニの庵を襲い、<span class="highlight">無抵抗のジャマダグニを殺害</span>しました。しかもその首を切り落としたのです。</p>
+      <p>母レーヌカーの二十一回の慟哭——父の胸を打ちながら二十一回叫んだ——を目にしたパラシュラーマは、<span class="highlight">地上のクシャトリヤを二十一回滅ぼす</span>と誓いました。大地を二十一周し、そのたびにクシャトリヤを殲滅し、五つの血の湖（サマンタパンチャカ）を作りました。大地の支配権をカシュヤパ仙に譲り渡し、自分は海を後退させて作った新たな土地（現在のケーララ州コンカン海岸）に隠棲しました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>二つのラーマの対峙——化身から化身へのバトンタッチ</div>
+      <p>シーターとの婚礼でシヴァの弓を折ったラーマ（ダシャラタの息子・ヴィシュヌの第七化身）の噂を聞いたパラシュラーマは、アヨーディヤーへの帰路でラーマの一行を待ち受けました。パラシュラーマはヴィシュヌの弓を差し出し、言います——<span class="highlight">「この弓に矢をつがえてみよ。できるなら、おまえと戦おう」</span>。</p>
+      <p>ラーマは静かに弓を受け取り、軽々と弦を引き絞りました。その瞬間、パラシュラーマの体から<span class="highlight">ヴィシュヌの力（テージャス）</span>が流れ出し、ラーマに移りました。パラシュラーマは自分の使命が終わったことを悟ります。</p>
+      <p>第六の化身から第七の化身へ——バラモンの斧の時代が終わり、王子の弓の時代が始まりました。パラシュラーマはラーマに敬意を表し、<span class="highlight">マヘーンドラ山で永遠の苦行に入りました</span>。プラーナ文献によれば、パラシュラーマは不死であり、今もマヘーンドラ山で苦行を続けているとされます。</p>
+      <div class="aside">パラシュラーマはヴィシュヌの「怒り」の化身であり、ラーマは「法（ダルマ）」の化身です。怒りによる浄化の時代が終わり、法による統治の時代へ——化身の交替は宇宙の成熟を物語っています。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ ドゥルガー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⚔️</div>
+      <div>
+        <h2>ドゥルガー（Durgā）</h2>
+        <div class="sanskrit">魔神を滅ぼす至高女神・シャクティの顕現</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      水牛の魔王マヒシャーーースラがブラフマーの恩恵で「いかなる男にも神にも殺されない」力を得て三界を支配したとき、神々の怒りが結晶して誕生した女神です。シヴァ、ヴィシュヌ、ブラフマーをはじめとするすべての神が自らの力（テージャス）を放射し、それが一体となって<span class="highlight">ドゥルガー</span>が生まれました。「男にも神にも殺されない」——しかし女神は、その条件の外にいたのです。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>神々のテージャス——怒りから生まれた女神</div>
+      <p>マヒシャースラは千年の苦行の末にブラフマーの恩恵を得ました。「<span class="highlight">男にも神にもアスラにも殺されない</span>」——女に殺されるなど想像もしなかったマヒシャースラは、この恩恵で無敵となり、インドラを追放し、天界を征服しました。</p>
+      <p>絶望した神々がヴィシュヌとシヴァのもとに集結すると、三神の体から<span class="highlight">灼熱の光の奔流</span>が放射されました。シヴァの光が顔に、ヤマの光が髪に、ヴィシュヌの光が腕に、チャンドラの光が胸に、インドラの光が腰に、ブラフマーの光が足に、スーリヤの光が指に——すべての神の光が合流して、山のように巨大な女神の姿を形成しました。</p>
+      <p>神々はそれぞれの武器を女神に捧げました。シヴァの三叉戟、ヴィシュヌの円盤、インドラの雷霆、ヤマの棍棒、ヴァルナの縄、ヴァーユの弓、スーリヤの矢筒、カーラの剣と盾。ヒマヴァット（ヒマラヤ山の神）はライオンの乗騎を。こうして<span class="highlight">十本以上の腕にそれぞれ神器を持つ</span>戦の女神ドゥルガーが完成したのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>マヒシャースラ討伐——九夜の死闘</div>
+      <p>ドゥルガーがライオンに騎乗して雄叫びを上げると、三界が震えました。マヒシャースラはまず将軍チクシュラを差し向けましたが、ドゥルガーの弓と矢の雨がアスラの軍勢を薙ぎ払います。続いて現れた大将軍ドゥルダラ、アシロマン、タームラも次々に打ち倒されました。</p>
+      <p>マヒシャースラは自ら水牛の姿で出陣します。彼は自在に姿を変えました——<span class="highlight">水牛からライオンへ、ライオンから象へ、象から人間へ</span>。戦場で形を変えるたびに、ドゥルガーはその都度対応する武器で攻撃しました。九夜にわたる死闘が繰り広げられます。</p>
+      <p>最後にマヒシャースラが水牛の姿に戻った瞬間、ドゥルガーはライオンの背から跳躍し、水牛の首を<span class="highlight">左足で踏みつけ</span>ました。マヒシャースラが水牛の口から半身を出して逃れようとしたとき、ドゥルガーは三叉戟でその胸を貫き、剣で首を刎ねました。天界に歓声が轟き、花の雨が降り注ぎます。</p>
+      <div class="aside">インドの秋祭り<span class="highlight">ナヴァラートリ（九夜祭）</span>は、この九夜の戦いを祝う祭りです。東インドではドゥルガー・プージャーとして盛大に祝われ、巨大なドゥルガー像が作られます。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ラクタビージャとカーリー——血の一滴から千の敵が</div>
+      <p>デーヴィー・マーハートミヤ（女神の偉大さ）によれば、ドゥルガーはさらにシュンバとニシュンバという兄弟の魔王とも戦いました。この戦いで最も恐るべき敵が<span class="highlight">ラクタビージャ</span>（「血の種」）です。彼の血が一滴でも地面に落ちると、そこからもう一人のラクタビージャが生まれるという恩恵を持っていました。</p>
+      <p>ドゥルガーが斬れば斬るほど、血が飛び散り、戦場は<span class="highlight">無数のラクタビージャ</span>で埋め尽くされてゆきます。増殖する敵に対処するため、ドゥルガーの額から凄まじい怒りとともに新たな女神が出現しました——<span class="highlight">カーリー</span>、暗黒の女神です。</p>
+      <p>カーリーはその巨大な舌を大地に広げ、ラクタビージャの血が地面に落ちる前にすべて<span class="highlight">舐め取りました</span>。血の一滴も地面に触れることなく、ラクタビージャは分身を作れず、ついに倒されます。戦いの狂気に取り憑かれたカーリーが踊り狂い世界を滅ぼしかけたとき、シヴァが自ら横たわりました。カーリーがシヴァの胸を踏んだ瞬間、我に返ったといいます——カーリーが舌を出した姿はその驚きの瞬間を表しています。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ マハーバリ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">👑</div>
+      <div>
+        <h2>マハーバリ（Mahābali）</h2>
+        <div class="sanskrit">ヴィローチャナの子・寛大なアスラの王・オーナムの主</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      プラフラーダの孫にしてヴィローチャナの子。ヴィシュヌの信者であった祖父プラフラーダの血を引きながらも、アスラの王として三界を征服した偉大な君主です。その統治はあまりに公正で寛大だったため、「バリの治世では誰も嘘をつかず、誰も貧しくなかった」と伝えられます。しかし強大すぎるアスラ王の存在は、宇宙の秩序を脅かしました。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>天界の征服——強すぎる善王の矛盾</div>
+      <p>祖父プラフラーダに代わってアスラの王位を継いだマハーバリは、師シュクラーチャーリヤの指導のもと百回のアシュヴァメーダ祭（馬祀祭）を執行し、膨大な霊的功徳を蓄積しました。その力で<span class="highlight">インドラを破り、天界を征服</span>します。</p>
+      <p>しかしバリの統治は暴虐とは無縁でした。三界のすべての生き物に<span class="highlight">食物、安全、正義</span>を保証し、いかなる求めにも「否」と言わない寛大さで知られました。施しを求める者には何でも与え、誰も飢えることのない黄金時代が訪れたのです。</p>
+      <p>追放されたインドラと神々はヴィシュヌに泣きつきました。しかしヴィシュヌさえ認めます——「バリは悪ではない。しかしアスラが三界を永久に支配すれば、宇宙の均衡が崩れる」。ヴィシュヌはバリの<span class="highlight">寛大さそのもの</span>を利用する策を立てました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>三歩の約束——矮人ヴァーマナの罠</div>
+      <p>ヴィシュヌは聖仙カシュヤパと女神アディティの子として、<span class="highlight">矮人のバラモンの少年ヴァーマナ</span>の姿で生まれました。傘と水瓶を持つ小さなバラモンの姿で、バリの祭祀場に現れます。</p>
+      <p>「何を差し上げましょう」とバリが問うと、ヴァーマナは答えました——<span class="highlight">「私の三歩分の土地だけで結構です」</span>。師シュクラーチャーリヤは危険を察知しました。「この少年はヴィシュヌだ。約束するな」。しかしバリは「約束したことを撤回する王に、何の価値があるだろう」と<span class="highlight">水を注いで誓約</span>を完了しました。</p>
+      <p>その瞬間、ヴァーマナの体は膨張し、<span class="highlight">宇宙を覆い尽くす巨大な姿ヴィシュヌ・トリヴィクラマ</span>に変貌しました。一歩目で大地を、二歩目で天界を踏みました。三歩目を置く場所はもうありません。「残りの一歩はどこに置けばよいか？」とヴィシュヌが問うと、バリは自分の頭を差し出しました——<span class="highlight">「ここに置いてください」</span>。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>パーターラの王——約束を守った者への報い</div>
+      <p>ヴィシュヌの足がバリの頭を踏むと、バリは地下世界<span class="highlight">パーターラ（地底界）</span>に押し込まれました。三界の支配権は神々に返還されます。しかしヴィシュヌはバリの忠誠と寛大さに深く感動していました。</p>
+      <p>「おまえは約束を守り、自らの頭を差し出した。その正義に報いよう」——ヴィシュヌはバリに<span class="highlight">パーターラの永遠の王位</span>を与え、さらに「次のマンヴァンタラ（宇宙周期）ではおまえがインドラになるだろう」と約束しました。そしてヴィシュヌ自身がパーターラの門番となり、バリを永遠に守護すると誓ったのです。</p>
+      <p>バリは訊きました。「一年に一度だけ、地上に戻って民の様子を見たい」。ヴィシュヌはこれも認めました。</p>
+      <div class="aside">ケーララ州の最大の祭り<span class="highlight">オーナム</span>は、マハーバリが年に一度地上に帰ってくる日を祝う祭りです。花で大地を飾り、ご馳走を並べて王を迎える——善き王の記憶は、バリが三界を失った後もなお、民の心に生き続けています。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ ダシャラタ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🏹</div>
+      <div>
+        <h2>ダシャラタ（Daśaratha）</h2>
+        <div class="sanskrit">太陽王朝の帝王・ラーマの父・悲嘆に死んだ王</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      アヨーディヤーの大王にして太陽王朝（スーリヤヴァンシャ）の誇り。「十の方角に戦車を走らせる者」の名のとおり、天界の戦争でインドラを助けるほどの英雄でした。しかしこの偉大な王は、若き日の過失が生んだ呪いと、妃への軽率な約束に縛られ、最愛の息子ラーマを追放し、悲嘆のうちに命を落とします。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>シュラヴァナ・クマーラの呪い——暗闇の中の過ち</div>
+      <p>若きダシャラタは<span class="highlight">シャブダベーディー（音を頼りに的を射る技術）</span>の名手でした。ある夜、サラユー河の畔で水を汲む音が聞こえ、ダシャラタは象が水を飲んでいると思い、音の方向に矢を放ちました。</p>
+      <p>しかし矢が射抜いたのは、盲目の老父母のために<span class="highlight">水を汲んでいた孝行息子シュラヴァナ・クマーラ</span>でした。瀕死のシュラヴァナは「せめて両親に水を届けてほしい」と懇願します。ダシャラタが老夫婦のもとに水を運び、事実を告げると、二人は我が子の遺体に取りすがりました。</p>
+      <p>盲目の父は呪いを放ちます——<span class="highlight">「おまえもいつか、息子を失った悲しみで死ぬだろう」</span>。ダシャラタは震え上がりましたが、呪いは避けられません。この過去の罪が、数十年後にラーマの追放という形で実現するのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>カイケーイーの二つの願い——約束の鎖</div>
+      <p>ダシャラタには三人の妃がいました。第一妃カウサリヤー（ラーマの母）、第二妃カイケーイー（バラタの母）、第三妃スミトラー（ラクシュマナとシャトルグナの母）。かつて天界でアスラと戦ったとき、戦車の車輪が壊れかけた瞬間に<span class="highlight">カイケーイーが自分の指を車軸に差し込んで</span>ダシャラタの命を救いました。</p>
+      <p>感謝したダシャラタは<span class="highlight">「どんな願いでも二つ叶えよう」</span>と約束しました。カイケーイーは「いつか使う」と保留にしていたのです。</p>
+      <p>年月が流れ、ラーマの即位式が翌日に迫ったとき、侍女マンタラーがカイケーイーを唆しました。「ラーマが王になれば、バラタは永遠に日陰者だ」。カイケーイーは二つの願いを使います——<span class="highlight">「一つ、バラタを王位に。二つ、ラーマを十四年間森に追放して」</span>。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ラーマの出立——「息子よ」と叫んで果てた王</div>
+      <p>ダシャラタはカイケーイーに懇願しました。「私の命と引き換えに、ラーマを残してくれ」。しかしカイケーイーは「クシャトリヤの王が約束を破るのですか？」と突き返します。ダシャラタは<span class="highlight">自分自身の約束に縛られて</span>、最愛の息子を追放する命令を出さざるを得ませんでした。</p>
+      <p>ラーマは父の苦悩を見て取りながらも、微笑んで言いました。「父上の約束を果たすことが、私の喜びです」。樹皮の衣に着替え、妻シーターと弟ラクシュマナを伴って<span class="highlight">森へ向かって歩き出しました</span>。民衆は泣き、ダシャラタは戦車に追いすがりましたが、ラーマは振り返りませんでした。</p>
+      <p>その夜、ダシャラタは宮殿で暗闇の中、かつてシュラヴァナの父が放った呪いを思い出しました——「息子を失った悲しみで死ぬ」。<span class="highlight">「ラーマ、ラーマ」</span>と呼びながら、六日目の夜明け前にダシャラタは息を引き取ります。シュラヴァナ・クマーラの呪いは、一言一句たがわず成就したのです。</p>
+      <div class="aside">バラタは父の死と即位の知らせを聞いて激怒し、王位を拒否しました。森にラーマを迎えに行きますが、ラーマは「十四年を全うする」と譲りません。バラタはラーマの<span class="highlight">サンダル</span>を王座に置き、自らは宮殿を離れてナンディグラーマで質素に暮らしながら、兄の帰還を待ち続けました。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ アハリヤー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">💎</div>
+      <div>
+        <h2>アハリヤー（Ahalyā）</h2>
+        <div class="sanskrit">ブラフマーが創った最も美しい女性・石に変えられた貞女</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ブラフマーが「大地に醜さ（ハリヤー）なき者」として創造した、世界で最も美しい女性。聖仙ガウタマの妻として森の庵で暮らしていましたが、インドラの欺瞞に巻き込まれて呪われ、石に変えられました。何千年もの石としての歳月を経て、ラーマの足に触れられて人間に戻った——パンチャ・カンニャー（五人の貞女）の筆頭に数えられる存在です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>ブラフマーの創造——世界一の美女の誕生</div>
+      <p>ブラフマーはあらゆる生物の中から最も美しい部分を集め、一人の女性を創りました。その名は<span class="highlight">アハリヤー</span>——「醜さ（ハリヤー）が存在しない（ア）者」という意味です。</p>
+      <p>この天下無双の美女を誰に嫁がせるか、神々の間で議論になりました。ブラフマーは条件を出します——「世界を三周して最初に戻ってきた者に嫁がせよう」。インドラは天馬に乗って駆け出しましたが、聖仙ガウタマは<span class="highlight">聖なる牛の周りを三周</span>しました。「聖典によれば、聖牛を一周することは世界を一周することに等しい」——この知恵の勝利により、アハリヤーはガウタマの妻になりました。</p>
+      <p>インドラは競争に負けただけでなく、世界一の美女を老いた聖仙に奪われたことを深く恨みました。この嫉妬が、のちの悲劇の種となります。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>インドラの欺瞞——ガウタマの呪い</div>
+      <p>ある夜明け前、インドラは<span class="highlight">ガウタマの姿に化けて</span>庵に入りました。ガウタマが沐浴に出た隙を狙い、アハリヤーのもとを訪れたのです。一説ではアハリヤーはインドラだと気づきながらも「神の王が自分を望んでいる」という虚栄心に負けたとされ、別の説では完全に欺かれたとされます。</p>
+      <p>庵に戻ったガウタマは、すべてを<span class="highlight">苦行の力で見通しました</span>。激怒した聖仙はまずインドラに呪いを放ちます——「おまえの全身に<span class="highlight">千の女陰の痕</span>がつくだろう」。インドラの体は千の傷で覆われ、恥辱に打ちひしがれました（後に神々の嘆願で傷は「千の目」に変えられ、インドラが「千眼の神」と呼ばれる由来となります）。</p>
+      <p>次にガウタマはアハリヤーに告げました——<span class="highlight">「おまえは石になれ。何千年も、風と雨にさらされ、誰にも見えない石として横たわれ」</span>。ただしガウタマは慈悲を残しました。「ヴィシュヌの化身ラーマがこの森を通り、その足がおまえに触れたとき、おまえは人間に戻るだろう」。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ラーマの足——石から花へ</div>
+      <p>数千年が過ぎました。森の中に横たわる石を、誰も気に留めません。石の中でアハリヤーは意識を保ったまま、風と雨と季節の巡りだけを感じて待ち続けました。</p>
+      <p>やがて、師ヴィシュヴァーミトラに連れられた若きラーマとラクシュマナがこの森を通りかかります。ヴィシュヴァーミトラはラーマに告げました——「ここにアハリヤーがいる。彼女を解放しなさい」。ラーマが<span class="highlight">石に足を触れた</span>瞬間、石は砕け、中から美しい女性が立ち上がりました。</p>
+      <p>ラーマーヤナは、その瞬間を花が咲くように描写します——<span class="highlight">雲の切れ間から月が現れるように、水の中から炎が立ち上がるように</span>、アハリヤーは石の殻を脱ぎました。ガウタマもまた妻の帰還を受け入れ、二人は再び共に暮らし始めたのです。</p>
+      <div class="aside">アハリヤーの物語は「罪と赦し」の物語であると同時に、「待つことの力」の物語です。何千年もの忍耐の末に訪れた解放——インド思想において、救済は突然来るのではなく、準備された者のもとに、正しい時に来るのです。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ リシュヤシュリンガ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🦌</div>
+      <div>
+        <h2>リシュヤシュリンガ（Ṛṣyaśṛṅga）</h2>
+        <div class="sanskrit">一角仙人・雨を呼ぶ聖者・ダシャラタの祭官</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      聖仙ヴィバーンダカの息子。額に鹿の角（リシュヤシュリンガ＝鹿の角）を持つ異形の聖者で、生まれてから一度も女性を見たことがありませんでした。その純粋さゆえに「リシュヤシュリンガのいる土地には必ず雨が降る」と信じられ、大旱魃に苦しむ国が彼を招くために策を巡らせる物語は、日本の「一角仙人」の原典でもあります。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>森の中の無垢——女を知らない聖者</div>
+      <p>聖仙ヴィバーンダカは息子リシュヤシュリンガを森の奥深くで育てました。母は天女でしたが産後すぐに去り、父は<span class="highlight">息子に女性の存在すら教えませんでした</span>。森に住む生き物と聖典だけが少年の世界のすべてでした。</p>
+      <p>リシュヤシュリンガは額に生えた<span class="highlight">一本の鹿の角</span>を持っていました。伝承では、父ヴィバーンダカが鹿を見て情欲を起こし、その種が川に流れ、水を飲んだ鹿が妊娠して人間と鹿の間の子として生まれたとされます。</p>
+      <p>少年の苦行の力は凄まじく、彼が瞑想している場所では<span class="highlight">花が咲き乱れ、果物が実り、雨が必ず降りました</span>。この噂は、やがて旱魃に苦しむアンガ国のロ―マパーダ王の耳に届きます。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>遊女たちの誘引——初めて見た「不思議な人間」</div>
+      <p>アンガ国は長い旱魃に苦しんでいました。バラモンたちは王に告げます——「リシュヤシュリンガを国に連れてくれば、雨が降るだろう」。しかしヴィバーンダカは息子の外出を絶対に許しません。恐ろしい苦行の力で、強引に連れ去ろうとする者を焼き尽くすでしょう。</p>
+      <p>王は<span class="highlight">美しい遊女たち</span>を森に送り込みました。ヴィバーンダカが留守の隙に、遊女たちはリシュヤシュリンガの庵を訪れます。生まれて初めて女性を見た少年は、彼女たちを<span class="highlight">「自分と似ているが、不思議に美しい聖仙」</span>だと思いました。</p>
+      <p>遊女たちは果実や菓子を差し出し、花を飾り、歌を歌い、抱擁して「自分たちの庵に遊びに来て」と誘いました。リシュヤシュリンガは「なんと素晴らしい苦行者たちだろう」と感嘆し、彼女たちについて船に乗り、<span class="highlight">アンガ国の国境を越えた</span>瞬間——空を覆うように雲が湧き上がり、大雨が降り始めたのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>プトラカーメーシュティ祭——ラーマを呼んだ祭官</div>
+      <p>ローマパーダ王はリシュヤシュリンガを厚遇し、養女<span class="highlight">シャーンター</span>を妻に娶らせました。リシュヤシュリンガは初めて人間社会を知り、森の外の世界に適応してゆきます。父ヴィバーンダカも最終的にはシャーンターの美徳を認め、息子を許しました。</p>
+      <p>やがてアヨーディヤーの大王ダシャラタが、子宝に恵まれないことに苦悩していました（シャーンターは実はダシャラタの実の娘だったという伝承もあります）。ヴァシシュタ仙の助言で、ダシャラタはリシュヤシュリンガに<span class="highlight">プトラカーメーシュティ</span>（息子を授かる祭祀）の執行を依頼します。</p>
+      <p>リシュヤシュリンガが祭祀を執行すると、祭火の中から<span class="highlight">黄金の器に入った神聖な食物（パーヤサ）</span>を持つ存在が現れました。この食物を三人の妃が分け合って食べ、やがて四人の王子が生まれます——<span class="highlight">ラーマ、バラタ、ラクシュマナ、シャトルグナ</span>。</p>
+      <div class="aside">女性を知らなかった一角仙人が森から連れ出され、結婚し、祭祀を執行し、ヴィシュヌの化身ラーマの誕生を導いた——リシュヤシュリンガの物語は「純粋な無知から人間世界への覚醒」の物語であり、その覚醒が世界を変えたのです。この物語は能の「一角仙人」として日本に伝わり、歌舞伎でも演じられています。</div>
+    </div>
+  </section>
+
+  <div class="nav-link" style="text-align: center; margin: 2.5rem 0 0;">
+    <a href="hindu-myths-5.html" style="display: inline-block; background: var(--accent-saffron); color: #fff; text-decoration: none; padding: 0.7em 2em; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.15s;">← 第五弾「呪いと恩寵の物語」を読む</a>
+  </div>
+  <div class="nav-link">
+    <a href="hindu-myths-4.html">← 第四弾「誓いと宿命の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-3.html">← 第三弾「英雄と炎の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-2.html">← 第二弾「続・ヒンドゥー神話入門」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="text-align: center; margin: 0.5rem 0 1rem;">
+    <a href="hindu-myths-index.html" style="color: var(--accent-indigo); font-size: 0.9rem;">📚 シリーズまとめページ</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、シヴァ・プラーナ、デーヴィー・マーハートミヤ、バーガヴァタ・プラーナ、パドマ・プラーナ、マールカンデーヤ・プラーナ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
