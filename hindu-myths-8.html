@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第八弾 — 献身と選択の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'भक्ति';
+  position: absolute;
+  font-size: 14rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第八弾</div>
+  <h1>献身と選択の物語</h1>
+  <div class="line"></div>
+  <p class="sub">三歩で宇宙を覆った矮人ヴァーマナ、死神に抗って永遠の命を得た少年マールカンデーヤ、太陽の子を川に捨てた母クンティー、師への敬愛のため親指を差し出した弓の天才エーカラヴヤ、兄を捨てて正義を選んだ羅刹ヴィビーシャナ、そして百人の息子を失い神を呪った目隠しの王妃ガーンダーリー——献身と決断が運命を分けた六柱の物語を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p>第八弾のテーマは<strong>「献身と選択」</strong>。何かに深く身を捧げ、そして人生を決定づける選択を迫られた六柱を紹介します。誰のために捧げるのか、何を手放すのか——献身がもたらす祝福と代償を描きます。典拠は Vettam Mani 著『<a href="https://archive.org/details/puraabornicencyclopaedia" target="_blank" rel="noopener">Puranic Encyclopaedia</a>』です。</p>
+  </div>
+
+  <!-- ========== 1. ヴァーマナ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🏛️</span>
+      <div>
+        <h2>ヴァーマナ</h2>
+        <div class="sanskrit">Vāmana — 三歩で宇宙を覆った矮人の化身</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>ヴァーマナはヴィシュヌの第五の化身（アヴァターラ）で、その姿は小柄なバラモンの少年。アスラ王マハーバリが三界を征服し、天界からインドラたちを追い出した時代に、ヴィシュヌはこの謙虚な姿で降臨しました。小さな体に宇宙を包む力を秘めた、知恵と策略の化身です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>矮人のバラモン、祭祀に現る</div>
+      <p>アスラ王マハーバリはダイティヤ族の高潔な王で、苦行と武力によって三界を征服しました。神々は天界を追われ、アディティ（神々の母）はヴィシュヌに助けを求めます。ヴィシュヌはアディティとカシュヤパの子として、<span class="highlight">ヴァーマナ（矮人）</span>の姿で生まれました。</p>
+      <p>ヴァーマナは木の傘と水壺を持つ小さなバラモンの少年の姿で、マハーバリが盛大に執り行っている祭祀（ヤジュニャ）の場に現れます。マハーバリは訪れる者すべてに望みのものを与えると誓っていました。ヴァーマナの輝く姿を見たマハーバリは丁重に迎え、「何でもお望みのものを差し上げましょう」と言いました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>三歩で天地を覆う</div>
+      <p>ヴァーマナは微笑んで答えました——「私の足で三歩分の土地をいただければ十分です」。マハーバリの師シュクラーチャーリヤ（アスラの導師）は、この矮人がヴィシュヌの化身であることを見抜き、「与えてはなりません！」と必死に警告しますが、マハーバリは約束を違えることを恥として聞き入れません。</p>
+      <p>水を注いで布施の誓いを立てた瞬間、ヴァーマナの体は膨張し始めました。<span class="highlight">トリヴィクラマ（三歩を踏む者）</span>と呼ばれる巨大な宇宙的姿に変身したのです。第一歩で大地を、第二歩で天界を覆い尽くしました。残る第三歩を置く場所がありません。</p>
+      <div class="aside">📖 「ヴァーマナ・プラーナ」では、第一歩は全大地、第二歩は天空から梵天界（ブラフマローカ）までを覆ったとされます。ヴィシュヌ・プラーナでは、第二歩で天を踏んだ際にヴィシュヌの足の爪先がブラフマーンダ（宇宙卵）の殻を破り、そこから流れ込んだ聖水がガンガー川の起源となったとも語られます。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>マハーバリの献身と地底の王国</div>
+      <p>三歩目の場所を問われたマハーバリは、一瞬も迷わず自分の頭を差し出しました——「私の頭をお踏みください」。ヴァーマナはマハーバリの頭を踏み、彼を地底世界<span class="highlight">スタラ（パーターラ）</span>へ押し下げました。</p>
+      <p>しかしマハーバリの揺るがぬ献身に感じ入ったヴィシュヌは、パーターラの支配権を与え、永遠の祝福を授けました。さらに「年に一度、地上に戻って民を訪ねることを許す」と約束したのです。ケーララ州で毎年盛大に祝われる<span class="highlight">オーナム祭</span>は、この約束——マハーバリ王が民のもとに帰る日——を記念するものです。高潔な敵にすら敬意を示すヴィシュヌの慈悲と、すべてを失っても誓いを守ったマハーバリの献身が交差する物語です。</p>
+    </div>
+  </section>
+
+  <!-- ========== 2. マールカンデーヤ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🕉️</span>
+      <div>
+        <h2>マールカンデーヤ</h2>
+        <div class="sanskrit">Mārkaṇḍeya — 死を超えた少年聖者</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>マールカンデーヤは聖仙ムリカンドゥの息子として生まれた少年聖者。生まれる前から定められた短い寿命に抗い、シヴァへの揺るがぬ献身によって死そのものに打ち勝ちました。「永遠の十六歳」として、プラーナ文献では数多くの神話を語る賢者として登場します。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>十六年の命——父の選択</div>
+      <p>聖仙ムリカンドゥとその妻マルダヴァティーは長年子供に恵まれず、シヴァに苦行を捧げて祈りました。シヴァは二つの選択を示します——<span class="highlight">「愚鈍だが長命な息子」</span>か、<span class="highlight">「聡明だが十六歳で死ぬ息子」</span>か。</p>
+      <p>夫妻は迷わず聡明な子を選びました。こうして生まれたマールカンデーヤは、生まれながらに死の宿命を背負いながらも、幼少から驚くべき英知と深い信仰心を示しました。両親は息子の運命を知りながら育て、十六歳の誕生日が近づくにつれ悲しみに暮れるのでした。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>死神ヤマとシヴァ・リンガ</div>
+      <p>十六歳の定命の日が迫ると、マールカンデーヤはシヴァ・リンガ（シヴァの象徴）に抱きつき、ひたすらシヴァの名を唱え始めました。そこへ死神<span class="highlight">ヤマ</span>が水牛に乗って現れます。ヤマは縄（パーシャ）を投げてマールカンデーヤの魂を引き出そうとしましたが、少年はリンガを離しません。</p>
+      <p>ヤマの縄はマールカンデーヤごとシヴァ・リンガにもかかりました。その瞬間、リンガが裂け、中から<span class="highlight">シヴァ</span>が激怒の姿で現れたのです。シヴァはヤマを蹴り倒し、三叉の槍（トリシューラ）で打ち据えました。死を司る神ヤマでさえ、シヴァの前では無力でした。</p>
+      <div class="aside">📖 この場面でのシヴァは「カーラーリ（時間の破壊者）」「ムリトゥンジャヤ（死の征服者）」と呼ばれます。有名なマハー・ムリトゥンジャヤ・マントラ（死を超えるマントラ）は、この逸話に結びつけられています。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>永遠の十六歳——チランジーヴィの祝福</div>
+      <p>シヴァはヤマを制した後、マールカンデーヤに宣言しました——「おまえは永遠に十六歳のまま生き続けるであろう」。こうしてマールカンデーヤは<span class="highlight">チランジーヴィ（不死の者）</span>の一人に数えられることになりました。</p>
+      <p>その後ヤマは蘇生を許され、死神としての役割を取り戻しましたが、シヴァの信者に縄をかけることは二度としないと誓いました。マールカンデーヤは永遠の少年聖者として、後に宇宙の終末と再生を目撃し、その体験を「マールカンデーヤ・プラーナ」として伝えたとされます。少年の信仰が死の摂理をも覆した物語は、シヴァ信仰の中でもっとも愛される逸話のひとつです。</p>
+    </div>
+  </section>
+
+  <!-- ========== 3. クンティー ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">👸</span>
+      <div>
+        <h2>クンティー</h2>
+        <div class="sanskrit">Kuntī — 五王子の母、秘められた長子の悲劇</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>クンティーはヤドゥ族の王女で、パーンドゥ王の第一王妃、パーンダヴァ五兄弟の母。しかし長子カルナを婚前に産み、川に捨てたという秘密を生涯抱え続けました。聖仙ドゥルヴァーサスから授かった神を呼ぶマントラが、彼女の人生を大きく翻弄します。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>太陽の子を川に流す</div>
+      <p>クンティーは少女時代、厳格な聖仙ドゥルヴァーサスをもてなした褒美として、<span class="highlight">任意の神を呼び出してその子を授かるマントラ</span>を授けられました。好奇心からスーリヤ（太陽神）を呼び出してしまったクンティーは、輝く鎧と耳飾りをまとった男児を産みます。</p>
+      <p>しかし未婚の母となることの恐怖と恥辱から、クンティーは生まれたばかりの赤子を籠に入れ、川に流しました。その子は御者スータの妻ラーダーに拾われ、<span class="highlight">カルナ</span>として育てられます。クンティーはこの秘密を誰にも明かせぬまま、やがてパーンドゥ王に嫁ぐのでした。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>マントラの力——五王子の誕生</div>
+      <p>パーンドゥ王は聖仙の呪いにより妻に触れると死ぬ運命を負っていました。そこでクンティーはドゥルヴァーサスのマントラを使い、<span class="highlight">ダルマ神</span>を呼んでユディシュティラを、<span class="highlight">ヴァーユ（風神）</span>を呼んでビーマを、<span class="highlight">インドラ</span>を呼んでアルジュナを産みました。</p>
+      <p>さらにクンティーは第二王妃マードリーにもマントラを教え、マードリーは双子の神アシュヴィン双神を呼んで<span class="highlight">ナクラとサハデーヴァ</span>を授かりました。こうしてパーンダヴァ五兄弟が揃ったのです。しかしパーンドゥはマードリーへの欲望を抑えきれず呪いが発動して死亡し、マードリーは夫に殉じて自害。クンティーは五人の息子を一人で育てる決意を固めました。</p>
+      <div class="aside">📖 マントラは五回しか使えない制約がありました（クンティーが三回、マードリーに二回分を譲渡）。「もっと多くの息子を」というパーンドゥの願いにクンティーは「五回が限度です」と答えたとされます（マハーバーラタ・アーディ・パルヴァ）。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>秘密の告白と森の炎</div>
+      <p>クルクシェートラの大戦が終わった後、クンティーはついに秘密を明かしました——カルナは自分の長子であり、パーンダヴァ五兄弟の兄だったと。ユディシュティラは自分たちが知らずに兄を殺したことに打ちのめされ、<span class="highlight">「女の秘密は世界を滅ぼす」</span>と嘆き、すべての女性を呪いました（後にこの呪いは和らげられます）。</p>
+      <p>晩年、クンティーはガーンダーリー、ドリタラーシュトラとともに森に隠棲しました。そしてある日、<span class="highlight">森の大火</span>が起こった際、三人は逃げることなく炎の中で命を終えました。クンティーは最期まで息子たちの安寧を願いながら、波乱に満ちた生涯を閉じたのです。カルナを捨てた罪の意識と、五人の息子への無償の愛——その矛盾を抱え続けた母の物語です。</p>
+    </div>
+  </section>
+
+  <!-- ========== 4. エーカラヴヤ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🏹</span>
+      <div>
+        <h2>エーカラヴヤ</h2>
+        <div class="sanskrit">Ekalavya — 親指を捧げた弓の天才</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>エーカラヴヤはニシャーダ族（森の民）の王子で、弓術の天才。身分を理由に師事を拒まれながらも、師への献身を貫いた悲劇の英雄です。インド文学において、カースト制度と師弟関係の矛盾を鋭く突く象徴的人物として知られています。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>拒まれた弟子</div>
+      <p>エーカラヴヤは幼い頃から弓に親しみ、当代最高の弓術師範<span class="highlight">ドローナ</span>に師事することを夢見ていました。森を出てハスティナープラの武術場に赴いたエーカラヴヤは、ドローナの前にひれ伏して弟子入りを願い出ます。</p>
+      <p>しかしドローナは拒絶しました。エーカラヴヤがニシャーダ族——クシャトリヤ（武士階級）ではない出自だったからです。ドローナはクル族の王子たち、とりわけアルジュナを「世界最高の弓使い」に育てると約束しており、それ以外の者に秘技を教える立場にありませんでした。失意のエーカラヴヤは黙って去っていきました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>土の師匠と驚異の腕前</div>
+      <p>森に戻ったエーカラヴヤは諦めませんでした。ドローナの<span class="highlight">粘土像</span>を造り、それを師と仰いで毎日礼拝しながら独学で弓の修行を続けたのです。来る日も来る日も、土のドローナに「先生」と呼びかけ、想像上の教えを受けながら技を磨きました。</p>
+      <p>数年後、クル族の王子たちが森で狩りをしていた時、一匹の犬が吠えながらエーカラヴヤの修行場に迷い込みました。エーカラヴヤは犬を傷つけることなく、<span class="highlight">七本の矢を一瞬で放って犬の口を塞ぎ</span>ました。犬が戻ってきたのを見たアルジュナは驚愕します——この神業は自分にもできない。「世界一の弓使いにする」という師の約束はどうなるのか、とドローナに詰め寄りました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>親指の代償——グル・ダクシナー</div>
+      <p>ドローナはエーカラヴヤのもとを訪れ、粘土像を見て、自分が「師」とされていることに気づきました。ならばグル・ダクシナー（師への謝礼）を求める権利がある、とドローナは言いました。エーカラヴヤは喜んで答えます——「先生の望みなら何でもお捧げします」。</p>
+      <p>ドローナの要求は<span class="highlight">右手の親指</span>でした。弓を引くのに不可欠な指——それを失えば二度と弓は引けません。エーカラヴヤは一瞬もためらわず、微笑みながら親指を切り落としてドローナの足元に置きました。アルジュナの「世界最高の弓使い」の地位は守られましたが、真の献身が何であるかを世に問いかける場面として、マハーバーラタの中でもっとも議論を呼ぶ逸話のひとつです。</p>
+      <div class="aside">📖 後世の解釈では、ドローナの行為を「カースト差別の象徴」と批判する立場と、「師の命令への絶対的服従こそ最高の徳」とする伝統的立場が対立しています。バーガヴァタ・プラーナによると、エーカラヴヤは後にクリシュナとの戦いで命を落としますが、前世でのシヴァへの献身により解脱を得たとされます。</div>
+    </div>
+  </section>
+
+  <!-- ========== 5. ヴィビーシャナ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🕊️</span>
+      <div>
+        <h2>ヴィビーシャナ</h2>
+        <div class="sanskrit">Vibhīṣaṇa — 正義のために兄を捨てた羅刹</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>ヴィビーシャナはランカーの魔王ラーヴァナの弟でありながら、生まれながらにしてダルマ（正義）を愛する羅刹（ラークシャサ）。兄への忠誠と正義の間で引き裂かれ、最終的に敵であるラーマの陣営に身を投じた「義の選択」の物語です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>羅刹の中の信仰者</div>
+      <p>ヴィビーシャナはラーヴァナ、クンバカルナと同じく聖仙ヴィシュラヴァスとカイカシーの子として生まれました。三兄弟はそろって厳しい苦行を行い、ブラフマーから恩恵を求めます。ラーヴァナは不死に近い力を、クンバカルナは桁外れの武力を望みましたが、ヴィビーシャナが求めたのは<span class="highlight">「いかなる時もダルマから外れぬ心」</span>でした。</p>
+      <p>ブラフマーはヴィビーシャナの清廉さに感銘を受け、その願いを聞き届けます。こうしてヴィビーシャナは羅刹でありながら菜食を守り、ヴィシュヌを信仰し、正義の道を歩み続けたのです。ランカーの宮廷で兄ラーヴァナの傍らに座りながらも、その心は常にダルマの側にありました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>兄への諫言と追放</div>
+      <p>ラーヴァナがシーターを誘拐してランカーに連れ帰った後、ヴィビーシャナは繰り返し兄に進言しました——「シーターをラーマに返すべきです。他者の妻を奪うことはダルマに反します。このままではランカーは滅びます」。</p>
+      <p>しかしラーヴァナは激怒し、ヴィビーシャナを<span class="highlight">「裏切り者」「敵の手先」</span>と罵倒して追放しました。ヴィビーシャナは四人の側近とともにランカーを飛び立ち、海を越えてラーマの陣営へ向かいます。スグリーヴァたちは罠かもしれないと警戒しましたが、ラーマは言いました——「庇護を求めて来た者を、たとえ敵の血族であっても拒まないのが私の誓いだ」。こうしてヴィビーシャナはラーマの同盟者として迎え入れられました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ランカーの新王——兄の葬送</div>
+      <p>ラーマとラーヴァナの最終決戦において、ヴィビーシャナはラーヴァナの弱点をラーマに伝えるという、もっとも苦しい役割を果たしました。ラーヴァナの臍に不死の霊液（アムリタ）が蓄えられていること、そこを射抜かなければ倒せないことを告げたのです。</p>
+      <p>ラーヴァナが倒れた後、ヴィビーシャナは兄の遺体の前で慟哭しました。ラーマはヴィビーシャナに言います——「戦いは終わった。敵意は死とともに消える。<span class="highlight">兄として弔いの儀式を行いなさい</span>」。ヴィビーシャナは涙ながらにラーヴァナの葬送の儀を執り行い、その後ラーマによって<span class="highlight">ランカーの新王</span>に任じられました。正義の選択は彼に王位をもたらしましたが、兄を失った悲しみは永遠に消えることはなかったのです。</p>
+      <div class="aside">📖 ヴィビーシャナもまた「チランジーヴィ（不死の者）」の一人に数えられることがあり、現世の終わりまで正義を守り続ける存在とされます。ランカーの新王として、ラーマの理想的統治（ラーマ・ラージヤ）を南方で実現した人物として讃えられています。</div>
+    </div>
+  </section>
+
+  <!-- ========== 6. ガーンダーリー ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">👁️</span>
+      <div>
+        <h2>ガーンダーリー</h2>
+        <div class="sanskrit">Gāndhārī — 目隠しの王妃と百人の息子の母</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>ガーンダーリーはガンダーラ国の王女で、クル族の長老ドリタラーシュトラの妃。盲目の夫と運命を共にするため自ら目を覆い、百人の息子を産み、そのすべてを大戦で失い、最後にクリシュナを呪って一族の滅亡を予告した女性。忍耐と怒りの両極を体現する人物です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>目隠しの誓い</div>
+      <p>ガーンダーリーはガンダーラ国（現在のアフガニスタン・カンダハール地方）の王スバラの娘として生まれ、シヴァへの苦行により<span class="highlight">「百人の息子を授かる」</span>という祝福を得ていました。しかし彼女がクル族のドリタラーシュトラに嫁がされると知った時、相手が盲目であることを告げられます。</p>
+      <p>ガーンダーリーは布で自分の目を覆い、<span class="highlight">「夫に見えぬものを私も見ない」</span>と誓いました。以後、生涯にわたって目隠しを外すことはありませんでした。この行為は夫への究極の献身とも、見たくないものから目を背ける意志的な盲目とも解釈されます。兄のシャクニはこの縁組を屈辱と感じ、パーンダヴァへの復讐を誓うことになります。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>鉄の塊から百人の息子</div>
+      <p>ガーンダーリーは二年もの間妊娠し続け、最終的に産んだのは<span class="highlight">硬い鉄の塊</span>でした。絶望した彼女がそれを捨てようとした時、聖仙ヴィヤーサが現れ、塊を百一の小片に分け、それぞれをギー（澄ましバター）を満たした壺に入れるよう指示しました。</p>
+      <p>壺から最初に生まれたのが長男<span class="highlight">ドゥルヨーダナ</span>です。彼が産声を上げた瞬間、ジャッカルが遠吠えし、凶兆の嵐が吹き荒れました。ヴィドゥラとドローナは「この子は一族に破滅をもたらす、捨てるべきだ」と進言しましたが、ドリタラーシュトラは長子への愛着から拒否します。残りの九十九の息子と一人の娘ドゥフシャラーが次々と壺から生まれ、百人のカウラヴァが揃いました。</p>
+      <div class="aside">📖 大戦の前夜、ガーンダーリーはドゥルヨーダナに「全裸で自分の前に来い」と命じました。目隠しを通してでも彼女の苦行の力で息子の体を金剛不壊にするためでしたが、ドゥルヨーダナは恥じらいから腰布をつけたまま現れ、太ももだけが強化されませんでした。ビーマは最終決戦でまさにその太ももを棍棒で砕いたのです。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>クリシュナへの呪い——ヤーダヴァ族の滅亡</div>
+      <p>クルクシェートラの大戦でガーンダーリーは百人の息子の<span class="highlight">全員</span>を失いました。戦後、戦場を訪れたガーンダーリーの悲嘆は凄まじく、息子たちの遺体の傍らで慟哭し続けました。</p>
+      <p>そしてクリシュナが慰めに訪れた時、ガーンダーリーの怒りが爆発しました。「あなたには和平をもたらす力があったはずだ。なぜ止めなかった！」——そう叫び、ガーンダーリーは目隠しの隙間から凝視し、クリシュナに<span class="highlight">呪い</span>をかけました。「今から三十六年後、あなたのヤーダヴァ族も同族相争い滅亡する。あなた自身も惨めな死を迎えるだろう」。</p>
+      <p>クリシュナはこの呪いを静かに受け入れ、「そのとおりになるでしょう」と答えました。実際に三十六年後、ヤーダヴァ族は酒宴の席で些細な口論から同族殺し合いを始め、クリシュナ自身も森で狩人の矢に足を射られて世を去りました。母の怒りが神をも縛り、一つの時代を終わらせた物語です。</p>
+    </div>
+  </section>
+
+  <div class="nav-link" style="text-align: center; margin: 2.5rem 0 0;">
+    <a href="hindu-myths-7.html" style="display: inline-block; background: var(--accent-saffron); color: #fff; text-decoration: none; padding: 0.7em 2em; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.15s;">← 第七弾「試練と真実の物語」を読む</a>
+  </div>
+  <div class="nav-link">
+    <a href="hindu-myths-6.html">← 第六弾「変容と覚醒の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-5.html">← 第五弾「呪いと恩寵の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-4.html">← 第四弾「誓いと宿命の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-3.html">← 第三弾「英雄と炎の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-2.html">← 第二弾「続・ヒンドゥー神話入門」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="text-align: center; margin: 0.5rem 0 1rem;">
+    <a href="hindu-myths-index.html" style="color: var(--accent-indigo); font-size: 0.9rem;">📚 シリーズまとめページ</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、シヴァ・プラーナ、バーガヴァタ・プラーナ、ヴァーマナ・プラーナ、マールカンデーヤ・プラーナ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
