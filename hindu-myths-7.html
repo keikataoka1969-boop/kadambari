@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第七弾 — 試練と真実の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'सत्य';
+  position: absolute;
+  font-size: 14rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第七弾</div>
+  <h1>試練と真実の物語</h1>
+  <div class="line"></div>
+  <p class="sub">十の頭脳を持つ学者にして魔王ラーヴァナ、真実のために王座も家族も捨てたハリシュチャンドラ、法の化身でありながら嘘を強いられたユディシュティラ、父への怒りで身を焼いたサティー、復讐の果てに永遠の呪いを受けたアシュヴァッターマン、そして大地を耕した最初の王プリトゥ——真実が問われた六柱の物語を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p><a href="hindu-myths.html">第一弾</a>から<a href="hindu-myths-6.html">第六弾</a>まで三十七柱の神々と英雄を紹介してきました。第七弾のテーマは「試練」と「真実」。人はどこまで真実を守れるのか、どこまで正義を貫けるのか——極限の問いに向き合った六柱の物語を、プラーナ百科事典（Vettam Mani著）から厳選してお届けします。</p>
+  </div>
+
+  <!-- ═══════ ラーヴァナ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🎭</div>
+      <div>
+        <h2>ラーヴァナ（Rāvaṇa）</h2>
+        <div class="sanskrit">ランカーの十首魔王・シヴァの信者・ヴェーダの学者</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      聖仙ヴィシュラヴァスとラークシャシー（羅刹女）カイカシーの子。十の頭と二十の腕を持つ羅刹（ラークシャサ）の王にして、四ヴェーダに精通した大学者、シヴァへの帰依者です。ラーマーヤナの最大の敵役として知られますが、プラーナ文献はラーヴァナの学識、音楽の才能、シヴァへの深い信仰をも詳細に伝えています。悪の化身ではなく、傲慢によって自らを滅ぼした天才の物語です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>十の頭——ブラフマーへの苦行と無敵の恩恵</div>
+      <p>ラーヴァナは祖父プラスティヤの血を引く名門の生まれでしたが、母方がラークシャサ族であったため、異母兄クベーラ（財宝の神・ランカーの王）から蔑まれました。屈辱を燃料に、ラーヴァナは<span class="highlight">一万年の苦行</span>に入ります。</p>
+      <p>千年ごとに自分の頭を一つずつ切り落として祭火に捧げるという凄絶な苦行でした。九つの頭を捧げ、最後の一つを切ろうとした瞬間、ブラフマーが現れて止めます——「何を望む？」。ラーヴァナは答えました——<span class="highlight">「神にもアスラにもガンダルヴァにもナーガにも殺されない体がほしい」</span>。人間のことは聞きませんでした。人間を取るに足らない存在だと見なしていたからです。</p>
+      <p>ブラフマーは恩恵を与え、切り落とした九つの頭も復活させました。<span class="highlight">十の頭脳</span>を取り戻したラーヴァナは兄クベーラからランカー（黄金の都）を奪い、三界を征服します。しかし「人間には殺されない」と言わなかったこの一点の油断が、のちに致命的な隙となるのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>カイラーサ山を持ち上げた男——シヴァへの帰依</div>
+      <p>絶頂期のラーヴァナは空飛ぶ戦車プシュパカに乗って三界を巡り、ある日<span class="highlight">カイラーサ山</span>——シヴァの住処——に到達しました。シヴァの従者ナンディンが「シヴァが瞑想中で通れない」と告げると、ラーヴァナはナンディンの猿のような顔を嘲笑しました。ナンディンは呪います——「猿たちがおまえの都を滅ぼすだろう」。</p>
+      <p>怒ったラーヴァナは二十本の腕をカイラーサ山の下に差し込み、<span class="highlight">山ごと持ち上げ始めました</span>。山が揺れ、パールヴァティーが恐怖で抱きつくと、シヴァは足の親指で山を押さえました。ラーヴァナの腕は山の下敷きになり、激痛が走ります。</p>
+      <p>ラーヴァナは苦しみの中で<span class="highlight">シヴァ讃歌「シヴァ・ターンダヴァ・ストートラム」</span>を即興で歌い上げました。自分の腸を引き出して弦を張り、腕の骨を弓にして楽器を作り、血涙を流しながら歌ったとされます。その壮絶な賛歌に感動したシヴァは山を持ち上げ、ラーヴァナを許し、<span class="highlight">チャンドラハーサ</span>（月を笑わせる剣）を授けました。「ラーヴァナ」（大声で泣かせる者）という名は、このとき山の下で叫んだ声に由来するとも言われます。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>シーターの誘拐と滅亡——傲慢が招いた終焉</div>
+      <p>ラーヴァナの妹シュールパナカーがラーマに求愛して拒絶され、ラクシュマナに鼻と耳を切り落とされた事件がきっかけでした。妹の屈辱に怒ったラーヴァナは、黄金の鹿マーリーチャを使ってラーマとラクシュマナを庵から引き離し、<span class="highlight">シーターを攫ってランカーに連れ去りました</span>。</p>
+      <p>ラーヴァナはシーターに一年の猶予を与え、自分の妻になるよう求め続けました。しかしシーターは一歩も譲りません。このとき弟ヴィビーシャナが「シーターを返すべきだ」と諫めましたが、ラーヴァナは弟を追放します。ヴィビーシャナはラーマの陣営に走り、ラーヴァナの弱点を明かしました。</p>
+      <p>ナンディンの呪いのとおり、<span class="highlight">ハヌマーンをはじめとする猿軍</span>がランカーに侵攻。最終決戦でラーマはラーヴァナの頭を何度切り落としても再生しましたが、ヴィビーシャナの助言で<span class="highlight">臍にある不死の甘露の壺</span>を矢で砕き、ラーヴァナは崩れ落ちました。ラーマは敵の偉大さを認め、弟ラクシュマナに「この偉大な王から政治の知恵を学べ」と命じたといいます。</p>
+      <div class="aside">ラーヴァナは「悪」の一語で片付けられる存在ではありません。四ヴェーダに通じ、シヴァを讃える歌を作り、ランカーを黄金の都に変えた統治者でした。彼を滅ぼしたのは、その知性すら制御できなかった傲慢——他者を見下す心でした。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ ハリシュチャンドラ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">👑</div>
+      <div>
+        <h2>ハリシュチャンドラ（Hariścandra）</h2>
+        <div class="sanskrit">太陽王朝の王・真実の守護者・すべてを失ってなお嘘をつかなかった男</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      太陽王朝（スーリヤヴァンシャ）のアヨーディヤーの王。「世界で最も正直な人間」として知られ、その評判をめぐってヴィシュヴァーミトラとヴァシシュタが論争したことが物語の発端です。ヴィシュヴァーミトラは「人間は極限状況で真実を守れるはずがない」と賭け、ハリシュチャンドラの真実を試す過酷な試練が始まりました。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>王国の代価——ヴィシュヴァーミトラへの約束</div>
+      <p>ある夜、ハリシュチャンドラは夢のなかでヴィシュヴァーミトラに<span class="highlight">全財産を布施する</span>と約束しました。目覚めると、ヴィシュヴァーミトラが目の前に立っています。「夢の中の約束を果たせ」。ハリシュチャンドラは一瞬も迷いませんでした——約束は約束です。</p>
+      <p><span class="highlight">王国、宮殿、財宝、軍勢</span>——すべてをヴィシュヴァーミトラに譲り渡しました。しかしヴィシュヴァーミトラは「ダクシナー（謝礼）がまだだ」とさらに求めます。もう何も持っていないハリシュチャンドラは「一ヶ月の猶予をください」と答え、妻シャイヴヤーと幼い息子ローヒタシュヴァを連れて、裸同然で王都を去りました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>火葬場の番人——妻子を売り、自分も売った王</div>
+      <p>一ヶ月が過ぎてもダクシナーを払えないハリシュチャンドラは、ヴァーラーナシー（ベナレス）で<span class="highlight">妻と息子を奴隷として売りました</span>。シャイヴヤーはバラモンの家の下女に、ローヒタシュヴァはその家の使用人になります。妻との別れの場面で、ハリシュチャンドラは涙しましたが、約束を破ることはしませんでした。</p>
+      <p>それでもダクシナーには足りません。ハリシュチャンドラは<span class="highlight">自分自身</span>をチャンダーラ（不可触民）の火葬場管理人に売りました。太陽王朝の王が、死者を焼く薪の番をし、遺族から火葬税を徴収する最も卑しい仕事に就いたのです。</p>
+      <p>ヴィシュヴァーミトラは変装して何度もハリシュチャンドラを訪れ、「嘘をつけば楽になる」と唆しましたが、ハリシュチャンドラは<span class="highlight">一度も嘘をつきませんでした</span>。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>息子の遺体——最後の試練</div>
+      <p>ある夜、一人の女が子供の遺体を抱いて火葬場に来ました。暗闇の中でハリシュチャンドラは気づきます——それは妻シャイヴヤーであり、遺体は息子<span class="highlight">ローヒタシュヴァ</span>でした。蛇に噛まれて死んだのです。</p>
+      <p>シャイヴヤーは泣きながら火葬を頼みましたが、火葬税を払う金がありません。ハリシュチャンドラは言いました——<span class="highlight">「税を払わずに焼くことはできない。それは主人への裏切りだ」</span>。我が子の遺体を前にしても、規則を曲げることを拒んだのです。シャイヴヤーは自分のサリー（衣）を半分に裂いて差し出しました。ハリシュチャンドラが薪を積み上げ、火をつけようとした瞬間——</p>
+      <p>天界が開き、神々が降臨しました。ヴィシュヴァーミトラ自身が姿を現し、すべてが試練だったと明かします。ダルマ（法）の神ヤマ、インドラ、ヴィシュヌが「これほどの真実は見たことがない」と讃え、ローヒタシュヴァを蘇らせ、<span class="highlight">ハリシュチャンドラを王位に戻し、天界への招待</span>を告げました。</p>
+      <div class="aside">ハリシュチャンドラの物語はマハートマー・ガーンディーが少年時代に最も感銘を受けた物語のひとつとされ、「真実への固執」という彼の思想の源泉のひとつとなりました。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ ユディシュティラ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⚖️</div>
+      <div>
+        <h2>ユディシュティラ（Yudhiṣṭhira）</h2>
+        <div class="sanskrit">法の神ヤマの子・パーンダヴァの長兄・ダルマラージャ</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      パーンドゥ王の長子にしてクンティーの息子。法の神ヤマ（ダルマ）の力で生まれたため「ダルマラージャ（法の王）」と呼ばれ、生涯に一度しか嘘をつかなかったとされます。しかしマハーバーラタはその一度の嘘が戦争の帰趨を決めたことを容赦なく描きます。賭博で王国を失い、十三年の流浪を経て大戦争を戦い、勝利しながらも苦悩し続けた「正しすぎる王」の物語です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>賭博の罠——王国を、妻を、自由を賭けた日</div>
+      <p>ドゥルヨーダナの招きでインドラプラスタの宮殿を訪れたユディシュティラは、<span class="highlight">シャクニのサイコロ</span>に挑みます。ユディシュティラにとって賭博の招待を断ることはクシャトリヤの義務に反しました——挑戦を受けることが王の誇りだと信じていたのです。</p>
+      <p>シャクニの細工されたサイコロに次々と負け、ユディシュティラは<span class="highlight">財宝、軍勢、王国、弟たちの自由、自分自身の自由</span>を賭けて失いました。そして最後に妻ドラウパディーを賭けて、負けました。ドラウパディーが宮廷に引きずり出され、衣を剥がされそうになる屈辱の場面——ユディシュティラは「自分が先に賭けに負けていたなら、ドラウパディーを賭ける権利はなかったはずだ」という法的議論を展開しますが、救えませんでした。</p>
+      <p>結局、ビーシュマの介入でドラウパディーは助けられましたが、再度の賭博で<span class="highlight">十二年の森での流浪と一年間の変装潜伏生活</span>を強いられます。法を守ろうとして法に縛られた——ユディシュティラの悲劇はここに始まります。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>「アシュヴァッターマーは死んだ」——生涯唯一の嘘</div>
+      <p>クルクシェートラの大戦争が膠着するなか、パーンダヴァ軍の軍師クリシュナはひとつの策を立てました。敵の総帥ドローナを倒すには、<span class="highlight">息子アシュヴァッターマンの死</span>を信じ込ませるしかない。ドローナは息子が生きている限り決して武器を置かないからです。</p>
+      <p>ビーマが「アシュヴァッターマン」という名の象を殺し、「アシュヴァッターマンは死んだ！」と叫びました。しかしドローナは信じません。「ユディシュティラが言うなら信じる。あの男だけは嘘をつかない」。</p>
+      <p>ユディシュティラは苦悩の末に口を開きました——<span class="highlight">「アシュヴァッターマーは死んだ」</span>。そして小声で付け加えます——「象のだが」。しかしクリシュナがその瞬間に法螺貝を吹き、「象の」という言葉はかき消されました。ドローナは武器を置き、瞑想に入り、ドリシュタデュムナに首を斬られました。</p>
+      <div class="aside">この一言を発した瞬間、地面すれすれに浮いていたユディシュティラの<span class="highlight">戦車が地面に落ちた</span>と伝えられます。生涯の正直さによって戦車は常に地面から四指分浮いていたのですが、たった一度の嘘でその恩恵は失われたのです。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>天国の門の犬——最後の試験</div>
+      <p>大戦争の後、ユディシュティラは長く統治し、やがて王位を孫に譲って<span class="highlight">天界への大旅（マハープラスターナ）</span>に出発しました。ドラウパディーと四人の弟を連れ、ヒマラヤを登ります。しかし一人、また一人と倒れてゆきました——ドラウパディーが最初に、次にサハデーヴァ、ナクラ、アルジュナ、そしてビーマが。</p>
+      <p>ユディシュティラだけがメール山の頂上にたどり着きました。そこにインドラの戦車が迎えに来ますが、<span class="highlight">一匹の野良犬</span>がずっと後をついてきていました。インドラは「犬は天界に入れない。置いていけ」と言います。</p>
+      <p>ユディシュティラは拒否しました——<span class="highlight">「この犬は私を慕ってついてきた。信じて従う者を見捨てることは、すべての罪の中で最も重い」</span>。天界を捨てても犬を見捨てない——その瞬間、犬はダルマ（法の神ヤマ、ユディシュティラの父）の姿に変わりました。最後の試験に合格したユディシュティラは、肉体のまま天界に迎え入れられたのです。</p>
+      <div class="aside">天界に着いたユディシュティラは、そこでドゥルヨーダナが天界にいるのを見て衝撃を受けます。一方、弟たちとドラウパディーは地獄にいると聞かされました。ユディシュティラは「ならば自分も弟たちのいる地獄に行く」と宣言します。これもまた試験でした——地獄の幻影が消え、全員が天界で再会したのです。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ サティー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🔥</div>
+      <div>
+        <h2>サティー（Satī）</h2>
+        <div class="sanskrit">ダクシャの娘・シヴァの最初の妻・自己犠牲の象徴</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      プラジャーパティ・ダクシャの娘にしてシヴァの最初の妻。父に反対されながらもシヴァとの結婚を貫きましたが、父がシヴァを侮辱する大祭祀を催したことに耐えかね、自ら炎に身を投じました。その死がシヴァの破壊的な怒りを呼び覚まし、宇宙を揺るがす大事件に発展します。のちにパールヴァティーとして転生し、再びシヴァの妻となる——愛と名誉の物語です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>父に背いた結婚——シヴァを選んだ娘</div>
+      <p>ダクシャは二十七人の娘をチャンドラに嫁がせたほか、多くの娘を神々や聖仙に嫁がせた偉大なプラジャーパティ（創造主）でした。末娘サティーは幼いころからシヴァに心を寄せていましたが、ダクシャは<span class="highlight">シヴァを嫌って</span>いました——髪を梳かさず、灰を身に塗り、蛇を首に巻き、火葬場に住む苦行者を娘の夫にするわけにはいかないと。</p>
+      <p>サティーのスヴァヤンヴァラ（花婿選びの儀式）に、ダクシャはシヴァを<span class="highlight">招待しませんでした</span>。しかしサティーは花冠をシヴァに捧げることを心に決めており、宣言しました——「私が花冠を投げ上げる。シヴァの首にかかるだろう」。花冠を空中に投げると、シヴァが虚空から姿を現し、花冠は彼の首に落ちました。</p>
+      <p>ダクシャは激怒しましたが、スヴァヤンヴァラの結果を覆すことはできません。サティーはシヴァとともにカイラーサ山に去り、二人は幸せに暮らしました。しかしダクシャの怒りは消えず、さらに深まってゆきます。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>ダクシャの祭祀——呼ばれなかった娘</div>
+      <p>ダクシャはすべての神々を招いて壮大な<span class="highlight">ブリハスパティサヴァ</span>（大祭祀）を催しました。ヴィシュヌ、ブラフマー、インドラ、すべての聖仙が招待されました。しかしシヴァとサティーだけが<span class="highlight">意図的に除外</span>されたのです。</p>
+      <p>空を飛ぶ神々の戦車を見たサティーは、祭祀のことを知り、父のもとに行きたいとシヴァに告げました。シヴァは止めました——「招待されていない場所に行くべきではない。侮辱されるだけだ」。しかしサティーは「父の家に行くのに招待がいるのですか」と譲りません。シヴァはついに送り出しました。</p>
+      <p>祭祀場に着いたサティーを、ダクシャは冷たく迎えました。そしてすべての神への讃辞を述べる中で、シヴァについてだけ<span class="highlight">公然と罵倒</span>しました——「あの灰まみれの浮浪者」「火葬場に住む不吉な者」。サティーはすべての参列者の前で夫が侮辱されるのを聞きました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>炎の中へ——シヴァの怒り、ダクシャの祭祀の破壊</div>
+      <p>サティーは父に告げました——<span class="highlight">「シヴァを侮辱する父の娘であることが恥ずかしい。この体はあなたから授かったもの。だからこの体を捨てます」</span>。サティーは瞑想に入り、体内のヨーガの火を燃え上がらせ、<span class="highlight">自ら炎に包まれて</span>焼け落ちました。祭祀場は混乱に陥ります。</p>
+      <p>知らせを受けたシヴァの怒りは宇宙を震わせました。シヴァは自らの髪を一本引き抜いて地面に叩きつけ、そこから恐ろしい存在<span class="highlight">ヴィーラバドラ</span>が生まれます。ヴィーラバドラはシヴァの軍勢を率いてダクシャの祭祀場を襲撃しました。神々は蹴散らされ、祭祀の火は消され、<span class="highlight">ダクシャの首は切り落とされました</span>。</p>
+      <p>悲嘆に暮れるシヴァはサティーの亡骸を抱いて宇宙をさまよい始め、世界が崩壊し始めました。ヴィシュヌがスダルシャナ・チャクラ（円盤）でサティーの体を切り分け、各部位が落ちた場所が<span class="highlight">シャクティ・ピータ（女神の聖地）</span>となりました。神々の嘆願でダクシャは山羊の頭をつけて蘇生され、シヴァに許しを請い、祭祀をやり直しました。</p>
+      <div class="aside">サティーはのちにヒマヴァット（ヒマラヤ山の神）の娘パールヴァティーとして転生し、苦行によって再びシヴァの妻となります——第一弾で紹介したパールヴァティーの物語は、サティーの物語の続きなのです。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ アシュヴァッターマン ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⚡</div>
+      <div>
+        <h2>アシュヴァッターマン（Aśvatthāman）</h2>
+        <div class="sanskrit">ドローナの息子・不死身の戦士・永遠の放浪者</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      弓の師匠ドローナーチャーリヤの一人息子。額に生まれつき<span class="highlight">宝石</span>が埋め込まれており、これがある限り飢え・渇き・疲労・武器による傷を受けないとされました。父を策略で殺されたことへの復讐が、マハーバーラタ最後の惨劇——そして古代インドで最も恐ろしい呪い——を引き起こします。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>父の死——策略と怒り</div>
+      <p>ドローナはカウラヴァ軍の総帥として凄まじい戦いぶりを見せ、パーンダヴァ軍は壊滅寸前でした。クリシュナは唯一の弱点を突く策を立てます——<span class="highlight">息子アシュヴァッターマンの死を信じさせる</span>こと。</p>
+      <p>「アシュヴァッターマンは死んだ」というユディシュティラの言葉を聞いたドローナは、全身の力が抜け、武器を置いて瞑想に入りました。その瞬間、ドリシュタデュムナが<span class="highlight">剣でドローナの首を刎ねました</span>——武器を置いた無抵抗の相手を。</p>
+      <p>父の死を知ったアシュヴァッターマンの怒りは尋常ではありませんでした。父は正々堂々と戦って負けたのではない——<span class="highlight">嘘と策略で殺された</span>のです。しかもアシュヴァッターマン自身が「死んだ」と偽られたことで。この怒りが、マハーバーラタ最悪の夜を生むことになります。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>夜襲——眠りの中の大虐殺</div>
+      <p>クルクシェートラの戦争は十八日目にパーンダヴァ軍の勝利で終わりました。カウラヴァ側の生き残りはわずか三人——アシュヴァッターマン、クリパ、クリタヴァルマン。</p>
+      <p>その夜、アシュヴァッターマンは森でフクロウが眠っている鴉の群れを襲うのを目撃します。「これだ」。夜の闇に紛れ、アシュヴァッターマンは<span class="highlight">パーンダヴァ軍の陣営に忍び込みました</span>。</p>
+      <p>天幕の入口にシヴァの幻影が立ちはだかりましたが、アシュヴァッターマンがシヴァに祈ると、通路が開きました。アシュヴァッターマンは<span class="highlight">ドリシュタデュムナを絞め殺し</span>、続いてシカンディン、ドラウパディーの五人の息子——ウパパーンダヴァ——を含む眠っている戦士たちを次々と殺害しました。五人のパーンダヴァ兄弟は別の場所で眠っていたため無事でしたが、<span class="highlight">陣営のほぼ全員が一夜で殺された</span>のです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>ブラフマーストラと永遠の呪い</div>
+      <p>虐殺を知ったパーンダヴァ兄弟はアシュヴァッターマンを追跡しました。追い詰められたアシュヴァッターマンは最終兵器<span class="highlight">ブラフマーストラ</span>を放ちます。アルジュナも同じ武器で対抗しました。二つのブラフマーストラがぶつかれば世界が滅びる——聖仙たちの懇願で二人は武器を引き戻すよう命じられます。</p>
+      <p>アルジュナは武器を制御して引き戻しましたが、アシュヴァッターマンは<span class="highlight">制御方法を知りませんでした</span>。引き戻せないブラフマーストラを、彼はパーンダヴァの血筋を根絶するため、<span class="highlight">ウッタラーの胎内の赤子</span>に向けて放ちました。アルジュナの孫にあたるまだ生まれていない子供を殺そうとしたのです。</p>
+      <p>クリシュナは激怒しました。胎児を守り、のちにパリークシットとして蘇らせます。そしてアシュヴァッターマンに裁きを下しました——額の<span class="highlight">宝石を剥ぎ取り</span>、代わりに癒えることのない潰瘍の傷を与え、こう宣告します。<span class="highlight">「おまえは三千年、いや永遠に、膿と血を流しながら人里離れた場所をさまよえ。死ぬことも許されない」</span>。</p>
+      <div class="aside">インドの各地で「アシュヴァッターマンを見た」という伝承が今も語られます。額に傷を負い、森をさまよう不死の戦士——彼はまだ罰を受け続けているのだと。復讐の連鎖が生んだ究極の罰は、死すら許されない永遠の苦しみでした。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ プリトゥ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🌾</div>
+      <div>
+        <h2>プリトゥ（Pṛthu）</h2>
+        <div class="sanskrit">最初の即位王・大地を耕した者・地球の名付け親</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      暴虐の王ヴェーナの死体から生まれた、ヴィシュヌの化身です。ヴェーナの右腕を聖仙たちが撹拌すると、太陽のように輝く男が現れました——これがプリトゥです。大地が食物を隠して飢饉が起こったとき、プリトゥは弓を引いて大地を追いかけ、ついには牛の姿になった大地から穀物を搾り出しました。大地が「プリティヴィー（プリトゥの娘）」と呼ばれるのは、この王に由来します。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>暴王ヴェーナの死——聖仙たちの怒り</div>
+      <p>プリトゥの前史として語られるのが、父ヴェーナの物語です。ヴェーナは太陽王朝の王でしたが、邪悪な母の影響で暴君となりました。「<span class="highlight">私以外の神への祈りと祭祀を禁じる。私こそが唯一の崇拝対象だ</span>」と宣言し、すべての宗教行為を停止させたのです。</p>
+      <p>聖仙たちは何度も諫めましたが、ヴェーナは聞き入れません。ついに聖仙たちは<span class="highlight">クシャ草</span>で呪いの力を込めてヴェーナの太腿を打ち、殺しました。しかし王のいない国は無法地帯になります——盗賊が横行し、法が消え、大地は荒れました。</p>
+      <p>聖仙たちはヴェーナの遺体の右腕を<span class="highlight">撹拌</span>しました。すると腕から、黄金の鎧を身にまとい、弓と矢を持つ輝く男が現れます。天から花が降り、ガンダルヴァが歌い、聖仙たちはこの男を<span class="highlight">プリトゥ</span>と名づけ、王として即位させました——これが世界で最初の<span class="highlight">正式な即位式（アビシェーカ）</span>だったと伝えられます。</p>
+      <div class="aside">ヴェーナの左腕からも人物が生まれましたが、こちらは黒く短い男ニシャーダで、ヴェーナの罪をすべて引き受けた存在とされます。善悪が文字どおり「右腕と左腕」に分かれた物語です。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>大地を追う弓——牛になった大地を搾る</div>
+      <p>プリトゥが即位した時、大地はヴェーナの暴政のあいだに<span class="highlight">穀物や薬草を自分の中に隠して</span>しまっていました。飢饉が広がり、民は飢えています。プリトゥは大地に「食物を出せ」と命じましたが、大地は拒否しました。</p>
+      <p>プリトゥは怒り、<span class="highlight">弓に矢をつがえて大地を追いかけ始めました</span>。大地は恐怖で牛の姿に変身して逃げます。三界を駆け巡りましたが、どこに逃げてもプリトゥが追ってきます。ブラフマーの世界にもヴィシュヌの世界にも——プリトゥの弓は全宇宙に届きました。</p>
+      <p>ついに大地は降参しました。「殺さないでください。私を殺せば、あなたの民も立つ場所を失います」。プリトゥは弓を収め、条件を出します——<span class="highlight">「民のために食物を出せ」</span>。大地は牛の姿のまま乳を出すことに同意し、プリトゥはマヌ・スヴァーヤンブヴァを仔牛として、大地の乳を<span class="highlight">穀物、薬草、鉱物、宝石</span>として搾り出しました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>大地を平らにした王——プリティヴィーの名付け親</div>
+      <p>プリトゥはさらに大地を整備しました。それまでの大地は山と谷と森が入り乱れ、人が住める平地はわずかでした。プリトゥは<span class="highlight">弓の先で山を砕き、谷を埋め、大地を平らに</span>しました。人間が耕作し、都市を建設し、文明を築くための平野を作ったのです。</p>
+      <p>プリトゥは村を作り、町を作り、農業の方法を教え、交易の道を整備しました。<span class="highlight">税の制度</span>を定め、民を守る法を布いた——プラーナ文献は彼を「最初の真の王」「文明の創始者」と位置づけています。</p>
+      <p>感謝した大地は、自らを<span class="highlight">「プリティヴィー」（プリトゥの娘）</span>と名乗ることを受け入れました。サンスクリット語で地球を意味する「プリティヴィー」は、このプリトゥ王に由来するのです。プリトゥの治世は黄金時代と呼ばれ、彼が統治する限り大地は豊穣で、誰も飢えることがありませんでした。</p>
+      <div class="aside">暴虐な父の死体から生まれ、飢えた大地に食物を取り戻し、文明の基盤を築いた王——プリトゥの物語は「破壊からの再生」の原型であり、「良き統治とは何か」というインド政治思想の出発点です。</div>
+    </div>
+  </section>
+
+  <div class="nav-link" style="text-align: center; margin: 2.5rem 0 0;">
+    <a href="hindu-myths-6.html" style="display: inline-block; background: var(--accent-saffron); color: #fff; text-decoration: none; padding: 0.7em 2em; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.15s;">← 第六弾「変容と覚醒の物語」を読む</a>
+  </div>
+  <div class="nav-link">
+    <a href="hindu-myths-5.html">← 第五弾「呪いと恩寵の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-4.html">← 第四弾「誓いと宿命の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-3.html">← 第三弾「英雄と炎の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-2.html">← 第二弾「続・ヒンドゥー神話入門」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="text-align: center; margin: 0.5rem 0 1rem;">
+    <a href="hindu-myths-index.html" style="color: var(--accent-indigo); font-size: 0.9rem;">📚 シリーズまとめページ</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、シヴァ・プラーナ、バーガヴァタ・プラーナ、パドマ・プラーナ、マールカンデーヤ・プラーナ、デーヴィー・バーガヴァタ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
