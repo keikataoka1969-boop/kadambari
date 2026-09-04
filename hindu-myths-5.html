@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第五弾 — 呪いと恩寵の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'माया';
+  position: absolute;
+  font-size: 14rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第五弾</div>
+  <h1>呪いと恩寵の物語</h1>
+  <div class="line"></div>
+  <p class="sub">王から聖仙へと変貌したヴィシュヴァーミトラ、呪いで夫に忘れられたシャクンタラー、賭博で全てを失った王ナラ、父に殺されかけてなお信仰を貫いたプラフラーダ、継母に拒まれて北極星になった少年ドゥルヴァ、そして満ち欠けの呪いを受けた月の神チャンドラ——六柱の物語を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p><a href="hindu-myths.html">第一弾</a>ではガネーシャやシヴァなど七柱、<a href="hindu-myths-2.html">第二弾</a>ではヴィシュヌやハヌマーンなど六柱、<a href="hindu-myths-3.html">第三弾</a>ではアグニやアルジュナなど六柱、<a href="hindu-myths-4.html">第四弾</a>ではビーシュマやカルナなど六柱を紹介しました。第五弾のテーマは「呪い」と「恩寵」。呪いは災いであると同時に変容の契機であり、恩寵は苦行と信仰の果てに降り注ぐ——その逆転劇をプラーナ百科事典（Vettam Mani著）から厳選してお届けします。</p>
+  </div>
+
+  <!-- ═══════ ヴィシュヴァーミトラ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🔥</div>
+      <div>
+        <h2>ヴィシュヴァーミトラ（Viśvāmitra）</h2>
+        <div class="sanskrit">王から聖仙へ・苦行の化身・ガーヤトリー・マントラの見者</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      もとはカーニャクブジャ国のクシャトリヤ（武人階級）の王ガーディ。聖仙ヴァシシュタの「願いの牛」カーマデーヌに敗北したことをきっかけに、武力ではなく苦行によってバラモン（祭司階級）の聖仙になろうと決意しました。数千年にわたる苦行と挫折を経て、ついにブラフマリシ（最高位の聖仙）の称号を得た、インド神話で最も壮絶な自己変革の物語です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>願いの牛——ヴァシシュタとの因縁の始まり</div>
+      <p>ある日、大軍を率いて行軍中のヴィシュヴァーミトラ王は、聖仙ヴァシシュタの庵に立ち寄りました。ヴァシシュタが<span class="highlight">願いの牛カーマデーヌ</span>に命じると、一頭の牛から全軍をもてなす豪華な宴が溢れ出ます。驚嘆した王は牛を譲るよう求めましたが、ヴァシシュタは断りました。</p>
+      <p>王は力ずくで牛を奪おうとしましたが、カーマデーヌが鳴くと、その体から<span class="highlight">無数の戦士</span>が出現し、王の軍勢を壊滅させました。百人の王子のうち、一人だけが生き残ります。</p>
+      <p>完敗したヴィシュヴァーミトラは悟りました——「クシャトリヤの武力は、バラモンの霊力には勝てない」。王位を捨て、<span class="highlight">苦行によってバラモンを超える力を得よう</span>と誓い、ヒマラヤに向かったのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>メーナカーの誘惑——千年の苦行が水の泡に</div>
+      <p>千年の苦行を積んだヴィシュヴァーミトラの霊力は、天界を脅かすまでに高まりました。インドラは恐れ、天女<span class="highlight">メーナカー</span>を送り込みます。メーナカーは春風とともにヴィシュヴァーミトラの前に現れ、衣が風になびく姿で苦行者の心を揺さぶりました。</p>
+      <p>ヴィシュヴァーミトラは誘惑に負け、メーナカーとともに<span class="highlight">十年間</span>を過ごしてしまいます。二人の間に生まれた娘がシャクンタラーです。目覚めたヴィシュヴァーミトラは自分の弱さに激怒し、メーナカーを追い払い——しかし怒りさえも苦行の妨げだと悟り、さらに厳しい修行に入りました。</p>
+      <div class="aside">インドラはさらにランバーという天女を送りましたが、今度はヴィシュヴァーミトラが怒りで彼女を<span class="highlight">石に変える呪い</span>をかけてしまいます。怒りを爆発させたことで、また苦行が台無しに。聖仙への道は、誘惑と怒りの連続でした。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>トリシャンクの天界——宙づりの王</div>
+      <p>太陽王朝のトリシャンク王は、肉体のまま天界に昇りたいと願い、ヴァシシュタに祭祀を頼みましたが拒否されました。ヴァシシュタの百人の息子に頼んでも拒否され、怒った息子たちに<span class="highlight">チャンダーラ（不可触民）の姿に変えられる呪い</span>をかけられます。</p>
+      <p>変わり果てた姿で彷徨うトリシャンクを見たヴィシュヴァーミトラは、ヴァシシュタへの対抗心もあり、引き受けます。強大な苦行の力で祭祀を執行すると、トリシャンクの身体は<span class="highlight">天へ昇り始めました</span>。しかしインドラが「不浄な者は天に入れない」と突き返し、トリシャンクは頭を下にして落ちてきます。</p>
+      <p>激怒したヴィシュヴァーミトラは「ならば新しい天界を作る」と宣言し、苦行の力で<span class="highlight">もうひとつの天界と星々</span>を創造し始めました。インドラを含む神々は戦慄し、妥協を申し出ます——トリシャンクは天と地の中間に、頭を下にしたまま永遠に留まることになりました。南十字星がトリシャンクだという伝承があります。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">04</span>ブラフマリシの称号——ヴァシシュタが認めた瞬間</div>
+      <p>数千年の苦行の果て、ブラフマーから「マハリシ（大聖仙）」の称号を得ましたが、ヴィシュヴァーミトラが求めていたのは最高位の<span class="highlight">ブラフマリシ</span>でした。しかしその称号は、宿敵ヴァシシュタ自身が認めなければ授かれません。</p>
+      <p>ヴィシュヴァーミトラは最後の試練として、あらゆる苦行の果実を賭けた沈黙の修行に入ります。挑発にも誘惑にも動じず、怒りも欲望も完全に超越したとき、ついにヴァシシュタが庵を訪れ、こう告げました——<span class="highlight">「あなたをブラフマリシと認めます」</span>。</p>
+      <p>二人の聖仙は和解し、抱擁しました。クシャトリヤの王がバラモンの最高聖仙になった——この前代未聞の変身は、インド思想において「生まれ（ジャーティ）」よりも「行い（カルマ）」が重要であることの象徴です。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ シャクンタラー ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🦋</div>
+      <div>
+        <h2>シャクンタラー（Śakuntalā）</h2>
+        <div class="sanskrit">ヴィシュヴァーミトラの娘・ドゥシュヤンタ王の妻</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ヴィシュヴァーミトラと天女メーナカーの間に生まれ、森に捨てられた赤子を鳥（シャクンタ）が守っていたことからこの名がつきました。聖仙カンヴァに育てられ、森の庵で暮らしていました。カーリダーサの戯曲『シャクンタラー姫』で世界的に知られる物語です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>森の恋——ドゥシュヤンタ王との出逢い</div>
+      <p>狩りの途中でカンヴァの庵に立ち寄ったドゥシュヤンタ王は、水やりをしていたシャクンタラーに一目惚れしました。カンヴァ仙は不在でしたが、二人は森の中で<span class="highlight">ガーンダルヴァ婚（両者の合意だけによる結婚）</span>を交わします。</p>
+      <p>王は記念に自分の<span class="highlight">署名入りの指輪</span>をシャクンタラーに渡し、「使者を送るから宮殿に来るように」と言い残して去りました。しかし使者は一向に来ません。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>ドゥルヴァーサスの呪い——忘却の恋</div>
+      <p>王を想って物思いに沈むシャクンタラーは、庵を訪ねてきた<span class="highlight">ドゥルヴァーサス仙</span>に気づかず、もてなしを怠りました。激怒した聖仙は呪います——<span class="highlight">「おまえが想っている相手は、おまえを完全に忘れるだろう」</span>。</p>
+      <p>友人たちの懇願で、ドゥルヴァーサスは少しだけ譲歩しました。「何か記念の品を見せれば、思い出すだろう」。しかし運命の日、宮殿へ向かう途中で川を渡ったとき、シャクンタラーの指から<span class="highlight">指輪が水中に滑り落ちて</span>しまいました。</p>
+      <p>宮殿に着いたシャクンタラーが名乗りましたが、ドゥシュヤンタ王は全く思い出せません。「私はそんな女性を知らない」。指輪もない。証人のカンヴァ仙もいない。シャクンタラーは屈辱のなか宮殿を追い出されました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>魚の中の指輪——記憶の回復と再会</div>
+      <p>失意のシャクンタラーは母メーナカーに助けられ、天界の近くの聖地で息子<span class="highlight">バラタ</span>を産み育てました。バラタは幼いころからライオンの子と遊び、その口を開けて歯を数えるような豪胆な少年に育ちます。</p>
+      <p>一方、ある漁師が巨大な魚の腹から<span class="highlight">王の署名入りの指輪</span>を発見し、宮殿に届けました。指輪を見た瞬間、ドゥシュヤンタ王のもとにすべての記憶が奔流のように戻ります。王は悲嘆に暮れ、シャクンタラーを探し始めました。</p>
+      <p>やがて王は聖地で成長したバラタとシャクンタラーに再会し、涙の和解を果たします。バラタは後にインド亜大陸を統一する偉大な王となり、<span class="highlight">インドの古名「バーラタ」</span>はこの少年の名に由来するのです。</p>
+      <div class="aside">マハーバーラタ（「バラタ族の大いなる物語」）の名もこのバラタに遡ります。森の恋から始まった物語が、大陸の名前にまでつながる壮大なスケールです。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ ナラ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🎲</div>
+      <div>
+        <h2>ナラ（Nala）</h2>
+        <div class="sanskrit">ニシャダ国の王・賭博で全てを失い取り戻した英雄</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      ニシャダ国の王にして料理と馬術の達人。妻ダマヤンティーとの恋、悪魔カリに取り憑かれての転落、蛇に噛まれての変身、そして再起——マハーバーラタのヴァナ・パルヴァで語られるナラの物語は、「失ったすべてを取り戻す」物語の原型です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>白鳥の仲介——ダマヤンティーとの恋</div>
+      <p>ナラ王はある日、金色の白鳥を捕まえました。白鳥は「放してくれたら、ヴィダルバ国の王女ダマヤンティーにあなたの素晴らしさを伝えよう」と約束します。白鳥の話を聞いたダマヤンティーは、まだ会ったこともないナラに恋をしました。</p>
+      <p>ダマヤンティーの花婿選びの儀式<span class="highlight">スヴァヤンヴァラ</span>には、人間の王だけでなく、インドラ、アグニ、ヴァルナ、ヤマの四柱の神々までもが参加しました。四神はナラに「我々の使者として行け」と命じ、ナラは自分の恋敵のために伝言役を務めるという試練を課されます。</p>
+      <p>しかしダマヤンティーの決意は揺らぎません。儀式の場で四神が全員<span class="highlight">ナラと同じ姿</span>に変身しましたが、ダマヤンティーは「本物のナラだけがまばたきをし、足が地面についている」と見抜き、花の冠をナラにかけました。神々は二人の愛に感嘆し、祝福して去りました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>カリの憑依——賭博と放浪</div>
+      <p>スヴァヤンヴァラに遅刻して機会を逃した悪魔<span class="highlight">カリ</span>は、復讐を誓いました。十二年間ナラの隙を窺い、ついにナラが沐浴の際に足の洗い方を誤った瞬間——その<span class="highlight">不浄</span>を突いてナラの体に入り込みます。</p>
+      <p>カリに取り憑かれたナラは弟プシュカラと賭博を始め、理性では止めたくても手が動いてしまいます。ダマヤンティーが「もうやめて」と懇願しても<span class="highlight">王国、財産、衣服まで</span>すべてを賭けて負け続けました。裸同然のまま二人は森に追放されます。</p>
+      <p>森で眠るダマヤンティーを見たナラは、「自分と一緒にいれば妻はさらに苦しむ」と考え、ダマヤンティーの衣の半分を切り取って身にまとい、<span class="highlight">夜のうちにひとりで立ち去りました</span>。目覚めたダマヤンティーの絶叫が森に響きます。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>蛇の噛み傷——変身と再起</div>
+      <p>放浪中のナラは森火事に囲まれた蛇王<span class="highlight">カルコータカ</span>を助けました。炎から救い出した瞬間、蛇はナラを噛みます。しかしこの毒は呪いではなく恩恵でした——ナラの姿は醜い小男<span class="highlight">バーフカ</span>に変わり、同時にカリの毒は体から追い出されたのです。</p>
+      <p>蛇は告げました。「この姿のまま、アヨーディヤーのリトゥパルナ王に仕えよ。王から賭博の秘術を学べ。正体を明かしたいときは、この布を身にまとえば元の姿に戻る」。</p>
+      <p>バーフカとなったナラはリトゥパルナ王の御者兼料理人として仕えながら、<span class="highlight">サイコロの数学的秘術</span>を密かに学びます。一方、ダマヤンティーは実家に戻り、夫を探す計略として偽の第二回スヴァヤンヴァラを宣言。その知らせを聞いたリトゥパルナ王が急いで向かう道中、御者バーフカの超絶的な馬術からダマヤンティーは夫だと察します。ナラは布をまとって元の姿に戻り、夫婦は再会しました。</p>
+      <div class="aside">再起したナラはプシュカラに賭博を挑み、学んだ秘術で全てを取り戻します。カリはナラの体から吐き出され、ナラに呪われてヴィブヒータカの木に封じ込められました。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ プラフラーダ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🙏</div>
+      <div>
+        <h2>プラフラーダ（Prahlāda）</h2>
+        <div class="sanskrit">不滅の信仰者・ヒラニヤカシプの息子</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      アスラ（魔族）の王ヒラニヤカシプの息子でありながら、ヴィシュヌの熱烈な信者。父はヴィシュヌに兄を殺された恨みから、宇宙の支配者となり「ヴィシュヌの名を口にすることすら禁じる」暴虐の限りを尽くしました。その暴君の家に生まれた信仰の子プラフラーダの物語は、インドで最も愛される物語のひとつです。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>胎内での教え——母の腹の中で聞いた真理</div>
+      <p>ヒラニヤカシプが苦行中に留守のあいだ、インドラの軍勢が攻め込み、妊娠中の妻カヤドゥーを捕虜にしました。聖仙ナーラダが彼女を救い出し、自分の庵でかくまいます。そのとき、ナーラダは<span class="highlight">胎内の赤子に向けて</span>ヴィシュヌへの信仰を説きました。</p>
+      <p>母の腹の中でヴィシュヌの教えを吸収したプラフラーダは、生まれた瞬間からヴィシュヌの名を唱える子になりました。父ヒラニヤカシプは「私こそ宇宙の支配者だ。ヴィシュヌなど存在しない」と教え込もうとしましたが、プラフラーダは頑として譲りません——<span class="highlight">「ヴィシュヌはすべてに遍在します」</span>。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>十六の処刑——殺せない子</div>
+      <p>激怒したヒラニヤカシプは、息子を何度も殺そうとしました。<span class="highlight">崖から突き落とし、毒蛇の穴に投げ込み、象に踏ませ、火に焼き、毒を飲ませ、海に沈め</span>——ありとあらゆる方法を試みましたが、そのたびにプラフラーダはヴィシュヌの名を唱え、無傷で生還します。</p>
+      <p>叔母<span class="highlight">ホーリカー</span>は「火に焼かれない」という恩恵を持っていました。ヒラニヤカシプはホーリカーにプラフラーダを抱いたまま炎の中に入るよう命じます。しかし炎のなかでホーリカーの恩恵はプラフラーダに移り、ホーリカーは焼け死に、プラフラーダは無傷で歩き出しました。</p>
+      <div class="aside">インドの春祭り「ホーリー祭」の名はこのホーリカーに由来します。悪が炎で滅び、善が勝つ——その記憶を祝う色彩の祭りです。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>柱の中のナラシンハ——ヴィシュヌの解答</div>
+      <p>「ヴィシュヌはどこにいるのだ」とヒラニヤカシプが怒鳴ると、プラフラーダは答えました。「すべてのものの中にいます」。「ではこの柱の中にもいるのか？」「はい」。ヒラニヤカシプが拳で<span class="highlight">宮殿の柱</span>を叩き割った瞬間——</p>
+      <p>柱の中から<span class="highlight">半分人間・半分ライオン</span>の姿をした存在が飛び出しました。ナラシンハ（人獅子）、ヴィシュヌの化身です。ヒラニヤカシプはブラフマーから恩恵を得ていました——「人にも獣にも殺されない。屋内でも屋外でも、昼でも夜でも、地上でも空中でも、いかなる武器でも殺されない」。</p>
+      <p>ナラシンハはヒラニヤカシプを<span class="highlight">宮殿の敷居（屋内でも屋外でもない）</span>に引きずり出し、<span class="highlight">自分の膝の上（地上でも空中でもない）</span>に載せ、<span class="highlight">黄昏時（昼でも夜でもない）</span>に、<span class="highlight">爪（武器ではない）</span>で腹を引き裂きました。人でも獣でもない姿で、あらゆる条件の隙間を突いたのです。</p>
+      <p>プラフラーダはナラシンハに向かって手を合わせ、父の魂のための慈悲を願いました。ヴィシュヌはプラフラーダの信仰に応え、ヒラニヤカシプの二十一代前の先祖までをも浄化したのです。</p>
+    </div>
+  </section>
+
+  <!-- ═══════ ドゥルヴァ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">⭐</div>
+      <div>
+        <h2>ドゥルヴァ（Dhruva）</h2>
+        <div class="sanskrit">北極星になった少年・不動の信仰の象徴</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      スヴァーヤンブヴァ・マヌの孫、ウッターナパーダ王と妃スニーティの息子。わずか五歳で継母に侮辱され、父にも庇ってもらえなかった少年が、森でヴィシュヌへの苦行を行い、宇宙で最も揺るがない場所——北極星の座を得た物語です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>継母の侮辱——「この膝に座る資格はない」</div>
+      <p>ウッターナパーダ王には二人の妃がいました。第一妃スニーティの子がドゥルヴァ、寵愛する第二妃スルチの子がウッタマです。ある日、五歳のドゥルヴァが父の膝に座ろうとしたとき、スルチが<span class="highlight">引き離して</span>言いました。</p>
+      <p>「あなたは私の腹から生まれていない。<span class="highlight">この膝に座りたければ、苦行をしてもう一度、私のお腹に生まれ直しなさい</span>」。父王は何も言いませんでした。</p>
+      <p>泣きながら母のもとに戻ったドゥルヴァに、スニーティは告げました。「継母の言葉は正しい——ただし苦行の力で、あなたはもっと高い座を得ることができる」。五歳の少年は決意し、<span class="highlight">一人で森に向かいました</span>。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>五歳の苦行——大地が震えた</div>
+      <p>途中でナーラダ聖仙に出逢い、ヴィシュヌのマントラ<span class="highlight">「オーム・ナモー・バガヴァテー・ヴァースデーヴァーヤ」</span>を授かります。ドゥルヴァは森で苦行に入りました。</p>
+      <p>最初の月は三日に一度、果物と根を食べました。二ヶ月目は六日に一度、枯れ草だけ。三ヶ月目は十二日に一度、水だけ。四ヶ月目は十五日に一度、空気だけ。五ヶ月目からは<span class="highlight">片足で立ち、呼吸すら止めて</span>瞑想に没入しました。</p>
+      <p>少年の苦行が極まると、三界が震え始めます。ドゥルヴァが片足に全体重を載せるたび、大地が傾きました。神々は恐れ、マーヤー（幻力）で妨害しましたが、ドゥルヴァの集中は一瞬も揺るぎません。ついにヴィシュヌ自身がドゥルヴァの前に現れました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>北極星の座——宇宙で最も揺るがない場所</div>
+      <p>ヴィシュヌは法螺貝でドゥルヴァの頬に触れ、少年は神を讃える言葉を得ました。「何を望む？」とヴィシュヌが問うと、ドゥルヴァは答えます——<span class="highlight">「誰にも揺るがされない場所がほしい」</span>。</p>
+      <p>ヴィシュヌは約束しました。「おまえは三万六千年間王国を統治した後、<span class="highlight">北極星（ドゥルヴァ・ローカ）</span>の座に就く。すべての星はおまえの周りを回り、永遠に動かない場所にいるだろう」。</p>
+      <p>宮殿に戻ったドゥルヴァを、父王は涙で迎え、王位を譲りました。継母スルチも過ちを悔い、ドゥルヴァを実の子として慈しんだといいます。長い治世ののち、ドゥルヴァは天に昇り、北極星となりました。今も夜空で動かない星——それがドゥルヴァです。</p>
+      <div class="aside">「父の膝に座れなかった少年が、宇宙の中心の座を得た」——ドゥルヴァの物語は、拒絶が苦行の動機となり、苦行が永遠の栄光に変わるという、呪いから恩寵への転換の物語です。</div>
+    </div>
+  </section>
+
+  <!-- ═══════ チャンドラ ═══════ -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <div class="deity-icon">🌙</div>
+      <div>
+        <h2>チャンドラ（Candra）</h2>
+        <div class="sanskrit">月の神・ソーマ・夜の支配者</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      乳海撹拌（あるいはアトリ仙の苦行）から生まれた月の神。ソーマ（甘露の汁）とも呼ばれ、植物の成長と潮の満ち引きを司ります。二十七人の妻（二十七宿の女神）を持ちながらロ―ヒニーだけを偏愛し、義父ダクシャに呪われて「満ち欠け」するようになった——夜空に見える月の変化の神話的起源です。
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>二十七人の妻——偏愛とダクシャの呪い</div>
+      <p>ダクシャはブラフマーの命で二十七人の娘を月の神チャンドラに嫁がせました。二十七人はそれぞれ天の一宿（ナクシャトラ）を司る星の女神です。しかしチャンドラは<span class="highlight">ローヒニーだけ</span>を寵愛し、他の妻たちのもとにはほとんど通いませんでした。</p>
+      <p>嘆いた二十六人の妻は父ダクシャに訴えます。ダクシャはチャンドラを何度も諭しましたが、改まりません。ついにダクシャは呪いました——<span class="highlight">「おまえは日に日に衰え、消えてゆくだろう」</span>。</p>
+      <p>チャンドラの輝きは毎日少しずつ失われ、十五日目には完全に消えてしまいました。植物は枯れ、潮は乱れ、夜の世界は暗闇に沈みます。神々がダクシャに呪いの撤回を求めましたが、聖仙の呪いは完全には消せません。妥協が成立し、<span class="highlight">十五日間は衰え、十五日間は回復する</span>——これが月の満ち欠けの起源となりました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>ターラーの略奪——月と木星の大戦争</div>
+      <p>チャンドラの放蕩はローヒニーへの偏愛にとどまりませんでした。師ブリハスパティ（木星の神・神々の導師）の妻<span class="highlight">ターラー</span>の美しさに心を奪われたチャンドラは、彼女を連れ去ってしまいます。</p>
+      <p>ブリハスパティは弟子を通じて返還を求めましたが、チャンドラは拒否。事態は三界を巻き込む大戦争<span class="highlight">ターラーカーマヤ</span>に発展しました。アスラ族がチャンドラ側に、神々がブリハスパティ側について戦い、最終的にブラフマーが介入してターラーを返還させます。</p>
+      <p>しかし戻ったターラーは妊娠していました。生まれた子は水星の神<span class="highlight">ブダ</span>（知恵の星）です。ブリハスパティもチャンドラも自分の子だと主張しましたが、ブラフマーがターラーに真実を問うと「チャンドラの子です」と答えました。ブダは後にイラーと結婚し、月の王朝（チャンドラヴァンシャ）の祖となります。パーンダヴァもカウラヴァも、この王朝の末裔です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>乳海撹拌と月の誕生——シヴァの額の三日月</div>
+      <p>チャンドラの誕生にはいくつかの伝承があります。最も有名なのは<span class="highlight">乳海撹拌</span>のとき、アムリタ（不死の甘露）とともに海から現れたという説です。別の伝承では、アトリ仙が激しい苦行によって体から発した光が凝縮して月になったとされます。</p>
+      <p>生まれたばかりのチャンドラは、<span class="highlight">ディグヴィジャヤ（世界征服の旅）</span>を行い、二十一人の女性を妻に迎え、各地で偉大なラージャスーヤ祭（王権確立の祭祀）を執行しました。その功績によりブラフマーは植物と海の支配権を与え、シヴァはチャンドラを<span class="highlight">自分の額</span>に載せました——シヴァが「チャンドラシェーカラ（月を戴く者）」と呼ばれる由来です。</p>
+      <p>ダクシャの呪いで衰えたチャンドラは、シヴァのもとに逃れ、保護を求めました。シヴァの額に載ることで呪いの力は軽減され、完全な消滅は免れたのです。シヴァの額の三日月——それは呪われた月が最も弱った姿であると同時に、再生の始まりの象徴でもあります。</p>
+      <div class="aside">月の満ち欠け、水星の誕生、シヴァの三日月——チャンドラにまつわる神話は、夜空のあらゆる現象をひとつの物語として織り上げています。</div>
+    </div>
+  </section>
+
+  <div class="nav-link" style="text-align: center; margin: 2.5rem 0 0;">
+    <a href="hindu-myths-4.html" style="display: inline-block; background: var(--accent-saffron); color: #fff; text-decoration: none; padding: 0.7em 2em; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.15s;">← 第四弾「誓いと宿命の物語」を読む</a>
+  </div>
+  <div class="nav-link">
+    <a href="hindu-myths-3.html">← 第三弾「英雄と炎の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-2.html">← 第二弾「続・ヒンドゥー神話入門」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="text-align: center; margin: 0.5rem 0 1rem;">
+    <a href="hindu-myths-index.html" style="color: var(--accent-indigo); font-size: 0.9rem;">📚 シリーズまとめページ</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、シヴァ・プラーナ、デーヴィー・バーガヴァタ、パドマ・プラーナ、バーガヴァタ・プラーナ、ハリヴァンシャ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
