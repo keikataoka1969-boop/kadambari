@@ -53,6 +53,7 @@ header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5
 .verse-block .verse-japanese { font-size: 0.95rem; line-height: 1.85; }
 footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); }
 @media (max-width: 600px) { body { padding: 1rem; } header h1 { font-size: 1.3rem; } .sutra-row { grid-template-columns: 1fr; } .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); } }
+a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
 </style>
 </head>
 <body>
@@ -77,7 +78,7 @@ footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 
     <div class="sutra-row">
       <div class="sutra-num">5.2.1</div>
       <div class="sanskrit">yathā kanyā svayam abhi-yoga-sādhyā na tathā dūtyā. para-striyas tu sūkṣma-bhāvā dūtī-sādhyā na tathātmanety ācāryāḥ.</div>
-      <div class="japanese">娘は自ら接近して成就できるが、仲介者（dūtī）ではできない。一方、他人の妻は微妙な心情（sūkṣma-bhāva）ゆえに仲介者を通じて成就でき、自分では同様にいかない、と師たちは言う。</div>
+      <div class="japanese">娘は自ら接近して成就できるが、<a href="kamasutra_5_4.html#duti-def" class="xref" title="5.4 使者の種類へ">仲介者（dūtī）</a>ではできない。一方、他人の妻は微妙な心情（sūkṣma-bhāva）ゆえに仲介者を通じて成就でき、自分では同様にいかない、と師たちは言う。</div>
     </div>
 
     <div class="sutra-row">
@@ -233,6 +234,7 @@ footer { text-align: center; margin-top: 3rem; padding-top: 1.5rem; border-top: 
 .chapter-nav .nav-prev{text-align:left;}
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
+a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
 </style>
 </body>
 </html>
