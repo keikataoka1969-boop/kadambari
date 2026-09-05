@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 第十弾 — 智謀と化身の物語</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --story-num: #D4882E;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'लीला';
+  position: absolute;
+  font-size: 14rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+.hero .vol-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2em 0.8em;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+.intro a {
+  color: var(--accent-indigo);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.deity-section {
+  margin: 2.5rem 0;
+}
+.deity-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--divider);
+}
+.deity-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.deity-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.deity-header .sanskrit {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+  font-weight: 400;
+}
+.deity-intro {
+  padding: 1rem 1.5rem 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.85;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.story {
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 1.2rem;
+  border-top: 1px solid var(--border);
+}
+.story:last-child {
+  border-bottom: 1px solid var(--border);
+  border-radius: 0 0 12px 12px;
+}
+.story-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.story-num {
+  font-size: 0.8rem;
+  color: var(--story-num);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-family: 'Georgia', serif;
+  flex-shrink: 0;
+}
+.story p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+.story p:last-child { margin-bottom: 0; }
+.highlight {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.story .aside {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--accent-gold);
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0;
+  background: var(--deity-bg);
+  border-radius: 0 6px 6px 0;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 2rem 0 0;
+}
+.nav-link a {
+  display: inline-block;
+  color: var(--accent-indigo);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .deity-header { padding: 1rem; gap: 0.8rem; }
+  .deity-icon { font-size: 2rem; }
+  .deity-header h2 { font-size: 1.2rem; }
+  .story { padding: 1.2rem 1rem 1rem; }
+  .hero { padding: 3rem 1rem 2.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vol-badge">第十弾</div>
+  <h1>智謀と化身の物語</h1>
+  <div class="line"></div>
+  <p class="sub">大洪水から世界を救った魚マツヤ、柱を裂いて暴君を引き裂いた人獅子ナラシンハ、復讐の賽で王朝を滅ぼした策士シャクニ、正義を知りながら聞き入れられなかった賢者ヴィドゥラ、愛と武勇を貫いたマニプルの女戦士チトラーンガダー、そして鋤で大地を耕したクリシュナの兄バラーマ——神の遊戯（リーラー）が織りなす六柱の物語を紹介します。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p>記念すべき第十弾のテーマは<strong>「智謀と化身」</strong>。ヴィシュヌの化身（アヴァターラ）から人間の謀略家まで、知恵と策略が世界を動かした物語を六柱で描きます。典拠は Vettam Mani 著『<a href="https://archive.org/details/puraabornicencyclopaedia" target="_blank" rel="noopener">Puranic Encyclopaedia</a>』です。</p>
+  </div>
+
+  <!-- ========== 1. マツヤ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🐟</span>
+      <div>
+        <h2>マツヤ</h2>
+        <div class="sanskrit">Matsya — 大洪水から世界を救った魚の化身</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>マツヤはヴィシュヌの第一の化身（アヴァターラ）で、世界を飲み込む大洪水から人類と聖典を救いました。小さな魚として現れ、やがて宇宙を覆う巨大な姿となるこの物語は、ノアの箱舟にも比される壮大な洪水神話です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>手のひらの小魚</div>
+      <p>太古の時代、聖王<span class="highlight">マヌ</span>（人類の始祖）が川で沐浴していると、掌に乗るほどの小さな魚が手のひらに飛び込んできました。「大きな魚に食べられてしまいます。どうか守ってください」と魚は懇願しました。マヌは慈悲から魚を水瓶に入れて持ち帰りました。</p>
+      <p>ところが翌日、魚は水瓶に収まりきらないほど成長していました。壺に移しても、池に放しても、湖に入れても、魚は<span class="highlight">際限なく大きくなり続け</span>ます。ついにマヌが海に放すと、魚は振り返って正体を明かしました——「私はヴィシュヌである。七日後に大洪水が来る。船を造り、七聖仙とすべての生き物の種子、そしてヴェーダの聖典を積み込みなさい」。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>大洪水と蛇の綱</div>
+      <p>七日後、予言の通り空が裂け、海が溢れ、<span class="highlight">三界を飲み込む大洪水</span>が始まりました。マヌは巨大な船に七聖仙たちと生き物の種子を乗せ、ヴェーダの写本を積み込みました。</p>
+      <p>暗闇と濁流の中、マツヤは<span class="highlight">一本の角を持つ黄金の巨大な魚</span>として現れました。マヌは大蛇<span class="highlight">ヴァースキ</span>を綱にしてマツヤの角に船を繋ぎ、マツヤは荒れ狂う海を引いて船を導きました。何日も何夜も、果てしない水の上を航海し続けたのです。</p>
+      <div class="aside">📖 マツヤ・プラーナでは、洪水の原因は悪魔ハヤグリーヴァがブラフマーの眠りの隙にヴェーダを盗んだことにあるとされます。マツヤはハヤグリーヴァを討ってヴェーダを取り戻し、ブラフマーに返した後に洪水からマヌを救いました。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>新世界の始まり</div>
+      <p>洪水が引いた後、マツヤはマヌをヒマラヤの頂に導きました。マヌは船を降ろし、七聖仙とともに<span class="highlight">新世界の創造</span>に着手します。マヌは祭祀を行い、水にギー（澄ましバター）と凝乳を捧げると、その中からイダーという女性が生まれました。マヌとイダーの子孫が新しい人類となり、世界は再び動き出しました。</p>
+      <p>マツヤはヴィシュヌの最初の化身として、破壊と再生のサイクルの中で<span class="highlight">知識（ヴェーダ）と生命の種子</span>を守り抜いたのです。世界が滅びる時に最も大切なものは何か——武力でも財宝でもなく、智慧と生命の連続性であるというメッセージが、この最古のアヴァターラ神話に込められています。</p>
+    </div>
+  </section>
+
+  <!-- ========== 2. ナラシンハ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🦁</span>
+      <div>
+        <h2>ナラシンハ</h2>
+        <div class="sanskrit">Narasiṃha — 柱から現れた人獅子の化身</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>ナラシンハはヴィシュヌの第四の化身で、「人でも獣でもない」姿をした守護者。暴君ヒラニヤカシプの「あらゆる条件を除外した不死の恩恵」の抜け穴を突くために現れた、論理と力の究極の融合体です。プラフラーダの信仰に応えた物語は第五弾で触れましたが、ここでは化身そのものの戦いを詳しく描きます。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>完璧な不死の恩恵——その抜け穴</div>
+      <p>ダイティヤ族の王<span class="highlight">ヒラニヤカシプ</span>は、弟ヒラニヤークシャがヴィシュヌの猪の化身ヴァラーハに殺されたことに激怒し、ブラフマーに途方もない苦行を捧げて恩恵を求めました。</p>
+      <p>「人間にも動物にも殺されず、神にも悪魔にも殺されず、屋内でも屋外でも殺されず、昼でも夜でも殺されず、地上でも空中でも殺されず、いかなる武器によっても殺されない」——ヒラニヤカシプは考えうるあらゆる死の条件を<span class="highlight">除外</span>しました。ブラフマーはその恩恵を与え、ヒラニヤカシプは事実上の不死を手に入れたと確信しました。三界を征服し、神々を奴隷とし、自らを唯一の神として崇拝を強制したのです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>「ヴィシュヌはこの柱にもいるのか」</div>
+      <p>しかしヒラニヤカシプの息子<span class="highlight">プラフラーダ</span>は、父の脅迫にもかかわらずヴィシュヌへの信仰を捨てませんでした。毒蛇の穴に投げ込まれ、崖から突き落とされ、火の中に入れられても、プラフラーダは微笑んでヴィシュヌの名を唱え続けました。</p>
+      <p>ついに激怒したヒラニヤカシプは宮殿の柱を指差して叫びました——「お前のヴィシュヌは<span class="highlight">この柱の中にもいるのか！</span>」。プラフラーダは静かに答えました——「はい、この柱にも、あの塵にも、あなたの中にも、どこにでもいらっしゃいます」。ヒラニヤカシプは拳で柱を砕きました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>すべての条件の「間」——黄昏の膝の上</div>
+      <p>轟音とともに柱が裂け、中から<span class="highlight">ナラシンハ</span>が現れました——上半身は獅子、下半身は人間。<span class="highlight">人でも獣でもない</span>姿です。ナラシンハはヒラニヤカシプを掴み上げ、宮殿の入口の<span class="highlight">敷居</span>の上に座りました——屋内でも屋外でもない場所。時刻は<span class="highlight">黄昏</span>——昼でも夜でもない時間。</p>
+      <p>ナラシンハはヒラニヤカシプを自分の<span class="highlight">膝</span>の上に横たえました——地上でも空中でもない場所。そして武器を使わず、自らの<span class="highlight">爪</span>でヒラニヤカシプの腹を引き裂きました——爪は武器ではありません。恩恵の「すべての条件」が一つ残らず満たされた上で、ヒラニヤカシプは死んだのです。</p>
+      <p>殺戮の後、ナラシンハの怒りは鎮まりません。神々も近づけない中、プラフラーダだけが恐れずに歩み寄り、ナラシンハの足元にひれ伏しました。父を殺した者の前で祈るプラフラーダの純粋な信仰に触れ、ナラシンハはようやく怒りを鎮めたのです。</p>
+      <div class="aside">📖 南インドのアーンドラ・プラデーシュ州にあるアホーバラム寺院は、ナラシンハが柱から出現した場所とされ、ナラシンハの九つの異なる姿が祀られています。また「ナラシンハ・カヴァチャ（ナラシンハの鎧）」という護身の祈りは、ヒンドゥー教徒の間で今も広く唱えられています。</div>
+    </div>
+  </section>
+
+  <!-- ========== 3. シャクニ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🎲</span>
+      <div>
+        <h2>シャクニ</h2>
+        <div class="sanskrit">Śakuni — 復讐の賽を振った謀略の達人</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>シャクニはガンダーラ国の王子で、ガーンダーリーの兄。妹が盲目の王に嫁がされた屈辱を胸に秘め、数十年にわたる謀略でクル王朝を内部から崩壊させました。賭博の達人であり、マハーバーラタにおける「大戦の設計者」とも呼ばれる人物です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>妹の屈辱——復讐の種</div>
+      <p>ガンダーラ国の王女ガーンダーリーがクル族の<span class="highlight">盲目のドリタラーシュトラ</span>に嫁がされた時、シャクニはこれを王家への侮辱と受け止めました。一説では、ガーンダーリーの星占いに「最初の夫は死ぬ」という凶兆があったため、先にヤギと儀式的に結婚させて凶兆を消した上でドリタラーシュトラに嫁がせたとも伝えられますが、クル族がこの事実を後から知り、ガンダーラ王家を投獄・虐待したとされています。</p>
+      <p>獄中で父王スバラは息子たちに告げました——「生き残った者が復讐を果たせ」。食事は全員分ではなく一人分しか与えられず、父と兄弟たちは<span class="highlight">すべての食事をシャクニに譲って</span>餓死していきました。最後に残ったシャクニに、父は自分の大腿骨で<span class="highlight">魔法の賽子</span>を造らせました——投げれば常に望んだ目が出る呪いの賽です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>賭博の罠——ユディシュティラの転落</div>
+      <p>シャクニはハスティナープラの宮廷に居座り、甥のドゥルヨーダナを巧みに操りました。パーンダヴァとカウラヴァの対立が深まる中、シャクニはドゥルヨーダナに「賭博でパーンダヴァの全てを奪え」と囁きます。新しい宮殿「マヤーサバー」の完成祝賀として賭博の席が設けられました。</p>
+      <p>ユディシュティラは法（ダルマ）の化身でありながら、賭博の誘いを断れませんでした——王が賭博の招きを拒むことは不名誉とされたからです。シャクニが賽を振るたびに<span class="highlight">呪いの賽子は必ずシャクニの望む目</span>を出しました。ユディシュティラは財宝を、領土を、弟たちを、自分自身を、そしてついには妻ドラウパディーまで賭けて負けました。</p>
+      <div class="aside">📖 この賭博の場面はマハーバーラタの中でもっとも緊迫した場面の一つです。ドラウパディーが満座の中で侮辱される場面は、大戦の直接的な引き金となりました。ビーシュマやドローナといった長老たちも、法の解釈に迷って介入できなかったことが悲劇を深めています。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>策士の最期——サハデーヴァの剣</div>
+      <p>十三年の追放を経て戻ったパーンダヴァに領土が返還されず、ついにクルクシェートラの大戦が勃発しました——まさにシャクニが数十年をかけて仕組んだ結果です。しかし大戦の終盤、シャクニの知略は戦場では通用しませんでした。</p>
+      <p>十八日間の戦争の終幕近く、パーンダヴァの末弟<span class="highlight">サハデーヴァ</span>がシャクニと対峙しました。サハデーヴァは大戦の前に誓いを立てていました——「賭博で母ドラウパディーを辱めた者を必ず討つ」。シャクニは最後まで策を弄しましたが、サハデーヴァの剣の前に倒れました。</p>
+      <p>父の骨で造った賽子は血に塗れて転がり、二度と目を出すことはありませんでした。シャクニの復讐は確かにクル王朝を滅ぼしましたが、その代償はガンダーラ国の滅亡であり、自らの命であり、そして<span class="highlight">数百万の兵士の命</span>でした。復讐が成就した時、勝者は一人もいなかったのです。</p>
+    </div>
+  </section>
+
+  <!-- ========== 4. ヴィドゥラ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">📜</span>
+      <div>
+        <h2>ヴィドゥラ</h2>
+        <div class="sanskrit">Vidura — 聞き入れられなかった正義の声</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>ヴィドゥラはクル王朝の宰相にして、パーンドゥとドリタラーシュトラの異母弟。死神ヤマがマーンダヴヤ聖仙の呪いにより人間として生まれた姿ともされ、ダルマ（法）の知識において並ぶ者がありませんでした。しかしその助言はほとんど常に無視されました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>侍女の子——王座なき知者</div>
+      <p>ヴィヤーサがアンビカーとアンバーリカーとの間にドリタラーシュトラ（盲目）とパーンドゥ（蒼白）を得た後、三度目に<span class="highlight">侍女</span>との間に生まれたのがヴィドゥラでした。三人の中で最も聡明でしたが、侍女の子という出自のために<span class="highlight">王位に就く資格がありません</span>でした。</p>
+      <p>代わりにヴィドゥラは宰相として王朝に仕えました。法と政治に関する知識はブリハスパティ（神々の導師）にも匹敵するとされ、ドリタラーシュトラの最も信頼する助言者でした——助言を聞き入れるかどうかは別として。ヴィドゥラの悲劇は、<span class="highlight">正しい答えを常に知っていながら、それを実行する権力を持たなかった</span>ことにあります。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>蠟の家の警告と賭博の抵抗</div>
+      <p>ドゥルヨーダナがパーンダヴァを蠟（ろう）で造った家に招き、火を放って暗殺しようとした時、ヴィドゥラは<span class="highlight">暗号</span>でユディシュティラに危険を知らせました。「金属を溶かすものは森を焼く。穴を掘る者は生き延びる」——この謎めいた言葉を解読したユディシュティラは、地下トンネルを掘って脱出に成功します。</p>
+      <p>さらに賭博の場面で、ヴィドゥラは必死にドリタラーシュトラを諫めました——「ドゥルヨーダナを止めなさい。この賭博は王朝の破滅をもたらす」。しかしドリタラーシュトラは息子への溺愛に目が眩み、聞き入れません。ドラウパディーが満座で辱められた時も、ヴィドゥラは<span class="highlight">「この行為は不法である」</span>と声を上げた数少ない長老の一人でしたが、法の解釈を巡る議論の中でかき消されてしまいました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>森への隠棲とユディシュティラへの合流</div>
+      <p>大戦の後、ヴィドゥラはドリタラーシュトラ、ガーンダーリー、クンティーとともに森に隠棲しました。森の中でヴィドゥラは厳しい苦行に入り、木のように立ったまま食を断って瞑想を続けました。</p>
+      <p>ある日、ユディシュティラが森を訪ねてヴィドゥラのもとに向かうと、ヴィドゥラは樹木のように痩せ細り、目を閉じたまま立っていました。ユディシュティラが声をかけた瞬間、ヴィドゥラは目を開き、ユディシュティラを<span class="highlight">じっと見つめました</span>。すると不思議なことに、ヴィドゥラの<span class="highlight">生命力がユディシュティラの体に流れ込みました</span>——ダルマ（法）の化身であるヤマの一部が、法の守護者であるユディシュティラに合流したのです。ヴィドゥラの肉体は崩れ落ち、魂はユディシュティラと一つになりました。</p>
+      <div class="aside">📖 「ヴィドゥラ・ニーティ」（ヴィドゥラの政策論）はマハーバーラタのウドヨーガ・パルヴァに収録された政治・道徳論で、古代インドの処世訓の傑作とされています。正しいことを言い続けながら聞き入れられなかった知者——その姿は現代の組織論においても普遍的な問いを投げかけます。</div>
+    </div>
+  </section>
+
+  <!-- ========== 5. チトラーンガダー ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">⚜️</span>
+      <div>
+        <h2>チトラーンガダー</h2>
+        <div class="sanskrit">Citrāṅgadā — 武勇と愛を貫いたマニプルの王女</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>チトラーンガダーはマニプル国（現在のインド北東部マニプル州）の王チトラヴァーハナの娘で、女戦士として育てられた王女。アルジュナとの恋と別れ、そして息子バブルヴァーハナをめぐる物語は、叙事詩の中でもっとも力強い女性像の一つです。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>武装した王女——男として育てられた娘</div>
+      <p>マニプル国の王チトラヴァーハナには息子がなく、娘チトラーンガダーを<span class="highlight">跡継ぎ</span>として育てました。チトラーンガダーは武術に秀で、弓と剣の腕前は周辺の王子たちを凌ぎました。チトラヴァーハナの先祖は火神アグニに「この王家には常に一人の子しか生まれない」という約束をしていたため、チトラーンガダーは王家の唯一の後継者でした。</p>
+      <p>チトラーンガダーは美しくも勇壮な女性で、<span class="highlight">「私は柔弱な姫ではない」</span>と自ら宣言する誇り高い戦士でした。父は彼女に結婚を強制しませんでしたが、「もし子が生まれたら、その子はマニプルの後継者とする」という条件を婿に課しました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>アルジュナとの出会いと三年の結婚</div>
+      <p>アルジュナは十二年間の巡礼の旅の途中、マニプルを訪れました。そこで出会ったチトラーンガダーに心を奪われます。アルジュナは王チトラヴァーハナに結婚を申し込み、チトラヴァーハナの条件——<span class="highlight">「生まれた子はマニプルに残す」</span>——を受け入れました。</p>
+      <p>二人は<span class="highlight">三年間</span>マニプルで共に暮らし、息子<span class="highlight">バブルヴァーハナ</span>が生まれました。しかし巡礼を続けなければならないアルジュナは、やがてマニプルを去ります。チトラーンガダーは泣いて引き留めることなく、息子を立派な王に育てることを誓い、凛として夫を見送りました。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>息子が父を殺す——そして蘇生</div>
+      <p>年月が流れ、バブルヴァーハナはマニプルの若き王に成長しました。ある日、アルジュナが<span class="highlight">馬祀祭の馬</span>を追ってマニプルに現れます。礼儀としてバブルヴァーハナが歓迎しようとすると、アルジュナは「クシャトリヤなら戦え。歓迎は不要だ」と挑発しました。</p>
+      <p>父子の戦いは壮絶を極め、ついにバブルヴァーハナの矢がアルジュナの胸を貫き、<span class="highlight">アルジュナは息絶えました</span>。父を殺してしまったことに絶望したバブルヴァーハナが自害しようとした時、チトラーンガダーが駆けつけます。彼女はアルジュナのもう一人の妻、ナーガ族の王女<span class="highlight">ウルーピー</span>に助けを求めました。ウルーピーはナーガ族に伝わる<span class="highlight">蘇生の宝石（マニ）</span>を使ってアルジュナを生き返らせたのです。</p>
+      <p>目覚めたアルジュナはバブルヴァーハナの武勇を讃え、チトラーンガダーの毅然とした母としての姿に敬意を表しました。戦士として息子を育て上げた母の誇りと、夫への変わらぬ愛が交差する物語です。</p>
+      <div class="aside">📖 チトラーンガダーはラビンドラナート・タゴールの戯曲『チトラーンガダー』（1892年）で再解釈され、「愛されるために自分を変える必要はない」という近代的テーマが加えられました。マニプル州では今も彼女は地域の誇りとして敬われています。</div>
+    </div>
+  </section>
+
+  <!-- ========== 6. バラーマ ========== -->
+  <section class="deity-section">
+    <div class="deity-header">
+      <span class="deity-icon">🪈</span>
+      <div>
+        <h2>バラーマ</h2>
+        <div class="sanskrit">Balarāma — 鋤を持つクリシュナの兄</div>
+      </div>
+    </div>
+    <div class="deity-intro">
+      <p>バラーマはクリシュナの兄であり、千頭の蛇シェーシャ（アーディシェーシャ）の化身とされます。鋤（ハラ）と杵（ムサラ）を武器とし、農耕と力の象徴。クリシュナの華やかな活躍の陰にいながら、独自の存在感を放つ「もう一人の神」です。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">01</span>子宮の移し替え——デーヴァキーの七番目の子</div>
+      <p>暴王カンサの予言——「デーヴァキーの八番目の子に殺される」——を恐れたカンサは、デーヴァキーの子を次々と殺していました。しかし七番目の胎児は、ヴィシュヌの力（ヨーガマーヤー）によってデーヴァキーの胎内から<span class="highlight">ロヒニー（ヴァスデーヴァのもう一人の妻）</span>の胎内に移されました。</p>
+      <p>こうしてバラーマはゴークラの牧畜民の中で、クリシュナの兄として育ちました。バラーマの名は「力の歓び」を意味し、幼少期から途方もない怪力を発揮します。<span class="highlight">サンカルシャナ（引き寄せる者）</span>とも呼ばれるのは、胎内から「引き出された」ことに由来しています。</p>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">02</span>ヤムナー河を引きずる</div>
+      <p>バラーマの怪力を示す最も有名な逸話は<span class="highlight">ヤムナー河</span>の物語です。ある時バラーマが酒宴の後にヤムナー河で水浴びをしようとしましたが、河が遠すぎました。酔ったバラーマは自分の鋤<span class="highlight">（ハラ）</span>をヤムナー河に引っかけ、力任せに引きずり寄せました。</p>
+      <p>ヤムナー河は女性の姿で現れ、「お許しください！」と懇願しましたが、バラーマは構わず河を引きずり続け、自分のいる場所まで流れを変えてしまいました。この伝承から、ヴリンダーヴァン近郊でヤムナー河が不自然に曲がっている場所は<span class="highlight">「バラーマが鋤で引いた跡」</span>と言い伝えられています。</p>
+      <div class="aside">📖 バラーマは酒を愛する豪快な人物として描かれ、クリシュナの知略的な性格と好対照をなしています。鋤を持つ姿は農耕神としての側面を示し、力と豊穣の両方の象徴です。ジャイナ教ではバラーマ（バラデーヴァ）は九人の英雄の一人として重要な位置を占めています。</div>
+    </div>
+
+    <div class="story">
+      <div class="story-title"><span class="story-num">03</span>大戦への不参加と最期</div>
+      <p>クルクシェートラの大戦において、バラーマは<span class="highlight">どちらの側にも立ちません</span>でした。バラーマはドゥルヨーダナに棍棒術を教えた師でありながら、弟クリシュナはパーンダヴァの側にいたのです。この板挟みの中で、バラーマは巡礼の旅に出ることを選びました。</p>
+      <p>しかし大戦の最終日、バラーマは戻ってきてビーマとドゥルヨーダナの棍棒の決闘を見届けました。ビーマがドゥルヨーダナの<span class="highlight">太もも</span>（腰より下）を棍棒で砕いた時——棍棒術の規則では腰より下への攻撃は禁じ手でした——バラーマは激怒し、ビーマを攻撃しようとしました。クリシュナが必死に制止してようやく収まったものの、バラーマは「不正な戦いだ」と吐き捨てて去りました。</p>
+      <p>大戦後三十六年、ヤーダヴァ族の同族相争いが始まった時、バラーマは海辺に座り瞑想に入りました。すると口から<span class="highlight">白い蛇</span>が出て海に消えていきました——シェーシャ蛇が天界に帰還したのです。バラーマの肉体は静かに崩れました。クリシュナの影に隠れがちながら、独自の正義感と豪放さを持った兄の物語です。</p>
+    </div>
+  </section>
+
+  <div class="nav-link" style="text-align: center; margin: 2.5rem 0 0;">
+    <a href="hindu-myths-9.html" style="display: inline-block; background: var(--accent-saffron); color: #fff; text-decoration: none; padding: 0.7em 2em; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.15s;">← 第九弾「因縁と再生の物語」を読む</a>
+  </div>
+  <div class="nav-link">
+    <a href="hindu-myths-8.html">← 第八弾「献身と選択の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-7.html">← 第七弾「試練と真実の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-6.html">← 第六弾「変容と覚醒の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-5.html">← 第五弾「呪いと恩寵の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-4.html">← 第四弾「誓いと宿命の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-3.html">← 第三弾「英雄と炎の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths-2.html">← 第二弾「続・ヒンドゥー神話入門」を読む</a>
+  </div>
+  <div class="nav-link" style="padding-top: 0.5rem;">
+    <a href="hindu-myths.html">← 第一弾「ヒンドゥー神話入門 — 神々の物語」を読む</a>
+  </div>
+  <div class="nav-link" style="text-align: center; margin: 0.5rem 0 1rem;">
+    <a href="hindu-myths-index.html" style="color: var(--accent-indigo); font-size: 0.9rem;">📚 シリーズまとめページ</a>
+  </div>
+
+  <div class="footer">
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia』に基づいて再構成しました。</p>
+    <p class="src">原典：マハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、シヴァ・プラーナ、バーガヴァタ・プラーナ、マツヤ・プラーナ、ナーラシンハ・プラーナ 他</p>
+  </div>
+
+</div>
+
+</body>
+</html>
