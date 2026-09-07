@@ -158,6 +158,9 @@ h3 {
 }
 
 .verse-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
   background: var(--sanskrit-bg);
   border: 1px solid var(--border-light);
   padding: 1rem 1.25rem;
@@ -219,6 +222,7 @@ tr:nth-child(even) td {
   body { padding: 1rem; }
   h1 { font-size: 1.35rem; }
 }
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -483,6 +487,7 @@ tr:nth-child(even) td {
 .chapter-nav .nav-prev{text-align:left;}
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>

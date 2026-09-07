@@ -19,7 +19,7 @@ h2{font-size:1.15rem;color:var(--highlight);margin:2.2rem 0 1rem;font-weight:600
 .jp{font-size:.98rem;padding:.5rem .3rem}
 .note-block{background:var(--note-bg);border-left:3px solid var(--accent-light);padding:.8rem 1rem;margin:1rem 0;border-radius:0 6px 6px 0;font-size:.9rem;color:var(--text-secondary)}
 .note-block strong{color:var(--accent)}
-.verse-block{background:var(--sanskrit-bg);border:1px solid var(--border-light);padding:1rem 1.2rem;margin:1.2rem 0;border-radius:6px;font-style:italic}
+.verse-block{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem;background:var(--sanskrit-bg);border:1px solid var(--border-light);padding:1rem 1.2rem;margin:1.2rem 0;border-radius:6px;}
 .verse-block .sk{background:transparent;padding:0}
 .verse-block .jp{font-style:normal}
 table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}
@@ -29,6 +29,7 @@ tr:nth-child(even) td{background:var(--table-stripe)}
 .colophon{text-align:center;margin-top:3rem;padding-top:1.5rem;border-top:2px solid var(--border);color:var(--text-secondary);font-size:.9rem}
 .group{margin:1.5rem 0}
 .group-title{font-size:.95rem;font-weight:600;color:var(--highlight);margin-bottom:.5rem;padding:.3rem .5rem;background:var(--note-bg);border-radius:4px}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -388,6 +389,7 @@ lābha-viśeṣāḥ pañcamo 'dhyāyaḥ.<br><br>
 .chapter-nav .nav-prev{text-align:left;}
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>

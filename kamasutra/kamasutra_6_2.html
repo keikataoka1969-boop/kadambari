@@ -23,7 +23,8 @@ h2{font-size:1.2rem;font-weight:600;color:var(--accent);margin:2rem 0 .8rem;padd
 .note-block ul{margin:.3rem 0;padding-left:1.2rem}
 .note-block li{font-size:.88rem;margin:.4rem 0;color:var(--text-secondary);line-height:1.7}
 .note-block li strong{color:var(--text)}
-.verse-block{background:var(--sanskrit-bg);border-left:3px solid var(--accent-light);padding:.8rem 1rem;margin:.8rem 0;border-radius:0 6px 6px 0}
+.verse-block{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem;background:var(--sanskrit-bg);border-left:3px solid var(--accent-light);padding:.8rem 1rem;margin:.8rem 0;border-radius:0 6px 6px 0}
+.verse-block .snum,.verse-block .vnum{grid-column:1/-1}
 .verse-block .sk{background:none;padding:0}
 .verse-block .jp{font-size:.9rem;color:var(--text-secondary)}
 table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
@@ -33,6 +34,7 @@ tr:nth-child(even){background:var(--table-stripe)}
 .ovx{overflow-x:auto}
 @media(max-width:640px){.sutra{grid-template-columns:1fr;gap:.5rem 0}.sk{margin-bottom:.3rem}body{padding:1rem}}
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -515,6 +517,7 @@ kāntānuvṛttaṃ dvitīyo 'dhyāyaḥ.<br>
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>

@@ -21,8 +21,8 @@ h3{font-size:1.05rem;font-weight:600;color:var(--accent);margin:1.8rem 0 .8rem}
 .jp{font-family:'Shippori Mincho','Noto Serif JP',serif;font-size:.95rem;line-height:1.85;color:var(--text)}
 .note-block{background:var(--note-bg);border-left:3px solid var(--accent-light);padding:1rem 1.25rem;margin:1.2rem 0;border-radius:0 6px 6px 0;font-size:.88rem;color:var(--text-secondary);line-height:1.8}
 .note-block strong{color:var(--accent);font-weight:600}
-.verse-block{background:var(--sanskrit-bg);border:1px solid var(--border-light);padding:1rem 1.25rem;margin:1rem 0;border-radius:6px;text-align:center}
-.verse-block .sk{display:block;margin-bottom:.5rem}
+.verse-block{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem;background:var(--sanskrit-bg);border:1px solid var(--border-light);padding:1rem 1.25rem;margin:1rem 0;border-radius:6px;}
+.verse-block .sk{display:block;
 .verse-block .jp{display:block;font-size:.9rem;color:var(--text-secondary)}
 .colophon{text-align:center;margin:2.5rem 0;padding:1.5rem;font-size:.9rem;color:var(--text-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .final-colophon{text-align:center;margin:3rem 0 1rem;padding:2rem;background:var(--note-bg);border:2px solid var(--accent);border-radius:8px;font-size:1rem;color:var(--accent);line-height:2}
@@ -33,6 +33,7 @@ tr:nth-child(even) td{background:var(--table-stripe)}
 .section-intro{font-size:.92rem;color:var(--text-secondary);margin:1rem 0 1.5rem;line-height:1.8;padding:.75rem 1rem;background:var(--note-bg);border-radius:6px}
 @media(max-width:700px){.sutra{grid-template-columns:1fr;gap:.5rem}.sk{padding-bottom:.5rem;border-bottom:1px dashed var(--border-light)}body{padding:1.25rem 1rem}h1{font-size:1.35rem}}
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -530,6 +531,7 @@ samāptaṃ sa-vyākhyānaṃ kāma-śāstram.<br><br>
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>

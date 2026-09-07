@@ -75,8 +75,11 @@ header .chapter-info { font-size: 0.8rem; color: var(--text-secondary); margin-t
 .note-box .note-label { font-weight: 600; color: var(--highlight); margin-right: 0.35em; font-size: 0.78rem; }
 
 .verse-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
   background: var(--sanskrit-bg); border: 1px solid var(--border-light); border-radius: 6px;
-  padding: 1rem; margin: 1rem 0; text-align: center;
+  padding: 1rem; margin: 1rem 0;
 }
 .verse-block .sanskrit-verse {
   font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem;
@@ -100,6 +103,7 @@ tr:nth-child(even) td { background: var(--table-stripe); }
   .sutra-grid .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
   header h1 { font-size: 1.4rem; }
 }
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -509,6 +513,7 @@ tr:nth-child(even) td { background: var(--table-stripe); }
 .chapter-nav .nav-prev{text-align:left;}
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>

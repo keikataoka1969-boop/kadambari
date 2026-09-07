@@ -181,6 +181,9 @@ header .chapter-info {
 }
 
 .verse-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
   background: var(--sanskrit-bg);
   border-radius: 6px;
   padding: 1.2rem 1.5rem;
@@ -262,6 +265,7 @@ header .chapter-info {
   body { padding: 1.2rem 1rem 3rem; }
   header h1 { font-size: 1.35rem; }
 }
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -757,6 +761,7 @@ header .chapter-info {
 .chapter-nav .nav-prev{text-align:left;}
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>

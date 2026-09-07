@@ -52,8 +52,12 @@ header .chapter-info { font-size: 0.8rem; color: var(--text-secondary); margin-t
 .note-box strong { color: var(--accent); font-weight: 600; }
 .note-box .note-label { font-weight: 600; color: var(--highlight); margin-right: 0.35em; font-size: 0.78rem; }
 
-.verse-block { background: var(--sanskrit-bg); border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem; margin: 1rem 0; text-align: center; }
-.verse-block .sanskrit-verse { font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 2; color: var(--accent); margin-bottom: 0.5rem; }
+.verse-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem; background: var(--sanskrit-bg); border: 1px solid var(--border-light); border-radius: 6px; padding: 1rem; margin: 1rem 0;
+}
+.verse-block .sanskrit-verse { font-family: 'Noto Serif Devanagari', serif; font-size: 0.95rem; line-height: 2; color: var(--accent);  }
 .verse-block .verse-trans { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8; }
 
 table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.85rem; }
@@ -69,6 +73,7 @@ tr:nth-child(even) td { background: var(--table-stripe); }
   header h1 { font-size: 1.35rem; }
 }
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -507,6 +512,7 @@ a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>

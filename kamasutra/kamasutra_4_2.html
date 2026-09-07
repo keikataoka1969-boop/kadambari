@@ -204,6 +204,9 @@ header .meta {
 }
 
 .verse-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1rem;
   background: var(--sanskrit-bg);
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -273,6 +276,7 @@ footer {
   .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
 }
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -751,6 +755,7 @@ a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted
 .chapter-nav .nav-next{text-align:right;}
 .chapter-nav .nav-disabled{visibility:hidden;}
 a.xref{color:var(--accent,#a0522d);text-decoration:none;border-bottom:1px dotted var(--accent-light,#c4845c);}a.xref:hover{color:var(--highlight,#8b4513);border-bottom-style:solid;}a.xref::after{content:"↗";font-size:0.65em;vertical-align:super;margin-left:0.1em;opacity:0.6;}
+@media(max-width:640px){.verse-block{grid-template-columns:1fr}}
 </style>
 </body>
 </html>
