@@ -181,6 +181,9 @@ header .chapter-info {
 }
 
 .verse-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1rem;
   background: var(--sanskrit-bg);
   border-radius: 6px;
   padding: 1.2rem 1.5rem;
@@ -189,6 +192,7 @@ header .chapter-info {
 }
 
 .verse-block .verse-label {
+  grid-column: 1 / -1;
   font-size: 0.75rem;
   font-weight: 600;
   color: var(--highlight);
@@ -201,7 +205,6 @@ header .chapter-info {
   font-size: 0.93rem;
   line-height: 1.8;
   color: var(--text);
-  margin-bottom: 0.6rem;
 }
 
 .verse-block .japanese-verse {
