@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>季節集 目次</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 600; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.03em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .intro { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.2rem; margin: 0 0 2rem; font-size: 0.9rem; color: var(--text-secondary); }
+  .intro p { margin: 0.4rem 0; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .verse-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0 0; border: 1px solid var(--border); border-radius: 4px 4px 0 0; overflow: hidden; background: var(--bg-card); }
+  .verse-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; display: flex; justify-content: space-between; gap: 1rem; }
+  .verse-num .metre { font-weight: 400; color: var(--text-secondary); }
+  .sanskrit { padding: 0.7rem 0.9rem; font-family: 'Noto Serif', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .sanskrit .pada { display: block; padding-left: 1.2em; text-indent: -1.2em; }
+  .sanskrit .pada:nth-child(even) { padding-left: 2.4em; }
+  .japanese { padding: 0.7rem 0.9rem; font-size: 0.93rem; line-height: 1.95; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 4px 4px; padding: 0.8rem 1rem; margin: 0 0 1.8rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.86rem; line-height: 1.8; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.25rem 0; }
+  .iast { font-family: 'Noto Serif', serif; font-style: italic; color: var(--highlight); }
+  .quote { display: block; margin: 0.3rem 0 0.3rem 1.2em; font-family: 'Noto Serif', serif; font-style: italic; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); line-height: 1.7; }
+  @media (max-width: 640px) {
+    body { padding: 1rem 1rem 3rem; }
+    .verse-block { grid-template-columns: 1fr; }
+    .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+    .header h1 { font-size: 1.4rem; }
+  }
+  .verse-num .gid { font-weight: 400; color: var(--text-secondary); margin-left: 0.6em; font-size: 0.72rem; }
+  .verse-block.interp { border-style: dashed; }
+  .verse-block.interp .verse-num { background: transparent; }
+  .note-section.interp { border-style: dashed; border-top: none; }
+  .section-label { font-size: 0.88rem; font-weight: 600; color: var(--accent); margin: 2rem 0 0.6rem; padding-left: 0.3rem; letter-spacing: 0.05em; }
+  .chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 1em; padding: 2em 0 1em; margin-top: 2em; border-top: 1px solid var(--border); font-size: 0.88em; }
+  .chapter-nav a { color: var(--accent); text-decoration: none; line-height: 1.4; }
+  .chapter-nav span { min-width: 6em; }
+  .sanskrit, .note-section li, .japanese { overflow-wrap: anywhere; }
+</style>
+
+<style>
+  table.toc { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: 0.92rem; }
+  table.toc th, table.toc td { border-bottom: 1px solid var(--border-light); padding: 0.55rem 0.5rem; text-align: left; vertical-align: top; }
+  table.toc th { color: var(--accent); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.05em; border-bottom: 2px solid var(--border); }
+  table.toc a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  table.toc .sub { color: var(--text-secondary); font-size: 0.82rem; }
+  .wrap { overflow-x: auto; }
+  h3 { color: var(--accent); font-size: 1.05rem; margin: 2.2rem 0 0.6rem; }
+  .pat { font-family: 'Noto Serif', serif; letter-spacing: 0.08em; white-space: nowrap; }
+  p.body { font-size: 0.92rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ṛtusaṃhāra — 季節集 対訳</h1>
+  <p class="subtitle">カーリダーサ作</p>
+  <p class="meta">底本：M. R. Kale 校訂本（第2版, 1967）・ヴェーンカターチャーリヤ・ウパーディエー注 <span class="iast">Bālabodhinī</span><br>本文対照：GRETIL 電子テキスト（Hellwig 入力）</p>
+</div>
+
+<div class="intro">
+  <p>カーリダーサ（4〜5世紀頃）に帰せられる『<span class="iast">Ṛtusaṃhāra</span>』（季節集）の全訳。インドの六つの季節（夏・雨季・秋・冬・寒季・春）を一歌ずつ詠い、全篇を恋する男から恋人への語りかけとして構成する。季節の風物はつねに恋情（<span class="iast">śṛṅgāra</span>）と結びつけて描かれ、各歌は読者への祝福で結ばれる。</p>
+  <p>各ページは、左にサンスクリット原文（IAST 転写、四句に分けて表示）、右に和訳、下に解説を置く。本文は Kale 本（ボンベイ系の流布本、六歌144節）に従い、GRETIL の電子テキストをもとに Kale 本の読みで改めた。解説は Kale の英文注（Notes）とサンスクリット注 <span class="iast">Bālabodhinī</span> を主な典拠とし、Kale 以外の観察には「訳者付記」と明記した。和訳は原文からの訳出である。</p>
+</div>
+
+<div class="chapter-title">
+  <h2>目次</h2>
+  <p class="ch-sub">全6歌 144節＋挿入詩節 14</p>
+</div>
+
+<div class="wrap"><table class="toc">
+<tr><th>歌</th><th>季節</th><th>詩節</th><th>冒頭</th></tr>
+<tr><td><a href="rtusamhara_1.html">第1歌</a><br><span class="sub iast">prathamaḥ sargaḥ</span></td><td>夏（<span class="iast">grīṣma</span>）<br><span class="sub">Jyeṣṭha・Āṣāḍha（6〜7月）</span></td><td>28節</td><td class="sub"><span class="iast">pracaṇḍasūryaḥ spṛhaṇīyacandramāḥ …</span></td></tr><tr><td><a href="rtusamhara_2.html">第2歌</a><br><span class="sub iast">dvitīyaḥ sargaḥ</span></td><td>雨季（<span class="iast">varṣā / prāvṛṣ</span>）<br><span class="sub">Śrāvaṇa・Bhādrapada（8〜9月）</span></td><td>28節<br><span class="sub">＋挿入 1</span></td><td class="sub"><span class="iast">sasīkarāmbhodharamattakuñjaras …</span></td></tr><tr><td><a href="rtusamhara_3.html">第3歌</a><br><span class="sub iast">tṛtīyaḥ sargaḥ</span></td><td>秋（<span class="iast">śarad</span>）<br><span class="sub">Āśvina・Kārttika（10〜11月）</span></td><td>26節<br><span class="sub">＋挿入 2</span></td><td class="sub"><span class="iast">kāśāṃśukā vikacapadmamanojñavaktrā …</span></td></tr><tr><td><a href="rtusamhara_4.html">第4歌</a><br><span class="sub iast">caturthaḥ sargaḥ</span></td><td>冬（<span class="iast">hemanta</span>）<br><span class="sub">Mārgaśīrṣa・Pauṣa（12〜1月）</span></td><td>18節<br><span class="sub">＋挿入 1</span></td><td class="sub"><span class="iast">navapravālodgamasasyaramyaḥ …</span></td></tr><tr><td><a href="rtusamhara_5.html">第5歌</a><br><span class="sub iast">pañcamaḥ sargaḥ</span></td><td>寒季（<span class="iast">śiśira</span>）<br><span class="sub">Māgha・Phālguna（2〜3月）</span></td><td>16節</td><td class="sub"><span class="iast">prarūḍhaśālīkṣucayāvṛtakṣitiṃ …</span></td></tr><tr><td><a href="rtusamhara_6.html">第6歌</a><br><span class="sub iast">ṣaṣṭhaḥ sargaḥ</span></td><td>春（<span class="iast">vasanta</span>）<br><span class="sub">Caitra・Vaiśākha（4〜5月）</span></td><td>28節<br><span class="sub">＋挿入 10</span></td><td class="sub"><span class="iast">praphullacūtāṅkuratīkṣṇasāyako …</span></td></tr>
+<tr><td><a href="rtusamhara_appendix.html">付録</a></td><td colspan="3">韻律一覧・挿入詩節一覧・Kale 本と GRETIL 本の詩節番号対照・採用した読み</td></tr>
+</table></div>
+
+<nav class="chapter-nav">
+<span></span>
+<span></span>
+<a href="rtusamhara_1.html">第1歌 夏 →</a>
+</nav>
+</body>
+</html>

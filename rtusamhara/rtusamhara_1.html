@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>季節集 第1歌 夏</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 600; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.03em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .intro { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.2rem; margin: 0 0 2rem; font-size: 0.9rem; color: var(--text-secondary); }
+  .intro p { margin: 0.4rem 0; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .verse-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0 0; border: 1px solid var(--border); border-radius: 4px 4px 0 0; overflow: hidden; background: var(--bg-card); }
+  .verse-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; display: flex; justify-content: space-between; gap: 1rem; }
+  .verse-num .metre { font-weight: 400; color: var(--text-secondary); }
+  .sanskrit { padding: 0.7rem 0.9rem; font-family: 'Noto Serif', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .sanskrit .pada { display: block; padding-left: 1.2em; text-indent: -1.2em; }
+  .sanskrit .pada:nth-child(even) { padding-left: 2.4em; }
+  .japanese { padding: 0.7rem 0.9rem; font-size: 0.93rem; line-height: 1.95; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 4px 4px; padding: 0.8rem 1rem; margin: 0 0 1.8rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.86rem; line-height: 1.8; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.25rem 0; }
+  .iast { font-family: 'Noto Serif', serif; font-style: italic; color: var(--highlight); }
+  .quote { display: block; margin: 0.3rem 0 0.3rem 1.2em; font-family: 'Noto Serif', serif; font-style: italic; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); line-height: 1.7; }
+  @media (max-width: 640px) {
+    body { padding: 1rem 1rem 3rem; }
+    .verse-block { grid-template-columns: 1fr; }
+    .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+    .header h1 { font-size: 1.4rem; }
+  }
+  .verse-num .gid { font-weight: 400; color: var(--text-secondary); margin-left: 0.6em; font-size: 0.72rem; }
+  .verse-block.interp { border-style: dashed; }
+  .verse-block.interp .verse-num { background: transparent; }
+  .note-section.interp { border-style: dashed; border-top: none; }
+  .section-label { font-size: 0.88rem; font-weight: 600; color: var(--accent); margin: 2rem 0 0.6rem; padding-left: 0.3rem; letter-spacing: 0.05em; }
+  .chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 1em; padding: 2em 0 1em; margin-top: 2em; border-top: 1px solid var(--border); font-size: 0.88em; }
+  .chapter-nav a { color: var(--accent); text-decoration: none; line-height: 1.4; }
+  .chapter-nav span { min-width: 6em; }
+  .sanskrit, .note-section li, .japanese { overflow-wrap: anywhere; }
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Ṛtusaṃhāra — 季節集 対訳</h1>
+  <p class="subtitle">カーリダーサ作</p>
+  <p class="meta">底本：M. R. Kale 校訂本（第2版, 1967）・ヴェーンカターチャーリヤ・ウパーディエー注 <span class="iast">Bālabodhinī</span><br>本文対照：GRETIL 電子テキスト（Hellwig 入力）</p>
+</div>
+
+<div class="intro">
+  <p><span class="iast">Ṛtusaṃhāra</span> は「季節（<span class="iast">ṛtu</span>）の集成（<span class="iast">saṃhāra</span>）」の意。夏・雨季・秋・冬（<span class="iast">hemanta</span>）・寒季（<span class="iast">śiśira</span>）・春の六季を一歌ずつ、計六歌で詠う。全篇が恋する男から恋人への語りかけ（<span class="iast">priye</span>「愛しい人よ」）という枠をもち、季節の風物はつねに恋情（<span class="iast">śṛṅgāra</span>）と結びつけて描かれる。</p>
+  <p>Kale によれば、題名は「季節が集められた〔作品〕」という所有複合語（<span class="iast">bahuvrīhi</span>）とも解せ、その場合は <span class="iast">kāvyam</span> に合わせて中性形 <span class="iast">Ṛtusaṃhāram</span> とするのがよい。</p>
+</div>
+
+<div class="chapter-title">
+  <h2>prathamaḥ sargaḥ — 第1歌</h2>
+  <p class="ch-sub">夏（<span class="iast">grīṣma</span>）の描写</p>
+</div>
+
+<p class="section-label">夏の訪れと夏の楽しみ（1–9節）</p>
+<!-- 1.1 -->
+<div class="verse-block" id="v1-1.1">
+  <div class="verse-num"><span>1.1</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">pracaṇḍasūryaḥ spṛhaṇīyacandramāḥ</span>
+    <span class="pada">sadāvagāhakṣamavārisaṃcayaḥ |</span>
+    <span class="pada">dināntaramyo 'bhyupaśāntamanmatho</span>
+    <span class="pada">nidāghakālo 'yam upāgataḥ priye ||</span>
+  </div>
+  <div class="japanese">太陽は烈しく、月は待ち焦がれられ、豊かな水はいつでも身を浸すにふさわしく、夕暮れは心地よく、恋の想いもいくらか鎮まる──愛しい人よ、この夏の季節がやって来た。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>夏の季節そのものを、五つの所有複合語（<span class="iast">bahuvrīhi</span>）で一気に形容する導入の詩節。<span class="iast">pracaṇḍasūryaḥ</span>「太陽が烈しい〔季節〕」、<span class="iast">spṛhaṇīyacandramāḥ</span>「月が望ましい〔季節〕」と、昼の暑さと夜の涼しさが対になっている。</li>
+    <li><span class="iast">sadāvagāhakṣama°</span>：「一日中いつ水に入っても、心地よく体を損なうこともない〔水〕」。ほかの季節にはこうはいかない。Kale は「いくら浴びても尽きないほど水が多い」と取るのを退け、強調点は暑さと、そのためにいつも水浴びしたくなることにあると言う。GRETIL 本は <span class="iast">-kṣata-</span>（浴びて減った）と読むが、Kale も注釈者も採らない。水を減らすのは水浴びではなく日の熱だからで、1.22 <span class="iast">dinakaraparitāpakṣīṇatoyāḥ</span>「日の熱で水の涸れた」がその証とされる。</li>
+    <li><span class="iast">dināntaramyaḥ</span>：<span class="iast">dinānte ramyaḥ</span>「日の終わりに心地よい」と分けるのが文法上は素直。ほかの形容と揃えて <span class="iast">dināntāḥ ramyāḥ yasmin</span>「夕暮れが心地よい〔季節〕」とも取れる。</li>
+    <li><span class="iast">abhyupaśāntamanmathaḥ</span>：恋心がすっかり消えるわけではなく、春と比べて弱まるだけ（3節・28節では夏の夜の恋が詠われる）。『ラグ・ヴァンシャ』XVI.50 <span class="iast">kāmo vasantātyayamandavīryaḥ</span>「春が過ぎて力の衰えた愛神」と比べよ。</li>
+    <li><span class="iast">nidāgha</span>（&lt; <span class="iast">ni-√dah</span>「焼き尽くす」）は <span class="iast">Jyeṣṭha</span> と <span class="iast">Āṣāḍha</span> の二か月、おおよそ6〜7月にあたる。<span class="iast">priye</span>「愛しい人よ」という呼びかけは、この後も 2.1、4.10、6.18 などに折々現れる。</li>
+    <li>類例：『シャクンタラー』I.3 <span class="quote">subhagasalilāvagāhāḥ pāṭalasaṃsargasurabhivanavātāḥ |<br>pracchāyasulabhanidrā divasāḥ pariṇāmaramaṇīyāḥ ||</span>「水浴みは快く、森の風はパータラの花に触れて香り、木陰ではたやすくまどろめ、暮れ方の美しい日々」</li>
+  </ul>
+</div>
+<!-- 1.2 -->
+<div class="verse-block" id="v1-1.2">
+  <div class="verse-num"><span>1.2</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">niśāḥ śaśāṅkakṣatanīlarājayaḥ</span>
+    <span class="pada">kvacidvicitraṃ jalayantramandiram |</span>
+    <span class="pada">maṇiprakārāḥ sarasaṃ ca candanaṃ</span>
+    <span class="pada">śucau priye yānti janasya sevyatām ||</span>
+  </div>
+  <div class="japanese">月に闇の筋を払われた夜々、ところどころに趣ある噴水の館、さまざまな宝石、潤いを帯びた白檀──愛しい人よ、夏にはこれらが人々に好んで用いられる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">śaśāṅkakṣatanīlarājayaḥ</span>：「月（<span class="iast">śaśāṅka</span>＝兎を印にもつもの）によって、闇（<span class="iast">nīla</span>）の筋（<span class="iast">rāji</span>）が裂かれた〔夜〕」。前の詩節の「待ち焦がれられる月」を受けている。</li>
+    <li><span class="iast">jalayantramandira</span>：<span class="iast">jalayantra</span>「水の仕掛け」は噴水のこと。それを据えた建物、つまり噴水のある夏の館。</li>
+    <li><span class="iast">maṇiprakārāḥ</span>：<span class="iast">prakāra</span> は「種類」。真珠などある種の宝石には体を冷やす力があると信じられ、暑さをしのぐために身につけた。『ウッタララーマチャリタ』I.38 <span class="iast">ayaṃ kaṇṭhe bāhuḥ śiśiramasṛṇo mauktikasaraḥ</span>「首にかかるこの腕は、冷たくなめらかな真珠の首飾り」参照。</li>
+    <li><span class="iast">śuci</span>：ここでは「暑季」。<span class="iast">yānti</span> は四つの主語を合わせた数に一致して複数形になる。</li>
+    <li>類例：『ラグ・ヴァンシャ』XIX.45。恋人たちが白檀を塗り、真珠の飾りをつけた「夏の装い」で王に仕える場面。</li>
+  </ul>
+</div>
+<!-- 1.3 -->
+<div class="verse-block" id="v1-1.3">
+  <div class="verse-num"><span>1.3</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">suvāsitaṃ harmyatalaṃ manoharaṃ</span>
+    <span class="pada">priyāmukhocchvāsavikampitaṃ madhu |</span>
+    <span class="pada">sutantrigītaṃ madanasya dīpanaṃ</span>
+    <span class="pada">śucau niśīthe 'nubhavanti kāminaḥ ||</span>
+  </div>
+  <div class="japanese">よい香りをたきしめた美しい高殿の屋上、恋人の口もとの吐息にさざめく酒、よく張った弦にのせた歌──どれも恋の火をかき立てる──夏の夜、恋する男たちはこれらを味わう。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>注釈 <span class="iast">Bālabodhinī</span> によれば、この詩節から7節にわたって夏の夜の情景が詠われる。</li>
+    <li><span class="iast">harmyatala</span>：<span class="iast">tala</span> はここでは <span class="iast">pṛṣṭha</span>「上面」。邸宅の平屋根で、夏の夜はここで涼む。単数形は種類全体を表す（<span class="iast">jātāv ekavacanam</span>）。</li>
+    <li><span class="iast">madhu</span>（中性）は「酒」。<span class="iast">priyāmukhocchvāsavikampita</span>「恋人が口元で吐く息にさざ波立つ」から、二人が一つの杯を分け合うさまが浮かぶ。5.10 <span class="iast">pibanti madyaṃ madanīyam uttamam</span> 参照。</li>
+    <li><span class="iast">sutantrigītam</span>：「よい弦（<span class="iast">tantrī</span>）をもつ〔ヴィーナーなどの〕楽器に合わせた歌」。<span class="iast">madanasya dīpanam</span>「愛神を燃え立たせるもの」は三つの名詞すべてにかかるとも、歌だけにかかるとも取れる。『クマーラサンバヴァ』VIII.77 では酒が <span class="iast">anaṅgadīpana</span> と呼ばれる。</li>
+    <li><span class="iast">niśītha</span>：「真夜中」の意味と、単に「夜」の意味がある。ここで真夜中に限る理由はないので、Kale は「夜」と取る。</li>
+  </ul>
+</div>
+<!-- 1.4 -->
+<div class="verse-block" id="v1-1.4">
+  <div class="verse-num"><span>1.4</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">nitambabimbaiḥ sadukūlamekhalaiḥ</span>
+    <span class="pada">stanaiḥ sahārābharaṇaiḥ sacandanaiḥ |</span>
+    <span class="pada">śiroruhaiḥ snānakaṣāyavāsitaiḥ</span>
+    <span class="pada">striyo nidāghaṃ śamayanti kāminām ||</span>
+  </div>
+  <div class="japanese">絹の衣と腰帯をまとった丸い腰、首飾りなどの飾りをつけ白檀を塗った乳房、湯浴みの香料が香る髪──これらで女たちは恋人の暑さを鎮める。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">nitambabimba</span>：<span class="iast">bimba</span>「円盤・球」は体の丸みを帯びた部分によく使う語で、ここでは丸い腰。<span class="iast">dukūla</span> は上質の絹布。異読 <span class="iast">sudukūla-</span>。</li>
+    <li><span class="iast">sahārābharaṇaiḥ</span>：「首飾りという装身具をつけた」（注釈）とも、「首飾りと〔ほかの〕装身具をつけた」とも取れる。<span class="iast">hāra</span> は花輪の場合も真珠の首飾りの場合もある。</li>
+    <li><span class="iast">snānakaṣāya</span>：<span class="iast">kaṣāya</span> はここでは <span class="iast">aṅgarāga</span>、つまり樹脂などから作る化粧香料。湯浴みのときに用いる。</li>
+    <li><span class="iast">nidāgha</span> はここでは季節ではなく「暑さ・ほてり」。暑さで弱まった恋心（1.1）が、女たちの涼やかな姿によって逆に慰められるという趣向。</li>
+  </ul>
+</div>
+<!-- 1.5 -->
+<div class="verse-block" id="v1-1.5">
+  <div class="verse-num"><span>1.5</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">nitāntalākṣārasarāgarañjitair</span>
+    <span class="pada">nitambinīnāṃ caraṇaiḥ sanūpuraiḥ |</span>
+    <span class="pada">pade pade haṃsarutānukāribhir</span>
+    <span class="pada">janasya cittaṃ kriyate samanmatham ||</span>
+  </div>
+  <div class="japanese">ラックの紅で深く染められ、足輪をつけて、一歩ごとに白鳥の鳴き声をまねる、豊かな腰の女たちの足──それによって人の心は恋に燃え立たせられる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">lākṣārasa</span>：ある種の樹皮からにじみ出る樹脂（ラック）の赤い汁。足を染めるのに用いた（『シャクンタラー』IV <span class="iast">caraṇopabhogasulabho lākṣārasaḥ</span>）。衣を染めることもある（6.13）。</li>
+    <li>異読 <span class="iast">-rāgalohitaiḥ</span> にすれば <span class="iast">rāga</span>（色）と <span class="iast">rañjita</span>（染められた）の意味の重なりは避けられる。しかし本文の読みには <span class="iast">-rāga-rañjitair</span> という快い頭韻（<span class="iast">anuprāsa</span>）がある、と Kale は言う。</li>
+    <li><span class="iast">haṃsarutānukāribhiḥ</span>：歩くときの足輪の音を白鳥の声にたとえるのは定型。『ヴィクラモールヴァシーヤ』IV.14 <span class="iast">kūjitaṃ rājahaṃsānāṃ nedaṃ nūpuraśiñjitam</span>「これは王白鳥の鳴き声で、足輪の鈴の音ではない」、本作 3.1 参照。厳密には白鳥の声をまねるのは足ではなく足の立てる音で、<span class="iast">mardala</span>「太鼓」を太鼓の音の意味で使う（2.1）のと同じ換喩である。</li>
+    <li><span class="iast">samanmatham</span>：「愛神（<span class="iast">manmatha</span>）を伴った〔心〕」、つまり恋心をかき立てられた心。受動の構文で、女たちの足を道具格に置いている。</li>
+  </ul>
+</div>
+<!-- 1.6 -->
+<div class="verse-block" id="v1-1.6">
+  <div class="verse-num"><span>1.6</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">payodharāścandanapaṅkacarcitās</span>
+    <span class="pada">tuṣāragaurārpitahāraśekharāḥ |</span>
+    <span class="pada">nitambadeśāśca sahemamekhalāḥ</span>
+    <span class="pada">prakurvate kasya mano na sotsukam ||</span>
+  </div>
+  <div class="japanese">白檀の泥を塗り、その頂に雪のように白い首飾りをかけた乳房、そして黄金の腰帯をめぐらした腰──これらが誰の心をあこがれで満たさずにいようか。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">candanapaṅka</span>：「白檀の泥」。泥のように厚く湿らせた白檀の練り香。</li>
+    <li><span class="iast">tuṣāragaurārpitahāraśekharāḥ</span> は扱いにくい複合語。Kale は <span class="iast">śekharārpitatuṣāragaurahārāḥ</span>「頂（<span class="iast">śekhara</span>＝先端）に雪のように白い首飾りが置かれた」の意味と見る（2.25 <span class="iast">dadhati varakucāgrair unnatair hārayaṣṭim</span> 参照）。注釈 <span class="iast">Bālabodhinī</span> は <span class="iast">śekhara</span> を「最上の」と取り、「雪のように白い最上の首飾りが置かれた」と解する。この用法は珍しいが、3.20 <span class="iast">kalanūpuraśekharaiḥ</span> に例がある。<span class="iast">śekhara</span> を花冠と取ると <span class="iast">hāra</span> と意味が重なってしまう。</li>
+    <li><span class="iast">kasya … na</span>：反語。「誰の心を〔あこがれに〕満たさないことがあろう、すべての人の心を満たす」（<span class="iast">kasya na prakurvate, api tu sarvasyaiva</span>）。注釈はこれを <span class="iast">kāku</span>（語調による反語）と呼ぶ。</li>
+    <li>この詩節は4節の発想をほぼ繰り返している（Kale・注釈とも指摘）。</li>
+  </ul>
+</div>
+<!-- 1.7 -->
+<div class="verse-block" id="v1-1.7">
+  <div class="verse-num"><span>1.7</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">samudgatasvedacitāṅgasaṃdhayo</span>
+    <span class="pada">vimucya vāsāṃsi gurūṇi sāmpratam |</span>
+    <span class="pada">staneṣu tanvaṃśukamunnatastanā</span>
+    <span class="pada">niveśayanti pramadāḥ sayauvanāḥ ||</span>
+  </div>
+  <div class="japanese">噴き出す汗に手足の節々をしとどに濡らし、胸高く若さあふれる女たちは、今や重い衣を脱ぎ捨て、乳房に薄い布をまとう。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">cita</span>：「満ちた、覆われた」（<span class="iast">vyāpta</span>）。<span class="iast">samudgatasvedacitāṅgasaṃdhayaḥ</span>「噴き出した汗で四肢の関節が覆われた」。</li>
+    <li><span class="iast">sāmpratam</span>「今」は、注釈によれば「この夏の季節に」。重い衣（<span class="iast">gurūṇi vāsāṃsi</span>）と薄い布（<span class="iast">tanv aṃśukam</span>）の対比で、季節の衣替えを描く。寒季（5.2 <span class="iast">gurūṇi vāsāṃsi</span>）や春（6.13）にも同じ語が現れ、季節ごとの装いの移り変わりが本作の繰り返し描く主題の一つになっている。</li>
+    <li><span class="iast">unnatastanāḥ</span>：Kale は、所有複合語の女性形としては <span class="iast">unnatastanā</span> と <span class="iast">unnatastanī</span> の両形がありうると注意している。</li>
+  </ul>
+</div>
+<!-- 1.8 -->
+<div class="verse-block" id="v1-1.8">
+  <div class="verse-num"><span>1.8</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">sacandanāmbuvyajanodbhavānilaiḥ</span>
+    <span class="pada">sahārayaṣṭistanamaṇḍalārpaṇaiḥ |</span>
+    <span class="pada">savallakīkākaligītanisvanair</span>
+    <span class="pada">vibodhyate supta ivādya manmathaḥ ||</span>
+  </div>
+  <div class="japanese">白檀水に浸した扇が起こす風、首飾りをかけた丸い乳房を押し当てること、ヴァッラキー琴のひそやかな調べと歌声──これらによって今、眠った恋人を起こすように、眠っていた愛神が目覚めさせられる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">hārayaṣṭi</span>：<span class="iast">yaṣṭi</span> は本来、首飾り（<span class="iast">hāra</span>）を構成する一本一本の糸。転じて首飾り全体を指す。<span class="iast">sahārayaṣṭistanamaṇḍalārpaṇaiḥ</span>「首飾りをつけた丸い乳房を〔眠っている恋人に〕押し当てること」。</li>
+    <li><span class="iast">vallakī</span> は琴（リュート）の一種。<span class="iast">kākali</span> は低く柔らかな音。注釈は、アマラ辞典の <span class="iast">kākalī tu kale sūkṣme</span> は長母音形だが、短母音の <span class="iast">kākali</span> という語も別にあると述べる。</li>
+    <li><span class="iast">supta iva</span>：「眠っている〔恋人〕のように」。女たちがこうした手立てで眠る恋人を起こすように、夏のあいだ眠っていた恋心（1.1 <span class="iast">abhyupaśāntamanmathaḥ</span>）が呼び覚まされる。注釈は、主君の起こし方を述べたボージャの詩句を引く（マッリナータも『メーガドゥータ』II.37 の注で引用）：<span class="iast">mṛdubhir mardanaiḥ pāde śītalair vyajanais tanau | śrutau ca madhurair gītair nidrāto bodhayet prabhum</span>「足をやさしくさすり、体を冷たい扇であおぎ、耳に甘い歌を聞かせて、主君を眠りから起こすべし」。</li>
+  </ul>
+</div>
+<!-- 1.9 -->
+<div class="verse-block" id="v1-1.9">
+  <div class="verse-num"><span>1.9</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">siteṣu harmyeṣu niśāsu yoṣitāṃ</span>
+    <span class="pada">sukhaprasuptāni mukhāni candramāḥ |</span>
+    <span class="pada">vilokya nūnaṃ bhṛśamutsukaściraṃ</span>
+    <span class="pada">niśākṣaye yāti hriyeva pāṇḍutām ||</span>
+  </div>
+  <div class="japanese">白い高殿で夜ごと安らかに眠る女たちの顔を、月はきっと心ひかれるあまり長く見つめていたのだろう。夜が明けるころ、恥じらうかのように青ざめてゆく。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">sukhaprasuptāni</span>：「誰かに見つめられているとも知らず、安らかに眠った〔顔〕」。厳密に眠っているのは顔ではなく女たちである。</li>
+    <li><span class="iast">nūnam</span>「きっと」と <span class="iast">iva</span>「かのように」が示すとおり、夜明けに月が白むのを恥じらいのためとする詩的推量（<span class="iast">utprekṣā</span>）。Kale の説明によると、月は自分にまさる美しさに見とれて見つめ続けたが、眠る女の顔を盗み見ていたことに気づいて恥じ、青ざめた。</li>
+    <li>韻律：<span class="iast">yāti hriyeva</span> の <span class="iast">ti</span> は後に二重子音 <span class="iast">hr</span> が続くので本来は重音節になるが、ここでは軽音節が必要である。Kale は、特定の子音結合の前では例外的に軽音節と見なしてよいという規則で許容されると述べ、『シシュパーラヴァダ』X.60 <span class="iast">prāpya nābhihradamajjanam</span> を例に挙げる。</li>
+    <li>注釈は異読 <span class="iast">vilokya niryantraṇam</span>「遠慮なく見つめて」も挙げる。</li>
+  </ul>
+</div>
+<p class="section-label">灼けつく大地と獣たち（10–21節）</p>
+<!-- 1.10 -->
+<div class="verse-block" id="v1-1.10">
+  <div class="verse-num"><span>1.10</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">asahyavātoddhatareṇumaṇḍalā</span>
+    <span class="pada">pracaṇḍasūryātapatāpitā mahī |</span>
+    <span class="pada">na śakyate draṣṭumapi pravāsibhiḥ</span>
+    <span class="pada">priyāviyogānaladagdhamānasaiḥ ||</span>
+  </div>
+  <div class="japanese">耐えがたい風に砂塵の渦が巻き上がり、烈しい日差しに焼かれた大地──恋人と離れた別離の火に心を焦がす旅人たちは、それを見ることさえできない。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>Kale によれば、ここから昼の灼熱の描写が始まる。<span class="iast">asahyavātoddhatareṇumaṇḍalā</span>「耐えがたい風によって砂塵の輪が巻き上げられた〔大地〕」。激しい突風が渦巻く砂の柱を立てるのは、この季節によく見る光景である。</li>
+    <li><span class="iast">pravāsin</span>「旅に出ている者」。家に恋人を残して遠くにいる男は、季節詩の定番の人物で、どの季節も彼の別離の苦しみをつのらせる。注釈は「見ることさえできないのだから、まして歩いて行くことなど言うまでもない」と補う。</li>
+    <li>構文：能動の <span class="iast">pravāsino mahīṃ draṣṭuṃ na śaknuvanti</span> を受動にすると、<span class="iast">pravāsibhir mahī draṣṭuṃ na śakyate</span> とも <span class="iast">pravāsibhir mahīṃ draṣṭuṃ na śakyate</span> とも言える。前者のほうが一般的である（Apte <span class="iast">Guide</span> §179）。</li>
+  </ul>
+</div>
+<!-- 1.11 -->
+<div class="verse-block" id="v1-1.11">
+  <div class="verse-num"><span>1.11</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">mṛgāḥ pracaṇḍātapatāpitā bhṛśaṃ</span>
+    <span class="pada">tṛṣā mahatyā pariśuṣkatālavaḥ |</span>
+    <span class="pada">vanāntare toyamiti pradhāvitā</span>
+    <span class="pada">nirīkṣya bhinnāñjanasaṃnibhaṃ nabhaḥ ||</span>
+  </div>
+  <div class="japanese">烈しい日差しにひどく焼かれ、ひどい渇きに上顎まで乾ききった獣たちは、砕いた墨のように黒い空を見て、水だと思い込み、別の森へと駆け出していく。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">mṛgāḥ</span>：ここでは鹿に限らず獣一般（Kale）。</li>
+    <li><span class="iast">tṛṣā</span> は女性名詞 <span class="iast">tṛṣ</span>「渇き」の具格。<span class="iast">tṛṣā</span> という女性名詞も別にある。<span class="iast">pariśuṣkatālavaḥ</span>「上顎（<span class="iast">tālu</span>）がすっかり乾いた」。</li>
+    <li><span class="iast">vanāntare</span>＝<span class="iast">anyasmin vane</span>「別の森に」。<span class="iast">pradhāvitāḥ</span> には <span class="iast">bhavanti</span> を補う。</li>
+    <li><span class="iast">bhinnāñjana</span>「砕いた <span class="iast">añjana</span>（目に引く黒い顔料）」。2.2 の <span class="iast">prabhinna</span> も参照。遠くの暗い空を水と見誤る、陽炎・蜃気楼の情景である。</li>
+  </ul>
+</div>
+<!-- 1.12 -->
+<div class="verse-block" id="v1-1.12">
+  <div class="verse-num"><span>1.12</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">savibhramaiḥ sasmitajihmavīkṣitair</span>
+    <span class="pada">vilāsavatyo manasi pravāsinām |</span>
+    <span class="pada">anaṅgasaṃdīpanamāśu kurvate</span>
+    <span class="pada">yathā pradoṣāḥ śaśicārubhūṣaṇāḥ ||</span>
+  </div>
+  <div class="japanese">月を美しい飾りとする宵が〔旅人の恋心を燃やす〕ように、艶めく女たちは、戯れを含んで微笑みながら送る流し目で、旅人の心にたちまち恋の火を燈す。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">vibhrama</span>「戯れ・しな」。<span class="iast">jihma</span>「斜めの、曲がった」、つまり流し目。<span class="iast">pradoṣa</span> は夜の初め、宵。</li>
+    <li><span class="iast">śaśicārubhūṣaṇāḥ</span>「月を美しい飾りとする〔宵〕」。女たちにかけて「月のように美しい飾りをつけた」とも読め、直喩の両項にかかる語になっている。</li>
+    <li>Kale は、10節から始まった真昼の暑さの描写のなかで、この詩節は場違いに見えると指摘している。</li>
+  </ul>
+</div>
+<!-- 1.13 -->
+<div class="verse-block" id="v1-1.13">
+  <div class="verse-num"><span>1.13</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">ravermayūkhair abhitāpito bhṛśaṃ</span>
+    <span class="pada">vidahyamānaḥ pathi taptapāṃsubhiḥ |</span>
+    <span class="pada">avāṅmukho jihmagatiḥ śvasanmuhuḥ</span>
+    <span class="pada">phaṇī mayūrasya tale niṣīdati ||</span>
+  </div>
+  <div class="japanese">日の光にひどく焼かれ、道では熱い砂に焦がされて、蛇は顔を地に伏せ、身をくねらせて這い、しきりに喘ぎながら、孔雀の〔影の〕下にうずくまる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">avāṅmukhaḥ</span>：<span class="iast">avāk</span>「下へ」。<span class="iast">jihmagatiḥ</span>「くねって進む」は爬虫類の習性。</li>
+    <li>蛇と孔雀は生まれつきの天敵だが、涼しい隠れ場を求める必要があまりに切実なため、蛇はそれさえ忘れている。孔雀が蛇を襲わない理由は16節で語られる。ここから20節まで、暑さのために天敵どうしが争いをやめる情景が続く。</li>
+    <li>この詩節は『スバーシターヴァリ』（1703番）に作者名なしで引かれ（ピーターソン本は <span class="iast">avākphaṇo jihmagatiḥ</span>）、『シャールンガダラ・パッダティ』（3838番）にも <span class="iast">avākphaṇaḥ</span> の読みで引かれている。</li>
+  </ul>
+</div>
+<!-- 1.14 -->
+<div class="verse-block" id="v1-1.14">
+  <div class="verse-num"><span>1.14</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">tṛṣā mahatyā hatavikramodyamaḥ</span>
+    <span class="pada">śvasanmuhur dūravidāritānanaḥ |</span>
+    <span class="pada">na hantyadūre 'pi gajānmṛgeśvaro</span>
+    <span class="pada">vilolajihvaścalitāgrakesaraḥ ||</span>
+  </div>
+  <div class="japanese">ひどい渇きに襲いかかる気力も失せ、口を大きく裂けるほど開けてしきりに喘ぎ、舌をだらりと揺らし、たてがみの先を震わせる獣の王〔獅子〕は、近くにいる象さえ殺そうとしない。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">hatavikramodyamaḥ</span>「襲いかかる（<span class="iast">vikrama</span>）ための力みが失われた」。</li>
+    <li><span class="iast">na hanti … gajān</span>：獅子と象は生まれつきの敵であるにもかかわらず。<span class="iast">adūre 'pi</span> には <span class="iast">prāptān</span>「〔近くに〕来ている」を補う。</li>
+    <li><span class="iast">calitāgrakesaraḥ</span>：<span class="iast">kesara</span> は肩のたてがみ（<span class="iast">skandhavāla</span>）。次の詩節と対になり、獅子の側から描いている。</li>
+  </ul>
+</div>
+<!-- 1.15 -->
+<div class="verse-block" id="v1-1.15">
+  <div class="verse-num"><span>1.15</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">viśuṣkakaṇṭhodgatasīkarāmbhaso</span>
+    <span class="pada">gabhastibhir bhānumato 'bhitāpitāḥ |</span>
+    <span class="pada">pravṛddhatṛṣṇopahatā jalārthino</span>
+    <span class="pada">na dantinaḥ kesariṇo 'pi bibhyati ||</span>
+  </div>
+  <div class="japanese">乾ききった喉から飛沫まじりの水を噴き上げ、太陽の光に焼かれ、つのる渇きにさいなまれて水を求める象たちは、獅子さえ恐れない。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">viśuṣkakaṇṭhodgatasīkarāmbhasaḥ</span>：暑さのあまり象が口から泡を吹いているさま。注釈によれば、ひどく渇いた象は鼻を乾いた喉に差し入れて水気のある泡を取り出し、上に吹き上げて飛沫として降らせる習性がある。</li>
+    <li>異読 <span class="iast">viśuṣkakaṇṭhāhṛta°</span> を、マニラーマ注（Man.）は「乾いた喉で飛沫まじりの水を取り込んだ」と解する。しかし水をすでに取り込んでいるなら、後の <span class="iast">jalārthinaḥ</span>「水を求める」と矛盾するので、Kale は本文の読みを採る。</li>
+    <li><span class="iast">abhitāpitāḥ</span>：GRETIL 本は <span class="iast">'nutāpitāḥ</span> と読む。Kale は <span class="iast">bh</span> の頭韻のために <span class="iast">abhitāpitāḥ</span> を採る。</li>
+    <li><span class="iast">dantin</span>「牙あるもの」は象。<span class="iast">kesariṇaḥ</span> は恐れの原因を表す奪格（パーニニ I.4.25 <span class="iast">bhītrārthānāṃ bhayahetuḥ</span>）。獅子が水を飲んでいるのと同じ池からでも、渇きにせき立てられて象は大胆に水を飲む。</li>
+  </ul>
+</div>
+<!-- 1.16 -->
+<div class="verse-block" id="v1-1.16">
+  <div class="verse-num"><span>1.16</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">hutāgnikalpaiḥ saviturgabhastibhiḥ</span>
+    <span class="pada">kalāpinaḥ klāntaśarīracetasaḥ |</span>
+    <span class="pada">na bhoginaṃ ghnanti samīpavartinaṃ</span>
+    <span class="pada">kalāpacakreṣu niveśitānanam ||</span>
+  </div>
+  <div class="japanese">供物を注がれた火のような太陽の光に、身も心も疲れ果てた孔雀たちは、すぐそばにいる蛇さえ殺さない──蛇が孔雀の尾羽の輪紋のなかに頭を差し入れていても。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">hutāgnikalpaiḥ</span>：供物（ギー）を注がれていっそう激しく燃える火に「ほとんど等しい」。接尾辞 <span class="iast">-kalpa</span> は「〜にやや及ばない、〜に近い」の意（パーニニ V.3.67 <span class="iast">īṣadasamāptau kalpabdeśyadeśīyaraḥ</span>）。</li>
+    <li><span class="iast">kalāpin</span>「尾羽（<span class="iast">kalāpa</span>）をもつもの」は孔雀、<span class="iast">bhogin</span>「とぐろ（<span class="iast">bhoga</span>）をもつもの」は蛇。単数の <span class="iast">bhoginam</span> は種類全体を表す。<span class="iast">samīpavartinam</span> には <span class="iast">api</span>「〜でさえ」を補う。</li>
+    <li><span class="iast">kalāpacakra</span>：孔雀の尾羽にある円い目玉模様。蛇はその陰に頭を突っ込んで日差しを避けている。13節の蛇が孔雀の下に隠れても無事な理由が、ここで明かされる。</li>
+  </ul>
+</div>
+<!-- 1.17 -->
+<div class="verse-block" id="v1-1.17">
+  <div class="verse-num"><span>1.17</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">sabhadramustaṃ pariśuṣkakardamaṃ</span>
+    <span class="pada">saraḥ khanann āyatapotramaṇḍalaiḥ |</span>
+    <span class="pada">ravermayūkhairabhitāpito bhṛśaṃ</span>
+    <span class="pada">varāhayūtho viśatīva bhūtalam ||</span>
+  </div>
+  <div class="japanese">日の光にひどく焼かれた猪の群れは、長く突き出た鼻面を連ねて、泥が干からびてバドラムスタ草だけが残る池を掘り返し、まるで大地の中へもぐり込んでゆくかのようだ。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">bhadramusta</span>：湿地に生える香りのよい草（カヤツリグサの類）。猪の好物で、『シャクンタラー』II.6 <span class="iast">viśrabdhaṃ kriyatāṃ varāhatatibhir mustākṣatiḥ palvale</span>「猪の群れが沼でのんびりとムスタ草を掘り返すがよい」参照。</li>
+    <li><span class="iast">potra</span>：猪の鼻面（パーニニ III.2.183 による特別な語形成）。GRETIL 本は <span class="iast">potṛ-</span> と読むが、Kale に従う。<span class="iast">maṇḍalaiḥ</span>「群れ・列」は <span class="iast">khanan</span>「掘りながら」の道具格。</li>
+    <li><span class="iast">viśatīva</span>：池の水はほとんど蒸発し、猪はわずかな湿り気を求めて穴を掘る。その姿が地中へ入っていくように見えるという詩的推量。</li>
+  </ul>
+</div>
+<!-- 1.18 -->
+<div class="verse-block" id="v1-1.18">
+  <div class="verse-num"><span>1.18</span><span class="metre">upajāti</span></div>
+  <div class="sanskrit">
+    <span class="pada">vivasvatā tīkṣṇatarāṃśumālinā</span>
+    <span class="pada">sapaṅkatoyāt saraso 'bhitāpitaḥ |</span>
+    <span class="pada">utplutya bhekastṛṣitasya bhoginaḥ</span>
+    <span class="pada">phaṇātapatrasya tale niṣīdati ||</span>
+  </div>
+  <div class="japanese">鋭い光の輪をまとう太陽に、泥まじりの水しかない池から焼け出された蛙は、跳び上がって、渇いた蛇の、傘のような鎌首の下に座りこむ。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">tīkṣṇatara</span>：比較級語尾 <span class="iast">-tara</span> は、ここでは比較ではなく強調。<span class="iast">°mālin</span>「〜に囲まれた、〜を冠した」（『ラグ・ヴァンシャ』IV.44 参照）。</li>
+    <li><span class="iast">sapaṅkatoyāt sarasaḥ</span>：①「泥まじりの水のある池から」と一語で取るか、②<span class="iast">sarasaḥ</span> を属格に取って「池の、泥まじりの水から」と読むか、二通りに解せる。水はほとんど消えて泥しか残らず、日差しから身を守ってくれない。</li>
+    <li><span class="iast">phaṇātapatra</span>：「鎌首という日傘」または「日傘のような鎌首」。餌である蛙が天敵の蛇の陰に逃げ込むという逆説で、13節（蛇が孔雀の下に隠れる）と対になる。</li>
+    <li>韻律：第3句 <span class="iast">utplutya</span> は最初の音節が重いので <span class="iast">indravaṃśā</span> になり、詩節全体は <span class="iast">vaṃśastha</span> との混合（<span class="iast">upajāti</span>）である。Kale は韻律書の <span class="iast">itthaṃ kilānyāsv api miśritāsu vadanti jātiṣv idam eva nāma</span>「ほかの韻律が混ざった場合も同じく〔ウパジャーティ〕と呼ぶ」を引く。</li>
+  </ul>
+</div>
+<!-- 1.19 -->
+<div class="verse-block" id="v1-1.19">
+  <div class="verse-num"><span>1.19</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">samuddhṛtāśeṣamṛṇālajālakaṃ</span>
+    <span class="pada">vipannamīnaṃ drutabhītasārasam |</span>
+    <span class="pada">parasparotpīḍanasaṃhatairgajaiḥ</span>
+    <span class="pada">kṛtaṃ saraḥ sāndravimardakardamam ||</span>
+  </div>
+  <div class="japanese">押し合いへし合い群がる象たちは、池の蓮根をことごとく引き抜き、魚を死なせ、鶴を怯えさせて追い払い、踏み荒らして濃い泥沼にしてしまった。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">mṛṇāla</span>：蓮の繊維質の根茎（蓮根）。<span class="iast">jālaka</span>「たくさんの集まり」。<span class="iast">vipanna</span>「死んだ」（<span class="iast">vi-√pad</span>）。</li>
+    <li><span class="iast">sārasa</span>：Kale は白鳥の一種とするが、一般にはオオヅル（サルスヅル）を指す。</li>
+    <li><span class="iast">parasparotpīḍanasaṃhataiḥ</span>「互いに押し合いながら密集した」。<span class="iast">sāndravimardakardamam</span>「踏み荒らしたために濃い泥となった」。渇いた象の群れが、ただでさえ乏しい池の水を泥沼に変えてしまう。</li>
+  </ul>
+</div>
+<!-- 1.20 -->
+<div class="verse-block" id="v1-1.20">
+  <div class="verse-num"><span>1.20</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">raviprabhodbhinnaśiromaṇiprabho</span>
+    <span class="pada">vilolajihvādvayalīḍhamārutaḥ |</span>
+    <span class="pada">viṣāgnisūryātapatāpitaḥ phaṇī</span>
+    <span class="pada">na hanti maṇḍūkakulaṃ tṛṣākulaḥ ||</span>
+  </div>
+  <div class="japanese">頭の宝珠の輝きを日の光でいっそうきらめかせ、揺れる二股の舌で風をなめ、毒の火と日の熱に焼かれる蛇は、渇きに苦しむあまり、蛙の群れを殺そうとしない。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">raviprabhodbhinnaśiromaṇiprabhaḥ</span>：蛇の頭にある宝珠が日差しを受けて光を放つ。蛇の頭に宝珠があるという俗信は広く知られている（『ヒトーパデーシャ』II.89 <span class="iast">maṇinā bhūṣitaḥ sarpaḥ kim asau na bhayaṃkaraḥ</span>「宝珠で飾られていても、蛇は恐ろしくないだろうか」）。</li>
+    <li><span class="iast">vilolajihvādvaya</span>：二股の舌が二枚の舌のように見える。<span class="iast">līḍhamārutaḥ</span>「風をなめる」：蛇は風を食べて生きると考えられ、<span class="iast">pavanāśana</span>「風を食らうもの」などの異名がある。</li>
+    <li><span class="iast">viṣāgnisūryātapatāpitaḥ</span>＝<span class="iast">viṣāgninā sūryātapena ca tāpitaḥ</span>「〔自分の〕毒の火と日の熱に焼かれた」。モニエル＝ウィリアムズの「燃える毒」という訳や、マニラーマ注の「毒と〔山火事の〕火と日の熱」という解釈を、Kale は不自然として退ける。異読 <span class="iast">hutāgni°</span> は意味が平明で、16節の第1句とも合う。</li>
+    <li>『スバーシターヴァリ』（1704番）に作者名なしで引かれている。</li>
+  </ul>
+</div>
+<!-- 1.21 -->
+<div class="verse-block" id="v1-1.21">
+  <div class="verse-num"><span>1.21</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">saphenalālāvṛtavaktrasampuṭaṃ</span>
+    <span class="pada">viniḥsṛtālohitajihvamunmukham |</span>
+    <span class="pada">tṛṣākulaṃ niḥsṛtamadrigahvarād</span>
+    <span class="pada">avekṣamāṇaṃ mahiṣīkulaṃ jalam ||</span>
+  </div>
+  <div class="japanese">泡立つよだれに口のまわりを覆われ、赤い舌を突き出し、顔を上に向け、渇きに苦しむ雌水牛の群れが、山の洞から出てきて、水を探し求めている。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">saphenalālāvṛtavaktrasaṃpuṭam</span>「泡とよだれに覆われた口腔をもつ」。Kale は、異読 <span class="iast">°lālāyata°</span>（「揺れて長い口」）よりこの読みがよいとする。<span class="iast">lola</span>「揺れる」ではうまく意味が通らないからである。</li>
+    <li><span class="iast">saṃpuṭa</span>：口の中のくぼみ、口腔。<span class="iast">unmukham</span>「顔を上に向けた」は、水の匂いを嗅ぎつけようとするしぐさ。</li>
+    <li>ここで12音節の <span class="iast">vaṃśastha</span> による描写が終わり、22節からは山火事の情景が <span class="iast">mālinī</span> 韻律で詠われる。</li>
+  </ul>
+</div>
+<p class="section-label">森を襲う火（22–27節）</p>
+<!-- 1.22 -->
+<div class="verse-block" id="v1-1.22">
+  <div class="verse-num"><span>1.22</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">paṭutaradavadāhocchuṣkasasya prarohāḥ</span>
+    <span class="pada">paruṣapavanavegotkṣiptasaṃśuṣkaparṇāḥ |</span>
+    <span class="pada">dinakaraparitāpakṣīṇatoyāḥ samantād</span>
+    <span class="pada">vidadhati bhayamuccair vīkṣyamāṇā vanāntāḥ ||</span>
+  </div>
+  <div class="japanese">すさまじい山火事に焼かれて若い穀物の芽は干からび、荒々しい風の勢いに枯葉が舞い上がり、日の熱で水はあたり一面で涸れはてている──そんな森のはずれは、目にするだけで深い恐れを呼び起こす。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">paṭutara</span>：18節の <span class="iast">tīkṣṇatara</span> と同じく、比較級語尾は強調。<span class="iast">paṭu</span>「激しい」。<span class="iast">dava</span> は森の火事（25節の <span class="iast">davāgni</span>）。</li>
+    <li><span class="iast">paruṣa</span>「荒々しい」：2.27 <span class="iast">atiśayaparuṣābhir grīṣmavahneḥ śikhābhiḥ</span> 参照。<span class="iast">uccaiḥ</span>「大いに」は <span class="iast">bhayaṃ vidadhati</span>「恐れを起こす」にかかる。</li>
+    <li><span class="iast">vanāntāḥ</span>：<span class="iast">anta</span> は「はずれ・あたり」（<span class="iast">prānta</span>）の意で、森の一帯を指す。『ウッタララーマチャリタ』II.25 <span class="iast">antaḥkūjanmukharaśakuno yatra ramyo vanāntaḥ</span> 参照。1.1 で触れた「日の熱で水の涸れた」（<span class="iast">dinakaraparitāpakṣīṇatoyāḥ</span>）はこの詩節の語句である。</li>
+  </ul>
+</div>
+<!-- 1.23 -->
+<div class="verse-block" id="v1-1.23">
+  <div class="verse-num"><span>1.23</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">śvasiti vihagavargaḥ śīrṇaparṇadrumasthaḥ</span>
+    <span class="pada">kapikulamupayāti klāntamadrer nikuñjam |</span>
+    <span class="pada">bhramati gavayayūthaḥ sarvatastoyamicchañ</span>
+    <span class="pada">śarabhakulamajihmaṃ proddharatyambu kūpāt ||</span>
+  </div>
+  <div class="japanese">葉の落ちた木にとまる鳥の群れは喘ぎ、疲れ果てた猿の群れは山の茂みの洞へ向かう。ガヴァヤ牛の群れは水を求めてあちこちさまよい、シャラバの群れは迷わず井戸から水をくみ上げる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>四句それぞれに一つずつ生き物の群れを配した構成。<span class="iast">śīrṇa</span>「落ちた、朽ちた」。<span class="iast">nikuñja</span>：茂みや蔓草に覆われた洞・隠れ場（『マーラティーマーダヴァ』IX.3 参照）。</li>
+    <li><span class="iast">gavaya</span>：野牛の一種（ガヤール）。</li>
+    <li><span class="iast">śarabha</span>：八本の脚をもち、獅子や象よりも強いとされる伝説上の獣。マニラーマ注は鳥とするが、アマラ辞典ははっきり獣の一種（<span class="iast">paśujāti</span>）としている。<span class="iast">ajihmam</span>「まっすぐに」は <span class="iast">proddharati</span>「くみ上げる」にかかり、力にまさるシャラバが〔もし鳥なら舞い降りて〕じかに井戸の水を取る、という意味になる。<span class="iast">ajihmam</span> を <span class="iast">śarabhakulam</span> にかけて「怠らず」と取ることもできる。また『シャブダカルパドルマ』はこの箇所を引いて、<span class="iast">śarabha</span> を <span class="iast">karabha</span>「子象」の意としている。</li>
+  </ul>
+</div>
+<!-- 1.24 -->
+<div class="verse-block" id="v1-1.24">
+  <div class="verse-num"><span>1.24</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">vikacanavakusumbhasvacchasindūrabhāsā</span>
+    <span class="pada">prabalapavanavegoddhūtavegena tūrṇam |</span>
+    <span class="pada">taruviṭapalatāgrāliṅganavyākulena</span>
+    <span class="pada">diśi diśi paridagdhā bhūmayaḥ pāvakena ||</span>
+  </div>
+  <div class="japanese">咲き開いたばかりのクスンバの花や、澄んだ朱のように輝き、強い風の勢いにたちまち勢いを増し、木の枝や蔓の先を抱きしめることに夢中の火によって、四方八方で大地が焼き尽くされた。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">kusumbha</span>：紅花（ベニバナ）。染料に用いる赤い花で、その赤さから <span class="iast">agniśikha</span>「火の穂先」という異名をもつため、火のたとえにぴったりである。<span class="iast">sindūra</span>：鉛丹（朱）。染料として広く用いられる。<span class="iast">vikacanavakusumbhasvacchasindūrabhāsā</span>「開いたばかりのクスンバの花と澄んだ朱のような輝きをもつ」。</li>
+    <li><span class="iast">°oddhūtavegena</span>「〔風の勢いによって〕速さを増された」。GRETIL 本の <span class="iast">°odbhūta°</span>「速さを生じさせられた」より、Kale はこちらをよしとする。火にはもともと勢いがあり、風がそれを加速するのだからである（25節 <span class="iast">pavanavṛddhaḥ</span> 参照）。<span class="iast">tūrṇam</span> はこの <span class="iast">uddhūta</span> にかかる。</li>
+    <li><span class="iast">taruviṭapa°</span>：Kale は 2.28 にも現れるこの読みを採る。GRETIL 本の <span class="iast">taṭaviṭapa°</span> なら「〔燃える火の〕そばの枝や蔓」と解すことになる。<span class="iast">vyākula</span> はここでは「〜に熱中している」。火が枝や蔓を「抱きしめる」（<span class="iast">āliṅgana</span>）という表現には擬人化がある。</li>
+  </ul>
+</div>
+<!-- 1.25 -->
+<div class="verse-block" id="v1-1.25">
+  <div class="verse-num"><span>1.25</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">jvalati pavanavṛddhaḥ parvatānāṃ darīṣu</span>
+    <span class="pada">sphuṭati paṭuninādaḥ śuṣkavaṃśasthalīṣu |</span>
+    <span class="pada">prasarati tṛṇamadhye labdhavṛddhiḥ kṣaṇena</span>
+    <span class="pada">glapayati mṛgavargaṃ prāntalagno davāgniḥ ||</span>
+  </div>
+  <div class="japanese">森のはずれから燃えついた山火事は、風に勢いを得て山の谷間に燃えさかり、乾いた竹の茂る地では鋭い音を立ててはじけ、草のなかでは見る間に勢いを増して広がり、獣たちを弱らせる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>四句それぞれに動詞と、火を形容する語を一つずつ置いた構成。</li>
+    <li><span class="iast">sphuṭati</span>「はじける」は、燃える竹がパチパチと鳴る音を写した擬音的な語。<span class="iast">paṭuninādaḥ</span>「鋭い音を立てる」：GRETIL 本は <span class="iast">paṭuninādaiḥ</span>「鋭い音で」と具格に読むが、Kale は、各句に火の形容詞が一つずつそろう主格の読みを採る。</li>
+    <li><span class="iast">sthalī</span>：手の加わっていない自然の土地。女性形 <span class="iast">sthalī</span> は自然の、<span class="iast">sthalā</span> は人工の土地を言う（パーニニ IV.1.42）。</li>
+    <li><span class="iast">glapayati</span>：<span class="iast">√glai</span>「萎える」の使役形。<span class="iast">prāntalagnaḥ</span>「〔森の〕はずれに取りついた」、つまり森の外縁から燃え広がり始めた。<span class="iast">dava</span> はここでは単に「森」（アマラ辞典 <span class="iast">davadāvau vanāraṇyavahnī</span>「<span class="iast">dava</span>・<span class="iast">dāva</span> は森と山火事」）。</li>
+  </ul>
+</div>
+<!-- 1.26 -->
+<div class="verse-block" id="v1-1.26">
+  <div class="verse-num"><span>1.26</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">bahutara iva jātaḥ śālmalīnāṃ vaneṣu</span>
+    <span class="pada">sphurati kanakagauraḥ koṭareṣu drumāṇām |</span>
+    <span class="pada">pariṇatadalaśākhānutpatanprāṃśuvṛkṣān</span>
+    <span class="pada">bhramati pavanadhūtaḥ sarvato 'gnirvanānte ||</span>
+  </div>
+  <div class="japanese">シャールマリの森ではいっそう勢いを増したかのように見え、木々の洞のなかでは金のような黄色に揺らめき、葉の熟した枝をもつ高い木々へ跳び移りながら、風にあおられた火が森のあちこちをめぐる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">bahutara iva jātaḥ</span>：火はもともと盛んだが、シャールマリ（キワタ、赤い花をつける）の森では、赤い若葉や花のためにさらに大きくなったように見える。</li>
+    <li><span class="iast">sphur</span>「揺らめいて輝く」（3.12 <span class="iast">saudāminī sphurati</span> 参照）。<span class="iast">gaura</span> はここでは「黄色い」（アマラ辞典 <span class="iast">gauro 'ruṇe site pīte</span>）。<span class="iast">koṭara</span>：木の幹の洞。</li>
+    <li><span class="iast">pariṇatadalaśākhān … utpatan</span>：<span class="iast">ut-√pat</span>「跳び上がる」をここでは他動詞として用い、「〔木々に〕跳び移る」の意で使っている。<span class="iast">pariṇata</span>「熟した」：葉が熟して枯れた枝。</li>
+  </ul>
+</div>
+<!-- 1.27 -->
+<div class="verse-block" id="v1-1.27">
+  <div class="verse-num"><span>1.27</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">gajagavayamṛgendrā vahnisaṃtaptadehāḥ</span>
+    <span class="pada">suhṛda iva sametā dvaṃdvabhāvaṃ vihāya |</span>
+    <span class="pada">hutavahaparikhedād āśu nirgatya kakṣād</span>
+    <span class="pada">vipulapulinadeśāṃ nimnagāṃ saṃviśanti ||</span>
+  </div>
+  <div class="japanese">象もガヴァヤ牛も獅子も、火に体を焼かれて、敵対をやめ友のように寄り集まり、火に苦しめられた枯草の原からすばやく逃れて、広い砂州のある川に身を寄せる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">dvandvabhāva</span>：「対立する二者である状態」、つまり敵対関係。13〜20節で描かれた、暑さによる休戦の主題が、山火事という共通の危険のもとでここに極まる。</li>
+    <li><span class="iast">hutavahaparikhedāt … kakṣāt</span>：①「火による苦しみのために、〔枯草の原から〕出て」とも、②「火に苦しめられる枯草の原から」とも取れる。Kale は後者をよしとする。<span class="iast">kakṣa</span> は乾いた草（『ラグ・ヴァンシャ』VII.55 <span class="iast">yatas tu kakṣas tata eva vahniḥ</span>「枯草のあるところ、そこにこそ火がある」）。</li>
+    <li><span class="iast">saṃviśanti</span>「身を寄せる、〔岸辺で〕休む」。文字どおり「〔川に〕入る」でも通じるが、それでは「広い砂州のある」という形容が生きない。</li>
+  </ul>
+</div>
+<p class="section-label">結びの祝福</p>
+<!-- 1.28 -->
+<div class="verse-block" id="v1-1.28">
+  <div class="verse-num"><span>1.28</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">kamalavanacitāmbuḥ pāṭalāmodaramyaḥ</span>
+    <span class="pada">sukhasalilaniṣekaḥ sevyacandrāṃśuhāraḥ |</span>
+    <span class="pada">vrajatu tava nidāghaḥ kāminībhiḥ sameto</span>
+    <span class="pada">niśi sulalitagīte harmyapṛṣṭhe sukhena ||</span>
+  </div>
+  <div class="japanese">蓮の群れに水面は満ち、パータラの花の香りは快く、水浴みは心地よく、月の光と真珠の首飾りが楽しまれる──そんな夏が、美しい女たちとともに、妙なる歌の流れる高殿の屋上で、夜ごと幸せに、あなたのもとで過ぎてゆきますように。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">kamalavanacitāmbuḥ</span>「蓮の群れに水が覆われた〔夏〕」。<span class="iast">pāṭala</span>：淡紅色の花をつけるパータラ樹（ノウゼンカズラ科）の花（『シャクンタラー』I.3 <span class="iast">pāṭalasaṃsargasurabhivanavātāḥ</span> 参照）。</li>
+    <li><span class="iast">sukhasalilaniṣekaḥ</span>：<span class="iast">sukha</span> は「心地よい」（6.2 <span class="iast">sukhāḥ pradoṣāḥ</span> 参照）、<span class="iast">salilaniṣeka</span> は水浴み。<span class="iast">sevyacandrāṃśuhāraḥ</span>「月光と首飾りが楽しまれる」は、1.2 の <span class="iast">sevyatām</span> を思い起こさせる。</li>
+    <li><span class="iast">tava</span>「あなたの」は読者への呼びかけ。マニラーマ注は 1.1 の恋人（<span class="iast">priyā</span>）を指すと取り、<span class="iast">sulalitagīte</span> を「甘く歌う人よ」という呼格に読む。しかし Kale は、それでは「美しい女たちとともに」がまったく意味をなさなくなると言って退ける。ほかの歌もすべて読者への祝福で終わる（2.28 <span class="iast">diśatu tava hitāni</span>、3.26 <span class="iast">pratidiśatu śaradvaś cetasaḥ prītim agryām</span> など）ので、ここだけ恋人を持ち出す理由はない。</li>
+    <li>各歌の最後に読者への祝福（<span class="iast">āśīḥ</span>）を置くのが本作の型である。</li>
+  </ul>
+</div>
+
+<div class="colophon">
+  第1歌 韻律<br><span class="iast">vaṃśastha</span>：1–17, 19–21節<br><span class="iast">upajāti</span>：18節<br><span class="iast">mālinī</span>：22–28節<br>
+  詩節番号は Kale 本による。破線の枠は Kale 本で付録に回された挿入詩節（GRETIL 本では本文中にある）。
+</div>
+
+<nav class="chapter-nav">
+<span></span>
+<a href="rtusamhara_toc.html">📜 目次</a>
+<a href="rtusamhara_2.html">第2歌 雨季 →</a>
+</nav>
+
+</body>
+</html>
