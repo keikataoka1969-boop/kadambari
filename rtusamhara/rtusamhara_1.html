@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>季節集 第1歌 夏</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 600; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.03em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .intro { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.2rem; margin: 0 0 2rem; font-size: 0.9rem; color: var(--text-secondary); }
+  .intro p { margin: 0.4rem 0; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .verse-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0 0; border: 1px solid var(--border); border-radius: 4px 4px 0 0; overflow: hidden; background: var(--bg-card); }
+  .verse-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; display: flex; justify-content: space-between; gap: 1rem; }
+  .verse-num .metre { font-weight: 400; color: var(--text-secondary); }
+  .sanskrit { padding: 0.7rem 0.9rem; font-family: 'Noto Serif', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .sanskrit .pada { display: block; padding-left: 1.2em; text-indent: -1.2em; }
+  .sanskrit .pada:nth-child(even) { padding-left: 2.4em; }
+  .japanese { padding: 0.7rem 0.9rem; font-size: 0.93rem; line-height: 1.95; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 4px 4px; padding: 0.8rem 1rem; margin: 0 0 1.8rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.86rem; line-height: 1.8; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.25rem 0; }
+  .iast { font-family: 'Noto Serif', serif; font-style: italic; color: var(--highlight); }
+  .quote { display: block; margin: 0.3rem 0 0.3rem 1.2em; font-family: 'Noto Serif', serif; font-style: italic; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); line-height: 1.7; }
+  @media (max-width: 640px) {
+    body { padding: 1rem 1rem 3rem; }
+    .verse-block { grid-template-columns: 1fr; }
+    .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+    .header h1 { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ṛtusaṃhāra — 季節集 対訳</h1>
+  <p class="subtitle">カーリダーサ作</p>
+  <p class="meta">底本：M. R. Kale 校訂本（第2版, 1967）・ヴェーンカターチャーリヤ・ウパーディエー注 <span class="iast">Bālabodhinī</span><br>本文対照：GRETIL 電子テキスト（Hellwig 入力）</p>
+</div>
+
+<div class="intro">
+  <p><span class="iast">Ṛtusaṃhāra</span> は「季節（<span class="iast">ṛtu</span>）の集成（<span class="iast">saṃhāra</span>）」の意。夏・雨季・秋・冬（<span class="iast">hemanta</span>）・寒季（<span class="iast">śiśira</span>）・春の六季を一歌ずつ、計六歌で詠う。全篇が恋する男から恋人への語りかけ（<span class="iast">priye</span>「愛しい人よ」）という枠をもち、季節の風物はつねに恋情（<span class="iast">śṛṅgāra</span>）と結びつけて描かれる。</p>
+  <p>Kale によれば、題名は「季節が集められた〔作品〕」という所有複合語（<span class="iast">bahuvrīhi</span>）とも解せ、その場合は <span class="iast">kāvyam</span> に合わせて中性形 <span class="iast">Ṛtusaṃhāram</span> とするのがよい。</p>
+</div>
+
+<div class="chapter-title">
+  <h2>prathamaḥ sargaḥ — 第1歌</h2>
+  <p class="ch-sub">夏（<span class="iast">nidāgha / grīṣma</span>）の描写</p>
+</div>
+
+<!-- 1.1 -->
+<div class="verse-block" id="v1-1">
+  <div class="verse-num"><span>1.1</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">pracaṇḍasūryaḥ spṛhaṇīyacandramāḥ</span>
+    <span class="pada">sadāvagāhakṣamavārisaṃcayaḥ |</span>
+    <span class="pada">dināntaramyo 'bhyupaśāntamanmatho</span>
+    <span class="pada">nidāghakālo 'yam upāgataḥ priye ||</span>
+  </div>
+  <div class="japanese">太陽は烈しく、月は待ち焦がれられ、豊かな水はいつでも身を浸すにふさわしく、夕暮れは心地よく、恋の想いもいくらか鎮まる──愛しい人よ、この夏の季節がやって来た。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>夏の季節そのものを、五つの所有複合語（<span class="iast">bahuvrīhi</span>）で一気に形容する導入の詩節。<span class="iast">pracaṇḍasūryaḥ</span>「太陽が烈しい〔季節〕」、<span class="iast">spṛhaṇīyacandramāḥ</span>「月が望ましい〔季節〕」と、昼の暑さと夜の涼しさが対になっている。</li>
+    <li><span class="iast">sadāvagāhakṣama°</span>：「一日中いつ水に入っても、心地よく体を損なうこともない〔水〕」。ほかの季節にはこうはいかない。Kale は「いくら浴びても尽きないほど水が多い」と取るのを退け、強調点は暑さと、そのためにいつも水浴びしたくなることにあると言う。GRETIL 本は <span class="iast">-kṣata-</span>（浴びて減った）と読むが、Kale も注釈者も採らない。水を減らすのは水浴びではなく日の熱だからで、1.22 <span class="iast">dinakaraparitāpakṣīṇatoyāḥ</span>「日の熱で水の涸れた」がその証とされる。</li>
+    <li><span class="iast">dināntaramyaḥ</span>：<span class="iast">dinānte ramyaḥ</span>「日の終わりに心地よい」と分けるのが文法上は素直。ほかの形容と揃えて <span class="iast">dināntāḥ ramyāḥ yasmin</span>「夕暮れが心地よい〔季節〕」とも取れる。</li>
+    <li><span class="iast">abhyupaśāntamanmathaḥ</span>：恋心がすっかり消えるわけではなく、春と比べて弱まるだけ（3節・28節では夏の夜の恋が詠われる）。『ラグ・ヴァンシャ』XVI.50 <span class="iast">kāmo vasantātyayamandavīryaḥ</span>「春が過ぎて力の衰えた愛神」と比べよ。</li>
+    <li><span class="iast">nidāgha</span>（&lt; <span class="iast">ni-√dah</span>「焼き尽くす」）は <span class="iast">Jyeṣṭha</span> と <span class="iast">Āṣāḍha</span> の二か月、おおよそ6〜7月にあたる。</li>
+    <li>類例：『シャクンタラー』I.3 <span class="quote">subhagasalilāvagāhāḥ pāṭalasaṃsargasurabhivanavātāḥ |<br>pracchāyasulabhanidrā divasāḥ pariṇāmaramaṇīyāḥ ||</span>「水浴みは快く、森の風はパータラの花に触れて香り、木陰ではたやすくまどろめ、暮れ方の美しい日々」</li>
+  </ul>
+</div>
+
+<!-- 1.2 -->
+<div class="verse-block" id="v1-2">
+  <div class="verse-num"><span>1.2</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">niśāḥ śaśāṅkakṣatanīlarājayaḥ</span>
+    <span class="pada">kvacid vicitraṃ jalayantramandiram |</span>
+    <span class="pada">maṇiprakārāḥ sarasaṃ ca candanaṃ</span>
+    <span class="pada">śucau priye yānti janasya sevyatām ||</span>
+  </div>
+  <div class="japanese">月に闇の筋を払われた夜々、ところどころに趣ある噴水の館、さまざまな宝石、潤いを帯びた白檀──愛しい人よ、夏にはこれらが人々に好んで用いられる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">śaśāṅkakṣatanīlarājayaḥ</span>：「月（<span class="iast">śaśāṅka</span>＝兎を印にもつもの）によって、闇（<span class="iast">nīla</span>）の筋（<span class="iast">rāji</span>）が裂かれた〔夜〕」。前の詩節の「待ち焦がれられる月」を受けている。</li>
+    <li><span class="iast">jalayantramandira</span>：<span class="iast">jalayantra</span>「水の仕掛け」は噴水のこと。それを据えた建物、つまり噴水のある夏の館。</li>
+    <li><span class="iast">maṇiprakārāḥ</span>：<span class="iast">prakāra</span> は「種類」。真珠などある種の宝石には体を冷やす力があると信じられ、暑さをしのぐために身につけた。『ウッタララーマチャリタ』I.38 <span class="iast">ayaṃ kaṇṭhe bāhuḥ śiśiramasṛṇo mauktikasaraḥ</span>「首にかかるこの腕は、冷たくなめらかな真珠の首飾り」参照。</li>
+    <li><span class="iast">śuci</span>：ここでは「暑季」。<span class="iast">yānti</span> は四つの主語を合わせた数に一致して複数形になる。</li>
+    <li>類例：『ラグ・ヴァンシャ』XIX.45。恋人たちが白檀を塗り、真珠の飾りをつけた「夏の装い」で王に仕える場面。</li>
+  </ul>
+</div>
+
+<!-- 1.3 -->
+<div class="verse-block" id="v1-3">
+  <div class="verse-num"><span>1.3</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">suvāsitaṃ harmyatalaṃ manoharaṃ</span>
+    <span class="pada">priyāmukhocchvāsavikampitaṃ madhu |</span>
+    <span class="pada">sutantrigītaṃ madanasya dīpanaṃ</span>
+    <span class="pada">śucau niśīthe 'nubhavanti kāminaḥ ||</span>
+  </div>
+  <div class="japanese">よい香りをたきしめた美しい高殿の屋上、恋人の口もとの吐息にさざめく酒、よく張った弦にのせた歌──どれも恋の火をかき立てる──夏の夜、恋する男たちはこれらを味わう。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>注釈 <span class="iast">Bālabodhinī</span> によれば、この詩節から7節にわたって夏の夜の情景が詠われる。</li>
+    <li><span class="iast">harmyatala</span>：<span class="iast">tala</span> はここでは <span class="iast">pṛṣṭha</span>「上面」。邸宅の平屋根で、夏の夜はここで涼む。単数形は種類全体を表す（<span class="iast">jātāv ekavacanam</span>）。</li>
+    <li><span class="iast">madhu</span>（中性）は「酒」。<span class="iast">priyāmukhocchvāsavikampita</span>「恋人が口元で吐く息にさざ波立つ」から、二人が一つの杯を分け合うさまが浮かぶ。5.10 <span class="iast">pibanti madyaṃ madanīyam uttamam</span> 参照。</li>
+    <li><span class="iast">sutantrigītam</span>：「よい弦（<span class="iast">tantrī</span>）をもつ〔ヴィーナーなどの〕楽器に合わせた歌」。<span class="iast">madanasya dīpanam</span>「愛神を燃え立たせるもの」は三つの名詞すべてにかかるとも、歌だけにかかるとも取れる。『クマーラサンバヴァ』VIII.77 では酒が <span class="iast">anaṅgadīpana</span> と呼ばれる。</li>
+    <li><span class="iast">niśītha</span>：「真夜中」の意味と、単に「夜」の意味がある。ここで真夜中に限る理由はないので、Kale は「夜」と取る。</li>
+  </ul>
+</div>
+
+<!-- 1.4 -->
+<div class="verse-block" id="v1-4">
+  <div class="verse-num"><span>1.4</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">nitambabimbaiḥ sadukūlamekhalaiḥ</span>
+    <span class="pada">stanaiḥ sahārābharaṇaiḥ sacandanaiḥ |</span>
+    <span class="pada">śiroruhaiḥ snānakaṣāyavāsitaiḥ</span>
+    <span class="pada">striyo nidāghaṃ śamayanti kāminām ||</span>
+  </div>
+  <div class="japanese">絹の衣と腰帯をまとった丸い腰、首飾りなどの飾りをつけ白檀を塗った乳房、湯浴みの香料が香る髪──これらで女たちは恋人の暑さを鎮める。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">nitambabimba</span>：<span class="iast">bimba</span>「円盤・球」は体の丸みを帯びた部分によく使う語で、ここでは丸い腰。<span class="iast">dukūla</span> は上質の絹布。異読 <span class="iast">sudukūla-</span>。</li>
+    <li><span class="iast">sahārābharaṇaiḥ</span>：「首飾りという装身具をつけた」（注釈）とも、「首飾りと〔ほかの〕装身具をつけた」とも取れる。<span class="iast">hāra</span> は花輪の場合も真珠の首飾りの場合もある。</li>
+    <li><span class="iast">snānakaṣāya</span>：<span class="iast">kaṣāya</span> はここでは <span class="iast">aṅgarāga</span>、つまり樹脂などから作る化粧香料。湯浴みのときに用いる。</li>
+    <li><span class="iast">nidāgha</span> はここでは季節ではなく「暑さ・ほてり」。暑さで弱まった恋心（1.1）が、女たちの涼やかな姿によって逆に慰められるという趣向。</li>
+  </ul>
+</div>
+
+<!-- 1.5 -->
+<div class="verse-block" id="v1-5">
+  <div class="verse-num"><span>1.5</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">nitāntalākṣārasarāgarañjitair</span>
+    <span class="pada">nitambinīnāṃ caraṇaiḥ sanūpuraiḥ |</span>
+    <span class="pada">pade pade haṃsarutānukāribhir</span>
+    <span class="pada">janasya cittaṃ kriyate samanmatham ||</span>
+  </div>
+  <div class="japanese">ラックの紅で深く染められ、足輪をつけて、一歩ごとに白鳥の鳴き声をまねる、豊かな腰の女たちの足──それによって人の心は恋に燃え立たせられる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">lākṣārasa</span>：ある種の樹皮からにじみ出る樹脂（ラック）の赤い汁。足を染めるのに用いた（『シャクンタラー』IV <span class="iast">caraṇopabhogasulabho lākṣārasaḥ</span>）。衣を染めることもある（6.13）。</li>
+    <li>異読 <span class="iast">-rāgalohitaiḥ</span> にすれば <span class="iast">rāga</span>（色）と <span class="iast">rañjita</span>（染められた）の意味の重なりは避けられる。しかし本文の読みには <span class="iast">-rāga-rañjitair</span> という快い頭韻（<span class="iast">anuprāsa</span>）がある、と Kale は言う。</li>
+    <li><span class="iast">haṃsarutānukāribhiḥ</span>：歩くときの足輪の音を白鳥の声にたとえるのは定型。『ヴィクラモールヴァシーヤ』IV.14 <span class="iast">kūjitaṃ rājahaṃsānāṃ nedaṃ nūpuraśiñjitam</span>「これは王白鳥の鳴き声で、足輪の鈴の音ではない」、本作 3.1 参照。厳密には白鳥の声をまねるのは足ではなく足の立てる音で、<span class="iast">mardala</span>「太鼓」を太鼓の音の意味で使う（2.1）のと同じ換喩である。</li>
+    <li><span class="iast">samanmatham</span>：「愛神（<span class="iast">manmatha</span>）を伴った〔心〕」、つまり恋心をかき立てられた心。受動の構文で、女たちの足を道具格に置いている。</li>
+  </ul>
+</div>
+
+<!-- 1.6 -->
+<div class="verse-block" id="v1-6">
+  <div class="verse-num"><span>1.6</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">payodharāś candanapaṅkacarcitās</span>
+    <span class="pada">tuṣāragaurārpitahāraśekharāḥ |</span>
+    <span class="pada">nitambadeśāś ca sahemamekhalāḥ</span>
+    <span class="pada">prakurvate kasya mano na sotsukam ||</span>
+  </div>
+  <div class="japanese">白檀の泥を塗り、その頂に雪のように白い首飾りをかけた乳房、そして黄金の腰帯をめぐらした腰──これらが誰の心をあこがれで満たさずにいようか。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">candanapaṅka</span>：「白檀の泥」。泥のように厚く湿らせた白檀の練り香。</li>
+    <li><span class="iast">tuṣāragaurārpitahāraśekharāḥ</span> は扱いにくい複合語。Kale は <span class="iast">śekharārpitatuṣāragaurahārāḥ</span>「頂（<span class="iast">śekhara</span>＝先端）に雪のように白い首飾りが置かれた」の意味と見る（2.25 <span class="iast">dadhati varakucāgrair unnatair hārayaṣṭim</span> 参照）。注釈 <span class="iast">Bālabodhinī</span> は <span class="iast">śekhara</span> を「最上の」と取り、「雪のように白い最上の首飾りが置かれた」と解する。この用法は珍しいが、3.20 <span class="iast">kalanūpuraśekharaiḥ</span> に例がある。<span class="iast">śekhara</span> を花冠と取ると <span class="iast">hāra</span> と意味が重なってしまう。</li>
+    <li><span class="iast">kasya … na</span>：反語。「誰の心を〔あこがれに〕満たさないことがあろう、すべての人の心を満たす」（<span class="iast">kasya na prakurvate, api tu sarvasyaiva</span>）。注釈はこれを <span class="iast">kāku</span>（語調による反語）と呼ぶ。</li>
+    <li>この詩節は4節の発想をほぼ繰り返している（Kale・注釈とも指摘）。</li>
+  </ul>
+</div>
+
+<div class="colophon">
+  見本：第1歌 1–6節（全28節）<br>
+  韻律 <span class="iast">vaṃśastha</span>：各句12音節（<span class="iast">ja-ta-ja-ra</span>：⏑–⏑ ––⏑ ⏑–⏑ –⏑–）。第1歌では1–21節（18節を除く）がこの韻律<br>詩節番号は Kale 本による（GRETIL 本とは第2歌以降でずれがある）
+</div>
+
+</body>
+</html>
