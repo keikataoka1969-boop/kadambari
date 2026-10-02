@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>シャクンタラー研究史</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: 一段組みの読み物。時代を色帯（インド＝緑、ヨーロッパ＝藍、20世紀以降＝赤紫、日本＝金）で通し、年表・図・表で研究の流れをたどる */
+:root{
+  --bg:#f6f7f4; --surface:#ffffff; --fg:#1f2722; --muted:#5f6b63; --rule:#d6dcd7;
+  --india:#2f6b4a; --india-soft:#e1efe6;
+  --europe:#38457f; --europe-soft:#e4e7f4;
+  --modern:#8a3b62; --modern-soft:#f4e3ec;
+  --japan:#a2741c; --japan-soft:#f6ecd6;
+  --display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --roman:"Noto Serif",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141a17; --surface:#1b2420; --fg:#e4ebe6; --muted:#9caaa1; --rule:#2f3b35;
+  --india:#7cc49b; --india-soft:#1f3329;
+  --europe:#9fabe8; --europe-soft:#232a45;
+  --modern:#e597bd; --modern-soft:#3b2130;
+  --japan:#e0b65e; --japan-soft:#3a2f17; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141a17; --surface:#1b2420; --fg:#e4ebe6; --muted:#9caaa1; --rule:#2f3b35;
+  --india:#7cc49b; --india-soft:#1f3329;
+  --europe:#9fabe8; --europe-soft:#232a45;
+  --modern:#e597bd; --modern-soft:#3b2130;
+  --japan:#e0b65e; --japan-soft:#3a2f17; color-scheme:dark}
+
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.9;padding:0 16px}
+.wrap{max-width:900px;margin:0 auto;padding-block:40px 80px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(2rem,6vw,3rem);font-weight:800;letter-spacing:.02em}
+h2{font-size:1.6rem;font-weight:700;margin-top:64px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+h3{font-size:1.18rem;font-weight:700;margin-top:32px}
+p{margin:14px 0;max-width:44em}
+i,.r{font-family:var(--roman)}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;color:var(--europe);font-weight:700}
+.lede{font-size:1.06rem;color:var(--muted);max-width:42em}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+nav.toc a{font-size:.88rem;color:var(--fg);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:3px 14px;background:var(--surface)}
+nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--europe);outline:none;color:var(--europe)}
+.period{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;padding:2px 10px;border-radius:999px;margin-top:64px}
+.period + h2{margin-top:8px}
+.p1{background:var(--india-soft);color:var(--india)} .p2{background:var(--europe-soft);color:var(--europe)}
+.p3{background:var(--modern-soft);color:var(--modern)} .p4{background:var(--japan-soft);color:var(--japan)}
+
+.fig{margin:24px 0;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px}
+.fig figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.scroll{overflow-x:auto}
+svg text{font-family:var(--body)}
+svg .rm{font-family:var(--roman)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--muted);margin-top:6px}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px;background:var(--c)}
+
+table{border-collapse:collapse;width:100%;font-size:.92rem;line-height:1.7}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--rule)}
+th{font-size:.76rem;letter-spacing:.08em;color:var(--muted);font-weight:700;background:var(--surface);white-space:nowrap}
+td.y{font-family:var(--roman);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.w i{color:var(--fg)}
+.tw{overflow-x:auto;margin:20px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+.tw table{min-width:680px}
+tr.k-b td:first-child{box-shadow:inset 3px 0 var(--europe)}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;padding:0 7px;border-radius:3px;white-space:nowrap;vertical-align:1px}
+.tB{background:var(--europe-soft);color:var(--europe)} .tD{background:var(--india-soft);color:var(--india)}
+.tK{background:var(--modern-soft);color:var(--modern)} .tS{background:var(--japan-soft);color:var(--japan)}
+.tX{border:1px solid var(--rule);color:var(--muted)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;min-width:0}
+.card h3{margin:0 0 4px;font-size:1.02rem}
+.card .sub{font-size:.8rem;color:var(--muted)}
+.card p{font-size:.9rem;margin:8px 0 0}
+.card.B{border-top:3px solid var(--europe)} .card.D{border-top:3px solid var(--india)}
+.card.K{border-top:3px solid var(--modern)} .card.S{border-top:3px solid var(--japan)}
+
+.note{background:var(--europe-soft);border-radius:6px;padding:14px 18px;margin:20px 0;font-size:.93rem}
+.note b{color:var(--europe)}
+.note.j{background:var(--japan-soft)} .note.j b{color:var(--japan)}
+blockquote{margin:16px 0;padding:6px 0 6px 20px;border-left:3px solid var(--europe);font-family:var(--roman);font-size:1rem}
+blockquote span{display:block;font-family:var(--body);font-size:.88rem;color:var(--muted);margin-top:4px}
+ul.tight{padding-left:1.3em} ul.tight li{margin:6px 0}
+footer{margin-top:64px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+footer a{color:var(--europe)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Abhijñānaśākuntala · Kālidāsa · history of scholarship</div>
+  <h1>シャクンタラー研究史</h1>
+  <p class="lede">Kālidāsa の <i>Abhijñānaśākuntala</i> は、インドの詩論家に読まれ、18世紀末にヨーロッパで「発見」され、19世紀の文献学では伝本論争の舞台になりました。20世紀には、ナショナリズム、フェミニズム、受容史の観点から読み直されています。このページでは、その研究の歩みを年代順にたどり、最後に日本での翻訳と研究の歴史をまとめます。</p>
+  <nav class="toc" aria-label="目次">
+    <a href="#map">全体図</a>
+    <a href="#india">I 古典インド</a>
+    <a href="#discovery">II 西洋の発見</a>
+    <a href="#philology">III 伝本論争</a>
+    <a href="#recensions">四つの伝本</a>
+    <a href="#modern">IV 20世紀</a>
+    <a href="#aesthetics">美学からの読み</a>
+    <a href="#recent">V 1980年代以降</a>
+    <a href="#chrono">総合年表</a>
+    <a href="#japan">VI 日本</a>
+    <a href="#tasks">今後の課題</a>
+  </nav>
+</header>
+
+<!-- ===== 全体図 ===== -->
+<section id="map">
+<h2>研究史の全体図</h2>
+<p>研究の流れは大きく六つの時期に分けられます。時期ごとに、問いの中心が「作品をどう味わうか」から「どの本文が正しいか」、さらに「この作品は誰によってどう読まれてきたか」へと移っていきます。</p>
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 860 330" width="100%" style="min-width:720px" role="img" aria-label="研究史の六つの時期を示す帯図">
+  <!-- axis: non-linear segments -->
+  <g font-size="11" fill="var(--muted)" text-anchor="middle" class="rm">
+    <text x="70" y="318">c. 400</text><text x="200" y="318">1500</text><text x="290" y="318">1789</text>
+    <text x="400" y="318">1850</text><text x="510" y="318">1900</text><text x="640" y="318">1980</text><text x="800" y="318">2026</text>
+  </g>
+  <line x1="40" y1="300" x2="830" y2="300" stroke="var(--rule)" stroke-width="1.5"/>
+  <g stroke="var(--rule)"><line x1="200" y1="296" x2="200" y2="304"/><line x1="290" y1="296" x2="290" y2="304"/><line x1="400" y1="296" x2="400" y2="304"/><line x1="510" y1="296" x2="510" y2="304"/><line x1="640" y1="296" x2="640" y2="304"/></g>
+  <text x="245" y="292" font-size="10" fill="var(--muted)" text-anchor="middle">（目盛りは等間隔ではありません）</text>
+
+  <!-- bands -->
+  <rect x="40" y="24" width="250" height="44" rx="5" fill="var(--india-soft)" stroke="var(--india)"/>
+  <text x="52" y="43" font-size="13" font-weight="700" fill="var(--india)">I 古典インドの受容</text>
+  <text x="52" y="60" font-size="11" fill="var(--fg)">詩論家の引用・注釈書・伝本の分岐</text>
+
+  <rect x="290" y="76" width="110" height="44" rx="5" fill="var(--europe-soft)" stroke="var(--europe)"/>
+  <text x="298" y="95" font-size="13" font-weight="700" fill="var(--europe)">II 西洋の発見</text>
+  <text x="298" y="112" font-size="11" fill="var(--fg)">Jones・Goethe</text>
+
+  <rect x="340" y="128" width="240" height="44" rx="5" fill="var(--europe-soft)" stroke="var(--europe)"/>
+  <text x="350" y="147" font-size="13" font-weight="700" fill="var(--europe)">III 文献学と伝本論争</text>
+  <text x="350" y="164" font-size="11" fill="var(--fg)">校訂本の時代・Weber 対 Pischel</text>
+
+  <rect x="500" y="180" width="160" height="44" rx="5" fill="var(--modern-soft)" stroke="var(--modern)"/>
+  <text x="510" y="199" font-size="13" font-weight="700" fill="var(--modern)">IV 20世紀の再評価</text>
+  <text x="510" y="216" font-size="11" fill="var(--fg)">Tagore・Keith・批判校訂</text>
+
+  <rect x="640" y="232" width="190" height="44" rx="5" fill="var(--modern-soft)" stroke="var(--modern)"/>
+  <text x="650" y="251" font-size="13" font-weight="700" fill="var(--modern)">V 受容史と再読</text>
+  <text x="650" y="268" font-size="11" fill="var(--fg)">Miller・Thapar・Vasudeva</text>
+
+  <rect x="565" y="24" width="265" height="44" rx="5" fill="var(--japan-soft)" stroke="var(--japan)"/>
+  <text x="575" y="43" font-size="13" font-weight="700" fill="var(--japan)">VI 日本（1907〜）</text>
+  <text x="575" y="60" font-size="11" fill="var(--fg)">重訳 → 原典訳 → 文庫・対訳</text>
+</svg>
+</div>
+<figcaption>六つの時期。帯の位置はおおよその年代を示します。日本（VI）は、ヨーロッパの研究の波を受けて20世紀初めに始まります。</figcaption>
+</figure>
+
+<div class="tw"><table>
+<thead><tr><th>時期</th><th>年代</th><th>中心となる問い</th><th>代表的な人物・著作</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tD">I</span> 古典インド</td><td>5世紀〜18世紀</td><td>この劇はどう美しいか。劇論の規則にどう合うか</td><td>Bāṇa、Ānandavardhana、Abhinavagupta、Dhanika、Kāṭayavema、Rāghavabhaṭṭa</td></tr>
+<tr><td><span class="tag tB">II</span> 西洋の発見</td><td>1789〜1830年代</td><td>インドにこれほどの文学があったのか</td><td>William Jones、Georg Forster、Goethe、Herder、A.-L. de Chézy</td></tr>
+<tr><td><span class="tag tB">III</span> 文献学</td><td>1840〜1920年代</td><td>どの伝本が Kālidāsa の原作に近いか</td><td>O. Böhtlingk、M. Monier-Williams、A. Weber、R. Pischel、K. Burkhard</td></tr>
+<tr><td><span class="tag tK">IV</span> 20世紀</td><td>1900〜1980年</td><td>民族の古典としての意味。劇の歴史の中の位置</td><td>Rabindranath Tagore、S. Lévi、A. B. Keith、S. K. Belvalkar、D. K. Kanjilal</td></tr>
+<tr><td><span class="tag tK">V</span> 受容史と再読</td><td>1984〜現在</td><td>誰がどの本文を、何のために読んできたか</td><td>B. Stoler Miller、D. Figueira、R. Thapar、S. Vasudeva、S. Pollock</td></tr>
+<tr><td><span class="tag tS">VI</span> 日本</td><td>1907〜現在</td><td>どう日本語に移すか。原典から訳せるか</td><td>Takahashi Gorō、Kawaguchi Ekai、Tsuji Naoshirō、Tanaka Otoya</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- ===== I ===== -->
+<span class="period p1" id="india">I　5世紀〜18世紀</span>
+<h2>古典インドでの受容</h2>
+
+<h3>作者の年代をめぐる手がかり</h3>
+<p>Kālidāsa 自身は年代を書き残していません。研究の出発点になるのは、ほかの文献に名前が出る年代です。</p>
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 820 200" width="100%" style="min-width:660px" role="img" aria-label="Kālidāsa の年代をめぐる二つの説と、下限を決める証拠">
+  <line x1="40" y1="110" x2="800" y2="110" stroke="var(--rule)" stroke-width="2"/>
+  <!-- scale: -100 -> 60, 700 -> 780 ; 1 yr = 0.9 px -->
+  <g font-size="11" fill="var(--muted)" text-anchor="middle" class="rm">
+    <text x="60" y="130">100 BCE</text><text x="150" y="130">0</text><text x="240" y="130">100</text><text x="330" y="130">200</text><text x="420" y="130">300</text><text x="510" y="130">400</text><text x="600" y="130">500</text><text x="690" y="130">600</text><text x="780" y="130">700</text>
+  </g>
+  <g stroke="var(--rule)"><line x1="60" y1="105" x2="60" y2="115"/><line x1="150" y1="105" x2="150" y2="115"/><line x1="240" y1="105" x2="240" y2="115"/><line x1="330" y1="105" x2="330" y2="115"/><line x1="420" y1="105" x2="420" y2="115"/><line x1="510" y1="105" x2="510" y2="115"/><line x1="600" y1="105" x2="600" y2="115"/><line x1="690" y1="105" x2="690" y2="115"/><line x1="780" y1="105" x2="780" y2="115"/></g>
+  <!-- theory A: 1st c BCE -->
+  <rect x="78" y="70" width="72" height="22" rx="4" fill="var(--rule)"/>
+  <text x="114" y="60" font-size="11.5" fill="var(--muted)" text-anchor="middle">旧説：前1世紀</text>
+  <text x="114" y="86" font-size="10.5" fill="var(--fg)" text-anchor="middle">Vikramāditya 伝説</text>
+  <!-- theory B: Gupta 4-5c (c.375-455) -->
+  <rect x="487" y="70" width="113" height="22" rx="4" fill="var(--india)"/>
+  <text x="543" y="60" font-size="11.5" font-weight="700" fill="var(--india)" text-anchor="middle">有力説：グプタ朝期</text>
+  <text x="543" y="86" font-size="10.5" fill="var(--bg)" text-anchor="middle">4〜5世紀</text>
+  <!-- evidence -->
+  <circle cx="733" cy="110" r="6" fill="var(--modern)"/>
+  <text x="733" y="155" font-size="11.5" fill="var(--modern)" font-weight="700" text-anchor="middle">634年 Aihole 碑文</text>
+  <text x="733" y="172" font-size="10.5" fill="var(--fg)" text-anchor="middle">Kālidāsa と Bhāravi の名</text>
+  <circle cx="684" cy="110" r="5" fill="var(--surface)" stroke="var(--modern)" stroke-width="2"/>
+  <text x="640" y="155" font-size="11.5" fill="var(--modern)" text-anchor="middle">7世紀前半 Bāṇa</text>
+  <text x="640" y="172" font-size="10.5" fill="var(--fg)" text-anchor="middle"><tspan class="rm" font-style="italic">Harṣacarita</tspan> 序で称賛</text>
+  <line x1="733" y1="110" x2="733" y2="40" stroke="var(--modern)" stroke-dasharray="4 3"/>
+  <text x="726" y="34" font-size="11" fill="var(--modern)" text-anchor="end">これより前に作られた（下限）</text>
+</svg>
+</div>
+<figcaption>Kālidāsa の年代。634年の Aihole 碑文（Ravikīrti 作、Pulakeśin II の時代）に名前があるので、それより前の人だと確定できます。現在は、Candragupta II の治世（4世紀末〜5世紀初め）前後とする説が有力です。</figcaption>
+</figure>
+
+<h3>詩論家と注釈者たち</h3>
+<p>インドの劇論・詩論の書物は、この劇を規則や理論の例としてたびたび引用しました。たとえば Abhinavagupta（10〜11世紀、Kashmir）は、第1幕の鹿の詩 <i>grīvābhaṅgābhirāmaṃ</i>（1.7）を、ラサ（rasa、作品が観客に呼びおこす情趣）の議論で取り上げたことで知られます。14世紀以降になると、作品全体に付けた注釈書が地方ごとに書かれます。それぞれの注釈書は特定の伝本と結びついているため、のちの伝本研究で重要な証拠になりました。</p>
+<div class="tw"><table>
+<thead><tr><th>年代</th><th>人物</th><th>著作</th><th>この劇との関わり</th></tr></thead>
+<tbody>
+<tr><td class="y">7c</td><td class="r">Bāṇa</td><td class="w"><i>Harṣacarita</i></td><td>序の詩で Kālidāsa の詩を称える</td></tr>
+<tr><td class="y">9c</td><td class="r">Ānandavardhana</td><td class="w"><i>Dhvanyāloka</i></td><td>暗示（dhvani）の理論。Kālidāsa を最高の詩人の一人とする</td></tr>
+<tr><td class="y">10c</td><td class="r">Dhanika</td><td class="w"><i>Avaloka</i>（<i>Daśarūpaka</i> 注）</td><td>劇の構成要素の例として、この劇を多く引く</td></tr>
+<tr><td class="y">10–11c</td><td class="r">Abhinavagupta</td><td class="w"><i>Abhinavabhāratī</i>、<i>Locana</i></td><td>鹿の詩（1.7）をラサの議論で扱う。Kashmir で読まれた本文を伝える証人でもある</td></tr>
+<tr><td class="y">11c</td><td class="r">Bhoja</td><td class="w"><i>Śṛṅgāraprakāśa</i></td><td>恋のラサの例として引用</td></tr>
+<tr><td class="y">c. 1400</td><td class="r">Kāṭayavema</td><td class="w"><i>Kumāragirirājīya</i></td><td>南インド（Andhra）の注釈。南インド系伝本の証人</td></tr>
+<tr><td class="y">c. 1493</td><td class="r">Rāghavabhaṭṭa</td><td class="w"><i>Arthadyotanikā</i></td><td>デーヴァナーガリー系伝本の代表的な注釈。のちの標準版に採用された</td></tr>
+<tr><td class="y">後代</td><td class="r">Candraśekhara、Abhirāma ほか</td><td class="w">各種の注</td><td>地方ごとの本文の伝承を支えた</td></tr>
+</tbody></table></div>
+<blockquote>kāvyeṣu nāṭakaṃ ramyaṃ tatra ramyā śakuntalā<br>tatrāpi ca caturtho 'ṅkas tatra ślokacatuṣṭayam
+<span>「詩のなかでは劇がすばらしく、劇のなかでは『シャクンタラー』、そのなかでは第四幕、そのなかでは四つの詩節」。作者不明の後代の格言で、インドでの評価を端的に表しています。</span></blockquote>
+
+<div class="note"><b>源泉の問題</b>　筋のもとは <i>Mahābhārata</i> 第1巻（Ādiparvan）の Śakuntalopākhyāna です。そこには呪いも指輪も出てきません。<i>Padmapurāṇa</i> にも呪いと指輪を含む話がありますが、Kālidāsa がそれを使ったのか、逆に Purāṇa のほうが劇を取りこんだのかは議論があります。後者とみる見方が有力です。</div>
+</section>
+
+<!-- ===== II ===== -->
+<span class="period p2" id="discovery">II　1789〜1830年代</span>
+<h2>西洋による「発見」</h2>
+<p>1789年、カルカッタの判事 William Jones が英訳 <i>Sacontalá; or, The Fatal Ring</i> を出しました。Jones は Bengal の paṇḍita の助けを借りて、まずラテン語に逐語訳し、それを英語に直しています。そのためこの訳は、ベンガル系伝本にもとづいています。この英訳は、インド文学がヨーロッパで本格的に読まれるきっかけになりました。</p>
+
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 820 250" width="100%" style="min-width:680px" role="img" aria-label="Jones の英訳から Forster のドイツ語訳を経て、ドイツの文学者たちと Chézy の原典訳へ広がる流れ">
+  <defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+  <g stroke="var(--muted)" stroke-width="1.5" fill="none" marker-end="url(#a1)">
+    <path d="M150,60 L205,60"/>
+    <path d="M150,72 L150,180 L205,180"/>
+    <path d="M370,60 L425,40"/><path d="M370,60 L425,100"/><path d="M370,60 L425,160"/>
+    <path d="M595,40 L640,40"/>
+  </g>
+  <g font-size="12">
+    <rect x="16" y="34" width="134" height="52" rx="6" fill="var(--europe)"/>
+    <text x="83" y="55" text-anchor="middle" fill="var(--bg)" font-weight="700">1789 W. Jones</text>
+    <text x="83" y="74" text-anchor="middle" fill="var(--bg)" font-size="10.5" class="rm" font-style="italic">Sacontalá</text>
+
+    <rect x="207" y="34" width="163" height="52" rx="6" fill="var(--surface)" stroke="var(--europe)"/>
+    <text x="288" y="55" text-anchor="middle" fill="var(--fg)" font-weight="700">1791 G. Forster</text>
+    <text x="288" y="74" text-anchor="middle" fill="var(--muted)" font-size="10.5">英訳からのドイツ語訳</text>
+
+    <rect x="427" y="20" width="168" height="40" rx="6" fill="var(--surface)" stroke="var(--europe)"/>
+    <text x="511" y="45" text-anchor="middle" fill="var(--fg)">1791 Goethe の讃辞</text>
+    <rect x="642" y="20" width="168" height="40" rx="6" fill="var(--surface)" stroke="var(--rule)"/>
+    <text x="726" y="38" text-anchor="middle" fill="var(--fg)" font-size="11"><tspan class="rm" font-style="italic">Faust</tspan> 前狂言（1797頃）</text>
+    <text x="726" y="53" text-anchor="middle" fill="var(--muted)" font-size="10">序幕の形式に学んだとされる</text>
+
+    <rect x="427" y="82" width="168" height="40" rx="6" fill="var(--surface)" stroke="var(--europe)"/>
+    <text x="511" y="107" text-anchor="middle" fill="var(--fg)">Herder・Schiller</text>
+    <rect x="427" y="142" width="168" height="40" rx="6" fill="var(--surface)" stroke="var(--europe)"/>
+    <text x="511" y="160" text-anchor="middle" fill="var(--fg)" font-size="11.5">F. Schlegel（1808）</text>
+    <text x="511" y="175" text-anchor="middle" fill="var(--muted)" font-size="10" class="rm" font-style="italic">Über die Sprache und Weisheit der Indier</text>
+
+    <rect x="207" y="158" width="163" height="52" rx="6" fill="var(--europe-soft)" stroke="var(--europe)"/>
+    <text x="288" y="179" text-anchor="middle" fill="var(--fg)" font-weight="700">1830 A.-L. de Chézy</text>
+    <text x="288" y="198" text-anchor="middle" fill="var(--muted)" font-size="10.5">初の原典刊行と仏訳（ベンガル系）</text>
+  </g>
+  <text x="16" y="238" font-size="11" fill="var(--muted)">→ 翻訳が翻訳を生み、ロマン主義の「東方」像の中心作品となった</text>
+</svg>
+</div>
+<figcaption>Jones の英訳から始まる受容の広がり。英語からドイツ語へ、さらにフランスでの原典研究へと進みます。</figcaption>
+</figure>
+
+<blockquote>Willst du die Blüthe des frühen, die Früchte des späteren Jahres, …<br>Nenn' ich, Sakontala, dich, und so ist Alles gesagt.
+<span>Goethe の讃辞（1791年）の冒頭と結び。「春の花と秋の実りを……ひとつの名で呼ぶなら、シャクンタラーよ、おまえの名を呼べば、すべてが言い尽くされる」。</span></blockquote>
+<p>1814年、Antoine-Léonard de Chézy がフランスの Collège de France で初のサンスクリット講座の担当者となりました。1830年には、サンスクリットとプラークリットの原文に仏訳を添えた <i>La Reconnaissance de Sacountala</i> を出します。英訳からの重訳の時代が終わり、原典を読む研究が始まりました。</p>
+
+<h3>芸術作品への広がり</h3>
+<div class="tw"><table>
+<thead><tr><th>年</th><th>作者</th><th>作品</th><th>形式</th></tr></thead>
+<tbody>
+<tr><td class="y">1820</td><td class="r">Franz Schubert</td><td class="w"><i>Sakontala</i>（D 701）</td><td>オペラ（未完）</td></tr>
+<tr><td class="y">1858</td><td class="r">Ernest Reyer / Théophile Gautier</td><td class="w"><i>Sacountalâ</i></td><td>バレエ</td></tr>
+<tr><td class="y">1865</td><td class="r">Karl Goldmark</td><td class="w"><i>Sakuntala</i> 序曲 Op. 13</td><td>管弦楽</td></tr>
+<tr><td class="y">1921</td><td class="r">Franco Alfano</td><td class="w"><i>La leggenda di Sakùntala</i></td><td>オペラ</td></tr>
+<tr><td class="y">1943</td><td class="r">V. Shantaram</td><td class="w"><i>Shakuntala</i></td><td>映画（ヒンディー語）</td></tr>
+</tbody></table></div>
+<p>この時期の関心は文学的・思想的なもので、どの本文が正しいかはまだ問題になっていません。Jones と Chézy がどちらもベンガル系の写本を使ったことが、次の時代の論争の伏線になります。</p>
+</section>
+
+<!-- ===== III ===== -->
+<span class="period p2" id="philology">III　1840〜1920年代</span>
+<h2>文献学の時代と伝本論争</h2>
+<p>写本が集まるにつれて、地域ごとに本文がかなり違うことがわかってきました。19世紀の文献学者は、伝本ごとに校訂本を出し、どの伝本が原作に近いかを激しく論じました。</p>
+
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 860 260" width="100%" style="min-width:720px" role="img" aria-label="主要な刊本と翻訳を、年と依拠した伝本で並べた点図">
+  <!-- x: 1780 -> 110, 2010 -> 840 ; 1yr = 3.174 -->
+  <g font-size="12" font-weight="700" text-anchor="end">
+    <text x="96" y="46" fill="var(--europe)">ベンガル系</text>
+    <text x="96" y="96" fill="var(--india)">デーヴァナーガリー系</text>
+    <text x="96" y="146" fill="var(--modern)">カシミール系</text>
+    <text x="96" y="196" fill="var(--muted)">批判校訂・折衷</text>
+  </g>
+  <g stroke="var(--rule)"><line x1="110" y1="42" x2="840" y2="42"/><line x1="110" y1="92" x2="840" y2="92"/><line x1="110" y1="142" x2="840" y2="142"/><line x1="110" y1="192" x2="840" y2="192"/></g>
+  <line x1="110" y1="222" x2="840" y2="222" stroke="var(--muted)"/>
+  <g font-size="11" fill="var(--muted)" text-anchor="middle" class="rm">
+    <text x="110" y="240">1780</text><text x="173" y="240">1800</text><text x="300" y="240">1840</text><text x="427" y="240">1880</text><text x="554" y="240">1920</text><text x="681" y="240">1960</text><text x="808" y="240">2000</text>
+  </g>
+  <!-- Bengali -->
+  <g fill="var(--europe)"><circle cx="138.6" cy="42" r="6"/><circle cx="268.2" cy="42" r="6"/><circle cx="411.1" cy="42" r="6"/><circle cx="376.6" cy="42" r="6"/><circle cx="446.4" cy="42" r="6"/><circle cx="560.3" cy="42" r="6"/><circle cx="738.1" cy="42" r="6"/></g>
+  <g font-size="10.5" fill="var(--fg)" text-anchor="middle">
+    <text x="138.6" y="28">Jones 1789</text><text x="268.2" y="28">Chézy 1830</text><text x="411.1" y="28">Pischel 1877</text><text x="560.3" y="28">HOS 1922</text><text x="382" y="62" text-anchor="end">Premacandra 1864</text><text x="440" y="62" text-anchor="start">Pischel² 1886</text><text x="738.1" y="28">Kanjilal 1980</text>
+  </g>
+  <!-- Devanagari -->
+  <g fill="var(--india)"><circle cx="306.4" cy="92" r="6"/><circle cx="341.3" cy="92" r="6"/><circle cx="430.2" cy="92" r="6"/><circle cx="484.5" cy="92" r="6"/><circle cx="750.8" cy="92" r="6"/><circle cx="801.6" cy="92" r="6"/></g>
+  <g font-size="10.5" fill="var(--fg)" text-anchor="middle">
+    <text x="300" y="78">Böhtlingk 1842</text><text x="356" y="112">Monier-Williams 1853</text><text x="430.2" y="78">Godbole 1883</text><text x="490" y="112">Kale 1898</text><text x="742" y="78">Miller 1984</text><text x="806" y="112">Johnson 2001</text>
+  </g>
+  <!-- Kashmiri -->
+  <g fill="var(--modern)"><circle cx="440" cy="142" r="6"/><circle cx="817.9" cy="142" r="6"/></g>
+  <g font-size="10.5" fill="var(--fg)" text-anchor="middle">
+    <text x="440" y="128">Burkhard 1884</text><text x="806" y="128">Vasudeva 2006</text>
+  </g>
+  <!-- critical -->
+  <g fill="var(--muted)"><circle cx="693.7" cy="192" r="6"/></g>
+  <text x="693.7" y="178" font-size="10.5" fill="var(--fg)" text-anchor="middle">Belvalkar 1965</text>
+</svg>
+</div>
+<figcaption>主な刊本・翻訳と、それぞれが依拠した伝本。Jones と Miller・Johnson は翻訳、ほかは原典の刊本です。Kanjilal はベンガル系を重く見た再構成です。</figcaption>
+</figure>
+
+<h3>伝本ごとの校訂本</h3>
+<div class="tw"><table>
+<thead><tr><th>年</th><th>編者</th><th>書名・刊行地</th><th>伝本</th><th>意義</th></tr></thead>
+<tbody>
+<tr><td class="y">1842</td><td class="r">Otto Böhtlingk</td><td class="w"><i>Kâlidâsa's Ring-Çakuntala</i>, Bonn</td><td><span class="tag tD">D</span></td><td>デーヴァナーガリー系の最初の刊本。ドイツ語訳付き</td></tr>
+<tr><td class="y">1853</td><td class="r">Monier Monier-Williams</td><td class="w"><i>Śakuntalā</i>, Hertford（英訳 1855）</td><td><span class="tag tD">D</span></td><td>英語圏の教科書として長く使われた。英訳 <i>Śakoontalá; or, The Lost Ring</i>（1855）</td></tr>
+<tr><td class="y">1864</td><td class="r">Premacandra Tarkavāgīśa / E. B. Cowell</td><td class="w">Calcutta</td><td><span class="tag tB">B</span></td><td>インドの学者が校訂の主体となった早い例（1860年刊とする文献もある）</td></tr>
+<tr><td class="y">1870</td><td class="r">Richard Pischel</td><td class="w"><i>De Kalidasae Çakuntali recensionibus</i></td><td><span class="tag tX">論</span></td><td>伝本研究の学位論文</td></tr>
+<tr><td class="y">1876</td><td class="r">Albrecht Weber</td><td class="w">„Die Recensionen der Çakuntalā", <i>Indische Studien</i> 14</td><td><span class="tag tX">論</span></td><td>伝本の関係を詳しく論じる</td></tr>
+<tr><td class="y">1877</td><td class="r">Richard Pischel</td><td class="w"><i>Kâlidâsa's Çakuntalâ: The Bengâlî Recension</i>, Kiel</td><td><span class="tag tB">B</span></td><td>ベンガル系こそ原作に近いと主張。Weber への反論も発表</td></tr>
+<tr><td class="y">1886</td><td class="r">Richard Pischel</td><td class="w">同上 第2版, Kiel</td><td><span class="tag tB">B</span></td><td>Kiel での改訂版</td></tr>
+<tr><td class="y">1883</td><td class="r">N. B. Godbole</td><td class="w">Nirṇaya Sāgar Press, Bombay</td><td><span class="tag tD">D</span></td><td>Rāghavabhaṭṭa 注付き。インドで標準となる。のちに W. L. Paṇśīkar が改訂</td></tr>
+<tr><td class="y">1884</td><td class="r">Karl Burkhard</td><td class="w"><i>Die Kaçmîrer Çakuntalâ-Handschrift</i>, Wien</td><td><span class="tag tK">K</span></td><td>G. Bühler が Kashmir から持ち帰った写本1点による暫定版</td></tr>
+<tr><td class="y">1898</td><td class="r">M. R. Kale</td><td class="w"><i>The Abhijñānaśākuntalam of Kālidāsa</i>, Bombay</td><td><span class="tag tD">D</span></td><td>Rāghavabhaṭṭa 注・英訳・文法注付きの学習用刊本。版を重ね、インドの教育で長く使われる</td></tr>
+<tr><td class="y">1922</td><td class="r">R. Pischel / C. Cappeller</td><td class="w"><i>Kalidasa's Śakuntala</i>, Harvard Oriental Series 16</td><td><span class="tag tB">B</span></td><td>Pischel の死後、Cappeller が仕上げた改訂版（Harvard Oriental Series 16）。長く学術上の標準とされた</td></tr>
+</tbody></table></div>
+
+<div class="note"><b>Weber 対 Pischel の論争</b>　論点は「長い本文は、あとから書き足された結果か、それとも短い本文が削られた結果か」でした。Pischel はベンガル系の本文、とくにプラークリットの形が古いことを重く見て、ベンガル系を最古とする説を主張しました。この問題には今も決着がついていません。ただ、こうして伝本を一つずつ比べる手法そのものは、のちのサンスクリット劇の本文研究の手本になりました。</div>
+</section>
+
+<!-- ===== 伝本 ===== -->
+<section id="recensions">
+<h2>四つの伝本</h2>
+<p>写本は地域ごとに大きく四つの系統（recension）に分けられます。原作は失われていて、どの系統も後世の書き写しや改変を経ています。</p>
+
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 820 300" width="100%" style="min-width:680px" role="img" aria-label="失われた原作から四つの伝本が分かれる関係図">
+  <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+  <rect x="320" y="16" width="180" height="50" rx="25" fill="var(--surface)" stroke="var(--fg)" stroke-dasharray="5 4"/>
+  <text x="410" y="38" text-anchor="middle" font-size="13" font-weight="700" fill="var(--fg)">Kālidāsa の原作</text>
+  <text x="410" y="56" text-anchor="middle" font-size="11" fill="var(--muted)">（現存しない）</text>
+  <g stroke="var(--muted)" stroke-width="1.5" fill="none" marker-end="url(#a2)" stroke-dasharray="3 3">
+    <path d="M360,66 L110,150"/><path d="M390,66 L310,150"/><path d="M430,66 L510,150"/><path d="M460,66 L710,150"/>
+  </g>
+  <text x="225" y="100" font-size="10.5" fill="var(--muted)">写本伝承（関係は未確定）</text>
+  <g font-size="12" text-anchor="middle">
+    <rect x="20" y="152" width="180" height="120" rx="6" fill="var(--europe-soft)" stroke="var(--europe)"/>
+    <text x="110" y="174" font-weight="700" fill="var(--europe)">ベンガル系（東）</text>
+    <text x="110" y="196" fill="var(--fg)" font-size="11">Bengal・Mithilā</text>
+    <text x="110" y="216" fill="var(--fg)" font-size="11">本文がもっとも長い</text>
+    <text x="110" y="236" fill="var(--fg)" font-size="11" class="rm">Jones, Chézy, Pischel</text>
+    <text x="110" y="256" fill="var(--fg)" font-size="11" class="rm">Kanjilal</text>
+
+    <rect x="220" y="152" width="180" height="120" rx="6" fill="var(--india-soft)" stroke="var(--india)"/>
+    <text x="310" y="174" font-weight="700" fill="var(--india)">デーヴァナーガリー系</text>
+    <text x="310" y="196" fill="var(--fg)" font-size="11">北・西インド</text>
+    <text x="310" y="216" fill="var(--fg)" font-size="11">比較的短い。最も普及</text>
+    <text x="310" y="236" fill="var(--fg)" font-size="11" class="rm">Rāghavabhaṭṭa 注</text>
+    <text x="310" y="256" fill="var(--fg)" font-size="11" class="rm">Böhtlingk, Godbole, Miller</text>
+
+    <rect x="420" y="152" width="180" height="120" rx="6" fill="var(--modern-soft)" stroke="var(--modern)"/>
+    <text x="510" y="174" font-weight="700" fill="var(--modern)">カシミール系</text>
+    <text x="510" y="196" fill="var(--fg)" font-size="11">Kashmir・Śāradā 文字</text>
+    <text x="510" y="216" fill="var(--fg)" font-size="11">東と北の中間的な性格</text>
+    <text x="510" y="236" fill="var(--fg)" font-size="11" class="rm">Abhinavagupta の引用</text>
+    <text x="510" y="256" fill="var(--fg)" font-size="11" class="rm">Burkhard, Vasudeva</text>
+
+    <rect x="620" y="152" width="180" height="120" rx="6" fill="var(--japan-soft)" stroke="var(--japan)"/>
+    <text x="710" y="174" font-weight="700" fill="var(--japan)">南インド系</text>
+    <text x="710" y="196" fill="var(--fg)" font-size="11">Andhra・Tamil・Kerala</text>
+    <text x="710" y="216" fill="var(--fg)" font-size="11">デーヴァナーガリー系に近い</text>
+    <text x="710" y="236" fill="var(--fg)" font-size="11" class="rm">Kāṭayavema 注</text>
+    <text x="710" y="256" fill="var(--fg)" font-size="11">（c. 1400）</text>
+  </g>
+</svg>
+</div>
+<figcaption>四つの伝本の関係。原作と各伝本を結ぶ線は点線にしてあります。どの伝本が原作に近いかには定説がありません。</figcaption>
+</figure>
+
+<div class="cards">
+  <div class="card B"><h3>ベンガル系</h3><div class="sub">Eastern recension</div><p>西洋に最初に紹介された本文です。Pischel は、プラークリットの形が古いことを根拠に、これを最古としました。会話や詩節が多く、全体がもっとも長い本文です。</p></div>
+  <div class="card D"><h3>デーヴァナーガリー系</h3><div class="sub">Devanāgarī recension</div><p>インドの教育と出版でもっとも普及した本文です。Rāghavabhaṭṭa 注と Godbole 版によって標準となり、英訳や日本語訳の多くもこれによります。</p></div>
+  <div class="card K"><h3>カシミール系</h3><div class="sub">Kashmirian recension</div><p>天女 Akṣamālā や第7幕の前場など、独自の場面があります。Vasudeva（2006）は、700年ごろ以降の Kashmir で成立した形を復元しようとしました。Abhinavagupta が読んだ本文に近いと考えられています。</p></div>
+  <div class="card S"><h3>南インド系</h3><div class="sub">Southern recension</div><p>Kāṭayavema の注によって知られます。単独の刊本は少なく、デーヴァナーガリー系とあわせて扱われることが多い系統です。</p></div>
+</div>
+</section>
+
+<!-- ===== IV ===== -->
+<span class="period p3" id="modern">IV　1900〜1980年</span>
+<h2>20世紀の再評価</h2>
+<p>20世紀に入ると、この作品はヨーロッパの東洋学の対象であるだけでなく、インド自身の古典として読み直されます。同時に、劇の歴史全体の中で位置づける研究と、伝本を総合する批判校訂の試みが進みました。</p>
+<div class="tw"><table>
+<thead><tr><th>年</th><th>人物</th><th>著作</th><th>立場・貢献</th></tr></thead>
+<tbody>
+<tr><td class="y">1890</td><td class="r">Sylvain Lévi</td><td class="w"><i>Le Théâtre indien</i></td><td>インド演劇史の総合的研究。劇論と作品をつなげて論じる</td></tr>
+<tr><td class="y">1900</td><td class="r">A. A. Macdonell</td><td class="w"><i>A History of Sanskrit Literature</i></td><td>Kālidāsa をグプタ朝期に置く文学史の枠組みを広める</td></tr>
+<tr><td class="y">1907</td><td class="r">Rabindranath Tagore</td><td class="w">評論 „Śakuntalā"（<i>Prācīn Sāhitya</i>）</td><td>二つの愛（地上の情熱と、苦しみを経た精神的な愛）の劇として読む。民族の古典としての意味づけ</td></tr>
+<tr><td class="y">1912</td><td class="r">Arthur W. Ryder</td><td class="w"><i>Kalidasa: Translations of Shakuntala and Other Works</i></td><td>韻文を活かした英訳。英語圏で広く読まれる</td></tr>
+<tr><td class="y">1924</td><td class="r">A. Berriedale Keith</td><td class="w"><i>The Sanskrit Drama in its Origin, Development, Theory and Practice</i></td><td>サンスクリット劇史の標準的概説。nāṭaka の規範、sandhi（劇の構成の節目）による分析</td></tr>
+<tr><td class="y">1928</td><td class="r">A. Berriedale Keith</td><td class="w"><i>A History of Sanskrit Literature</i></td><td>古典文学全体の中での Kālidāsa 論</td></tr>
+<tr><td class="y">1956</td><td class="r">Ji Xianlin 季羨林</td><td class="w">《沙恭达罗》</td><td>原典からの中国語訳（東アジアでの受容）</td></tr>
+<tr><td class="y">1965</td><td class="r">S. K. Belvalkar</td><td class="w"><i>Abhijñānaśākuntalam</i>, Sahitya Akademi</td><td>諸伝本を比較して本文を定めた批判校訂本。インド学界での参照本文の一つ</td></tr>
+<tr><td class="y">1980</td><td class="r">Dileep Kumar Kanjilal</td><td class="w"><i>A Reconstruction of the Abhijñāna-śakuntalam</i></td><td>上演されていた当時の形を再構成しようとする。ベンガル系を重視</td></tr>
+</tbody></table></div>
+<p>インドでは、M. R. Kale らによる学生向けの注釈付き刊本（デーヴァナーガリー系）が版を重ねました。教育の現場で読まれる本文は、ほぼデーヴァナーガリー系に固まっていきます。</p>
+</section>
+
+<section id="aesthetics">
+<h2>美学・詩論からの読み</h2>
+<p>20世紀半ば以降、インド自身の詩論の用語でこの劇を分析する研究が増えました。中心になるのは、恋のラサである śṛṅgāra の二つの相、vipralambha（離別の恋）と saṃbhoga（結ばれた恋）が、劇の中でどう配置されているかという問題です。</p>
+<div class="tw"><table>
+<thead><tr><th>幕</th><th>展開</th><th>ラサの相</th><th>詩論上の論点</th></tr></thead>
+<tbody>
+<tr><td>1–2</td><td>出会い、ひと目惚れ</td><td>śṛṅgāra の発生（pūrvarāga）</td><td>自然描写が恋心を暗示する（dhvani）</td></tr>
+<tr><td>3</td><td>ガーンダルヴァ婚</td><td>saṃbhoga</td><td>恋の成就をどこまで舞台で見せるか</td></tr>
+<tr><td>4</td><td>呪い、旅立ち</td><td>vipralambha の始まり、karuṇa の気配</td><td>別れの場面が劇中の白眉とされる理由</td></tr>
+<tr><td>5–6</td><td>拒絶、指輪による想起</td><td>vipralambha の頂点</td><td>karuṇa（悲）を主ラサとみるかどうか</td></tr>
+<tr><td>7</td><td>再会、息子の認知</td><td>saṃbhoga への回帰</td><td>主ラサ śṛṅgāra への統合と、nāṭaka の幸福な結末</td></tr>
+</tbody></table></div>
+<p>もう一つの論点は、伝統的な注釈と近代の解釈を分けて考えることです。ある表現を śleṣa（掛詞）や dhvani として読むとき、その読みが Rāghavabhaṭṭa などの注釈に根拠をもつのか、近代の研究者の解釈なのかを区別する必要があります。</p>
+</section>
+
+<!-- ===== V ===== -->
+<span class="period p3" id="recent">V　1984年〜現在</span>
+<h2>受容史・批判的読解・未翻訳伝本の刊行</h2>
+<p>1980年代以降の研究は、「正しい本文」を探すことから一歩引きます。そして、この作品が誰によって、どの本文で、どんな目的で読まれてきたかを問うようになります。</p>
+
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 820 230" width="100%" style="min-width:680px" role="img" aria-label="研究の観点の移り変わり。美的評価から本文批判、民族の古典、受容史とジェンダーへ">
+  <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+  <g stroke="var(--muted)" stroke-width="1.5" marker-end="url(#a3)"><line x1="186" y1="80" x2="210" y2="80"/><line x1="386" y1="80" x2="410" y2="80"/><line x1="586" y1="80" x2="610" y2="80"/></g>
+  <g font-size="12" text-anchor="middle">
+    <rect x="16" y="30" width="170" height="100" rx="6" fill="var(--india-soft)" stroke="var(--india)"/>
+    <text x="101" y="54" font-weight="700" fill="var(--india)">美的評価</text>
+    <text x="101" y="76" fill="var(--fg)" font-size="11">ラサ・暗示（dhvani）</text>
+    <text x="101" y="94" fill="var(--fg)" font-size="11">ロマン主義の理想化</text>
+    <text x="101" y="116" fill="var(--muted)" font-size="10.5" class="rm">Abhinavagupta / Goethe</text>
+
+    <rect x="212" y="30" width="174" height="100" rx="6" fill="var(--europe-soft)" stroke="var(--europe)"/>
+    <text x="299" y="54" font-weight="700" fill="var(--europe)">本文批判</text>
+    <text x="299" y="76" fill="var(--fg)" font-size="11">どの伝本が原作か</text>
+    <text x="299" y="94" fill="var(--fg)" font-size="11">プラークリットの形</text>
+    <text x="299" y="116" fill="var(--muted)" font-size="10.5" class="rm">Weber / Pischel / Belvalkar</text>
+
+    <rect x="412" y="30" width="174" height="100" rx="6" fill="var(--modern-soft)" stroke="var(--modern)"/>
+    <text x="499" y="54" font-weight="700" fill="var(--modern)">民族の古典</text>
+    <text x="499" y="76" fill="var(--fg)" font-size="11">理想のインド女性像</text>
+    <text x="499" y="94" fill="var(--fg)" font-size="11">「インドのシェイクスピア」</text>
+    <text x="499" y="116" fill="var(--muted)" font-size="10.5" class="rm">Tagore</text>
+
+    <rect x="612" y="30" width="190" height="100" rx="6" fill="var(--surface)" stroke="var(--modern)"/>
+    <text x="707" y="54" font-weight="700" fill="var(--modern)">受容史・ジェンダー</text>
+    <text x="707" y="76" fill="var(--fg)" font-size="11">誰がどう読んだか</text>
+    <text x="707" y="94" fill="var(--fg)" font-size="11">叙事詩版との比較</text>
+    <text x="707" y="116" fill="var(--muted)" font-size="10.5" class="rm">Figueira / Thapar / Pollock</text>
+  </g>
+  <text x="16" y="168" font-size="11.5" fill="var(--fg)">観点は入れ替わるのではなく、積み重なっていく。</text>
+  <text x="16" y="190" font-size="11" fill="var(--muted)">2000年代には、Vasudeva のカシミール系刊本が「本文批判」を新しい形でよみがえらせた。</text>
+</svg>
+</div>
+<figcaption>研究の観点の移り変わり。左から右へ、主な関心が移っていきます。</figcaption>
+</figure>
+
+<div class="tw"><table>
+<thead><tr><th>年</th><th>人物</th><th>著作</th><th>論点</th></tr></thead>
+<tbody>
+<tr><td class="y">1984</td><td class="r">Barbara Stoler Miller（ed.）</td><td class="w"><i>Theater of Memory: The Plays of Kālidāsa</i></td><td>「記憶」を鍵に Kālidāsa の三作品を読む。上演を意識した英訳と序論</td></tr>
+<tr><td class="y">1989</td><td class="r">Chandra Rajan</td><td class="w"><i>Kālidāsa: The Loom of Time</i>（Penguin）</td><td>詩としてのリズムと劇の効果を英語で再現しようとした翻訳</td></tr>
+<tr><td class="y">1991</td><td class="r">Dorothy M. Figueira</td><td class="w"><i>Translating the Orient: The Reception of Śākuntala in Nineteenth-Century Europe</i></td><td>ヨーロッパの翻訳と受容が、どのような「東洋」像を作りあげたかを分析する</td></tr>
+<tr><td class="y">1999</td><td class="r">Romila Thapar</td><td class="w"><i>Śakuntalā: Texts, Readings, Histories</i></td><td>叙事詩、劇、Purāṇa、植民地期、民族主義と、時代ごとのシャクンタラー像を比べる。女性像の変化を歴史の中で読む</td></tr>
+<tr><td class="y">2001</td><td class="r">W. J. Johnson</td><td class="w"><i>The Recognition of Śakuntalā</i>（Oxford World's Classics）</td><td>デーヴァナーガリー系による現代英訳</td></tr>
+<tr><td class="y">2006</td><td class="r">Somadeva Vasudeva</td><td class="w"><i>The Recognition of Shakuntala</i>（Clay Sanskrit Library）</td><td>それまでほとんど翻訳されていなかったカシミール系の本文を、英訳付きで刊行</td></tr>
+<tr><td class="y">2020</td><td class="r">Sheldon Pollock</td><td class="w">"What Happens in Śakuntalā"</td><td>劇の中で何が起きているのかを、劇の構造と読みの伝統から問い直す論考</td></tr>
+</tbody></table></div>
+
+<div class="note"><b>Thapar の問い</b>　<i>Mahābhārata</i> のシャクンタラーは、王と堂々と言い争い、自分と子の権利を主張します。Kālidāsa の劇では、恥じらいがちな森の乙女として描かれます。19世紀には、さらに「理想のインド女性」の象徴として読まれました。Thapar は、同じ名の女性がどう描き変えられてきたかを、それぞれの時代の社会と結びつけて論じました。</div>
+</section>
+
+<!-- ===== 総合年表 ===== -->
+<section id="chrono">
+<h2>総合年表</h2>
+<p>ここまでの主な出来事を、一つの年表にまとめます。</p>
+<div class="tw"><table>
+<thead><tr><th>年</th><th>地域</th><th>人物</th><th>出来事・著作</th></tr></thead>
+<tbody>
+<tr><td class="y">c. 400</td><td><span class="tag tD">印</span></td><td class="r">Kālidāsa</td><td>劇の成立（グプタ朝期とする説が有力）</td></tr>
+<tr><td class="y">634</td><td><span class="tag tD">印</span></td><td class="r">Ravikīrti</td><td>Aihole 碑文に Kālidāsa の名</td></tr>
+<tr><td class="y">10–11c</td><td><span class="tag tD">印</span></td><td class="r">Abhinavagupta</td><td>劇論の中で本作を論じる</td></tr>
+<tr><td class="y">c. 1400</td><td><span class="tag tD">印</span></td><td class="r">Kāṭayavema</td><td class="w"><i>Kumāragirirājīya</i>（南インド系の注）</td></tr>
+<tr><td class="y">c. 1493</td><td><span class="tag tD">印</span></td><td class="r">Rāghavabhaṭṭa</td><td class="w"><i>Arthadyotanikā</i>（デーヴァナーガリー系の注）</td></tr>
+<tr><td class="y">1789</td><td><span class="tag tB">欧</span></td><td class="r">William Jones</td><td class="w"><i>Sacontalá; or, The Fatal Ring</i>（英訳）</td></tr>
+<tr><td class="y">1791</td><td><span class="tag tB">欧</span></td><td class="r">Georg Forster / Goethe</td><td>ドイツ語訳。Goethe の讃辞</td></tr>
+<tr><td class="y">1830</td><td><span class="tag tB">欧</span></td><td class="r">A.-L. de Chézy</td><td>初の原典刊行と仏訳</td></tr>
+<tr><td class="y">1842</td><td><span class="tag tB">欧</span></td><td class="r">Otto Böhtlingk</td><td>デーヴァナーガリー系の刊本</td></tr>
+<tr><td class="y">1853</td><td><span class="tag tB">欧</span></td><td class="r">M. Monier-Williams</td><td>デーヴァナーガリー系の刊本</td></tr>
+<tr><td class="y">1876–77</td><td><span class="tag tB">欧</span></td><td class="r">A. Weber / R. Pischel</td><td>伝本論争。Pischel のベンガル系刊本</td></tr>
+<tr><td class="y">1864</td><td><span class="tag tD">印</span></td><td class="r">Premacandra / Cowell</td><td>カルカッタのベンガル系刊本</td></tr>
+<tr><td class="y">1883</td><td><span class="tag tD">印</span></td><td class="r">N. B. Godbole</td><td>Nirṇaya Sāgar 版（Rāghavabhaṭṭa 注付き）</td></tr>
+<tr><td class="y">1884</td><td><span class="tag tB">欧</span></td><td class="r">Karl Burkhard</td><td>カシミール系写本の刊行</td></tr>
+<tr><td class="y">1898</td><td><span class="tag tD">印</span></td><td class="r">M. R. Kale</td><td>学習用刊本</td></tr>
+<tr><td class="y">1907</td><td><span class="tag tD">印</span></td><td class="r">R. Tagore</td><td>評論 „Śakuntalā"</td></tr>
+<tr><td class="y">1907</td><td><span class="tag tS">日</span></td><td class="r">Takahashi Gorō ほか</td><td>『梵劇さくんたら姫』（日本初の単行訳）</td></tr>
+<tr><td class="y">1922</td><td><span class="tag tB">欧</span></td><td class="r">Pischel / Cappeller</td><td>Harvard Oriental Series 16</td></tr>
+<tr><td class="y">1924</td><td><span class="tag tS">日</span></td><td class="r">Kawaguchi Ekai</td><td>日本初の原典からの訳</td></tr>
+<tr><td class="y">1924</td><td><span class="tag tB">欧</span></td><td class="r">A. B. Keith</td><td class="w"><i>The Sanskrit Drama</i></td></tr>
+<tr><td class="y">1956</td><td><span class="tag tS">日</span></td><td class="r">Tsuji Naoshirō</td><td>『シャクンタラー』（刀江書院）</td></tr>
+<tr><td class="y">1965</td><td><span class="tag tD">印</span></td><td class="r">S. K. Belvalkar</td><td>Sahitya Akademi 批判校訂本</td></tr>
+<tr><td class="y">1977</td><td><span class="tag tS">日</span></td><td class="r">Tsuji Naoshirō</td><td>『シャクンタラー姫』（岩波文庫）</td></tr>
+<tr><td class="y">1978</td><td><span class="tag tS">日</span></td><td class="r">Kamimura Katsuhiko</td><td>辻訳への書評（『鈴木学術財団研究年報』15）</td></tr>
+<tr><td class="y">1980</td><td><span class="tag tD">印</span></td><td class="r">D. K. Kanjilal</td><td>再構成本</td></tr>
+<tr><td class="y">1984</td><td><span class="tag tK">米</span></td><td class="r">B. Stoler Miller</td><td class="w"><i>Theater of Memory</i></td></tr>
+<tr><td class="y">1989</td><td><span class="tag tD">印</span></td><td class="r">Chandra Rajan</td><td class="w"><i>The Loom of Time</i></td></tr>
+<tr><td class="y">1991</td><td><span class="tag tK">米</span></td><td class="r">D. Figueira</td><td class="w"><i>Translating the Orient</i></td></tr>
+<tr><td class="y">1999</td><td><span class="tag tD">印</span></td><td class="r">R. Thapar</td><td class="w"><i>Śakuntalā: Texts, Readings, Histories</i></td></tr>
+<tr><td class="y">2006</td><td><span class="tag tK">米</span></td><td class="r">S. Vasudeva</td><td>カシミール系の刊本と英訳</td></tr>
+<tr><td class="y">2009</td><td><span class="tag tS">日</span></td><td class="r">Kawaguchi Ekai / Hidaka Takeshi</td><td>河口訳の改訂新版（慧文社）</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- ===== VI 日本 ===== -->
+<span class="period p4" id="japan">VI　1907年〜現在</span>
+<h2>日本での翻訳と研究</h2>
+<p>日本では、明治の終わりに英訳などを通した紹介から始まりました。大正期に原典からの翻訳が現れ、戦後は Tsuji Naoshirō の訳が標準になります。研究の大部分は翻訳とその解説を通じて進められてきました。</p>
+
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 820 230" width="100%" style="min-width:680px" role="img" aria-label="日本での翻訳の年表。1907年から2024年まで">
+  <!-- x: 1900 -> 40, 2030 -> 800 ; 1yr = 5.846 -->
+  <line x1="40" y1="120" x2="800" y2="120" stroke="var(--muted)" stroke-width="1.5"/>
+  <g font-size="11" fill="var(--muted)" text-anchor="middle" class="rm">
+    <text x="40" y="140">1900</text><text x="157" y="140">1920</text><text x="274" y="140">1940</text><text x="391" y="140">1960</text><text x="508" y="140">1980</text><text x="625" y="140">2000</text><text x="742" y="140">2020</text>
+  </g>
+  <rect x="40" y="104" width="111" height="32" fill="var(--europe-soft)" opacity=".7"/>
+  <text x="96" y="160" font-size="10.5" fill="var(--europe)" text-anchor="middle">重訳の時代</text>
+  <rect x="180" y="104" width="250" height="32" fill="var(--japan-soft)" opacity=".7"/>
+  <text x="305" y="160" font-size="10.5" fill="var(--japan)" text-anchor="middle">原典訳の時代</text>
+  <!-- dots -->
+  <g fill="var(--japan)">
+    <circle cx="80.9" cy="120" r="6"/><circle cx="121.8" cy="120" r="6"/><circle cx="180.3" cy="120" r="7"/><circle cx="367.4" cy="120" r="7"/><circle cx="384.9" cy="120" r="6"/><circle cx="472.6" cy="120" r="7"/><circle cx="671.8" cy="120" r="5"/><circle cx="765" cy="120" r="5"/>
+  </g>
+  <g font-size="11" fill="var(--fg)" text-anchor="middle">
+    <text x="80.9" y="96">1907</text><text x="80.9" y="80" font-size="10.5" class="rm">Takahashi</text>
+    <text x="121.8" y="66">1914</text><text x="121.8" y="50" font-size="10.5" class="rm">Morita</text>
+    <text x="180.3" y="96" font-weight="700">1924</text><text x="180.3" y="80" font-size="10.5" font-weight="700" class="rm">Kawaguchi</text>
+    <text x="350" y="96" font-weight="700">1956</text><text x="350" y="80" font-size="10.5" font-weight="700" class="rm">Tsuji</text>
+    <text x="402" y="66">1959</text><text x="402" y="50" font-size="10.5" class="rm">Tanaka</text>
+    <text x="472.6" y="96" font-weight="700">1977</text><text x="472.6" y="80" font-size="10.5" font-weight="700"><tspan class="rm">Tsuji</tspan>・岩波文庫</text>
+    <text x="671.8" y="96">2009</text><text x="671.8" y="80" font-size="10.5"><tspan class="rm">Kawaguchi</tspan> 再刊</text>
+    <text x="765" y="96">2024</text><text x="765" y="80" font-size="10.5"><tspan class="rm">Tanaka</tspan> 電子版</text>
+  </g>
+  <text x="40" y="200" font-size="11" fill="var(--muted)">大きな点＝原典からの翻訳の節目。1959年の田中訳は1974年に筑摩世界文学大系9に再録された。</text>
+</svg>
+</div>
+<figcaption>日本での主な翻訳。1924年の Kawaguchi Ekai 訳が、サンスクリット原典からの最初の日本語訳とされます。</figcaption>
+</figure>
+
+<div class="tw"><table>
+<thead><tr><th>年</th><th>訳者</th><th>書名</th><th>出版</th><th>特徴</th></tr></thead>
+<tbody>
+<tr><td class="y">1907</td><td class="r">Takahashi Gorō 高橋五郎<br>Komori Hikoji 小森彦次</td><td>『梵劇さくんたら姫』<br><span class="r" style="font-size:.85em;color:var(--muted)">Bongeki Sakuntara-hime</span></td><td>前川文栄閣</td><td>明治期の紹介。西洋語訳を介した訳とみられる</td></tr>
+<tr><td class="y">1914</td><td class="r">Morita Sōhei 森田草平</td><td>『しやくんたら姫：戯曲』<br><span class="r" style="font-size:.85em;color:var(--muted)">Shakuntara-hime</span></td><td>日月社</td><td>夏目漱石門下の作家による文学的な訳</td></tr>
+<tr><td class="y">1924</td><td class="r">Kawaguchi Ekai 河口慧海</td><td>『印度歌劇 シヤクンタラー姫』（上下）<br><span class="r" style="font-size:.85em;color:var(--muted)">Indo kageki Shakuntarā-hime</span></td><td>世界文庫刊行会</td><td>チベット・インドに学んだ僧による、日本初の原典訳。それまでの日本語訳は英訳からの重訳だった</td></tr>
+<tr><td class="y">1956</td><td class="r">Tsuji Naoshirō 辻直四郎</td><td>『シャクンタラー』<br><span class="r" style="font-size:.85em;color:var(--muted)">Shakuntarā</span></td><td>刀江書院</td><td>東京大学のサンスクリット学者による学術的な訳</td></tr>
+<tr><td class="y">1959</td><td class="r">Tanaka Otoya 田中於莵弥</td><td>『シャクンタラー』（世界文学大系4『インド集』）</td><td>筑摩書房</td><td>全集の一冊として広く読まれる。1974年に筑摩世界文学大系9に再録。2024年に電子版（グーテンベルク21）</td></tr>
+<tr><td class="y">1977</td><td class="r">Tsuji Naoshirō 辻直四郎</td><td>『シャクンタラー姫』（岩波文庫 赤64-1）<br><span class="r" style="font-size:.85em;color:var(--muted)">Shakuntarā-hime</span></td><td>岩波書店</td><td>1956年訳の改訳。235頁。現在まで日本でもっとも読まれている標準訳</td></tr>
+<tr><td class="y">2009</td><td class="r">Kawaguchi Ekai 訳<br>Hidaka Takeshi 日高彪 校訂</td><td>『シャクンタラー姫』（河口慧海著作選集4）</td><td>慧文社</td><td>1924年訳の改訂新版。1924年版の本文とは区別して扱う必要がある</td></tr>
+</tbody></table></div>
+
+<h3>研究の特徴</h3>
+<div class="cards">
+  <div class="card S"><h3>翻訳が研究の中心</h3><p>日本の研究は、正確な原典訳とその解説・注によって進められてきました。Tsuji Naoshirō は翻訳のほかに『サンスクリット文学史』（岩波全書）で、Kālidāsa をインド文学史の中に位置づけています。</p></div>
+  <div class="card S"><h3>個別の論文</h3><p>『印度學佛教學研究』などの学会誌に、Kālidāsa の作品の語や思想を扱う論文が載ってきました。Kimura Hideo（1959）は作品中の dhruvatārā（北極星）を、Nobe Ryōshū（1971・1972）は作品に見られる死生観やヴェーダーンタ的要素を論じています。</p></div>
+  <div class="card S"><h3>美学からの評価</h3><p>Kamimura Katsuhiko（1944–2002）は、インド詩論・ラサ論の研究者です。1978年に辻訳『シャクンタラー姫』の書評（『鈴木学術財団研究年報』15、61–64頁）を書きました。その美学研究は、ラサや dhvani の観点からこの劇を読むための土台になっています。</p></div>
+  <div class="card S"><h3>伝本研究の空白</h3><p>欧米やインドで中心だった伝本の比較研究は、日本ではあまり行われてきませんでした。日本語訳の多くは、インドで普及したデーヴァナーガリー系の刊本を参照してきたと考えられます（底本は各書の解説で確かめてください）。カシミール系の本文が日本語で読めるようになったのは、ごく最近のことです。</p></div>
+</div>
+
+<div class="note j"><b>重訳から原典訳へ</b>　明治・大正の訳は、ヨーロッパでの評価（Goethe の讃辞など）を通して日本に入ってきました。それがKawaguchi Ekai の原典訳を経て、戦後のアカデミズムでは Tsuji Naoshirō による学術的な原典訳へと移ります。これは、ヨーロッパで英訳からの重訳が Chézy の原典研究に移った流れと、およそ100年遅れで重なっています。</div>
+
+<h3>日本の研究の三つの層</h3>
+<div class="tw"><table>
+<thead><tr><th>層</th><th>代表</th><th>主な問い</th></tr></thead>
+<tbody>
+<tr><td>原典研究・文学史</td><td class="r">Tsuji Naoshirō</td><td>文法・韻律・語義の確定。インド文学史の中での位置</td></tr>
+<tr><td>美学・詩論</td><td class="r">Kamimura Katsuhiko</td><td>ラサ論・dhvani 論・劇論の中での読み</td></tr>
+<tr><td>翻訳・受容</td><td class="r">Kawaguchi Ekai → Tsuji Naoshirō</td><td>重訳から原典訳へ。題名「シャクンタラー」と「シャクンタラー姫」の違い。abhijñāna をどう訳すか</td></tr>
+</tbody></table></div>
+
+<h3>日本とヨーロッパの比較</h3>
+<div class="tw"><table>
+<thead><tr><th>段階</th><th>ヨーロッパ</th><th>日本</th><th>時間差</th></tr></thead>
+<tbody>
+<tr><td>最初の紹介（重訳）</td><td>1791 Forster（英訳から）</td><td>1907 Takahashi Gorō・Komori Hikoji</td><td style="font-variant-numeric:tabular-nums">約116年</td></tr>
+<tr><td>最初の原典訳</td><td>1830 Chézy</td><td>1924 Kawaguchi Ekai</td><td style="font-variant-numeric:tabular-nums">約94年</td></tr>
+<tr><td>学術的標準訳</td><td>1853–55 Monier-Williams</td><td>1956 / 1977 Tsuji Naoshirō</td><td style="font-variant-numeric:tabular-nums">約100年</td></tr>
+<tr><td>カシミール系の翻訳</td><td>2006 Vasudeva（英訳）</td><td>Web 上の対訳（近年）</td><td>ほぼ同時代</td></tr>
+</tbody></table></div>
+<p>最後の段階では、日本とヨーロッパの時間差がほとんどなくなっています。インターネットで公開される対訳は、伝本の違いを日本語の読者が直接たどれる新しい場になりつつあります。</p>
+</section>
+
+<section id="tasks">
+<h2>今後の調査課題</h2>
+<ul class="tight">
+<li><b>日本の文献目録:</b> 明治期から現在までの論文・著書・翻訳・書評を年代順に並べた目録はまだありません。題名に『シャクンタラー』を含まなくても、Kālidāsa 論、劇論、ラサ論、dhvani 論の中でこの劇を扱った研究を拾う必要があります。CiNii Research、INBUDS（インド学仏教学論文データベース）、国立国会図書館サーチを横断して調べるとよいでしょう。</li>
+<li><b>注釈の歴史:</b> Rāghavabhaṭṭa、Kāṭayavema などの注釈と、詩論書での引用は、西洋中心の研究史では見えにくい領域です。</li>
+<li><b>伝本ごとの比較:</b> カシミール系の本文が日本語で読めるようになったことで、デーヴァナーガリー系による既訳との違いを具体的に比べられるようになりました。</li>
+<li><b>上演研究:</b> サンスクリットとプラークリットの使い分け、序幕の座頭と女優の対話など、戯曲として上演される面からの研究は、まだ少ない状態です。</li>
+</ul>
+</section>
+
+<footer>
+このページは研究史の概観で、各項目の年や書誌は代表的な情報によります。Weber・Pischel の論争の細部、伝本間の関係、Padmapurāṇa の成立年代などには異説があります。作品の筋と登場人物については <a href="shakuntala-guide.html">『シャクンタラー』読解ガイド</a>、本文は <a href="https://mandana1221.github.io/brahmasiddhi/shakuntala_bilingual.html">サンスクリット・日本語対訳</a> をご覧ください。
+</footer>
+</div>
+
+</body>
+</html>
