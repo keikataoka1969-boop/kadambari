@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>シャクンタラー読解ガイド</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 一段組みの読み物。森(緑)→宮廷(藍)→天界(金)の三つの舞台を色で通し、図と表で筋をたどる */
+:root{
+  --bg:#f6f8f4; --surface:#ffffff; --fg:#1f2a24; --muted:#5d6b62; --rule:#d5ddd6;
+  --forest:#2f6b4a; --forest-soft:#e1efe6;
+  --court:#38457f; --court-soft:#e4e7f4;
+  --heaven:#a2741c; --heaven-soft:#f6ecd6;
+  --curse:#a8364a; --curse-soft:#f6e1e5;
+  --display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141a17; --surface:#1b2420; --fg:#e4ebe6; --muted:#9caaa1; --rule:#2f3b35;
+  --forest:#7cc49b; --forest-soft:#1f3329;
+  --court:#9fabe8; --court-soft:#232a45;
+  --heaven:#e0b65e; --heaven-soft:#3a2f17;
+  --curse:#ec8a9c; --curse-soft:#3d2128; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141a17; --surface:#1b2420; --fg:#e4ebe6; --muted:#9caaa1; --rule:#2f3b35;
+  --forest:#7cc49b; --forest-soft:#1f3329;
+  --court:#9fabe8; --court-soft:#232a45;
+  --heaven:#e0b65e; --heaven-soft:#3a2f17;
+  --curse:#ec8a9c; --curse-soft:#3d2128; color-scheme:dark}
+
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.9;padding:0 16px}
+.wrap{max-width:860px;margin:0 auto;padding-block:40px 80px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.35;margin:0}
+h1{font-size:clamp(2rem,6vw,3.1rem);font-weight:800;letter-spacing:.02em}
+h2{font-size:1.65rem;font-weight:700;margin-top:64px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+h3{font-size:1.2rem;font-weight:700;margin-top:32px}
+p{margin:14px 0;max-width:42em}
+.eyebrow{font-size:.78rem;letter-spacing:.14em;color:var(--forest);font-weight:700}
+.lede{font-size:1.08rem;color:var(--muted);max-width:40em}
+.sk{font-style:italic;color:var(--muted);font-size:.92em}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+nav.toc a{font-size:.88rem;color:var(--fg);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:3px 14px;background:var(--surface)}
+nav.toc a:hover,nav.toc a:focus-visible{border-color:var(--forest);outline:none;color:var(--forest)}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:28px 0}
+.facts div{background:var(--surface);padding:12px 16px}
+.facts dt{font-size:.75rem;letter-spacing:.1em;color:var(--muted)}
+.facts dd{margin:2px 0 0;font-weight:500}
+
+.fig{margin:24px 0;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px}
+.fig figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.scroll{overflow-x:auto}
+svg text{font-family:var(--body)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--muted);margin-top:6px}
+.legend span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+
+table{border-collapse:collapse;width:100%;font-size:.93rem;line-height:1.7}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font-size:.78rem;letter-spacing:.08em;color:var(--muted);font-weight:700;background:var(--surface)}
+td.n{font-family:var(--display);font-weight:800;font-size:1.15rem;white-space:nowrap}
+.tw{overflow-x:auto;margin:20px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+.tw table{min-width:640px}
+.chip{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;padding:1px 9px;border-radius:999px;white-space:nowrap}
+.f{background:var(--forest-soft);color:var(--forest)}
+.c{background:var(--court-soft);color:var(--court)}
+.h{background:var(--heaven-soft);color:var(--heaven)}
+.x{background:var(--curse-soft);color:var(--curse)}
+.iast{font-style:italic;color:var(--muted);font-size:.85em;white-space:nowrap}
+.pk{font-size:.68rem;font-weight:700;color:var(--forest);border:1px solid var(--forest);border-radius:3px;padding:0 4px;margin-left:4px;vertical-align:1px}
+
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:20px}
+.group{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;min-width:0}
+.group h3{margin:0 0 8px;font-size:1.05rem}
+.group dl{margin:0}
+.group dt{font-weight:700;margin-top:10px}
+.group dt small{font-weight:400;color:var(--muted);font-size:.78rem;margin-left:6px}
+.group dd{margin:2px 0 0;font-size:.9rem;color:var(--muted);line-height:1.7}
+.group.f-g h3{color:var(--forest)} .group.c-g h3{color:var(--court)} .group.h-g h3{color:var(--heaven)}
+
+.acts{display:grid;gap:14px;margin-top:20px}
+.act{display:grid;grid-template-columns:64px 1fr;gap:16px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px 18px}
+.act .num{font-family:var(--display);font-size:2.2rem;font-weight:800;line-height:1;text-align:center}
+.act .num small{display:block;font-size:.7rem;font-weight:500;color:var(--muted);margin-top:6px;font-family:var(--body)}
+.act > div{min-width:0}
+.act h3{margin:0;font-size:1.12rem}
+.act p{margin:8px 0;font-size:.95rem}
+.act .key{font-size:.85rem;color:var(--muted);border-top:1px dashed var(--rule);padding-top:8px;margin-top:8px}
+.act.f-a .num{color:var(--forest)} .act.c-a .num{color:var(--court)} .act.h-a .num{color:var(--heaven)}
+@media (max-width:520px){.act{grid-template-columns:1fr;gap:6px}.act .num{text-align:left}.act .num small{display:inline;margin-left:8px}}
+
+.note{background:var(--heaven-soft);border-radius:6px;padding:14px 18px;margin:20px 0;font-size:.94rem}
+.note b{color:var(--heaven)}
+blockquote{margin:16px 0;padding:6px 0 6px 20px;border-left:3px solid var(--forest);font-family:var(--display);font-size:1.02rem}
+blockquote .sk{display:block;font-family:var(--body);font-size:.85rem;margin-top:6px}
+ol.points{padding-left:1.4em} ol.points li{margin:12px 0}
+footer{margin-top:64px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">カーリダーサ作 サンスクリット戯曲 · 全7幕 · カシミール系伝本</div>
+  <h1>シャクンタラー<br>読解ガイド</h1>
+  <p class="lede">『アビジュニャーナ・シャクンタラム』は「しるしによって思い出されたシャクンタラー」という意味です。森で結ばれた王と仙女の娘が、呪いによって引き裂かれ、一つの指輪によって再び結ばれるまでを描きます。このガイドは、サンスクリット・日本語対訳（ヴァスデーヴァ校訂のカシミール系伝本による）の本文に沿って、筋と登場人物を図と表で整理したものです。</p>
+  <nav class="toc" aria-label="目次">
+    <a href="#overview">全体像</a>
+    <a href="#people">登場人物</a>
+    <a href="#map">人物相関図</a>
+    <a href="#acts">幕ごとのあらすじ</a>
+    <a href="#ring">呪いと二つのしるし</a>
+    <a href="#lang">言葉の使い分け</a>
+    <a href="#recension">この版の特徴</a>
+    <a href="#mbh">原典との違い</a>
+    <a href="#read">鑑賞のポイント</a>
+  </nav>
+</header>
+
+<dl class="facts">
+  <div><dt>作者</dt><dd>カーリダーサ（4〜5世紀ごろ）</dd></div>
+  <div><dt>構成</dt><dd>序幕＋全7幕・詩節213</dd></div>
+  <div><dt>主な情趣（ラサ）</dt><dd>恋（シュリンガーラ）</dd></div>
+  <div><dt>題材</dt><dd>『マハーバーラタ』第1巻の挿話</dd></div>
+</dl>
+
+<!-- ===== 全体像 ===== -->
+<section id="overview">
+<h2>ひと目でわかる全体像</h2>
+<p>物語は「出会い → 結婚 → 呪い → 拒絶 → 想起 → 再会」という一本の線で進みます。舞台は<b>森の庵</b>から<b>王の宮廷</b>へ、最後は<b>天界の山ヘーマクータ</b>へと移り、それぞれの場所が恋の段階と重なっています。下の図は、二人の心の距離を幕ごとにたどったものです。</p>
+
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 760 330" width="100%" style="min-width:600px" role="img" aria-label="7幕を通じた二人の関係の推移。第3幕で結ばれ、第5幕で最低点、第7幕で再会して頂点に戻る。">
+  <rect x="60" y="30" width="388" height="230" fill="var(--forest-soft)"/>
+  <rect x="448" y="30" width="194" height="230" fill="var(--court-soft)"/>
+  <rect x="642" y="30" width="98" height="230" fill="var(--heaven-soft)"/>
+  <text x="254" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="var(--forest)">森の庵（カンヴァの苦行林）</text>
+  <text x="545" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="var(--court)">ハスティナープラの王宮</text>
+  <text x="691" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="var(--heaven)">天界の山</text>
+  <line x1="60" y1="260" x2="740" y2="260" stroke="var(--rule)" stroke-width="1.5"/>
+  <text x="50" y="84" text-anchor="end" font-size="11" fill="var(--muted)">結ばれる</text>
+  <text x="50" y="254" text-anchor="end" font-size="11" fill="var(--muted)">断絶</text>
+  <g font-size="13" fill="var(--fg)" text-anchor="middle" font-weight="700">
+    <text x="108" y="282">第1幕</text><text x="205" y="282">第2幕</text><text x="302" y="282">第3幕</text>
+    <text x="399" y="282">第4幕</text><text x="496" y="282">第5幕</text><text x="593" y="282">第6幕</text><text x="690" y="282">第7幕</text>
+  </g>
+  <polyline fill="none" stroke="var(--fg)" stroke-width="2.5" stroke-linejoin="round"
+    points="108,148 205,131 302,80 399,165 496,250 593,199 690,80"/>
+  <g fill="var(--surface)" stroke="var(--fg)" stroke-width="2">
+    <circle cx="108" cy="148" r="5"/><circle cx="205" cy="131" r="5"/><circle cx="302" cy="80" r="6"/>
+    <circle cx="399" cy="165" r="5"/><circle cx="593" cy="199" r="5"/><circle cx="690" cy="80" r="6"/>
+  </g>
+  <circle cx="496" cy="250" r="6" fill="var(--curse)"/>
+  <line x1="360" y1="70" x2="360" y2="255" stroke="var(--curse)" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="365" y="75" font-size="12" fill="var(--curse)" font-weight="700">呪い</text>
+  <g font-size="11.5" fill="var(--fg)">
+    <text x="108" y="170" text-anchor="middle">ひと目惚れ</text>
+    <text x="205" y="153" text-anchor="middle">王、森に留まる</text>
+    <text x="302" y="102" text-anchor="middle">ひそかな結婚</text>
+    <text x="399" y="187" text-anchor="middle">旅立ち</text>
+    <text x="496" y="240" text-anchor="middle" fill="var(--curse)" font-weight="700">拒絶</text>
+    <text x="593" y="221" text-anchor="middle">指輪で想起</text>
+    <text x="690" y="102" text-anchor="middle">再会</text>
+  </g>
+  <text x="545" y="314" text-anchor="middle" font-size="11" fill="var(--muted)">第5幕から第7幕までに年月が流れ、息子が育っている</text>
+  <line x1="450" y1="300" x2="640" y2="300" stroke="var(--muted)" stroke-width="1"/>
+</svg>
+</div>
+<figcaption>二人の関係の推移（筋から読み取った模式図で、数値ではありません）。背景の色は舞台です。第6幕の終わりに王は天界へ向かい、第7幕でヘーマクータ山に降り立ちます。</figcaption>
+</figure>
+
+<p>構造を三つに分けると、さらに見通しがよくなります。</p>
+<div class="tw"><table>
+<thead><tr><th>部</th><th>幕</th><th>舞台</th><th>できごと</th><th>主題</th></tr></thead>
+<tbody>
+<tr><td><span class="chip f">起</span></td><td>序幕・第1〜4幕</td><td>カンヴァの庵（マーリニー川のほとり）</td><td>出会い、恋、ひそかな結婚、呪いと旅立ち</td><td>自然の中の恋</td></tr>
+<tr><td><span class="chip c">転</span></td><td>第5〜6幕</td><td>ハスティナープラの王宮</td><td>忘却による拒絶、指輪の発見、王の後悔</td><td>記憶と喪失</td></tr>
+<tr><td><span class="chip h">結</span></td><td>第7幕</td><td>ヘーマクータ山のマーリーチャの庵</td><td>息子との出会い、再会と和解</td><td>浄化された愛</td></tr>
+</tbody></table></div>
+
+<h3>詩節の数で見る各幕</h3>
+<p>この対訳は詩節に幕ごとの通し番号をつけています（序幕の詩も第1幕に含みます）。全213詩節のうち、恋が実る第3幕と、再会の第7幕がもっとも多くなっています。</p>
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 640 230" width="100%" style="min-width:420px" role="img" aria-label="幕ごとの詩節数。第1幕30、第2幕20、第3幕35、第4幕26、第5幕32、第6幕34、第7幕36。">
+  <g font-size="12.5" fill="var(--fg)">
+    <!-- scale: 36 -> 440px; 1 = 12.222px; x0 = 90 -->
+    <line x1="90" y1="8" x2="90" y2="218" stroke="var(--rule)"/>
+    <g text-anchor="end" font-weight="700">
+      <text x="80" y="27">第1幕</text><text x="80" y="57">第2幕</text><text x="80" y="87">第3幕</text>
+      <text x="80" y="117">第4幕</text><text x="80" y="147">第5幕</text><text x="80" y="177">第6幕</text><text x="80" y="207">第7幕</text>
+    </g>
+    <rect x="90" y="13" width="366.7" height="20" rx="2" fill="var(--forest)"/>
+    <rect x="90" y="43" width="244.4" height="20" rx="2" fill="var(--forest)"/>
+    <rect x="90" y="73" width="427.8" height="20" rx="2" fill="var(--forest)"/>
+    <rect x="90" y="103" width="317.8" height="20" rx="2" fill="var(--forest)"/>
+    <rect x="90" y="133" width="391.1" height="20" rx="2" fill="var(--court)"/>
+    <rect x="90" y="163" width="415.6" height="20" rx="2" fill="var(--court)"/>
+    <rect x="90" y="193" width="440" height="20" rx="2" fill="var(--heaven)"/>
+    <g font-variant-numeric="tabular-nums">
+      <text x="463" y="28">30</text><text x="341" y="58">20</text><text x="525" y="88">35</text>
+      <text x="415" y="118">26</text><text x="488" y="148">32</text><text x="512" y="178">34</text><text x="537" y="208">36</text>
+    </g>
+  </g>
+</svg>
+</div>
+<figcaption>幕ごとの詩節数（対訳の番号による）。棒の色は舞台（緑＝森、藍＝宮廷、金＝天界）。</figcaption>
+</figure>
+</section>
+
+<!-- ===== 登場人物 ===== -->
+<section id="people">
+<h2>登場人物</h2>
+<p>人物は住む世界ごとに三つに分けると覚えやすくなります。<span class="pk">Pk</span>はプラークリット（日常の話し言葉）で話す人物です。人名の表記は対訳に合わせています。</p>
+
+<div class="groups">
+  <div class="group f-g">
+    <h3>森の人びと</h3>
+    <dl>
+      <dt>シャクンタラー<span class="pk">Pk</span><small>Śakuntalā</small></dt>
+      <dd>ヒロイン。天女メーナカーと王仙ヴィシュヴァーミトラの娘。生まれてすぐ捨てられ、鳥（シャクンタ）に守られていたので、この名がある。聖仙カンヴァに育てられた。</dd>
+      <dt>カンヴァ（カーシャパ）<small>Kaṇva</small></dt>
+      <dd>庵の主で、シャクンタラーの養父。カシュヤパ家の出なので「カーシャパ」とも呼ばれる。第1幕では娘の悪い運命をしずめるためプラバーサへ出かけていて、第4幕に登場する。</dd>
+      <dt>アナスーヤー<span class="pk">Pk</span><small>Anasūyā</small></dt>
+      <dd>シャクンタラーの友。落ちついた思慮深い性格。名は「ねたまない女」。</dd>
+      <dt>プリヤンヴァダー<span class="pk">Pk</span><small>Priyaṃvadā</small></dt>
+      <dd>シャクンタラーの友。明るくからかい好き。名は「うれしいことを言う女」。</dd>
+      <dt>ガウタミー<span class="pk">Pk</span><small>Gautamī</small></dt>
+      <dd>庵の年長の女性苦行者で、娘たちの母親がわり。宮廷まで付き添う。</dd>
+      <dt>シャールンガラヴァ / シャーラドヴァタ<small>Śārṅgarava / Śāradvata</small></dt>
+      <dd>カンヴァの弟子。シャクンタラーを王宮へ送り届け、第5幕で王に厳しく迫る。</dd>
+      <dt>ドゥルヴァーサス<small>Durvāsas</small></dt>
+      <dd>怒りっぽいことで有名な聖仙。もてなしを怠ったシャクンタラーを呪う（声だけの登場）。</dd>
+    </dl>
+  </div>
+  <div class="group c-g">
+    <h3>宮廷の人びと</h3>
+    <dl>
+      <dt>ドゥシヤンタ王<small>Duṣyanta</small></dt>
+      <dd>主人公。プル族の王で、都はハスティナープラ。劇中では多く「王」と呼ばれる。インドラ神の友として悪魔とも戦う英雄。</dd>
+      <dt>マーダヴィヤ<span class="pk">Pk</span><small>Mādhavya · 道化</small></dt>
+      <dd>王の遊び相手のバラモンで、食いしん坊の笑い役（ヴィドゥーシャカ）。王の恋の打ち明け相手。</dd>
+      <dt>クラプラバー妃<small>Kulaprabhā</small></dt>
+      <dd>王の正妃（舞台には姿を見せない）。第6幕で、その侍女たちが絵筆の箱や肖像画を取り上げに来る。</dd>
+      <dt>ハンサパディカー<span class="pk">Pk</span><small>Haṃsapadikā</small></dt>
+      <dd>かつて王の寵愛を受けた後宮の女性。第5幕冒頭、王の心変わりを恨む歌を歌う。</dd>
+      <dt>ヴァスマティー<span class="pk">Pk</span><small>Vasumatī · 女官</small></dt>
+      <dd>王のそばで取り次ぎをする女官。</dd>
+      <dt>侍従長 / 宮廷祭官<small>kañcukin / purohita</small></dt>
+      <dd>老いた侍従長パールヴァターヤナと、祭官ソーマラータ。祭官は第5幕で「お産まで私の家であずかろう」と申し出る。</dd>
+      <dt>漁師と警吏たち<span class="pk">Pk</span></dt>
+      <dd>第6幕冒頭、魚の腹から指輪を見つけた漁師と、彼を引き立てる王の義兄（警吏の長）、警吏スーチャカとジャーナカ。</dd>
+      <dt>メーダーヴィニー<span class="pk">Pk</span><small>絵師</small></dt>
+      <dd>第6幕で、王の描いたシャクンタラーの肖像画を運んでくる女官。</dd>
+    </dl>
+  </div>
+  <div class="group h-g">
+    <h3>天界の人びと</h3>
+    <dl>
+      <dt>メーナカー<small>Menakā</small></dt>
+      <dd>シャクンタラーの実母である天女（姿は見せない）。拒まれた娘を光の姿で連れ去り、マーリーチャの庵へ運ぶ。</dd>
+      <dt>アクシャマーラー<span class="pk">Pk</span><small>Akṣamālā</small></dt>
+      <dd>メーナカーの縁者の天女。第6幕で姿隠しの術で宮廷に入り、王の後悔を見届ける。デーヴァナーガリー系伝本ではサーヌマティー。</dd>
+      <dt>マータリ<small>Mātali</small></dt>
+      <dd>インドラ神の御者。道化をさらって王を怒らせ、悪魔討伐のため天界へ導く。</dd>
+      <dt>天の踊り子たち<span class="pk">Pk</span></dt>
+      <dd>パーリジャータマンジャリーとチュータマンジャリー。第7幕の前場で、王の勝利を伝えて踊る。</dd>
+      <dt>マーリーチャとアディティ<small>Mārīca / Aditi</small></dt>
+      <dd>神々の父である聖仙カシュヤパと、神々の母。その庵でシャクンタラーが息子を産み育てている。呪いのいきさつを明かす。</dd>
+      <dt>少年サルヴァダマナ<span class="pk">Pk</span><small>のちのバラタ</small></dt>
+      <dd>王とシャクンタラーの息子。獅子の子の口をあけさせて歯を数えようとするわんぱく。名は「何でも手なずける子」。のちに世界を治める帝王バラタとなる。</dd>
+      <dt>サンヤター / スヴラター<span class="pk">Pk</span></dt>
+      <dd>少年の世話をする二人の苦行女。</dd>
+    </dl>
+  </div>
+</div>
+
+<h3>幕ごとの登場</h3>
+<p>主な人物が、どの幕に姿を見せるかの一覧です（●＝登場、○＝声のみ・姿を隠して登場）。</p>
+<div class="tw"><table style="min-width:600px">
+<thead><tr><th>人物</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr></thead>
+<tbody style="font-variant-numeric:tabular-nums">
+<tr><td>ドゥシヤンタ王</td><td>●</td><td>●</td><td>●</td><td></td><td>●</td><td>●</td><td>●</td></tr>
+<tr><td>シャクンタラー</td><td>●</td><td></td><td>●</td><td>●</td><td>●</td><td></td><td>●</td></tr>
+<tr><td>アナスーヤー / プリヤンヴァダー</td><td>●</td><td></td><td>●</td><td>●</td><td></td><td></td><td></td></tr>
+<tr><td>マーダヴィヤ（道化）</td><td></td><td>●</td><td></td><td></td><td>●</td><td>●</td><td></td></tr>
+<tr><td>カンヴァ</td><td></td><td></td><td></td><td>●</td><td></td><td></td><td></td></tr>
+<tr><td>ガウタミー</td><td></td><td></td><td>●</td><td>●</td><td>●</td><td></td><td></td></tr>
+<tr><td>ドゥルヴァーサス</td><td></td><td></td><td></td><td>○</td><td></td><td></td><td></td></tr>
+<tr><td>シャールンガラヴァ / シャーラドヴァタ</td><td></td><td></td><td></td><td>●</td><td>●</td><td></td><td></td></tr>
+<tr><td>アクシャマーラー</td><td></td><td></td><td></td><td></td><td></td><td>○</td><td></td></tr>
+<tr><td>マータリ</td><td></td><td></td><td></td><td></td><td></td><td>●</td><td>●</td></tr>
+<tr><td>少年 / マーリーチャ / アディティ</td><td></td><td></td><td></td><td></td><td></td><td></td><td>●</td></tr>
+</tbody></table></div>
+<p class="sk" style="font-style:normal">王が登場しないのは第4幕だけで、シャクンタラーは第2幕と第6幕に姿を見せません。第6幕では、彼女の不在そのものが王の苦しみとして描かれます。</p>
+</section>
+
+<!-- ===== 相関図 ===== -->
+<section id="map">
+<h2>人物相関図</h2>
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 760 530" width="100%" style="min-width:660px" role="img" aria-label="人物相関図。シャクンタラーとドゥシヤンタ王を中心に、天界、森、宮廷の人物を配置。">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker>
+    <marker id="arx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--curse)"/></marker>
+  </defs>
+  <rect x="10" y="10" width="740" height="104" rx="6" fill="var(--heaven-soft)"/>
+  <text x="22" y="30" font-size="12" font-weight="700" fill="var(--heaven)">天界と聖仙</text>
+  <rect x="10" y="124" width="360" height="396" rx="6" fill="var(--forest-soft)"/>
+  <text x="22" y="144" font-size="12" font-weight="700" fill="var(--forest)">森の庵</text>
+  <rect x="390" y="124" width="360" height="396" rx="6" fill="var(--court-soft)"/>
+  <text x="402" y="144" font-size="12" font-weight="700" fill="var(--court)">宮廷</text>
+
+  <g stroke="var(--muted)" stroke-width="1.5" fill="none">
+    <path d="M90,78 L170,262" marker-end="url(#ar)"/>
+    <path d="M220,78 L205,262" marker-end="url(#ar)"/>
+    <path d="M95,206 L150,262" marker-end="url(#ar)"/>
+    <path d="M197,316 L120,370"/>
+    <path d="M197,316 L280,370"/>
+    <path d="M360,78 L520,262" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+    <path d="M505,78 L570,262" marker-end="url(#ar)"/>
+    <path d="M630,262 L680,212"/>
+    <path d="M565,316 L500,370"/>
+    <path d="M565,316 L660,370"/>
+  </g>
+  <path d="M290,206 L235,262" stroke="var(--curse)" stroke-width="2" stroke-dasharray="5 3" fill="none" marker-end="url(#arx)"/>
+
+  <line x1="262" y1="289" x2="490" y2="289" stroke="var(--fg)" stroke-width="3"/>
+  <line x1="376" y1="289" x2="376" y2="470" stroke="var(--fg)" stroke-width="2"/>
+  <rect x="318" y="270" width="116" height="20" rx="3" fill="var(--bg)"/>
+  <text x="376" y="285" text-anchor="middle" font-size="11.5" font-weight="700" fill="var(--fg)">ガーンダルヴァ婚</text>
+
+  <g font-size="11" fill="var(--muted)">
+    <text x="76" y="168">実父</text>
+    <text x="218" y="168">実母（第5幕で連れ去る）</text>
+    <text x="62" y="246">養父</text>
+    <text x="268" y="246" fill="var(--curse)" font-weight="700">呪い</text>
+    <text x="414" y="120">姿を隠して見守る</text>
+    <text x="548" y="170">天界へ導く</text>
+    <text x="662" y="246">友・道化</text>
+    <text x="182" y="352">親友</text>
+    <text x="604" y="352">妃</text>
+    <text x="384" y="420">息子</text>
+  </g>
+
+  <g font-size="12.5" text-anchor="middle" fill="var(--fg)">
+    <rect x="30" y="48" width="122" height="30" rx="15" fill="var(--surface)" stroke="var(--heaven)"/><text x="91" y="68">ヴィシュヴァーミトラ</text>
+    <rect x="170" y="48" width="100" height="30" rx="15" fill="var(--surface)" stroke="var(--heaven)"/><text x="220" y="68">メーナカー</text>
+    <rect x="300" y="48" width="120" height="30" rx="15" fill="var(--surface)" stroke="var(--heaven)"/><text x="360" y="68">アクシャマーラー</text>
+    <rect x="455" y="48" width="100" height="30" rx="15" fill="var(--surface)" stroke="var(--heaven)"/><text x="505" y="68">マータリ</text>
+    <rect x="580" y="40" width="160" height="46" rx="6" fill="var(--surface)" stroke="var(--heaven)"/>
+    <text x="660" y="60">マーリーチャ・アディティ</text>
+    <text x="660" y="77" font-size="10.5" fill="var(--muted)">母子を庵に引きとる</text>
+    <text x="91" y="96" font-size="10.5" fill="var(--muted)">（王仙）</text>
+    <text x="505" y="96" font-size="10.5" fill="var(--muted)">（インドラの御者）</text>
+
+    <rect x="40" y="176" width="110" height="30" rx="15" fill="var(--surface)" stroke="var(--forest)"/><text x="95" y="196">カンヴァ</text>
+    <rect x="235" y="176" width="115" height="30" rx="15" fill="var(--surface)" stroke="var(--curse)"/><text x="292" y="196">ドゥルヴァーサス</text>
+    <rect x="132" y="262" width="130" height="54" rx="6" fill="var(--forest)"/><text x="197" y="295" fill="var(--bg)" font-weight="700" font-size="15">シャクンタラー</text>
+    <rect x="45" y="370" width="140" height="30" rx="15" fill="var(--surface)" stroke="var(--forest)"/><text x="115" y="390">アナスーヤー</text>
+    <rect x="205" y="370" width="140" height="30" rx="15" fill="var(--surface)" stroke="var(--forest)"/><text x="275" y="390">プリヤンヴァダー</text>
+    <rect x="30" y="440" width="230" height="46" rx="6" fill="var(--surface)" stroke="var(--forest)"/>
+    <text x="145" y="460">ガウタミー／シャールンガラヴァ</text>
+    <text x="145" y="477" font-size="10.5" fill="var(--muted)">シャーラドヴァタ（王宮へ付き添う）</text>
+
+    <rect x="490" y="262" width="140" height="54" rx="6" fill="var(--court)"/><text x="560" y="295" fill="var(--bg)" font-weight="700" font-size="15">ドゥシヤンタ王</text>
+    <rect x="640" y="182" width="104" height="30" rx="15" fill="var(--surface)" stroke="var(--court)"/><text x="692" y="202">マーダヴィヤ</text>
+    <rect x="425" y="370" width="150" height="30" rx="15" fill="var(--surface)" stroke="var(--court)"/><text x="500" y="390">クラプラバー妃（正妃）</text>
+    <rect x="590" y="370" width="150" height="30" rx="15" fill="var(--surface)" stroke="var(--court)"/><text x="665" y="390">ハンサパディカー</text>
+    <rect x="490" y="440" width="250" height="46" rx="6" fill="var(--surface)" stroke="var(--court)"/>
+    <text x="615" y="460">ヴァスマティー（女官）・侍従長・祭官</text>
+    <text x="615" y="477" font-size="10.5" fill="var(--muted)">漁師と警吏、絵師メーダーヴィニー</text>
+
+    <rect x="296" y="470" width="160" height="40" rx="6" fill="var(--heaven)"/><text x="376" y="495" fill="var(--bg)" font-weight="700">サルヴァダマナ（バラタ）</text>
+  </g>
+</svg>
+</div>
+<div class="legend">
+  <span style="--c:var(--forest)">森の人物</span><span style="--c:var(--court)">宮廷の人物</span><span style="--c:var(--heaven)">天界の人物・息子</span><span style="--c:var(--curse)">呪い</span>
+</div>
+<figcaption>息子は森で身ごもられ、天界のマーリーチャの庵で生まれ育ちます。マーダヴィヤは王の嘘を信じていたため、第5幕で王に思い出させることができません。</figcaption>
+</figure>
+</section>
+
+<!-- ===== 幕ごと ===== -->
+<section id="acts">
+<h2>幕ごとのあらすじ</h2>
+<p>まず一覧表で流れをつかみ、その下で各幕を少し詳しく見ていきます。幕の題は対訳のものです。</p>
+
+<div class="tw"><table>
+<thead><tr><th>幕</th><th>題</th><th>舞台</th><th>主なできごと</th><th>鍵となる小道具・場面</th></tr></thead>
+<tbody>
+<tr><td class="n">1</td><td>庵での出会い</td><td><span class="chip f">森</span></td><td>鹿を追う王が庵でシャクンタラーに出会い、身分を隠して近づく</td><td>逃げる鹿、蜂、王の名を刻んだ指輪</td></tr>
+<tr><td class="n">2</td><td>王の打ち明け話</td><td><span class="chip f">森</span></td><td>王は狩りをやめ、庵の守護を引き受ける。道化を都へ帰し「あれは冗談だ」と嘘をつく</td><td>道化との会話、母后の使い</td></tr>
+<tr><td class="n">3</td><td>ひそかな結婚</td><td><span class="chip f">森</span></td><td>恋わずらいのシャクンタラーが恋文を書き、二人は思いを確かめる</td><td>蓮の葉の恋文、蓮の茎の腕輪</td></tr>
+<tr><td class="n">4</td><td>旅立ち</td><td><span class="chip f">森</span> <span class="chip x">呪い</span></td><td>ドゥルヴァーサスの呪い。カンヴァが娘を王のもとへ送り出す</td><td>森の木々との別れ、子鹿</td></tr>
+<tr><td class="n">5</td><td>拒まれた妻</td><td><span class="chip c">宮廷</span></td><td>王はシャクンタラーを思い出せず拒む。彼女は光にさらわれる</td><td>失われた指輪、ハンサパディカーの歌</td></tr>
+<tr><td class="n">6</td><td>指輪の発見</td><td><span class="chip c">宮廷</span></td><td>漁師が指輪を見つけ、王はすべてを思い出して後悔に沈む。マータリが王を天界へ</td><td>ローヒタ魚、肖像画、跡継ぎのない商人</td></tr>
+<tr><td class="n">7</td><td>再会</td><td><span class="chip h">天界</span></td><td>悪魔討伐の帰り、王は息子と出会い、シャクンタラーと和解する</td><td>獅子の子、粘土の孔雀、護符アパラージター</td></tr>
+</tbody></table></div>
+
+<div class="acts">
+  <article class="act f-a"><div class="num">序<small>前口上</small></div><div>
+    <h3>夏の歌</h3>
+    <p>シヴァ神への祝祷のあと、座頭（一座の長）と女優が登場します。女優がシリーシャの花を詠んだ夏の歌をうたい、座頭は歌に心を奪われて演目を忘れかけます。「そなたの歌に連れ去られた。この足の速い鹿に連れ去られるドゥシヤンタ王のように」という一言で、そのまま本編へつながります。</p>
+  </div></article>
+
+  <article class="act f-a"><div class="num">1<small>出会い</small></div><div>
+    <h3>庵での出会い</h3>
+    <p>戦車で黒鹿を追うドゥシヤンタ王は、苦行者に「これは庵の鹿です」と止められて矢を収めます。苦行者は「転輪王となる息子を授かりますように」と祝福します。庵の主カンヴァは、シャクンタラーの悪い運命をしずめるため留守でした。王は身なりを改めて庵に入り、木に水をやるシャクンタラーと二人の友を木陰から見つめます。</p>
+    <p>蜂に追われたシャクンタラーが友に助けを求めると、二人は「ドゥシヤンタ王さまを呼びなさいよ」とからかいます。そこへ当の王が姿を現しますが、「王に仕える役人」だと身分を偽ります。友の話から、シャクンタラーがヴィシュヴァーミトラと天女メーナカーの娘で、王と結婚できる身分だとわかります。王が友の水やりの借りを返そうと指輪を差し出すと、娘たちは刻まれた名を読み、王の正体に気づきます。王の家来が森を騒がせたため、その場は別れます。</p>
+    <p class="key">見どころ：「体は前へ進むのに、心は後ろへ駆けもどる。向かい風に逆らって運ばれる旗竿の布のように」（1.30）。第1幕をしめくくる名高い詩です。</p>
+  </div></article>
+
+  <article class="act f-a"><div class="num">2<small>滞在</small></div><div>
+    <h3>王の打ち明け話</h3>
+    <p>狩りに連れ回された道化マーダヴィヤがぼやき、王は狩りをやめて将軍の勢子たちを引きあげさせます。王は道化にシャクンタラーへの恋を打ち明けます。そこへ苦行者が来て、羅刹から祭式を守ってほしいと頼み、王は喜んで引き受けます。同じとき、都の母后から「四日後の供養の儀に戻るように」と使いが来ます。</p>
+    <p>王は道化を自分の代わりに都へ帰しますが、口の軽い道化が後宮でしゃべらないよう、「あの娘のことは冗談だ。本気にするな」と言い含めます。</p>
+    <p class="key">見どころ：この嘘のせいで、第5幕で王が呪いによって妻を忘れたとき、思い出させることのできる人がいなくなります。</p>
+  </div></article>
+
+  <article class="act f-a"><div class="num">3<small>結婚</small></div><div>
+    <h3>ひそかな結婚</h3>
+    <p>暑さにあたったと言われているシャクンタラーの「病」は、実は恋わずらいでした。蔓草のあずまやで、友にすすめられた彼女は、蓮の葉に爪で恋の歌を刻みます。隠れて聞いていた王が現れ、二人は思いを確かめます。友たちは子鹿を探すふりをして席を外します。シャクンタラーは思わず王を「アーリヤプトラ（妻が夫を呼ぶ言葉）」と呼びます。口づけしようとしたところにガウタミーが来て、二人は引き離されます。夕べの祭式を襲う羅刹の声に、王は駆けつけます。二人はこのころ、親の許しを要しない「ガーンダルヴァ婚」で結ばれます。</p>
+    <p class="key">見どころ：別れぎわの「私をお忘れにならないで」という言葉は、のちの忘却を思うと強い皮肉になっています。</p>
+  </div></article>
+
+  <article class="act f-a"><div class="num">4<small>呪いと旅立ち</small></div><div>
+    <h3>旅立ち</h3>
+    <p>前場では、祭式を終えた王がすでに都へ帰ったことが語られます。王のことばかり考えていたシャクンタラーは、訪ねてきた聖仙ドゥルヴァーサスに気づきません。聖仙は「おまえが思っている男は、思い出させられても、おまえを思い出さないだろう」と呪います。アナスーヤーがとりなすと、「しるしとなる装身具を見せれば呪いは解ける」と和らげられます。友たちは、王が出発のとき自ら指にはめた指輪があるから大丈夫だと考え、呪いのことを本人には伏せておきます。</p>
+    <p>巡礼から戻ったカンヴァは、天の声で娘が王の子を身ごもったことを知り、結婚を祝福します。森の木々は麻の衣や装身具を差し出し、鹿や孔雀や蔓草も別れを惜しみます。カンヴァは、ほかの妃たちと同じように遇してほしいという言づてを弟子に託し、娘には妻の心得を説いて送り出します。</p>
+    <p class="key">見どころ：「娘というものは、もともと他家のもの。今日送り出して、預かりものを返したように心が晴れた」（4.26）。この幕は古くから劇中の白眉とされてきました。</p>
+  </div></article>
+
+  <article class="act c-a"><div class="num">5<small>拒絶</small></div><div>
+    <h3>拒まれた妻</h3>
+    <p>王宮では、ハンサパディカーが王の心変わりを蜜蜂にたとえて恨む歌をうたい、王はわけもなく胸をせつなくします。カンヴァの弟子たちとガウタミーがシャクンタラーを連れてきますが、呪いのため王はまったく覚えがありません。シャクンタラーが指輪を見せようとすると、シャクラーヴァターラのシャチー聖地で沐浴したときに抜け落ちていました。子鹿に水を飲ませた思い出を語っても、王は「女の甘い作り話」と退けます。</p>
+    <p>シャクンタラーはついに怒りをあらわにし、王を「草におおわれた古井戸」と非難します。宮廷祭官は「お産まで自分の家であずかり、子に転輪王のしるしがあれば王妃に迎えよう」と提案します。弟子たちが帰ったあと、泣き叫ぶシャクンタラーを、アプサラスの沐浴場のそばで女の姿をした光がさらっていきます。</p>
+    <p class="key">見どころ：王は不実だから拒むのではありません。「妻を捨てる罪」と「他人の妻に触れる罪」のあいだで、正しくあろうとして拒んでしまうのです（5.30）。</p>
+  </div></article>
+
+  <article class="act c-a"><div class="num">6<small>想起</small></div><div>
+    <h3>指輪の発見</h3>
+    <p>前場では、ローヒタ魚の腹から指輪を見つけた漁師が、盗人として警吏に引き立てられてきます。指輪を見た王はすべてを思い出し、漁師にはたっぷり褒美が与えられます。本編では、天女アクシャマーラーが姿を隠して宮廷に入り、王を見届けます。王は春の祭りを禁じ、眠れずに過ごしています。自ら描いたシャクンタラーの肖像画に描かれた蜂を本物と思って叱り、道化に「絵だよ」と言われて泣きます。</p>
+    <p>跡継ぎのないまま海で死んだ商人ダナヴリッダの財産のことを聞き、王は自分にも跡継ぎがいないことを嘆いて気を失います。そこへ姿の見えない何者かが道化をさらいます。それはインドラの御者マータリで、沈んだ王を怒らせて奮い立たせるための計略でした。王は悪魔ドゥルジャヤ族を討つため、天界へ向かいます。</p>
+    <p class="key">見どころ：「民が身内を失ったときは、このドゥシヤンタが身内の代わりになる」（6.22）。自分の悲しみが民への思いやりに変わる場面です。</p>
+  </div></article>
+
+  <article class="act h-a"><div class="num">7<small>再会</small></div><div>
+    <h3>再会</h3>
+    <p>前場では、天の踊り子二人が、王が御者一人を連れただけでドゥルジャヤの軍勢を討ちとったことを語り、春の歌をうたって踊ります。本編では、インドラに厚くもてなされた王が、マータリの戦車で地上へ降りていき、途中でヘーマクータ山のマーリーチャの庵に立ち寄ります。</p>
+    <p>王は、獅子の子の口をあけさせて歯を数えようとしている少年に出会います。指のあいだに網のような膜のある手は、転輪王のしるしでした。少年の落とした護符アパラージターを王が拾っても、蛇に変わりません。両親と本人のほかは誰も拾えないはずの護符です。苦行女が粘土の孔雀を見せて「シャクンタ・ラーヴァニャ（鳥のきれいなこと）」と言うと、少年は「ママ、どこ？」と母を探します。やがて、一本のおさげ髪の質素な姿でシャクンタラーが現れます。王はひれ伏してわびます。マーリーチャがドゥルヴァーサスの呪いのいきさつを明かし、少年がのちに世界を治める王バラタになると予言します。</p>
+    <p class="key">見どころ：最後は、王が民の幸せと学芸の繁栄を祈る結びの詩（バラタヴァーキヤ、7.36）で幕を閉じます。冒頭と同じく、シヴァへの祈りです。</p>
+  </div></article>
+</div>
+</section>
+
+<!-- ===== 呪いと指輪 ===== -->
+<section id="ring">
+<h2>呪いと二つのしるし</h2>
+<p>題名の「しるし（アビジュニャーナ）」は、まず王の名を刻んだ指輪のことです。第7幕では、息子の護符がもう一つのしるしとして働きます。転換点はすべて、しるしがどこにあるかで決まります。</p>
+
+<figure class="fig">
+<div class="scroll">
+<svg viewBox="0 0 760 250" width="100%" style="min-width:660px" role="img" aria-label="しるしの行方：第1幕で指輪が登場、第4幕で王が指にはめ呪いがかかる、旅の途中で落とす、第5幕で拒絶、第6幕で魚から発見し王が想起、第7幕で護符と少年が第二のしるしとなる">
+  <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+  <g stroke="var(--muted)" stroke-width="1.5" marker-end="url(#ar2)">
+    <line x1="112" y1="66" x2="126" y2="66"/><line x1="236" y1="66" x2="250" y2="66"/>
+    <line x1="360" y1="66" x2="374" y2="66"/><line x1="484" y1="66" x2="498" y2="66"/><line x1="608" y1="66" x2="622" y2="66"/>
+  </g>
+  <g font-size="12" text-anchor="middle">
+    <rect x="8" y="30" width="104" height="72" rx="6" fill="var(--forest-soft)" stroke="var(--forest)"/>
+    <text x="60" y="52" fill="var(--forest)" font-weight="700">第1幕</text><text x="60" y="72" fill="var(--fg)">指輪で娘たちが</text><text x="60" y="90" fill="var(--fg)">王の正体を知る</text>
+    <rect x="128" y="30" width="108" height="72" rx="6" fill="var(--curse-soft)" stroke="var(--curse)"/>
+    <text x="182" y="52" fill="var(--curse)" font-weight="700">第4幕</text><text x="182" y="72" fill="var(--fg)">王が指にはめる</text><text x="182" y="90" fill="var(--fg)">呪いがかかる</text>
+    <rect x="252" y="30" width="108" height="72" rx="6" fill="var(--curse-soft)" stroke="var(--curse)"/>
+    <text x="306" y="52" fill="var(--curse)" font-weight="700">旅の途中</text><text x="306" y="72" fill="var(--fg)">シャチー聖地で</text><text x="306" y="90" fill="var(--fg)">指から落ちる</text>
+    <rect x="376" y="30" width="108" height="72" rx="6" fill="var(--court-soft)" stroke="var(--court)"/>
+    <text x="430" y="52" fill="var(--court)" font-weight="700">第5幕</text><text x="430" y="72" fill="var(--fg)">しるしがなく</text><text x="430" y="90" fill="var(--fg)">拒まれる</text>
+    <rect x="500" y="30" width="108" height="72" rx="6" fill="var(--court-soft)" stroke="var(--court)"/>
+    <text x="554" y="52" fill="var(--court)" font-weight="700">第6幕</text><text x="554" y="72" fill="var(--fg)">ローヒタ魚の腹</text><text x="554" y="90" fill="var(--fg)">から発見、想起</text>
+    <rect x="624" y="30" width="128" height="72" rx="6" fill="var(--heaven-soft)" stroke="var(--heaven)"/>
+    <text x="688" y="52" fill="var(--heaven)" font-weight="700">第7幕</text><text x="688" y="72" fill="var(--fg)">護符と少年が</text><text x="688" y="90" fill="var(--fg)">第二のしるしに</text>
+  </g>
+  <g font-size="11.5" fill="var(--muted)">
+    <text x="12" y="138">呪いの言葉（4.1）：「おまえが思っている男は、思い出させられても、おまえを思い出さないだろう」</text>
+    <text x="12" y="160">和らげられた条件：「しるしとなる装身具を見せれば、呪いは解ける」── 友たちはこれを本人に伏せる。</text>
+    <text x="12" y="182">王の約束（6.12）：「私の名の文字を一日一字ずつ数えよ。数え終わるころに迎えの者が着くだろう」</text>
+    <text x="12" y="204">第二のしるし：護符アパラージター。両親と本人以外が拾うと蛇になる。王が拾っても変わらない。</text>
+    <text x="12" y="226">名のしるし：「シャクンタ・ラーヴァニャ（鳥のきれいなこと）」が、母の名シャクンタラーと重なって響く。</text>
+  </g>
+</svg>
+</div>
+<figcaption>しるしの行方。忘却、発見、想起、そして親子の確認という流れを、小道具がつないでいます。</figcaption>
+</figure>
+<div class="note"><b>指輪の小さな食い違い</b>　第4幕の前場では、王が出発のとき自分の手でシャクンタラーの指に指輪をはめたと語られます。ところが別れの場面では、友だちがあらためて指輪を手渡します。対訳の注も、この伝本の筋の小さな食い違いと見ています。</div>
+</section>
+
+<!-- ===== 言葉 ===== -->
+<section id="lang">
+<h2>言葉の使い分け</h2>
+<p>この劇では、誰がどの言葉で話すかが身分と性別を表します。対訳では、プラークリットの台詞の下に、サンスクリットに置き換えた「チャーヤー（影）」が添えられています。</p>
+<div class="tw"><table>
+<thead><tr><th>言葉</th><th>話す人物</th><th>特徴</th></tr></thead>
+<tbody>
+<tr><td><b>サンスクリット</b></td><td>王、カンヴァ、苦行者たち、侍従長、宮廷祭官、マータリ、マーリーチャ</td><td>教養ある男性の言葉。詩節の多くもこれで書かれる</td></tr>
+<tr><td><b>シャウラセーニー語</b><br><span class="iast">プラークリット</span></td><td>シャクンタラー、友たち、ガウタミー、アディティ、女官、天女、そして道化（バラモンなのに）、警吏の長</td><td>劇中の日常語の基本。対訳では緑がかった色で示される</td></tr>
+<tr><td><b>マーガディー語</b><br><span class="iast">プラークリット</span></td><td>漁師、警吏スーチャカとジャーナカ。少年サルヴァダマナの幼い発音もこれに近い</td><td>r が l に、s が ś に変わる。対訳ではべらんめえ調に訳される</td></tr>
+</tbody></table></div>
+<p>例外もあります。第4幕でプリヤンヴァダーは、天の声をそのまま伝えるときだけサンスクリットで唱えます（4.6）。第5幕のシャクンタラーは、夫を「アーリヤプトラ（あなた）」と呼びかけて思いとどまり、家の名「パウラヴァさま」で呼びなおします。呼び方ひとつに、二人の関係の変化がこめられています。</p>
+</section>
+
+<!-- ===== この版 ===== -->
+<section id="recension">
+<h2>この版（カシミール系伝本）の特徴</h2>
+<p>この対訳は、700年ごろから1千年紀の終わりまでにカシミールで成立した形の本文によっています。日本でよく読まれる「デーヴァナーガリー系伝本」とは、人名や場面が少しずつ違います。</p>
+<div class="tw"><table>
+<thead><tr><th>項目</th><th>この対訳（カシミール系）</th><th>デーヴァナーガリー系</th></tr></thead>
+<tbody>
+<tr><td>第6幕で王を見届ける天女</td><td>アクシャマーラー</td><td>サーヌマティー</td></tr>
+<tr><td>王の正妃</td><td>クラプラバー（ヴァスマティーは女官の名）</td><td>ヴァスマティー</td></tr>
+<tr><td>第7幕の前場</td><td>天の踊り子二人が王の勝利を伝え、歌い踊る</td><td>この場面がない</td></tr>
+<tr><td>「森の月光（ヴァナジョートスナー）」</td><td>マンゴーの木の名</td><td>ジャスミンの名</td></tr>
+<tr><td>王が一族の柱とする二つのもの（3.18）</td><td>法に磨かれた王の幸運とシャクンタラー</td><td>海を帯とする大地とシャクンタラー</td></tr>
+<tr><td>第一幕の蜂の詩の結び（1.20）</td><td>「迷ってばかりいる私は」</td><td>「素性を確かめようとしているうちに」</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- ===== 原典比較 ===== -->
+<section id="mbh">
+<h2>原典『マハーバーラタ』との違い</h2>
+<p>カーリダーサは、叙事詩『マハーバーラタ』の短い挿話をもとにこの戯曲を書きました。いちばん大きな変更は「呪い」と「指輪」を加えたことです。</p>
+<div class="tw"><table>
+<thead><tr><th>項目</th><th>『マハーバーラタ』の挿話</th><th>カーリダーサの戯曲</th></tr></thead>
+<tbody>
+<tr><td>王が拒む理由</td><td>覚えているのに、世間体を気にして知らないふりをする</td><td>ドゥルヴァーサスの呪いで本当に忘れている</td></tr>
+<tr><td>王の人物像</td><td>打算的で、冷たく見える</td><td>誠実で、悲劇に巻き込まれる高潔な人物</td></tr>
+<tr><td>シャクンタラー</td><td>王を堂々と論破する、弁の立つ女性</td><td>はにかみ屋の乙女から、苦しみを経て成熟した女性へ</td></tr>
+<tr><td>和解のきっかけ</td><td>天の声が「その子はあなたの子だ」と告げる</td><td>指輪の発見と、天界での息子との出会い</td></tr>
+<tr><td>再会の場所</td><td>宮廷で、その場で受け入れられる</td><td>年月を経て、天界のヘーマクータ山で</td></tr>
+</tbody></table></div>
+<div class="note"><b>なぜ呪いを加えたのか</b>　古典インド劇の主人公は、模範的な人物でなければならないとされていました。呪いを入れたことで王は罪を負わずに済み、悲しみの原因は人の悪意ではなく運命に移ります。観客は誰も責めずに、二人の苦しみに寄り添うことができます。</div>
+</section>
+
+<!-- ===== 鑑賞 ===== -->
+<section id="read">
+<h2>鑑賞のポイント</h2>
+<ol class="points">
+  <li><b>自然と人間が響き合う。</b>庵の木々や蔓草、子鹿は背景ではなく、シャクンタラーの家族として描かれます。第4幕の別れでは、木々が花嫁衣装を差し出し、雌鹿は草を口から落とします。</li>
+  <li><b>見る者だけが知っている。</b>呪いを知らないのはシャクンタラーと王だけです。第3幕の「私をお忘れにならないで」や、第4幕の父の「たとえ夫にひどい扱いを受けても」といった言葉は、観客には悲劇の予告として聞こえます。</li>
+  <li><b>はじめと終わりの対応。</b>第1幕で恋を予告した王の腕の震えは、第7幕でもう一度起こります。第1幕で鹿を追った戦車の眺め（1.9）は、第7幕で天から降りる戦車の眺め（7.9）と対になっています。蜂は、第1幕では本物、第6幕では絵の中に現れます。</li>
+  <li><b>喜劇的な息抜き。</b>道化マーダヴィヤの食いしん坊ぶりや、第6幕冒頭の漁師と警吏の掛け合いが、張りつめた場面の合間に笑いを差し込みます。</li>
+  <li><b>悲劇で終わらない。</b>古典インド劇は幸福な結末をとります。息子バラタの誕生と、民と学芸の繁栄を祈る結びの詩で幕を閉じます。</li>
+</ol>
+
+<h3>心に残る詩節</h3>
+<blockquote>体は前へ進んでいくのに、抑えのきかない心は後ろへと駆けもどっていく。向かい風に逆らって運ばれていく旗竿の、しるしの布のように。
+<span class="sk">1.30 アーリヤー　第1幕の結び</span></blockquote>
+<blockquote>「今日、シャクンタラーが行ってしまう」と思うと、胸は寂しさにしめつけられ、喉はこらえた涙でつまってかすれる。
+<span class="sk">4.8 シャールドゥーラヴィクリーディタ　娘を送り出すカンヴァ</span></blockquote>
+<blockquote>美しいものを見たり、甘い調べを聞いたりすると、幸せな者でさえ、なぜか胸がせつなくなる。
+<span class="sk">5.6 ヴァサンタティラカー　記憶を失った王が、前世の愛を思う</span></blockquote>
+<blockquote>まず花が咲き、そのあとに実がなる。……ところがあなたさまのお恵みでは、幸せのほうが先にやって来るのです。
+<span class="sk">7.31 ヴァンシャスタ　再会のあと、マーリーチャへの言葉</span></blockquote>
+</section>
+
+<footer>
+本文・人名表記・詩節番号は、サンスクリット・日本語対訳『シャクンタラー』（底本：Somadeva Vasudeva ed. and tr., <i>The Recognition of Shakuntala by Kālidāsa</i>, Clay Sanskrit Library, 2006、カシミール系伝本）によります。引用した訳文は同対訳からの抜粋です。<br>対訳本文は <a href="https://mandana1221.github.io/brahmasiddhi/shakuntala_bilingual.html" style="color:var(--forest)">サンスクリット・日本語対訳『シャクンタラー』</a> で読めます。
+</footer>
+</div>
+
+</body>
+</html>
