@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Burkhard カシュミール写本 和訳</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{
+  --bg:#f6f7f4; --surface:#ffffff; --fg:#1f2722; --muted:#5f6b63; --rule:#d6dcd7;
+  --accent:#38457f; --accent-soft:#e4e7f4; --warn:#8a3b62; --warn-soft:#f4e3ec;
+  --display:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --roman:"Noto Serif",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141a17; --surface:#1b2420; --fg:#e4ebe6; --muted:#9caaa1; --rule:#2f3b35;
+  --accent:#9fabe8; --accent-soft:#232a45; --warn:#e597bd; --warn-soft:#3b2130; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141a17; --surface:#1b2420; --fg:#e4ebe6; --muted:#9caaa1; --rule:#2f3b35;
+  --accent:#9fabe8; --accent-soft:#232a45; --warn:#e597bd; --warn-soft:#3b2130; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.9;margin:0;padding:0 16px}
+.wrap{max-width:860px;margin:0 auto;padding-block:40px 80px}
+h1,h2,h3{font-family:var(--display);line-height:1.4;margin:0;text-wrap:balance}
+h1{font-size:clamp(1.7rem,5vw,2.4rem);font-weight:800}
+h2{font-size:1.45rem;margin-top:56px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+h3{font-size:1.12rem;margin-top:30px}
+h4{font-size:1rem;margin:20px 0 4px;font-family:var(--display)}
+p{margin:12px 0}
+i,.r{font-family:var(--roman)}
+.eyebrow{font-size:.78rem;letter-spacing:.12em;color:var(--accent);font-weight:700}
+.lede{color:var(--muted)}
+.biblio{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 18px;font-size:.92rem;margin-top:22px}
+.biblio p{margin:4px 0}
+.tn{background:var(--accent-soft);border-left:3px solid var(--accent);padding:10px 14px;border-radius:0 6px 6px 0;font-size:.9rem;margin:16px 0}
+.ill{color:var(--warn);background:var(--warn-soft);padding:0 4px;border-radius:3px;font-size:.88em}
+.pg{font-family:var(--roman);font-size:.75rem;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:0 8px;margin-right:6px;white-space:nowrap}
+ol.fn{font-size:.86rem;color:var(--muted);border-top:1px dashed var(--rule);padding-top:8px;margin-top:10px;padding-left:1.6em}
+ol.fn li{margin:3px 0}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+nav.toc a{font-size:.86rem;color:var(--fg);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:2px 12px;background:var(--surface)}
+nav.toc a:hover{border-color:var(--accent);color:var(--accent)}
+ul.err{list-style:none;padding:0;font-size:.88rem}
+ul.err li{padding:5px 0;border-bottom:1px solid var(--rule)}
+ul.err b{font-family:var(--roman);font-weight:600;color:var(--accent)}
+dl.abbr{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:.92rem}
+dl.abbr dt{font-family:var(--roman);font-weight:600}
+dl.abbr dd{margin:0}
+.gram p,.gram li{font-size:.94rem}
+.gram ul{padding-left:1.3em}
+footer{margin-top:60px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="eyebrow">Sitzungsberichte der Wiener Akademie · 1884</div>
+<h1>Karl Burkhard「カシュミールの Śakuntalā 写本」<br>序言と序論（和訳）</h1>
+<p class="lede">Karl Burkhard, “Die Kaśmīrer Śakuntalā-Handschrift” の序言（Vorwort）と序論（Einleitung）を、専門家向けに和訳したものです。この論文は、Bühler がカシュミールで発見した樺皮 Śāradā 写本を初めて全文刊行したもので、のちの Belvalkar 校訂本（Sahitya Akademi, 1965）の土台になりました。</p>
+
+<div class="biblio">
+<p><b>底本</b>　<span class="r">Karl Burkhard, “Die Kaçmîrer Çakuntalâ-Handschrift. (Mit drei Tafeln.)” <i>Sitzungsberichte der Kaiserlichen Akademie der Wissenschaften, Philosophisch-historische Classe</i>, CVII. Band, II. Heft, Jahrgang 1884, Wien 1884 (in Commission bei Carl Gerold’s Sohn), S. 479–496 [Vorwort und Einleitung].</span></p>
+<p><b>著者</b>　<span class="r">Dr. Karl Burkhard, Director des k. k. Franz Joseph-Gymnasiums in Wien.</span></p>
+<p><b>同号所収</b>（目次より）　<span class="r">X. Sitzung vom 2. April 1884 (S. 477); Burkhard (S. 479); XI. Sitzung vom 23. April 1884 (S. 641); XII. Sitzung vom 7. Mai 1884 (S. 643); Werner, Idealistische Theorien des Schönen in der italienischen Philosophie des neunzehnten Jahrhunderts (S. 645); XIII. Sitzung vom 14. Mai 1884 (S. 712); Dombart, Commodian-Studien (S. 713); Pfizmaier, Die Abarten der grönländischen Sprache (S. 803); XIV. Sitzung vom 21. Mai 1884 (S. 883).</span></p>
+</div>
+
+<div class="tn"><b>訳について</b>
+<ul style="margin:6px 0;padding-left:1.2em">
+<li>原文の旧式翻字（ç, â, î, x など）は IAST に改めた（Kaçmîr → Kaśmīr、Çakuntalâ → Śakuntalā、Çâradâ → Śāradā、xetra → kṣetra など）。</li>
+<li>語形・人名・書名・書誌は原語のローマ字のままとした。</li>
+<li>OCR の過程で失われた区別記号（ṭ/t, ḍ/d, ṇ/n, ṃ など）は、文脈から確実なものだけ補った。OCR が anusvāra を “ni” と誤読している箇所は ṃ に正した（例 tuaṃ, saṃkampa, kiṃ）。</li>
+<li>判読できない箇所は <span class="ill">判読不能</span>、推定を含む箇所は [ ] で示した。</li>
+<li>欄外の <span class="pg">S. 479</span> は原論文の頁。手書写本の箇所指示「54, 8」などは「写本の頁, 行」を指す（原注による）。</li>
+</ul></div>
+
+<nav class="toc" aria-label="目次">
+<a href="#sitzung">第 X 回会議</a><a href="#vorwort">序言</a><a href="#einleitung">序論</a><a href="#fehler">第一幕翻刻の誤り</a><a href="#abk">略号</a><a href="#laut">音韻論</a><a href="#formen">形態論</a>
+</nav>
+
+<h2 id="sitzung">1884年4月2日の第 X 回会議</h2>
+<p><span class="pg">S. 477</span>正会員 Hofrath Dr. Benndorf 氏は、Löwy 博士のギリシア彫刻家銘文に関する論文を取り下げた。この論文は以前に Denkschriften での公刊のために提出されていたものである。あわせて同氏は、この著作を単独で刊行するための印刷費補助を申請した。</p>
+<p>次の刊行物が提出された。<span class="r">Académie royale des sciences, des lettres et des beaux-arts de Belgique: Bulletin, 53e année, 3e série, tome 7, No. 1, Bruxelles 1884; k. k. Ackerbau-Ministerium: Statistisches Jahrbuch für 1881, II. Heft, Wien 1884; Geschichtsverein und naturhistorisches Landesmuseum in Kärnten: Carinthia, LXXIII. Jahrgang 1883, Klagenfurt; Institut Egyptien: Yacoub Artin-Bey, La propriété foncière en Égypte, Le Caire 1883; Johns Hopkins University: The American Journal of Philology, Vol. IV, Nr. 4, Baltimore 1883; Mittheilungen aus Justus Perthes’ geographischer Anstalt von Dr. A. Petermann, 30. Band, 1884, III, Gotha; Royal Historical Society: Transactions, N. S. Vol. I, part IV, London 1884; Verein von Alterthumsfreunden im Rheinlande: Jahrbücher, LXXVI. Heft, Bonn 1883.</span></p>
+
+<h2 id="vorwort">序言（Vorwort）</h2>
+<p><span class="pg">S. 479</span>Bühler 教授がカシュミール、Rājputānā、中央インドで発見し、インド政府のために購入した数多くの写本の中に、彼がカシュミールで見いだした戯曲 Śakuntalā の写本がある。樺皮に Śāradā 文字で書かれたもので、Puna の図書館から私に快く貸与された。</p>
+<p>この写本の第一幕は Bombay の学会誌¹に紹介されている。それを見て私はすでに、ここにこの名高い戯曲の新しい伝本系統（Recension）があるのではないかと推測していた。残る六幕を検分して、その推測は確かめられた。したがって、この戯曲の原本文をめぐって繰り返し論じられてきた問題は、本写本の公刊によって新たな段階に入るであろう。ベンガル系伝本の校訂者 Pischel 教授は、この問題をすでに決着したものとみなしているようではあるが。</p>
+<p>本写本は、大筋において、とりわけ分量の点では、ベンガル系伝本に最も近い。上記の学者が無条件に優位を認める系統である。しかし他方では、そこから大きく隔たってもいる。これまで知られていなかった新しい読み²を非常に多く示すだけではない。<span class="pg">S. 480</span>部分全体の配置替え、脱落、付加をもきわめて多く示し、登場人物の名も一部異なる。したがって、ここで扱っているのが疑いなくこの戯曲の新しい伝本系統、すなわちカシュミール系伝本であることは明らかである。</p>
+<p>そこで私は、この写本を全文刊行することが、伝本系統の問題にとって少なくとも関心に値すると考えた。これまで知られていたのは第一幕だけであり、その翻字も一部不正確で、個々の箇所には誤りもある。ただし写本には多くの欠陥があり、とりわけプラークリットの箇所に著しい。そのため私は、読みやすい本文を作ることには努めなかった。写本の読みは線の下（脚注）に記し、本文に補ったものは括弧に入れた。</p>
+<p>本文、すなわち写本の年代については、写本自体は確かな手がかりを与えない。末尾に <i>saṃvat 33 vaiśākhasaptamyām</i>［OCR: “sanivat 33 vaiçutisaptamyâni”］とあるだけだからである。そこで私は、Bühler 教授がきわめて親切に提供してくれた Alaṃkāra 写本群³に期待をかけた。そこに引用された詩節が本写本の詩節と一致すれば、年代決定の手がかりが得られるかもしれないと考えたのである。しかし比較の結果はまったく否定的であった。本写本の数多い新しい異読のうち、Alaṃkāra 書の一つに引かれた詩節の異読と一致するものはただ一つにすぎない。そこから本写本の年代について結論を引き出せないのは言うまでもない。</p>
+<p>とはいえ、おおよその推定は可能であろう。樺皮に書写が行われたのはある時期まで⁴にすぎないこと、また写本に古風な語形が多く見られることからである。私はこの写本を、いかなる場合にも1676年より後に置くことはしない。</p>
+<p>Bombay の学会誌における第一幕翻字の欠陥と、写本の特色は、<span class="pg">S. 481</span>序論で扱う⁵。写本の姿をできるだけ完全に示すため、合字の大部分（図版 I・II⁶）と写本の複写（図版 III）も付した。</p>
+<p>既知の諸伝本系統と比べたこの本文の評価は、それに要する分量を考えて、後日に譲らねばならない。</p>
+<p>この興味深い写本によって、伝本系統の問題の解決がいくらかでも進むことを願う。</p>
+<p>最後に、私の企てをさまざまな面で支えてくれた大学教授 Dr. Bühler、Dr. Friedr. Müller、Dr. Cappeller の諸氏、ならびに在野の学者 Dr. Haberlandt 氏に、心からの感謝を申し上げる。</p>
+<ol class="fn">
+<li><span class="r">The Journal of the Bombay Branch of the Royal [Asiatic] Society. Extra Number, 1877.</span>〔訳注：Bühler, <i>Detailed Report of a Tour in Search of Sanskrit MSS. made in Kaśmīr, Rajputana, and Central India</i> を指す。〕</li>
+<li>印刷で区別して示した。</li>
+<li>1. <i>Śārṅgadharapaddhati</i>. 2. <i>Sarasvatīkaṇṭhābharaṇavivaraṇa</i> — Rāmeśvara［OCR: “raineçvaraḥ”］. 3. <i>Alaṃkāracūḍāmaṇi</i> — Hemacandra. 4. <i>Sarasvatīkaṇṭhābharaṇa</i> — Bhoja. 5. <i>Alaṃkāracandrikā</i> — Vaidyanātha. 6. <i>Kāvyālaṃkāra</i> — Rudraṭa. 7. <i>Kāvyaprakāśa</i>, Kamalākara の注付き. 8. <i>Kāvyakalpalatā</i> — Amaracandra.</li>
+<li>カシュミールの人々の言によれば16世紀まで。ただし Aurangzīb の治世（1650–1707）にもなお行われた。</li>
+<li>本文の提示にあたって、プラークリットについては、首尾一貫させるためにも、慣用の正書法に従った。</li>
+<li>図版 I・II は Dr. Pfurtscheller 氏による。</li>
+</ol>
+
+<h2 id="einleitung">序論（Einleitung）</h2>
+<p>本文の原本は Śāradā 文字で書かれている。<i>śāradā</i> という語は言葉の女神を指すが、Gupta 文字から生じたカシュミールの書体をも指す（<i>śāradākṣarāṇi</i>）。いわば Sarasvatī に捧げられた文字である。これに対してカシュミールの一伝承では、この書体は Śāradānandana によって導入され、その名にちなんで呼ばれたという¹。</p>
+<p>この書体はデーヴァナーガリーとよく似ているが、非常に本質的な、ときに読み手を惑わせやすい相違を示し、とりわけ合字が難しい。Wien の k. k. 国立印刷所や <i>Journal of the Asiatic Society of Bengal</i> の示す字母表と少数の合字表は、本写本の字形としばしば一致しない。個々の文字や文字群は区別が難しいか、まったく区別できない。あるいはしばしば</p>
+<p><span class="pg">S. 482</span>取り違えられる。<span class="ill">以下数行、OCR が崩れて判読不能</span></p>
+<p>［判読できる範囲で訳す。］本写本の綴りは〔プラークリット部分では〕連声法を守っていない箇所がある。欠けている部分は括弧で補った。連声の規則については、〔写本の扱いにはばらつきがあるが、〕私は首尾一貫させるために全体にわたって規則を適用した。<span class="ill">一部判読不能</span>。各葉の〔表〕頁には、幕名の略記と葉番号が記されている。番号は20以降、通しで数えられている［推定］。</p>
+<p>いくつかの頁には、大小の欠落もある。たとえば21頁では半行、32頁では6行が欠けている。欠けた部分は Pischel 版によって補うよう努めた。32頁では前後との正しい接続を回復できなかったので、点線を置いた。そこでは本文が Pischel 本より明らかに短かったのである。</p>
+<p>写本には欄外注も少なくない。必要と思われた箇所では、それを本文に取り入れた。第七幕の前には完全な <i>praveśaka</i>（幕間）が置かれている。これはこれまで知られたどの写本にも見られないもので、王が Indra のもとから帰還することへの準備を目的としている。</p>
+<p>最後に写本の書記上の面について言えば、サンスクリット部分は全体として非常に正確である。特色として、次の点がある。</p>
+<ul>
+<li>k, kh の前の jihvāmūlīya、p, ph の前の upadhmānīya をほぼ一貫して用いる。</li>
+<li>s の前で visarga の代わりに s を書き、逆に ś の前では visarga を書く。</li>
+<li>dh の代わりに ddh と書くことがしばしばある。</li>
+<li><i>duṣyanta</i>［OCR: “dudhshyanta”］, <i>pivṣaḥ</i>［?］, <i>viṣpa</i>［?］のようにも書く。</li>
+</ul>
+<p>これに対してプラークリット部分は、さまざまな特色を示す。それについては後に特に述べる。しかしこの部分は、カシュミールの発音から生じたことの多い誤りにも悩まされている。たとえば母音のさまざまな取り違え²や、<span class="pg">S. 483</span>子音、とりわけ有気音と無気音の相互の入れ替えである。そのため最も多くの訂正を要した。それと並んで、いたるところで正書法に大きな不統一が見られる。</p>
+<p>以下、写本のプラークリット的特色に移る前に、まず <i>Journal of the Bombay Branch</i> における第一幕翻字の誤り、ならびにそこでの付加と脱落を挙げる。</p>
+<ol class="fn">
+<li><span class="r">Elmslie, <i>A Vocabulary of the Kashmírí Language</i></span>, 語 <i>śāradā</i> の項。</li>
+<li>例 <i>jade</i>（<i>jadi</i> の代わり）、<i>tivaika</i>［?］、<i>pehin</i>（<i>pihin</i> の代わり）［?］、<i>karea</i>（<i>karia</i> の代わり）。</li>
+</ol>
+
+<h3 id="fehler">Journal of the Bombay Branch 所載、第一幕翻字の誤り・不正確・付加・脱落¹</h3>
+<p class="lede" style="font-size:.88rem">pag. は写本の頁、l. は行²。原文の語形は OCR に依拠するため、区別記号に脱落が残るものがある。（ ）内は chāyā。</p>
+<ul class="err">
+<li><b>pag. 1</b>　l. 1–2: <i>śrīgaṇeśāya namaḥ || atha śakuntalānāṭakaṃ likhyate</i> とあるが、正しくは <i>atha … || śrī …</i>。— l. 3: <i>pibati</i>。</li>
+<li><b>pag. 2</b>　l. 2: <i>diṭṭhi</i>［?］。— 6: <i>parihāsaissadi</i>。— 9: <i>dāyi</i>。</li>
+<li><b>pag. 3</b>　l. 2: (<i>*sayaṃhiti</i>)［?］。— 5: <i>sthitaḥ</i>。— 6: <i>ṇa</i> (<i>nanu</i>［?］) が欠ける。— 8: <i>apuruvaṃ</i>; <i>ṇāḍaa*</i>。— 11, 14: <i>duṣya*</i>。— 12: <i>sāraṅgeṇa*</i>。— 欄外注 <i>naṭī — prastāvanāpi vā</i> が欠ける。</li>
+<li><b>pag. 4</b>　l. 12–13: <i>vartti</i>; <i>abhiṣavaḥ</i>; <i>kṛtvā</i> の代わりに <i>bhātvā</i>［?］。</li>
+<li><b>pag. 5</b>　l. 2: <i>sa*</i> の前に <i>rājā</i>。— 3: <i>varttante</i>。— 7: <i>sasa*</i>。— 11: <i>ārtta</i>。— 12: <i>praharttum</i>。— 14: <i>avāmuhi</i>［?］。</li>
+<li><b>pag. 6</b>　l. 1: <i>vayaṃ</i>。— 6: <i>duhitaraṃ</i> が欠ける。— 9: <i>sādhayāvas</i>。— 11: <i>āyuṣmān</i>。— 15: <i>*snigdhā*</i>。</li>
+<li><b>pag. 7</b>　l. 5: <i>śaṅkaṃ</i>。— 10, 17: <i>datvā</i>。</li>
+<li><b>pag. 8</b>　l. 6–8: 欄外注が欠ける。— 8: <i>ti</i>。— 9: (<i>ālavālapūraṇe</i>)。— 10: (<i>bahumāno</i>)。— 12: (<i>halā</i>); <i>udaala*</i> (<i>udakala*</i>)。— 13: <i>adhikkatta*</i>［?］; (<i>vṛkṣakāṇi</i>)。— 14: <i>*sandhipurabo</i> (<i>*pūrvo</i>)。— 15: <i>mattedhi</i>［?］。</li>
+<li><b>pag. 9</b>　l. 6: <i>via</i>; (<i>vṛkṣako</i>)。— 10: <i>patradhārathā</i>［?］。— 11: (<i>halā</i>); (<i>priyaṃvadayā</i>)。— 12: (<i>niyantri*</i>); <i>tā</i> (<i>tat</i>) が欠ける。— 13–14: <i>attaṇo</i>; (<i>payodharavistārayitṛkaṃ ātmano yauvanam upālabhasva</i>)。— 15: <i>valkalam</i>。</li>
+<li><b>pag. 10</b>　l. 1: <i>śaivale</i>。— 3–4: (<i>hale śakuntale</i>); (<i>tātao</i>); (<i>saṃvarddhitā</i>)。— 5: 欄外注 <i>aṅganasamīpe</i> が欠ける。— 7: <i>diṭṭhiā</i> (<i>tiṣṭha</i>)［?］。— 9: <i>*vaṭṭhi</i>［?］; (<i>sthitayā</i>)。— 10–11: <i>priyam</i>; <i>asyā</i>。— 13–14: (<i>hale — iyam</i>); (<i>svāmiyao</i>)［?］。</li>
+<li><b>pag. 11</b>　l. 1: <i>halā</i> の前の <i>ca</i> が欠ける; (<i>hale</i>); (<i>pādapa</i>)。— 2–3: (<i>saṃvṛtta</i>); <i>jovvaṇā</i>; (<i>nava</i>) が欠ける; (<i>baddhaphalao</i>)。— 4: (<i>hale</i>)。— 5: <i>dosiṇo</i> (<i>doṣiṇām</i>)［?］。— 8: 本文に <i>attaṇo</i>。— 9: (<i>manorathaḥ</i>)。— 10–11: <i>kṣetra</i>, <i>kṣatra</i>。— 13: <i>tatvata</i>。— 14: <i>aho</i>。— 16: <i>saspṛham</i>。</li>
+<li><b>pag. 12</b>　l. 2: <i>*mṛdukao</i>。— 3: 二つ目の <i>maugdhyam</i> が欠ける。— 5: <i>*mātamāṇam</i>［?］。— 7: <i>avasaraḥ</i>。— 11: <i>ghaṭṭho</i>［?］。— 12: <i>haddhī</i>; (<i>anusarao</i>)。— 15: <i>*kanyāsu</i>。— 16: (<i>punaḥ</i>)。</li>
+<li><b>pag. 13</b>　l. 4: <i>idānīm</i>。— 6: (<i>uṭajam</i>)。— 8: <i>sāacchā</i>［?］; <i>sattao</i>。— 9: (<i>āryaḥ</i>); <i>muhuttamam</i>; <i>avaṇedu</i>。— 11: <i>muhūrttam</i>。— 12: (<i>naḥ</i>); <i>paryyupāsaṇam</i>。— 13: (<i>kiṃ nu khalu</i>) が欠ける。— 14: <i>hmi</i>。— 16: <i>kkhu</i>。</li>
+<li><b>pag. 14</b>　l. 1: (<i>*gambhīrāo</i>); (<i>madhuram</i>); (<i>ālapat</i>); (<i>prabhavad</i>)。— 2: <i>kodūhalam</i>。— 6: <i>tavoo</i>; (<i>*gamao</i>); <i>piṭṭhi</i> の代わりに <i>khedi</i>［?］。— 7: (<i>cintio</i>)。— 14: (<i>hale</i>)。</li>
+<li><b>pag. 15</b>　l. 1: (<i>imam</i>)。— 2: <i>*ṇavi</i>［?］; <i>kadartham</i>。— 11: <i>me</i> が欠ける。— 13–14: <i>saṅkeo</i>; (<i>apsarā</i>)。</li>
+<li><b>pag. 16</b>　l. 1–2: <i>ummādao</i>; <i>arddhe</i>。— 11: <i>anyat praṣṭavyam</i>。— 12: <i>tavassiaṇo</i>。— 16: (<i>*caraṇe</i>)。</li>
+<li><b>pag. 17</b>　l. 1–2: <i>*vādaṇasaṅkappo</i> (<i>*pādanasaṅkao</i>)［?］。— 6: (<i>baddha</i>)。— 7: (<i>nivedayiṣyāmi</i>); (<i>sakhi</i>)。— 10: <i>uktā</i>。</li>
+<li><b>pag. 18</b>　l. 11: <i>aṅgulika vio</i>; (<i>idam</i>); (<i>aṅgulīyakam vio</i>)。— 12: (<i>vadanena</i>)。— 14: <i>dāṇim</i>。— 15: <i>niśvāsya</i>; <i>ṇam</i> の代わりに <i>ṇa</i>（<i>nanu</i> の代わりに <i>na</i>）。— 16: (<i>idānīm</i>)。</li>
+<li><b>pag. 19</b>　l. 1: (<i>idānīm</i>)。— 2: <i>me</i>。— 4: <i>labdhāvakāśā</i>; <i>prārthanā</i>。— 5: <i>vacobhi</i>。— 8: <i>bho bhoḥ</i>; <i>tapovanasattvao</i>。— 14: <i>matta</i>。— <i>prauḍhāo</i>。</li>
+<li><b>pag. 20</b>　l. 2: <i>sarvā</i>。— <i>datvā</i>。— 3: <i>*kamāio</i>; <i>pavvāo</i>［?］。— 4: <i>*jāṇodhi</i>; (<i>kulāḥ</i>)。— 7: <i>*kkeṇa</i> (<i>*kṣeṇa</i>)。— 9: <i>jaṃ</i> の代わりに <i>je</i>（<i>yad</i> の代わりに <i>yatra</i>）; <i>*thadāe</i>。— 10: <i>hma</i>。— 11: (<i>halā śakuntale ehi</i>)。— 12: <i>godamā</i>。</li>
+<li><b>pag. 21</b>　l. 4: <i>nivarttao</i>。— 5: <i>cinhāo</i>。— 7: <i>datvā</i>。</li>
+</ul>
+<ol class="fn">
+<li>ここおよび本文の注で（ ）に入れたものは chāyā である。</li>
+<li>数字は、写本の欄外に記した写本の頁と行を指す。</li>
+</ol>
+
+<h3 id="abk">略号</h3>
+<p><span class="pg">S. 485</span>欄外に次の略号を用いる。</p>
+<dl class="abbr">
+<dt>K.</dt><dd>カシュミール写本の頁</dd>
+<dt>P.</dt><dd>Pischel 版の頁</dd>
+<dt>Bh.</dt><dd>Böhtlingk 版の頁</dd>
+<dt>B.</dt><dd>本版（Burkhard）の頁</dd>
+<dt>M.</dt><dd>Madras 版（1874）の頁</dd>
+<dt>Hem.</dt><dd><span class="r">Hemacandra’s Grammatik der Prākṛtsprachen</span>, Pischel 編, Halle 1877 und 1880</dd>
+<dt>Var.</dt><dd><span class="r">The Prākṛta-Prakāśa of Vararuci</span>, Cowell 編, London 1868</dd>
+</dl>
+
+<div class="gram">
+<h2 id="laut">写本のプラークリット的特色：音韻論</h2>
+
+<h3>I. 母音と二重母音</h3>
+<h4>1. a</h4>
+<p>e の代わりに a が見られる。Hem. I, 60 に反して <i>andaüra</i> 54, 8; <i>andāura</i> 44, 5; 110, 8（この形のみ）。</p>
+<h4>2. ṛ</h4>
+<p>写本では ṛ は次のように現れる。</p>
+<ul>
+<li>(a) a として。<i>parivvāda</i>, <i>nivvada</i>［?］。複合語前分の <i>mātṛ</i> では <i>māda(h)-acchalako</i> 132, 2; <i>mādokkanto</i> 68, 2（Hem. I, 134, 135 に反して）。</li>
+<li>(b) i として。<i>muyāla</i> と並んで <i>miyāla</i>（Hem. I, 131）。<i>dṛśa</i> の複合語では <i>sarisa</i> などの代わりに <i>sadisa</i>, <i>sādissa</i>, <i>aṇusadisa</i>（Hem. I, 142 に反して）。<i>maa</i>, <i>maī</i> と並んで <i>miga</i>, <i>migī</i>（Hem. I, 126）。<i>geha</i> と並んで <i>giha</i>。<i>kada</i>（4箇所）と並んで <i>kida</i>（13箇所）。</li>
+<li>(c) u として（Hem. I, 131）。<i>bhādu</i>, <i>bhidua</i>, <i>bhāduka</i>。ただし上の <i>māda</i> を参照。</li>
+</ul>
+<p>bhartṛ では ṛ が i にも u にもなる。<i>bhattu</i>, <i>bhattuyo</i> と並んで <i>bhatti</i>, <i>bhattiyo</i>¹。<i>kṛtya</i> と <i>kṛtvā</i> には <i>karia</i> と <i>kāūṇa</i> が現れ、<i>kadua</i> は決して現れない。<i>gṛhīta</i> には <i>gahida</i> と <i>gahia</i>（各1回）、<i>gihida</i>（2回）、<i>gihīda</i>（7回）、<i>gihīdha</i>（1回）。<i>gṛhītvā</i> には <i>gihiāya</i>［?］、<i>gṛhyate</i> には <i>giyhedi</i>、<i>grahīṣyati</i> には <i>giyhisadi</i>。</p>
+<p><span class="pg">S. 486</span><i>vṛta</i> は Hem. I, 139 および II, 31 に反して、<i>veṇṭhia</i> の代わりに <i>vaṇṭha</i>、または <i>vaṇṭhaa</i> となる（95, 1）。</p>
+<ol class="fn"><li>首尾一貫させるため、私はどこでも <i>bhatti</i> と書いた。</li></ol>
+
+<h4>3. ai と au</h4>
+<p>e の代わりの ai は、<i>avedha</i> の代わりの <i>avaida</i>、および <i>tatthaikka</i> 84, 10 に見られる。au は <i>gaudami</i>（1回、<i>gotami</i>, <i>godami</i> と各1回並ぶ）, <i>mahausahi</i>, <i>paurava</i>（6回、この形のみ）, <i>kaumudī</i> に見られる。</p>
+<h4>4. 語頭母音の脱落</h4>
+<p><i>api</i> は写本で次のように現れる。</p>
+<ul>
+<li>(a) <i>abi</i>（p. を参照）。(α) 文頭で、(β) <i>mama</i>, <i>kassa</i>, <i>tadha</i>, <i>ettiena</i> の後で、ただしそれ以外にも。例 <i>jīvidasavvassenābi</i>, <i>visayaparammuhassābi</i>。</li>
+<li>(b) 大多数の場合 <i>bi</i>。<i>vi</i> は 69, 9 のみ。m の後で <i>pi</i> の代わりに誤って <i>bi</i> とする例が 11, 2; 15, 13;（19, 1）; 57, 8; 59, 12。</li>
+<li>(c) <i>ekatantur api</i>［?］109, 15 では <i>api</i>。</li>
+<li>(d) ā の後で <i>pi</i>（10, 6）。</li>
+</ul>
+<p>周知のとおり <i>iti</i> は ṃ の後で <i>ti</i>、それ以外では <i>tti</i> となり、長母音は <i>tti</i> の前で短くなる。しかし本写本ではしばしば <i>ti</i> の代わりに <i>tti</i>、また逆の例が見られる。例 <i>sumarāviamitti</i>［?］, <i>visajjemiti</i>, <i>vetti</i>, <i>paḍisiddhātti</i> など。また（他でもよくあるように）舞台指示を導く <i>iti</i> を、直前のプラークリットと誤って結合することもある。例 <i>āvedayitti niṣkrāntaḥ</i>［?］。<i>ti</i> の前の語末 m の脱落については anusvāra の項を見よ。<i>idānīm</i> は文頭では <i>idāṇiṃ</i>、それ以外では <i>dāṇiṃ</i> となるはずだが、写本では部分的にしかそうなっていない。</p>
+<h4>5. 語末母音の脱落</h4>
+<p><i>api</i> の前で <i>jadi</i> の代わりに <i>jad</i>（54, 4）。e の前で <i>dāva</i> の代わりに <i>dāv</i>（45, 8）。</p>
+<h4>6. 母音の付加</h4>
+<p><i>kadā</i> の代わりに <i>kadāi</i>（97, 2）。</p>
+<h4>7. 母音の挿入</h4>
+<p>i の代わりに a が現れる例：<i>maris-a-davva</i>, <i>dar-a-saidavva</i>, <i>ar-a-ha</i>, <i>ar-a-hadi</i>（<i>aharadi</i> 56, 15）, <i>al-a-hadi</i>, <i>ar-a-hasi</i>, <i>ar-a-h(a)-āmi</i>。i が現れる例：<i>s-i-neha</i>（<i>s-i-niha</i>, <i>s-i-naha</i>［?］, <i>s-i-naddha</i>［?］と並ぶ）。</p>
+<p><i>pūrva</i>（Hem. IV, 270 によれば <i>puvva</i> と <i>purava</i>）は、複合語の前分としては <i>puvvao</i> 104, 14, 15。後分の頭では <i>ouvva</i> の代わりに <i>oisva</i>［?］85, 2。それ以外では <i>puruva</i> 94, 9（<i>puruba</i> 83, 15; 113, 3）、<i>purava</i> 41, 12（<i>purabha</i> 8, 14; <i>parava</i> 97, 2）。</p>
+<h4><span class="pg">S. 487</span>8. e と aṃ の入れ替え</h4>
+<p><i>vavadesa</i> の代わりに <i>vavadaṃsa</i>。<i>padesa</i> と並んで <i>padaṃsa</i>。逆に <i>daṃsaa</i>、すなわち <i>daṃsehi</i> の代わりに <i>desa-h-a</i>［?］140, 11。</p>
+<h4>9. 語頭の o の代わりの vo</h4>
+<p><i>vovāria</i> 107, 17 に見られる。</p>
+<h4>10. 母音の短縮</h4>
+<p>韻律上の理由によるものが <i>aṇukampāmidu</i> 91, 7 に見られる。</p>
+
+<h3>II. 子音</h3>
+<h4>A) 総論</h4>
+<p><b>1. 語頭子音の脱落</b>　<i>ca</i> の c は母音の後でのみ脱落する。したがって <i>piaṃ a</i> 54, 14 と <i>ayyaṃ a</i> 121, 9 は誤り。</p>
+<p><b>2. 短母音の後の語頭子音の重複</b>　<i>khu</i>（< <i>khalu</i>）で生じるはずだが、写本はどの箇所でも <i>khu</i> しか知らない。</p>
+<p><b>3. 歯音とそり舌音の入れ替え</b>　ḍ の代わりの d がしばしば見られる。例 <i>padikidim</i>。とりわけ <i>prati</i> からの <i>paḍi</i> では、<i>paḍi</i> と並んで <i>padi</i> が見られる。逆に <i>daṃsedhi</i> では dh の代わりに ḍh［?］。<i>bhartṛ</i> では <i>bhattā</i> と <i>bhaṭṭā</i>、<i>bhattu*</i> と <i>bhatti*</i>、<i>bhattuyo</i> と <i>bhattiṇo</i>［OCR で区別記号が不確か］。</p>
+<p><b>4. 後続子音の重複の代わりに先行母音の延長</b>　Hem. I, 43 に関して、写本では延長と重複が入りまじる。延長の例 <i>ginhāsadi</i>［?］, <i>mīsa</i>, <i>vīsattha</i>, <i>vīsamāadu</i>。重複の例 <i>vissama</i>, <i>sissa</i>。</p>
+<p><b>5. 同化による重子音の代わりの代償延長</b>　<i>ratti</i> と並んで <i>rāi</i>。さらに <i>kāduṃ</i>, <i>kādavva</i>。</p>
+<p><span class="pg">S. 488</span><b>6. 複合語後分の頭の pa（短母音の後）</b>　緊密な複合語では ppa、ゆるい複合語では pa となるはずだが、写本はしばしば不統一である。</p>
+<p><b>7. 鼻音の挿入</b>　<i>*uundhurāe</i>（!）56, 1 と <i>āra-ṃ-sudi</i>［?］に見られる。語末の m（ṃ の代わり）の前に、24, 1 と 46, 8 ではさらに m がある。II. B. 4 を参照。</p>
+<p><b>8. 有気音と無気音</b>（序論を見よ）　写本では絶えず取り違えられている。</p>
+
+<h4>B) 個々の子音</h4>
+<p><b>1. 語頭</b></p>
+<ul>
+<li>(a) <b>t</b>：文頭で誤って t の代わりに d が書かれる。<i>dena</i> 29, 16; <i>dā</i> 84, 2。逆に文中で d の代わりに t。<i>tāva</i> 28, 8。</li>
+<li>(b) <b>n</b>：写本はしばしば ṇ の代わりに n を書く。Hem. I, 229 が許すとおりである。<i>na</i> 2, 5; 40, 13; 116, 14; <i>nāma</i> 3, 7; 132, 2; <i>nāhi</i> 61 欄外注; <i>nikkanta</i> 22, 6; <i>nimitta</i> 120, 9; <i>nivutta</i> 54, 4, 5。</li>
+<li>(c) <b>p</b>：(α) 単純語ではそのまま残る。例 <i>pakidi</i>。<i>bacchi</i>［?］, <i>bara</i>, <i>bāredu</i> では b、<i>vahida</i> では v となる。(β) 複合語後分の頭では大抵そのまま残る。例 <i>bhūmi-paḍida</i>。<i>ajja-utta</i> のように脱落することもある。<i>addha-vahe</i> 49, 4; <i>haṃsa-vadī</i> では v となる。</li>
+<li>(d) <b>b</b>：大抵残る。<i>*padisa</i>［?］では p、<i>paḍivuddha</i>（?）では v となる。</li>
+<li>(e) <b>v</b>：大抵残る。次の語では b となる：<i>ba</i>, <i>baassa</i>, <i>baula</i>, <i>baṃsa</i>, <i>baḍibakkha</i>［?］, <i>baya</i>［?］, <i>batthavva</i>［?］, <i>baddhayissaṃ</i>, <i>basanta</i>, <i>basauta</i>［?］, <i>baha</i>, <i>bahū</i>, <i>bahuaya</i>［?］, <i>bida</i>［?］, <i>bāvāra</i>［?］, <i>biyā</i>［?］, <i>bidiyaa</i>, <i>bijjā</i>, <i>bibuha</i>, <i>binhida</i>［?］, <i>bilāsiṇī</i>。<i>o</i> 43, 13; 45, 11 では脱落し、<i>vvuttanta</i> 133, 9 では重複する。</li>
+</ul>
+<p><span class="pg">S. 489</span><b>2. 語中（母音間）</b></p>
+<ul>
+<li>(a) <b>t, ṭ</b>：Pāli のように、d, ḍ の代わりに 40箇所以上に現れる。例 <i>ātamba</i>（!）, <i>ātaṅka</i>, <i>itihāsa</i>, <i>udaādo</i> の代わりに <i>utaado</i>, <i>kuṭumba</i>。</li>
+<li>(b) <b>th</b>：(α) <i>atha</i> 60, 11; <i>tathā</i> 129, 2 ではそのまま。(β) 23箇所で dh となる。例 <i>ayyadhā</i>［?］, <i>adidhi</i>, <i>kadhaṃ</i>, <i>kadhedu</i>。(γ) 19箇所で h となる。例 <i>kahaṃ</i>（4箇所。<i>kadhaṃ</i> は27箇所）, <i>kahedi</i>, <i>jahā</i>（9箇所。<i>jadhā</i> も9箇所）, <i>puharā</i>［?］。(δ) <i>ayadi</i>［?］, <i>kadedu</i>, <i>jadā</i> では d となる。(ε) <i>paḍhama</i> では5箇所で ḍh。これに対して欄外注には <i>pahuma</i>［?］84, 14 がある。</li>
+<li>(c) <b>d</b>：<i>jadi</i> では決して脱落しない。</li>
+<li>(d) <b>p</b>：(α) Pāli のように、きわめて多くの語でそのまま残る。例 <i>samīpa</i>, <i>apadesa</i>, <i>rūpa</i>, <i>pādapa</i>（<i>samība</i>, <i>rūba</i>, <i>pādaba</i> と並ぶ）。(β) 大抵は v の代わりに b となる。(γ) <i>abhara</i>, <i>ubhagada</i>, <i>ubhavisattha</i>, <i>gobhala</i> では bh（!）となる。(δ) v となるのは約30語のみだが、<i>āyavedi</i>［?］では常に v。(ε) <i>koa</i>, <i>goemi</i> では脱落する。</li>
+<li>(e) <b>b</b>：大抵 v となる。</li>
+<li>(f) <b>v</b>：(α) 大抵残る。(β) <i>dhuanti</i>, <i>riara</i>［?］, <i>bhaadā</i>, <i>kealam</i> では脱落する。(γ) 次の語では b となる：<i>purubaṃsa</i>, <i>āsabiyi</i>（<i>āsavaṃdiye</i>［?］の代わり）, <i>yibiyya</i>［?］, <i>yibāhehi</i>［?］, <i>bia</i>（= <i>vidha</i>［?］）, <i>biyāda</i>［?］, <i>puruba</i>。(δ) <i>punarutta-bhādiṇī</i>［?］では bh（!）となる。</li>
+<li>(g) <b>h</b>：<i>iha</i> は3箇所でそのまま、4箇所で <i>idha</i>。</li>
+</ul>
+<p><b>3. a, ā, i, ī, u, o の後で y, k, g, c, d から生じる y, v, h</b>（<span class="r">E. Müller, <i>Beiträge zur Grammatik des Jainaprākrit</i></span> を参照）</p>
+<ul>
+<li>(a) 弱く調音される y（ya-śruti）。<ul>
+<li>(α) a の後：<i>abaya-y-issaṃ</i>（<i>abayaissaṃ</i> と並ぶ）［?］, <i>abarādha-y-issaṃ</i>［?］, <i>āmanta-y-issaṃ</i>, <span class="pg">S. 490</span><i>kadha-y-issaṃ</i>, <i>kara-y-issaṃ</i>（*<i>issasi</i>, *<i>issanti</i>; <i>karaissanti</i> と並ぶ）, <i>gaṇa-y-issadi</i>（<i>gaṇaissaṃ</i> と並ぶ）, <i>nivatta-y-issadi</i>, <i>niveda-y-issadi</i>, <i>niveda-y-isse</i>（<i>nivedaissaṃ</i> と並ぶ）, <i>daṃsa-y-issaṃ</i>, <i>dhāra-y-issaṃ</i>, <i>pāda-y-e</i>, <i>baddha-y-issaṃ</i>, <i>vinoda-y-issaṃ</i>, <i>sabhāja-y-iduṃ</i>（!）, <i>vāra-y-issadi</i>, <i>saraṇa-y-issaṃ</i>［?］, <i>sa-y-ida</i>, <i>ta-y-i</i>, <i>ubajja-y-a</i>（<i>ubajjāa</i> と並ぶ）, *<i>jjhāa</i>（<i>uvajjhāa</i> の代わり）, <i>parica-y-a</i>（<i>paricaa</i> と並ぶ）, <i>pariccā-y-iṇī</i>（<i>pariccāiṇo</i>（!）と並ぶ）, <i>ma-y-ūra</i>（<i>maūraa</i>, <i>maūla</i> と並ぶ）, <i>sam-a-y-a</i>（<i>samaa</i> と並ぶ）, <i>śa-y-itavva</i>（<i>sa-y-idavva</i> の代わり）, <i>vija-y-a</i>（<i>vijaa</i> と並ぶ）; <i>chā-y-ā</i>（<i>chāā</i> と並ぶ）, <i>visa-y-a</i>, <i>sāoda-y(y)-a</i>［?］。</li>
+<li>(β) i の後：<i>pi-y-a</i>（<i>pia</i> と並ぶ）, <i>pi-y-aṃvadā</i>（<i>pia*</i>, <i>pri-y-aṃvadā</i>（!）と並ぶ）, <i>hi-y(y)-a</i>, <i>ṇi-y-antaṇā</i>。</li>
+<li>(γ) ī の後：<i>āpaṇḍī-y-adi</i>［?］, <i>sāradī-y-a</i>（<i>sāradīa</i> と並ぶ）, <i>ramaṇī-y-a</i>（<i>ramaṇīa</i> と並ぶ）, <i>apatthaṇī-y-a</i>（!）。</li>
+<li>(δ) ā の後：<i>bhā-y-o</i>（<i>bhāo</i> と並ぶ）。</li>
+<li>g の代わりの y：<i>pariccā-y-iṇī</i> 68, 7。v の代わりの y：おそらく <i>dhārāvesi</i> の代わりの <i>dhāra-y-esi</i> 17, 16; 18, 1。</li>
+</ul></li>
+<li>(b) v。(α) a の後の k の代わり：<i>poda-v-a</i>。(β) a の後の c の代わり：<i>va(a)-v-aṇa</i>（cf. <i>vahaṇa</i>）。(γ) a の後の d の代わり：<i>pā-v-a</i>; <i>pasā-h-aṇa</i>。(δ) a の後の y の代わり：<i>uda-v-a</i>［?］。</li>
+<li>(c) h。(α) a の後の k の代わり：<i>phala-h-aa</i>。(β) a の後の g の代わり：<i>ma-h-a</i> = <i>mṛga</i> 22, 8。(γ) a の後の c の代わり：<i>va-h-aṇa</i>（b, β を参照）。i の後：<i>vi-h-ārida</i>［?］。o の後：(<i>go</i>)<i>ro-h-aṇa</i>［?］。(δ) i の後の d の代わり：<i>i-h-assa</i> = <i>edassa</i> (<i>etasya</i>) 11, 1。</li>
+</ul>
+<p><b>4. Anusvāra</b></p>
+<ul>
+<li>(a) <b>語中</b>：写本が対応する同類鼻音の代わりに ṃ を書くのは13例にすぎない。例 <i>saṃkampa</i>, <i>saṃcaranti</i>, <i>saṃdiṭṭha</i>, <i>saṃpurisa</i>, <i>saṃbandha</i>, <i>saṃmajjaṇa</i>。ただし <i>parammuha</i> と <i>purandara</i> で ṃ の代わりに m と n を書くのは誤り（Hem. I, 25）。ṃ の付加は <i>aṇṇa-ṃ-hiaāe</i> 140, 9, <i>saṃdiṭṭha-ṃ-puruvaṃ</i> 94, 9, <i>darva-ṃ-kavalo</i>（!）66, 14, <i>la-ṃ-aṇa</i>［?］93, 9 に見られる。脱落は <i>aṃ</i>［?］24, 2。II A. 7 を参照。</li>
+<li>(b) <b>語末</b>：Hem. I, 23 に反して、休止位置で ṃ の代わりに m が52箇所に見られる。母音の前ではしばしば m（2箇所ではさらに mṃ）。ṃ の付加は <i>avalabassa-ṃ</i>［?］95, 8, <i>parissaja-dha-ṃ</i> 71, 11, <i>java-ṃ</i>（<i>jāva</i>）28, 2, <i>asaṃnihidāṇi-ṃ</i>［?］42, 7, <i>dhu-di-ṃ</i>［?］（主格）60, 8 に見られる（ただし処格複数 <i>-su-ṃ</i> には決して現れない）。逆に ṃ の脱落はしばしば起こる。<ul>
+<li>(α) 不変化詞の前で（20箇所）：<i>gada ṃjyeva</i>［?］, <i>ekka ṃjyeva</i>, <i>paḍhama ṃjyeva</i>, <i>uḍaa ṃjyeva</i>, <i>nimitta ṃjyeva</i>, <i>gihida eva</i>, <i>ekka va</i>（= <i>eva</i>）; <i>dekkhia bia</i>［?］, <i>ki tti</i>, <i>gihida tti</i>, <i>siggha tti</i>, <i>tavasāṇa tti</i>［?］, <i>gamaṇa tti</i>, <i>lamaṇa tti</i>［?］, <i>ekkāha pi</i>, <span class="pg">S. 491</span><i>ratti pi</i>, <i>kassi bi</i>, <i>citta khu</i>（他でもしばしば欠ける）。</li>
+<li>(β) ā 語幹の対格単数と中性複数 -āiṃ で：<i>pāyāi</i> 71, 2。韻律上の理由で <i>cumbiāi</i>, <i>maṇorahāi</i>。<i>ālīṇi</i> の代わりに <i>āli</i> 121, 9。さらに <i>dāyi</i>（3箇所）と <i>tahi</i> 110, 12。</li>
+<li>(γ) 未来形で：<i>ubālabhissa</i> 94, 15。</li>
+<li>(δ) 不定詞で：<i>viyavedu</i>（どちらの場合もおそらく単なる書き損じ）。</li>
+<li>(ε) mh の前で、先行する長母音の短縮を伴って：<i>ia-mhi</i> 21; <i>ima-mhi</i>（<i>maya-mhi</i>）117, 10; <i>puruvā-mhi</i> 94, 9。ただし <i>iaṃmhi</i> 112, 1 と <i>jaṃmhi</i> 105, 14 も見られる。</li>
+</ul></li>
+<li>(c) 先行母音の延長による ṃ の代替：<i>rattiṃ ca</i> の代わりの <i>rattī a</i> 42, 12。</li>
+<li>(d) 挿入された y の前（Hem. IV, 279）では、y ではなく ṃ が立つはずである。写本は決して ṃ を書かない。したがって <i>kiy yedaṃ</i> 39, 1; 95, 4; <i>kiy y(v)edaṃ</i> 101, 16; <i>evay yedaṃ</i> 2, 9; 35, 2; 55, 1; 101, 15。</li>
+</ul>
+
+<h4>C) 子音群</h4>
+<p><b>1. tv と dv</b>　v は次のようになる。(a) <i>tvar</i> では u：<i>tuara</i>, <i>tua(ra)ssa</i>［?］, <i>tuarāvedi</i>。<i>duve</i> と並んで <i>due</i>。それ以外では Hem. IV, 172 のとおり <i>turida</i>, <i>turidavva</i>。<i>tvam</i> も同様で、<i>tuvaṃ</i> と並んで <i>tuaṃ</i>。(b) <i>duve</i> では uv。Hem. に反して <i>turaadu</i>; <i>tuvaṃ</i>。(c) <i>duvvāra</i> では uvv。</p>
+<p><b>2. nt</b>　nt のまま残る。ただ <i>dussanda</i> 12, 6（<i>dussanta</i> 6箇所と並ぶ）と <i>andaüra</i>（<i>andāura</i>）では nd が現れる（Hem. IV, 261）。</p>
+<p><b>3. pp の代わりの mp（ṃp）、およびその逆</b>　<i>upasaṃpadaṃ</i>, <i>saṅkappa</i> と並ぶ <i>saṅkaṃpa</i>, <i>upakampeṃ</i>［?］, <i>kampida</i>, <i>ampiduṃ</i>［?］, <i>saṃpurisa</i>, <i>vikampiadi</i>。逆に <i>aṇuappayia</i>［?］, <i>aṇuappiyia</i>［?］。</p>
+<p><b>4. ry</b>　Hem. IV, 266 によれば yy または jj となる。写本は yy だけを書く。例 <i>ayya</i>, <i>kayya</i>, <i>payyauta</i>［?］など（これに対する当該箇所での Pischel の主張を参照）。yy が欠けるのは2箇所、<i>pa-att(h)āiṇī</i>［?］と <i>sā-odayye</i>［?］。南インド写本は jj または yy の代わりに o の記号を書くが、ときにそれも省く。</p>
+<p><b>5. bbh の代わりの vv、および vv の代わりの bb</b>　<i>davva</i>, <i>gavva</i>, <i>pavvattha</i>; <i>jobbaṇa</i> 9, 14; 11, 2。</p>
+<p><span class="pg">S. 492</span><b>6. kṣ</b>　Hem. II, 17 に反して、<i>snechiu</i>［?］94, 2 では kkh の代わりに cch となる。</p>
+
+<h3>III. 個別事項</h3>
+<ul>
+<li><i>aho</i> は3箇所でそのまま、4箇所で <i>ammo</i>、2箇所で <i>amho</i>。</li>
+<li><i>eva</i>：写本は15箇所で <i>eva</i>、95, 11 で <i>va</i>、135, 7 で <i>va</i> の代わりに <i>vā</i>、それ以外は <i>yyeva</i>（<i>yeva</i> は決してない）。Hem. III, 280 に対する Pischel の主張を参照。</li>
+<li><i>evam</i> は12箇所で <i>evaṃ</i>（母音の前と <i>pi</i> の前で各1回 <i>evam</i>）。<i>ṇedaṃ</i> の前で <i>evan</i>。121, 6 では（e の後で）<i>yyevaṃ</i>。</li>
+<li><i>tāmra</i> は Hem. II, 56 に反して、<i>amba</i> の代わりに <i>tamba</i>。</li>
+<li><i>navamālikā</i> の <i>nava</i> は Hem. I, 170 と Var. I, 7 に反してそのまま残り、決して <i>no</i> にならない。</li>
+</ul>
+
+<h3>IV. 連声（Saṃdhi）</h3>
+<ol>
+<li>複合語では a + a = ā、a + u = o、a + i = e などとなる。先行母音がしばしば落ち、まれに両母音が残る。例 <i>via-aṇurāeṇa</i> 34, 10。</li>
+<li>語末 m は (a) 母音の前で35箇所そのまま残る。(b) 一部は後続の語頭に対応する鼻音で表される。<i>kiṃ</i> の場合がそうで、<i>kiñ ci</i>［?］, <i>kiñ ca</i>, <i>kin na</i>, <i>kin nimittaṃ</i>, <i>kin tu</i>, <i>kim pi</i>（9箇所で ṃp、11箇所で mp）。(c) まれに後続語の語頭子音に同化する。例 <i>kit tae</i> 28, 15。</li>
+<li><i>api</i> との結合：<i>mamābi</i>, <i>kassābi</i>, <i>ettieṇābi</i>; *<i>savvasseṇābi</i>, <i>parammuhassābi</i>。</li>
+<li><i>eva</i> との結合：<i>eva</i> の前で、処格単数を -e ではなく -a で書く。<i>pāvaa eva</i>［?］60, 8; <i>sāodayya eva</i>［?］61, 16（<i>ubha yyeva</i> 120, 10 を参照）。</li>
+<li>後続語頭母音の脱落：<i>vo 'hiṇadaṃ</i>［?］40, 3; <i>bhāvo 'cintaṇīā</i>［?］103, 4。</li>
+<li>その他：<i>tavedāṇiṃ</i> 95, 7; <i>yyevāacchadi</i> 22, 15; 119, 10, 11; <i>adhekka</i>［?］91, 8; <i>tavāṇukārī</i> 85, 14。</li>
+</ol>
+
+<h3>V. 方言の取り違え</h3>
+<ol>
+<li>Śaurasenī の代わりの Māhārāṣṭrī。th から dh の代わりに一部 h が立ち、nt の代わりに nd、<i>bhodi</i>, <i>bhodu</i> の代わりに <i>hodi</i>, <i>hodu</i> が立つ。また t からの d がしばしば落ちる。例 <i>puraa</i>, <i>gia</i>, <i>āsasia</i>, <i>pesiāṇaṃ</i>。</li>
+<li>Māhārāṣṭrī の代わりの Śaurasenī。語中子音が落ちない。例 <i>hoduṃ</i>［?］, <i>cūda</i>, <i>nivvada</i>［?］。</li>
+<li><span class="pg">S. 493</span>Māgadhī の代わりの Śaurasenī と Māhārāṣṭrī、およびその逆。l と r、ś と s、o と e、cch と śc が取り違えられる。</li>
+<li>Śaurasenī の代わりの Māgadhī。yy の代わりに ññ。例 <i>kaññaāiṃ</i>（<i>kanyakāḥ</i>）, <i>adhaññaadā</i>, <i>abbahmaññaṃ</i>。これに対して <i>raṇya</i> と <i>araṇyaa</i>［?］、同様に <i>raṇyo</i> と並ぶ <i>raññā</i>。さらに <i>aṇanturañña</i>［?］, <i>paḍiññāda</i>［?］。</li>
+<li>Pāli 形：例 d の代わりの t、v の代わりの p。<i>vasati</i>, <i>bhaṇyata</i>［?］, <i>upa</i> など。</li>
+</ol>
+
+<h2 id="formen">形態論</h2>
+<h3>I. 曲用</h3>
+<h4>A) 名詞</h4>
+<ol>
+<li>韻律上の理由による母音の短縮。例 <i>aṇukampāmidu eva</i> 91, 7。ただしそれ以外にも（誤って）見られる。例 <i>saṃpattie</i> 141, 10。</li>
+<li>韻律上の理由による語末母音の脱落。<i>morīo</i> の代わりに <i>morī</i>、<i>pamadāo</i> の代わりに <i>pamadā</i>。ただしそれ以外にも、<i>daṃsaṇāo</i>［?］の代わりに <i>daṃsaṇā</i>［?］。これに対して韻文では <i>daumāyā</i>［?］3, 2, 3。（語尾 -īe では e がしばしば誤って欠ける。）</li>
+<li>ā 語幹と ī 語幹の曲用の取り違えが誤って見られる。<i>tatthabhavadīe</i> の代わりに <i>tatthabhavadā</i> 102, 15; <i>*yāe</i> の代わりに <i>arayāhamāyie</i>［?］84, 6; <i>missā</i> の代わりに <i>(a)missīo</i> 110, 4。</li>
+<li>個別事項。<ul>
+<li>(a) <i>eva</i> の前で処格単数 -a（連声の項を見よ）。<i>bhartṛ</i> からは <i>bhattāre</i> 87, 15 がある。</li>
+<li>(b) ā の前で女性単数 <i>sālāe</i> の代わりに <i>sālāa</i> 119, 8。</li>
+<li>(c) 主格複数 <i>isīo</i> の代わりに <i>isao</i>（<i>ṛṣayaḥ</i>。サンスクリットにならった形）47, 4; 78, 10; 79, 14。</li>
+<li>(d) a 語幹の中性複数：散文で -āiṃ の代わりに -āi が <i>kaṇṇāi</i>［?］24, 4; <i>bhāadheāi</i> 99, 5; <i>pāṇāi</i> 71, 2 に見られる。韻文では <i>cumbiāi</i> 3, 1; <i>maṇorahāi</i> 42, 13（<i>sāhas(s)āi</i> 129, 2; <i>ṇivvisesāi</i> 127, 14 の -ai は誤り）。語尾 -āṇi は7箇所に見られる：<i>sāuṇāṇi</i>［?］42, 7; <i>vaṇṇāṇi</i>［?］12, 6; <i>rakkhidāṇi</i> 12, 6; <i>bhāadheāṇi</i> 135, 7; <i>kodūāṇi</i>［?］60, 4; <i>kasāāṇi</i> 21, 13; <i>kattuāṇi</i>［?］21, 14。語末 ṃ を伴って <i>asaṃnihidāṇi-ṃ</i> 42, 6, 7。-ṇī 語幹形容詞の中性複数が <i>*bilāsiṇi</i>（<i>vilāsiṇi</i>）に見られる（*<i>sīṇi</i> の代わり?）121, 1。</li>
+<li>(e) -e の代わりに -a の処格複数 <i>ohiṇasu</i>［?］（代名詞 <i>edasu</i> を参照）22, 7。</li>
+</ul></li>
+<li>Pāli 形：<i>rakkhae</i>（対格複数）8, 13; <i>mettamha</i> 30, 7。</li>
+<li>与格が <i>pasādāya</i> 92, 5; <i>pari(bho)āa</i>［?］52, 12; <i>gamaṇāa</i> 20, 4 に見られる。両数が <i>bhavantau</i>（?）31, 11。</li>
+<li><span class="pg">S. 494</span>性の変化が <i>pāṇāi</i> 71, 2 と <i>akkharo</i> 42, 9 に見られるようである。</li>
+</ol>
+<h4>B) 数詞</h4>
+<p><i>due</i> 17, 16; 31, 8 と並んで <i>duve</i> 71, 11（<i>dube</i> 85, 3）。属格 <i>doṇhaṃ</i>。— <i>ubhe</i> の代わりに <i>ubha</i> 120, 10（IV, 4 を参照）。</p>
+<p>Hem. III, 121 に反して、<i>tiṇṇi</i> = <i>tisraḥ</i>（主格複数）の代わりに <i>tiṇho</i> 105, 15。</p>
+<h4>C) 代名詞・代名詞的形容詞・副詞</h4>
+<ol>
+<li><i>hagge</i>［?］の代わりに <i>haṃge</i> 90, 12。<i>tvam</i> に <i>tuvaṃ</i>, <i>tumaṃ</i> と並んで <i>tuaṃ</i>。</li>
+<li><i>tāe</i> = <i>tayā</i> の代わりに <i>tae</i> 28, 9; 94, 9; 114, 4; 121, 7。<i>tae</i> = <i>tasyāḥ</i> 16, 1; <i>tassā</i> = <i>tasyāḥ</i> 107, 12。Pāli 形 <i>tasmiṃ</i> 55, 15; 93, 8; <i>jasmiṃ</i> 55, 15。さらに <i>tasuṇo</i>（?）= <i>tasmāt</i> 8, 14; <i>edassa</i> の代わりに <i>ihassa</i>; 処格複数 <i>edasu</i>（<i>ohiṇasu</i> と同様）119, 2 および <i>edesu</i> の代わりに <i>edisaṃ</i>［?］8, 11。</li>
+<li><i>ātmānam</i> は一度だけ <i>attāṇaṃ</i> の形で、それ以外は <i>attāṇaaṃ</i>（7箇所）。</li>
+<li><i>ittia</i> 55, 9（誤って <i>itthi(a)</i> 70, 10; <i>itthia</i> 54, 11）と並んで <i>ettia</i> 22, 5; 45, 4; 59, 11。<i>itika</i> 85, 7 と <i>ituka</i> 93, 16 は <i>ittika</i> の誤り（写本にはそれに当たるものとして <i>ittia</i> と <i>ettia</i> しかない）。</li>
+<li>Hem. I, 142 に反して <i>sadisa</i>, <i>aṇusadisa</i>, <i>jādisa</i>, <i>tādisa</i>, <i>kīdisa</i>, <i>īdisa</i>（音韻論の ṛ の項を参照）。</li>
+<li><i>tahiṃ</i> と並んで <i>tahi</i>、ただし <i>kahiṃ</i> のみ。<i>jadi</i>（常にこの形）。Hem. III, 83 に反して <i>ittha</i>。写本には <i>ettha</i> は決してない。<i>atra</i> からの <i>attha</i> の代わりに、<i>bhodi</i>, <i>bhavaṃ</i> と結びつく場合には写本は <i>atta</i> だけを書き、<i>attha</i> は決して書かない。<i>iti</i> については語頭子音の脱落を、<i>eva</i> については個別事項を見よ。<i>iva</i> は 112, 6; 116, 1 で <i>iva</i> のまま、11, 2 で <i>ia</i>、26, 15 で <i>via</i>、76, 1 で <i>vi</i>、それ以外はどこでも <i>bia</i> だけである。</li>
+</ol>
+
+<h3>II. 活用</h3>
+<h4>A) 総論</h4>
+<p><b>1. 重複</b>　語根 <i>sthā</i> は一度だけ <i>ti</i>、未来では <i>si</i>、それ以外は常に <i>ci</i> で重複する［OCR は “di”。<i>ciṭṭha-</i> の意と解する］。したがって <i>tiṭṭhati</i> 105, 9。これに対して <i>ciṭṭha</i>, <i>ciṭṭhasi</i>（*<i>ci</i>）, <i>ciṣṭha</i>（!）, <i>ciṭṭha</i> の代わりに <i>ciṭṭhi(a)</i>, <i>ciṭṭhadu</i>, <i>aṇuciṭṭhiadu</i>。未来 <i>siṭṭhissaṃ</i>。</p>
+<p><span class="pg">S. 495</span><b>2. 連結母音</b>　ā の代わりに a：<i>bhaṇādi</i> と並んで <i>bhaṇati</i>（*<i>di</i>）, <i>bhaṇasi</i>, <i>bhaṇahi</i>。未来で i の代わりに a：<i>avaciṇassaṃ</i>, <i>avalambassaṃ</i>, <i>paḍivajjasudi</i>（!）。過去受動分詞 <i>visajjada</i>, <i>paḍicchada</i>, <i>vīs(s)arada</i>。不定詞 <i>ālihaduṃ</i>。絶対分詞 <i>paḍicchaa</i>。現在で a の代わりに i：<i>pekkhidi</i>（!）, <i>pekkhisi</i>, <i>paḍicchidi</i>, <i>gamāvidi</i>［?］。a の代わりに u：<i>upavisamha</i> と並んで <i>upavisumha</i>、<i>jujjadi</i> と並んで <i>jujjudi</i>。未来で e の代わりに i：<i>geṇhissadi</i> の代わりに <i>giṇhisadi</i>。II A. 4 を参照。</p>
+<p><b>3. 人称語尾</b></p>
+<ul>
+<li>(a) 能動。(α) 命令法1人称単数［2人称の誤りか］で <i>hi</i> の代わりに <i>dhi</i>：<i>aṇujāṇādhi</i> 20, 4 のみ。(β) 現在2人称複数：<i>dha</i>（<i>ṇisīdadha</i>, <i>icchadha</i>, <i>parittāadha</i>, <i>siñcadha</i>）、<i>dhaṃ</i>（<i>parissajadhaṃ</i>（!））、<i>ha</i>（<i>suṇeha</i>）、<i>ttha</i>（<i>ub(h)avisattha</i>, <i>jāṇattha</i>）。アオリスト2人称 <i>tthā</i>：<i>ālambitthā</i>（単数）、<i>paḍibandhitthā</i>（複数）。</li>
+<li>(b) 中動。<i>e</i> と <i>se</i>：<i>kare(e)</i>, <i>rame</i>, <i>karae</i>, <i>āmantae</i>, <i>vattase</i>; <i>pādaye</i>, <i>ubālabhisse</i>, <i>gamisse</i>, <i>ṇivedayisse</i>。<i>su</i>：<i>suṇisu</i>, <i>paḍiṇiuttasu</i>。</li>
+</ul>
+<h4>B) 個別事項</h4>
+<ol>
+<li><b>未来</b>：<i>giṇhisadi</i>（上を見よ）131, 11; <i>gadamissaṃ</i>（!）12, 11; <i>bhāissadi</i> 108, 14 と並んで <i>bhāissaṃ</i> の代わりに <i>bheissaṃ</i> 115, 17; <i>hohisi</i> 18, 15 と <i>huvissadi</i> 99, 7。</li>
+<li><b>過去受動分詞</b>：<i>diṇṇa</i> 25, 15; 66, 1; 90, 14; 95, 15; 132, 2 と並んで <i>daṇṇa</i> 26, 1; 45, 7。<i>gihida</i> 75, 2; 101, 14、<i>gihīda</i> 7箇所（<i>gihīdha</i> 132, 12）と並んで <i>gahida</i> 25, 6、<i>gahia</i> 96, 14。<i>kida</i> 13箇所と並んで <i>kada</i> 4箇所、<i>kaa</i> 55, 1。</li>
+<li><b>過去形</b>：<i>bhaṇjihisi</i>［?］30, 16; 31, 1; <i>ālambitthā</i>, <i>paḍibandhitthā</i>。</li>
+<li><b>絶対分詞</b>：<i>karia</i>（<i>karea</i>）と <i>kāūṇa</i>。<i>kadua</i> は決してない。<i>ghettūṇa</i> の代わりに <i>gihiūṇa</i>［?］。</li>
+<li><b>未来受動分詞</b>：<i>kādavva</i>。</li>
+<li><b>不定詞</b>：<i>kāduṃ</i>。</li>
+<li><span class="pg">S. 496</span><b>使役</b>。<ul>
+<li>(a) <i>aya</i> からの <i>aa</i>：<i>jaṇaadi</i>, <i>gaṇaasi</i>, <i>turaadu</i>（!）（さらに <i>jaṇadi</i>, <i>pariṇadu</i>, <i>disadi</i> まで）。未来 -<i>aïssaṃ</i> と -<i>a-y-issaṃ</i>（例は〔論文の〕11頁）。不定詞 <i>mantaïduṃ</i>。未来受動分詞 <i>darasaïdavva</i>。</li>
+<li>(b) <i>aya</i> からの <i>e</i>：<i>moehi</i>（<i>modvehi</i> ではない）;（<i>moida</i>）。</li>
+<li>(c) <i>āpaya</i> からの <i>āve</i>：例 <i>tuarāvedi</i>。</li>
+<li>(d) <i>āve</i> = <i>āpaya</i> からの <i>āve</i> の代わりの <i>ā-y-e</i>：<i>dhārāyesi</i>（?）17, 16。</li>
+<li>(e) <i>āve</i>、ないし未来 <i>āi</i>：例 <i>vaṭṭāissaṃ</i>（Pischel では <i>dhārāïssaṃ</i>）。</li>
+</ul></li>
+<li><b>注目すべき形</b>：<i>ullaladi</i> または <i>ullalidu</i>（ないし <i>ullalia</i>）の代わりに <i>ulladi</i> 66, 13, 14; <i>aṇugiṇhimamha</i> 44, 13; <i>ahlasida</i> の代わりに <i>ahluida</i>［?］93, 10, 11; <i>atia</i>（<i>abhyarcya</i>）?; <i>aṇuvarijjaṃ</i>［?］45, 10。</li>
+</ol>
+</div>
+
+<div class="tn"><b>訳者付記</b>
+<ul style="margin:6px 0;padding-left:1.2em">
+<li>本論文はこの序論に続いて、写本全七幕の本文（S. 497–640）を載せる。今回のアップロード分は S. 496 までなので、ここではそこまでを訳した。</li>
+<li>Burkhard の言う第七幕前の <i>praveśaka</i> は、のちに Belvalkar が真正と認めて Sahitya Akademi 版（1965）に採り入れたものである。V. Raghavan は同版の序文でこれを詩人の水準に達しないとし、「Burkhard が指摘したように、意味が明らかでなく復元もほとんど不可能な箇所もある」と述べている。</li>
+<li>序言の年代推定「1676年より後に置くことはしない」は原文 “keinesfalls über das Jahr 1676 hinaus setzen” の訳である。末尾の <i>saṃvat 33</i> はカシュミールの Laukika 暦（Saptarṣi 紀元）の世紀を省いた年表記と考えられるが、Burkhard 自身はその換算を示していない。</li>
+</ul></div>
+
+<footer>
+<p>関連ページ：<a href="shakuntala-kale-bilingual.html">『シャクンタラー』対訳（Kale本・全七幕）</a> ／ <a href="shakuntala-guide.html">読解ガイド</a> ／ <a href="shakuntala-research.html">研究史</a></p>
+<p>OCR テキストからの和訳。区別記号の脱落や判読不能箇所があるため、語形の引用には原論文の版面との照合をおすすめする。</p>
+</footer>
+</div>
+</body>
+</html>
