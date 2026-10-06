@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第3章-3 格変化：子音語幹（2） — Kale 高等サンスクリット文法</title>
+<meta name="description" content="Kale 高等サンスクリット文法 第3章 §115–131：अत्・अन्・इन्・वस्・यस् 語幹と不規則語。">
+<link rel="stylesheet" href="kale.css">
+</head>
+<body>
+<div class="top-bar"><div class="inner">
+  <a class="title" href="index.html">Kale 高等サンスクリット文法</a>
+  <span>第3章-3 格変化：子音語幹（2）</span>
+  <span class="spacer"></span>
+  <a href="ch03-2.html">← 第3章-2</a>
+  <a href="index.html">目次 →</a>
+  <button type="button" id="theme">明暗</button>
+</div></div>
+
+<div class="wrap">
+<main>
+<header class="chapter-head">
+  <div class="dev-title">हलन्तप्रकरणम्</div>
+  <div class="num">Chapter III · Declension (3)</div>
+  <h1>第3章　名詞の格変化（3）</h1>
+  <div class="orig">第2節の続き（अत्・अन्・इन्・वस्・यस्）と不規則な語／ §115–§131 ／ 原書 pp. 70–87</div>
+</header>
+<nav class="toc" aria-label="このページの目次">
+<h2>目次</h2>
+<ol>
+  <li><a href="#at">अत्・मत्・वत् 語幹 §115–116</a></li>
+  <li><a href="#-s115">§115 धीमत्・महत्</a></li>
+  <li><a href="#-s116">§116 分詞 भवत्・ददत्</a></li>
+  <li><a href="#an">अन्・इन् 語幹 §117–123</a></li>
+  <li><a href="#-s117">§117 ब्रह्मन्・राजन्・नामन्</a></li>
+  <li><a href="#-s118">§118–121 पूषन्・श्वन्・अहन्・अर्वन्</a></li>
+  <li><a href="#-s122">§122–123 करिन्・पथिन्</a></li>
+  <li><a href="#vas">वस्・यस् 語幹 §124–125</a></li>
+  <li><a href="#irrw">不規則に変化する語 §126–131</a></li>
+  <li><a href="#-s129">§129 पाद・दन्त など 16 語</a></li>
+</ol>
+</nav>
+
+<h2 class="part" id="at">第2節（続き）<span lang="sa">अत्・मत्・वत्</span> 語幹<small>Nouns ending in अत्, मत्, and वत् — §115–§116</small></h2>
+<figure class="fig"><figcaption><b>図 3-11</b>「最初の 5 つの格形」（強い格）と、中・弱の格の位置（男性・女性）</figcaption>
+<div class="scroll-x"><table class="t" style="max-width:520px"><thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody><tr><th>主格</th><td style="background:var(--gold-wash);color:var(--gold);font-weight:700">強</td><td style="background:var(--gold-wash);color:var(--gold);font-weight:700">強</td><td style="background:var(--gold-wash);color:var(--gold);font-weight:700">強</td></tr><tr><th>呼格</th><td style="color:var(--muted)">（特別）</td><td style="background:var(--gold-wash);color:var(--gold);font-weight:700">強</td><td style="background:var(--gold-wash);color:var(--gold);font-weight:700">強</td></tr><tr><th>対格</th><td style="background:var(--gold-wash);color:var(--gold);font-weight:700">強</td><td style="background:var(--gold-wash);color:var(--gold);font-weight:700">強</td><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td></tr><tr><th>具格</th><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td><td style="background:var(--green-wash);color:var(--green);font-weight:700">中</td><td style="background:var(--green-wash);color:var(--green);font-weight:700">中</td></tr><tr><th>為格</th><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td><td style="background:var(--green-wash);color:var(--green);font-weight:700">中</td><td style="background:var(--green-wash);color:var(--green);font-weight:700">中</td></tr><tr><th>奪格</th><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td><td style="background:var(--green-wash);color:var(--green);font-weight:700">中</td><td style="background:var(--green-wash);color:var(--green);font-weight:700">中</td></tr><tr><th>属格</th><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td></tr><tr><th>処格</th><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td><td style="background:var(--indigo-wash);color:var(--indigo);font-weight:700">弱</td><td style="background:var(--green-wash);color:var(--green);font-weight:700">中</td></tr></tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:8px 0 0">原書の言う「最初の 5 つの格形（first five inflections）」は、黄色の 5 箇所（主格 3 つ、対格単・両）を指す。Pāṇini の術語では <span lang="sa">सर्वनामस्थान</span>（呼格も主格扱い）。<b>中</b>＝子音で始まる語尾（<span lang="sa">भ्याम्・भिस्・भ्यस्・सु</span>）、<b>弱</b>＝対格複数から始まる母音語尾。中性では主・呼・対の複数だけが強い格になる。この区分は訳者が整理したもので、以下の表の色分けもこれに従う。</p>
+</figure>
+<section class="para" id="s115">
+<h3><span class="sec">§115</span> <span lang="sa">मत्・वत्</span> 語幹 <span lang="sa">धीमत्</span>・<span lang="sa">महत्</span> <span class="pg">pp.70–71</span></h3>
+<p>主格単数で <span lang="sa">अ</span> が長くなり（§108 の脚注参照）、最初の 5 つの格形では <span lang="sa">अ</span> と語末の <span lang="sa">त्</span> の間に <span lang="sa">न्</span> が挿入される。主格単数では語末の <span lang="sa">त्</span> が落ちる。<span lang="sa">महत्</span> の <span lang="sa">अ</span> は、呼格単数を除き、この <span lang="sa">न्</span> の前で長くなる。</p><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">धीमत्</span><span class="gl">男 才能ある</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">धीमान्</span></td><td class="f hl"><span class="w">धीमन्तौ</span></td><td class="f hl"><span class="w">धीमन्तः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">धीमन्</span></td><td class="f hl"><span class="w">धीमन्तौ</span></td><td class="f hl"><span class="w">धीमन्तः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">धीमन्तम्</span></td><td class="f hl"><span class="w">धीमन्तौ</span></td><td class="f hl2"><span class="w">धीमतः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">धीमता</span></td><td class="f hl3"><span class="w">धीमद्भ्याम्</span></td><td class="f hl3"><span class="w">धीमद्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">धीमते</span></td><td class="f hl3"><span class="w">धीमद्भ्याम्</span></td><td class="f hl3"><span class="w">धीमद्भ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">धीमतः</span></td><td class="f hl3"><span class="w">धीमद्भ्याम्</span></td><td class="f hl3"><span class="w">धीमद्भ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">धीमतः</span></td><td class="f hl2"><span class="w">धीमतोः</span></td><td class="f hl2"><span class="w">धीमताम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">धीमति</span></td><td class="f hl2"><span class="w">धीमतोः</span></td><td class="f hl3"><span class="w">धीमत्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">महत्</span><span class="gl">男 偉大な</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">महान्</span></td><td class="f hl"><span class="w">महान्तौ</span></td><td class="f hl"><span class="w">महान्तः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">महन्</span></td><td class="f hl"><span class="w">महान्तौ</span></td><td class="f hl"><span class="w">महान्तः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">महान्तम्</span></td><td class="f hl"><span class="w">महान्तौ</span></td><td class="f hl2"><span class="w">महतः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">महता</span></td><td class="f hl3"><span class="w">महद्भ्याम्</span></td><td class="f hl3"><span class="w">महद्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">महते</span></td><td class="f hl3"><span class="w">महद्भ्याम्</span></td><td class="f hl3"><span class="w">महद्भ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">महतः</span></td><td class="f hl3"><span class="w">महद्भ्याम्</span></td><td class="f hl3"><span class="w">महद्भ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">महतः</span></td><td class="f hl2"><span class="w">महतोः</span></td><td class="f hl2"><span class="w">महताम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">महति</span></td><td class="f hl2"><span class="w">महतोः</span></td><td class="f hl3"><span class="w">महत्सु</span></td></tr>
+</tbody></table></div></div><div class="legend"><span style="--sw:var(--gold-wash)">強語幹 -मन्त्-・-आन्त्-</span><span style="--sw:var(--green-wash)">中語幹 -मद्-（भ्-語尾の前）</span><span style="--sw:var(--indigo-wash)">弱語幹 -मत्-</span></div><div class="kv"><div><h4>中性 <span lang="sa">धीमत्</span></h4>主・呼・対 <span lang="sa">धीमत्・धीमती・धीमन्ति</span>。他は男性と同じ。</div><div><h4>中性 <span lang="sa">महत्</span></h4>主・呼・対 <span lang="sa">महत्・महती・महान्ति</span>。他は男性と同じ。</div></div><p>同様に変化させる：<span lang="sa">गोमत्</span>「牛をもつ」、<span lang="sa">विद्यावत्, श्रीमत्, बुद्धिमत्, भगवत्, मघवत्</span>（男）インドラ、代名詞 <span lang="sa">भवत्</span>、<span lang="sa">यावत्, तावत्, एतावत्, कियत्, इयत्</span> など。</p>
+<div class="point">-मत्・-वत्：主格単数 -मान्（धीमान्）、強い格 -मन्त्-、子音語尾の前 -मद्-。महत् は強い格で महान्त्-。</div>
+</section>
+
+<section class="para" id="s116">
+<h3><span class="sec">§116</span> 分詞の <span lang="sa">अत्</span> 語幹 <span class="pg">pp.71–73</span></h3>
+<div class="sub-item"><span class="lbl">(a)</span>
+<p>これらの格変化は、<span lang="sa">मत्</span> で終わる名詞と変わらない。ただし男性主格単数で <span lang="sa">अत्</span> の <span lang="sa">अ</span> が長くならない。中性の主・呼・対格の両数では、語末の <span lang="sa">ई</span> の前に <span lang="sa">न्</span> を挿入する。第 1・4・10 類の語根、および使役・意欲・名詞起源動詞の現在分詞では必ず、第 6 類、第 2 類の <span lang="sa">आ</span> で終わる語根、および <span lang="sa">स्यत्・ष्यत्</span> の未来分詞では任意で挿入し、それ以外の現在分詞では挿入しない。</p>
+</div><figure class="fig"><figcaption><b>図 3-12</b>現在分詞・未来分詞の中性両数（＝女性形）に <span lang="sa">न्</span> が入るか</figcaption>
+<div class="scroll-x"><table class="t">
+<thead><tr><th>挿入</th><th>どの分詞か</th><th>中性 主・呼・対</th></tr></thead><tbody>
+<tr><th style="color:var(--green)">必ず入る</th><td style="text-align:left">第1・4・10類の語根、使役・意欲・名詞起源動詞の現在分詞</td><td lang="sa">भवत् ・ <b>भवन्ती</b> ・ भवन्ति</td></tr>
+<tr><th style="color:var(--gold)">任意</th><td style="text-align:left">第6類、第2類の आ で終わる語根、未来分詞 -स्यत्・-ष्यत्</td><td lang="sa">तुदत् ・ तुदती ／ <b>तुदन्ती</b> ・ तुदन्ति<br>यात् ・ याती ／ <b>यान्ती</b> ・ यान्ति<br>दास्यत् ・ दास्यती ／ <b>दास्यन्ती</b> ・ दास्यन्ति</td></tr>
+<tr><th style="color:var(--red)">入らない</th><td style="text-align:left">その他の現在分詞（第2・5・7・8・9類など）</td><td lang="sa">अदत् ・ <b>अदती</b> ・ अदन्ति</td></tr>
+<tr><th style="color:var(--red)">男性でも入らない</th><td style="text-align:left">(b) 第3類・強意動詞の現在分詞、<span lang="sa">शासत्, जक्षत्, चकासत्, दरिद्रत्, जाग्रत्, दीधीयत्, वेवीयत्</span></td><td lang="sa">ददत् ・ ददती ・ ददन्ति ／ ददति</td></tr>
+</tbody></table></div>
+</figure><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">भवत्</span><span class="gl">男 在る（現在分詞）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">भवन्</span></td><td class="f hl"><span class="w">भवन्तौ</span></td><td class="f hl"><span class="w">भवन्तः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">भवन्</span></td><td class="f hl"><span class="w">भवन्तौ</span></td><td class="f hl"><span class="w">भवन्तः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">भवन्तम्</span></td><td class="f hl"><span class="w">भवन्तौ</span></td><td class="f hl2"><span class="w">भवतः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">भवता</span></td><td class="f hl3"><span class="w">भवद्भ्याम्</span></td><td class="f hl3"><span class="w">भवद्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">भवते</span></td><td class="f hl3"><span class="w">भवद्भ्याम्</span></td><td class="f hl3"><span class="w">भवद्भ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">भवतः</span></td><td class="f hl3"><span class="w">भवद्भ्याम्</span></td><td class="f hl3"><span class="w">भवद्भ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">भवतः</span></td><td class="f hl2"><span class="w">भवतोः</span></td><td class="f hl2"><span class="w">भवताम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">भवति</span></td><td class="f hl2"><span class="w">भवतोः</span></td><td class="f hl3"><span class="w">भवत्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">अदत्</span><span class="gl">男 食べる（現在分詞）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主・呼格<small>N. V.</small></th><td class="f"><span class="w">अदन्</span></td><td class="f"><span class="w">अदन्तौ</span></td><td class="f"><span class="w">अदन्तः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">अदन्तम्</span></td><td class="f"><span class="w">अदन्तौ</span></td><td class="f"><span class="w">अदतः</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">他は धीमत् と同じ（अदता, अदद्भ्याम् …）。</p></div><p>他の現在・未来の Parasmaipada 分詞の男性形は、すべて同様に変化させる。中性の主・呼・対：</p><div class="scroll-x"><table class="t"><thead><tr><th>語幹</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody><tr><th lang="sa">भवत्</th><td lang="sa">भवत्</td><td lang="sa">भवन्ती</td><td lang="sa">भवन्ति</td></tr><tr><th lang="sa">अदत्</th><td lang="sa">अदत्</td><td lang="sa">अदती</td><td lang="sa">अदन्ति</td></tr><tr><th lang="sa">यात्</th><td lang="sa">यात्</td><td lang="sa">याती ／ यान्ती</td><td lang="sa">यान्ति</td></tr><tr><th lang="sa">दास्यत्</th><td lang="sa">दास्यत्</td><td lang="sa">दास्यती ／ दास्यन्ती</td><td lang="sa">दास्यन्ति</td></tr><tr><th lang="sa">तुदत्</th><td lang="sa">तुदत्</td><td lang="sa">तुदती ／ तुदन्ती</td><td lang="sa">तुदन्ति</td></tr></tbody></table></div><p>他は男性と同じ。<span lang="sa">पचत्, दीव्यत्, चोरयत्, चिकीर्षत्, बुबोधिषत्, पुत्रीयत्</span> などは <span lang="sa">भवत्</span> のように、<span lang="sa">करिष्यत्</span> などは <span lang="sa">तुदत्</span> のように、<span lang="sa">सुन्वत्, तन्वत्, रुन्धत्, क्रीणत्</span> などは <span lang="sa">अदत्</span> のように変化させる。</p><div class="note"><b>N.B.</b>これらの分詞の女性形は <span lang="sa">ई</span> で終わり、中性の主格両数と同じ形である（<span lang="sa">भवन्ती, तुदती／तुदन्ती, अदती</span>）。女性形は <span lang="sa">नदी</span> と同じに変化し、特別な点はない。</div><p><span lang="sa">बृहत्</span>（男・中）「大きい」、<span lang="sa">पृषत्</span>（男）「鹿」・（中）「水滴」、<span lang="sa">जगत्</span>「世界」は、男性・中性とも <span lang="sa">अदत्</span> のように変化させる。</p><div class="sub-item"><span class="lbl">(b)</span>
+<p>第 3 類の語根と Parasmaipada の強意動詞の現在分詞、および分詞 <span lang="sa">शासत्, जक्षत्, चकासत्, दरिद्रत्, जाग्रत्, दीधीयत्, वेवीयत्</span> では、<span lang="sa">न्</span> はまったく挿入されない。ただし中性の主・呼・対格複数では任意で挿入される。</p><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">ददत्</span><span class="gl">男 与える（現在分詞）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl2"><span class="w">ददत्</span></td><td class="f hl2"><span class="w">ददतौ</span></td><td class="f hl2"><span class="w">ददतः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f hl2"><span class="w">ददत्</span></td><td class="f"><span class="w">ददतौ</span></td><td class="f"><span class="w">ददतः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl2"><span class="w">ददतम्</span></td><td class="f"><span class="w">ददतौ</span></td><td class="f"><span class="w">ददतः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f"><span class="w">ददता</span></td><td class="f"><span class="w">ददद्भ्याम्</span></td><td class="f"><span class="w">ददद्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f"><span class="w">ददते</span></td><td class="f"><span class="w">ददद्भ्याम्</span></td><td class="f"><span class="w">ददद्भ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f"><span class="w">ददतः</span></td><td class="f"><span class="w">ददद्भ्याम्</span></td><td class="f"><span class="w">ददद्भ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f"><span class="w">ददतः</span></td><td class="f"><span class="w">ददतोः</span></td><td class="f"><span class="w">ददताम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f"><span class="w">ददति</span></td><td class="f"><span class="w">ददतोः</span></td><td class="f"><span class="w">ददत्सु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">青＝न् が入らない強い格。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">जाग्रत्</span><span class="gl">男 目覚めている</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主・呼格<small>N. V.</small></th><td class="f"><span class="w">जाग्रत्</span></td><td class="f"><span class="w">जाग्रतौ</span></td><td class="f"><span class="w">जाग्रतः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">जाग्रतम्</span></td><td class="f"><span class="w">जाग्रतौ</span></td><td class="f"><span class="w">जाग्रतः</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">他も同様に語尾を付ける。</p></div><p>中性（主・呼・対）：<span lang="sa">ददत्・ददती・ददन्ति ／ ददति</span>、<span lang="sa">जाग्रत्・जाग्रती・जाग्रन्ति ／ जाग्रति</span>。他は <span lang="sa">भवत्</span> と同じ。</p>
+</div>
+<div class="point">分詞 -अत्：主格単数は -अन्（भवन्、長くならない）。第3類（ददत्）は न् が入らない。</div>
+</section>
+
+<h2 class="part" id="an">第2節（続き）<span lang="sa">अन्・इन्</span> 語幹<small>Nouns ending in अन् and इन् — §117–§123</small></h2>
+<section class="para" id="s117">
+<h3><span class="sec">§117</span> <span lang="sa">अन्</span> 語幹（<span lang="sa">ब्रह्मन्・राजन्・नामन्</span>） <span class="pg">pp.73–75</span></h3>
+<p>主格単数と、すべての子音語尾の前で <span lang="sa">न्</span> が落ちる。男性名詞では、最初の 5 つの格形で前の <span lang="sa">अ</span> が長くなり、<span lang="sa">इ</span>（<span lang="sa">इन्</span> 語幹）は主格単数でだけ長くなる。中性名詞では主・呼・対格の複数で <span lang="sa">अ</span> と <span lang="sa">इ</span> が長くなる。対格複数から始まる母音語尾の前では <span lang="sa">अ</span> が落ちる。ただし、<span lang="sa">म्</span> または <span lang="sa">व्</span> を後の要素とする結合子音がその前にあるときは落ちない。男性・中性名詞の処格単数、および中性名詞の主・呼・対格両数では、<span lang="sa">अ</span> の脱落は任意である。中性名詞の呼格単数では、<span lang="sa">न्</span> を任意で保持する。</p><figure class="fig"><figcaption><b>図 3-13</b><span lang="sa">अन्</span> 語幹の 3 語幹（<span lang="sa">राजन्</span>）と、<span lang="sa">अ</span> が落ちない場合（<span lang="sa">ब्रह्मन्</span>）</figcaption>
+<div class="scroll-x"><table class="t">
+<thead><tr><th></th><th>強語幹</th><th>中語幹</th><th>弱語幹</th><th>処格単数</th></tr></thead><tbody>
+<tr><th lang="sa">राजन्</th><td class="big" style="background:var(--gold-wash)">राजान्<small>主単 राजा</small></td><td class="big" style="background:var(--green-wash)">राज<small>न् が落ちる</small></td><td class="big" style="background:var(--indigo-wash)">राज्ञ्<small>अ が落ちる（ज्+न→ज्ञ）</small></td><td class="big">राज्ञि ／ राजनि</td></tr>
+<tr><th lang="sa">ब्रह्मन्</th><td class="big" style="background:var(--gold-wash)">ब्रह्माण्</td><td class="big" style="background:var(--green-wash)">ब्रह्म</td><td class="big" style="background:var(--indigo-wash)">ब्रह्मण्<small>म の前が結合子音 ह्म なので अ は落ちない</small></td><td class="big">ब्रह्मणि</td></tr>
+<tr><th lang="sa">आत्मन्</th><td class="big" style="background:var(--gold-wash)">आत्मान्</td><td class="big" style="background:var(--green-wash)">आत्म</td><td class="big" style="background:var(--indigo-wash)">आत्मन्<small>त्म（-म で終わる結合子音）</small></td><td class="big">आत्मनि</td></tr>
+</tbody></table></div>
+</figure><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">ब्रह्मन्</span><span class="gl">男 創造主ブラフマー</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">ब्रह्मा</span></td><td class="f hl"><span class="w">ब्रह्माणौ</span></td><td class="f hl"><span class="w">ब्रह्माणः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">ब्रह्मन्</span></td><td class="f hl"><span class="w">ब्रह्माणौ</span></td><td class="f hl"><span class="w">ब्रह्माणः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">ब्रह्माणम्</span></td><td class="f hl"><span class="w">ब्रह्माणौ</span></td><td class="f hl2"><span class="w">ब्रह्मणः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">ब्रह्मणा</span></td><td class="f hl3"><span class="w">ब्रह्मभ्याम्</span></td><td class="f hl3"><span class="w">ब्रह्मभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">ब्रह्मणे</span></td><td class="f hl3"><span class="w">ब्रह्मभ्याम्</span></td><td class="f hl3"><span class="w">ब्रह्मभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">ब्रह्मणः</span></td><td class="f hl3"><span class="w">ब्रह्मभ्याम्</span></td><td class="f hl3"><span class="w">ब्रह्मभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">ब्रह्मणः</span></td><td class="f hl2"><span class="w">ब्रह्मणोः</span></td><td class="f hl2"><span class="w">ब्रह्मणाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">ब्रह्मणि</span></td><td class="f hl2"><span class="w">ब्रह्मणोः</span></td><td class="f hl3"><span class="w">ब्रह्मसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">राजन्</span><span class="gl">男 王</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">राजा</span></td><td class="f hl"><span class="w">राजानौ</span></td><td class="f hl"><span class="w">राजानः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">राजन्</span></td><td class="f hl"><span class="w">राजानौ</span></td><td class="f hl"><span class="w">राजानः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">राजानम्</span></td><td class="f hl"><span class="w">राजानौ</span></td><td class="f hl2"><span class="w">राज्ञः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">राज्ञा</span></td><td class="f hl3"><span class="w">राजभ्याम्</span></td><td class="f hl3"><span class="w">राजभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">राज्ञे</span></td><td class="f hl3"><span class="w">राजभ्याम्</span></td><td class="f hl3"><span class="w">राजभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">राज्ञः</span></td><td class="f hl3"><span class="w">राजभ्याम्</span></td><td class="f hl3"><span class="w">राजभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">राज्ञः</span></td><td class="f hl2"><span class="w">राज्ञोः</span></td><td class="f hl2"><span class="w">राज्ञाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">राज्ञि</span><span class="or">または</span><span class="w">राजनि</span></td><td class="f hl2"><span class="w">राज्ञोः</span></td><td class="f hl3"><span class="w">राजसु</span></td></tr>
+</tbody></table></div></div><p><span lang="sa">ब्रह्मन्</span> と同様に：<span lang="sa">आत्मन्</span>「自己」、<span lang="sa">यज्वन्</span>「祭祀者」、<span lang="sa">सुशर्मन्, कृष्णवर्मन्</span> など。<span lang="sa">राजन्</span> と同様に：<span lang="sa">सीमन्</span>（女）「境界」、<span lang="sa">तक्षन्</span>「大工」、<span lang="sa">मज्जन्</span>（男）「髄」、<span lang="sa">गरिमन्</span>「重さ」、<span lang="sa">महिमन्, लघिमन्, अणिमन्</span>、<span lang="sa">सुनामन्</span>「吉名の」、<span lang="sa">दुर्नामन्</span>、<span lang="sa">प्रतिदिवन्</span>「日、または太陽」（<span lang="sa">अ</span> が落ちると <span lang="sa">दि</span> は長くなる）など。例：</p><div class="scroll-x"><table class="t"><thead><tr><th>語幹</th><th>主格 単数</th><th>対格 複数</th><th>処格 単数</th></tr></thead><tbody><tr><th lang="sa">सीमन्</th><td lang="sa">सीमा</td><td lang="sa">सीम्नः</td><td lang="sa">सीम्नि ／ सीमनि</td></tr><tr><th lang="sa">तक्षन्</th><td lang="sa">तक्षा</td><td lang="sa">तक्ष्णः</td><td lang="sa">तक्ष्णि ／ तक्षणि</td></tr><tr><th lang="sa">मज्जन्</th><td lang="sa">मज्जा</td><td lang="sa">मज्ज्ञः</td><td lang="sa">मज्ज्ञि ／ मज्जनि</td></tr><tr><th lang="sa">गरिमन्</th><td lang="sa">गरिमा</td><td lang="sa">गरिम्णः</td><td lang="sa">गरिम्णि ／ गरिमणि</td></tr><tr><th lang="sa">महिमन्</th><td lang="sa">महिमा</td><td lang="sa">महिम्नः</td><td lang="sa">महिम्नि ／ महिमनि</td></tr><tr><th lang="sa">लघिमन्</th><td lang="sa">लघिमा</td><td lang="sa">लघिम्नः</td><td lang="sa">लघिम्नि ／ लघिमनि</td></tr><tr><th lang="sa">अणिमन्</th><td lang="sa">अणिमा</td><td lang="sa">अणिम्नः</td><td lang="sa">अणिम्नि ／ अणिमनि</td></tr><tr><th lang="sa">सुनामन्</th><td lang="sa">सुनामा</td><td lang="sa">सुनाम्नः</td><td lang="sa">सुनाम्नि ／ सुनामनि</td></tr><tr><th lang="sa">प्रतिदिवन्</th><td lang="sa">प्रतिदिवा</td><td lang="sa">प्रतिदीव्नः</td><td lang="sa">प्रतिदीव्नि ／ प्रतिदिवनि</td></tr></tbody></table></div><div class="kv" style="margin-top:12px"><div><h4>中性 <span lang="sa">ब्रह्मन्</span></h4>主・対 <span lang="sa">ब्रह्म・ब्रह्मणी・ब्रह्माणि</span>／呼格 <span lang="sa">ब्रह्म ／ ब्रह्मन्</span>。他は男性と同じ。同様に <span lang="sa">चर्मन्</span>「皮」、<span lang="sa">वर्मन्</span>「鎧」、<span lang="sa">भर्मन्</span>「家、金」、<span lang="sa">शर्मन्</span>「幸福」、<span lang="sa">नर्मन्</span>「戯れ」、<span lang="sa">जन्मन्</span>、<span lang="sa">पर्वन्</span>「節」など。</div></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">नामन्</span><span class="gl">中 名前</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">नाम</span></td><td class="f hl"><span class="w">नामनी</span><span class="or">または</span><span class="w">नाम्नी</span></td><td class="f"><span class="w">नामानि</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f hl"><span class="w">नाम</span><span class="or">または</span><span class="w">नामन्</span></td><td class="f hl"><span class="w">नामनी</span><span class="or">または</span><span class="w">नाम्नी</span></td><td class="f"><span class="w">नामानि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">नाम</span></td><td class="f hl"><span class="w">नामनी</span><span class="or">または</span><span class="w">नाम्नी</span></td><td class="f"><span class="w">नामानि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f"><span class="w">नाम्ना</span></td><td class="f"><span class="w">नामभ्याम्</span></td><td class="f"><span class="w">नामभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f"><span class="w">नाम्ने</span></td><td class="f"><span class="w">नामभ्याम्</span></td><td class="f"><span class="w">नामभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f"><span class="w">नाम्नः</span></td><td class="f"><span class="w">नामभ्याम्</span></td><td class="f"><span class="w">नामभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f"><span class="w">नाम्नः</span></td><td class="f"><span class="w">नाम्नोः</span></td><td class="f"><span class="w">नाम्नाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">नाम्नि</span><span class="or">または</span><span class="w">नामनि</span></td><td class="f"><span class="w">नाम्नोः</span></td><td class="f"><span class="w">नामसु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">黄色＝任意の 2 形がある箇所（अ の脱落が任意、呼格の न् の保持が任意）。</p><p>同様に変化させる：<span lang="sa">व्योमन्</span>「空」、<span lang="sa">क्लोमन्</span>「膀胱」、<span lang="sa">प्रेमन्</span>「愛」、<span lang="sa">सामन्</span>「サーマン讃歌」、<span lang="sa">धामन्</span>「光輝、住居」など。</p>
+<div class="point">अन् 語幹：主格単数 -आ（राजा）、強い格 -आन्-、子音語尾の前 -अ（राजभिः）、弱い格 -न्-（राज्ञः）。</div>
+</section>
+
+<p style="margin-top:20px"><b>不規則な語幹</b></p>
+<section class="para" id="s118">
+<h3><span class="sec">§118</span> <span lang="sa">पूषन्・अर्यमन्・-हन्</span> <span class="pg">pp.75–76</span></h3>
+<p><span lang="sa">पूषन्</span>、<span lang="sa">अर्यमन्</span>、および <span lang="sa">हन्</span> で終わる名詞は、主格単数でだけ <span lang="sa">अ</span> を長くする（他の強い格では長くならない）。<span lang="sa">हन्</span> の <span lang="sa">न्</span> は <span lang="sa">ण्</span> に、また <span lang="sa">अ</span> が落ちると <span lang="sa">ह</span> は <span lang="sa">घ्</span> に変わる。</p><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">पूषन्</span><span class="gl">男 太陽神プーシャン</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">पूषा</span></td><td class="f hl2"><span class="w">पूषणौ</span></td><td class="f hl2"><span class="w">पूषणः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">पूषन्</span></td><td class="f hl2"><span class="w">पूषणौ</span></td><td class="f hl2"><span class="w">पूषणः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl2"><span class="w">पूषणम्</span></td><td class="f hl2"><span class="w">पूषणौ</span></td><td class="f hl2"><span class="w">पूष्णः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">पूष्णा</span></td><td class="f hl3"><span class="w">पूषभ्याम्</span></td><td class="f hl3"><span class="w">पूषभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">पूष्णे</span></td><td class="f hl3"><span class="w">पूषभ्याम्</span></td><td class="f hl3"><span class="w">पूषभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">पूष्णः</span></td><td class="f hl3"><span class="w">पूषभ्याम्</span></td><td class="f hl3"><span class="w">पूषभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">पूष्णः</span></td><td class="f hl2"><span class="w">पूष्णोः</span></td><td class="f hl2"><span class="w">पूष्णाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">पूष्णि</span><span class="or">または</span><span class="w">पूषणि</span></td><td class="f hl2"><span class="w">पूष्णोः</span></td><td class="f hl3"><span class="w">पूषसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">वृत्रहन्</span><span class="gl">男 インドラ（ヴリトラを殺す者）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">वृत्रहा</span></td><td class="f hl2"><span class="w">वृत्रहणौ</span></td><td class="f hl2"><span class="w">वृत्रहणः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">वृत्रहन्</span></td><td class="f hl2"><span class="w">वृत्रहणौ</span></td><td class="f hl2"><span class="w">वृत्रहणः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl2"><span class="w">वृत्रहणम्</span></td><td class="f hl2"><span class="w">वृत्रहणौ</span></td><td class="f hl2"><span class="w">वृत्रघ्नः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">वृत्रघ्ना</span></td><td class="f hl3"><span class="w">वृत्रहभ्याम्</span></td><td class="f hl3"><span class="w">वृत्रहभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">वृत्रघ्ने</span></td><td class="f hl3"><span class="w">वृत्रहभ्याम्</span></td><td class="f hl3"><span class="w">वृत्रहभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">वृत्रघ्नः</span></td><td class="f hl3"><span class="w">वृत्रहभ्याम्</span></td><td class="f hl3"><span class="w">वृत्रहभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">वृत्रघ्नः</span></td><td class="f hl2"><span class="w">वृत्रघ्नोः</span></td><td class="f hl2"><span class="w">वृत्रघ्नाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">वृत्रघ्नि</span><span class="or">または</span><span class="w">वृत्रहणि</span></td><td class="f hl2"><span class="w">वृत्रघ्नोः</span></td><td class="f hl3"><span class="w">वृत्रहसु</span></td></tr>
+</tbody></table></div></div><p style="font-size:.88rem;color:var(--ink-soft)">主格単数以外の強い格（पूषणौ, वृत्रहणम्）では अ が長くならない（青）。弱い格の वृत्रघ्न्- に注意。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">अर्यमन्</span><span class="gl">男 アルヤマン神</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">अर्यमा</span></td><td class="f"><span class="w">अर्यमणौ</span></td><td class="f"><span class="w">अर्यमणः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">अर्यमन्</span></td><td class="f"><span class="w">अर्यमणौ</span></td><td class="f"><span class="w">अर्यमणः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">अर्यमणम्</span></td><td class="f"><span class="w">अर्यमणौ</span></td><td class="f"><span class="w">अर्यम्णः</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">以下 पूषन् と同様（अर्यम्णा …）。</p><p>中性 <span lang="sa">बहुपूषन्, बह्वर्यमन्, बहुवृत्रहन्</span>（主・呼・対）：</p><div class="scroll-x"><table class="t"><thead><tr><th>語幹</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody><tr><th lang="sa">बहुपूषन्</th><td lang="sa">बहुपूष ／ -न्</td><td lang="sa">बहुपूष्णी ／ -षणी</td><td lang="sa">बहुपूषाणि</td></tr><tr><th lang="sa">बह्वर्यमन्</th><td lang="sa">बह्वर्यम ／ -न्</td><td lang="sa">बह्वर्यम्णी ／ -मणी</td><td lang="sa">बह्वर्यमाणि</td></tr><tr><th lang="sa">बहुवृत्रहन्</th><td lang="sa">बहुवृत्रह ／ -न्</td><td lang="sa">बहुवृत्रघ्नी ／ -हणी</td><td lang="sa">बहुवृत्रहाणि</td></tr></tbody></table></div>
+<div class="point">पूषन्・वृत्रहन् は主格単数だけ長い（पूषा, पूषणौ）。वृत्रहन् の弱い格は वृत्रघ्न्-。</div>
+</section>
+
+<section class="para" id="s119">
+<h3><span class="sec">§119</span> <span lang="sa">श्वन्・युवन्・मघवन्</span> <span class="pg">pp.76–77</span></h3>
+<p><span lang="sa">श्वन्</span>（男）「犬」、<span lang="sa">युवन्</span>（男）「若者」、<span lang="sa">मघवन्</span>（男）「インドラ」の <span lang="sa">व</span> は、対格複数から始まる母音語尾の前で <span lang="sa">उ</span> に変わる（Samprasāraṇa）。</p><aside class="sutra"><span lang="sa">श्वयुवमघोनामतद्धिते ।</span><cite>Pāṇ. VI.4.133</cite></aside><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">श्वन्</span><span class="gl">男 犬</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">श्वा</span></td><td class="f hl"><span class="w">श्वानौ</span></td><td class="f hl"><span class="w">श्वानः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">श्वन्</span></td><td class="f hl"><span class="w">श्वानौ</span></td><td class="f hl"><span class="w">श्वानः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">श्वानम्</span></td><td class="f hl"><span class="w">श्वानौ</span></td><td class="f hl2"><span class="w">शुनः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">शुना</span></td><td class="f hl3"><span class="w">श्वभ्याम्</span></td><td class="f hl3"><span class="w">श्वभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">शुने</span></td><td class="f hl3"><span class="w">श्वभ्याम्</span></td><td class="f hl3"><span class="w">श्वभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">शुनः</span></td><td class="f hl3"><span class="w">श्वभ्याम्</span></td><td class="f hl3"><span class="w">श्वभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">शुनः</span></td><td class="f hl2"><span class="w">शुनोः</span></td><td class="f hl2"><span class="w">शुनाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">शुनि</span></td><td class="f hl2"><span class="w">शुनोः</span></td><td class="f hl3"><span class="w">श्वसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">युवन्</span><span class="gl">男 若者</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">युवा</span></td><td class="f hl"><span class="w">युवानौ</span></td><td class="f hl"><span class="w">युवानः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">युवन्</span></td><td class="f hl"><span class="w">युवानौ</span></td><td class="f hl"><span class="w">युवानः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">युवानम्</span></td><td class="f hl"><span class="w">युवानौ</span></td><td class="f hl2"><span class="w">यूनः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">यूना</span></td><td class="f hl3"><span class="w">युवभ्याम्</span></td><td class="f hl3"><span class="w">युवभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">यूने</span></td><td class="f hl3"><span class="w">युवभ्याम्</span></td><td class="f hl3"><span class="w">युवभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">यूनः</span></td><td class="f hl3"><span class="w">युवभ्याम्</span></td><td class="f hl3"><span class="w">युवभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">यूनः</span></td><td class="f hl2"><span class="w">यूनोः</span></td><td class="f hl2"><span class="w">यूनाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">यूनि</span></td><td class="f hl2"><span class="w">यूनोः</span></td><td class="f hl3"><span class="w">युवसु</span></td></tr>
+</tbody></table></div></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">मघवन्</span><span class="gl">男 インドラ</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">मघवा</span></td><td class="f hl"><span class="w">मघवानौ</span></td><td class="f hl"><span class="w">मघवानः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">मघवन्</span></td><td class="f hl"><span class="w">मघवानौ</span></td><td class="f hl"><span class="w">मघवानः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">मघवानम्</span></td><td class="f hl"><span class="w">मघवानौ</span></td><td class="f hl2"><span class="w">मघोनः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">मघोना</span></td><td class="f hl3"><span class="w">मघवभ्याम्</span></td><td class="f hl3"><span class="w">मघवभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">मघोने</span></td><td class="f hl3"><span class="w">मघवभ्याम्</span></td><td class="f hl3"><span class="w">मघवभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">मघोनः</span></td><td class="f hl3"><span class="w">मघवभ्याम्</span></td><td class="f hl3"><span class="w">मघवभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">मघोनः</span></td><td class="f hl2"><span class="w">मघोनोः</span></td><td class="f hl2"><span class="w">मघोनाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">मघोनि</span></td><td class="f hl2"><span class="w">मघोनोः</span></td><td class="f hl3"><span class="w">मघवसु</span></td></tr>
+</tbody></table></div><p style="font-size:.88rem;color:var(--ink-soft)">弱い格（青）：श्व → शु-、युव → यू-、मघव → मघो-（व が उ になり अ と結合）。</p><p>中性 <span lang="sa">बहुश्वन्, बहुयुवन्</span>（主・呼・対）：<span lang="sa">बहुश्व・बहुशुनी・बहुश्वानि</span>／<span lang="sa">बहुयुव・बहुयूनी・बहुयुवानि</span>（呼格単数には任意で -न् の形もある）。他は男性と同じ。</p>
+<div class="point">श्वन्・युवन्・मघवन् の弱い格：शुनः, यूनः, मघोनः。</div>
+</section>
+
+<section class="para" id="s120">
+<h3><span class="sec">§120</span> <span lang="sa">अहन्</span>（中）日 <span class="pg">pp.77–78</span></h3>
+<p><span lang="sa">अहन्</span> は、子音語尾が続くとき、または何も続かないとき、語末を <span lang="sa">र्</span>（さらに Visarga）に変える（§49 (b)）。その他の場合は <span lang="sa">नामन्</span> のように変化する。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">अहन्</span><span class="gl">中 日</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主・呼・対格<small>N. V. A.</small></th><td class="f hl"><span class="w">अहः</span></td><td class="f"><span class="w">अह्नी</span><span class="or">または</span><span class="w">अहनी</span></td><td class="f"><span class="w">अहानि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f"><span class="w">अह्ना</span></td><td class="f hl"><span class="w">अहोभ्याम्</span></td><td class="f hl"><span class="w">अहोभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f"><span class="w">अह्ने</span></td><td class="f hl"><span class="w">अहोभ्याम्</span></td><td class="f hl"><span class="w">अहोभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f"><span class="w">अह्नः</span></td><td class="f hl"><span class="w">अहोभ्याम्</span></td><td class="f hl"><span class="w">अहोभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f"><span class="w">अह्नः</span></td><td class="f"><span class="w">अह्नोः</span></td><td class="f"><span class="w">अह्नाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f"><span class="w">अह्नि</span><span class="or">または</span><span class="w">अहनि</span></td><td class="f"><span class="w">अह्नोः</span></td><td class="f hl"><span class="w">अहःसु</span><span class="or">または</span><span class="w">अहस्सु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">黄色＝न् が र्（Visarga）に変わった形（अहोभिः は §47 による）。</p><div class="sub-item"><span class="lbl">Obs.</span>
+<p><span lang="sa">दीर्घाहन्</span> は、男性のとき、子音語尾では <span lang="sa">चन्द्रमस्</span> のように、母音語尾では <span lang="sa">राजन्</span> のように変化する。中性のときは <span lang="sa">अहन्</span> のように変化する。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">दीर्घाहन्</span><span class="gl">男 長い日をもつ（夏）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">दीर्घाहाः</span></td><td class="f hl"><span class="w">दीर्घाहाणौ</span></td><td class="f hl"><span class="w">दीर्घाहाणः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">दीर्घाहः</span></td><td class="f hl"><span class="w">दीर्घाहाणौ</span></td><td class="f hl"><span class="w">दीर्घाहाणः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">दीर्घाहाणम्</span></td><td class="f hl"><span class="w">दीर्घाहाणौ</span></td><td class="f hl2"><span class="w">दीर्घाह्नः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">दीर्घाह्ना</span></td><td class="f hl3"><span class="w">दीर्घाहोभ्याम्</span></td><td class="f hl3"><span class="w">दीर्घाहोभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">दीर्घाह्ने</span></td><td class="f hl3"><span class="w">दीर्घाहोभ्याम्</span></td><td class="f hl3"><span class="w">दीर्घाहोभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">दीर्घाह्नः</span></td><td class="f hl3"><span class="w">दीर्घाहोभ्याम्</span></td><td class="f hl3"><span class="w">दीर्घाहोभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">दीर्घाह्नः</span></td><td class="f hl2"><span class="w">दीर्घाह्नोः</span></td><td class="f hl2"><span class="w">दीर्घाह्नाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">दीर्घाह्नि</span></td><td class="f hl2"><span class="w">दीर्घाह्नोः</span></td><td class="f hl3"><span class="w">दीर्घाहःसु</span><span class="or">または</span><span class="w">दीर्घाहस्सु</span></td></tr>
+</tbody></table></div><p style="font-size:.88rem;color:var(--ink-soft)">原注：Pāṇ. VIII.4.11 により <span lang="sa">ण्</span> にしないで <span lang="sa">न्</span> を保つこともできる（<span lang="sa">दीर्घाहानौ</span> など）。</p><p>中性（主・呼・対）：<span lang="sa">दीर्घाहः・दीर्घाहणी ／ दीर्घाह्नी・दीर्घाहाणि</span>。他は男性と同じ。</p>
+</div>
+<div class="point">अहन्：子音語尾の前で अहः-（अहोभिः, अहःसु）、母音語尾では नामन् 型（अह्ना）。</div>
+</section>
+
+<section class="para" id="s121">
+<h3><span class="sec">§121</span> <span lang="sa">अर्वन्</span>（男）馬 <span class="pg">p.78</span></h3>
+<p><span lang="sa">अर्वन्</span> は、否定の Tatpuruṣa を作る否定辞 <span lang="sa">अन्</span> が前に付かない限り、主格・呼格の単数を除くすべての格で <span lang="sa">त्</span> で終わる語（<span lang="sa">अर्वत्</span>）のように変化する。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">अर्वन्</span><span class="gl">男 馬</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">अर्वा</span></td><td class="f"><span class="w">अर्वन्तौ</span></td><td class="f"><span class="w">अर्वन्तः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f hl"><span class="w">अर्वन्</span></td><td class="f"><span class="w">अर्वन्तौ</span></td><td class="f"><span class="w">अर्वन्तः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">अर्वन्तम्</span></td><td class="f"><span class="w">अर्वन्तौ</span></td><td class="f"><span class="w">अर्वतः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f"><span class="w">अर्वता</span></td><td class="f"><span class="w">अर्वद्भ्याम्</span></td><td class="f"><span class="w">अर्वद्भिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f"><span class="w">अर्वति</span></td><td class="f"><span class="w">अर्वतोः</span></td><td class="f"><span class="w">अर्वत्सु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">黄色＝अन् 語幹の形。他はすべて -वत् 型。</p><p>しかし <span lang="sa">अनर्वन्</span>（<span lang="sa">न विद्यतेऽर्वा अस्य</span>）は規則どおり <span lang="sa">यज्वन्</span> のように変化する：<span lang="sa">अनर्वा, अनर्वाणौ</span> など。中性 <span lang="sa">स्वर्वन्</span> は、主・呼・対 <span lang="sa">स्वर्वत्・स्वर्वती・स्वर्वन्ति</span>、他は男性 <span lang="sa">अर्वन्</span> と同じ。</p>
+<div class="point">अर्वन् は主・呼単数（अर्वा, अर्वन्）以外は अर्वत् として変化する。</div>
+</section>
+
+<section class="para" id="s122">
+<h3><span class="sec">§122</span> <span lang="sa">इन्</span> 語幹 <span lang="sa">करिन्</span> <span class="pg">p.79</span></h3>
+<div class="para-wrap"><table class="para">
+<caption><span lang="sa">करिन्</span><span class="gl">男 象</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">करी</span></td><td class="f"><span class="w">करिणौ</span></td><td class="f"><span class="w">करिणः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f hl2"><span class="w">करिन्</span></td><td class="f"><span class="w">करिणौ</span></td><td class="f"><span class="w">करिणः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">करिणम्</span></td><td class="f"><span class="w">करिणौ</span></td><td class="f"><span class="w">करिणः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f"><span class="w">करिणा</span></td><td class="f hl3"><span class="w">करिभ्याम्</span></td><td class="f hl3"><span class="w">करिभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f"><span class="w">करिणे</span></td><td class="f hl3"><span class="w">करिभ्याम्</span></td><td class="f hl3"><span class="w">करिभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f"><span class="w">करिणः</span></td><td class="f hl3"><span class="w">करिभ्याम्</span></td><td class="f hl3"><span class="w">करिभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f"><span class="w">करिणः</span></td><td class="f"><span class="w">करिणोः</span></td><td class="f"><span class="w">करिणाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f"><span class="w">करिणि</span></td><td class="f"><span class="w">करिणोः</span></td><td class="f hl3"><span class="w">करिषु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">黄＝主格単数 -ई、青＝呼格 -इन्、緑＝न् が落ちる子音語尾の前。</p><p>同様に変化させる：<span lang="sa">शशिन्</span>「月」、<span lang="sa">दण्डिन्</span>「杖をもつ者」、<span lang="sa">धनिन्</span>「富者」、<span lang="sa">हस्तिन्</span>「象」、<span lang="sa">स्रग्विन्</span>「花輪をつけた者」、<span lang="sa">आततायिन्</span>、その他 <span lang="sa">इन्</span> で終わるすべての語。</p><div class="kv"><div><h4>中性 <span lang="sa">दण्डिन्</span></h4>主・対 <span lang="sa">दण्डि・दण्डिनी・दण्डीनि</span>／呼格 <span lang="sa">दण्डिन् ／ दण्डि</span>。他は男性と同じ。同様に <span lang="sa">स्रग्विन्, वाग्मिन्</span>「雄弁な」、<span lang="sa">भाविन्</span> など（中）。</div></div>
+<div class="point">इन् 語幹：主格単数 -ई（करी）、母音語尾の前 -इन्-、子音語尾の前 -इ-（करिभिः）。</div>
+</section>
+
+<section class="para" id="s123">
+<h3><span class="sec">§123</span> <span lang="sa">पथिन्・मथिन्・ऋभुक्षिन्</span> <span class="pg">pp.79–80</span></h3>
+<p><span lang="sa">पथिन्</span>「道」、<span lang="sa">मथिन्</span>「攪拌棒」、<span lang="sa">ऋभुक्षिन्</span>（インドラの名）の最初の 5 つの格形は不規則である。対格複数から始まる母音語尾の前では <span lang="sa">इन्</span> を落とす。</p><aside class="sutra"><span lang="sa">पथिमथ्यृभुक्षामात् । इतोऽत्सर्वनामस्थाने । थो न्थः । भस्य टेर्लोपः ।</span><cite>Pāṇ. VII.1.85–88</cite></aside><div class="para-wrap"><table class="para">
+<caption><span lang="sa">पथिन्</span><span class="gl">男 道</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">पन्थाः</span></td><td class="f hl"><span class="w">पन्थानौ</span></td><td class="f hl"><span class="w">पन्थानः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">पन्थाः</span></td><td class="f hl"><span class="w">पन्थानौ</span></td><td class="f hl"><span class="w">पन्थानः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">पन्थानम्</span></td><td class="f hl"><span class="w">पन्थानौ</span></td><td class="f hl2"><span class="w">पथः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">पथा</span></td><td class="f hl3"><span class="w">पथिभ्याम्</span></td><td class="f hl3"><span class="w">पथिभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">पथे</span></td><td class="f hl3"><span class="w">पथिभ्याम्</span></td><td class="f hl3"><span class="w">पथिभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">पथः</span></td><td class="f hl3"><span class="w">पथिभ्याम्</span></td><td class="f hl3"><span class="w">पथिभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">पथः</span></td><td class="f hl2"><span class="w">पथोः</span></td><td class="f hl2"><span class="w">पथाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">पथि</span></td><td class="f hl2"><span class="w">पथोः</span></td><td class="f hl3"><span class="w">पथिषु</span></td></tr>
+</tbody></table></div><p style="font-size:.88rem;color:var(--ink-soft)">3 語幹：पन्थान्-（強）、पथि-（子音語尾の前）、पथ्-（弱）。</p><p><span lang="sa">मथिन्</span> と <span lang="sa">ऋभुक्षिन्</span> も同様に変化させる。ただし後者は最初の 5 つの格形で <span lang="sa">थ्</span>（<span lang="sa">न्थ</span>）を入れない。例：主格 <span lang="sa">मन्थाः・मन्थानौ・मन्थानः</span>、<span lang="sa">ऋभुक्षाः・ऋभुक्षाणौ・ऋभुक्षाणः</span>／対格 <span lang="sa">मन्थानम्・मन्थानौ・मथः</span>、<span lang="sa">ऋभुक्षाणम्・ऋभुक्षाणौ・ऋभुक्षः</span>。</p>
+<div class="point">पथिन्：強い格 पन्थाः・पन्थान्-、子音語尾の前 पथि-、弱い格 पथ्-。</div>
+</section>
+
+<h2 class="part" id="vas">第2節（続き）<span lang="sa">वस्・यस्</span> 語幹<small>Bases ending in वस् or इवस्, यस् or ईयस् — §124–§125</small></h2>
+<section class="para" id="s124">
+<h3><span class="sec">§124</span> 完了分詞 <span lang="sa">वस्</span> 語幹 <span lang="sa">विद्वस्</span> <span class="pg">pp.80–81</span></h3>
+<p>これらは語根から接辞 <span lang="sa">वस्</span>（場合によって中間の <span lang="sa">इ</span> を前に付ける）で作った完了分詞である。最初の 5 つの格形では語末の <span lang="sa">स्</span> の前に <span lang="sa">न्</span>（Anusvāra）が入り、その前の <span lang="sa">अ</span> が長くなる。男性主格単数では <span lang="sa">स्</span> が落ち、呼格単数は <span lang="sa">-वन्</span> で終わる。対格複数から始まる母音語尾の前、および中性の主・呼・対格両数の <span lang="sa">ई</span> の前では、<span lang="sa">वस्</span> に代えて <span lang="sa">उष्</span> が置かれ、その前の短い <span lang="sa">इ</span> は落ちる。<span lang="sa">वस्</span> の前で <span lang="sa">न्</span> に変わっていた語根末の <span lang="sa">म्</span> は、この <span lang="sa">उ</span> の前で再び現れる。語末の <span lang="sa">स्</span> は、子音語尾の前と中性の主・呼・対格単数で <span lang="sa">त्</span>（<span lang="sa">द्</span>）に変わる。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">विद्वस्</span><span class="gl">男 学者（知っている者）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">विद्वान्</span></td><td class="f hl"><span class="w">विद्वांसौ</span></td><td class="f hl"><span class="w">विद्वांसः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">विद्वन्</span></td><td class="f hl"><span class="w">विद्वांसौ</span></td><td class="f hl"><span class="w">विद्वांसः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">विद्वांसम्</span></td><td class="f hl"><span class="w">विद्वांसौ</span></td><td class="f hl2"><span class="w">विदुषः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">विदुषा</span></td><td class="f hl3"><span class="w">विद्वद्भ्याम्</span></td><td class="f hl3"><span class="w">विद्वद्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">विदुषे</span></td><td class="f hl3"><span class="w">विद्वद्भ्याम्</span></td><td class="f hl3"><span class="w">विद्वद्भ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">विदुषः</span></td><td class="f hl3"><span class="w">विद्वद्भ्याम्</span></td><td class="f hl3"><span class="w">विद्वद्भ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">विदुषः</span></td><td class="f hl2"><span class="w">विदुषोः</span></td><td class="f hl2"><span class="w">विदुषाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">विदुषि</span></td><td class="f hl2"><span class="w">विदुषोः</span></td><td class="f hl3"><span class="w">विद्वत्सु</span></td></tr>
+</tbody></table></div><div class="legend"><span style="--sw:var(--gold-wash)">強 -वांस्-</span><span style="--sw:var(--green-wash)">中 -वद्-・-वत्-</span><span style="--sw:var(--indigo-wash)">弱 -उष्-</span></div><p>中性（主・呼・対）：<span lang="sa">विद्वत्・विदुषी・विद्वांसि</span>。他は男性と同じ。</p><p>同様に変化させる（男・中）：<span lang="sa">जग्मिवस्</span> または <span lang="sa">जगन्वस्</span>「行った者」、<span lang="sa">तस्थिवस्</span>「立った者」、<span lang="sa">निनीवस्</span>「運んだ者」、<span lang="sa">मीढ्वस्</span>「気前のよい」、<span lang="sa">शुश्रुवस्</span>「聞いた者」、<span lang="sa">सेदिवस्</span>「座った者」、<span lang="sa">दाश्वस्</span>「神々を敬う者」など。</p><div class="scroll-x"><table class="t"><thead><tr><th>語幹</th><th>主格 単数</th><th>主格 両数</th><th>具格 単数</th><th>具格 両数</th></tr></thead><tbody><tr><th lang="sa">जग्मिवस्</th><td lang="sa">जग्मिवान्</td><td lang="sa">जग्मिवांसौ</td><td lang="sa">जग्मुषा</td><td lang="sa">जग्मिवद्भ्याम्</td></tr><tr><th lang="sa">जगन्वस्</th><td lang="sa">जगन्वान्</td><td lang="sa">जगन्वांसौ</td><td lang="sa">जग्मुषा</td><td lang="sa">जगन्वद्भ्याम्</td></tr><tr><th lang="sa">तस्थिवस्</th><td lang="sa">तस्थिवान्</td><td lang="sa">तस्थिवांसौ</td><td lang="sa">तस्थुषा</td><td lang="sa">तस्थिवद्भ्याम्</td></tr><tr><th lang="sa">निनीवस्</th><td lang="sa">निनीवान्</td><td lang="sa">निनीवांसौ</td><td lang="sa">निन्युषा</td><td lang="sa">निनीवद्भ्याम्</td></tr><tr><th lang="sa">मीढ्वस्</th><td lang="sa">मीढ्वान्</td><td lang="sa">मीढ्वांसौ</td><td lang="sa">मीढुषा</td><td lang="sa">मीढ्वद्भ्याम्</td></tr><tr><th lang="sa">शुश्रुवस्</th><td lang="sa">शुश्रुवान्</td><td lang="sa">शुश्रुवांसौ</td><td lang="sa">शुश्रुवुषा</td><td lang="sa">शुश्रुवद्भ्याम्</td></tr><tr><th lang="sa">सेदिवस्</th><td lang="sa">सेदिवान्</td><td lang="sa">सेदिवांसौ</td><td lang="sa">सेदुषा</td><td lang="sa">सेदिवद्भ्याम्</td></tr><tr><th lang="sa">दाश्वस्</th><td lang="sa">दाश्वान्</td><td lang="sa">दाश्वांसौ</td><td lang="sa">दाशुषा</td><td lang="sa">दाश्वद्भ्याम्</td></tr></tbody></table></div><p style="font-size:.88rem;color:var(--ink-soft)"><span lang="sa">जगन्वस्</span> の弱い格で <span lang="sa">न्</span> が <span lang="sa">म्</span> に戻る（<span lang="sa">जग्मुषा</span>）。<span lang="sa">तस्थिवस्</span> では <span lang="sa">इ</span> が落ちる（<span lang="sa">तस्थुषा</span>）。</p>
+<div class="point">完了分詞 -वस्：強い格 -वांस्-（विद्वान्）、子音語尾の前 -वद्-、弱い格 -उष्-（विदुषः）。</div>
+</section>
+
+<section class="para" id="s125">
+<h3><span class="sec">§125</span> 比較級 <span lang="sa">यस्</span> 語幹 <span lang="sa">श्रेयस्</span> <span class="pg">p.81</span></h3>
+<p><span lang="sa">यस्</span> で終わる比較級は、最初の 5 つの格形と呼格単数では <span lang="sa">वस्</span> 語幹のように、それ以外では <span lang="sa">अस्</span> 語幹のように変化する。例：<span lang="sa">श्रेयस्</span>（<span lang="sa">प्रशस्य</span> の比較級）「より称賛すべき」。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">श्रेयस्</span><span class="gl">男 よりよい</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f hl"><span class="w">श्रेयान्</span></td><td class="f hl"><span class="w">श्रेयांसौ</span></td><td class="f hl"><span class="w">श्रेयांसः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f hl"><span class="w">श्रेयन्</span></td><td class="f hl"><span class="w">श्रेयांसौ</span></td><td class="f hl"><span class="w">श्रेयांसः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">श्रेयांसम्</span></td><td class="f hl"><span class="w">श्रेयांसौ</span></td><td class="f"><span class="w">श्रेयसः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f"><span class="w">श्रेयसा</span></td><td class="f"><span class="w">श्रेयोभ्याम्</span></td><td class="f"><span class="w">श्रेयोभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f"><span class="w">श्रेयसे</span></td><td class="f"><span class="w">श्रेयोभ्याम्</span></td><td class="f"><span class="w">श्रेयोभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f"><span class="w">श्रेयसः</span></td><td class="f"><span class="w">श्रेयोभ्याम्</span></td><td class="f"><span class="w">श्रेयोभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f"><span class="w">श्रेयसः</span></td><td class="f"><span class="w">श्रेयसोः</span></td><td class="f"><span class="w">श्रेयसाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f"><span class="w">श्रेयसि</span></td><td class="f"><span class="w">श्रेयसोः</span></td><td class="f"><span class="w">श्रेयःसु</span><span class="or">または</span><span class="w">श्रेयस्सु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">黄色＝वस् 型（-यांस्-、呼格 -यन्）、他は चन्द्रमस् 型。</p><p><span lang="sa">गरीयस्, लघीयस्, द्राघीयस्</span> など、<span lang="sa">ईयस्</span> で終わるすべての比較級を同様に変化させる。中性（主・呼・対）：<span lang="sa">श्रेयः・श्रेयसी・श्रेयांसि</span>。他は <span lang="sa">मनस्</span> と同じ。</p>
+<div class="point">比較級 -यस्：強い格 -यांस्-（श्रेयान्）、他は -अस् 語幹（श्रेयसा, श्रेयोभिः）。</div>
+</section>
+
+<h2 class="part" id="irrw">不規則に変化する語<small>Words of irregular declension — §126–§131</small></h2>
+<section class="para" id="s126">
+<h3><span class="sec">§126</span> <span lang="sa">अस्थि・दधि・सक्थि・अक्षि</span> <span class="pg">p.82</span></h3>
+<p><span lang="sa">अस्थि</span>（中）「骨」、<span lang="sa">दधि</span>（中）「凝乳」、<span lang="sa">सक्थि</span>（中）「腿」、<span lang="sa">अक्षि</span>（中）「目」は、具格単数から始まる母音語尾の前でそれぞれ <span lang="sa">अस्थन्・दधन्・सक्थन्・अक्षन्</span> になり、<span lang="sa">अन्</span> 語幹のように変化する。その他では <span lang="sa">वारि</span> のように変化する。</p><aside class="sutra"><span lang="sa">अस्थिदधिसक्थ्यक्ष्णामनङुदात्तः ।</span><cite>Pāṇ. VII.1.75</cite></aside><div class="para-wrap"><table class="para">
+<caption><span lang="sa">अस्थि</span><span class="gl">中 骨</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">अस्थि</span></td><td class="f"><span class="w">अस्थिनी</span></td><td class="f"><span class="w">अस्थीनि</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">अस्थि</span><span class="or">または</span><span class="w">अस्थे</span></td><td class="f"><span class="w">अस्थिनी</span></td><td class="f"><span class="w">अस्थीनि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">अस्थि</span></td><td class="f"><span class="w">अस्थिनी</span></td><td class="f"><span class="w">अस्थीनि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl2"><span class="w">अस्थ्ना</span></td><td class="f"><span class="w">अस्थिभ्याम्</span></td><td class="f"><span class="w">अस्थिभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl2"><span class="w">अस्थ्ने</span></td><td class="f"><span class="w">अस्थिभ्याम्</span></td><td class="f"><span class="w">अस्थिभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl2"><span class="w">अस्थ्नः</span></td><td class="f"><span class="w">अस्थिभ्याम्</span></td><td class="f"><span class="w">अस्थिभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl2"><span class="w">अस्थ्नः</span></td><td class="f hl2"><span class="w">अस्थ्नोः</span></td><td class="f hl2"><span class="w">अस्थ्नाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl2"><span class="w">अस्थ्नि</span><span class="or">または</span><span class="w">अस्थनि</span></td><td class="f hl2"><span class="w">अस्थ्नोः</span></td><td class="f"><span class="w">अस्थिषु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">青＝अस्थन् 語幹（अन् 型）の形。</p><p><span lang="sa">दधि</span> 以下も同様に変化させる（<span lang="sa">दध्ना, सक्थ्ना, अक्ष्णा</span> …）。</p>
+<div class="point">अस्थि・दधि・अक्षि は母音語尾（具格以降）で अन् 語幹になる（दध्ना, अक्ष्णा）。</div>
+</section>
+
+<section class="para" id="s127">
+<h3><span class="sec">§127</span> <span lang="sa">अप्</span>（女）水 <span class="pg">p.82</span></h3>
+<p><span lang="sa">अप्</span> は複数でだけ変化する。主格で <span lang="sa">अ</span> を長くし、子音語尾の前で <span lang="sa">प्</span> を <span lang="sa">द्</span> に変える。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">अप्</span><span class="gl">女 水（複数のみ）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主・呼格<small>N. V.</small></th><td class="f same">—</td><td class="f same">—</td><td class="f"><span class="w">आपः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f same">—</td><td class="f same">—</td><td class="f"><span class="w">अपः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f same">—</td><td class="f same">—</td><td class="f"><span class="w">अद्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f same">—</td><td class="f same">—</td><td class="f"><span class="w">अद्भ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f same">—</td><td class="f same">—</td><td class="f"><span class="w">अद्भ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f same">—</td><td class="f same">—</td><td class="f"><span class="w">अपाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f same">—</td><td class="f same">—</td><td class="f"><span class="w">अप्सु</span></td></tr>
+</tbody></table></div>
+<div class="point">अप्「水」は複数形だけ：आपः, अपः, अद्भिः, अद्भ्यः, अपाम्, अप्सु。</div>
+</section>
+
+<section class="para" id="s128">
+<h3><span class="sec">§128</span> <span lang="sa">जरा・अजर・निर्जर</span> <span class="pg">pp.82–83</span></h3>
+<p><span lang="sa">जरा</span>（女）「老い」、<span lang="sa">अजर</span>（男）「老いない者」、<span lang="sa">निर्जर</span>「神」は、母音語尾の前で任意で <span lang="sa">जरस्・अजरस्・निर्जरस्</span> の形をとる。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">जरा</span><span class="gl">女 老い</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">जरा</span></td><td class="f hl"><span class="w">जरे</span><span class="or">または</span><span class="w">जरसौ</span></td><td class="f hl"><span class="w">जराः</span><span class="or">または</span><span class="w">जरसः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">जरे</span></td><td class="f hl"><span class="w">जरे</span><span class="or">または</span><span class="w">जरसौ</span></td><td class="f hl"><span class="w">जराः</span><span class="or">または</span><span class="w">जरसः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f hl"><span class="w">जराम्</span><span class="or">または</span><span class="w">जरसम्</span></td><td class="f hl"><span class="w">जरे</span><span class="or">または</span><span class="w">जरसौ</span></td><td class="f hl"><span class="w">जराः</span><span class="or">または</span><span class="w">जरसः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">जरया</span><span class="or">または</span><span class="w">जरसा</span></td><td class="f"><span class="w">जराभ्याम्</span></td><td class="f"><span class="w">जराभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl"><span class="w">जरायै</span><span class="or">または</span><span class="w">जरसे</span></td><td class="f"><span class="w">जराभ्याम्</span></td><td class="f"><span class="w">जराभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl"><span class="w">जरायाः</span><span class="or">または</span><span class="w">जरसः</span></td><td class="f"><span class="w">जराभ्याम्</span></td><td class="f"><span class="w">जराभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl"><span class="w">जरायाः</span><span class="or">または</span><span class="w">जरसः</span></td><td class="f hl"><span class="w">जरयोः</span><span class="or">または</span><span class="w">जरसोः</span></td><td class="f hl"><span class="w">जराणाम्</span><span class="or">または</span><span class="w">जरसाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">जरायाम्</span><span class="or">または</span><span class="w">जरसि</span></td><td class="f hl"><span class="w">जरयोः</span><span class="or">または</span><span class="w">जरसोः</span></td><td class="f"><span class="w">जरासु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">黄色＝जरस् 語幹（अस् 型）の形も任意でとれる箇所。</p><p><span lang="sa">निर्जर</span> などは <span lang="sa">राम</span> と <span lang="sa">चन्द्रमस्</span> の両方のように変化させる：</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">निर्जर</span><span class="gl">男 神</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">निर्जरः</span></td><td class="f"><span class="w">निर्जरौ</span><span class="or">または</span><span class="w">निर्जरसौ</span></td><td class="f"><span class="w">निर्जराः</span><span class="or">または</span><span class="w">निर्जरसः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">निर्जरम्</span><span class="or">または</span><span class="w">निर्जरसम्</span></td><td class="f"><span class="w">निर्जरौ</span><span class="or">または</span><span class="w">निर्जरसौ</span></td><td class="f"><span class="w">निर्जरान्</span><span class="or">または</span><span class="w">निर्जरसः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f"><span class="w">निर्जरेण</span><span class="or">または</span><span class="w">निर्जरसा</span></td><td class="f"><span class="w">निर्जराभ्याम्</span></td><td class="f"><span class="w">निर्जरैः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f"><span class="w">निर्जरस्य</span><span class="or">または</span><span class="w">निर्जरसः</span></td><td class="f"><span class="w">निर्जरयोः</span><span class="or">または</span><span class="w">निर्जरसोः</span></td><td class="f"><span class="w">निर्जराणाम्</span><span class="or">または</span><span class="w">निर्जरसाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f"><span class="w">निर्जरे</span><span class="or">または</span><span class="w">निर्जरसि</span></td><td class="f"><span class="w">निर्जरयोः</span><span class="or">または</span><span class="w">निर्जरसोः</span></td><td class="f"><span class="w">निर्जरेषु</span></td></tr>
+</tbody></table></div>
+<p style="font-size:.88rem;color:var(--ink-soft);margin:-6px 0 10px">OCR では具格複数に <span lang="sa">निर्जरसैः</span> の形も見えるが、母音語尾の前だけという本則によれば <span lang="sa">निर्जरैः</span> のみとなる。</p><p>男性 <span lang="sa">अजर</span> は <span lang="sa">निर्जर</span> と同じ。中性 <span lang="sa">अजर</span>：主・対 <span lang="sa">अजरम्・अजरे ／ अजरसी・अजराणि ／ अजरांसि</span>、呼格 <span lang="sa">अजर</span>。他は男性と同じ。</p>
+<div class="point">जरा・निर्जर は母音語尾の前で任意に जरस्・निर्जरस् の形をとる（जरसा, निर्जरसः）。</div>
+</section>
+
+<section class="para" id="s129">
+<h3><span class="sec">§129</span> <span lang="sa">पाद・दन्त</span> など 16 語の代替語幹 <span class="pg">pp.83–87</span></h3>
+<p>語 <span lang="sa">पाद, दन्त, नासिका, मास, हृदय, निशा, असृज्, यूष, दोस्, यकृत्, शकृत्, उदक, आस्य, मांस, पृतना, सानु</span> は、対格複数から始まるすべての語尾の前で、任意でそれぞれ <span lang="sa">पद्, दत्, नस्, मास्, हृद्, निश्, असन्, यूषन्, दोषन्, यकन्, शकन्, उदन्, आसन्, मांस्, पृत्, स्नु</span> の形をとる。</p><aside class="sutra"><span lang="sa">पद्दन्नोमास्हृन्निशसन्यूषन्दोषन्यकञ्छकन्नुदन्नासञ्छस्प्रभृतिषु ।</span><span class="gl">Vārttika：<span lang="sa">मांसपृतनासानूनां मांस्पृत्स्नवो वाच्याः ।</span></span><cite>Pāṇ. VI.1.63</cite></aside><figure class="fig"><figcaption><b>図 3-14</b>16 語と代わりの語幹（対格複数以降で任意に使う）</figcaption>
+<div class="scroll-x"><table class="t"><thead><tr><th>本来の語</th><th>代わりの語幹</th><th>型</th><th>本来の語</th><th>代わりの語幹</th><th>型</th></tr></thead><tbody>
+<tr><th lang="sa">पाद</th><td lang="sa" class="hard">पद्</td><td>子音</td><th lang="sa">यूष</th><td lang="sa" class="hard">यूषन्</td><td>अन्</td></tr>
+<tr><th lang="sa">दन्त</th><td lang="sa" class="hard">दत्</td><td>子音</td><th lang="sa">दोस्</th><td lang="sa" class="hard">दोषन्</td><td>अन्</td></tr>
+<tr><th lang="sa">नासिका</th><td lang="sa" class="hard">नस्</td><td>子音</td><th lang="sa">यकृत्</th><td lang="sa" class="hard">यकन्</td><td>अन्</td></tr>
+<tr><th lang="sa">मास</th><td lang="sa" class="hard">मास्</td><td>子音</td><th lang="sa">शकृत्</th><td lang="sa" class="hard">शकन्</td><td>अन्</td></tr>
+<tr><th lang="sa">हृदय</th><td lang="sa" class="hard">हृद्</td><td>子音</td><th lang="sa">उदक</th><td lang="sa" class="hard">उदन्</td><td>अन्</td></tr>
+<tr><th lang="sa">निशा</th><td lang="sa" class="hard">निश्</td><td>子音</td><th lang="sa">आस्य</th><td lang="sa" class="hard">आसन्</td><td>अन्</td></tr>
+<tr><th lang="sa">मांस</th><td lang="sa" class="hard">मांस्</td><td>子音</td><th lang="sa">असृज्</th><td lang="sa" class="hard">असन्</td><td>अन्</td></tr>
+<tr><th lang="sa">पृतना</th><td lang="sa" class="hard">पृत्</td><td>子音</td><th lang="sa">सानु</th><td lang="sa" class="hard">स्नु</td><td>उ</td></tr>
+</tbody></table></div>
+</figure><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">दोस्</span><span class="gl">男 腕</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">दोः</span></td><td class="f"><span class="w">दोषौ</span></td><td class="f"><span class="w">दोषः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">दोः</span></td><td class="f"><span class="w">दोषौ</span></td><td class="f"><span class="w">दोषः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">दोषम्</span></td><td class="f"><span class="w">दोषौ</span></td><td class="f hl"><span class="w">दोषः</span><span class="or">または</span><span class="w">दोष्णः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">दोषा</span><span class="or">または</span><span class="w">दोष्णा</span></td><td class="f hl"><span class="w">दोर्भ्याम्</span><span class="or">または</span><span class="w">दोषभ्याम्</span></td><td class="f hl"><span class="w">दोर्भिः</span><span class="or">または</span><span class="w">दोषभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl"><span class="w">दोषे</span><span class="or">または</span><span class="w">दोष्णे</span></td><td class="f hl"><span class="w">दोर्भ्याम्</span><span class="or">または</span><span class="w">दोषभ्याम्</span></td><td class="f hl"><span class="w">दोर्भ्यः</span><span class="or">または</span><span class="w">दोषभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl"><span class="w">दोषः</span><span class="or">または</span><span class="w">दोष्णः</span></td><td class="f hl"><span class="w">दोर्भ्याम्</span><span class="or">または</span><span class="w">दोषभ्याम्</span></td><td class="f hl"><span class="w">दोर्भ्यः</span><span class="or">または</span><span class="w">दोषभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl"><span class="w">दोषः</span><span class="or">または</span><span class="w">दोष्णः</span></td><td class="f hl"><span class="w">दोषोः</span><span class="or">または</span><span class="w">दोष्णोः</span></td><td class="f hl"><span class="w">दोषाम्</span><span class="or">または</span><span class="w">दोष्णाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">दोषि</span><span class="or">または</span><span class="w">दोष्णि</span><span class="or">または</span><span class="w">दोषणि</span></td><td class="f hl"><span class="w">दोषोः</span><span class="or">または</span><span class="w">दोष्णोः</span></td><td class="f hl"><span class="w">दोःषु</span><span class="or">または</span><span class="w">दोष्षु</span><span class="or">または</span><span class="w">दोषसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">निशा</span><span class="gl">女 夜</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">निशा</span></td><td class="f"><span class="w">निशे</span></td><td class="f"><span class="w">निशाः</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f"><span class="w">निशे</span></td><td class="f"><span class="w">निशे</span></td><td class="f"><span class="w">निशाः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">निशाम्</span></td><td class="f"><span class="w">निशे</span></td><td class="f hl"><span class="w">निशाः</span><span class="or">または</span><span class="w">निशः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">निशया</span><span class="or">または</span><span class="w">निशा</span></td><td class="f hl"><span class="w">निशाभ्याम्</span><span class="or">または</span><span class="w">निड्भ्याम्</span></td><td class="f hl"><span class="w">निशाभिः</span><span class="or">または</span><span class="w">निड्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl"><span class="w">निशायै</span><span class="or">または</span><span class="w">निशे</span></td><td class="f hl"><span class="w">निशाभ्याम्</span><span class="or">または</span><span class="w">निड्भ्याम्</span></td><td class="f hl"><span class="w">निशाभ्यः</span><span class="or">または</span><span class="w">निड्भ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl"><span class="w">निशायाः</span><span class="or">または</span><span class="w">निशः</span></td><td class="f hl"><span class="w">निशाभ्याम्</span><span class="or">または</span><span class="w">निड्भ्याम्</span></td><td class="f hl"><span class="w">निशाभ्यः</span><span class="or">または</span><span class="w">निड्भ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl"><span class="w">निशायाः</span><span class="or">または</span><span class="w">निशः</span></td><td class="f hl"><span class="w">निशयोः</span><span class="or">または</span><span class="w">निशोः</span></td><td class="f hl"><span class="w">निशानाम्</span><span class="or">または</span><span class="w">निशाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">निशायाम्</span><span class="or">または</span><span class="w">निशि</span></td><td class="f hl"><span class="w">निशयोः</span><span class="or">または</span><span class="w">निशोः</span></td><td class="f hl"><span class="w">निशासु</span><span class="or">または</span><span class="w">निच्छु</span><span class="or">または</span><span class="w">निट्सु</span></td></tr>
+</tbody></table></div></div><p>中性 <span lang="sa">दोस्</span>：主・呼・対 <span lang="sa">दोः・दोषी・दोंषि</span>。他は男性と同じ。</p><div class="para-wrap"><table class="para">
+<caption><span lang="sa">सानु</span><span class="gl">中 山頂、台地</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">सानु</span></td><td class="f"><span class="w">सानुनी</span></td><td class="f"><span class="w">सानूनि</span></td></tr>
+<tr><th>呼格<small>Voc.</small></th><td class="f hl"><span class="w">सानु</span><span class="or">または</span><span class="w">सानो</span></td><td class="f"><span class="w">सानुनी</span></td><td class="f"><span class="w">सानूनि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">सानु</span></td><td class="f"><span class="w">सानुनी</span></td><td class="f hl"><span class="w">सानूनि</span><span class="or">または</span><span class="w">स्नूनि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">सानुना</span><span class="or">または</span><span class="w">स्नुना</span></td><td class="f hl"><span class="w">सानुभ्याम्</span><span class="or">または</span><span class="w">स्नुभ्याम्</span></td><td class="f hl"><span class="w">सानुभिः</span><span class="or">または</span><span class="w">स्नुभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl"><span class="w">सानुने</span><span class="or">または</span><span class="w">स्नुने</span></td><td class="f hl"><span class="w">सानुभ्याम्</span><span class="or">または</span><span class="w">स्नुभ्याम्</span></td><td class="f hl"><span class="w">सानुभ्यः</span><span class="or">または</span><span class="w">स्नुभ्यः</span></td></tr>
+<tr><th>奪格<small>Abl.</small></th><td class="f hl"><span class="w">सानुनः</span><span class="or">または</span><span class="w">स्नुनः</span></td><td class="f hl"><span class="w">सानुभ्याम्</span><span class="or">または</span><span class="w">स्नुभ्याम्</span></td><td class="f hl"><span class="w">सानुभ्यः</span><span class="or">または</span><span class="w">स्नुभ्यः</span></td></tr>
+<tr><th>属格<small>Gen.</small></th><td class="f hl"><span class="w">सानुनः</span><span class="or">または</span><span class="w">स्नुनः</span></td><td class="f hl"><span class="w">सानुनोः</span><span class="or">または</span><span class="w">स्नुनोः</span></td><td class="f hl"><span class="w">सानूनाम्</span><span class="or">または</span><span class="w">स्नूनाम्</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">सानुनि</span><span class="or">または</span><span class="w">स्नुनि</span></td><td class="f hl"><span class="w">सानुनोः</span><span class="or">または</span><span class="w">स्नुनोः</span></td><td class="f hl"><span class="w">सानुषु</span><span class="or">または</span><span class="w">स्नुषु</span></td></tr>
+</tbody></table></div><p><span lang="sa">सानु</span> は男性でもあり、<span lang="sa">गुरु</span> のように変化し、対格複数（<span lang="sa">सानून्・स्नून्</span>）以降は任意の形をもつ。</p><p>残りの語も、それぞれの語尾に応じた変化型に従って同様に変化させる（黄色＝任意の形がある箇所）：</p><div class="para-grid"><div class="para-wrap"><table class="para">
+<caption><span lang="sa">पाद</span><span class="gl">男 足</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">पादः</span></td><td class="f"><span class="w">पादौ</span></td><td class="f"><span class="w">पादाः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">पादम्</span></td><td class="f"><span class="w">पादौ</span></td><td class="f hl"><span class="w">पादान्</span><span class="or">または</span><span class="w">पदः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">पादेन</span><span class="or">または</span><span class="w">पदा</span></td><td class="f hl"><span class="w">पादाभ्याम्</span><span class="or">または</span><span class="w">पद्भ्याम्</span></td><td class="f hl"><span class="w">पादैः</span><span class="or">または</span><span class="w">पद्भिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">पादे</span><span class="or">または</span><span class="w">पदि</span></td><td class="f hl"><span class="w">पादयोः</span><span class="or">または</span><span class="w">पदोः</span></td><td class="f hl"><span class="w">पादेषु</span><span class="or">または</span><span class="w">पत्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">दन्त</span><span class="gl">男 歯</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">दन्तः</span></td><td class="f"><span class="w">दन्तौ</span></td><td class="f"><span class="w">दन्ताः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">दन्तम्</span></td><td class="f"><span class="w">दन्तौ</span></td><td class="f hl"><span class="w">दन्तान्</span><span class="or">または</span><span class="w">दतः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">दन्तेन</span><span class="or">または</span><span class="w">दता</span></td><td class="f hl"><span class="w">दन्ताभ्याम्</span><span class="or">または</span><span class="w">दद्भ्याम्</span></td><td class="f hl"><span class="w">दन्तैः</span><span class="or">または</span><span class="w">दद्भिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">दन्ते</span><span class="or">または</span><span class="w">दति</span></td><td class="f hl"><span class="w">दन्तयोः</span><span class="or">または</span><span class="w">दतोः</span></td><td class="f hl"><span class="w">दन्तेषु</span><span class="or">または</span><span class="w">दत्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">नासिका</span><span class="gl">女 鼻</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">नासिका</span></td><td class="f"><span class="w">नासिके</span></td><td class="f"><span class="w">नासिकाः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">नासिकाम्</span></td><td class="f"><span class="w">नासिके</span></td><td class="f hl"><span class="w">नासिकाः</span><span class="or">または</span><span class="w">नसः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">नासिकया</span><span class="or">または</span><span class="w">नसा</span></td><td class="f hl"><span class="w">नासिकाभ्याम्</span><span class="or">または</span><span class="w">नोभ्याम्</span></td><td class="f hl"><span class="w">नासिकाभिः</span><span class="or">または</span><span class="w">नोभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl"><span class="w">नासिकायै</span><span class="or">または</span><span class="w">नसे</span></td><td class="f hl"><span class="w">नासिकाभ्याम्</span><span class="or">または</span><span class="w">नोभ्याम्</span></td><td class="f hl"><span class="w">नासिकाभ्यः</span><span class="or">または</span><span class="w">नोभ्यः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">नासिकायाम्</span><span class="or">または</span><span class="w">नसि</span></td><td class="f hl"><span class="w">नासिकयोः</span><span class="or">または</span><span class="w">नसोः</span></td><td class="f hl"><span class="w">नासिकासु</span><span class="or">または</span><span class="w">नःसु</span><span class="or">または</span><span class="w">नस्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">मास</span><span class="gl">男 月（暦）</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">मासः</span></td><td class="f"><span class="w">मासौ</span></td><td class="f"><span class="w">मासाः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">मासम्</span></td><td class="f"><span class="w">मासौ</span></td><td class="f hl"><span class="w">मासान्</span><span class="or">または</span><span class="w">मासः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">मासेन</span><span class="or">または</span><span class="w">मासा</span></td><td class="f hl"><span class="w">मासाभ्याम्</span><span class="or">または</span><span class="w">माभ्याम्</span></td><td class="f hl"><span class="w">मासैः</span><span class="or">または</span><span class="w">माभिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">मासे</span><span class="or">または</span><span class="w">मासि</span></td><td class="f hl"><span class="w">मासयोः</span><span class="or">または</span><span class="w">मासोः</span></td><td class="f hl"><span class="w">मासेषु</span><span class="or">または</span><span class="w">माःसु</span><span class="or">または</span><span class="w">मास्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">हृदय</span><span class="gl">中 心臓</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主・呼・対格<small>N. V. A.</small></th><td class="f"><span class="w">हृदयम्</span></td><td class="f"><span class="w">हृदये</span></td><td class="f"><span class="w">हृदयानि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">हृदयम्</span></td><td class="f"><span class="w">हृदये</span></td><td class="f hl"><span class="w">हृदयानि</span><span class="or">または</span><span class="w">हृन्दि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">हृदयेन</span><span class="or">または</span><span class="w">हृदा</span></td><td class="f hl"><span class="w">हृदयाभ्याम्</span><span class="or">または</span><span class="w">हृद्भ्याम्</span></td><td class="f hl"><span class="w">हृदयैः</span><span class="or">または</span><span class="w">हृद्भिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">हृदये</span><span class="or">または</span><span class="w">हृदि</span></td><td class="f hl"><span class="w">हृदययोः</span><span class="or">または</span><span class="w">हृदोः</span></td><td class="f hl"><span class="w">हृदयेषु</span><span class="or">または</span><span class="w">हृत्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">असृज्</span><span class="gl">中 血</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">असृक्</span></td><td class="f"><span class="w">असृजी</span></td><td class="f"><span class="w">असृञ्जि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">असृक्</span></td><td class="f"><span class="w">असृजी</span></td><td class="f hl"><span class="w">असृञ्जि</span><span class="or">または</span><span class="w">असानि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">असृजा</span><span class="or">または</span><span class="w">अस्ना</span></td><td class="f hl"><span class="w">असृग्भ्याम्</span><span class="or">または</span><span class="w">असभ्याम्</span></td><td class="f hl"><span class="w">असृग्भिः</span><span class="or">または</span><span class="w">असभिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl"><span class="w">असृजे</span><span class="or">または</span><span class="w">अस्ने</span></td><td class="f hl"><span class="w">असृग्भ्याम्</span><span class="or">または</span><span class="w">असभ्याम्</span></td><td class="f hl"><span class="w">असृग्भ्यः</span><span class="or">または</span><span class="w">असभ्यः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">असृजि</span><span class="or">または</span><span class="w">अस्नि</span><span class="or">または</span><span class="w">असनि</span></td><td class="f hl"><span class="w">असृजोः</span><span class="or">または</span><span class="w">अस्नोः</span></td><td class="f hl"><span class="w">असृक्षु</span><span class="or">または</span><span class="w">असःसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">यूष</span><span class="gl">男 スープ</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">यूषः</span></td><td class="f"><span class="w">यूषौ</span></td><td class="f"><span class="w">यूषाः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">यूषम्</span></td><td class="f"><span class="w">यूषौ</span></td><td class="f hl"><span class="w">यूषान्</span><span class="or">または</span><span class="w">यूष्णः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">यूषेण</span><span class="or">または</span><span class="w">यूष्णा</span></td><td class="f hl"><span class="w">यूषाभ्याम्</span><span class="or">または</span><span class="w">यूषभ्याम्</span></td><td class="f hl"><span class="w">यूषैः</span><span class="or">または</span><span class="w">यूषभिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">यूषे</span><span class="or">または</span><span class="w">यूष्णि</span><span class="or">または</span><span class="w">यूषणि</span></td><td class="f hl"><span class="w">यूषयोः</span><span class="or">または</span><span class="w">यूष्णोः</span></td><td class="f hl"><span class="w">यूषेषु</span><span class="or">または</span><span class="w">यूषसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">यकृत्</span><span class="gl">中 肝臓</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">यकृत्</span></td><td class="f"><span class="w">यकृती</span></td><td class="f"><span class="w">यकृन्ति</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">यकृत्</span></td><td class="f"><span class="w">यकृती</span></td><td class="f hl"><span class="w">यकृन्ति</span><span class="or">または</span><span class="w">यकानि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">यकृता</span><span class="or">または</span><span class="w">यक्ना</span></td><td class="f hl"><span class="w">यकृद्भ्याम्</span><span class="or">または</span><span class="w">यकभ्याम्</span></td><td class="f hl"><span class="w">यकृद्भिः</span><span class="or">または</span><span class="w">यकभिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">यकृति</span><span class="or">または</span><span class="w">यक्नि</span><span class="or">または</span><span class="w">यकनि</span></td><td class="f hl"><span class="w">यकृतोः</span><span class="or">または</span><span class="w">यक्नोः</span></td><td class="f hl"><span class="w">यकृत्सु</span><span class="or">または</span><span class="w">यकसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">शकृत्</span><span class="gl">中 糞</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">शकृत्</span></td><td class="f"><span class="w">शकृती</span></td><td class="f"><span class="w">शकृन्ति</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">शकृत्</span></td><td class="f"><span class="w">शकृती</span></td><td class="f hl"><span class="w">शकृन्ति</span><span class="or">または</span><span class="w">शकानि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">शकृता</span><span class="or">または</span><span class="w">शक्ना</span></td><td class="f hl"><span class="w">शकृद्भ्याम्</span><span class="or">または</span><span class="w">शकभ्याम्</span></td><td class="f hl"><span class="w">शकृद्भिः</span><span class="or">または</span><span class="w">शकभिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">शकृति</span><span class="or">または</span><span class="w">शक्नि</span><span class="or">または</span><span class="w">शकनि</span></td><td class="f hl"><span class="w">शकृतोः</span><span class="or">または</span><span class="w">शक्नोः</span></td><td class="f hl"><span class="w">शकृत्सु</span><span class="or">または</span><span class="w">शकसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">उदक</span><span class="gl">中 水</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">उदकम्</span></td><td class="f"><span class="w">उदके</span></td><td class="f"><span class="w">उदकानि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">उदकम्</span></td><td class="f"><span class="w">उदके</span></td><td class="f hl"><span class="w">उदकानि</span><span class="or">または</span><span class="w">उदानि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">उदकेन</span><span class="or">または</span><span class="w">उद्ना</span></td><td class="f hl"><span class="w">उदकाभ्याम्</span><span class="or">または</span><span class="w">उदभ्याम्</span></td><td class="f hl"><span class="w">उदकैः</span><span class="or">または</span><span class="w">उदभिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">उदके</span><span class="or">または</span><span class="w">उद्नि</span><span class="or">または</span><span class="w">उदनि</span></td><td class="f hl"><span class="w">उदकयोः</span><span class="or">または</span><span class="w">उद्नोः</span></td><td class="f hl"><span class="w">उदकेषु</span><span class="or">または</span><span class="w">उदसु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">आस्य</span><span class="gl">中 口</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">आस्यम्</span></td><td class="f"><span class="w">आस्ये</span></td><td class="f"><span class="w">आस्यानि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">आस्यम्</span></td><td class="f"><span class="w">आस्ये</span></td><td class="f hl"><span class="w">आस्यानि</span><span class="or">または</span><span class="w">आसानि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">आस्येन</span><span class="or">または</span><span class="w">आस्ना</span></td><td class="f hl"><span class="w">आस्याभ्याम्</span><span class="or">または</span><span class="w">आसभ्याम्</span></td><td class="f hl"><span class="w">आस्यैः</span><span class="or">または</span><span class="w">आसभिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">आस्ये</span><span class="or">または</span><span class="w">आस्नि</span><span class="or">または</span><span class="w">आसनि</span></td><td class="f hl"><span class="w">आस्ययोः</span><span class="or">または</span><span class="w">आस्नोः</span></td><td class="f hl"><span class="w">आस्येषु</span><span class="or">または</span><span class="w">आससु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">मांस</span><span class="gl">中 肉</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">मांसम्</span></td><td class="f"><span class="w">मांसे</span></td><td class="f"><span class="w">मांसानि</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">मांसम्</span></td><td class="f"><span class="w">मांसे</span></td><td class="f hl"><span class="w">मांसानि</span><span class="or">または</span><span class="w">मांसि</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">मांसेन</span><span class="or">または</span><span class="w">मांसा</span></td><td class="f hl"><span class="w">मांसाभ्याम्</span><span class="or">または</span><span class="w">मान्भ्याम्</span></td><td class="f hl"><span class="w">मांसैः</span><span class="or">または</span><span class="w">मान्भिः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">मांसे</span><span class="or">または</span><span class="w">मांसि</span></td><td class="f hl"><span class="w">मांसयोः</span><span class="or">または</span><span class="w">मांसोः</span></td><td class="f hl"><span class="w">मांसेषु</span><span class="or">または</span><span class="w">मान्सु</span><span class="or">または</span><span class="w">मान्त्सु</span></td></tr>
+</tbody></table></div><div class="para-wrap"><table class="para">
+<caption><span lang="sa">पृतना</span><span class="gl">女 軍</span></caption>
+<thead><tr><th>格</th><th>単数</th><th>両数</th><th>複数</th></tr></thead><tbody>
+<tr><th>主格<small>Nom.</small></th><td class="f"><span class="w">पृतना</span></td><td class="f"><span class="w">पृतने</span></td><td class="f"><span class="w">पृतनाः</span></td></tr>
+<tr><th>対格<small>Acc.</small></th><td class="f"><span class="w">पृतनाम्</span></td><td class="f"><span class="w">पृतने</span></td><td class="f hl"><span class="w">पृतनाः</span><span class="or">または</span><span class="w">पृतः</span></td></tr>
+<tr><th>具格<small>Ins.</small></th><td class="f hl"><span class="w">पृतनया</span><span class="or">または</span><span class="w">पृता</span></td><td class="f hl"><span class="w">पृतनाभ्याम्</span><span class="or">または</span><span class="w">पृद्भ्याम्</span></td><td class="f hl"><span class="w">पृतनाभिः</span><span class="or">または</span><span class="w">पृद्भिः</span></td></tr>
+<tr><th>為格<small>Dat.</small></th><td class="f hl"><span class="w">पृतनायै</span><span class="or">または</span><span class="w">पृते</span></td><td class="f hl"><span class="w">पृतनाभ्याम्</span><span class="or">または</span><span class="w">पृद्भ्याम्</span></td><td class="f hl"><span class="w">पृतनाभ्यः</span><span class="or">または</span><span class="w">पृद्भ्यः</span></td></tr>
+<tr><th>処格<small>Loc.</small></th><td class="f hl"><span class="w">पृतनायाम्</span><span class="or">または</span><span class="w">पृति</span></td><td class="f hl"><span class="w">पृतनयोः</span><span class="or">または</span><span class="w">पृतोः</span></td><td class="f hl"><span class="w">पृतनासु</span><span class="or">または</span><span class="w">पृत्सु</span></td></tr>
+</tbody></table></div></div>
+<div class="point">पाद・दन्त など 16 語は、対格複数以降で短い語幹（पद्, दत् …）も使える（पद्भिः, दत्सु）。</div>
+</section>
+
+<section class="para" id="s130">
+<h3><span class="sec">§130</span> 格の意味を表す接辞 <span lang="sa">तस्・त्र</span> <span class="pg">p.87</span></h3>
+<p>次の接辞は、格の意味を表すために名詞語幹に付けられることがある。</p><div class="sub-item"><span class="lbl">(a)</span>
+<p>接辞 <span lang="sa">तस्</span> を名詞の語幹に付けると、奪格の意味になる。</p><div class="ex"><span class="f">प्रमादतः</span><span class="g">不注意から</span><span class="f">वस्तुतः</span><span class="g">物事の実際から、実際には</span><span class="f">ज्ञानतः</span><span class="g">知識から</span><span class="f">बहुतः</span><span class="g">多くから</span></div>
+</div><div class="sub-item"><span class="lbl">(b)</span>
+<p>接辞 <span lang="sa">त्र</span> は処格の意味を表すのに用いられ、ふつう代名詞的形容詞に付けられる。</p><div class="ex"><span class="f">तत्र</span><span class="g">そこに</span><span class="f">सर्वत्र</span><span class="g">あらゆる所に、どこでも</span></div>
+</div>
+<div class="point">-तस् ＝「〜から」（奪格）、-त्र ＝「〜に」（処格）。</div>
+</section>
+
+<section class="para" id="s131">
+<h3><span class="sec">§131</span> 不変化の名詞 <span class="pg">p.87</span></h3>
+<p><span lang="sa">भूर्</span>「最下の世界」、<span lang="sa">स्वर्</span>「天界」、<span lang="sa">संवत्</span>「紀元の年」、<span lang="sa">अस्तम्</span>「日没」、<span lang="sa">शम्</span>「安楽」、<span lang="sa">नमस्</span>「礼拝」、<span lang="sa">स्वस्ति</span>「幸いあれ、さようなら」など少数の名詞は、不変化詞（変化しない語）である。</p>
+<div class="point">स्वर्・नमस्・स्वस्ति などは格変化しない。</div>
+</section>
+
+
+<div class="pagenav">
+  <a href="ch03-2.html">← 第3章-2</a>
+  <a href="index.html">目次 →</a>
+</div>
+<footer class="colophon">底本：M. R. Kale, <i>A Higher Sanskrit Grammar</i>, 7th ed., Bombay, 1931。本頁は同書の内容と配列に従った日本語による解説であり、直訳ではない。原書が「〃」で省略している変化形は、すべて書き出した。「補説」の枠は原書にない補足。赤い <span class="reconstructed">※</span> は OCR が不鮮明なため推定で補った箇所。</footer>
+</main>
+</div>
+<script src="kale.js"></script>
+</body>
+</html>
