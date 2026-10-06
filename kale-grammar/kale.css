@@ -1,0 +1,249 @@
+/* Kale『高等サンスクリット文法』日本語教科書 — 共通スタイル */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --surface-page: #f5f0e8;
+  --surface-card: #fbf8f2;
+  --surface-inset: #eee8dc;
+  --ink-primary: #1f1915;
+  --ink-secondary: #5c5347;
+  --ink-muted: #8a7f72;
+  --accent: #3b4f8a;
+  --accent-wash: rgba(59,79,138,0.08);
+  --accent-wash-strong: rgba(59,79,138,0.16);
+  --warm: #b0652a;
+  --warm-wash: rgba(176,101,42,0.10);
+  --green: #3f7a52;
+  --green-wash: rgba(63,122,82,0.11);
+  --red: #a33d3d;
+  --red-wash: rgba(163,61,61,0.09);
+  --border: rgba(31,25,21,0.12);
+  --border-strong: rgba(31,25,21,0.22);
+  --highlight: #f2e3bf;
+  /* 調音位置の色（表・図で共通） */
+  --kantha: #b0652a;   /* 喉 */
+  --talu: #3f7a52;     /* 硬口蓋 */
+  --murdhan: #a33d3d;  /* 口蓋の頂 */
+  --danta: #3b4f8a;    /* 歯 */
+  --ostha: #7b4b94;    /* 唇 */
+  --nasika: #5c5347;
+  --font-jp: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-ui: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif;
+  --font-sa: 'Noto Serif Devanagari', 'Sanskrit Text', 'Siddhanta', serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --surface-page: #14120f;
+    --surface-card: #1c1915;
+    --surface-inset: #26221b;
+    --ink-primary: #ebe5da;
+    --ink-secondary: #b6ad9d;
+    --ink-muted: #82796b;
+    --accent: #8ea3dc;
+    --accent-wash: rgba(142,163,220,0.10);
+    --accent-wash-strong: rgba(142,163,220,0.18);
+    --warm: #e2a066;
+    --warm-wash: rgba(226,160,102,0.12);
+    --green: #7fbf92;
+    --green-wash: rgba(127,191,146,0.12);
+    --red: #e08a8a;
+    --red-wash: rgba(224,138,138,0.11);
+    --border: rgba(235,229,218,0.12);
+    --border-strong: rgba(235,229,218,0.22);
+    --highlight: #3a3020;
+    --kantha: #e2a066; --talu: #7fbf92; --murdhan: #e08a8a; --danta: #8ea3dc; --ostha: #c39ad6; --nasika: #b6ad9d;
+  }
+}
+:root[data-theme="dark"] {
+  --surface-page: #14120f; --surface-card: #1c1915; --surface-inset: #26221b;
+  --ink-primary: #ebe5da; --ink-secondary: #b6ad9d; --ink-muted: #82796b;
+  --accent: #8ea3dc; --accent-wash: rgba(142,163,220,0.10); --accent-wash-strong: rgba(142,163,220,0.18);
+  --warm: #e2a066; --warm-wash: rgba(226,160,102,0.12);
+  --green: #7fbf92; --green-wash: rgba(127,191,146,0.12);
+  --red: #e08a8a; --red-wash: rgba(224,138,138,0.11);
+  --border: rgba(235,229,218,0.12); --border-strong: rgba(235,229,218,0.22); --highlight: #3a3020;
+  --kantha: #e2a066; --talu: #7fbf92; --murdhan: #e08a8a; --danta: #8ea3dc; --ostha: #c39ad6; --nasika: #b6ad9d;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--surface-page); color: var(--ink-primary);
+  font-family: var(--font-jp); font-size: 17px; line-height: 1.9;
+}
+[lang="sa"], .sa { font-family: var(--font-sa); font-size: 1.08em; line-height: 1.7; }
+i.iast, .iast { font-style: italic; }
+a { color: var(--accent); }
+
+/* layout */
+.top-bar {
+  position: sticky; top: 0; z-index: 10; background: var(--surface-page);
+  border-bottom: 1px solid var(--border); font-family: var(--font-ui); font-size: 13px;
+}
+.top-bar .inner { max-width: 1100px; margin: 0 auto; padding: 8px 16px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.top-bar a { text-decoration: none; }
+.top-bar .title { font-weight: 700; color: var(--ink-primary); }
+.top-bar .spacer { flex: 1; }
+.top-bar button { font: inherit; background: none; border: 1px solid var(--border-strong); border-radius: 6px; padding: 2px 8px; color: var(--ink-secondary); cursor: pointer; }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px 80px; display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 40px; }
+nav.toc { position: sticky; top: 52px; align-self: start; max-height: calc(100vh - 70px); overflow: auto; font-family: var(--font-ui); font-size: 13px; padding-top: 32px; }
+nav.toc ol { list-style: none; padding: 0; margin: 0; }
+nav.toc li { margin: 2px 0; }
+nav.toc li.sub { padding-left: 1em; }
+nav.toc a { color: var(--ink-secondary); text-decoration: none; display: block; padding: 2px 6px; border-radius: 4px; }
+nav.toc a:hover { background: var(--accent-wash); color: var(--accent); }
+main { min-width: 0; padding-top: 24px; }
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: minmax(0,1fr); gap: 0; }
+  nav.toc { position: static; max-height: none; padding-top: 16px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+  nav.toc ol { columns: 2; }
+}
+
+/* headings */
+.chapter-head { border-bottom: 2px solid var(--ink-primary); padding-bottom: 14px; margin: 24px 0 28px; }
+.chapter-head .num { font-family: var(--font-ui); font-size: 13px; letter-spacing: .15em; color: var(--accent); }
+.chapter-head h1 { font-size: 30px; line-height: 1.4; margin: 4px 0; font-weight: 700; }
+.chapter-head .orig { color: var(--ink-muted); font-family: var(--font-ui); font-size: 13px; }
+h2.part { font-size: 22px; margin: 56px 0 18px; padding: 8px 14px; background: var(--accent-wash); border-left: 4px solid var(--accent); }
+h2.part small { display: block; font-family: var(--font-ui); font-size: 12px; color: var(--ink-muted); font-weight: 400; }
+
+/* section (§) */
+section.para { position: relative; margin: 34px 0; scroll-margin-top: 60px; }
+section.para > h3 { font-size: 18px; margin: 0 0 8px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.sec { font-family: var(--font-ui); font-weight: 700; color: var(--accent); white-space: nowrap; }
+.pg { font-family: var(--font-ui); font-size: 11px; color: var(--ink-muted); border: 1px solid var(--border); border-radius: 10px; padding: 0 7px; font-weight: 400; white-space: nowrap; }
+.sub-item { margin: 12px 0 12px 0; padding-left: 2.2em; position: relative; }
+.sub-item > .lbl { position: absolute; left: 0; top: 0; font-family: var(--font-ui); font-weight: 700; color: var(--ink-secondary); }
+p { margin: 8px 0; }
+.note { background: var(--surface-inset); border-radius: 8px; padding: 10px 14px; margin: 12px 0; font-size: 15.5px; }
+.note > b:first-child { font-family: var(--font-ui); font-size: 12px; color: var(--ink-secondary); margin-right: 6px; }
+.supp { border: 1px dashed var(--border-strong); border-radius: 8px; padding: 10px 14px; margin: 14px 0; font-size: 15px; color: var(--ink-secondary); }
+.supp::before { content: "補説（訳者）"; display: block; font-family: var(--font-ui); font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--warm); margin-bottom: 2px; }
+.reconstructed { border-bottom: 1px dotted var(--warm); cursor: help; }
+
+/* sūtra footnotes */
+.sutra { display: flex; gap: 10px; flex-wrap: wrap; align-items: baseline; margin: 8px 0 8px; padding: 6px 12px; border-left: 3px solid var(--warm); background: var(--warm-wash); border-radius: 0 6px 6px 0; font-size: 15px; }
+.sutra::before { content: "典拠"; font-family: var(--font-ui); font-size: 11px; font-weight: 700; color: var(--warm); }
+.sutra cite { font-style: normal; font-family: var(--font-ui); font-size: 12px; color: var(--ink-muted); }
+.sutra .gl { color: var(--ink-secondary); font-size: 14px; }
+
+/* examples */
+.ex { display: grid; grid-template-columns: minmax(0,max-content) minmax(0,1fr); gap: 2px 18px; margin: 10px 0; padding: 10px 14px; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px; }
+.ex > .f { font-family: var(--font-sa); font-size: 1.1em; white-space: nowrap; }
+.ex > .g { color: var(--ink-secondary); font-size: 15px; }
+.ex > .f .r { color: var(--accent); font-weight: 700; }
+@media (max-width: 560px) { .ex { grid-template-columns: minmax(0,1fr); } .ex > .f { white-space: normal; } .ex > .g { margin-bottom: 6px; } }
+.join { font-family: var(--font-ui); color: var(--ink-muted); padding: 0 .2em; }
+
+/* figure */
+figure.fig { margin: 22px 0; padding: 16px; background: var(--surface-card); border: 1px solid var(--border); border-radius: 10px; }
+figure.fig figcaption { font-family: var(--font-ui); font-size: 12.5px; color: var(--ink-secondary); margin-bottom: 10px; }
+figure.fig figcaption b { color: var(--ink-primary); }
+.scroll-x { overflow-x: auto; }
+
+/* tables */
+table.t { border-collapse: collapse; width: 100%; font-size: 15px; }
+table.t th, table.t td { border: 1px solid var(--border); padding: 6px 8px; text-align: center; vertical-align: middle; }
+table.t thead th { background: var(--surface-inset); font-family: var(--font-ui); font-size: 12.5px; font-weight: 600; }
+table.t tbody th { font-family: var(--font-ui); font-size: 13px; font-weight: 600; text-align: left; background: var(--surface-inset); white-space: nowrap; }
+table.t td.big { font-family: var(--font-sa); font-size: 1.35em; line-height: 1.3; }
+table.t td small, table.t th small { display: block; font-family: var(--font-ui); font-size: 11px; color: var(--ink-muted); font-weight: 400; }
+table.t td.empty { background: repeating-linear-gradient(45deg, transparent 0 6px, var(--border) 6px 7px); }
+
+/* place colors */
+.c-kantha { --pc: var(--kantha); } .c-talu { --pc: var(--talu); } .c-murdhan { --pc: var(--murdhan); }
+.c-danta { --pc: var(--danta); } .c-ostha { --pc: var(--ostha); } .c-nasika { --pc: var(--nasika); }
+tr[class^="c-"] > th:first-child { border-left: 5px solid var(--pc); }
+.dot { display: inline-block; width: .7em; height: .7em; border-radius: 50%; background: var(--pc); vertical-align: middle; margin-right: 4px; }
+.hard { background: var(--accent-wash-strong); }
+.soft { background: var(--green-wash); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--font-ui); font-size: 12px; color: var(--ink-secondary); margin-top: 10px; }
+.legend span::before { content: ""; display: inline-block; width: 14px; height: 10px; margin-right: 5px; vertical-align: middle; border: 1px solid var(--border-strong); background: var(--sw); }
+
+/* śivasūtra */
+.shiva { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 8px; }
+.ss { border: 1px solid var(--border); border-radius: 8px; padding: 6px 8px 4px; background: var(--surface-page); }
+.ss .n { font-family: var(--font-ui); font-size: 10.5px; color: var(--ink-muted); }
+.ss .ls { font-family: var(--font-sa); font-size: 22px; line-height: 1.5; display: flex; flex-wrap: wrap; gap: 0 1px; }
+.ss .ls span { padding: 0 2px; border-radius: 4px; transition: background .15s; }
+.ss .ls span.it { color: var(--warm); font-size: .8em; }
+.ss .ls span.on { background: var(--accent); color: var(--surface-card); }
+.ss .ls span.it.on-it { outline: 2px solid var(--warm); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 6px; }
+.chips button { font-family: var(--font-sa); font-size: 16px; padding: 2px 10px; border-radius: 14px; border: 1px solid var(--border-strong); background: var(--surface-page); color: var(--ink-primary); cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface-card); }
+.chips button.later { border-style: dashed; }
+.pr-out { font-family: var(--font-ui); font-size: 13px; color: var(--ink-secondary); min-height: 1.6em; }
+.pr-out b { font-family: var(--font-sa); font-size: 16px; color: var(--ink-primary); }
+
+/* vowel tree / grids */
+.vgrid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.vbox { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; background: var(--surface-page); }
+.vbox h4 { margin: 0 0 4px; font-family: var(--font-ui); font-size: 12.5px; color: var(--ink-secondary); }
+.vbox .big { font-family: var(--font-sa); font-size: 24px; line-height: 1.5; }
+.mora { display: inline-flex; gap: 3px; vertical-align: middle; margin-left: 6px; }
+.mora i { display: inline-block; width: 14px; height: 8px; border-radius: 3px; background: var(--accent); }
+
+/* conjuncts */
+.cj-row { display: grid; grid-template-columns: 3.2em minmax(0,1fr); gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.cj-head { font-family: var(--font-sa); font-size: 18px; color: var(--accent); font-weight: 700; }
+.cj-cells { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.cj { display: inline-flex; flex-direction: column; align-items: center; min-width: 3.4em; padding: 2px 4px; border-radius: 6px; background: var(--surface-page); border: 1px solid var(--border); }
+.cj b { font-family: var(--font-sa); font-size: 21px; font-weight: 400; line-height: 1.45; }
+.cj i { font-size: 11px; color: var(--ink-muted); font-family: var(--font-ui); font-style: italic; }
+
+/* ladder (guṇa / vṛddhi) */
+.ladder { display: grid; grid-template-columns: auto repeat(3, minmax(0,1fr)); gap: 0; font-size: 15px; }
+.ladder > div { padding: 8px; border-bottom: 1px solid var(--border); text-align: center; }
+.ladder .h { font-family: var(--font-ui); font-size: 12px; font-weight: 700; color: var(--ink-secondary); }
+.ladder .r { font-family: var(--font-ui); font-size: 12px; text-align: left; color: var(--ink-muted); }
+.ladder .s { font-family: var(--font-sa); font-size: 22px; }
+.ladder .s.g { background: var(--accent-wash); }
+.ladder .s.v { background: var(--accent-wash-strong); }
+.arrow { color: var(--ink-muted); font-family: var(--font-ui); }
+
+/* sandhi chart */
+table.sandhi td { font-family: var(--font-sa); font-size: 17px; line-height: 1.35; }
+table.sandhi td small { font-family: var(--font-ui); }
+table.sandhi td.k-dirgha { background: var(--accent-wash-strong); }
+table.sandhi td.k-guna { background: var(--green-wash); }
+table.sandhi td.k-vrddhi { background: var(--warm-wash); }
+table.sandhi td.k-yan { background: var(--accent-wash); }
+table.sandhi td.k-ayadi { background: var(--red-wash); }
+
+/* flow */
+.flow { display: flex; flex-direction: column; gap: 0; }
+.flow .q { border: 1px solid var(--border-strong); border-radius: 8px; padding: 8px 12px; background: var(--surface-page); font-size: 15px; }
+.flow .q b { font-family: var(--font-ui); font-size: 12px; color: var(--accent); margin-right: 6px; }
+.flow .yes { margin-left: 22px; border-left: 2px solid var(--accent); padding: 4px 0 6px 14px; font-size: 14.5px; color: var(--ink-secondary); }
+.flow .yes::before { content: "はい → "; font-family: var(--font-ui); font-size: 12px; color: var(--accent); font-weight: 700; }
+.flow .no { margin-left: 22px; font-family: var(--font-ui); font-size: 12px; color: var(--ink-muted); padding: 2px 0 4px 14px; border-left: 2px dashed var(--border-strong); }
+
+/* derivation tree */
+.deriv { font-size: 15px; }
+.deriv .step { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; padding: 5px 0; border-bottom: 1px dashed var(--border); }
+.deriv .step .rule { font-family: var(--font-ui); font-size: 12px; color: var(--accent); min-width: 7em; }
+.deriv .step .form { font-family: var(--font-sa); font-size: 19px; }
+.forms4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 8px; margin-top: 10px; }
+.forms4 > div { border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; text-align: center; background: var(--surface-page); }
+.forms4 .sa { font-size: 20px; display: block; }
+.forms4 small { font-family: var(--font-ui); font-size: 11px; color: var(--ink-muted); }
+
+/* bars */
+.bars { display: grid; grid-template-columns: max-content minmax(0,1fr) max-content; gap: 6px 10px; align-items: center; font-family: var(--font-ui); font-size: 13px; }
+.bars .bar { height: 18px; background: var(--accent); border-radius: 3px; }
+.bars .num { font-variant-numeric: tabular-nums; color: var(--ink-secondary); }
+
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 10px; }
+.kv > div { border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; background: var(--surface-page); }
+.kv h4 { margin: 0 0 4px; font-family: var(--font-ui); font-size: 12.5px; color: var(--accent); }
+
+.pagenav { display: flex; justify-content: space-between; gap: 12px; margin-top: 60px; padding-top: 16px; border-top: 1px solid var(--border); font-family: var(--font-ui); font-size: 14px; }
+footer.colophon { font-family: var(--font-ui); font-size: 12px; color: var(--ink-muted); margin-top: 30px; }
+
+@media print {
+  .top-bar, nav.toc { display: none; }
+  .wrap { display: block; }
+  section.para, figure.fig { break-inside: avoid; }
+}

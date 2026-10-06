@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第2章 連声の規則 — Kale 高等サンスクリット文法</title>
+<meta name="description" content="M. R. Kale, A Higher Sanskrit Grammar 第2章「連声の規則」に基づく日本語教科書。見本として母音連声 (§18–27) を収録。">
+<link rel="stylesheet" href="kale.css">
+</head>
+<body>
+<div class="top-bar"><div class="inner">
+  <a class="title" href="index.html">Kale 高等サンスクリット文法</a>
+  <span>第2章 連声の規則</span>
+  <span class="spacer"></span>
+  <a href="ch01.html">← 第1章</a>
+  <button type="button" id="theme">明暗</button>
+</div></div>
+
+<div class="wrap">
+<nav class="toc" aria-label="この章の目次">
+<ol>
+  <li><a href="#s18">§18 連声とは</a></li>
+  <li><a href="#svara">I 母音連声</a></li>
+  <li class="sub"><a href="#chart">早見表・判定手順</a></li>
+  <li class="sub"><a href="#s19">§19 同類母音の長音化</a></li>
+  <li class="sub"><a href="#s20">§20 Guṇa 化と例外</a></li>
+  <li class="sub"><a href="#s21">§21 Vṛddhi 化と例外</a></li>
+  <li class="sub"><a href="#s22">§22 半母音化</a></li>
+  <li class="sub"><a href="#s23">§23 任意の非結合</a></li>
+  <li class="sub"><a href="#s24">§24 ए ओ ऐ औ ＋母音</a></li>
+  <li class="sub"><a href="#s25">§25 ए ओ ＋ अ</a></li>
+  <li class="sub"><a href="#s26">§26 連声しない場合</a></li>
+  <li class="sub"><a href="#s27">§27 小辞 उ</a></li>
+  <li><a href="#hal">II 子音連声（準備中）</a></li>
+</ol>
+</nav>
+
+<main>
+<header class="chapter-head">
+  <div class="num">CHAPTER II</div>
+  <h1>第2章　連声（サンディ）の規則</h1>
+  <div class="orig">原書 Chapter II, Rules of Sandhi ／ 見本範囲 §18–§27 ／ 原書 pp. 12–22</div>
+</header>
+
+<!-- §18 -->
+<section class="para" id="s18">
+<h3><span class="sec">§18</span> 連声（Sandhi）とは <span class="pg">p.12</span></h3>
+<p>Sandhi（<span lang="sa">सम्</span>「共に」＋ <span lang="sa">धा</span>「置く、結ぶ」から）とは、直接に接触する 2 つの文字が融合することをいう。</p>
+<aside class="sutra"><span lang="sa">परः संनिकर्षः संहिता ।</span><span class="gl">「文字の極度の近接が saṃhitā である」</span><cite>Pāṇ. I.4.109</cite></aside>
+<div class="sub-item"><span class="lbl">(a)</span>
+<p>Saṃhitā すなわち連声は、1 つの語（pada）の内部構造、前置詞（接頭辞）と語根の結合、および複合語（<span lang="sa">समास</span>）では<b>必須</b>である。一方、文の中、すなわち文中の別々の語の語末と語頭とのあいだでは、書き手の意志に任される。</p>
+<aside class="sutra"><span lang="sa">संहितैकपदे नित्या नित्या धातूपसर्गयोः ।<br>नित्या समासे वाक्ये तु सा विवक्षामपेक्षते ॥</span><span class="gl">連声の適用についての規則を述べた詩節</span><cite>Sid. Kau.</cite></aside>
+<figure class="fig">
+<figcaption><b>図 2-1</b>　連声が必須となる場と任意の場</figcaption>
+<div class="kv">
+  <div style="border-color:var(--accent)"><h4>必須 <span lang="sa">नित्या</span></h4>
+    ① 1 語の内部 <span lang="sa">एकपदे</span><br>② 接頭辞＋語根 <span lang="sa">धातूपसर्गयोः</span><br>③ 複合語 <span lang="sa">समासे</span></div>
+  <div><h4>任意 <span lang="sa">विवक्षामपेक्षते</span></h4>④ 文中の語と語のあいだ <span lang="sa">वाक्ये</span><br><small>（書き手の意図による。ただし実際の古典文献では通常行われる）</small></div>
+</div>
+</figure>
+</div>
+</section>
+
+<h2 class="part" id="svara">I　母音連声 <span lang="sa">स्वरसन्धि</span><small>Svarasandhi, or the combination of final and initial vowels（語末と語頭の母音の結合）</small></h2>
+
+<figure class="fig" id="chart">
+<figcaption><b>早見表 2-A</b>　前の語の末尾母音 × 次の語の頭母音（§19–§25 のまとめ。色は規則の種類、セル内は結果と根拠の §）</figcaption>
+<div class="scroll-x">
+<table class="t sandhi">
+<thead><tr><th>前＼後</th><th lang="sa">अ</th><th lang="sa">आ</th><th lang="sa">इ ई</th><th lang="sa">उ ऊ</th><th lang="sa">ऋ</th><th lang="sa">ए ऐ</th><th lang="sa">ओ औ</th></tr></thead>
+<tbody>
+<tr><th lang="sa">अ आ</th><td class="k-dirgha">आ<small>§19</small></td><td class="k-dirgha">आ<small>§19</small></td><td class="k-guna">ए<small>§20</small></td><td class="k-guna">ओ<small>§20</small></td><td class="k-guna">अर्<small>§20</small></td><td class="k-vrddhi">ऐ<small>§21</small></td><td class="k-vrddhi">औ<small>§21</small></td></tr>
+<tr><th lang="sa">इ ई</th><td class="k-yan">य<small>§22</small></td><td class="k-yan">या<small>§22</small></td><td class="k-dirgha">ई<small>§19</small></td><td class="k-yan">यु यू<small>§22</small></td><td class="k-yan">यृ<small>§22</small></td><td class="k-yan">ये यै<small>§22</small></td><td class="k-yan">यो यौ<small>§22</small></td></tr>
+<tr><th lang="sa">उ ऊ</th><td class="k-yan">व<small>§22</small></td><td class="k-yan">वा<small>§22</small></td><td class="k-yan">वि वी<small>§22</small></td><td class="k-dirgha">ऊ<small>§19</small></td><td class="k-yan">वृ<small>§22</small></td><td class="k-yan">वे वै<small>§22</small></td><td class="k-yan">वो वौ<small>§22</small></td></tr>
+<tr><th lang="sa">ऋ ॠ</th><td class="k-yan">र<small>§22</small></td><td class="k-yan">रा<small>§22</small></td><td class="k-yan">रि री<small>§22</small></td><td class="k-yan">रु रू<small>§22</small></td><td class="k-dirgha">ॠ<small>§19</small></td><td class="k-yan">रे रै<small>§22</small></td><td class="k-yan">रो रौ<small>§22</small></td></tr>
+<tr><th lang="sa">ए</th><td class="k-ayadi">ए ऽ<small>§25</small></td><td class="k-ayadi">अय् आ／अ आ<small>§24</small></td><td class="k-ayadi">अय् इ／अ इ<small>§24</small></td><td class="k-ayadi">अय् उ／अ उ<small>§24</small></td><td class="k-ayadi">अय् ऋ／अ ऋ<small>§24</small></td><td class="k-ayadi">अय् ए／अ ए<small>§24</small></td><td class="k-ayadi">अय् ओ／अ ओ<small>§24</small></td></tr>
+<tr><th lang="sa">ओ</th><td class="k-ayadi">ओ ऽ<small>§25</small></td><td class="k-ayadi">अव् आ／अ आ<small>§24</small></td><td class="k-ayadi">अव् इ／अ इ<small>§24</small></td><td class="k-ayadi">अव् उ／अ उ<small>§24</small></td><td class="k-ayadi">अव् ऋ／अ ऋ<small>§24</small></td><td class="k-ayadi">अव् ए／अ ए<small>§24</small></td><td class="k-ayadi">अव् ओ／अ ओ<small>§24</small></td></tr>
+<tr><th lang="sa">ऐ</th><td class="k-ayadi" colspan="7">आय् ＋母音　または　आ ＋母音（य् 脱落、以後連声しない）<small>§24, §24 (a)</small></td></tr>
+<tr><th lang="sa">औ</th><td class="k-ayadi" colspan="7">आव् ＋母音　または　आ ＋母音（व् 脱落、以後連声しない）<small>§24, §24 (a)</small></td></tr>
+</tbody>
+</table>
+</div>
+<div class="legend">
+  <span style="--sw:var(--accent-wash-strong)">同類母音の長音化 §19</span>
+  <span style="--sw:var(--green-wash)">Guṇa §20</span>
+  <span style="--sw:var(--warm-wash)">Vṛddhi §21</span>
+  <span style="--sw:var(--accent-wash)">半母音化（yaṇ）§22</span>
+  <span style="--sw:var(--red-wash)">ayādi・脱落 §24–25</span>
+</div>
+<p style="font-size:13px;color:var(--ink-secondary);margin:8px 0 0">語末の位置での「अय्／अ」などの二形は、語内では常に前者（例 <span lang="sa">ने + अनम् = नयनम्</span>）。§23 の任意の非結合、§26 の Pragṛhya などの例外はこの表に含まない。</p>
+</figure>
+
+<figure class="fig">
+<figcaption><b>図 2-2</b>　母音＋母音の判定手順（本節の規則の適用順をたどる）</figcaption>
+<div class="flow">
+  <div class="q"><b>Q0</b>前の母音が Pragṛhya（両数語尾の ई ऊ ए など）、または Pluta か？</div>
+  <div class="yes">連声しない（§26）</div>
+  <div class="no">いいえ</div>
+  <div class="q"><b>Q1</b>2 つの母音は同類（सवर्ण、§9）か？（例 इ と ई）</div>
+  <div class="yes">同類の長母音 1 つにする（§19）</div>
+  <div class="no">いいえ</div>
+  <div class="q"><b>Q2</b>前が अ／आ で、後が इ उ ऋ ऌ 類か？</div>
+  <div class="yes">Guṇa（ए ओ अर् अल्）にする（§20）—ただし §20 の Vṛddhi 例外に注意</div>
+  <div class="no">いいえ</div>
+  <div class="q"><b>Q3</b>前が अ／आ で、後が ए ऐ ओ औ か？</div>
+  <div class="yes">Vṛddhi（ऐ औ）にする（§21）—接頭辞＋語根などの例外に注意</div>
+  <div class="no">いいえ</div>
+  <div class="q"><b>Q4</b>前が इ उ ऋ ऌ 類か？</div>
+  <div class="yes">対応する半母音 य् व् र् ल् に変える（§22）。語末なら §23 の任意の非結合もある</div>
+  <div class="no">いいえ（前が ए ऐ ओ औ）</div>
+  <div class="q"><b>Q5</b>語末の ए／ओ の後に短い अ が来るか？</div>
+  <div class="yes">अ が消えて ऽ（§25）</div>
+  <div class="no">いいえ</div>
+  <div class="q"><b>Q6</b>それ以外</div>
+  <div class="yes">अय् अव् आय् आव् に変える（§24）。語末の य् व् は任意で脱落（§24 (a)）</div>
+</div>
+</figure>
+
+<!-- §19 -->
+<section class="para" id="s19">
+<h3><span class="sec">§19</span> 同類母音の長音化（<span lang="sa">सवर्णदीर्घ</span>） <span class="pg">pp.12–13</span></h3>
+<p>短または長の単母音の後に、同類の（短または長の）母音が続くと、両者に代わってその同類の長母音が置かれる。</p>
+<aside class="sutra"><span lang="sa">अकः सवर्णे दीर्घः ।</span><cite>Pāṇ. VI.1.101</cite></aside>
+<div class="ex">
+<span class="f">दैत्य + अरिः = <span class="r">दैत्यारिः</span></span><span class="g">「ダイティヤ（悪魔）の敵」<span class="reconstructed" title="OCR不鮮明のため推定で補った箇所">※</span></span>
+<span class="f">अत्र + आसीत् = <span class="r">अत्रासीत्</span></span><span class="g">「ここにいた」</span>
+<span class="f">यदा + अभवत् = <span class="r">यदाभवत्</span></span><span class="g">「〜であったとき」</span>
+<span class="f">विद्या + आतुरः = <span class="r">विद्यातुरः</span></span><span class="g">知識を得ようと熱望する（者）</span>
+<span class="f">कवि + इन्द्रः = <span class="r">कवीन्द्रः</span></span><span class="g">詩人の王<span class="reconstructed" title="OCR不鮮明のため推定で補った箇所">※</span></span>
+<span class="f">अपि + ईक्षते = <span class="r">अपीक्षते</span></span><span class="g">「〜もまた見る」</span>
+<span class="f">श्री + ईशः = <span class="r">श्रीशः</span></span><span class="g">シュリーの主（ヴィシュヌ）</span>
+<span class="f">भानु + उदयः = <span class="r">भानूदयः</span></span><span class="g">日の出</span>
+<span class="f">साधु + ऊचुः = <span class="r">साधूचुः</span></span><span class="g">「よし」と彼らは言った</span>
+<span class="f">चमू + ऊर्जः = <span class="r">चमूर्जः</span></span><span class="g">軍の力</span>
+<span class="f">कर्तृ + ऋजुः = <span class="r">कर्तॄजुः</span></span><span class="g">行為者は正直だ</span>
+<span class="f">कृ + ऋकारः = <span class="r">कॄकारः</span></span><span class="g"></span>
+<span class="f">होतृ + ऌकारः = <span class="r">होतॄकारः</span></span><span class="g">祭官が発音する ऌ 字（長い ऌ はないので、両者に代えて長い ॠ を置く）</span>
+</div>
+<div class="sub-item"><span class="lbl">(a)</span>
+<p><span lang="sa">ऋ</span> または <span lang="sa">ऌ</span> の後に短い <span lang="sa">ऋ</span> または <span lang="sa">ऌ</span> が続くときは、両者に代えて短い <span lang="sa">ऋ</span>／<span lang="sa">ऌ</span> を置いてもよい（任意）。</p>
+<aside class="sutra"><span lang="sa">ऋति सवर्णे ऋ वा । ऌति सवर्णे ऌ वा ।</span><cite>上記の経に対する Vārttika</cite></aside>
+<figure class="fig">
+<figcaption><b>図 2-3</b>　<span lang="sa">होतृ + ऋकारः</span> から生じる 3 形</figcaption>
+<div class="forms4">
+  <div><span class="sa">होतॄकारः</span><small>§19 一般規則（長い ॠ）</small></div>
+  <div><span class="sa">होतृकारः</span><small>§19 (a)（短い ऋ）</small></div>
+  <div><span class="sa">होतृ ऋकारः</span><small>§23 (b)（結合しない）</small></div>
+</div>
+<p style="margin:10px 0 0">同様に <span lang="sa">होतृ + ऌकारः = होतॢकारः</span>、また <span lang="sa">होतृऌकारः</span>。</p>
+</figure>
+</div>
+</section>
+
+<!-- §20 -->
+<section class="para" id="s20">
+<h3><span class="sec">§20</span> Guṇa 化（<span lang="sa">गुणसन्धि</span>） <span class="pg">pp.13–17</span></h3>
+<p><span lang="sa">अ</span> または <span lang="sa">आ</span> の後に、短または長の <span lang="sa">इ, उ, ऋ, ऌ</span> が続くと、後者に対応する Guṇa（§15）が両者の位置を占める。</p>
+<aside class="sutra"><span lang="sa">आद्गुणः ।</span><cite>Pāṇ. VI.1.87</cite></aside>
+<div class="ex">
+<span class="f">उप + इन्द्रः = <span class="r">उपेन्द्रः</span></span><span class="g">ウペーンドラ（ヴィシュヌ）</span>
+<span class="f">परम + ईश्वरः = <span class="r">परमेश्वरः</span></span><span class="g">最高の主</span>
+<span class="f">रमा + इच्छा = <span class="r">रमेच्छा</span></span><span class="g">ラマー（ラクシュミー）の願い</span>
+<span class="f">यथा + ईप्सितम् = <span class="r">यथेप्सितम्</span></span><span class="g">望みのままに</span>
+<span class="f">हित + उपदेशः = <span class="r">हितोपदेशः</span></span><span class="g">有益な教え</span>
+<span class="f">कृष्ण + ऊरुः = <span class="r">कृष्णोरुः</span></span><span class="g">クリシュナの腿</span>
+<span class="f">गङ्गा + उदकम् = <span class="r">गङ्गोदकम्</span></span><span class="g">ガンガーの水</span>
+<span class="f">महा + ऊरुः = <span class="r">महोरुः</span></span><span class="g">大きな腿（をもつ）</span>
+<span class="f">कृष्ण + ऋद्धिः = <span class="r">कृष्णर्द्धिः</span></span><span class="g">クリシュナの繁栄</span>
+<span class="f">महा + ऋषिः = <span class="r">महर्षिः</span></span><span class="g">大聖仙</span>
+<span class="f">तव + ऌकारः = <span class="r">तवल्कारः</span></span><span class="g">あなたが発音する ऌ 字</span>
+</div>
+
+<div class="sub-item"><span class="lbl">(a)</span>
+<p>子音の後に同類の子音が続くとき（鼻音・半母音・<span lang="sa">ह</span> を除く）、前者は任意で脱落する。たとえば <span lang="sa">कृष्ण + ऋद्धिः</span> は一般規則で <span lang="sa">कृष्णर्द्धिः</span> となり、次にこの規則により <span lang="sa">कृष्णर् + द् + ध् + इः</span> の <span lang="sa">द्</span> が落ちて <span lang="sa">कृष्णर्धिः</span> となる。さらに第 3 の形 <span lang="sa">कृष्णर्द्द्धिः</span> もある（§22 (d) 参照）。</p>
+<aside class="sutra"><span lang="sa">झरो झरि सवर्णे ।</span><cite>Pāṇ. VIII.4.65</cite></aside>
+</div>
+<div class="sub-item"><span class="lbl">(b)</span>
+<p>半母音の後に来る 5 類の子音は任意で重ねられる。したがって <span lang="sa">तवल्कारः</span> は <span lang="sa">तवल्क्कारः</span> にもなり、さらに半母音の重複（§22 (c)）と合わせて、全部で 4 形となる。</p>
+<div class="forms4">
+  <div><span class="sa">तवल्कारः</span><small>基本形</small></div>
+  <div><span class="sa">तवल्क्कारः</span><small>क を重ねる</small></div>
+  <div><span class="sa">तवल्ल्कारः</span><small>ल を重ねる</small></div>
+  <div><span class="sa">तवल्ल्क्कारः</span><small>両方を重ねる</small></div>
+</div>
+<p style="font-size:13px;color:var(--ink-secondary)"><span class="reconstructed" title="OCRで字形が欠けているため、規則から再構成">※</span> 4 形の綴りは OCR で崩れていたため、規則から再構成した。</p>
+</div>
+
+<h4 style="font-family:var(--font-ui);font-size:15px;margin:22px 0 4px;color:var(--red)">例外：Guṇa ではなく Vṛddhi になる場合</h4>
+<aside class="sutra"><span lang="sa">एत्येधत्यूठ्सु ।</span><cite>Pāṇ. VI.1.89</cite><span class="gl">この経の前半（एति・एधति）は §21 (a) に対する「例外の例外」となる。</span></aside>
+<aside class="sutra"><span lang="sa">प्रादूहोढोढ्येषैष्येषु । अक्षादूहिन्यामुपसंख्यानम् । स्वादीरेरिणोः । ऋते च तृतीयासमासे । प्रवत्सतरकम्बलवसनार्णदशानामृणे ।</span><cite>上記の経に対する Vārttika</cite></aside>
+
+<div class="sub-item"><span class="lbl">(a)</span>
+<p><span lang="sa">अ</span> で終わる語の後に <span lang="sa">ऊह्</span>（<span lang="sa">वह्</span> の代替形 <span lang="sa">ऊठ्</span>）が続くとき、および <span lang="sa">प्र</span> の後に <span lang="sa">ऊह, ऊढ, ऊढि</span> が続くとき。</p>
+<div class="ex">
+<span class="f">प्रष्ठ + ऊहः = <span class="r">प्रष्ठौहः</span></span><span class="g">主たる推論（または <span lang="sa">प्रष्ठवाह्</span>「軛に慣らされた若い雄牛」の対格複数）</span>
+<span class="f">प्र + ऊहः = <span class="r">प्रौहः</span></span><span class="g">主要な推理</span>
+<span class="f">प्र + ऊढः = <span class="r">प्रौढः</span></span><span class="g">十分に成長した</span>
+<span class="f">प्र + ऊढिः = <span class="r">प्रौढिः</span></span><span class="g">成熟</span>
+<span class="f">प्र + ऊढवान् = <span class="r">प्रोढवान्</span></span><span class="g">ただしこれは Guṇa（<span lang="sa">ऊढवान्</span> は経に挙げられていないため）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(b)</span>
+<div class="ex">
+<span class="f">अक्ष + ऊहिनी = <span class="r">अक्षौहिणी</span></span><span class="g">完全な軍団（<span lang="sa">न्</span> から <span lang="sa">ण्</span> への変化は後で説明する）</span>
+</div>
+<p>本来は、戦車 21,870、同数の象、馬 65,610、歩兵 109,350 から成る軍隊をいう。</p>
+<figure class="fig">
+<figcaption><b>図 2-4</b>　1 アクシャウヒニーの構成（原注の数値。比は 1 : 1 : 3 : 5）</figcaption>
+<div class="bars">
+  <span>戦車 <span lang="sa">रथ</span></span><div class="bar" style="width:20%"></div><span class="num">21,870</span>
+  <span>象 <span lang="sa">गज</span></span><div class="bar" style="width:20%;background:var(--green)"></div><span class="num">21,870</span>
+  <span>馬 <span lang="sa">अश्व</span></span><div class="bar" style="width:60%;background:var(--warm)"></div><span class="num">65,610</span>
+  <span>歩兵 <span lang="sa">नर</span></span><div class="bar" style="width:100%;background:var(--ostha)"></div><span class="num">109,350</span>
+</div>
+</figure>
+<aside class="sutra"><span lang="sa">अक्षौहिण्याः प्रसंख्याता रथानां द्विजसत्तमाः ।<br>संख्या गणिततत्त्वज्ञैः सहस्राण्येकविंशतिः ॥<br>शतान्युपरि चैवाष्टौ तथा भूयश्च सप्ततिः ।<br>गजानां च परीमाणमेतदेव विनिर्दिशेत् ॥<br>ज्ञेयं शतसहस्रं तु सहस्राणि नवैव तु ।<br>नराणामपि पञ्चाशच्छतानि त्रीणि चानघाः ॥<br>पञ्चषष्टिसहस्राणि तथाश्वानां शतानि च ।<br>दशोत्तराणि षट् प्राहुर्यथावदिह संख्यया ॥</span><cite>Mahābhārata, Ādiparvan 2.23–26</cite></aside>
+</div>
+<div class="sub-item"><span class="lbl">(c)</span>
+<p><span lang="sa">स्व</span> の後に、いずれも <span lang="sa">ईर्</span>「行く」から派生した <span lang="sa">ईर</span> と <span lang="sa">ईरिन्</span> が続くとき。</p>
+<div class="ex">
+<span class="f">स्व + ईरः = <span class="r">स्वैरः</span></span><span class="g">勝手気ままにふるまう者、わがままな</span>
+<span class="f">स्व + ईरिणी = <span class="r">स्वैरिणी</span></span><span class="g">（奔放な女）。ほかに <span lang="sa">स्वैरम्</span>、<span lang="sa">स्वैरी</span>（<span lang="sa">स्वेन ईरितुं शीलमस्य</span>「自分の意のままに動くのを常とする者」）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(d)</span>
+<p><span lang="sa">अ</span> の後に <span lang="sa">ऋत</span> が続き、具格の Tatpuruṣa 複合語を成すとき。</p>
+<div class="ex">
+<span class="f">सुख + ऋतः = <span class="r">सुखार्तः</span></span><span class="g">幸福に恵まれた（<span lang="sa">सुखेन ऋतः</span>）</span>
+<span class="f">परम + ऋतः = <span class="r">परमर्तः</span></span><span class="g">ただしこれは Guṇa：「最も尊ぶべき」（<span lang="sa">परमश्चासौ ऋतश्च</span>、具格 Tat. ではない）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(e)</span>
+<p>語 <span lang="sa">ऋण</span> が <span lang="sa">प्र, वत्सतर, कम्बल, वसन, ऋण</span>（および <span lang="sa">दश</span>）の後に来るとき。</p>
+<div class="ex">
+<span class="f">प्र + ऋणम् = <span class="r">प्रार्णम्</span></span><span class="g">主たる負債</span>
+<span class="f">वत्सतर + ऋणम् = <span class="r">वत्सतरार्णम्</span></span><span class="g">子牛のための負債</span>
+<span class="f">ऋण + ऋणम् = <span class="r">ऋणार्णम्</span></span><span class="g">前の借金を返すために作った負債</span>
+<span class="f">दश + ऋणः = <span class="r">दशार्णः</span></span><span class="g">国名（字義は「10 の砦をもつ国」）。また <span lang="sa">दशार्णा नदी</span>（10 の川が流れ込む川）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(f)</span>
+<p><span lang="sa">अ</span> で終わる接頭辞の後に、<span lang="sa">ऋ</span> で始まる語根が続くとき。ただしその語根が名詞起源動詞（denominative）ならば、Vṛddhi は任意。</p>
+<aside class="sutra"><span lang="sa">उपसर्गादृति धातौ । वा सुप्यापिशलेः ।</span><cite>Pāṇ. VI.1.91–92</cite></aside>
+<div class="ex">
+<span class="f">उप + ऋच्छति = <span class="r">उपार्च्छति</span></span><span class="g">近づく。同様に <span lang="sa">प्रार्च्छति</span></span>
+<span class="f">प्र + ऋषभीयति = <span class="r">प्रर्षभीयति</span> ／ <span class="r">प्रार्षभीयति</span></span><span class="g">雄牛のようにふるまう（名詞起源動詞なので任意）</span>
+<span class="f">उप + ॠकारीयति = <span class="r">उपर्कारीयति</span></span><span class="g">ॠ が長いので Vṛddhi にならない</span>
+<span class="f">प्र + ऌकारीयति = <span class="r">प्रल्कारीयति</span> ／ <span class="r">प्राल्कारीयति</span></span><span class="g">ऌ 字を大いに欲する（ऌ は文法上 ऋ と同類とみなされる）</span>
+</div>
+</div>
+</section>
+
+<!-- §21 -->
+<section class="para" id="s21">
+<h3><span class="sec">§21</span> Vṛddhi 化（<span lang="sa">वृद्धिसन्धि</span>） <span class="pg">pp.15–17</span></h3>
+<p><span lang="sa">अ</span> または <span lang="sa">आ</span> の後に <span lang="sa">ए</span>／<span lang="sa">ऐ</span> が続くと <span lang="sa">ऐ</span> が、<span lang="sa">ओ</span>／<span lang="sa">औ</span> が続くと <span lang="sa">औ</span> が、それぞれ両者に代わって置かれる。</p>
+<aside class="sutra"><span lang="sa">वृद्धिरेचि ।</span><cite>Pāṇ. VI.1.88</cite></aside>
+<div class="ex">
+<span class="f">कृष्ण + एकत्वम् = <span class="r">कृष्णैकत्वम्</span></span><span class="g">クリシュナとの一体性</span>
+<span class="f">देव + ऐश्वर्यम् = <span class="r">देवैश्वर्यम्</span></span><span class="g">神の威光</span>
+<span class="f">सा + एव = <span class="r">सैव</span></span><span class="g">彼女だけが</span>
+<span class="f">भव + औषधम् = <span class="r">भवौषधम्</span></span><span class="g">生と再生（輪廻）に対する薬</span>
+<span class="f">विद्या + औत्सुक्यम् = <span class="r">विद्यौत्सुक्यम्</span></span><span class="g">知識への渇望</span>
+</div>
+<h4 style="font-family:var(--font-ui);font-size:15px;margin:18px 0 4px;color:var(--red)">例外</h4>
+<div class="sub-item"><span class="lbl">(a)</span>
+<p><span lang="sa">अ</span> で終わる接頭辞の後に、<span lang="sa">ए</span> または <span lang="sa">ओ</span> で始まる語根が続くと、（Vṛddhi ではなく）<span lang="sa">ए</span>／<span lang="sa">ओ</span> が置かれる（pararūpa、後音への同化）。ただし語根が名詞起源動詞ならば Vṛddhi は任意。</p>
+<aside class="sutra"><span lang="sa">एङि पररूपम् ।</span><cite>Pāṇ. VI.1.94</cite></aside>
+<div class="ex">
+<span class="f">प्र + एजते = <span class="r">प्रेजते</span></span><span class="g">激しく震える</span>
+<span class="f">उप + ओषति = <span class="r">उपोषति</span></span><span class="g">近くの何かを焼く</span>
+<span class="f">उप + एडकीयति = <span class="r">उपेडकीयति</span> ／ <span class="r">उपैडकीयति</span></span><span class="g">名詞起源動詞なので任意</span>
+<span class="f">प्र + ओघीयति = <span class="r">प्रोघीयति</span> ／ <span class="r">प्रौघीयति</span></span><span class="g">同上</span>
+</div>
+<div class="note"><b>例外の例外</b>語根 <span lang="sa">इ</span>「行く」または <span lang="sa">एध्</span>「増す」の、<span lang="sa">ए</span> で始まる形が <span lang="sa">अ</span> の後に来るとき、また第 4・6・9 類の <span lang="sa">इष्</span> から派生した <span lang="sa">एष</span>・<span lang="sa">एष्य</span> が <span lang="sa">प्र</span> の後に来るときは、Vṛddhi となる（§20 の Vārttika 参照）。
+<div class="ex" style="margin-top:8px">
+<span class="f">उप + एति = <span class="r">उपैति</span></span><span class="g">近づく</span>
+<span class="f">उप + एधते = <span class="r">उपैधते</span></span><span class="g">増す</span>
+<span class="f">उप + इतः = <span class="r">उपेतः</span></span><span class="g">ただし語根が इ で始まる形なので Guṇa</span>
+<span class="f">अव + इहि → अव + आ + इहि = <span class="r">अवेहि</span></span><span class="g">「知れ」。<span lang="sa">अवैहि</span> ではない（<span lang="sa">एहि</span> は <span lang="sa">आ + इहि</span> だから）</span>
+<span class="f">मा भवान् प्र + इदिधत् = <span class="r">प्रेदिधत्</span></span><span class="g">Guṇa の例</span>
+<span class="f">प्र + एषः = <span class="r">प्रैषः</span></span><span class="g">送ること、指図</span>
+<span class="f">प्र + एष्यः = <span class="r">प्रैष्यः</span></span><span class="g">召使い。ただし <span lang="sa">ईष्</span> 由来なら <span lang="sa">प्रेषः, प्रेष्यः</span></span>
+</div></div>
+</div>
+<div class="sub-item"><span class="lbl">(b)</span>
+<p><span lang="sa">अ</span> の後に、不定の意味の <span lang="sa">एव</span> が続くときは、両者に代わって <span lang="sa">ए</span> が置かれる。</p>
+<aside class="sutra"><span lang="sa">एवे चानियोगे ।</span><cite>Vārttika</cite></aside>
+<div class="ex">
+<span class="f">क्व + एव = <span class="r">क्वेव</span> भोक्ष्यसे</span><span class="g">今日はいったいどこで食事をするのか？（場所が確定していない）</span>
+<span class="f">तव + एव = <span class="r">तवैव</span></span><span class="g">（もちろん）あなたの家で食事をします（確定しているので Vṛddhi）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(c)</span>
+<p><span lang="sa">अ</span> の後に <span lang="sa">ओम्</span> と <span lang="sa">आ</span>（接頭辞 <span lang="sa">आङ्</span>）が続くと、<span lang="sa">अ</span> が脱落する。</p>
+<aside class="sutra"><span lang="sa">ओमाङोश्च ।</span><cite>Pāṇ. VI.1.95</cite></aside>
+<div class="ex">
+<span class="f">शिवाय + ओं नमः = <span class="r">शिवायों नमः</span></span><span class="g">シヴァに帰命す</span>
+<span class="f">शिव + एहि（आ + इहि） = <span class="r">शिवेहि</span></span><span class="g">シヴァよ、来たれ</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(d)</span>
+<p>複合語において、語末の <span lang="sa">अ</span> の後に <span lang="sa">ओतु</span>「猫」または <span lang="sa">ओष्ठ</span>「下唇」が続くときは、Vṛddhi は任意。</p>
+<aside class="sutra"><span lang="sa">ओत्वोष्ठयोः समासे वा ।</span><cite>Vārttika</cite></aside>
+<div class="ex">
+<span class="f">स्थूल + ओतुः = <span class="r">स्थूलोतुः</span> ／ <span class="r">स्थूलौतुः</span></span><span class="g">太った猫</span>
+<span class="f">बिम्ब + ओष्ठः = <span class="r">बिम्बोष्ठः</span> ／ <span class="r">बिम्बौष्ठः</span></span><span class="g">ビンバの実のような（赤い）唇（をもつ）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(e)</span>
+<p>次の語は、複合語の中で特定の語が後に続くと、語末の母音、または語末の子音とその前の母音が脱落する（<span lang="sa">शकन्ध्वादि</span> 群）。</p>
+<aside class="sutra"><span lang="sa">शकन्ध्वादिषु पररूपं वाच्यम् ।</span><cite>Vārttika</cite></aside>
+<div class="ex">
+<span class="f">शक + अन्धुः = <span class="r">शकन्धुः</span></span><span class="g">シャカ族の国の井戸</span>
+<span class="f">कर्क + अन्धुः = <span class="r">कर्कन्धुः</span></span><span class="g">（カルカは国名）</span>
+<span class="f">कुल + अटा = <span class="r">कुलटा</span></span><span class="g">家から家へ渡り歩く女、身持ちの悪い女</span>
+<span class="f">सीमन् + अन्तः = <span class="r">सीमन्तः</span></span><span class="g">髪の分け目（頭頂の両側に髪を分けてできる白い線）。ただし「境界の最後の線、限界」の意味なら <span lang="sa">सीमान्तः</span></span>
+<span class="f">मनस् + ईषा = <span class="r">मनीषा</span></span><span class="g">願い。同様に <span lang="sa">लाङ्गलीषा</span>「犂の轅」、<span lang="sa">हलीषा</span></span>
+<span class="f">पतत् + अञ्जलिः = <span class="r">पतञ्जलिः</span></span><span class="g">『マハーバーシュヤ』（Pāṇini 経への大注釈）の著者の名。字義は「合掌して崇めるにふさわしい者」、伝承では「ある聖仙が Sandhyā 礼拝で太陽に水を捧げたとき、その掌から落ちた者」</span>
+<span class="f">सार + अङ्गः = <span class="r">सारङ्गः</span></span><span class="g">斑のある皮をもつカモシカ、ある種の鳥。ただし <span lang="sa">साराङ्गः</span> は「美しい体をもつ者」</span>
+</div>
+<p>これは Ākṛtigaṇa（例示的な語群）である。つまり、同様の形成をもち文法的説明を要するが、実際には群に挙げられていない語も、ここに分類してよい。例：<span lang="sa">मार्त + अण्डः = मार्तण्डः</span>（<span lang="sa">मृताण्ड</span> から。字義は「死んだ卵から生まれた者」、太陽）。</p>
+<div class="note"><b>原注</b><span lang="sa">अत्</span> で終わる擬音語の後に <span lang="sa">इति</span> が続くときも同様である。例：<span lang="sa">पटत् + इति = पटिति</span>。ただし 1 音節の語では起こらない（<span lang="sa">श्रत् + इति = श्रदिति</span>）。語が反復されるときは、<span lang="sa">त्</span> だけが任意で脱落する：<span lang="sa">पटत्पटत् + इति = पटत्पटेति</span> または <span lang="sa">पटत्पटदिति</span>。</div>
+</div>
+</section>
+
+<!-- §22 -->
+<section class="para" id="s22">
+<h3><span class="sec">§22</span> 半母音化（<span lang="sa">यण्सन्धि</span>） <span class="pg">pp.17–18</span></h3>
+<p>短または長の <span lang="sa">इ, उ, ऋ, ऌ</span> の後に異類の母音が続くと、それぞれ <span lang="sa">य्, व्, र्, ल्</span> に置き換えられる。</p>
+<aside class="sutra"><span lang="sa">इको यणचि ।</span><cite>Pāṇ. VI.1.77</cite></aside>
+<div class="ex">
+<span class="f">इति + आह = <span class="r">इत्याह</span></span><span class="g">「〜と彼は言う」</span>
+<span class="f">सुधी + उपास्यः = <span class="r">सुध्युपास्यः</span></span><span class="g">賢者に崇められる者</span>
+<span class="f">मधु + अरिः = <span class="r">मध्वरिः</span></span><span class="g">マドゥの敵、すなわちヴィシュヌ</span>
+<span class="f">धातृ + अंशः = <span class="r">धात्रंशः</span></span><span class="g">創造主の部分</span>
+<span class="f">ऌ + आकृतिः = <span class="r">लाकृतिः</span></span><span class="g">ऌ 字のような形</span>
+</div>
+<div class="note"><b>注意</b>上の語のいくつかは、結合すると複数の形をとりうる。以下の規則と §20 の (a)(b) は、本来は次の節（子音連声）に属するが、混乱を避けるためここで扱う。普通の学習者は、本条の (b) 以外は読み飛ばしてよい。</div>
+
+<div class="sub-item"><span class="lbl">(a)</span>
+<p>母音の後にある子音（<span lang="sa">ह</span> を除く）は、後に母音が続かなければ、任意で重ねられる。</p>
+<aside class="sutra"><span lang="sa">अनचि च ।</span><cite>Pāṇ. VIII.4.47</cite></aside>
+</div>
+<div class="sub-item"><span class="lbl">(b)</span>
+<p>鼻音・半母音以外の子音の後に、軟音の無気音または有気音（各類の第 3・第 4 字）が続くと、前の子音はその類の軟音の無気音（第 3 字）に変わる。</p>
+<aside class="sutra"><span lang="sa">झलां जश् झशि ।</span><cite>Pāṇ. VIII.4.53</cite></aside>
+</div>
+<div class="sub-item"><span class="lbl">(c)</span>
+<p>5 類の子音（<span lang="sa">ञ</span> を除く）の後にある半母音は、任意で重ねられる。</p>
+<aside class="sutra"><span lang="sa">यणो मयो द्वे वाच्ये ।</span><cite>Vārttika</cite></aside>
+</div>
+
+<figure class="fig">
+<figcaption><b>図 2-5</b>　<span lang="sa">सुधी + उपास्यः</span> から 4 形が生じる過程</figcaption>
+<div class="deriv">
+  <div class="step"><span class="rule">§22 本則</span><span class="form">सुध् + य् + उपास्यः</span><span>ई → य्</span></div>
+  <div class="step"><span class="rule">(a) 重複</span><span class="form">सुध्ध्य् + उपास्यः</span><span>ध् を重ねる（後に母音がない）</span></div>
+  <div class="step"><span class="rule">(b) 有声無気化</span><span class="form">सुद्ध्य् + उपास्यः</span><span>重ねた前の ध् は ध の前で द् に</span></div>
+  <div class="step"><span class="rule">(c) 半母音重複</span><span class="form">सुद्ध्य्य् + उपास्यः</span><span>य् を重ねる</span></div>
+</div>
+<div class="forms4">
+  <div><span class="sa">सुध्युपास्यः</span><small>本則のみ</small></div>
+  <div><span class="sa">सुद्ध्युपास्यः</span><small>(a)+(b)</small></div>
+  <div><span class="sa">सुध्य्युपास्यः</span><small>(c)</small></div>
+  <div><span class="sa">सुद्ध्य्युपास्यः</span><small>(a)+(b)+(c)</small></div>
+</div>
+<p style="margin:10px 0 0">同様に <span lang="sa">मधु + अरिः</span> → <span lang="sa">मध्वरिः, मद्ध्वरिः, मध्व्वरिः, मद्ध्व्वरिः</span>。<span lang="sa">धातृ + अंशः</span> → <span lang="sa">धात्रंशः, धात्त्रंशः</span>。<span lang="sa">ऌ + आकृतिः</span> では当然、ほかの形は生じえない。</p>
+</figure>
+
+<div class="sub-item"><span class="lbl">(d)</span>
+<p>母音の後の <span lang="sa">र्</span> または <span lang="sa">ह्</span> に続く子音（<span lang="sa">ह</span> を除く）は、任意で重ねられる。</p>
+<aside class="sutra"><span lang="sa">अचो रहाभ्यां द्वे ।</span><cite>Pāṇ. VIII.4.46</cite></aside>
+<div class="ex">
+<span class="f">हरि + अनुभवः = <span class="r">हर्यनुभवः</span> ／ <span class="r">हर्य्यनुभवः</span></span><span class="g">ハリの体験（一般規則で हर्य् + अनुभवः、ついで本規則で य् を重ねる）</span>
+<span class="f">न + हि + अस्ति = <span class="r">न ह्यस्ति</span> ／ <span class="r">न ह्य्यस्ति</span></span><span class="g">実に無い</span>
+</div>
+</div>
+</section>
+
+<!-- §23 -->
+<section class="para" id="s23">
+<h3><span class="sec">§23</span> 任意の非結合 <span class="pg">pp.18–19</span></h3>
+<div class="sub-item"><span class="lbl">(a)</span>
+<p>語末の短または長の <span lang="sa">इ, उ, ऋ, ऌ</span> の後に異類の母音が続くとき、複合語の中でなければ、任意で結合しない。結合しないときは、長母音は短くされる。</p>
+<aside class="sutra"><span lang="sa">इकोऽसवर्णे शाकल्यस्य ह्रस्वश्च ।</span><cite>Pāṇ. VI.1.127</cite></aside>
+<div class="ex">
+<span class="f">चक्री + अत्र = <span class="r">चक्र्यत्र</span> ／ <span class="r">चक्रि अत्र</span></span><span class="g">円盤を持つ者（ヴィシュヌ）がここに</span>
+<span class="f">वापी + अश्वः = <span class="r">वाप्यश्वः</span></span><span class="g">井戸の中の馬（複合語なので必ず結合）</span>
+<span class="f">गौरी + औ = <span class="r">गौर्यौ</span></span><span class="g">（औ は語尾。語末ではないので必ず結合）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(b)</span>
+<p>語末の短または長の <span lang="sa">अ, इ, उ, ऋ</span> の後に短い <span lang="sa">ऋ</span> が続くときも、任意で結合せず、結合しないときは長母音は短くされる。</p>
+<aside class="sutra"><span lang="sa">ऋत्यकः ।</span><cite>Pāṇ. VI.1.128</cite></aside>
+<div class="ex">
+<span class="f">ब्रह्मा + ऋषिः = <span class="r">ब्रह्मर्षिः</span> ／ <span class="r">ब्रह्म ऋषिः</span></span><span class="g">ブラーフマナの聖仙</span>
+<span class="f">सप्त + ऋषीणाम् = <span class="r">सप्तर्षीणाम्</span> ／ <span class="r">सप्त ऋषीणाम्</span></span><span class="g">七聖仙の（複合語的表現）</span>
+</div>
+</div>
+</section>
+
+<!-- §24 -->
+<section class="para" id="s24">
+<h3><span class="sec">§24</span> <span lang="sa">ए ओ ऐ औ</span> ＋ 母音（<span lang="sa">अयादिसन्धि</span>） <span class="pg">pp.19–20</span></h3>
+<p><span lang="sa">ए, ओ, ऐ, औ</span> の後に母音が続くと、それぞれ <span lang="sa">अय्, अव्, आय्, आव्</span> に変わる。</p>
+<aside class="sutra"><span lang="sa">एचोऽयवायावः ।</span><cite>Pāṇ. VI.1.78</cite></aside>
+<figure class="fig">
+<figcaption><b>図 2-6</b>　二重母音の「ほどけ方」（§15 の Guṇa・Vṛddhi 段階と対応）</figcaption>
+<div class="ladder" style="grid-template-columns:auto repeat(2,minmax(0,1fr))">
+  <div class="h"></div><div class="h">Guṇa 段階</div><div class="h">Vṛddhi 段階</div>
+  <div class="r">i 系</div><div class="s g">ए → अय्</div><div class="s v">ऐ → आय्</div>
+  <div class="r">u 系</div><div class="s g">ओ → अव्</div><div class="s v">औ → आव्</div>
+</div>
+</figure>
+<div class="ex">
+<span class="f">हरे + ए = <span class="r">हरये</span></span><span class="g">ハリのために</span>
+<span class="f">विष्णो + ए = <span class="r">विष्णवे</span></span><span class="g">ヴィシュヌのために</span>
+<span class="f">नै + अकः = <span class="r">नायकः</span></span><span class="g">指導者</span>
+<span class="f">पौ + अकः = <span class="r">पावकः</span></span><span class="g">浄化するもの、すなわち火</span>
+</div>
+
+<div class="sub-item"><span class="lbl">(a)</span>
+<p>語末にあり、<span lang="sa">अ</span> または <span lang="sa">आ</span> の後にある <span lang="sa">य्</span>・<span lang="sa">व्</span> は、母音または軟音の子音が続くとき、任意で脱落する。</p>
+<aside class="sutra"><span lang="sa">लोपः शाकल्यस्य ।</span><cite>Pāṇ. VIII.3.19</cite></aside>
+<div class="ex">
+<span class="f">हरे + एहि = <span class="r">हरयेहि</span> ／ <span class="r">हर एहि</span></span><span class="g">ハリよ、来たれ</span>
+<span class="f">विष्णो + इह = <span class="r">विष्णविह</span> ／ <span class="r">विष्ण इह</span></span><span class="g">ヴィシュヌよ、ここに</span>
+<span class="f">श्रियै + उद्यतः = <span class="r">श्रियायुद्यतः</span> ／ <span class="r">श्रिया उद्यतः</span></span><span class="g">富を得ようと努める</span>
+<span class="f">गुरौ + उत्कः = <span class="r">गुरावुत्कः</span> ／ <span class="r">गुरा उत्कः</span></span><span class="g">師に会うことを切望する</span>
+</div>
+<div class="note"><b>注</b>間にあった子音や Visarga が消えた結果として隣り合った 2 つの母音は、（さらに）融合しない。上の <span lang="sa">हर एहि</span> が <span lang="sa">*हरैहि</span> にならないのはこのためである。</div>
+</div>
+<div class="sub-item"><span class="lbl">(b)</span>
+<p><span lang="sa">ओ</span> と <span lang="sa">औ</span> は、<span lang="sa">य</span> で始まる接尾辞が続くと、それぞれ <span lang="sa">अव्</span>・<span lang="sa">आव्</span> になる。</p>
+<aside class="sutra"><span lang="sa">वान्तो यि प्रत्यये ।</span><cite>Pāṇ. VI.1.79</cite></aside>
+<div class="ex">
+<span class="f">गो + यम् = <span class="r">गव्यम्</span></span><span class="g">牛から生じるもの（乳、ギーなど）</span>
+<span class="f">नौ + यम् = <span class="r">नाव्यम्</span></span><span class="g">舟で行ける、航行可能な</span>
+</div>
+<div class="note"><b>N.B.</b>語根の場合、この規則が当てはまるのは、その <span lang="sa">ओ</span>／<span lang="sa">औ</span> が当の接尾辞によって生じたものであるときだけである。
+<aside class="sutra" style="margin-top:6px"><span lang="sa">धातोस्तन्निमित्तस्यैव ।</span><cite>Pāṇ. VI.1.80</cite></aside>
+例：<span lang="sa">लू + य → लो + यम् = लव्यम्</span>「刈り取られるべき」。<span lang="sa">अवश्य + लू + य = अवश्यलाव्यम्</span>「必ず刈り取られるべきもの」。</div>
+</div>
+<div class="sub-item"><span class="lbl">(c)</span>
+<p><span lang="sa">गो</span> の <span lang="sa">ओ</span> は、後に <span lang="sa">यूति</span> が続くときも <span lang="sa">अव्</span> に変わる。ヴェーダでは常に、通常の言語では特定の長さの単位を意味するときに限る。</p>
+<aside class="sutra"><span lang="sa">गोर्यूतौ छन्दस्युपसंख्यानम् । अध्वपरिमाणे च ।</span><cite>Vārttika</cite></aside>
+<div class="ex"><span class="f">गो + यूतिः = <span class="r">गव्यूतिः</span></span><span class="g">（距離の単位）4 マイル</span></div>
+</div>
+<div class="sub-item"><span class="lbl">(d)</span>
+<p>語根 <span lang="sa">क्षि</span> と <span lang="sa">जि</span> の <span lang="sa">ए</span>（Guṇa）は、可能を表す未来受動分詞（potential participle）の <span lang="sa">य</span> が続くと <span lang="sa">अय्</span> になる。</p>
+<aside class="sutra"><span lang="sa">क्षय्यजय्यौ शक्यार्थे ।</span><cite>Pāṇ. VI.1.81</cite></aside>
+<div class="ex">
+<span class="f">क्षे + य = <span class="r">क्षय्यम्</span></span><span class="g">減らすことのできるもの</span>
+<span class="f">जे + य = <span class="r">जय्यम्</span></span><span class="g">征服することのできるもの</span>
+<span class="f"><span class="r">क्षेयम्</span> पापम्</span><span class="g">ただし「取り除くべき（が、そうできるとは限らない）罪」＝ <span lang="sa">क्षेतुं योग्यम्</span> では अय् にならない</span>
+<span class="f"><span class="r">जेयम्</span> मनः</span><span class="g">「抑えるべき（が、いつも抑えられるとは限らない）心」</span>
+</div>
+</div>
+</section>
+
+<!-- §25 -->
+<section class="para" id="s25">
+<h3><span class="sec">§25</span> 語末の <span lang="sa">ए ओ</span> ＋ <span lang="sa">अ</span> <span class="pg">p.20</span></h3>
+<p>語末の <span lang="sa">ए</span> または <span lang="sa">ओ</span> の後に <span lang="sa">अ</span> が続くと、後者は前者に吸収され、その場所にはときに記号 <span lang="sa">ऽ</span>（Avagraha、§13 (a)）が書かれる。</p>
+<aside class="sutra"><span lang="sa">एङः पदान्तादति ।</span><cite>Pāṇ. VI.1.109</cite></aside>
+<div class="ex">
+<span class="f">हरे + अव = <span class="r">हरेऽव</span></span><span class="g">ハリよ、守りたまえ</span>
+<span class="f">विष्णो + अव = <span class="r">विष्णोऽव</span></span><span class="g">ヴィシュヌよ、守りたまえ</span>
+</div>
+<div class="sub-item"><span class="lbl">(a)</span>
+<p><span lang="sa">ओ</span> で終わる語 <span lang="sa">गो</span> の後に <span lang="sa">अ</span> が続くと、その <span lang="sa">अ</span> は任意で保持される。また母音が続くとき、<span lang="sa">ओ</span> の代わりに任意で <span lang="sa">अव</span> が置かれる。ただし <span lang="sa">इन्द्र</span> と <span lang="sa">अक्ष</span> が続くときは、必ず <span lang="sa">ओ</span> を <span lang="sa">अव</span> に変える。</p>
+<aside class="sutra"><span lang="sa">सर्वत्र विभाषा गोः । अवङ् स्फोटायनस्य । इन्द्रे च ।</span><cite>Pāṇ. VI.1.122–124</cite></aside>
+<figure class="fig">
+<figcaption><b>図 2-7</b>　<span lang="sa">गो + अग्रम्</span> の 3 形と、必ず <span lang="sa">अव</span> になる場合</figcaption>
+<div class="forms4">
+  <div><span class="sa">गोऽग्रम्</span><small>§25 本則</small></div>
+  <div><span class="sa">गोअग्रम्</span><small>अ を保持</small></div>
+  <div><span class="sa">गवाग्रम्</span><small>अव を代置</small></div>
+</div>
+<p style="margin:8px 0 0">「牛の群れ」または「牛のうち最上のもの」。必ず अव になる例：<span lang="sa">गो + इन्द्रः = गवेन्द्रः</span>「優れた雄牛」、<span lang="sa">गो + अक्षः = गवाक्षः</span>「格子窓」。</p>
+</figure>
+</div>
+</section>
+
+<!-- §26 -->
+<section class="para" id="s26">
+<h3><span class="sec">§26</span> 連声が起こらない場合 <span class="pg">pp.20–22</span></h3>
+<p>次の場合には連声は起こらない。</p>
+<aside class="sutra"><span lang="sa">प्लुतप्रगृह्या अचि नित्यम् ।</span><span class="gl">「Pluta と Pragṛhya は母音の前で常に（そのまま）」</span><cite>Pāṇ. VI.1.125</cite></aside>
+
+<h4 style="font-family:var(--font-ui);font-size:15px;margin:16px 0 4px">I　いわゆる Pragṛhya（<span lang="sa">प्रगृह्य</span>）の例外</h4>
+<div class="sub-item"><span class="lbl">(a)</span>
+<p>両数形（名詞・代名詞・動詞のいずれでも）が <span lang="sa">ई, ऊ, ए</span> で終わるとき。</p>
+<aside class="sutra"><span lang="sa">ईदूदेद्द्विवचनं प्रगृह्यम् ।</span><cite>Pāṇ. I.1.11</cite></aside>
+<div class="ex">
+<span class="f">हरी एतौ</span><span class="g">この 2 人のハリ</span>
+<span class="f">विष्णू इमौ</span><span class="g">この 2 人のヴィシュヌ</span>
+<span class="f">गङ्गे अमू</span><span class="g">あの 2 つのガンガー</span>
+<span class="f">पचेते इमौ</span><span class="g">この 2 人は料理する</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(b)</span>
+<p>代名詞 <span lang="sa">अदस्</span> の <span lang="sa">म्</span> の後に <span lang="sa">ई</span> または <span lang="sa">ऊ</span> が来るとき。</p>
+<aside class="sutra"><span lang="sa">अदसो मात् ।</span><cite>Pāṇ. I.1.12</cite></aside>
+<div class="ex">
+<span class="f">अमी ईशाः</span><span class="g">あの主たち</span>
+<span class="f">अमू आसाते</span><span class="g">あの 2 人は座っている</span>
+</div>
+<div class="note"><b>Ob.</b>ヴェーダの形 <span lang="sa">अस्मे</span> と <span lang="sa">युष्मे</span> の <span lang="sa">ए</span> も、後続の母音と融合しない（<span lang="sa">शे ।</span> Pāṇ. I.1.13）。例：<span lang="sa">अस्मे इन्द्राबृहस्पती</span> (Ṛg. IV.49.4)。同様に、処格の意味をもつ（が処格語尾で終わらない）ヴェーダの語も、後続の母音の影響を受けない。例：<span lang="sa">सोमो गौरी अधि श्रितः</span> (Ṛg. IX.12.3)。ここで <span lang="sa">गौरी</span> は <span lang="sa">गौर्याम्</span> の意であり、処格語尾が <span lang="sa">सुपां सुलुक्</span> (Pāṇ. VII.1.39) によって脱落したものである。</div>
+</div>
+<div class="sub-item"><span class="lbl">(c)</span>
+<p>単一の母音から成る小辞（不変化詞）。ただし「少し」または「限界」（排他的・包括的のいずれでも）の意味の <span lang="sa">आ</span>、および接頭辞として用いられる <span lang="sa">आ</span> は除く。</p>
+<aside class="sutra"><span lang="sa">निपात एकाजनाङ् ।</span><cite>Pāṇ. I.1.14</cite></aside>
+<div class="ex">
+<span class="f">इ इन्द्र</span><span class="g">おお、インドラよ</span>
+<span class="f">उ उमेश</span><span class="g">おお、ウマーの主よ</span>
+<span class="f">आ एवं मन्यसे</span><span class="g">ああ、君はそう考えるのか</span>
+<span class="f">आ + उष्णम् = <span class="r">ओष्णम्</span></span><span class="g">ただし「少し温かい」の आ は連声する</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(d)</span>
+<p>不変化詞が <span lang="sa">ओ</span> で終わるとき。また、呼格の名詞の語末の <span lang="sa">ओ</span> は、後に（ヴェーダ以外の）<span lang="sa">इति</span> が続くとき、任意で結合する。</p>
+<aside class="sutra"><span lang="sa">ओत् । सम्बुद्धौ शाकल्यस्येतावनार्षे ।</span><cite>Pāṇ. I.1.15–16</cite></aside>
+<div class="ex">
+<span class="f">अहो ईशाः</span><span class="g">ああ、主たちよ</span>
+<span class="f">विष्णो + इति = <span class="r">विष्णविति</span> ／ <span class="r">विष्णो इति</span> ／ <span class="r">विष्ण इति</span></span><span class="g">最後のものは §24 (a)</span>
+</div>
+</div>
+<div class="note"><b>N.B.</b>以上の、他と融合しない母音、ときにはそれを含む語そのものが、術語として <span lang="sa">प्रगृह्य</span>（Pragṛhya）と呼ばれる。</div>
+
+<h4 style="font-family:var(--font-ui);font-size:15px;margin:22px 0 4px">II　Pluta（延長）母音</h4>
+<div class="ex"><span class="f">एहि कृष्ण३ अत्र गौश्चरति</span><span class="g">来なさい、クリシュナよ。ここで牛が草を食んでいる</span></div>
+<p>母音は次の場合に Pluta となる。</p>
+<aside class="sutra"><span lang="sa">वाक्यस्य टेः प्लुत उदात्तः । प्रत्यभिवादेऽशूद्रे ।</span><cite>Pāṇ. VIII.2.82–83</cite><span class="gl">Vārttika：<span lang="sa">स्त्रियां न । भोराजन्यविशां वेति वाच्यम् ।</span></span></aside>
+<div class="sub-item"><span class="lbl">(1)</span>
+<p>Śūdra 以外の男性からの挨拶に答えて言う文の最後の母音。ただし、その人の名前または家名が実際に言及される場合に限る。</p>
+<div class="ex">
+<span class="f">अभिवादये देवदत्तोऽहम्</span><span class="g">「私デーヴァダッタがご挨拶申し上げます」</span>
+<span class="f">आयुष्मान् एधि देवदत्त<span class="r">३</span></span><span class="g">「長生きせよ、デーヴァダッタよ」（上の挨拶への返答）</span>
+<span class="f">भो आयुष्मती भव गार्गि</span><span class="g">最後の इ は Pluta にならない（女性の名だから）</span>
+<span class="f">आयुष्मान् एधि</span><span class="g">これも Pluta にならない（名前がないから）</span>
+</div>
+<p>ただし文が語 <span lang="sa">भोः</span>、または Kṣatriya・Vaiśya の名で終わるときは、最後の母音は任意で Pluta になる。</p>
+<div class="ex">
+<span class="f">आयुष्मान् एधि भोः ／ भो<span class="r">३</span>ः</span><span class="g"></span>
+<span class="f">आयुष्मानेधीन्द्रवर्मन् ／ इन्द्रवर्म<span class="r">३</span>न्</span><span class="g">（Kṣatriya の名）</span>
+<span class="f">आयुष्मानेधीन्द्रपालित ／ इन्द्रपालित<span class="r">३</span></span><span class="g">（Vaiśya の名）</span>
+</div>
+</div>
+<div class="sub-item"><span class="lbl">(2)</span>
+<p>遠くの人に呼びかける文の最後の母音。またそのような文で用いられる小辞 <span lang="sa">हे</span> と <span lang="sa">है</span> の母音。</p>
+<aside class="sutra"><span lang="sa">दूराद्धूते च । हैहेप्रयोगे हैहयोः ।</span><cite>Pāṇ. VIII.2.84–85</cite></aside>
+<div class="ex">
+<span class="f">सक्तून् पिब देवदत्त<span class="r">३</span></span><span class="g">麦こがしを飲め、デーヴァダッタよ！</span>
+<span class="f">हे<span class="r">३</span> राम ／ राम है<span class="r">३</span></span><span class="g">おーい、ラーマ！</span>
+</div>
+</div>
+</section>
+
+<!-- §27 -->
+<section class="para" id="s27">
+<h3><span class="sec">§27</span> 小辞 <span lang="sa">उ</span> <span class="pg">p.22</span></h3>
+<p>小辞 <span lang="sa">उ</span> は、前に 5 類の子音（<span lang="sa">ञ</span> を除く）があり、後に母音が続くとき、任意で <span lang="sa">व्</span> に変わる。</p>
+<aside class="sutra"><span lang="sa">मय उञो वो वा ।</span><cite>Pāṇ. VIII.3.33</cite></aside>
+<div class="ex">
+<span class="f">किम् + उ + उक्तम् = <span class="r">किम्वुक्तम्</span> ／ <span class="r">किमु उक्तम्</span></span><span class="g">何が言われたのか（後者は §26 (c) により結合しない）</span>
+</div>
+</section>
+
+<h2 class="part" id="hal">II　子音連声 <span lang="sa">हल्सन्धि</span><small>Halsandhi, or the coalescence of final consonants with vowels and consonants — §28 以下（見本には未収録）</small></h2>
+<p style="color:var(--ink-muted);font-family:var(--font-ui);font-size:14px">見本はここまで。§28 以降（子音連声・Visarga 連声）を続けて作成する予定。</p>
+
+<div class="pagenav">
+  <a href="ch01.html">← 第1章 字母</a>
+  <a href="index.html">目次 →</a>
+</div>
+<footer class="colophon">底本：M. R. Kale, <i>A Higher Sanskrit Grammar</i>, 7th ed., Bombay, 1931。本頁は同書の内容と配列に従った日本語による解説であり、直訳ではない。「補説（訳者）」の枠、早見表 2-A、図 2-2 は原書にない補足である。下線点線の <span class="reconstructed">※</span> は、OCR が不鮮明なため推定で補った箇所。</footer>
+</main>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('theme');
+  try{var t=localStorage.getItem('kale-theme'); if(t) document.documentElement.setAttribute('data-theme',t);}catch(e){}
+  b.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme');
+    var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt=dark?'light':'dark'; document.documentElement.setAttribute('data-theme',nt);
+    try{localStorage.setItem('kale-theme',nt);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
