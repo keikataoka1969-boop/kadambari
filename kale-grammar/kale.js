@@ -56,6 +56,13 @@
     lines.forEach(function (l, k) { if (k) sp.appendChild(document.createElement('br')); sp.appendChild(document.createTextNode(toIAST(l))); });
     el.insertAdjacentElement('afterend', sp);
   });
+  // 変化表のセル
+  document.querySelectorAll('table.para td.f').forEach(function (el) {
+    el.querySelectorAll('span.w').forEach(function (w) {
+      var sp = document.createElement('small'); sp.className = 'tr'; sp.textContent = toIAST(w.textContent.trim());
+      w.insertAdjacentElement('afterend', sp);
+    });
+  });
   // 結果の形
   document.querySelectorAll('.forms4 .sa').forEach(function (el) {
     var sp = document.createElement('span'); sp.className = 'tr'; sp.textContent = toIAST(el.textContent.trim());
