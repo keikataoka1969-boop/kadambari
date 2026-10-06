@@ -291,7 +291,7 @@ table.para td.hl2 { background: var(--indigo-wash); }
 table.para td.hl3 { background: var(--green-wash); }
 table.para td.same { color: var(--muted); }
 table.para tr.vrow td, table.para tr.vrow th { border-bottom: 2px solid var(--rule); }
-.para-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 14px; }
+.para-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr)); gap: 14px; }
 .para-grid > * { min-width: 0; }
 .ending { color: var(--red); font-weight: 700; }
 .ladder > div { min-width: 0; overflow-wrap: anywhere; }
