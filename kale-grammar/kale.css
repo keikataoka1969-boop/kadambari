@@ -268,3 +268,4 @@ footer.colophon { font-family: var(--font-ui); font-size: .78rem; color: var(--m
 }
 table.sandhi { min-width: 660px; }
 @media (max-width: 600px) { table.t { font-size: .9rem; } }
+.sutra > [lang="sa"], .sutra .tr, .ex > .f, .deriv .form, .forms4 .sa { overflow-wrap: anywhere; }
