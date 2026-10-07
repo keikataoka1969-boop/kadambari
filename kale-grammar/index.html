@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kale 高等サンスクリット文法</title>
+<meta name="description" content="M. R. Kale, A Higher Sanskrit Grammar の内容と配列に基づく、図表中心の日本語サンスクリット文法教科書。">
+<link rel="stylesheet" href="kale.css">
+<style>
+  .hero { padding: 40px 0 20px; border-bottom: 2px solid var(--ink); margin-bottom: 24px; }
+  .hero h1 { font-size: 32px; margin: 0; line-height: 1.4; }
+  .hero .en { font-family: var(--font-ui); color: var(--muted); font-size: 14px; }
+  .one { max-width: 860px; margin: 0 auto; padding: 0 16px 80px; }
+  table.toc-t td, table.toc-t th { text-align: left; }
+  table.toc-t td.pg { text-align: right; font-family: var(--font-ui); font-size: 12px; color: var(--muted); white-space: nowrap; }
+  table.toc-t tr.sub td:first-child { padding-left: 2em; font-size: 14px; color: var(--ink-soft); }
+  .badge { font-family: var(--font-ui); font-size: 11px; padding: 1px 7px; border-radius: 9px; background: var(--accent); color: var(--card); margin-left: 6px; }
+  .badge.part { background: var(--gold); }
+</style>
+</head>
+<body>
+<div class="top-bar"><div class="inner">
+  <a class="title" href="index.html">Kale 文法</a>
+  <span class="spacer"></span>
+  <button type="button" id="theme">明暗</button>
+</div></div>
+<div class="one">
+<header class="hero">
+  <div class="en">M. R. Kale, <i>A Higher Sanskrit Grammar</i> (7th ed., 1931) に基づく</div>
+  <h1>Kale 高等サンスクリット文法<br><small style="font-size:20px">図と表で読む日本語版</small></h1>
+</header>
+<p>本書は、M. R. Kale の <i>A Higher Sanskrit Grammar</i> の内容と章立て・§番号をそのまま踏襲し、英語の説明部分を日本語で読めるようにしたものである。原書の術語はデーヴァナーガリー表記のものはそのまま、ローマ字表記のものは IAST に改めて示し、Pāṇini の経などの原注は「典拠」の枠で本文の該当箇所に置いた。理解を助けるために図と表を多用しているが、原書にない補足は「補説（訳者）」の枠に入れて区別してある。</p>
+
+<div class="scroll-x">
+<table class="t toc-t">
+<thead><tr><th>章</th><th style="text-align:right">原書頁</th></tr></thead>
+<tbody>
+<tr><td><a href="ch01.html">第1章　字母</a> <span class="badge">完成</span></td><td class="pg">1</td></tr>
+<tr><td><a href="ch02.html">第2章　連声の規則</a> <span class="badge">完成</span></td><td class="pg">12</td></tr>
+<tr class="sub"><td><a href="ch02.html#svara">1 母音連声 Svarasandhi</a></td><td class="pg">12</td></tr>
+<tr class="sub"><td><a href="ch02.html#hal">2 子音連声 Halsandhi</a></td><td class="pg">22</td></tr>
+<tr class="sub"><td><a href="ch02.html#visarga">3 Visarga 連声 Visargasandhi</a></td><td class="pg">28</td></tr>
+<tr><td><a href="ch03-1.html">第3章　名詞の格変化（Subanta）</a> <span class="badge">完成</span></td><td class="pg">32</td></tr>
+<tr class="sub"><td><a href="ch03-1.html#vowel">1 母音語幹（第1節）</a></td><td class="pg">34</td></tr>
+<tr class="sub"><td><a href="ch03-2.html">2 子音語幹（第2節）</a></td><td class="pg">54</td></tr>
+<tr class="sub"><td><a href="ch03-2.html#irr1">3 不規則語幹</a></td><td class="pg">65</td></tr>
+<tr class="sub"><td><a href="ch03-3.html#irrw">4 不規則変化の語</a></td><td class="pg">82</td></tr>
+<tr><td><a href="ch04.html">第4章　代名詞とその変化</a> <span class="badge">完成</span></td><td class="pg">87</td></tr>
+<tr><td><a href="ch05.html">第5章　数詞とその変化</a> <span class="badge">完成</span></td><td class="pg">102</td></tr>
+<tr><td><a href="ch06.html">第6章　比較級</a> <span class="badge">完成</span></td><td class="pg">110</td></tr>
+<tr><td><a href="ch07-1.html">第7章　複合語</a> <span class="badge">完成</span></td><td class="pg">113</td></tr>
+<tr class="sub"><td><a href="ch07-1.html#dv">1 Dvandva（並列複合語）</a></td><td class="pg">115</td></tr>
+<tr class="sub"><td><a href="ch07-2.html">2 Tatpuruṣa（限定複合語）</a></td><td class="pg">121</td></tr>
+<tr class="sub"><td><a href="ch07-3.html">3 Karmadhāraya（同格複合語）</a></td><td class="pg">133</td></tr>
+<tr class="sub"><td><a href="ch07-3.html#prep">4 Upapada 複合語</a></td><td class="pg">144</td></tr>
+<tr class="sub"><td><a href="ch07-4.html">5 Bahuvrīhi（所有複合語）</a></td><td class="pg">147</td></tr>
+<tr class="sub"><td><a href="ch07-5.html">6 Avyayībhāva（副詞複合語）</a></td><td class="pg">160</td></tr>
+<tr class="sub"><td><a href="ch07-5.html#gen">7 すべての複合語に共通する規則</a></td><td class="pg">168</td></tr>
+<tr class="sub"><td><a href="ch07-5.html#oth">8 複合語に関わるその他の変化</a></td><td class="pg">171</td></tr>
+<tr><td><a href="ch08.html">第8章　女性語幹の形成</a> <span class="badge">完成</span></td><td class="pg">180</td></tr>
+<tr><td><a href="ch09.html">第9章　Taddhita（二次接尾辞）による二次名詞語幹</a> <span class="badge">完成</span></td><td class="pg">194</td></tr>
+<tr><td><a href="ch10.html">第10章　性</a> <span class="badge">完成</span></td><td class="pg">219</td></tr>
+<tr><td><a href="ch11.html">第11章　不変化詞（Avyaya）</a> <span class="badge">完成</span></td><td class="pg">223</td></tr>
+<tr class="sub"><td>1 前置詞　2 副詞　3 小辞　4 接続詞　5 間投詞</td><td class="pg">224–231</td></tr>
+<tr><td><a href="ch12-1.html">第12章　動詞の活用</a> <span class="badge">完成</span></td><td class="pg">233</td></tr>
+<tr class="sub"><td><a href="ch12-1.html">総説・第1グループ（第1・4・6・10類）</a></td><td class="pg">238</td></tr><tr class="sub"><td><a href="ch12-2.html">第2グループ：第5・8・9類と第2類</a></td><td class="pg">254</td></tr><tr class="sub"><td><a href="ch12-3.html">第2類の不規則動詞</a></td><td class="pg">268</td></tr><tr class="sub"><td><a href="ch12-4.html">第3類（重複）</a></td><td class="pg">281</td></tr><tr class="sub"><td><a href="ch12-5.html">第7類（鼻音挿入）</a></td><td class="pg">290</td></tr>
+<tr class="sub"><td><a href="ch12-6.html">一般時制の総説・二つの未来・条件法</a></td><td class="pg">295</td></tr>
+<tr class="sub"><td><a href="ch12-7.html">完了（1）</a>・<a href="ch12-8.html">完了（2）</a></td><td class="pg">306</td></tr>
+<tr class="sub"><td><a href="ch12-9.html">アオリスト（1）第1・2形</a>・<a href="ch12-10.html">（2）第3形</a>・<a href="ch12-11.html">（3）第4〜7形</a></td><td class="pg">332</td></tr>
+<tr class="sub"><td><a href="ch12-12.html">祈願法・第2節 受動態</a></td><td class="pg">356</td></tr>
+<tr class="sub"><td><a href="ch12-13.html">第3節 派生動詞（1）使役</a></td><td class="pg">367</td></tr>
+<tr class="sub"><td><a href="ch12-14.html">派生動詞（2）意欲</a>・<a href="ch12-15.html">（3）強意</a></td><td class="pg">376</td></tr>
+<tr class="sub"><td><a href="ch12-16.html">派生動詞（4）名詞起源動詞</a></td><td class="pg">392</td></tr>
+<tr><td><a href="ch13.html">第13章　Parasmaipada と Ātmanepada</a> <span class="badge">完成</span></td><td class="pg">399</td></tr>
+<tr><td><a href="ch14-1.html">第14章　動詞派生語（一次名詞語幹）</a> <span class="badge">完成</span></td><td class="pg">416</td></tr>
+<tr class="sub"><td><a href="ch14-1.html">総説・分詞（1）現在・完了・過去受動分詞</a></td><td class="pg">416</td></tr>
+<tr class="sub"><td><a href="ch14-2.html">分詞（2）過去能動・未来・可能分詞</a></td><td class="pg">429</td></tr>
+<tr class="sub"><td><a href="ch14-3.html">不変化分詞・不定詞</a></td><td class="pg">440</td></tr>
+<tr class="sub"><td><a href="ch14-4.html">第2節 Kṛt 接辞一覧</a></td><td class="pg">451</td></tr>
+<tr><td><a href="ch15-1.html">第15章　統語論</a> <span class="badge">完成</span></td><td class="pg">468</td></tr>
+<tr class="sub"><td><a href="ch15-1.html">総説・第1節 一致</a></td><td class="pg">468</td></tr>
+<tr class="sub"><td><a href="ch15-2.html">第2節 支配（1）対格・具格・為格</a></td><td class="pg">475</td></tr>
+<tr class="sub"><td><a href="ch15-3.html">支配（2）奪格・属格・処格・独立句</a></td><td class="pg">491</td></tr>
+<tr class="sub"><td><a href="ch15-4.html">第3節 代名詞・第4節 分詞・不定詞</a></td><td class="pg">508</td></tr>
+<tr class="sub"><td><a href="ch15-5.html">時制と法・第5節 不変化詞</a></td><td class="pg">518</td></tr>
+<tr><td><a href="app1.html">付録 I　韻律（Samavṛtta・Viṣamavṛtta）</a> <span class="badge">完成</span></td><td class="pg">1–27</td></tr>
+<tr><td><a href="app2.html">付録 II　語根辞典（Dhātukośa）</a> <span class="badge">完成</span></td><td class="pg">1–156</td></tr>
+</tbody>
+</table>
+</div>
+<footer class="colophon">底本：M. R. Kale, <i>A Higher Sanskrit Grammar</i>, 7th ed., Bombay: Gopal Narayen &amp; Co., 1931. 底本画像：Prof. Satya Vrat Shastri Collection（Arya Samaj Foundation Chennai and eGangotri によるデジタル化）。</footer>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('theme');
+  try{var t=localStorage.getItem('kale-theme'); if(t) document.documentElement.setAttribute('data-theme',t);}catch(e){}
+  b.addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme');
+    var dark=cur?cur==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    var nt=dark?'light':'dark'; document.documentElement.setAttribute('data-theme',nt);
+    try{localStorage.setItem('kale-theme',nt);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
