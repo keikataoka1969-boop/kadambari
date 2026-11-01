@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  var TARGETS = ".sanskrit, .sk, .sanskrit-verse, .verse-sanskrit, .iast, .term-sk, .colophon, .final-colophon";
+  var TARGETS = ".sanskrit, .sk, .sanskrit-verse, .verse-sanskrit, .iast, .term, .term-sk, .colophon, .final-colophon";
   var STRICT = ".colophon, .final-colophon"; // 和文混在：大文字を含む語（書名・GRETIL 等）は変換しない
   var KEY = "kamasutra-lipi";
 
@@ -143,7 +143,7 @@
       ".lipi-switch button+button{border-left:1px solid var(--border,#ddd5c8)}" +
       ".lipi-switch button[aria-pressed=true]{background:var(--accent,#a0522d);color:var(--bg-card,#fff)}" +
       ".lipi-switch button:focus-visible{outline:2px solid var(--accent,#a0522d);outline-offset:-2px}" +
-      "html.lipi-deva :is(.sanskrit,.sk,.sanskrit-verse,.verse-sanskrit,.iast,.term-sk)" +
+      "html.lipi-deva :is(.sanskrit,.sk,.sanskrit-verse,.verse-sanskrit,.iast,.term,.term-sk)" +
       "{font-family:'Noto Serif Devanagari',serif;font-style:normal;letter-spacing:0}" +
       "@media print{.lipi-switch{display:none}}";
     var st = document.createElement("style");
