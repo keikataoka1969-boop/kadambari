@@ -1,0 +1,18 @@
+/* 本文（サンスクリット・和訳）の文字サイズを全章で統一して拡大する。
+   各章の個別スタイルより優先させるため !important を使う（表のセルは除外）。 */
+:is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) {
+  font-size: 1.13rem !important;
+  line-height: 1.95 !important;
+}
+:is(.japanese, .jp, .verse-trans, .japanese-verse, .verse-japanese):not(td):not(th) {
+  font-size: 1.1rem !important;
+  line-height: 1.95 !important;
+}
+html.lipi-deva :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) {
+  font-size: 1.2rem !important;
+}
+@media (max-width: 640px) {
+  :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) { font-size: 1.06rem !important; }
+  :is(.japanese, .jp, .verse-trans, .japanese-verse, .verse-japanese):not(td):not(th) { font-size: 1.04rem !important; }
+  html.lipi-deva :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) { font-size: 1.12rem !important; }
+}
