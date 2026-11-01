@@ -1,0 +1,430 @@
+<title>Bīdil Tarjīʻ-band · Band 1 対訳</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #f0ebe3;
+    --bg-card: #faf7f1;
+    --text: #2a2520;
+    --text-muted: #6b5e52;
+    --text-light: #8a7d71;
+    --accent: #5a3a28;
+    --accent-light: #7d5a44;
+    --gold: #b8860b;
+    --gold-muted: #c9a84c;
+    --border: #d5cdc0;
+    --border-light: #e4ddd2;
+    --divider: #c4bab0;
+    --shadow: rgba(42, 37, 32, 0.06);
+    --refrain-bg: #f5efe4;
+    --refrain-border: #b8860b;
+    --gah-accent: #6e4230;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612;
+      --bg-card: #24201a;
+      --text: #e0d8cc;
+      --text-muted: #a89e92;
+      --text-light: #7a7068;
+      --accent: #d4a87a;
+      --accent-light: #e8c49e;
+      --gold: #d4a843;
+      --gold-muted: #a68a3a;
+      --border: #3a3228;
+      --border-light: #2e2820;
+      --divider: #4a4238;
+      --shadow: rgba(0, 0, 0, 0.3);
+      --refrain-bg: #2a2418;
+      --refrain-border: #d4a843;
+      --gah-accent: #e0b888;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612;
+    --bg-card: #24201a;
+    --text: #e0d8cc;
+    --text-muted: #a89e92;
+    --text-light: #7a7068;
+    --accent: #d4a87a;
+    --accent-light: #e8c49e;
+    --gold: #d4a843;
+    --gold-muted: #a68a3a;
+    --border: #3a3228;
+    --border-light: #2e2820;
+    --divider: #4a4238;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --refrain-bg: #2a2418;
+    --refrain-border: #d4a843;
+    --gah-accent: #e0b888;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', 'Noto Serif JP', Georgia, serif;
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.7;
+  }
+
+  .title-block {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .title-block h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+  }
+  .title-block .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin: 0.3rem 0;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .title-block .poet-name {
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin: 0.8rem 0 0.2rem;
+    font-weight: 500;
+  }
+  .title-block .poet-jp {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .note {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .note strong { color: var(--text); }
+
+  .band-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .band-num {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .band-info {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .bayt {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.6rem;
+    box-shadow: 0 1px 3px var(--shadow);
+    position: relative;
+  }
+  .bayt-num {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 0.72rem;
+    color: var(--text-light);
+    font-variant-numeric: tabular-nums;
+  }
+  .roman-line {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text);
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 0.15rem;
+    padding-right: 2.5rem;
+  }
+  .divider {
+    text-align: center;
+    color: var(--divider);
+    font-size: 0.75rem;
+    margin: 0.4rem 0;
+    letter-spacing: 0.3em;
+  }
+  .jp-line {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .gah {
+    color: var(--gah-accent);
+    font-weight: 500;
+  }
+
+  .refrain {
+    background: var(--refrain-bg);
+    border: 2px solid var(--refrain-border);
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .refrain .roman-line {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--gold);
+    padding-right: 0;
+    text-align: center;
+  }
+  .refrain .jp-line {
+    font-size: 0.95rem;
+    color: var(--text);
+    text-align: center;
+  }
+  .refrain .divider {
+    color: var(--gold-muted);
+  }
+  .refrain-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold-muted);
+    margin-bottom: 0.6rem;
+    font-family: 'EB Garamond', serif;
+  }
+
+  .colophon {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+  .colophon a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1.2rem 1rem 3rem; }
+    .title-block h1 { font-size: 1.4rem; }
+    .roman-line { font-size: 0.98rem; }
+    .jp-line { font-size: 0.88rem; }
+    .refrain .roman-line { font-size: 1.05rem; }
+  }
+</style>
+
+<div class="title-block">
+  <div class="poet-name">Abū al-Maʻānī Mīrzā ʻAbd al-Qādir Bīdil Dihlavī</div>
+  <div class="poet-jp">アブー・アル＝マアーニー・ミールザー・アブドゥル＝カーディル・ビーディル・ディフラヴィー</div>
+  <h1>Tarjīʻ-band · Band 1</h1>
+  <div class="subtitle">ターリジーウ・バンド 対訳 第1連</div>
+</div>
+
+<div class="note">
+  <strong>凡例</strong>：ローマ字転写はALA-LC（米国議会図書館）方式によるペルシア語転写。底本は Ganjoor (ganjoor.net) 所収テキスト（Akbar Bihdārvand 校訂版）。日本語訳は各聯（bayt）ごとの意訳。ターリジーウ・バンドは複数の「バンド」（連）から成り、各連の末尾に共通のリフレイン（繰り返し句）が置かれる詩形。全68連・約1,790バイトの大作から、最も有名な第1連（20バイト＋リフレイン）を収録。
+</div>
+
+<section class="band-block">
+  <div class="band-header">
+    <span class="band-num">Band 1</span>
+    <span class="band-info">Rhyme: -ārīm · 20 bayts + refrain</span>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">1</div>
+    <div class="roman-line">mā ḥarīfān-i bazm-i asrārīm</div>
+    <div class="roman-line">mast-i jām-i shuhūd-i dīdārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">我らは秘儀の宴の仲間</div>
+    <div class="jp-line">直観の杯に酔いし者たち</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">2</div>
+    <div class="roman-line">jūsh-i baḥr-i muḥīṭ-i lāhūtīm</div>
+    <div class="roman-line">fayż-i ṣubḥ-i jahān-i anvārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">神界の大洋の沸き立ちなり</div>
+    <div class="jp-line">光明の世界の暁の恩寵なり</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">3</div>
+    <div class="roman-line">as̱ar va fiʻl-i Ḥaqq zi mā paydā-st</div>
+    <div class="roman-line">bī-gumān ʻarż-i sirr-i iẓhārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">真実（ハック）の痕跡と行為は我らから顕わなり</div>
+    <div class="jp-line">疑いなく我らは顕現の秘密を示す者</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">4</div>
+    <div class="roman-line">jalvah-farmā-st Ḥaqq bih kisvat-i mā</div>
+    <div class="roman-line">lā-jaram ṭurfah rang-hā dārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">真実は我らの衣をまとい姿を現す</div>
+    <div class="jp-line">ゆえに我らは不思議な色彩を帯びている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">5</div>
+    <div class="roman-line"><span class="gah">gāh</span> jāmīm va <span class="gah">gāh</span> bādah-ʼi nāb</div>
+    <div class="roman-line"><span class="gah">gāh</span> sāqī va <span class="gah">gāh</span> khammārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には杯であり、時には純酒</div>
+    <div class="jp-line">時には酌人であり、時には酒飲みなり</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">6</div>
+    <div class="roman-line"><span class="gah">gāh</span> majnūn va <span class="gah">gāh</span> jawhar-i hūsh</div>
+    <div class="roman-line"><span class="gah">gāh</span> mastīm va <span class="gah">gāh</span> hushyārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には狂人であり、時には理性の精髄</div>
+    <div class="jp-line">時には酔い、時には醒めている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">7</div>
+    <div class="roman-line"><span class="gah">gāh</span> majnūn-i kār-hā-yi khudīm</div>
+    <div class="roman-line"><span class="gah">gāh</span> az fiʻl-i khvīsh bīzārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には自らの行いに狂い</div>
+    <div class="jp-line">時には自らの所業を厭う</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">8</div>
+    <div class="roman-line"><span class="gah">gāh</span> az khvīsh raftah chūn saylāb</div>
+    <div class="roman-line"><span class="gah">gāh</span> tamkīn-banā chū kūhsārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には洪水のように己を忘れ</div>
+    <div class="jp-line">時には山脈のように泰然と構える</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">9</div>
+    <div class="roman-line"><span class="gah">gāh</span> maʻmūrah-ʼi vujūdī rā</div>
+    <div class="roman-line">bih ghiz̤ā va sharāb miʻmārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には存在という居住地を</div>
+    <div class="jp-line">食と酒をもって建築する</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">10</div>
+    <div class="roman-line"><span class="gah">gāh</span> dar ʻālam-i taghāful-i shawq</div>
+    <div class="roman-line">bī-niyāz az khayāl-i tīmārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には憧憬の忘我の世界にあって</div>
+    <div class="jp-line">世話や介抱の思いすら要らぬ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">11</div>
+    <div class="roman-line"><span class="gah">gāh</span> dar dil zi khāl-i lālah-rukhān</div>
+    <div class="roman-line">tukhm-i sawdā-yi ʻishq mī-kārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時にはチューリップ頬の美人の黒子から</div>
+    <div class="jp-line">心に恋の妄執の種を蒔く</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">12</div>
+    <div class="roman-line"><span class="gah">gāh</span> az zulf-i ʻanbarīn-mūyān</div>
+    <div class="roman-line">bih shikanj-i havas giriftārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には龍涎香の髪の美人の巻毛に</div>
+    <div class="jp-line">欲望の縺れに囚われる</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">13</div>
+    <div class="roman-line">ḥāṣil-i kār va bār-i ʻishq va havas</div>
+    <div class="roman-line">hamah az mā-st tā chih bardārīm?</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋と欲の仕事と荷の実りは</div>
+    <div class="jp-line">すべて我らから出る──さて何を手に取ろうか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">14</div>
+    <div class="roman-line">dar chamanzār-i ʻālam-i imkān</div>
+    <div class="roman-line">az rah-i jism va jān gul va khārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">可能世界の緑野にあって</div>
+    <div class="jp-line">肉体と魂の道から花でもあり棘でもある</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">15</div>
+    <div class="roman-line"><span class="gah">gāh</span> luṭfīm, mawj-i āb-i ḥayāt</div>
+    <div class="roman-line">dam-i sargarmī-yi ghażab nārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時には恩寵そのもの、生命の水の波</div>
+    <div class="jp-line">怒りに耽る折には火そのもの</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">16</div>
+    <div class="roman-line">barq-i ʻishqīm, shuʻlah mī-khandīm</div>
+    <div class="roman-line">abr-i shawqīm, nālah mī-bārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋の稲妻であり、炎のように笑う</div>
+    <div class="jp-line">憧憬の雲であり、嘆きを降らせる</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">17</div>
+    <div class="roman-line">gar-chih bi-ʼl-z̤āt vāḥidīm bih Ḥaqq</div>
+    <div class="roman-line">līk bā ism va fiʻl bisyārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">本質において真に一なるものなれど</div>
+    <div class="jp-line">名と行為においては多なるもの</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">18</div>
+    <div class="roman-line">shawq-i mā bā vujūd-i bī-rangī</div>
+    <div class="roman-line">tā bih rang āshnā-st gulzārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">我らの憧憬は色なき存在でありながら</div>
+    <div class="jp-line">色に馴染む限り我らは花園なり</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">19</div>
+    <div class="roman-line">kufr va dīn ast guftugū, var nah</div>
+    <div class="roman-line">ʻayn-i tasbīḥ va ʻayn-i zunnārīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">不信と信仰とはただの議論、さもなくば</div>
+    <div class="jp-line">我らは数珠そのもの、聖紐そのもの</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">20</div>
+    <div class="roman-line">bih fużūlān zi darsgāh-i yaqīn</div>
+    <div class="roman-line">īn du miṣraʻ gavāh mī-āvarīm</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">確信の学舎から出しゃばりたちへ</div>
+    <div class="jp-line">この二句を証として差し出そう──</div>
+  </div>
+
+  <div class="refrain">
+    <div class="refrain-label">Tarjīʻ · リフレイン</div>
+    <div class="roman-line">kih jahān nīst juz tajallī-yi Dūst</div>
+    <div class="roman-line">īn man va mā hamān iżāfat-i ū-st</div>
+    <div class="divider">✦ ✦ ✦</div>
+    <div class="jp-line">「世界は友（神）の顕現にほかならぬ</div>
+    <div class="jp-line">この〈私〉と〈我ら〉はただ彼の附加にすぎぬ」</div>
+  </div>
+</section>
+
+<div class="colophon">
+  Tarjīʻ-band-i Bīdil Dihlavī · Band 1<br>
+  底本：<a href="https://ganjoor.net/bedil/divan-bedel/tarji-bedel/" target="_blank">Ganjoor</a>
+  所収テキスト（Akbar Bihdārvand 校訂版、Nigāh 出版社、1380年太陽暦）<br>
+  ALA-LC Romanization（ペルシア語）＋ 日本語対訳<br>
+  第1連・20聯（bayt）＋リフレイン ／ 全68連中
+</div>

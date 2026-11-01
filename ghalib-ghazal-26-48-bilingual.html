@@ -1,0 +1,1705 @@
+<title>Dīvān-i Ghālib 対訳 Ghazal 26–48</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
+
+  :root {
+    --bg: #f5f0e4;
+    --bg-card: #fffdf6;
+    --text: #2a231a;
+    --text-muted: #6b5e4f;
+    --text-light: #8a7d6e;
+    --accent: #2d3561;
+    --accent-light: #4a5a8a;
+    --gold: #c5943a;
+    --gold-light: #d4a95a;
+    --border: #d4cab4;
+    --border-light: #e4dbca;
+    --section-bg: rgba(45,53,97,0.03);
+    --shadow: rgba(44,36,25,0.06);
+    --ghazal-bg: rgba(197,148,58,0.04);
+    --num-color: #8a7d6e;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #181614;
+      --bg-card: #23201b;
+      --text: #ddd6c8;
+      --text-muted: #a09582;
+      --text-light: #706658;
+      --accent: #8e9fd4;
+      --accent-light: #aab6e0;
+      --gold: #d4a95a;
+      --gold-light: #c5943a;
+      --border: #3a332a;
+      --border-light: #2e2822;
+      --section-bg: rgba(142,159,212,0.05);
+      --shadow: rgba(0,0,0,0.25);
+      --ghazal-bg: rgba(197,148,58,0.04);
+      --num-color: #706658;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #181614;
+    --bg-card: #23201b;
+    --text: #ddd6c8;
+    --text-muted: #a09582;
+    --text-light: #706658;
+    --accent: #8e9fd4;
+    --accent-light: #aab6e0;
+    --gold: #d4a95a;
+    --gold-light: #c5943a;
+    --border: #3a332a;
+    --border-light: #2e2822;
+    --section-bg: rgba(142,159,212,0.05);
+    --shadow: rgba(0,0,0,0.25);
+    --ghazal-bg: rgba(197,148,58,0.04);
+    --num-color: #706658;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', 'Georgia', serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.7;
+  }
+
+  .title-block {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .title-urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    direction: rtl;
+    margin-bottom: 0.8rem;
+    line-height: 2;
+  }
+  .title-roman {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+  }
+  .title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  .title-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.8;
+  }
+  .title-meta .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-style: normal;
+    font-size: 0.85rem;
+  }
+
+  .toc {
+    margin: 1.5rem 0 2.5rem;
+    padding: 1.2rem 1.5rem;
+    background: var(--section-bg);
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+  }
+  .toc-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8rem;
+  }
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+  .toc-list li {
+    break-inside: avoid;
+    margin-bottom: 0.3rem;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  .toc-list a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .toc-list a:hover { border-color: var(--accent-light); }
+  .toc-list .rhyme {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  .ghazal-block {
+    margin: 2.5rem 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .ghazal-head {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .ghazal-num {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.3rem;
+  }
+  .ghazal-matla {
+    font-size: 1.05rem;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 0.3rem;
+  }
+  .ghazal-meta {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  .ghazal-meta .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.75rem;
+  }
+
+  .bayt {
+    margin: 1.2rem 0;
+    padding: 0.9rem 1.2rem;
+    background: var(--bg-card);
+    border-radius: 4px;
+    border-left: 3px solid var(--border-light);
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .bayt-num {
+    font-size: 0.7rem;
+    color: var(--num-color);
+    text-align: right;
+    margin-bottom: 0.2rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .bayt .roman-line {
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.6;
+    padding: 0.1rem 0;
+    font-style: italic;
+  }
+  .bayt .jp-line {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.7;
+    padding: 0.1rem 0;
+  }
+  .bayt .divider {
+    text-align: center;
+    color: var(--border);
+    font-size: 0.65rem;
+    margin: 0.2rem 0;
+    letter-spacing: 0.5em;
+  }
+
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    letter-spacing: 0.3em;
+  }
+
+  .note {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    line-height: 1.7;
+  }
+  .note .jp { font-family: 'Noto Serif JP', serif; }
+
+  .colophon {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+  .colophon .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1rem 1rem 3rem; }
+    .title-urdu { font-size: 1.6rem; }
+    .title-roman { font-size: 1.2rem; }
+    .bayt { padding: 0.7rem 0.9rem; }
+    .toc-list { column-count: 1; }
+  }
+</style>
+
+<div class="title-block">
+  <div class="title-urdu">دیوانِ غالبِ کامل</div>
+  <div class="title-roman">Dīvān-i Ghālib-i Kāmil</div>
+  <div class="title-jp">ガーリブ完全詩集　対訳 Ghazal 26–48</div>
+  <div class="title-meta">
+    Mirzā Asad Allāh Ḳhān Ghālib (1797–1869)<br>
+    <span class="jp">ミルザー・アサド・アッラー・ハーン・ガーリブ</span><br>
+    <span class="jp" style="font-size:0.8rem; color:var(--text-light)">
+      底本：Ḥāmid Aḥmad Ḳhān 編 Dīvān-i Ghālib-i Kāmil<br>
+      ローマ字化：Frances W. Pritchett, <em>A Desertful of Roses</em><br>
+      Arshī 番号準拠・連句番号は Pritchett による
+    </span>
+  </div>
+</div>
+
+<div class="note">
+  <span class="jp">
+    本対訳はガーリブのウルドゥー語ディーヴァーンから、Ḥāmid 版の配列（年代順）に従い Ghazal 26–48 を収録する。各ghazalのdīvān所収連句（公刊連句）のみを対訳とし、未公刊連句（ḳhārijaz-dīvān）は省いた。ローマ字化テキストはPritchettによるALA-LC方式に準拠する。
+  </span>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+  <div class="toc-title">Ghazalīyāt · 目次</div>
+  <ul class="toc-list">
+    <li><a href="#g26">26</a> dard minnat-kash-e… <span class="rhyme">—ā nah huʾā</span></li>
+    <li><a href="#g27">27</a> gilah hai shauq ko… <span class="rhyme">—ā kā</span></li>
+    <li><a href="#g28">28</a> qat̤rah-e mai baskih… <span class="rhyme">—ar huʾā</span></li>
+    <li><a href="#g29">29</a> jab bah taqrīb-e safar… <span class="rhyme">—il bāñdhā</span></li>
+    <li><a href="#g30">30</a> maiñ aur bazm-e mai… <span class="rhyme">—ā thā</span></li>
+    <li><a href="#g31">31</a> ghar hamārā jo nah… <span class="rhyme">—āñ hotā</span></li>
+    <li><a href="#g32">32</a> nah thā kuchh to ḳhudā… <span class="rhyme">—ā hotā</span></li>
+    <li><a href="#g33">33</a> yak żarrah-e zamīñ… <span class="rhyme">—āġh kā</span></li>
+    <li><a href="#g34">34</a> vuh mirī chīn-e jabīñ… <span class="rhyme">—āñ samjhā</span></li>
+    <li><a href="#g35">35</a> phir mujhe dīdah-e tar… <span class="rhyme">—ar yād āyā</span></li>
+    <li><a href="#g36">36</a> huʾī tāḳhīr to kuchh… <span class="rhyme">—īr bhī thā</span></li>
+    <li><a href="#g37">37</a> lab-e ḳhushk dar-tishnagī… <span class="rhyme">—urdagāñ kā</span></li>
+    <li><a href="#g38">38</a> tū dost kisī kā bhī… <span class="rhyme">—ar nah huʾā thā</span></li>
+    <li><a href="#g39">39</a> shab kih vuh majlis-furoz… <span class="rhyme">—ūs thā</span></li>
+    <li><a href="#g40">40</a> āʾīnah dekh apnā-sā… <span class="rhyme">—ūr thā</span></li>
+    <li><a href="#g41">41</a> ʿarẓ-e niyāz-e ʿishq… <span class="rhyme">—il nahīñ rahā</span></li>
+    <li><a href="#g42">42</a> rashk kahtā hai… <span class="rhyme">—ā āshnā</span></li>
+    <li><a href="#g43">43</a> żikr us parī-vash kā… <span class="rhyme">—āñ apnā</span></li>
+    <li><a href="#g44">44</a> surmah-e muft-e naz̤ar… <span class="rhyme">—āñ merā</span></li>
+    <li><a href="#g45">45</a> ġhāfil bah vahm-e nāz… <span class="rhyme">—āh kā</span></li>
+    <li><a href="#g46">46</a> jaur se bāz āʾe par… <span class="rhyme">—āʾeñ kyā</span></li>
+    <li><a href="#g47">47</a> lat̤āfat be-kaṡāfat… <span class="rhyme">—ārī kā</span></li>
+    <li><a href="#g48">48</a> ʿishrat-e qat̤rah hai… <span class="rhyme">—ā ho jānā</span></li>
+  </ul>
+</div>
+
+
+<!-- ==================== GHAZAL 26 ==================== -->
+<div class="ghazal-block" id="g26">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 26</div>
+    <div class="ghazal-matla">dard minnat-kash-e davā nah huʾā</div>
+    <div class="ghazal-meta">
+      10 dīvān verses · Arshī #47 · Meter G8<br>
+      <span class="jp">1854年作 · Ḥāmid p. 24</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,1}</div>
+    <div class="roman-line">dard minnat-kash-e davā nah huʾā</div>
+    <div class="roman-line">maiñ nah achchhā huʾā burā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">痛みは薬の恩義を受けなかった</div>
+    <div class="jp-line">私は良くもならず、悪くもならなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,2}</div>
+    <div class="roman-line">jamʿa karte ho kyūñ raqīboñ ko</div>
+    <div class="roman-line">ik tamāshā huʾā gilā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">なぜ恋敵たちを集めるのか</div>
+    <div class="jp-line">一つの見世物になったが、不満にはならなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,3}</div>
+    <div class="roman-line">ham kahāñ qismat āzmāne jāʾeñ</div>
+    <div class="roman-line">tū hī jab ḳhanjar-āzmā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">我々はどこで運命を試しに行こうか</div>
+    <div class="jp-line">お前自身が短刀を試す気にもならなかったのに</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,4}</div>
+    <div class="roman-line">kitne shīrīñ haiñ tere lab kih raqīb</div>
+    <div class="roman-line">gāliyāñ khā ke be-mazā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あなたの唇はなんと甘いことか──恋敵は</div>
+    <div class="jp-line">罵倒を浴びても不快にならなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,5}</div>
+    <div class="roman-line">hai ḳhabar garm un ke āne kī</div>
+    <div class="roman-line">āj hī ghar meñ boriyā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの方の来訪の知らせが熱い</div>
+    <div class="jp-line">ちょうど今日、家には敷物さえなかったのに</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,6}</div>
+    <div class="roman-line">kyā vuh namrūd kī ḳhudāʾī thī</div>
+    <div class="roman-line">bandagī meñ mirā bhalā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あれはニムロードの神性だったのか</div>
+    <div class="jp-line">崇拝において私の幸福は叶わなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,7}</div>
+    <div class="roman-line">jān dī dī huʾī usī kī thī</div>
+    <div class="roman-line">ḥaq to yūñ hai kih ḥaq adā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">命を捧げた──それは与えられたもの、あの方のものだった</div>
+    <div class="jp-line">真実はこうだ、恩義は果たされなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,8}</div>
+    <div class="roman-line">zaḳhm gar dab gayā lahū nah thamā</div>
+    <div class="roman-line">kām gar ruk gayā ravā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">傷が押さえられても血は止まらなかった</div>
+    <div class="jp-line">仕事が止まっても許可されたわけではなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,9}</div>
+    <div class="roman-line">rahzanī hai kih dil-sitānī hai</div>
+    <div class="roman-line">le ke dil dil-sitāñ ravānah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">これは追剝ぎか、それとも心奪いか</div>
+    <div class="jp-line">心を奪い、あの心泥棒は去っていった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{26,10}</div>
+    <div class="roman-line">kuchh to paṛhye kih log kahte haiñ</div>
+    <div class="roman-line">āj ġhālib ġhazal-sarā nah huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">何か詠んでくれ、人々が言うのだから</div>
+    <div class="jp-line">今日のガーリブはガザル詠みにならなかった</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 27 ==================== -->
+<div class="ghazal-block" id="g27">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 27</div>
+    <div class="ghazal-matla">gilah hai shauq ko dil meñ bhī tangī-e jā kā</div>
+    <div class="ghazal-meta">
+      8 dīvān verses · Arshī #14 · Meter G9<br>
+      <span class="jp">1821年作 · Ḥāmid p. 25</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,1}</div>
+    <div class="roman-line">gilah hai shauq ko dil meñ bhī tangī-e jā kā</div>
+    <div class="roman-line">guhar meñ maḥv huʾā iẓt̤irāb daryā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">熱情は心の中にすら場所の狭さを嘆く</div>
+    <div class="jp-line">海の動揺は真珠の中に沈んで消えた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,2}</div>
+    <div class="roman-line">yih jāntā hūñ kih tū aur pāsuḳh-e maktūb</div>
+    <div class="roman-line">magar sitam-zadah hūñ żauq-e ḳhāmah-farsā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あなたが手紙に返事を書くなど！──それは承知している</div>
+    <div class="jp-line">だが筆を磨り減らす楽しみに取り憑かれているのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,3}</div>
+    <div class="roman-line">ḥinā-e pā-e ḳhizāñ hai bahār agar hai yihī</div>
+    <div class="roman-line">davām kulfat-e ḳhāt̤ir hai ʿaish dunyā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">もしこれが春のすべてなら、秋の足に塗るヘンナに過ぎない</div>
+    <div class="jp-line">この世の楽しみとは心の苦悩の永続にほかならない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,4}</div>
+    <div class="roman-line">ġham-e firāq meñ taklīf-e sair-e bāġh nah do</div>
+    <div class="roman-line">mujhe dimāġh nahīñ ḳhandah'hā-e be-jā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">別離の悲しみの中、庭の散歩を無理強いしないでくれ</div>
+    <div class="jp-line">場違いな笑いに付き合う気力はない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,5}</div>
+    <div class="roman-line">hanūz maḥramī-e ḥusn ko tarastā hūñ</div>
+    <div class="roman-line">kare hai har bun-e mū kām chashm-e bīnā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">いまだ美の秘密に与ることを渇望している</div>
+    <div class="jp-line">毛穴の一つ一つが見開いた眼の役を果たす</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,6}</div>
+    <div class="roman-line">dil us ko pahle hī nāz-o-adā se de baiṭhe</div>
+    <div class="roman-line">hameñ dimāġh kahāñ ḥusn ke taqāẓā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">媚態と仕草だけでもう心を差し出してしまった</div>
+    <div class="jp-line">美の要求に応える分別など我々にはなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,7}</div>
+    <div class="roman-line">nah kah kih giryah bah miqdār-e ḥasrat-e dil hai</div>
+    <div class="roman-line">mirī nigāh meñ hai jamʿ-o-ḳharj daryā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">涙は心の渇望に見合うなどと言わないでくれ</div>
+    <div class="jp-line">私の眼には大海の収支がすべて映っている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{27,8}</div>
+    <div class="roman-line">falak ko dekh ke kartā hūñ us ko yād asad</div>
+    <div class="roman-line">jafā meñ us kī hai andāz kār-farmā kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">空を見上げて彼女を思い出す、アサドよ</div>
+    <div class="jp-line">その残酷さには、天の支配者の風格がある</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 28 ==================== -->
+<div class="ghazal-block" id="g28">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 28</div>
+    <div class="ghazal-matla">qat̤rah-e mai baskih ḥairat se nafas-parvar huʾā</div>
+    <div class="ghazal-meta">
+      2 dīvān verses · Arshī #25 · Meter G1<br>
+      <span class="jp">1816年作 · Ḥāmid p. 25</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{28,1}</div>
+    <div class="roman-line">qat̤rah-e mai baskih ḥairat se nafas-parvar huʾā</div>
+    <div class="roman-line">ḳhat̤t̤-e jām-e mai sarāsar rishtah-e gauhar huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">酒の一滴は驚嘆のあまり命を育むものとなった</div>
+    <div class="jp-line">酒杯の縁は一面、真珠の糸となった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{28,2}</div>
+    <div class="roman-line">ětibār-e ʿishq kī ḳhānah-ḳharābī dekhnā</div>
+    <div class="roman-line">ġhair ne kī āh lekin vuh ḳhafā mujh par huʾā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋の信頼がもたらす破滅を見よ</div>
+    <div class="jp-line">他の者が溜息をついたのに、彼女は私に怒った</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 29 ==================== -->
+<div class="ghazal-block" id="g29">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 29</div>
+    <div class="ghazal-matla">jab bah taqrīb-e safar yār ne maḥmil bāñdhā</div>
+    <div class="ghazal-meta">
+      4 dīvān verses · Arshī #8 · Meter G5<br>
+      <span class="jp">1821年作 · Ḥāmid p. 26</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{29,1}</div>
+    <div class="roman-line">jab bah taqrīb-e safar yār ne maḥmil bāñdhā</div>
+    <div class="roman-line">tapish-e shauq ne har żarre pah ik dil bāñdhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">旅立ちに際して恋人が輿を整えた時</div>
+    <div class="jp-line">熱情の炎は塵の一つ一つに心を結びつけた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{29,2}</div>
+    <div class="roman-line">ahl-e bīnish ne bah ḥairat-kadah-e shoḳhī-e nāz</div>
+    <div class="roman-line">jauhar-e āʾinah ko t̤ūt̤ī-e bismil bāñdhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">洞察の人々は、媚態の驚異の館において</div>
+    <div class="jp-line">鏡の光沢を斃れた鸚鵡と名づけた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{29,3}</div>
+    <div class="roman-line">yās-o-ummīd ne yak ʿarbadah-maidāñ māñgā</div>
+    <div class="roman-line">ʿajz-e himmat ne t̤ilism-e dil-e sāʾil bāñdhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">絶望と希望が一つの戦場を求めた</div>
+    <div class="jp-line">志の弱さが乞う者の心に魔法をかけた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{29,4}</div>
+    <div class="roman-line">nah bañdhe tishnagī-e shauq ke maẓmūñ ġhālib</div>
+    <div class="roman-line">garchih dil khol ke daryā ko bhī sāḥil bāñdhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">熱情の渇きの詩想は縛れぬ、ガーリブよ</div>
+    <div class="jp-line">心を開いて大海にさえ岸を結びつけたけれど</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 30 ==================== -->
+<div class="ghazal-block" id="g30">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 30</div>
+    <div class="ghazal-matla">maiñ aur bazm-e mai se yūñ tishnah-kām āʾūñ</div>
+    <div class="ghazal-meta">
+      3 dīvān verses · Arshī #39 · Meter G10<br>
+      <span class="jp">1847年以降 · Ḥāmid p. 26</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{30,1}</div>
+    <div class="roman-line">maiñ aur bazm-e mai se yūñ tishnah-kām āʾūñ</div>
+    <div class="roman-line">gar maiñ ne kī thī taubah sāqī ko kyā huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">私が酒の宴からこんなに渇いて戻るとは！</div>
+    <div class="jp-line">たとえ私が禁酒を誓ったとして、酌人に何の障りがあったか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{30,2}</div>
+    <div class="roman-line">hai ek tīr jis meñ donoñ chhide paṛe haiñ</div>
+    <div class="roman-line">vuh din gaʾe kih apnā dil se jigar judā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">一本の矢に二つとも貫かれている</div>
+    <div class="jp-line">心と肝が別々だった日々はもう過ぎた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{30,3}</div>
+    <div class="roman-line">darmāñdagī meñ ġhālib kuchh ban paṛe to jānūñ</div>
+    <div class="roman-line">jab rishtah be-girah thā nāḳhun girah-kushā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">この窮状で何かうまくいくなら認めよう、ガーリブよ</div>
+    <div class="jp-line">糸に結び目がなかった時、爪が結び目を解いていた</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 31 ==================== -->
+<div class="ghazal-block" id="g31">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 31</div>
+    <div class="ghazal-matla">ghar hamārā jo nah rote bhī to vīrāñ hotā</div>
+    <div class="ghazal-meta">
+      3 dīvān verses · Arshī #40 · Meter G5<br>
+      <span class="jp">1847年以降 · Ḥāmid p. 27</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{31,1}</div>
+    <div class="roman-line">ghar hamārā jo nah rote bhī to vīrāñ hotā</div>
+    <div class="roman-line">baḥr gar baḥr nah hotā to bayābāñ hotā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">我々の家は泣かなくとも荒れ果てていただろう</div>
+    <div class="jp-line">海が海でなければ砂漠だっただろう</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{31,2}</div>
+    <div class="roman-line">tangī-e dil kā gilah kyā yih vuh kāfir dil hai</div>
+    <div class="roman-line">kih agar tang nah hotā to pareshāñ hotā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">心の狭さを何の嘆きか。これはあの不信心な心だ</div>
+    <div class="jp-line">狭くなければ、取り乱していただろう</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{31,3}</div>
+    <div class="roman-line">baʿd-e yak ʿumr-e varaʿ bār to detā bāre</div>
+    <div class="roman-line">kāsh riẓvāñ hī dar-e yār kā darbāñ hotā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">一生涯の敬虔の後、ついには入場を許しただろうに</div>
+    <div class="jp-line">せめて天国の番人リズヴァーンが恋人の門番であったなら</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 32 ==================== -->
+<div class="ghazal-block" id="g32">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 32</div>
+    <div class="ghazal-matla">nah thā kuchh to ḳhudā thā kuchh nah hotā to ḳhudā hotā</div>
+    <div class="ghazal-meta">
+      3 dīvān verses · Arshī #44 · Meter G2<br>
+      <span class="jp">1847年以降 · Ḥāmid p. 27</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{32,1}</div>
+    <div class="roman-line">nah thā kuchh to ḳhudā thā kuchh nah hotā to ḳhudā hotā</div>
+    <div class="roman-line">ḍuboyā mujh ko hone ne nah hotā maiñ to kyā hotā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">何もなかった時にも神はあった、何もなくとも神はあっただろう</div>
+    <div class="jp-line">存在が私を溺れさせた──私がいなければ何だったろう</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{32,2}</div>
+    <div class="roman-line">huʾā jab ġham se yūñ be-ḥis to ġham kyā sar ke kaṭne kā</div>
+    <div class="roman-line">nah hotā gar judā tan se to zānū par dharā hotā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">悲しみにこれほど無感覚になった今、首を斬られる悲しみなど何か</div>
+    <div class="jp-line">体から離されなければ、膝の上に載せていただろう</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{32,3}</div>
+    <div class="roman-line">huʾī muddat kih ġhālib mar gayā par yād ātā hai</div>
+    <div class="roman-line">vuh har ik bāt par kahnā kih yūñ hotā to kyā hotā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">ガーリブが死んで久しいが、思い出される</div>
+    <div class="jp-line">あの、何事につけ言ったものだ──「こうだったら、どうだったろう」</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 33 ==================== -->
+<div class="ghazal-block" id="g33">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 33</div>
+    <div class="ghazal-matla">yak żarrah-e zamīñ nahīñ bekār bāġh kā</div>
+    <div class="ghazal-meta">
+      7 dīvān verses · Arshī #22 · Meter G3<br>
+      <span class="jp">1816年作 · Ḥāmid p. 28</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{33,1}</div>
+    <div class="roman-line">yak żarrah-e zamīñ nahīñ bekār bāġh kā</div>
+    <div class="roman-line">yāñ jādah bhī fatīlah hai lāle ke dāġh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">庭の地面の一片たりとも無駄ではない</div>
+    <div class="jp-line">ここでは小道さえもチューリップの烙印の芯となる</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{33,2}</div>
+    <div class="roman-line">be-mai kise hai t̤āqat-e āshob-e āgahī</div>
+    <div class="roman-line">kheñchā hai ʿajz-e ḥauṣalah ne ḳhat̤t̤ ayāġh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">酒なくして誰が覚醒の嵐に耐えられよう</div>
+    <div class="jp-line">気力の弱さが杯の下に線を引いた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{33,3}</div>
+    <div class="roman-line">bulbul ke kār-o-bār pah haiñ ḳhandah'hā-e gul</div>
+    <div class="roman-line">kahte haiñ jis ko ʿishq ḳhalal hai dimāġh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">薔薇は夜鶯の営みを笑う</div>
+    <div class="jp-line">恋と呼ばれるものは頭の狂いに過ぎぬ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{33,4}</div>
+    <div class="roman-line">tāzah nahīñ hai nashshah-e fikr-e suḳhan mujhe</div>
+    <div class="roman-line">tiryākī-e qadīm hūñ dūd-e chirāġh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">詩想の酔いは私にとって新しいものではない</div>
+    <div class="jp-line">灯火の煙の古い中毒者なのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{33,5}</div>
+    <div class="roman-line">sau bār band-e ʿishq se āzād ham huʾe</div>
+    <div class="roman-line">par kyā kareñ kih dil hī ʿadū hai farāġh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">百たび恋の束縛から自由になった</div>
+    <div class="jp-line">だがどうしよう、心自身が安らぎの敵なのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{33,6}</div>
+    <div class="roman-line">be-ḳhūn-e dil hai chashm meñ mauj-e nigah ġhubār</div>
+    <div class="roman-line">yih mai-kadah ḳharāb hai mai ke surāġh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">心の血がなければ眼の中の視線の波は塵に過ぎない</div>
+    <div class="jp-line">この酒場は酒を求めて廃墟となった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{33,7}</div>
+    <div class="roman-line">bāġh-e shiguftah terā bisāt̤-e nashāt̤-e dil</div>
+    <div class="roman-line">abr-e bahār ḳhum-kadah kis ke dimāġh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あなたの花咲く庭は心の歓びの敷物</div>
+    <div class="jp-line">春の雲は誰の精神の酒蔵なのか</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 34 ==================== -->
+<div class="ghazal-block" id="g34">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 34</div>
+    <div class="ghazal-matla">vuh mirī chīn-e jabīñ se ġham-e pinhāñ samjhā</div>
+    <div class="ghazal-meta">
+      8 dīvān verses · Arshī #13 · Meter G5<br>
+      <span class="jp">1821年作 · Ḥāmid p. 29</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,1}</div>
+    <div class="roman-line">vuh mirī chīn-e jabīñ se ġham-e pinhāñ samjhā</div>
+    <div class="roman-line">rāz-e maktūb bah be-rabt̤ī-e ʿunvāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">彼女は額の皺から隠された悲しみを読み取った</div>
+    <div class="jp-line">表書きの支離滅裂さから手紙の秘密を見抜いた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,2}</div>
+    <div class="roman-line">yak alif besh nahīñ ṣaiqal-e āʾīnah hanūz</div>
+    <div class="roman-line">chāk kartā hūñ maiñ jab se kih garebāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">鏡の研磨はいまだ一つのアリフ（直線）に過ぎない</div>
+    <div class="jp-line">襟というものを知って以来、私は引き裂き続けている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,3}</div>
+    <div class="roman-line">sharḥ-e asbāb-e giriftārī-e ḳhāt̤ir mat pūchh</div>
+    <div class="roman-line">is qadar tang huʾā dil kih maiñ zindāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">心が囚われた理由の説明を求めないでくれ</div>
+    <div class="jp-line">心がこれほど狭くなり、私は牢獄と思い違えた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,4}</div>
+    <div class="roman-line">bad-gumānī ne nah chāhā use sar-garm-e ḳhirām</div>
+    <div class="roman-line">ruḳh pah har qat̤rah ʿaraq dīdah-e ḥairāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">猜疑心は彼女が意気揚々と歩むことを望まなかった</div>
+    <div class="jp-line">頬の汗の一滴一滴を驚きの眼と見なした</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,5}</div>
+    <div class="roman-line">ʿajz se apne yih jānā kih vuh bad-ḳhū hogā</div>
+    <div class="roman-line">nabẓ-e ḳhas se tapish-e shuʿlah-e sozāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">自らの弱さゆえ彼女は気性が荒いと思い込んだ</div>
+    <div class="jp-line">藁の脈拍から燃え盛る炎の熱を推し量った</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,6}</div>
+    <div class="roman-line">safar-e ʿishq meñ kī ẓuʿf ne rāḥat-t̤alabī</div>
+    <div class="roman-line">har qadam sāʾe ko maiñ apne shabistāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋の旅路で脆弱さが安らぎを求めた</div>
+    <div class="jp-line">一歩ごとに自分の影を寝室と思い違えた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,7}</div>
+    <div class="roman-line">thā gurezāñ mizhah-e yār se dil tā dam-e marg</div>
+    <div class="roman-line">dafʿa-e paikān-e qaẓā us qadar āsāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">心は死の瞬間まで恋人の睫毛から逃げていた</div>
+    <div class="jp-line">運命の矢じりを防ぐことをそれほど容易と考えたのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{34,8}</div>
+    <div class="roman-line">dil diyā jān ke kyūñ us ko vafādār asad</div>
+    <div class="roman-line">ġhalat̤ī kī kih jo kāfir ko musalmāñ samjhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">なぜ承知の上で心を捧げ、彼女を誠実と呼んだのか、アサドよ</div>
+    <div class="jp-line">不信心者をムスリムと見誤るという過ちを犯した</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 35 ==================== -->
+<div class="ghazal-block" id="g35">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 35</div>
+    <div class="ghazal-matla">phir mujhe dīdah-e tar yād āyā</div>
+    <div class="ghazal-meta">
+      10 dīvān verses · Arshī #27 · Meter G11<br>
+      <span class="jp">1821年作 · Ḥāmid p. 30</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,1}</div>
+    <div class="roman-line">phir mujhe dīdah-e tar yād āyā</div>
+    <div class="roman-line">dil jigar-tishnah-e faryād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">また涙ぐんだ眼を思い出した</div>
+    <div class="jp-line">心は肝まで叫びに渇いて戻ってきた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,2}</div>
+    <div class="roman-line">dam liyā thā nah qiyāmat ne hanūz</div>
+    <div class="roman-line">phir tirā vaqt-e safar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">最後の審判はまだ息をつく暇もなかったのに</div>
+    <div class="jp-line">またあなたの旅立ちの時が思い出された</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,3}</div>
+    <div class="roman-line">sādagīhā-e tamannā yaʿnī</div>
+    <div class="roman-line">phir vuh nairang-e naz̤ar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">願望の素朴さ、つまり</div>
+    <div class="jp-line">またあの眼差しの幻術が思い出された</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,4}</div>
+    <div class="roman-line">ʿużr-e vā-māñdagī ai ḥasrat-e dil</div>
+    <div class="roman-line">nālah kartā thā jigar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">疲弊の口実よ、ああ心の憧れよ</div>
+    <div class="jp-line">嘆いていたら肝が思い出された</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,5}</div>
+    <div class="roman-line">zindagī yūñ bhī guzar hī jātī</div>
+    <div class="roman-line">kyūñ tirā rāh-guzar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">人生はどのみち過ぎていっただろうに</div>
+    <div class="jp-line">なぜあなたの通り道が思い出されたのか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,6}</div>
+    <div class="roman-line">āh vuh jurʾat-e faryād kahāñ</div>
+    <div class="roman-line">dil se tang ā ke jigar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">ああ、叫ぶ勇気などどこにあろう</div>
+    <div class="jp-line">心に疲れ果て、肝が思い出された</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,7}</div>
+    <div class="roman-line">phir tire kūche ko jātā hai ḳhayāl</div>
+    <div class="roman-line">dil-e gum-gashtah magar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">また想いはあなたの路地へ向かう</div>
+    <div class="jp-line">失われた心がふと思い出された</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,8}</div>
+    <div class="roman-line">koʾī vīrānī-sī vīrānī hai</div>
+    <div class="roman-line">dasht ko dekh ke ghar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">ある荒廃──まさに荒廃そのものだ</div>
+    <div class="jp-line">砂漠を見て故郷が思い出された</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,9}</div>
+    <div class="roman-line">kyā hī riẓvāñ se laṛāʾī hogī</div>
+    <div class="roman-line">ghar tirā ḳhuld meñ gar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">リズヴァーンとなんという喧嘩になることだろう</div>
+    <div class="jp-line">天国であなたの家が思い出されたら</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{35,10}</div>
+    <div class="roman-line">maiñ ne majnūñ pah laṛakpan meñ asad</div>
+    <div class="roman-line">sang uṭhāyā thā kih sar yād āyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">子供の頃、アサドよ、マジュヌーンに石を投げようとした</div>
+    <div class="jp-line">その時自分の頭のことが思い出された</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 36 ==================== -->
+<div class="ghazal-block" id="g36">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 36</div>
+    <div class="ghazal-matla">huʾī tāḳhīr to kuchh bāʿiṡ-e tāḳhīr bhī thā</div>
+    <div class="ghazal-meta">
+      11 dīvān verses · Arshī #41 · Meter G5<br>
+      <span class="jp">1847年以降 · Ḥāmid p. 31</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,1}</div>
+    <div class="roman-line">huʾī tāḳhīr to kuchh bāʿiṡ-e tāḳhīr bhī thā</div>
+    <div class="roman-line">āp āte the magar koʾī ʿināñ-gīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">遅れたなら遅れの理由もあったのだ</div>
+    <div class="jp-line">彼女は自ら来ようとしていたが、手綱を引く者もいた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,2}</div>
+    <div class="roman-line">tum se be-jā hai mujhe apnī tabāhī kā gilah</div>
+    <div class="roman-line">us meñ kuchh shāʾibah-e ḳhūbī-e taqdīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">自分の破滅をあなたに嘆くのは筋違いだ</div>
+    <div class="jp-line">その中には運命の好転の気配もあったのだから</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,3}</div>
+    <div class="roman-line">tū mujhe bhūl gayā ho to patā batlā dūñ</div>
+    <div class="roman-line">kabhī fitrāk meñ tere koʾī naḳhchīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">もし私を忘れたなら、住所を教えよう</div>
+    <div class="jp-line">かつてあなたの狩袋にも獲物がいたのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,4}</div>
+    <div class="roman-line">qaid meñ hai tire vaḥshī ko vuhī zulf kī yād</div>
+    <div class="roman-line">hāñ kuchh-ik ranj-e girāñ-bārī-e zanjīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">囚われの中、あなたの野生の者にはあの巻き毛の記憶だけ</div>
+    <div class="jp-line">そう、鎖の重さの苦しみも少しはあった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,5}</div>
+    <div class="roman-line">bijlī ik kauñd gaʾī āñkhoñ ke āge to kyā</div>
+    <div class="roman-line">bāt karte kih maiñ lab-tishnah-e taqrīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">稲妻が一閃、目の前を走ったからどうだというのか</div>
+    <div class="jp-line">話していたのに──そう、言葉に渇いてもいたのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,6}</div>
+    <div class="roman-line">yūsuf us ko kahūñ aur kuchh nah kahe ḳhair huʾī</div>
+    <div class="roman-line">gar bigaṛ baiṭhe to maiñ lāʾiq-e taʿzīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">彼女をユースフと呼んだが何も言わなかった──幸いだった</div>
+    <div class="jp-line">もし怒っていたら、私は罰に値する身でもあったのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,7}</div>
+    <div class="roman-line">dekh kar ġhair ko ho kyūñ nah kalejā ṭhanḍā</div>
+    <div class="roman-line">nālah kartā thā vale t̤ālib-e tāṡīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">他の者を見て心が冷えぬわけがない</div>
+    <div class="jp-line">嘆いてはいたが、その効果も期待していたのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,8}</div>
+    <div class="roman-line">peshe meñ ʿaib nahīñ rakhye nah farhād ko nām</div>
+    <div class="roman-line">ham hī āshuftah-saroñ meñ vuh javāñ mīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">この職業に恥はない──ファルハードの名を出すまでもない</div>
+    <div class="jp-line">我々狂人たちの中に、あの若き長ミールもいたのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,9}</div>
+    <div class="roman-line">ham the marne ko khaṛe pās nah āyā nah sahī</div>
+    <div class="roman-line">āḳhir us shoḳh ke tarkash meñ koʾī tīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">死を覚悟して立っていた──来なかったならそれでいい</div>
+    <div class="jp-line">とにかくあのいたずら者の矢筒にはまだ矢があったのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,10}</div>
+    <div class="roman-line">pakṛe jāte haiñ farishtoñ ke likhe par nā-ḥaq</div>
+    <div class="roman-line">ādmī koʾī hamārā dam-e taḥrīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">天使たちの書いたもので不当に捕らえられる</div>
+    <div class="jp-line">記録の時に我々の側の人間が一人でもいたか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{36,11}</div>
+    <div class="roman-line">reḳhte ke tumhīñ ustād nahīñ ho ġhālib</div>
+    <div class="roman-line">kahte haiñ agle zamāne meñ koʾī mīr bhī thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">レフタ（ウルドゥー詩）の師はあなただけではないぞ、ガーリブ</div>
+    <div class="jp-line">昔の時代にミールという者もいたと言うではないか</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 37 ==================== -->
+<div class="ghazal-block" id="g37">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 37</div>
+    <div class="ghazal-matla">lab-e ḳhushk dar-tishnagī-murdagāñ kā</div>
+    <div class="ghazal-meta">
+      2 dīvān verses · Arshī #17 · Meter G12<br>
+      <span class="jp">1816年作 · Ḥāmid p. 31</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{37,1}</div>
+    <div class="roman-line">lab-e ḳhushk dar-tishnagī-murdagāñ kā</div>
+    <div class="roman-line">ziyārat-kadah hūñ dil-āzurdagāñ kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">渇きの中で死んだ者たちの乾いた唇</div>
+    <div class="jp-line">私は心傷ついた者たちの巡礼地だ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{37,2}</div>
+    <div class="roman-line">hamah nā-umīdī hamah bad-gumānī</div>
+    <div class="roman-line">maiñ dil hūñ fareb-e vafā-ḳhvurdagāñ kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">すべてが絶望、すべてが猜疑</div>
+    <div class="jp-line">私は誠実に欺かれた者たちの心だ</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 38 ==================== -->
+<div class="ghazal-block" id="g38">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 38</div>
+    <div class="ghazal-matla">tū dost kisī kā bhī sitamgar nah huʾā thā</div>
+    <div class="ghazal-meta">
+      7 dīvān verses · Arshī #28 · Meter G13<br>
+      <span class="jp">1821年作 · Ḥāmid p. 32</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{38,1}</div>
+    <div class="roman-line">tū dost kisī kā bhī sitamgar nah huʾā thā</div>
+    <div class="roman-line">auroñ pah hai vuh z̤ulm kih mujh par nah huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">お前は誰の友にもならなかった、暴君よ</div>
+    <div class="jp-line">私には加えられなかった残虐が他の者たちに降りかかっている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{38,2}</div>
+    <div class="roman-line">chhoṛā mah-e naḳhshab kī t̤araḥ dast-e qaẓā ne</div>
+    <div class="roman-line">ḳhvurshīd hanūz us ke barābar nah huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">運命の手はナクシャブの月のように彼女を見捨てた</div>
+    <div class="jp-line">太陽はまだ彼女に匹敵していなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{38,3}</div>
+    <div class="roman-line">taufīq bah andāzah-e himmat hai azal se</div>
+    <div class="roman-line">āñkhoñ meñ hai vuh qat̤rah jo gauhar nah huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">天助は太古より志に見合って与えられる</div>
+    <div class="jp-line">眼の中にあるのはまだ真珠とならなかったあの滴だ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{38,4}</div>
+    <div class="roman-line">jab tak kih nah dekhā thā qad-e yār kā ʿālam</div>
+    <div class="roman-line">maiñ muʿtaqid-e fitnah-e maḥshar nah huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋人の姿の壮麗を見るまでは</div>
+    <div class="jp-line">私は最後の審判の騒乱を信じていなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{38,5}</div>
+    <div class="roman-line">maiñ sādah-dil āzurdagī-e yār se ḳhvush hūñ</div>
+    <div class="roman-line">yaʿnī sabaq-e shauq mukarrar nah huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">素朴な心の私は恋人の不興を喜んでいる</div>
+    <div class="jp-line">つまり、熱情の教訓はまだ繰り返されていなかったのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{38,6}</div>
+    <div class="roman-line">daryā-e maʿāṣī tunuk-ābī se huʾā ḳhushk</div>
+    <div class="roman-line">merā sar-e dāman bhī abhī tar nah huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">罪の海は浅さゆえに干上がった</div>
+    <div class="jp-line">私の衣の裾さえまだ濡れていなかったのに</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{38,7}</div>
+    <div class="roman-line">jārī thī asad dāġh-e jigar se mirī taḥṣīl</div>
+    <div class="roman-line">ātish-kadah jāgīr-e samandar nah huʾā thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">アサドよ、私の収入は肝臓の焼印から流れていた</div>
+    <div class="jp-line">拝火殿はまだ火蜥蜴の領地とはなっていなかった</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 39 ==================== -->
+<div class="ghazal-block" id="g39">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 39</div>
+    <div class="ghazal-matla">shab kih vuh majlis-furoz-e ḳhalvat-e nāmūs thā</div>
+    <div class="ghazal-meta">
+      4 dīvān verses · Arshī #31 · Meter G1<br>
+      <span class="jp">1816年作 · Ḥāmid p. 33</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{39,1}</div>
+    <div class="roman-line">shab kih vuh majlis-furoz-e ḳhalvat-e nāmūs thā</div>
+    <div class="roman-line">rishtah-e har shamʿa ḳhār-e kisvat-e fānūs thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの夜、彼女は名誉の私室を照らす者だった</div>
+    <div class="jp-line">蝋燭の芯の一本一本がランプの衣の棘であった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{39,2}</div>
+    <div class="roman-line">mashhad-e ʿāshiq se kosoñ tak jo ugtī hai ḥinā</div>
+    <div class="roman-line">kis qadar yā rab halāk-e ḥasrat-e pā-būs thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋する者の墓から幾里も生い茂るヘンナ</div>
+    <div class="jp-line">ああ神よ、足への接吻の渇望にどれほど打ちのめされていたことか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{39,3}</div>
+    <div class="roman-line">ḥāṣil-e ulfat nah dekhā juz shikast-e ārzū</div>
+    <div class="roman-line">dil bah dil paivastah goyā yak lab-e afsūs thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">愛の収穫は願望の挫折以外に見えなかった</div>
+    <div class="jp-line">心と心が結ばれたのは、いわば一つの後悔の唇であった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{39,4}</div>
+    <div class="roman-line">kyā kahūñ bīmārī-e ġham kī farāġhat kā bayāñ</div>
+    <div class="roman-line">jo kih khāyā ḳhūn-e dil be-minnat-e kaimūs thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">悲しみの病からの解放について何を語ろう</div>
+    <div class="jp-line">飲んだもの、心の血は薬の恩義を受けていなかった</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 40 ==================== -->
+<div class="ghazal-block" id="g40">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 40</div>
+    <div class="ghazal-matla">āʾīnah dekh apnā-sā muñh le ke rah gaye</div>
+    <div class="ghazal-meta">
+      2 dīvān verses · Arshī #18 · Meter G3<br>
+      <span class="jp">1821年作 · Ḥāmid p. 33</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{40,1}</div>
+    <div class="roman-line">āʾīnah dekh apnā-sā muñh le ke rah gaye</div>
+    <div class="roman-line">ṣāḥib ko dil nah dene pah kitnā ġhurūr thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">鏡を見て自分そっくりの顔を抱えて立ち尽くした</div>
+    <div class="jp-line">心を渡さぬことに主人はどれほど誇っていたことか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{40,2}</div>
+    <div class="roman-line">qāṣid ko apne hāth se gardan nah māriye</div>
+    <div class="roman-line">us kī ḳhat̤ā nahīñ hai yih merā qaṣūr thā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">使者を自らの手で打たないでくれ</div>
+    <div class="jp-line">彼の過ちではない、これは私の罪だったのだ</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 41 ==================== -->
+<div class="ghazal-block" id="g41">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 41</div>
+    <div class="ghazal-matla">ʿarẓ-e niyāz-e ʿishq ke qābil nahīñ rahā</div>
+    <div class="ghazal-meta">
+      8 dīvān verses · Arshī #29 · Meter G3<br>
+      <span class="jp">1816年作 · Ḥāmid p. 34</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,1}</div>
+    <div class="roman-line">ʿarẓ-e niyāz-e ʿishq ke qābil nahīñ rahā</div>
+    <div class="roman-line">jis dil pah nāz thā mujhe vuh dil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋の嘆願に値するものではなくなった</div>
+    <div class="jp-line">誇りに思っていた心、あの心はもうない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,2}</div>
+    <div class="roman-line">jātā hūñ dāġh-e ḥasrat-e hastī liye huʾe</div>
+    <div class="roman-line">hūñ shamʿ-e kushtah dar-ḳhvur-e maḥfil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">存在への憧れの烙印を抱えて去る</div>
+    <div class="jp-line">消えた蝋燭だ、もう集いには相応しくない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,3}</div>
+    <div class="roman-line">marne kī ai dil aur hī tadbīr kar kih maiñ</div>
+    <div class="roman-line">shāyān-e dast-o-bāzū-e qātil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">ああ心よ、別の死に方を考えてくれ</div>
+    <div class="jp-line">私はもう殺し手の腕と手に値しない身となった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,4}</div>
+    <div class="roman-line">bar-rū-e shash jihat dar-e āʾīnah bāz hai</div>
+    <div class="roman-line">yāñ imtiyāz-e nāqiṣ-o-kāmil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">六方の表面に鏡の扉は開かれている</div>
+    <div class="jp-line">ここでは不完全と完全の区別はもうない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,5}</div>
+    <div class="roman-line">vā kar diye haiñ shauq ne band-e naqāb-e ḥusn</div>
+    <div class="roman-line">ġhair az nigāh ab koʾī ḥāʾil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">熱情が美のヴェールの紐を解いた</div>
+    <div class="jp-line">視線のほかにもはや何の障壁もない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,6}</div>
+    <div class="roman-line">go maiñ rahā rahīn-e sitamhā-e rozgār</div>
+    <div class="roman-line">lekin tire ḳhayāl se ġhāfil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">運命の残酷さの虜であり続けたけれど</div>
+    <div class="jp-line">あなたへの想いから目を離すことはなかった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,7}</div>
+    <div class="roman-line">dil se havā-e kisht-e vafā miṭ gaʾī kih vāñ</div>
+    <div class="roman-line">ḥāṣil sivā-e ḥasrat-e ḥāṣil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">忠誠の収穫への思いは心から消えた、なぜなら</div>
+    <div class="jp-line">収穫とは収穫への憧れ以外の何物でもなかったから</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{41,8}</div>
+    <div class="roman-line">bedād-e ʿishq se nahīñ ḍartā magar asad</div>
+    <div class="roman-line">jis dil pah nāz thā mujhe vuh dil nahīñ rahā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋の不正は恐れない、だがアサドよ</div>
+    <div class="jp-line">誇りに思っていた心、あの心はもうない</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 42 ==================== -->
+<div class="ghazal-block" id="g42">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 42</div>
+    <div class="ghazal-matla">rashk kahtā hai kih us kā ġhair se iḳhlāṣ ḥaif</div>
+    <div class="ghazal-meta">
+      6 dīvān verses · Arshī #21 · Meter G1<br>
+      <span class="jp">1821年作 · Ḥāmid p. 35</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{42,1}</div>
+    <div class="roman-line">rashk kahtā hai kih us kā ġhair se iḳhlāṣ ḥaif</div>
+    <div class="roman-line">ʿaql kahtī hai kih vuh be-mihr kis kā āshnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">嫉妬が言う──彼女と他の者との親密さよ、嘆かわしい</div>
+    <div class="jp-line">理性が言う──あの冷淡な人は誰の友でもない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{42,2}</div>
+    <div class="roman-line">żarrah żarrah sāġhar-e mai-ḳhānah-e nairang hai</div>
+    <div class="roman-line">gardish-e majnūñ bah chashmak'hā-e lailâ āshnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">塵の一つ一つが幻術の酒場の杯だ</div>
+    <div class="jp-line">マジュヌーンの彷徨はライラーの流し目に通じている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{42,3}</div>
+    <div class="roman-line">shauq hai sāmāñ-t̤arāz-e nāzish-e arbāb-e ʿajz</div>
+    <div class="roman-line">żarrah ṣaḥrā-dast-gāh-o-qat̤rah daryā-āshnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">熱情は無力な者たちの誇りを飾る</div>
+    <div class="jp-line">塵は砂漠ほどの広がりを持ち、滴は大海に通じている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{42,4}</div>
+    <div class="roman-line">maiñ aur ek āfat kā ṭukṛā vuh dil-e vaḥshī kih hai</div>
+    <div class="roman-line">ʿāfiyat kā dushman aur āvāragī kā āshnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">私と一片の災い──あの野生の心は</div>
+    <div class="jp-line">安寧の敵であり放浪の友である</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{42,5}</div>
+    <div class="roman-line">shikvah-sanj-e rashk-e ham-dīgar nah rahnā chāhiye</div>
+    <div class="roman-line">merā zānū mūnis aur āʾīnah terā āshnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">互いの嫉妬の不満を量り合うべきではない</div>
+    <div class="jp-line">私の膝が私の友、鏡があなたの友</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{42,6}</div>
+    <div class="roman-line">kohkan naqqāsh-e yak timṡāl-e shīrīñ thā asad</div>
+    <div class="roman-line">sang se sar mār kar hove nah paidā āshnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">山を掘る者はシーリーンのただ一つの像を彫る者だった、アサドよ</div>
+    <div class="jp-line">石に頭を打ちつけても友は現れない</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 43 ==================== -->
+<div class="ghazal-block" id="g43">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 43</div>
+    <div class="ghazal-matla">żikr us parī-vash kā aur phir bayāñ apnā</div>
+    <div class="ghazal-meta">
+      8 dīvān verses · Arshī #42 · Meter G4<br>
+      <span class="jp">1848年2月作 · Ḥāmid p. 36</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,1}</div>
+    <div class="roman-line">żikr us parī-vash kā aur phir bayāñ apnā</div>
+    <div class="roman-line">ban gayā raqīb āḳhir thā jo rāz-dāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの妖精のような人の話、そして私自身の物語</div>
+    <div class="jp-line">我が秘密を知る者が、ついには恋敵となった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,2}</div>
+    <div class="roman-line">mai vuh kyūñ bahut pīte bazm-e ġhair meñ yā rab</div>
+    <div class="roman-line">āj hī huʾā manz̤ūr un ko imtiḥāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">なぜ他の者の宴でそんなに酒を飲んだのか、ああ神よ</div>
+    <div class="jp-line">今日になってようやく私を試すことをお認めになったのか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,3}</div>
+    <div class="roman-line">manz̤ar ik bulandī par aur ham banā sakte</div>
+    <div class="roman-line">ʿarsh se idhar hotā kāsh-ke makāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">もう一段高い場所に眺望台を設けられたものを</div>
+    <div class="jp-line">我が住まいが天の玉座のこちら側にあったならば</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,4}</div>
+    <div class="roman-line">de vuh jis qadar żillat ham hañsī meñ ṭāleñge</div>
+    <div class="roman-line">bāre āshnā niklā un kā pāsbāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">どんな屈辱を与えようと笑って受け流そう</div>
+    <div class="jp-line">なにしろ彼女の門番は我々の知り合いだったのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,5}</div>
+    <div class="roman-line">dard-e dil likhūñ kab tak jāʾūñ un ko dikhlā dūñ</div>
+    <div class="roman-line">uñgliyāñ figār apnī ḳhāmah ḳhūñ-chakāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">いつまで心の痛みを書き続けるのか──行って見せよう</div>
+    <div class="jp-line">傷ついた指と、血の滴る筆を</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,6}</div>
+    <div class="roman-line">ghiste ghiste miṭ jātā āp ne ʿabaṡ badlā</div>
+    <div class="roman-line">nang-e sijdah se mere sang-e āstāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">擦り減って消えるところだったのに──彼女は無駄に替えた</div>
+    <div class="jp-line">私の額づきを恥じて、自分の敷居の石を</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,7}</div>
+    <div class="roman-line">tā kare nah ġhammāzī kar liyā hai dushman ko</div>
+    <div class="roman-line">dost kī shikāyat meñ ham ne ham-zabāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">密告させぬよう敵に仕立てた</div>
+    <div class="jp-line">友への不満を語る中で、味方に引き入れたのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{43,8}</div>
+    <div class="roman-line">ham kahāñ ke dānā the kis hunar meñ yaktā the</div>
+    <div class="roman-line">be-sabab huʾā ġhālib dushman āsmāñ apnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">どんな賢者だったか、何の技に秀でていたか</div>
+    <div class="jp-line">理由もなく天がわが敵となった、ガーリブよ</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 44 ==================== -->
+<div class="ghazal-block" id="g44">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 44</div>
+    <div class="ghazal-matla">surmah-e muft-e naz̤ar hūñ mirī qīmat yih hai</div>
+    <div class="ghazal-meta">
+      2 dīvān verses · Arshī #30 · Meter G5<br>
+      <span class="jp">1816年作 · Ḥāmid p. 36</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{44,1}</div>
+    <div class="roman-line">surmah-e muft-e naz̤ar hūñ mirī qīmat yih hai</div>
+    <div class="roman-line">kih rahe chashm-e ḳharīdār pah iḥsāñ merā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">私は眼のための無料の墨──私の価値とはこうだ</div>
+    <div class="jp-line">買い手の眼に私の恩恵が残ること</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{44,2}</div>
+    <div class="roman-line">ruḳhṣat-e nālah mujhe de kih mabādā z̤ālim</div>
+    <div class="roman-line">tere chahre se ho z̤āhir ġham-e pinhāñ merā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">嘆く許しを与えてくれ、さもないと、暴君よ</div>
+    <div class="jp-line">私の隠された悲しみがあなたの顔から露わになってしまう</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 45 ==================== -->
+<div class="ghazal-block" id="g45">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 45</div>
+    <div class="ghazal-matla">ġhāfil bah vahm-e nāz ḳhvud-ārā hai varnah yāñ</div>
+    <div class="ghazal-meta">
+      5 dīvān verses · Arshī #20 · Meter G3<br>
+      <span class="jp">1816年作 · Ḥāmid p. 37</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{45,1}</div>
+    <div class="roman-line">ġhāfil bah vahm-e nāz ḳhvud-ārā hai varnah yāñ</div>
+    <div class="roman-line">be-shānah-e ṣabā nahīñ t̤urrah giyāh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">うかつな者は媚態の妄想で自らを飾る、さもなくばここでは</div>
+    <div class="jp-line">風の櫛なくして草に前髪はない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{45,2}</div>
+    <div class="roman-line">bazm-e qadaḥ se ʿaish tamannā nah rakh kih rang</div>
+    <div class="roman-line">ṣaid-e z dām jastah hai us dām-gāh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">酒杯の集いに楽しみを期待するな、なぜなら色彩は</div>
+    <div class="jp-line">あの狩場の罠から逃れた獲物だから</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{45,3}</div>
+    <div class="roman-line">raḥmat agar qabūl kare kyā baʿīd hai</div>
+    <div class="roman-line">sharmindagī se ʿużr nah karnā gunāh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">慈悲が受け入れるなら何が不可能であろうか</div>
+    <div class="jp-line">恥ずかしさのあまり罪の言い訳をするな</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{45,4}</div>
+    <div class="roman-line">maqtal ko kis nashāt̤ se jātā hūñ maiñ kih hai</div>
+    <div class="roman-line">pur-gul ḳhayāl-e zaḳhm se dāman nigāh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">なんという歓びで刑場に向かうことか</div>
+    <div class="jp-line">傷の想像で視線の裾が花で満ちている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{45,5}</div>
+    <div class="roman-line">jāñ dar-havā-e yak nigah-e garm hai asad</div>
+    <div class="roman-line">parvānah hai vakīl tire dād-ḳhvāh kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">命は一つの熱い眼差しを求めている、アサドよ</div>
+    <div class="jp-line">蛾があなたの嘆願者の代理人だ</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 46 ==================== -->
+<div class="ghazal-block" id="g46">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 46</div>
+    <div class="ghazal-matla">jaur se bāz āʾe par bāz āʾeñ kyā</div>
+    <div class="ghazal-meta">
+      7 dīvān verses · Arshī #46 · Meter G14<br>
+      <span class="jp">1854年作 · Ḥāmid p. 38</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{46,1}</div>
+    <div class="roman-line">jaur se bāz āʾe par bāz āʾeñ kyā</div>
+    <div class="roman-line">kahte haiñ ham tujh ko muñh dikhlāʾeñ kyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">彼女は残酷をやめるかもしれない、だが我々はどう戻ればよいか</div>
+    <div class="jp-line">人は言う、あなたにどの顔を見せればよいのか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{46,2}</div>
+    <div class="roman-line">rāt din gardish meñ haiñ sāt āsmāñ</div>
+    <div class="roman-line">ho rahegā kuchh nah kuchh ghabrāʾeñ kyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">昼も夜も七つの天は回り続けている</div>
+    <div class="jp-line">何かしら起こるだろう──なぜ慌てることがあろうか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{46,3}</div>
+    <div class="roman-line">lāg ho to us ko ham samjheñ lagāʾo</div>
+    <div class="roman-line">jab nah ho kuchh bhī to dhokā khāʾeñ kyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">執着があれば愛着と受け取ろう</div>
+    <div class="jp-line">何もない時に何に騙されようか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{46,4}</div>
+    <div class="roman-line">ho liye kyūñ nāmah-bar ke sāth sāth</div>
+    <div class="roman-line">yā rab apne ḳhat̤ ko ham pahuñchāʾeñ kyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">なぜ手紙の使いと一緒に行ってしまったのか</div>
+    <div class="jp-line">ああ神よ、自分の手紙をどうやって届ければよいのか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{46,5}</div>
+    <div class="roman-line">mauj-e ḳhūñ sar se guzar hī kyūñ nah jāʾe</div>
+    <div class="roman-line">āstān-e yār se uṭh jāʾeñ kyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">血の波が頭を越えていくなら越えさせよ</div>
+    <div class="jp-line">恋人の敷居から立ち去れとでもいうのか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{46,6}</div>
+    <div class="roman-line">ʿumr bhar dekhā kiyā marne kī rāh</div>
+    <div class="roman-line">mar gaye par dekhiye dikhlāʾeñ kyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">一生涯、死への道を見つめ続けた</div>
+    <div class="jp-line">死んでしまったが──さてどんな見せ物になろうか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{46,7}</div>
+    <div class="roman-line">pūchhte haiñ vuh kih ġhālib kaun hai</div>
+    <div class="roman-line">koʾī batlāʾo kih ham batlāʾeñ kyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの方がお尋ねだ、ガーリブとは誰かと</div>
+    <div class="jp-line">誰か教えてやってくれ──我々は何と答えればよいのか</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 47 ==================== -->
+<div class="ghazal-block" id="g47">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 47</div>
+    <div class="ghazal-matla">lat̤āfat be-kaṡāfat jalvah paidā kar nahīñ saktī</div>
+    <div class="ghazal-meta">
+      2 dīvān verses · Arshī #19 · Meter G2<br>
+      <span class="jp">1816年作 · Ḥāmid p. 38</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{47,1}</div>
+    <div class="roman-line">lat̤āfat be-kaṡāfat jalvah paidā kar nahīñ saktī</div>
+    <div class="roman-line">chaman zangār hai āʾīnah-e bād-e bahārī kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">繊細さは粗密なくして輝きを生めない</div>
+    <div class="jp-line">庭園は春風の鏡の上の緑青に過ぎない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{47,2}</div>
+    <div class="roman-line">ḥarīf-e joshish-e daryā nahīñ ḳhvud-dārī-e sāḥil</div>
+    <div class="roman-line">jahāñ sāqī ho tū bāt̤il hai daʿvâ hoshyārī kā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">岸の自制は海の奔流に対抗できない</div>
+    <div class="jp-line">あなたが酌人である場所で、素面の主張は空しい</div>
+  </div>
+</div>
+
+<div class="ornament">✦ ✦ ✦</div>
+
+<!-- ==================== GHAZAL 48 ==================== -->
+<div class="ghazal-block" id="g48">
+  <div class="ghazal-head">
+    <div class="ghazal-num">Ghazal 48</div>
+    <div class="ghazal-matla">ʿishrat-e qat̤rah hai daryā meñ fanā ho jānā</div>
+    <div class="ghazal-meta">
+      10 dīvān verses · Arshī #36 · Meter G5<br>
+      <span class="jp">1821年以降 · Ḥāmid p. 39</span>
+    </div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,1}</div>
+    <div class="roman-line">ʿishrat-e qat̤rah hai daryā meñ fanā ho jānā</div>
+    <div class="roman-line">dard kā ḥad se guzarnā hai davā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">滴の歓びは大海の中で消滅すること</div>
+    <div class="jp-line">痛みが限界を超えることは治癒となること</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,2}</div>
+    <div class="roman-line">tujh se qismat meñ mirī ṣūrat-e qufl-e abjad</div>
+    <div class="roman-line">thā likhā bāt ke bante hī judā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あなたとの運命には、アブジャド錠のように</div>
+    <div class="jp-line">言葉が成るや否や離別すると記されていた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,3}</div>
+    <div class="roman-line">dil huʾā kashmakash-e chārah-e zaḥmat meñ tamām</div>
+    <div class="roman-line">miṭ gayā ghisne meñ is ʿuqde kā vā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">心は苦悩の治療法を求めるせめぎ合いの中で尽きた</div>
+    <div class="jp-line">擦り減る中でこの結び目を解くことも消えてしまった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,4}</div>
+    <div class="roman-line">ab jafā se bhī haiñ maḥrūm ham al-lâh al-lâh</div>
+    <div class="roman-line">is qadar dushman-e arbāb-e vafā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">今や残酷さからすら見放されている──ああ何ということ</div>
+    <div class="jp-line">誠実な者たちのこれほどの敵になるとは</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,5}</div>
+    <div class="roman-line">ẓuʿf se giryah mubaddal bah dam-e sard huʾā</div>
+    <div class="roman-line">bāvar āyā hameñ pānī kā havā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">弱さのために涙は冷たい溜息に変わった</div>
+    <div class="jp-line">水が風になることを我々は信じるに至った</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,6}</div>
+    <div class="roman-line">dil se miṭnā tirī angusht-e ḥināʾī kā ḳhayāl</div>
+    <div class="roman-line">ho gayā gosht se nāḳhun kā judā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あなたのヘンナに染まった指の思い出が心から消えること</div>
+    <div class="jp-line">それは肉から爪が剝がれることとなった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,7}</div>
+    <div class="roman-line">hai mujhe abr-e bahārī kā baras kar khulnā</div>
+    <div class="roman-line">rote rote ġham-e furqat meñ fanā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">私にとってそれは春の雲が雨を降らせた後に晴れること</div>
+    <div class="jp-line">泣きに泣いて、別離の悲しみの中で消え去ること</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,8}</div>
+    <div class="roman-line">gar nahīñ nak'hat-e gul ko tire kūche kī havas</div>
+    <div class="roman-line">kyūñ hai gard-e rah-e jaulān-e ṣabā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">薔薇の芳香にあなたの路地への渇望がないなら</div>
+    <div class="jp-line">なぜ風の通り道の塵となるのか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,9}</div>
+    <div class="roman-line">baḳhshe hai jalvah-e gul żauq-e tamāshā ġhālib</div>
+    <div class="roman-line">chashm ko chāhiye har rang meñ vā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">薔薇の輝きが見物の楽しみを授ける、ガーリブよ</div>
+    <div class="jp-line">眼はあらゆる色彩に向かって開かれるべきだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">{48,10}</div>
+    <div class="roman-line">tā kih tujh par khule ějāz-e havā-e ṣaiqal</div>
+    <div class="roman-line">dekh barsāt meñ sabz āʾine kā ho jānā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">研磨の風の奇跡があなたに明らかになるように</div>
+    <div class="jp-line">雨の中で鏡が緑に変わるのを見よ</div>
+  </div>
+</div>
+
+
+<!-- COLOPHON -->
+<div class="colophon">
+  <div class="ornament" style="margin-bottom:1rem">✦ ✦ ✦ ✦ ✦</div>
+  Dīvān-i Ghālib-i Kāmil · Ghazal 26–48<br>
+  23 ghazals · 122 dīvān verses<br>
+  <span class="jp">
+    ガーリブ完全詩集　ガザル26–48　対訳<br>
+    全23ガザル・ディーヴァーン所収122連句<br>
+    底本：Ḥāmid Aḥmad Ḳhān 編 Dīvān-i Ghālib-i Kāmil（年代順配列）<br>
+    ローマ字化：Frances W. Pritchett, <em>A Desertful of Roses</em>（ALA-LC方式）
+  </span>
+</div>

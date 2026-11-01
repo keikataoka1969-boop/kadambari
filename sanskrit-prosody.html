@@ -1,0 +1,2072 @@
+<title>サンスクリット韻律学入門</title>
+<style>
+@import url('data:text/css,');
+
+:root {
+  /* Palette — warm sandstone ground with indigo accent, evoking palm-leaf manuscripts */
+  --surface-page: #f5f0e8;
+  --surface-card: #faf7f1;
+  --surface-inset: #eee8dc;
+  --ink-primary: #1a1512;
+  --ink-secondary: #5c5347;
+  --ink-muted: #8a7f72;
+  --accent: #3b4f8a;
+  --accent-light: #5a6faa;
+  --accent-wash: rgba(59,79,138,0.08);
+  --accent-wash-strong: rgba(59,79,138,0.14);
+  --guru: #3b4f8a;
+  --laghu: #c47832;
+  --laghu-light: #e8a05c;
+  --border: rgba(26,21,18,0.10);
+  --border-strong: rgba(26,21,18,0.18);
+  --gana-bg: #eae4d8;
+  --highlight: #f0e4c8;
+  --rule: #d4cdbf;
+
+  /* Type */
+  --font-display: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    --surface-page: #12100d;
+    --surface-card: #1c1915;
+    --surface-inset: #252118;
+    --ink-primary: #ebe5da;
+    --ink-secondary: #b0a898;
+    --ink-muted: #7a7265;
+    --accent: #7b94d4;
+    --accent-light: #96abd8;
+    --accent-wash: rgba(123,148,212,0.10);
+    --accent-wash-strong: rgba(123,148,212,0.16);
+    --guru: #7b94d4;
+    --laghu: #e8a05c;
+    --laghu-light: #c47832;
+    --border: rgba(235,229,218,0.10);
+    --border-strong: rgba(235,229,218,0.16);
+    --gana-bg: #1f1c16;
+    --highlight: #2a2418;
+    --rule: #3a3428;
+  }
+}
+:root[data-theme="dark"] {
+  --surface-page: #12100d;
+  --surface-card: #1c1915;
+  --surface-inset: #252118;
+  --ink-primary: #ebe5da;
+  --ink-secondary: #b0a898;
+  --ink-muted: #7a7265;
+  --accent: #7b94d4;
+  --accent-light: #96abd8;
+  --accent-wash: rgba(123,148,212,0.10);
+  --accent-wash-strong: rgba(123,148,212,0.16);
+  --guru: #7b94d4;
+  --laghu: #e8a05c;
+  --laghu-light: #c47832;
+  --border: rgba(235,229,218,0.10);
+  --border-strong: rgba(235,229,218,0.16);
+  --gana-bg: #1f1c16;
+  --highlight: #2a2418;
+  --rule: #3a3428;
+}
+:root[data-theme="light"] {
+  --surface-page: #f5f0e8;
+  --surface-card: #faf7f1;
+  --surface-inset: #eee8dc;
+  --ink-primary: #1a1512;
+  --ink-secondary: #5c5347;
+  --ink-muted: #8a7f72;
+  --accent: #3b4f8a;
+  --accent-light: #5a6faa;
+  --accent-wash: rgba(59,79,138,0.08);
+  --accent-wash-strong: rgba(59,79,138,0.14);
+  --guru: #3b4f8a;
+  --laghu: #c47832;
+  --laghu-light: #e8a05c;
+  --border: rgba(26,21,18,0.10);
+  --border-strong: rgba(26,21,18,0.18);
+  --gana-bg: #eae4d8;
+  --highlight: #f0e4c8;
+  --rule: #d4cdbf;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--surface-page);
+  color: var(--ink-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.25;
+  text-wrap: balance;
+  color: var(--ink-primary);
+  margin-bottom: 0.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+.hero-sub {
+  font-size: 0.95rem;
+  color: var(--ink-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Sections */
+section {
+  margin-bottom: 3rem;
+}
+h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--ink-primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+  text-wrap: balance;
+}
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin: 1.5rem 0 0.75rem;
+}
+p {
+  margin-bottom: 1rem;
+  color: var(--ink-secondary);
+  max-width: 65ch;
+}
+p.full { max-width: none; }
+
+/* Cards */
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.card-accent {
+  border-left: 3px solid var(--accent);
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+thead {
+  background: var(--accent-wash-strong);
+}
+th {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0.65rem 1rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+td {
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--ink-secondary);
+  vertical-align: top;
+}
+tbody tr:hover {
+  background: var(--accent-wash);
+}
+
+/* Symbols */
+.sym-guru {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  color: var(--guru);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+.sym-laghu {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  color: var(--laghu);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+/* Visual meter diagrams */
+.meter-visual {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  margin: 0.75rem 0;
+  padding: 0.75rem 0;
+}
+.syl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.syl-block {
+  border-radius: 3px;
+  transition: transform 0.15s;
+}
+.syl-block:hover {
+  transform: scale(1.15);
+}
+.syl-block.guru {
+  width: 22px;
+  height: 32px;
+  background: var(--guru);
+}
+.syl-block.laghu {
+  width: 22px;
+  height: 18px;
+  background: var(--laghu);
+}
+.syl-label {
+  font-size: 0.6rem;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
+
+/* Gana blocks */
+.gana-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+.gana-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--gana-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem 0.4rem;
+  min-width: 80px;
+}
+.gana-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.gana-pattern {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+.gana-desc {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+}
+
+/* Flow diagram */
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  margin: 1.25rem 0;
+  justify-content: center;
+}
+.flow-node {
+  background: var(--accent-wash-strong);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+.flow-arrow {
+  width: 28px;
+  height: 2px;
+  background: var(--rule);
+  position: relative;
+  flex-shrink: 0;
+}
+.flow-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border: 5px solid transparent;
+  border-left-color: var(--rule);
+}
+
+/* Tree diagram */
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  margin: 1.5rem 0;
+}
+.tree-level {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tree-node {
+  background: var(--surface-card);
+  border: 1.5px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--ink-primary);
+  position: relative;
+}
+.tree-node.root {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+.tree-connector {
+  width: 1px;
+  height: 24px;
+  background: var(--rule);
+  margin: 0 auto;
+}
+.tree-branch {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: center;
+}
+.tree-h-line {
+  height: 1px;
+  background: var(--rule);
+  flex: 1;
+  min-width: 40px;
+  margin-top: 0;
+}
+.tree-v-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Example block */
+.example {
+  background: var(--surface-inset);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 0.75rem 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  line-height: 1.8;
+  overflow-x: auto;
+}
+.example .label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+/* Tooltips */
+.tip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted var(--ink-muted);
+}
+.tip:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ink-primary);
+  color: var(--surface-card);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Syllable count chart */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 160px;
+  padding: 0 0.5rem;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+.bar-rect {
+  width: 100%;
+  max-width: 28px;
+  border-radius: 3px 3px 0 0;
+  background: var(--accent);
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+.bar-rect:hover {
+  opacity: 1;
+}
+.bar-label {
+  font-size: 0.6rem;
+  color: var(--ink-muted);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.bar-value {
+  font-size: 0.65rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .page { padding: 1.5rem 1rem 3rem; }
+  .hero { padding: 2rem 0 1.5rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .gana-block { min-width: 70px; padding: 0.4rem 0.5rem; }
+  .flow { gap: 0.5rem; }
+  .flow-arrow { width: 16px; }
+  .tree-level { gap: 0.75rem; }
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin: 0.5rem 0 1rem;
+}
+
+.inline-block {
+  display: inline-block;
+  background: var(--gana-bg);
+  border-radius: 3px;
+  padding: 0 0.3em;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0.75rem 0 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  align-items: center;
+}
+.legend-swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Anuṣṭubh detailed section */
+.pada-diagram {
+  display: flex;
+  gap: 0;
+  align-items: flex-end;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+}
+.pada-diagram .syl {
+  flex: 1;
+  min-width: 0;
+  max-width: 48px;
+}
+.pada-diagram .syl-block {
+  width: 100%;
+  max-width: 36px;
+  margin: 0 auto;
+}
+.pada-diagram .syl-block.free {
+  background: var(--gana-bg);
+  border: 1.5px dashed var(--ink-muted);
+  height: 24px;
+}
+.pada-diagram .syl-block.guru {
+  height: 32px;
+}
+.pada-diagram .syl-block.laghu {
+  height: 18px;
+}
+.pada-diagram .syl-num {
+  font-size: 0.65rem;
+  color: var(--ink-muted);
+  text-align: center;
+  margin-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.pada-diagram .syl-mark {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-bottom: 3px;
+  font-family: var(--font-mono);
+}
+
+.half-verse {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  margin: 0.35rem 0;
+}
+.half-verse .pada-group {
+  flex: 1;
+  min-width: 0;
+}
+.half-verse .pada-sep {
+  width: 1px;
+  height: 40px;
+  background: var(--rule);
+  flex-shrink: 0;
+  margin: 0 6px;
+}
+
+.rule-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.rule-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.rule-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+.rule-text {
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+.rule-text strong {
+  color: var(--ink-primary);
+}
+
+.prohibited {
+  background: rgba(200,60,60,0.06);
+  border: 1px solid rgba(200,60,60,0.18);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin: 0.35rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.prohibited .x-mark {
+  color: #c04040;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.allowed {
+  background: rgba(40,140,80,0.06);
+  border: 1px solid rgba(40,140,80,0.18);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin: 0.35rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.allowed .ok-mark {
+  color: #288c50;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.sandhi-diagram {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sandhi-block {
+  background: var(--surface-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+}
+.sandhi-block .pada-label {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  display: block;
+  margin-bottom: 2px;
+}
+.sandhi-join {
+  font-size: 0.75rem;
+  color: var(--accent);
+  padding: 0 4px;
+  font-weight: 600;
+}
+.sandhi-break {
+  font-size: 0.75rem;
+  color: #c04040;
+  padding: 0 4px;
+  font-weight: 700;
+}
+
+.vipula-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+@media (max-width: 600px) {
+  .vipula-grid { grid-template-columns: 1fr; }
+}
+.vipula-card {
+  background: var(--surface-inset);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+.vipula-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+.vipula-pattern {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+  margin-bottom: 0.25rem;
+}
+.vipula-note {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.scan-line {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  margin: 0.15rem 0;
+  flex-wrap: nowrap;
+}
+.scan-syl {
+  width: 2.2em;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.15rem 0;
+}
+.scan-syl.g { color: var(--guru); font-weight: 600; }
+.scan-syl.l { color: var(--laghu); font-weight: 600; }
+.scan-syl.free { color: var(--ink-muted); }
+.scan-sep {
+  width: 1.2em;
+  text-align: center;
+  color: var(--rule);
+  font-size: 0.9rem;
+}
+
+.detail-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 0.5rem;
+}
+.detail-tag.important {
+  background: var(--accent-wash-strong);
+  color: var(--accent);
+}
+
+/* yamātā mnemonic */
+.mnemonic-strip {
+  display: flex;
+  gap: 0;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+.mnemonic-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+  flex-shrink: 0;
+}
+.mnemonic-char {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.4rem 0.3rem;
+  border: 1px solid var(--border);
+  border-right: none;
+  width: 100%;
+  text-align: center;
+  background: var(--surface-card);
+}
+.mnemonic-cell:first-child .mnemonic-char { border-radius: 6px 0 0 6px; }
+.mnemonic-cell:last-child .mnemonic-char { border-right: 1px solid var(--border); border-radius: 0 6px 6px 0; }
+.mnemonic-qty {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin-top: 3px;
+  font-weight: 600;
+}
+.mnemonic-qty.g { color: var(--guru); }
+.mnemonic-qty.l { color: var(--laghu); }
+
+.mnemonic-window {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.mnemonic-window:last-child { border-bottom: none; }
+.mnemonic-window .win-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent);
+  width: 2.5em;
+  text-align: right;
+  flex-shrink: 0;
+}
+.mnemonic-window .win-arrow {
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+.mnemonic-window .win-syls {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  min-width: 5em;
+}
+.mnemonic-window .win-pattern {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.mnemonic-window .win-eq {
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+.mnemonic-window .win-name {
+  font-size: 0.85rem;
+  color: var(--ink-secondary);
+}
+
+/* āryā foot blocks */
+.arya-feet {
+  display: flex;
+  gap: 2px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+.arya-foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.25rem 0.4rem;
+  background: var(--surface-card);
+  min-width: 44px;
+}
+.arya-foot.half { background: var(--accent-wash); border-color: var(--accent); }
+.arya-foot-num {
+  font-size: 0.6rem;
+  color: var(--ink-muted);
+  margin-bottom: 2px;
+}
+.arya-foot-val {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-secondary);
+}
+.arya-foot-matra {
+  font-size: 0.6rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 2px;
+}
+.arya-line-label {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+.arya-scan-row {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  margin: 0.25rem 0;
+  flex-wrap: wrap;
+}
+.arya-scan-foot {
+  display: inline-flex;
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.2rem 0.35rem;
+  background: var(--surface-card);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+.arya-scan-foot.special {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+}
+.arya-scan-sep {
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+  padding: 0 2px;
+}
+</style>
+
+<div class="page">
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-eyebrow">Chandas / छन्दस्</div>
+  <h1>サンスクリット<em>韻律学</em>入門</h1>
+  <p class="hero-sub">古代インドの詩の構造を支える音節（akṣara）と拍（mātrā）の体系を、図と表で解説します。</p>
+</header>
+
+<!-- 1. 基本概念 -->
+<section>
+  <h2>1. 韻律の基本構造</h2>
+  <p>サンスクリットの詩（padya）は4つの<strong>パーダ</strong>（pāda＝四分の一行）から構成されます。韻律は大きく2種類に分かれます。</p>
+
+  <!-- Flow diagram -->
+  <div class="flow">
+    <div class="flow-node">padya（詩節）</div>
+    <div class="flow-arrow"></div>
+    <div class="flow-node">vṛtta（音節数で規定）</div>
+  </div>
+  <div class="flow" style="margin-top:-0.5rem;">
+    <div class="flow-node">padya（詩節）</div>
+    <div class="flow-arrow"></div>
+    <div class="flow-node">jāti（拍数＝mātrāで規定）</div>
+  </div>
+
+  <h3>vṛtta の3分類</h3>
+  <!-- Tree diagram -->
+  <div class="tree">
+    <div class="tree-node root">vṛtta（韻律詩）</div>
+    <div class="tree-connector"></div>
+    <div class="tree-level">
+      <div class="tree-v-connector">
+        <div class="tree-node">
+          <strong>samavṛtta</strong><br>
+          <span style="font-size:0.8rem;color:var(--ink-muted)">全パーダ同一</span>
+        </div>
+      </div>
+      <div class="tree-v-connector">
+        <div class="tree-node">
+          <strong>ardhasamavṛtta</strong><br>
+          <span style="font-size:0.8rem;color:var(--ink-muted)">交互パーダ同一</span>
+        </div>
+      </div>
+      <div class="tree-v-connector">
+        <div class="tree-node">
+          <strong>viṣamavṛtta</strong><br>
+          <span style="font-size:0.8rem;color:var(--ink-muted)">全パーダ異なる</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 音節の長短 -->
+<section>
+  <h2>2. 音節の長短（guru と laghu）</h2>
+  <p>サンスクリット韻律の根幹は、各音節が<strong>短い（laghu）</strong>か<strong>長い（guru）</strong>かの区別です。</p>
+
+  <div class="legend">
+    <span><span class="legend-swatch" style="background:var(--guru)"></span> guru（長音節） = <span class="sym-guru">&ndash;</span></span>
+    <span><span class="legend-swatch" style="background:var(--laghu)"></span> laghu（短音節） = <span class="sym-laghu">v</span></span>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-top:0">短母音（laghu）</h3>
+      <p style="font-size:0.9rem">a, i, u, ṛ, ḷ</p>
+      <p style="font-size:0.85rem;color:var(--ink-muted)">1 mātrā（1拍）</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0">長母音（guru）</h3>
+      <p style="font-size:0.9rem">ā, ī, ū, ṝ, e, ai, o, au</p>
+      <p style="font-size:0.85rem;color:var(--ink-muted)">2 mātrā（2拍）</p>
+    </div>
+  </div>
+
+  <div class="card card-accent">
+    <h3 style="margin-top:0">短母音が「長」と見なされる場合</h3>
+    <div class="table-wrap" style="margin-top:0.75rem;border:none;">
+      <table>
+        <thead><tr><th>条件</th><th>例</th><th>説明</th></tr></thead>
+        <tbody>
+          <tr><td>Anusvāra（鼻音記号）の後</td><td>gaṃdha</td><td>aṃ は長音節扱い</td></tr>
+          <tr><td>Visarga の後</td><td>gaḥ</td><td>aḥ は長音節扱い</td></tr>
+          <tr><td>結合子音の前</td><td>satya</td><td>ty の前の a は長音節</td></tr>
+          <tr><td>パーダ末尾</td><td>（任意）</td><td>韻律上必要なら長短どちらでも</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 八ガナ -->
+<section>
+  <h2>3. 八つのガナ（gaṇa）── 韻律の積み木</h2>
+  <p>韻律の分析には、3音節ずつのグループ（gaṇa）が使われます。8種類あり、それぞれ長短の組み合わせが異なります。</p>
+
+  <div class="gana-row">
+    <div class="gana-block">
+      <div class="gana-name">ya</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+      </div>
+      <div class="gana-desc">v &ndash; &ndash;</div>
+    </div>
+    <div class="gana-block">
+      <div class="gana-name">ra</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+      </div>
+      <div class="gana-desc">&ndash; v &ndash;</div>
+    </div>
+    <div class="gana-block">
+      <div class="gana-name">ta</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+      </div>
+      <div class="gana-desc">&ndash; &ndash; v</div>
+    </div>
+    <div class="gana-block">
+      <div class="gana-name">bha</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+      </div>
+      <div class="gana-desc">&ndash; v v</div>
+    </div>
+  </div>
+  <div class="gana-row">
+    <div class="gana-block">
+      <div class="gana-name">ja</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+      </div>
+      <div class="gana-desc">v &ndash; v</div>
+    </div>
+    <div class="gana-block">
+      <div class="gana-name">sa</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+      </div>
+      <div class="gana-desc">v v &ndash;</div>
+    </div>
+    <div class="gana-block">
+      <div class="gana-name">ma</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+        <div class="syl"><div class="syl-block guru"></div></div>
+      </div>
+      <div class="gana-desc">&ndash; &ndash; &ndash;</div>
+    </div>
+    <div class="gana-block">
+      <div class="gana-name">na</div>
+      <div class="gana-pattern">
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+        <div class="syl"><div class="syl-block laghu"></div></div>
+      </div>
+      <div class="gana-desc">v v v</div>
+    </div>
+  </div>
+
+  <p class="note">加えて la（v）は単独の短音節、ga（&ndash;）は単独の長音節を表します。</p>
+
+  <div class="card card-accent">
+    <h3 style="margin-top:0;">覚え方 ① ── 詩句による記憶</h3>
+    <p style="font-size:0.85rem;">ya, ra, ta の先頭は短（laghu）。bha, ja, sa の先頭は長（guru）。ma は全て長、na は全て短。</p>
+    <div class="example">
+      <span class="label">記憶術の原文</span>
+      ādimadhyāvasāneṣu yaratā yāṃti lāghavam .<br>
+      bhajasā gauravaṃ yāṃti manau tu gurulāghavam ..
+    </div>
+    <p style="font-size:0.85rem;color:var(--ink-muted);">「ya, ra, ta はそれぞれ先頭・中間・末尾が短い。bha, ja, sa はそれぞれ先頭・中間・末尾が長い。ma はすべて長、na はすべて短。」</p>
+  </div>
+
+  <div class="card" style="border:2px solid var(--accent);">
+    <h3 style="margin-top:0;">覚え方 ② ── yamātārājabhānasalagāḥ</h3>
+    <p style="font-size:0.85rem;">8つのガナを一つの語句で覚える、極めて巧妙な記憶術です。この語句自体の音節の長短を利用し、各子音から始まる<strong>3音節の窓</strong>をスライドさせると、そのガナのパターンが得られます。</p>
+
+    <div class="mnemonic-strip">
+      <div class="mnemonic-cell"><div class="mnemonic-char" style="color:var(--accent);font-weight:700;">ya</div><div class="mnemonic-qty l">v</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char">mā</div><div class="mnemonic-qty g">&ndash;</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char">tā</div><div class="mnemonic-qty g">&ndash;</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char">rā</div><div class="mnemonic-qty g">&ndash;</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char" style="color:var(--accent);font-weight:700;">ja</div><div class="mnemonic-qty l">v</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char">bhā</div><div class="mnemonic-qty g">&ndash;</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char" style="color:var(--accent);font-weight:700;">na</div><div class="mnemonic-qty l">v</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char" style="color:var(--accent);font-weight:700;">sa</div><div class="mnemonic-qty l">v</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char" style="color:var(--accent);font-weight:700;">la</div><div class="mnemonic-qty l">v</div></div>
+      <div class="mnemonic-cell"><div class="mnemonic-char">gāḥ</div><div class="mnemonic-qty g">&ndash;</div></div>
+    </div>
+
+    <p style="font-size:0.85rem;margin:1rem 0 0.5rem;">各子音を起点に3音節ずつ取り出すと：</p>
+    <div style="overflow-x:auto;">
+      <div class="mnemonic-window">
+        <div class="win-label">ya</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--laghu)">ya</span>-<span style="color:var(--guru)">mā</span>-<span style="color:var(--guru)">tā</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>ya-gaṇa</strong></div>
+      </div>
+      <div class="mnemonic-window">
+        <div class="win-label">ma</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--guru)">mā</span>-<span style="color:var(--guru)">tā</span>-<span style="color:var(--guru)">rā</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>ma-gaṇa</strong></div>
+      </div>
+      <div class="mnemonic-window">
+        <div class="win-label">ta</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--guru)">tā</span>-<span style="color:var(--guru)">rā</span>-<span style="color:var(--laghu)">ja</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>ta-gaṇa</strong></div>
+      </div>
+      <div class="mnemonic-window">
+        <div class="win-label">ra</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--guru)">rā</span>-<span style="color:var(--laghu)">ja</span>-<span style="color:var(--guru)">bhā</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>ra-gaṇa</strong></div>
+      </div>
+      <div class="mnemonic-window">
+        <div class="win-label">ja</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--laghu)">ja</span>-<span style="color:var(--guru)">bhā</span>-<span style="color:var(--laghu)">na</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>ja-gaṇa</strong></div>
+      </div>
+      <div class="mnemonic-window">
+        <div class="win-label">bha</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--guru)">bhā</span>-<span style="color:var(--laghu)">na</span>-<span style="color:var(--laghu)">sa</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>bha-gaṇa</strong></div>
+      </div>
+      <div class="mnemonic-window">
+        <div class="win-label">na</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--laghu)">na</span>-<span style="color:var(--laghu)">sa</span>-<span style="color:var(--laghu)">la</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>na-gaṇa</strong></div>
+      </div>
+      <div class="mnemonic-window">
+        <div class="win-label">sa</div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-syls"><span style="color:var(--laghu)">sa</span>-<span style="color:var(--laghu)">la</span>-<span style="color:var(--guru)">gāḥ</span></div>
+        <div class="win-eq">=</div>
+        <div class="win-pattern"><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></div>
+        <div class="win-arrow">&rarr;</div>
+        <div class="win-name"><strong>sa-gaṇa</strong></div>
+      </div>
+    </div>
+
+    <p style="font-size:0.85rem;margin-top:1rem;">末尾に残る <strong>la</strong>（v）と <strong>gāḥ</strong>（&ndash;）は、単独の短音節・長音節を表す補助記号です。この10音節の語句一つで、8つのガナと2つの単独記号が全て導き出せます。</p>
+    <p style="font-size:0.85rem;color:var(--ink-muted);">Kedāra の Vṛttaratnākara をはじめ、伝統的な韻律定義はこの記号体系を用いて書かれています。たとえば vasaṃtatilakā の定義 "ta-bha-jā ja-gau gaḥ" は ta, bha, ja, ja, ga, ga と読み解き、&ndash;&ndash;v / &ndash;vv / v&ndash;v / v&ndash;v / &ndash;&ndash; というパターンを復元します。</p>
+  </div>
+</section>
+
+<!-- 4. Gaṇa summary table -->
+<section>
+  <h2>4. ガナ一覧表</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>ガナ名</th><th>パターン</th><th>記号</th><th>西洋名</th><th>記憶法</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>ya</strong></td>
+          <td><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></td>
+          <td>v &ndash; &ndash;</td>
+          <td>Bacchius</td>
+          <td>先頭が短</td>
+        </tr>
+        <tr>
+          <td><strong>ra</strong></td>
+          <td><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></td>
+          <td>&ndash; v &ndash;</td>
+          <td>Amphimacer</td>
+          <td>中間が短</td>
+        </tr>
+        <tr>
+          <td><strong>ta</strong></td>
+          <td><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span></td>
+          <td>&ndash; &ndash; v</td>
+          <td>Anti-bacchius</td>
+          <td>末尾が短</td>
+        </tr>
+        <tr>
+          <td><strong>bha</strong></td>
+          <td><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></td>
+          <td>&ndash; v v</td>
+          <td>Dactylus</td>
+          <td>先頭が長</td>
+        </tr>
+        <tr>
+          <td><strong>ja</strong></td>
+          <td><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span></td>
+          <td>v &ndash; v</td>
+          <td>Amphibrachys</td>
+          <td>中間が長</td>
+        </tr>
+        <tr>
+          <td><strong>sa</strong></td>
+          <td><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></td>
+          <td>v v &ndash;</td>
+          <td>Anapaestus</td>
+          <td>末尾が長</td>
+        </tr>
+        <tr>
+          <td><strong>ma</strong></td>
+          <td><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></td>
+          <td>&ndash; &ndash; &ndash;</td>
+          <td>Molossus</td>
+          <td>全て長</td>
+        </tr>
+        <tr>
+          <td><strong>na</strong></td>
+          <td><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></td>
+          <td>v v v</td>
+          <td>Tribrachys</td>
+          <td>全て短</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 5. samavṛtta classes -->
+<section>
+  <h2>5. samavṛtta の分類 ── 音節数による26のクラス</h2>
+  <p>各パーダの音節数に応じて、韻律は1音節から26音節までの26クラスに分類されます。理論上の組み合わせは膨大ですが、実際に詩で使われるのは一部です。</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>音節数</th><th>クラス名</th><th>理論上の種類数</th><th>代表的な韻律</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>4</td><td>pratiṣṭhā</td><td>2<sup>4</sup> = 16</td><td>kanyā</td></tr>
+        <tr><td>5</td><td>supratiṣṭhā</td><td>2<sup>5</sup> = 32</td><td>paṃkti</td></tr>
+        <tr><td>6</td><td>gāyatrī</td><td>2<sup>6</sup> = 64</td><td>tanumadhyamā, vidyullekhā</td></tr>
+        <tr><td>7</td><td>uṣṇik</td><td>2<sup>7</sup> = 128</td><td>kumāralalitā, madhumatī</td></tr>
+        <tr><td>8</td><td>anuṣṭubh</td><td>2<sup>8</sup> = 256</td><td><strong>śloka</strong>, vidyunmālā</td></tr>
+        <tr><td>9</td><td>bṛhatī</td><td>2<sup>9</sup> = 512</td><td>bhujaṃgasaṃgatā</td></tr>
+        <tr><td>10</td><td>paṃkti</td><td>2<sup>10</sup> = 1024</td><td>mattā, rukmavatī</td></tr>
+        <tr><td>11</td><td>triṣṭubh</td><td>2<sup>11</sup> = 2048</td><td><strong>iṃdravajrā</strong>, upajāti, śālinī</td></tr>
+        <tr><td>12</td><td>jagatī</td><td>2<sup>12</sup> = 4096</td><td><strong>vaṃśastha</strong>, toṭaka</td></tr>
+        <tr><td>14</td><td>śakvarī</td><td>2<sup>14</sup> = 16384</td><td><strong>vasaṃtatilakā</strong></td></tr>
+        <tr><td>17</td><td>atyaṣṭi</td><td>2<sup>17</sup> = 131072</td><td><strong>śikhariṇī</strong>, maṃdākrāṃtā</td></tr>
+        <tr><td>19</td><td>atidhṛti</td><td>2<sup>19</sup> = 524288</td><td><strong>śārdūlavikrīḍita</strong></td></tr>
+        <tr><td>21</td><td>prakṛti</td><td>2<sup>21</sup> = 2097152</td><td><strong>sragdharā</strong></td></tr>
+        <tr><td>26</td><td>utkṛti</td><td>2<sup>26</sup> = 67108864</td><td>bhujaṃgavijṛṃbhita</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">太字は古典文学で特に頻出する韻律名。27音節以上は一律「daṃḍaka」と呼ばれます。</p>
+</section>
+
+<!-- 6. Major metres visualized -->
+<section>
+  <h2>6. 代表的な韻律の視覚的解析</h2>
+
+  <!-- Śloka: detailed -->
+  <div class="card" style="border:2px solid var(--accent);padding:0;">
+    <div style="background:var(--accent-wash-strong);padding:1rem 1.5rem 0.75rem;border-radius:6px 6px 0 0;">
+      <span class="detail-tag important">最重要韻律</span>
+      <h3 style="margin-top:0.25rem;font-size:1.15rem;">anuṣṭubh / śloka（8音節）</h3>
+      <p style="font-size:0.85rem;max-width:none;">サンスクリット韻律のラテン語ヘクサメーターや英語の弱強五歩格（iambic pentameter）に相当する最も基本的な韻律。叙事詩・教訓詩・法典など韻文文学の大半がこの韻律で書かれています。長短のパターンが完全に固定されない柔軟さが特徴です。</p>
+    </div>
+
+    <div style="padding:1.25rem 1.5rem;">
+
+      <!-- 6.1 構造 -->
+      <h3>6.1 詩節の構造と基本パターン</h3>
+      <p style="font-size:0.85rem;">1詩節 = <strong>2つの半詩節</strong>、各半詩節 = <strong>2つのパーダ</strong>（8音節ずつ）。前半4音節は長短自由、<strong>後半4音節だけが固定</strong>されます。</p>
+
+      <!-- 凡例 -->
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin:0.75rem 0 1.25rem;font-size:0.8rem;color:var(--ink-secondary);align-items:center;">
+        <span style="display:inline-flex;align-items:center;gap:4px;"><span style="display:inline-block;width:20px;height:12px;border-radius:2px;border:1.5px dashed var(--ink-muted);background:var(--gana-bg);"></span> 自由（長短どちらでも）</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;"><span style="display:inline-block;width:20px;height:18px;border-radius:2px;background:var(--laghu);"></span> 必ず短</span>
+        <span style="display:inline-flex;align-items:center;gap:4px;"><span style="display:inline-block;width:20px;height:24px;border-radius:2px;background:var(--guru);"></span> 必ず長</span>
+      </div>
+
+      <!-- 前半の半詩節 -->
+      <div style="border:1px solid var(--border-strong);border-radius:10px;overflow:hidden;margin-bottom:0.75rem;">
+        <!-- ラベル -->
+        <div style="background:var(--accent-wash-strong);padding:0.4rem 1rem;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:0.8rem;font-weight:600;color:var(--accent);">前半の半詩節（pūrvārdha）</span>
+          <span style="font-size:0.7rem;color:var(--ink-muted);">半詩節内ではサンディ適用</span>
+        </div>
+        <div style="padding:1rem 1rem 0.75rem;">
+          <!-- 第1パーダ -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem;">
+            <span style="font-size:0.75rem;color:var(--ink-muted);width:6em;flex-shrink:0;text-align:right;">第1パーダ（奇）</span>
+            <div class="pada-diagram" style="margin:0;flex:1;">
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">1</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">2</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">3</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">4</div></div>
+              <div class="syl"><div class="syl-block laghu" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--laghu);font-weight:600;">5短</div></div>
+              <div class="syl"><div class="syl-block guru" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--guru);font-weight:600;">6長</div></div>
+              <div class="syl"><div class="syl-block guru" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--guru);font-weight:600;">7<strong>長</strong></div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">8</div></div>
+            </div>
+          </div>
+          <!-- 接続表示 -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin:0.15rem 0;">
+            <span style="width:6em;flex-shrink:0;"></span>
+            <div style="flex:1;display:flex;align-items:center;gap:6px;padding-left:0.5rem;">
+              <svg width="16" height="20" viewBox="0 0 16 20" style="flex-shrink:0;"><path d="M8 0 L8 20" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3,2"/><path d="M4 14 L8 20 L12 14" fill="none" stroke="var(--accent)" stroke-width="1.5"/></svg>
+              <span style="font-size:0.75rem;color:var(--accent);font-weight:500;">サンディ適用（語の連結が起きる）</span>
+            </div>
+          </div>
+          <!-- 第2パーダ -->
+          <div style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:0.75rem;color:var(--ink-muted);width:6em;flex-shrink:0;text-align:right;">第2パーダ（偶）</span>
+            <div class="pada-diagram" style="margin:0;flex:1;">
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">1</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">2</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">3</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">4</div></div>
+              <div class="syl"><div class="syl-block laghu" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--laghu);font-weight:600;">5短</div></div>
+              <div class="syl"><div class="syl-block guru" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--guru);font-weight:600;">6長</div></div>
+              <div class="syl"><div class="syl-block laghu" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--laghu);font-weight:600;">7<strong>短</strong></div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">8</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 半詩節間の断絶 -->
+      <div style="display:flex;align-items:center;gap:8px;margin:0.5rem 0;justify-content:center;">
+        <div style="flex:1;height:2px;background:repeating-linear-gradient(90deg,#c04040 0,#c04040 6px,transparent 6px,transparent 12px);max-width:120px;"></div>
+        <span style="font-size:0.8rem;font-weight:700;color:#c04040;white-space:nowrap;">|| 半詩節の境界 ＝ 文の切れ目</span>
+        <div style="flex:1;height:2px;background:repeating-linear-gradient(90deg,#c04040 0,#c04040 6px,transparent 6px,transparent 12px);max-width:120px;"></div>
+      </div>
+      <p style="font-size:0.8rem;color:#c04040;text-align:center;margin:0 0 0.5rem;font-weight:500;">サンディなし（前の語末と次の語頭は連結しない）</p>
+
+      <!-- 後半の半詩節 -->
+      <div style="border:1px solid var(--border-strong);border-radius:10px;overflow:hidden;margin-bottom:1rem;">
+        <div style="background:var(--accent-wash-strong);padding:0.4rem 1rem;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:0.8rem;font-weight:600;color:var(--accent);">後半の半詩節（uttarārdha）</span>
+          <span style="font-size:0.7rem;color:var(--ink-muted);">半詩節内ではサンディ適用</span>
+        </div>
+        <div style="padding:1rem 1rem 0.75rem;">
+          <!-- 第3パーダ -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.25rem;">
+            <span style="font-size:0.75rem;color:var(--ink-muted);width:6em;flex-shrink:0;text-align:right;">第3パーダ（奇）</span>
+            <div class="pada-diagram" style="margin:0;flex:1;">
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">1</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">2</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">3</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">4</div></div>
+              <div class="syl"><div class="syl-block laghu" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--laghu);font-weight:600;">5短</div></div>
+              <div class="syl"><div class="syl-block guru" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--guru);font-weight:600;">6長</div></div>
+              <div class="syl"><div class="syl-block guru" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--guru);font-weight:600;">7<strong>長</strong></div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">8</div></div>
+            </div>
+          </div>
+          <!-- 接続表示 -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin:0.15rem 0;">
+            <span style="width:6em;flex-shrink:0;"></span>
+            <div style="flex:1;display:flex;align-items:center;gap:6px;padding-left:0.5rem;">
+              <svg width="16" height="20" viewBox="0 0 16 20" style="flex-shrink:0;"><path d="M8 0 L8 20" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="3,2"/><path d="M4 14 L8 20 L12 14" fill="none" stroke="var(--accent)" stroke-width="1.5"/></svg>
+              <span style="font-size:0.75rem;color:var(--accent);font-weight:500;">サンディ適用</span>
+            </div>
+          </div>
+          <!-- 第4パーダ -->
+          <div style="display:flex;align-items:center;gap:0.5rem;">
+            <span style="font-size:0.75rem;color:var(--ink-muted);width:6em;flex-shrink:0;text-align:right;">第4パーダ（偶）</span>
+            <div class="pada-diagram" style="margin:0;flex:1;">
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">1</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">2</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">3</div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">4</div></div>
+              <div class="syl"><div class="syl-block laghu" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--laghu);font-weight:600;">5短</div></div>
+              <div class="syl"><div class="syl-block guru" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--guru);font-weight:600;">6長</div></div>
+              <div class="syl"><div class="syl-block laghu" style="border-radius:3px;"></div><div class="syl-num" style="color:var(--laghu);font-weight:600;">7<strong>短</strong></div></div>
+              <div class="syl"><div class="syl-block free" style="border-radius:3px;"></div><div class="syl-num">8</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ポイントまとめ -->
+      <div class="card card-accent" style="margin-bottom:1.5rem;">
+        <h3 style="margin-top:0;font-size:0.95rem;">読み方のポイント</h3>
+        <ul style="font-size:0.85rem;color:var(--ink-secondary);padding-left:1.2em;margin:0.5rem 0 0;">
+          <li style="margin-bottom:0.5rem;"><strong>奇数パーダ（第1・第3）</strong>は第7音節が<strong>長</strong> → 末尾 v&ndash;<strong>&ndash;</strong>× のリズムは「途中で止まる」ような宙吊り感（シンコペーション）を生む</li>
+          <li style="margin-bottom:0.5rem;"><strong>偶数パーダ（第2・第4）</strong>は第7音節が<strong>短</strong> → 末尾 v&ndash;<strong>v</strong>× の二重 iambus で、半詩節が<strong>解決</strong>される</li>
+          <li style="margin-bottom:0.5rem;">第5音節は<strong>常に短</strong>、第6音節は<strong>常に長</strong>（全パーダ共通）</li>
+          <li style="margin-bottom:0.5rem;">第8音節（パーダ末）は韻律上どちらでもよい。後に休止が入るため、短くても長と同等に機能する</li>
+          <li><strong>半詩節の境界</strong>（第2↔第3パーダ間）は文末として扱われ、サンディ（語の連結）は起きない。それ以外のパーダ間ではサンディが義務的に適用される</li>
+        </ul>
+      </div>
+
+      <h3>6.2 奇数と偶数パーダの違い ── なぜ「宙吊り」と「解決」？</h3>
+      <p style="font-size:0.85rem;">奇数パーダの末尾 <span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span> は重い音節が2つ続いて「着地しきらない」感覚を生み、聴き手は次のパーダを待ちます。偶数パーダの末尾 <span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span>（iambus の繰り返し）は軽快に閉じ、半詩節が完結します。この<strong>「問い→答え」のような反復構造</strong>が、śloka の朗読に独特のうねりを与えています。</p>
+
+      <!-- 6.3 制約規則 -->
+      <h3>6.3 追加の制約規則</h3>
+
+      <ul class="rule-list">
+        <li class="rule-item">
+          <div class="rule-num">1</div>
+          <div class="rule-text">
+            <strong>パーダ末尾音節（第8音節）</strong>は、第1〜第4パーダ全てにおいて、実際には長でも短でもよい（上の図では × で表記）。リズム上は長として機能しますが、パーダ間の休止が補います。
+          </div>
+        </li>
+        <li class="rule-item">
+          <div class="rule-num">2</div>
+          <div class="rule-text">
+            <strong>パーダの冒頭3音節が全て短であってはならない。</strong>つまり、第2音節か第3音節の少なくとも一方は必ず長でなければなりません。
+            <div style="margin-top:0.5rem;">
+              <span class="prohibited"><span class="x-mark">&#10005;</span> <span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span> ○ ○ ○ ○ ○</span>
+            </div>
+            <div>
+              <span class="allowed"><span class="ok-mark">&#10003;</span> <span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span> ○ ○ ○ ○ ○</span>
+              <span class="allowed"><span class="ok-mark">&#10003;</span> <span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span> ○ ○ ○ ○ ○</span>
+            </div>
+          </div>
+        </li>
+        <li class="rule-item">
+          <div class="rule-num">3</div>
+          <div class="rule-text">
+            <strong>偶数パーダ（第2・第4）が三連のiambusで終わってはならない。</strong>すなわち、第3〜第8音節が v&ndash;v&ndash;v&ndash; となるのは禁止です。
+            <div style="margin-top:0.5rem;">
+              <span class="prohibited"><span class="x-mark">&#10005;</span> ○ ○ <span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></span>
+            </div>
+          </div>
+        </li>
+        <li class="rule-item">
+          <div class="rule-num">4</div>
+          <div class="rule-text">
+            上記のパターンは<strong>pathyā（正規形）</strong>です。奇数パーダには、まれに<strong>vipulā（許容形）</strong>と呼ばれる変形が使われます（後述）。
+          </div>
+        </li>
+      </ul>
+
+      <!-- 6.4 Caesura & Sandhi -->
+      <h3>6.4 チェズーラ（語の切れ目）とサンディ</h3>
+      <p style="font-size:0.85rem;">各パーダの終わりには語の切れ目（caesura）が置かれます。しかし、その強度は位置によって異なります。</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>境界の位置</th><th>切れ目の強度</th><th>サンディ（連声）</th></tr></thead>
+          <tbody>
+            <tr><td>第1パーダ ↔ 第2パーダ</td><td style="color:var(--laghu)">弱い区切り</td><td><strong>サンディ適用</strong>（義務的）</td></tr>
+            <tr><td style="font-weight:600;">第2パーダ ↔ 第3パーダ（半詩節間）</td><td style="color:var(--guru)"><strong>強い区切り</strong></td><td><strong>サンディなし</strong>（文末扱い）</td></tr>
+            <tr><td>第3パーダ ↔ 第4パーダ</td><td style="color:var(--laghu)">弱い区切り</td><td><strong>サンディ適用</strong>（義務的）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.85rem;">この規則の結果、半詩節（第1+第2パーダ、第3+第4パーダ）が意味上・音韻上の基本単位となります。半詩節の境界はピリオドのように機能し、前後の語間でサンディは適用されません。</p>
+
+      <!-- 6.5 Vipulā -->
+      <h3>6.5 vipulā（奇数パーダの許容変形）</h3>
+      <p style="font-size:0.85rem;">奇数パーダ（第1・第3）の後半4音節は、pathyā 形の v&ndash;&ndash;× 以外にも、以下の4つの vipulā が認められています。いずれも稀ですが、古典詩に散見されます。</p>
+
+      <div class="vipula-grid">
+        <div class="vipula-card">
+          <h4>na-vipulā</h4>
+          <div class="vipula-pattern">○ ○ ○ ○ <span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">×</span></div>
+          <div class="vipula-note">後半が na-gaṇa的。第4音節の後にチェズーラ必須</div>
+        </div>
+        <div class="vipula-card">
+          <h4>bha-vipulā</h4>
+          <div class="vipula-pattern">○ ○ ○ ○ <span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">×</span></div>
+          <div class="vipula-note">後半が bha-gaṇa的。第4音節の後にチェズーラ必須</div>
+        </div>
+        <div class="vipula-card">
+          <h4>ra-vipulā</h4>
+          <div class="vipula-pattern">○ ○ ○ ○ <span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-guru">×</span></div>
+          <div class="vipula-note">後半が ra-gaṇa的。第4音節の後にチェズーラ必須</div>
+        </div>
+        <div class="vipula-card">
+          <h4>ma-vipulā</h4>
+          <div class="vipula-pattern">○ ○ ○ ○ <span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span><span class="sym-guru">×</span></div>
+          <div class="vipula-note">後半が ma-gaṇa的（全長）。最も稀</div>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>パターン名</th><th>第5</th><th>第6</th><th>第7</th><th>第8</th><th>適用</th><th>頻度</th></tr></thead>
+          <tbody>
+            <tr style="background:var(--accent-wash)"><td><strong>pathyā（正規形）</strong></td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td>×</td><td>奇数パーダ</td><td>最多</td></tr>
+            <tr><td>na-vipulā</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td>×</td><td>奇数パーダ</td><td>稀</td></tr>
+            <tr><td>bha-vipulā</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td>×</td><td>奇数パーダ</td><td>稀</td></tr>
+            <tr><td>ra-vipulā</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td>×</td><td>奇数パーダ</td><td>稀</td></tr>
+            <tr><td>ma-vipulā</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td>×</td><td>奇数パーダ</td><td>最稀</td></tr>
+            <tr style="background:var(--accent-wash)"><td><strong>偶数パーダ（常にこの形）</strong></td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td>×</td><td>偶数パーダ</td><td>固定</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 6.6 スキャンの実例 -->
+      <h3>6.6 スキャンの実例</h3>
+
+      <div class="example">
+        <span class="label">例1：Raghuvaṃśa 1.1</span>
+        vāg-ar-thā-vi-va saṃ-pṛk-tau / vāg-ar-tha-pra-ti-pat-ta-ye .<br>
+        ja-ga-taḥ pi-ta-rau vaṃ-de / pār-va-tī-pa-ra-me-śva-rau ..
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>パーダ</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>形</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>第1 vāg-ar-thā-vi-va-saṃ-pṛk-tau</td>
+              <td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td>
+              <td>pathyā &#10003;</td>
+            </tr>
+            <tr>
+              <td>第2 vāg-ar-tha-pra-ti-pat-ta-ye</td>
+              <td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td>
+              <td>偶数 &#10003;</td>
+            </tr>
+            <tr>
+              <td>第3 ja-ga-taḥ-pi-ta-rau-vaṃ-de</td>
+              <td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--guru)">&ndash;</td>
+              <td>pathyā &#10003;</td>
+            </tr>
+            <tr>
+              <td>第4 pār-va-tī-pa-ra-me-śva-rau</td>
+              <td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td><td style="color:var(--laghu)">v</td><td style="color:var(--guru)">&ndash;</td>
+              <td>偶数 &#10003;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="example">
+        <span class="label">例2：Coulson による分析例</span>
+        e-vaṃ vā-di-ni de-var-ṣau / pār-śve pi-tur a-dho-mu-khī |<br>
+        lī-lā-ka-ma-la-pat-trā-ṇi / ga-ṇa-yām ā-sa pār-va-tī ||
+      </div>
+      <p class="note">「神仙がこのように語るとき、父の傍らでうつむいたまま、パールヴァティーは蓮の花弁を数えていた」</p>
+
+      <!-- 6.7 原文定義 -->
+      <h3>6.7 伝統的な定義詩句</h3>
+      <div class="example">
+        <span class="label">原文</span>
+        śloke ṣaṣṭhaṃ guru jñeyaṃ sarvatra laghu paṃcamam .<br>
+        dvicatuḥpādayorhrasvaṃ saptamaṃ dīrghamanyayoḥ ..
+      </div>
+      <p style="font-size:0.85rem;">「śloka では、第6[音節]は常に長と知れ、第5は常に短。第2・第4パーダでは第7が短、それ以外[奇数パーダ]では長。」</p>
+
+    </div>
+  </div>
+
+  <!-- Indravajrā -->
+  <div class="card">
+    <h3 style="margin-top:0;">iṃdravajrā（11音節）</h3>
+    <p style="font-size:0.85rem;">ガナ構成：<span class="inline-block">ta ta ja ga ga</span>　ヤティ（休止）：5+6</p>
+    <div class="meter-visual">
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div style="width:8px;border-left:2px dashed var(--ink-muted);height:36px;align-self:center;opacity:0.4" title="yati"></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--ink-muted)">破線 = yati（休止位置）</p>
+  </div>
+
+  <!-- Vasantatilakā -->
+  <div class="card">
+    <h3 style="margin-top:0;">vasaṃtatilakā（14音節）── 「春の額飾り」</h3>
+    <p style="font-size:0.85rem;">ガナ構成：<span class="inline-block">ta bha ja ja ga ga</span>　ヤティ：8+6</p>
+    <div class="meter-visual">
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div style="width:8px;border-left:2px dashed var(--ink-muted);height:36px;align-self:center;opacity:0.4" title="yati"></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+    </div>
+    <div class="example">
+      <span class="label">例：Śākuntala 4.1</span>
+      yātyekato'staśikharaṃ patiroṣadhīnām<br>
+      āviṣkṛtāruṇapuraḥsara ekato'rkaḥ .
+    </div>
+  </div>
+
+  <!-- Śārdūlavikrīḍita -->
+  <div class="card">
+    <h3 style="margin-top:0;">śārdūlavikrīḍita（19音節）── 「虎の戯れ」</h3>
+    <p style="font-size:0.85rem;">ガナ構成：<span class="inline-block">ma sa ja sa ta ta ga</span>　ヤティ：12+7</p>
+    <div class="meter-visual">
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div style="width:8px;border-left:2px dashed var(--ink-muted);height:36px;align-self:center;opacity:0.4" title="yati"></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+    </div>
+    <div class="example">
+      <span class="label">例：Vikramorvaśīya 1.1</span>
+      vedāṃteṣu yamāhurekapuruṣaṃ vyāpya sthitaṃ rodasī<br>
+      yasminnīśvara ityananyaviṣayaḥ śabdo yathārthākṣaraḥ .
+    </div>
+  </div>
+
+  <!-- Mandākrāntā -->
+  <div class="card">
+    <h3 style="margin-top:0;">maṃdākrāntā（17音節）── 「ゆるやかに進む」</h3>
+    <p style="font-size:0.85rem;">ガナ構成：<span class="inline-block">ma bha na ta ta ga ga</span>　ヤティ：4+6+7。カーリダーサの『メーガドゥータ（雲の使者）』全編がこの韻律。</p>
+    <div class="meter-visual">
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div style="width:8px;border-left:2px dashed var(--ink-muted);height:36px;align-self:center;opacity:0.4"></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div style="width:8px;border-left:2px dashed var(--ink-muted);height:36px;align-self:center;opacity:0.4"></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+    </div>
+  </div>
+
+  <!-- Sragdharā -->
+  <div class="card">
+    <h3 style="margin-top:0;">sragdharā（21音節）── 「花輪を持つ女」</h3>
+    <p style="font-size:0.85rem;">ガナ構成：<span class="inline-block">ma ra bha na ya ya ya</span>　ヤティ：7+7+7。サンスクリット韻律で最も壮大な定型韻律の一つ。</p>
+    <div class="meter-visual">
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div style="width:8px;border-left:2px dashed var(--ink-muted);height:36px;align-self:center;opacity:0.4"></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div style="width:8px;border-left:2px dashed var(--ink-muted);height:36px;align-self:center;opacity:0.4"></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block guru"></div><div class="syl-label">&ndash;</div></div>
+      <div class="syl"><div class="syl-block laghu"></div><div class="syl-label">v</div></div>
+    </div>
+    <div class="example">
+      <span class="label">例：Śākuntala 1.1</span>
+      yā sṛṣṭiḥ sraṣṭurādyā vahat vidhihutaṃ yā haviryā ca hotrī<br>
+      ya dve kālaṃ vidhattaḥ śrutiviṣayaguṇā yā sthitā vyāpya viśvam .
+    </div>
+  </div>
+</section>
+
+<!-- 7. Jāti -->
+<section>
+  <h2>7. jāti ── 拍数（mātrā）で定まる韻律</h2>
+  <p>vṛtta が音節の数と位置で規定されるのに対し、jāti は各パーダの<strong>拍数（mātrā）</strong>の合計で規定されます。短母音 = 1拍、長母音 = 2拍。</p>
+
+  <!-- āryā detailed -->
+  <div class="card" style="border:2px solid var(--accent);padding:0;">
+    <div style="background:var(--accent-wash-strong);padding:1rem 1.5rem 0.75rem;border-radius:6px 6px 0 0;">
+      <span class="detail-tag important">jāti の最重要韻律</span>
+      <h3 style="margin-top:0.25rem;font-size:1.15rem;">āryā（アーリヤー）</h3>
+      <p style="font-size:0.85rem;max-width:none;">サンスクリットの定型韻律（vṛtta）とは根本的に異なる構造を持つ韻律です。俗語（プラークリット）起源で、古典サンスクリットに取り入れられました。ゴーヴァルダナの『アーリヤーサプタシャティー（āryāsaptaśatī）』はこの韻律で全編書かれています。</p>
+    </div>
+
+    <div style="padding:1.25rem 1.5rem;">
+
+      <!-- 7.1 基本構造 -->
+      <h3>7.1 基本構造 ── 4拍の「脚」（gaṇa）</h3>
+      <p style="font-size:0.85rem;">āryā は<strong>4 mātrā（4拍）ずつの脚</strong>に分割されます。1詩節 = 2行、各行は 7.5 脚（7脚＋半脚）です。</p>
+
+      <div class="card" style="margin:1rem 0;background:var(--surface-inset);">
+        <p style="font-size:0.8rem;color:var(--ink-muted);margin-bottom:0.5rem;font-weight:600;">各脚（4拍）に許される音節パターン：</p>
+        <div class="table-wrap" style="border:none;">
+          <table>
+            <thead><tr><th>パターン</th><th>音節構成</th><th>拍の合計</th><th>使用条件</th></tr></thead>
+            <tbody>
+              <tr><td><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></td><td>短短短短</td><td>1+1+1+1 = 4</td><td>全脚で可</td></tr>
+              <tr><td><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></td><td>長短短</td><td>2+1+1 = 4</td><td>全脚で可</td></tr>
+              <tr><td><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></td><td>短短長</td><td>1+1+2 = 4</td><td>全脚で可</td></tr>
+              <tr><td><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></td><td>長長</td><td>2+2 = 4</td><td>全脚で可</td></tr>
+              <tr style="background:var(--accent-wash)"><td><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span></td><td>短長短</td><td>1+2+1 = 4</td><td><strong>偶数脚（第2・4・6）のみ</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:0.8rem;color:var(--ink-muted);">5番目のパターン v&ndash;v は ja-gaṇa に相当し、偶数番目の脚に限り使用できます。奇数脚では禁止です。</p>
+      </div>
+
+      <!-- 7.2 āryā の行構造 -->
+      <h3>7.2 行の構造</h3>
+      <p style="font-size:0.85rem;">各行（半詩節）は 7.5 脚 = 30 mātrā（拍）です。ただし第2行の第6脚は<strong>単独の短音節（1拍）</strong>のみです。</p>
+
+      <div class="card" style="margin:1rem 0;background:var(--surface-inset);">
+        <p class="arya-line-label">第1行（前半）── 7.5 脚 = 30 mātrā</p>
+        <div class="arya-feet">
+          <div class="arya-foot"><div class="arya-foot-num">第1脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第2脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第3脚</div><div class="arya-foot-val">4拍</div></div>
+          <div style="border-left:2px dashed var(--ink-muted);height:32px;opacity:0.3;margin:0 2px;" title="caesura"></div>
+          <div class="arya-foot"><div class="arya-foot-num">第4脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第5脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第6脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第7脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot half"><div class="arya-foot-num">第8脚</div><div class="arya-foot-val">2拍</div><div class="arya-foot-matra">半脚</div></div>
+        </div>
+        <p style="font-size:0.75rem;color:var(--ink-muted);">破線 = 第3脚後のチェズーラ（通常ここに語の切れ目を置く）</p>
+
+        <p class="arya-line-label">第2行（後半）── 7.5 脚 = 27 mātrā</p>
+        <div class="arya-feet">
+          <div class="arya-foot"><div class="arya-foot-num">第1脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第2脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第3脚</div><div class="arya-foot-val">4拍</div></div>
+          <div style="border-left:2px dashed var(--ink-muted);height:32px;opacity:0.3;margin:0 2px;" title="caesura"></div>
+          <div class="arya-foot"><div class="arya-foot-num">第4脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第5脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot special"><div class="arya-foot-num">第6脚</div><div class="arya-foot-val">v</div><div class="arya-foot-matra">1拍のみ!</div></div>
+          <div class="arya-foot"><div class="arya-foot-num">第7脚</div><div class="arya-foot-val">4拍</div></div>
+          <div class="arya-foot half"><div class="arya-foot-num">第8脚</div><div class="arya-foot-val">2拍</div><div class="arya-foot-matra">半脚</div></div>
+        </div>
+        <p style="font-size:0.75rem;color:var(--ink-muted);">第2行の第6脚が <strong>単独の短音節（1拍）</strong>に制限されるのが āryā 最大の特徴。</p>
+      </div>
+
+      <!-- 7.3 4パーダとの対応 -->
+      <h3>7.3 4パーダ（pāda）との対応</h3>
+      <p style="font-size:0.85rem;">āryā の2行構造を伝統的な4パーダに対応させると：</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>パーダ</th><th>対応範囲</th><th>mātrā 数</th><th>計算</th></tr></thead>
+          <tbody>
+            <tr><td><strong>第1パーダ</strong></td><td>第1行の前半（脚1〜3）</td><td>12</td><td>4 × 3 = 12</td></tr>
+            <tr><td><strong>第2パーダ</strong></td><td>第1行の後半（脚4〜8）</td><td>18</td><td>4 × 4 + 2 = 18</td></tr>
+            <tr><td><strong>第3パーダ</strong></td><td>第2行の前半（脚1〜3）</td><td>12</td><td>4 × 3 = 12</td></tr>
+            <tr><td><strong>第4パーダ</strong></td><td>第2行の後半（脚4〜8）</td><td>15</td><td>4 × 3 + 1 + 2 = 15</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.85rem;">第4パーダが15拍（18ではなく）になるのは、第2行の第6脚が1拍に制限されるためです。</p>
+
+      <!-- 7.4 āryā の5変種 -->
+      <h3>7.4 āryā の5つの変種</h3>
+      <p style="font-size:0.85rem;">第2・第4パーダの拍数が異なる5つの変種があります。第1・第3パーダは常に12拍です。</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>変種名</th><th>第1</th><th>第2</th><th>第3</th><th>第4</th><th>合計</th><th>特徴</th></tr></thead>
+          <tbody>
+            <tr style="background:var(--accent-wash)"><td><strong>āryā</strong></td><td>12</td><td>18</td><td>12</td><td>15</td><td>57</td><td>基本形。第2行第6脚が短1音節</td></tr>
+            <tr><td><strong>gīti</strong></td><td>12</td><td>18</td><td>12</td><td>18</td><td>60</td><td>前半・後半の構造が完全同一</td></tr>
+            <tr><td><strong>upagīti</strong></td><td>12</td><td>15</td><td>12</td><td>15</td><td>54</td><td>両行とも第6脚が短1音節</td></tr>
+            <tr><td><strong>udgīti</strong></td><td>12</td><td>15</td><td>12</td><td>18</td><td>57</td><td>āryā の前後半が入れ替わった形</td></tr>
+            <tr><td><strong>āryāgīti</strong></td><td>12</td><td>20</td><td>12</td><td>20</td><td>64</td><td>前半の末尾にさらに guru を加える</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="example">
+        <span class="label">Śrutabodha による定義</span>
+        yasyāḥ pāde prathame dvādaśamātrāstathā tṛtīyepi .<br>
+        aṣṭādaśa dvitīye caturthake paṃcadaśa sāryā ..
+      </div>
+      <p style="font-size:0.85rem;color:var(--ink-muted);">「第1・第3パーダが12拍、第2パーダが18拍、第4パーダが15拍であるものが āryā である。」</p>
+
+      <!-- 7.5 スキャンの実例 -->
+      <h3>7.5 具体例のスキャン（音節分析）</h3>
+
+      <div class="card" style="margin:1rem 0;background:var(--surface-inset);">
+        <div class="example" style="margin-top:0;">
+          <span class="label">例1：Mṛcchakaṭikā 5.19</span>
+          pra-ti-pa-kṣe-ṇā-pi pa-tiṃ se-vaṃ-te bhar-tṛ-va-tsa-lāḥ sā-dhvyaḥ .<br>
+          a-nya-sa-ri-tāṃ śa-tā-ni hi sa-mu-dra-gāḥ prā-pa-yaṃ-ty-a-bdhim ..
+        </div>
+
+        <p class="arya-line-label">第1行のスキャン：</p>
+        <div class="arya-scan-row">
+          <div class="arya-scan-foot" title="脚1: v v v = 4拍"><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot" title="脚2: -- = 4拍"><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot" title="脚3"><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span></div>
+          <div class="arya-scan-sep">||</div>
+          <div class="arya-scan-foot"><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot"><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot"><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot"><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot half"><span class="sym-guru">&ndash;</span></div>
+        </div>
+        <p style="font-size:0.75rem;color:var(--ink-muted);">pra-ti-pa-kṣe (4拍) | ṇā-pi (4拍) | pa-tiṃ-se (4拍) || vaṃ-te (4拍) | bhar-tṛ-va (4拍) | tsa-lāḥ (4拍) | sā-dhvyaḥ (4拍) → 合計 = 12 + 18 = 30拍</p>
+
+        <p class="arya-line-label">第2行のスキャン：</p>
+        <div class="arya-scan-row">
+          <div class="arya-scan-foot"><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot"><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot"><span class="sym-laghu">v</span><span class="sym-laghu">v</span><span class="sym-guru">&ndash;</span></div>
+          <div class="arya-scan-sep">||</div>
+          <div class="arya-scan-foot"><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot"><span class="sym-guru">&ndash;</span><span class="sym-laghu">v</span><span class="sym-laghu">v</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot special"><span class="sym-laghu">v</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot"><span class="sym-guru">&ndash;</span><span class="sym-guru">&ndash;</span></div>
+          <div class="arya-scan-sep">|</div>
+          <div class="arya-scan-foot half"><span class="sym-guru">&ndash;</span></div>
+        </div>
+        <p style="font-size:0.75rem;color:var(--ink-muted);">a-nya-sa-ri (4拍) | tāṃ-śa-tā (4拍) | ni-hi-sa (4拍) || mu-dra (4拍) | gāḥ-prā-pa (4拍) | <strong>ya</strong> (1拍!) | ṃty-a-bdhi (4拍) → 合計 = 12 + 15 = 27拍。第6脚（青枠）が短1音節のみ。</p>
+      </div>
+
+      <p style="font-size:0.85rem;">「敵方にあっても夫に仕えるのが貞淑な妻である。他の河川が百もあっても、海に注ぐ川こそが[海を]満たすのだ。」</p>
+
+      <div class="card" style="margin:1rem 0;background:var(--surface-inset);">
+        <div class="example" style="margin-top:0;">
+          <span class="label">例2：Coulson の教科書より</span>
+          ga-ccha-ti pu-raḥ śa-rī-raṃ dhā-va-ti pa-ścā-d a-saṃ-sthi-taṃ ce-taḥ |<br>
+          cī-nāṃ-śu-kam i-va ke-toḥ pra-ti-vā-taṃ nī-ya-mā-na-sya ||
+        </div>
+        <p style="font-size:0.85rem;">「体は前に進む。だが落ち着かぬ心は後ろへ駆け戻る。旗竿の絹旗が、向かい風に逆らって運ばれるように。」（別れたばかりの女性を思って）</p>
+        <p style="font-size:0.8rem;color:var(--ink-muted);">āryā の特徴である、リズムの拍点（ictus）が短音節に落ちる箇所があり、朗読時に自然なリズムと韻律上の拍点が食い違う独特の揺れが生まれます。</p>
+      </div>
+
+      <div class="card" style="margin:1rem 0;background:var(--surface-inset);">
+        <div class="example" style="margin-top:0;">
+          <span class="label">例3：Bhartṛhari, Vairāgyaśataka 1.12 (gīti)</span>
+          pā-ṭī-ra ta-va pa-ṭī-yān-kaḥ pa-ri-pā-ṭī-mi-mā-mu-rī-ka-rtum .<br>
+          ya-tpi-ṃṣa-tā-ma-pi nṛ-ṇāṃ pi-ṣṭo-'pi ta-no-ṣi pa-ri-ma-lai-ḥ pu-ṣṭim ..
+        </div>
+        <p style="font-size:0.85rem;">gīti の例。第2行の後半も18拍（第6脚が通常の4拍脚）で、前半と完全に対称的。</p>
+      </div>
+
+      <!-- 7.6 vṛtta との本質的な違い -->
+      <h3>7.6 vṛtta との本質的な違い</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>vṛtta（例：śloka）</th><th>jāti（例：āryā）</th></tr></thead>
+          <tbody>
+            <tr><td><strong>制御単位</strong></td><td>個々の音節の位置</td><td>脚（4拍グループ）の拍数合計</td></tr>
+            <tr><td><strong>音節数</strong></td><td>固定（各パーダ同数）</td><td>不定（拍数が合えば自由）</td></tr>
+            <tr><td><strong>柔軟性</strong></td><td>長短パターンが固定</td><td>各脚内の長短配分は複数パターン可</td></tr>
+            <tr><td><strong>リズムの性格</strong></td><td>規則的・予測可能</td><td>拍点と音節の食い違いによる揺れ</td></tr>
+            <tr><td><strong>起源</strong></td><td>ヴェーダ詩の伝統</td><td>俗語・プラークリット</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 8. ardhasamavṛtta & viṣamavṛtta -->
+<section>
+  <h2>8. ardhasamavṛtta と viṣamavṛtta</h2>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-top:0;">ardhasamavṛtta（半等韻律）</h3>
+      <p style="font-size:0.85rem;">奇数パーダ（第1・第3）と偶数パーダ（第2・第4）がそれぞれ同一のパターンを持つ。</p>
+      <p style="font-size:0.85rem;color:var(--ink-muted)">例：puṣpitāgrā, viyoginī</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;">viṣamavṛtta（不等韻律）</h3>
+      <p style="font-size:0.85rem;">4つのパーダ全てが異なるパターン。最も有名なのは<strong>udgatā</strong>。</p>
+      <p style="font-size:0.85rem;color:var(--ink-muted)">例：udgatā（Kirātārjunīya 12章）</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Yati -->
+<section>
+  <h2>9. ヤティ（yati）── 休止と朗読のリズム</h2>
+  <p>ヤティはパーダ内の<strong>休止（区切り）</strong>で、朗読時の息継ぎの位置を示します。韻律の定義では括弧内の数字（例：4+6+7）で表記されます。</p>
+
+  <div class="card">
+    <h3 style="margin-top:0;">ヤティの例</h3>
+    <div class="table-wrap" style="border:none;">
+      <table>
+        <thead><tr><th>韻律名</th><th>音節数</th><th>ヤティ</th><th>区切り方</th></tr></thead>
+        <tbody>
+          <tr><td>iṃdravajrā</td><td>11</td><td>5 + 6</td><td>●●●●● | ●●●●●●</td></tr>
+          <tr><td>vasaṃtatilakā</td><td>14</td><td>8 + 6</td><td>●●●●●●●● | ●●●●●●</td></tr>
+          <tr><td>mālinī</td><td>15</td><td>8 + 7</td><td>●●●●●●●● | ●●●●●●●</td></tr>
+          <tr><td>maṃdākrāntā</td><td>17</td><td>4 + 6 + 7</td><td>●●●● | ●●●●●● | ●●●●●●●</td></tr>
+          <tr><td>sragdharā</td><td>21</td><td>7 + 7 + 7</td><td>●●●●●●● | ●●●●●●● | ●●●●●●●</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Summary diagram -->
+<section>
+  <h2>10. まとめ ── サンスクリット韻律の全体構造</h2>
+
+  <div class="card" style="background:var(--surface-inset);">
+    <div style="text-align:center;margin-bottom:1.5rem;">
+      <div class="tree">
+        <div class="tree-node root" style="font-size:1rem;">サンスクリット韻律（chandas）</div>
+        <div class="tree-connector"></div>
+        <div class="tree-level" style="gap:3rem;">
+          <div class="tree-v-connector">
+            <div class="tree-node" style="border-color:var(--guru);background:var(--accent-wash);">
+              <strong>vṛtta</strong><br>
+              <span style="font-size:0.75rem;color:var(--ink-muted)">音節数で規定</span>
+            </div>
+            <div class="tree-connector"></div>
+            <div class="tree-level" style="gap:0.5rem;">
+              <div class="tree-node" style="font-size:0.8rem;padding:0.35rem 0.6rem;">sama<br><span style="font-size:0.7rem">全パーダ同一</span></div>
+              <div class="tree-node" style="font-size:0.8rem;padding:0.35rem 0.6rem;">ardhasama<br><span style="font-size:0.7rem">交互同一</span></div>
+              <div class="tree-node" style="font-size:0.8rem;padding:0.35rem 0.6rem;">viṣama<br><span style="font-size:0.7rem">全て異なる</span></div>
+            </div>
+          </div>
+          <div class="tree-v-connector">
+            <div class="tree-node" style="border-color:var(--laghu);background:rgba(196,120,50,0.08);">
+              <strong>jāti</strong><br>
+              <span style="font-size:0.75rem;color:var(--ink-muted)">拍数(mātrā)で規定</span>
+            </div>
+            <div class="tree-connector"></div>
+            <div class="tree-level" style="gap:0.5rem;">
+              <div class="tree-node" style="font-size:0.8rem;padding:0.35rem 0.6rem;">āryā系<br><span style="font-size:0.7rem">5種</span></div>
+              <div class="tree-node" style="font-size:0.8rem;padding:0.35rem 0.6rem;">vaitālīya<br><span style="font-size:0.7rem">mātrā + gaṇa</span></div>
+              <div class="tree-node" style="font-size:0.8rem;padding:0.35rem 0.6rem;">mātrāsamaka<br><span style="font-size:0.7rem">各パーダ16拍</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:1.5rem;">サンスクリット韻律は、<strong>音節の長短</strong>という単純な二項対立を基盤に、8つのガナによる組み合わせ論的な体系を構築しています。ピンガラ（Piṅgala）以来二千年以上にわたって精緻化されてきたこの体系は、詩の美しさと数学的構造が見事に融合した、古代インドの知的遺産です。</p>
+</section>
+
+<section style="margin-top:3rem;">
+  <h2 style="font-family:var(--font-display);font-size:1.3rem;color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:0.4rem;margin-bottom:1.2rem;">関連ページ</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.8rem;">
+    <a href="index.html" style="display:block;background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1rem;text-decoration:none;color:inherit;transition:border-color 0.15s;">
+      <div style="font-size:1.4rem;margin-bottom:0.3rem;">📜</div>
+      <div style="font-weight:700;font-size:0.95rem;color:var(--ink-primary);">Harṣacarita 全章</div>
+      <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:0.2rem;">ハルシャチャリタ — 梵語原文・日本語対訳 PDF（全8章）</div>
+    </a>
+    <a href="hindu-myths.html" style="display:block;background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1rem;text-decoration:none;color:inherit;transition:border-color 0.15s;">
+      <div style="font-size:1.4rem;margin-bottom:0.3rem;">🙏</div>
+      <div style="font-weight:700;font-size:0.95rem;color:var(--ink-primary);">ヒンドゥー神話入門</div>
+      <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:0.2rem;">神々の物語 — ガネーシャ、シヴァ、クリシュナ等の名場面</div>
+    </a>
+    <a href="hindu-myths-2.html" style="display:block;background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1rem;text-decoration:none;color:inherit;transition:border-color 0.15s;">
+      <div style="font-size:1.4rem;margin-bottom:0.3rem;">🔥</div>
+      <div style="font-weight:700;font-size:0.95rem;color:var(--ink-primary);">続・神々の物語</div>
+      <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:0.2rem;">ヒンドゥー神話入門 第二弾</div>
+    </a>
+    <a href="hindu-myths-3.html" style="display:block;background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1rem;text-decoration:none;color:inherit;transition:border-color 0.15s;">
+      <div style="font-size:1.4rem;margin-bottom:0.3rem;">⚔️</div>
+      <div style="font-weight:700;font-size:0.95rem;color:var(--ink-primary);">英雄と炎の物語</div>
+      <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:0.2rem;">ヒンドゥー神話入門 第三弾</div>
+    </a>
+    <a href="hindu-myths-4.html" style="display:block;background:var(--surface-card);border:1px solid var(--border);border-radius:8px;padding:1rem;text-decoration:none;color:inherit;transition:border-color 0.15s;">
+      <div style="font-size:1.4rem;margin-bottom:0.3rem;">🏛️</div>
+      <div style="font-weight:700;font-size:0.95rem;color:var(--ink-primary);">誓いと宿命の物語</div>
+      <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:0.2rem;">ヒンドゥー神話入門 第四弾</div>
+    </a>
+  </div>
+</section>
+
+<footer style="border-top:1px solid var(--rule);padding-top:1.5rem;margin-top:3rem;font-size:0.8rem;color:var(--ink-muted);text-align:center;">
+  典拠：Piṅgala-chandas-sūtra, Vṛtta-ratnākara, Chhandomañjarī 等に基づく<br>
+  Apte's <em>Sanskrit Prosody</em> (Appendix I) より構成
+</footer>
+
+</div>

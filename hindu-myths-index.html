@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒンドゥー神話入門 — シリーズまとめ</title>
+<style>
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif JP'), local('Noto Serif CJK JP');
+}
+@font-face {
+  font-family: 'Noto Serif JP';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Serif JP Bold'), local('Noto Serif CJK JP Bold');
+}
+
+:root {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+  --divider: #D4882E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1A1610;
+    --bg-card: #262018;
+    --text: #E8DCC8;
+    --text-muted: #A89880;
+    --border: rgba(232, 220, 200, 0.1);
+    --deity-bg: #221C14;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+    --hero-text: #E0D4Be;
+    --hero-sub: rgba(224, 212, 190, 0.6);
+    --tag-bg: rgba(212, 136, 46, 0.15);
+    --tag-text: #D4A843;
+    --accent-saffron: #E8A040;
+    --accent-red: #D06050;
+    --accent-green: #6A9F6D;
+    --accent-gold: #D4A843;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1A1610;
+  --bg-card: #262018;
+  --text: #E8DCC8;
+  --text-muted: #A89880;
+  --border: rgba(232, 220, 200, 0.1);
+  --deity-bg: #221C14;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --hero-gradient: linear-gradient(160deg, #1A2340 0%, #0F1528 60%, #080C18 100%);
+  --hero-text: #E0D4Be;
+  --hero-sub: rgba(224, 212, 190, 0.6);
+  --tag-bg: rgba(212, 136, 46, 0.15);
+  --tag-text: #D4A843;
+  --accent-saffron: #E8A040;
+  --accent-red: #D06050;
+  --accent-green: #6A9F6D;
+  --accent-gold: #D4A843;
+}
+:root[data-theme="light"] {
+  --bg: #FDF6E8;
+  --bg-card: #FFFFFF;
+  --text: #2C2418;
+  --text-muted: #6B5D4F;
+  --accent-saffron: #D4882E;
+  --accent-indigo: #2D3A6E;
+  --accent-red: #B84A3A;
+  --accent-green: #4A6F4D;
+  --accent-gold: #C49B2F;
+  --border: rgba(44, 36, 24, 0.12);
+  --deity-bg: #F5ECD8;
+  --shadow: 0 1px 3px rgba(44, 36, 24, 0.08);
+  --hero-gradient: linear-gradient(160deg, #2D3A6E 0%, #1A2340 60%, #0F1528 100%);
+  --hero-text: #F0E6D0;
+  --hero-sub: rgba(240, 230, 208, 0.7);
+  --tag-bg: rgba(212, 136, 46, 0.12);
+  --tag-text: #A06A1E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  background: var(--hero-gradient);
+  padding: 4.5rem 1.5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: 'ॐ श्री तप धर्म';
+  position: absolute;
+  font-size: 6rem;
+  opacity: 0.04;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: serif;
+  color: #D4A843;
+  white-space: nowrap;
+  letter-spacing: 0.3em;
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  color: var(--hero-text);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero .sub {
+  color: var(--hero-sub);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  max-width: 36em;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.hero .line {
+  width: 3rem;
+  height: 2px;
+  background: var(--accent-saffron);
+  margin: 1.2rem auto;
+  border-radius: 1px;
+}
+
+.container {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.intro {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+.intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 40em;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+/* ── Volume Cards ── */
+.vol-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 1rem 0 2rem;
+}
+
+.vol-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.vol-card:hover {
+  box-shadow: 0 4px 16px rgba(44, 36, 24, 0.12);
+  transform: translateY(-2px);
+}
+
+.vol-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  background: var(--deity-bg);
+  border-bottom: 2px solid var(--divider);
+}
+.vol-card-badge {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2em 0.7em;
+  border-radius: 4px;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+.vol-card-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.vol-card-header .vol-theme {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+  font-weight: 400;
+}
+
+.vol-card-body {
+  padding: 1.2rem 1.5rem;
+}
+.vol-card-body p {
+  font-size: 0.92rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.8;
+}
+.vol-card-body p:last-child { margin-bottom: 0; }
+
+.vol-deities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.8rem 0;
+}
+.vol-deity {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.82em;
+  font-weight: 700;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+}
+
+.vol-card-footer {
+  padding: 0 1.5rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.vol-btn {
+  display: inline-block;
+  background: var(--accent-saffron);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.55em 1.6em;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background 0.15s;
+}
+.vol-btn:hover { background: #B8741F; }
+.vol-stories {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ── Stats ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 0 2rem;
+}
+.stat-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+}
+.stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-saffron);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* ── All Deities Grid ── */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid var(--divider);
+  margin: 2rem 0 1rem;
+}
+
+.deity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.6em;
+  margin: 1rem 0 2rem;
+}
+.deity-chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7em 0.5em;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.deity-chip:hover {
+  border-color: var(--accent-saffron);
+  box-shadow: 0 2px 8px rgba(212, 136, 46, 0.15);
+}
+.deity-chip-icon { font-size: 1.6em; margin-bottom: 0.15em; }
+.deity-chip-name { font-weight: 700; font-size: 0.88em; }
+.deity-chip-vol { font-size: 0.7em; color: var(--text-muted); margin-top: 0.1em; }
+
+/* ── Source ── */
+.source-section {
+  padding: 1.5rem 0 1rem;
+}
+.source-section p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+  line-height: 1.8;
+}
+
+.footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+.footer .src {
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 3rem 1rem 2.5rem; }
+  .vol-card-header { padding: 1rem; gap: 0.8rem; }
+  .vol-card-header h2 { font-size: 1.1rem; }
+  .vol-card-body { padding: 1rem; }
+  .vol-card-footer { padding: 0 1rem 1rem; }
+  .stats { grid-template-columns: 1fr; gap: 0.6rem; }
+  .stat-box { padding: 0.8rem; }
+  .stat-num { font-size: 1.5rem; }
+  .deity-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>ヒンドゥー神話入門</h1>
+  <div class="line"></div>
+  <p class="sub">プラーナ百科事典（Vettam Mani著）から厳選した名場面を、神様ごとにわかりやすく紹介するシリーズ。全十巻・61柱の神々と英雄・180を超えるエピソードを収録。</p>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <p>象の頭をつけられた少年、口を開けたら宇宙が見えた赤ん坊、死神を論理で出し抜いた女性——ヒンドゥー教の壮大な叙事詩と神々の物語を、テーマごとに十巻に分けてお届けしています。</p>
+  </div>
+
+  <!-- ── Stats ── -->
+  <div class="stats">
+    <div class="stat-box">
+      <div class="stat-num">10</div>
+      <div class="stat-label">巻</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">61</div>
+      <div class="stat-label">柱の神々と英雄</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">177+</div>
+      <div class="stat-label">エピソード</div>
+    </div>
+  </div>
+
+  <!-- ══════ Volume Cards ══════ -->
+  <div class="vol-list">
+
+    <!-- Vol 1 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第一弾</span>
+        <div>
+          <h2>神々の物語</h2>
+          <div class="vol-theme">ヒンドゥー教の中心的な七柱の神々</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>ガネーシャの世界一周レース、シヴァの猛毒、クリシュナの口の中の宇宙、ラーマの橋、パールヴァティーの苦行、スカンダの誕生、ガンガーの降下——最も有名な七柱の名場面を厳選。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🐘 ガネーシャ</span>
+          <span class="vol-deity">🔱 シヴァ</span>
+          <span class="vol-deity">🦚 クリシュナ</span>
+          <span class="vol-deity">🏹 ラーマ</span>
+          <span class="vol-deity">🪷 パールヴァティー</span>
+          <span class="vol-deity">⚔️ スカンダ</span>
+          <span class="vol-deity">🌊 ガンガー</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths.html">読む →</a>
+        <span class="vol-stories">7柱・22話</span>
+      </div>
+    </div>
+
+    <!-- Vol 2 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第二弾</span>
+        <div>
+          <h2>続・神々の物語</h2>
+          <div class="vol-theme">宇宙の維持者と天界の住人たち</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>ヴィシュヌの十化身、ブラフマーの創造と失敗、インドラの誘惑と転落、ハヌマーンの飛翔、ラクシュミーの乳海撹拌、サラスヴァティーの呪い——天界の神々の光と影。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🪻 ヴィシュヌ</span>
+          <span class="vol-deity">📿 ブラフマー</span>
+          <span class="vol-deity">⚡ インドラ</span>
+          <span class="vol-deity">🐒 ハヌマーン</span>
+          <span class="vol-deity">🪷 ラクシュミー</span>
+          <span class="vol-deity">🎶 サラスヴァティー</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-2.html">読む →</a>
+        <span class="vol-stories">6柱・18話</span>
+      </div>
+    </div>
+
+    <!-- Vol 3 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第三弾</span>
+        <div>
+          <h2>英雄と炎の物語</h2>
+          <div class="vol-theme">火を通じた変容——破壊と浄化と再生</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>アグニの胃もたれと大火、スーリヤの影の妻、シヴァの炎に焼かれたカーマの転生、火の試練のシーター、火から生まれたドラウパディー、アルジュナの暗闘射撃——「炎」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🔥 アグニ</span>
+          <span class="vol-deity">☀️ スーリヤ</span>
+          <span class="vol-deity">🏹 カーマ</span>
+          <span class="vol-deity">🪷 シーター</span>
+          <span class="vol-deity">🔱 ドラウパディー</span>
+          <span class="vol-deity">⚡ アルジュナ</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-3.html">読む →</a>
+        <span class="vol-stories">6柱・18話</span>
+      </div>
+    </div>
+
+    <!-- Vol 4 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第四弾</span>
+        <div>
+          <h2>誓いと宿命の物語</h2>
+          <div class="vol-theme">自ら選んだ誓いと逃れられない運命</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>ビーシュマの生涯独身の誓い、カルナの二重の呪いと鎧の犠牲、ガルダの天界強襲、ナーラダのマーヤー体験、サーヴィトリーの死神論破、ヤマの不在で死が消えた世界——「誓い」と「宿命」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🛡️ ビーシュマ</span>
+          <span class="vol-deity">☀️ カルナ</span>
+          <span class="vol-deity">🦅 ガルダ</span>
+          <span class="vol-deity">🎵 ナーラダ</span>
+          <span class="vol-deity">🌺 サーヴィトリー</span>
+          <span class="vol-deity">⚖️ ヤマ</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-4.html">読む →</a>
+        <span class="vol-stories">6柱・19話</span>
+      </div>
+    </div>
+
+    <!-- Vol 5 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第五弾</span>
+        <div>
+          <h2>呪いと恩寵の物語</h2>
+          <div class="vol-theme">呪いが転じて祝福となる逆転の物語</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>王から聖仙へと変貌したヴィシュヴァーミトラ、呪いで忘れられたシャクンタラー、賭博で全てを失い取り戻したナラ王、殺されかけても信仰を貫いたプラフラーダ、北極星になった少年ドゥルヴァ、満ち欠けの呪いを受けた月の神チャンドラ——「呪い」と「恩寵」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🔥 ヴィシュヴァーミトラ</span>
+          <span class="vol-deity">🦋 シャクンタラー</span>
+          <span class="vol-deity">🎲 ナラ</span>
+          <span class="vol-deity">🙏 プラフラーダ</span>
+          <span class="vol-deity">⭐ ドゥルヴァ</span>
+          <span class="vol-deity">🌙 チャンドラ</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-5.html">読む →</a>
+        <span class="vol-stories">6柱・19話</span>
+      </div>
+    </div>
+
+    <!-- Vol 6 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第六弾</span>
+        <div>
+          <h2>変容と覚醒の物語</h2>
+          <div class="vol-theme">生まれ持った姿を根底から覆される変容の瞬間</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>バラモンでありながら斧を取ったパラシュラーマ、神々の怒りが結晶した女神ドゥルガー、三歩で宇宙を奪われた寛大な魔王マハーバリ、過去の呪いに縛られたダシャラタ王、石にされ千年を待った貞女アハリヤー、人里を知らぬ一角仙人リシュヤシュリンガ——「変容」と「覚醒」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🪓 パラシュラーマ</span>
+          <span class="vol-deity">⚔️ ドゥルガー</span>
+          <span class="vol-deity">👑 マハーバリ</span>
+          <span class="vol-deity">🏹 ダシャラタ</span>
+          <span class="vol-deity">💎 アハリヤー</span>
+          <span class="vol-deity">🦌 リシュヤシュリンガ</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-6.html">読む →</a>
+        <span class="vol-stories">6柱・18話</span>
+      </div>
+    </div>
+
+    <!-- Vol 7 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第七弾</span>
+        <div>
+          <h2>試練と真実の物語</h2>
+          <div class="vol-theme">極限で問われる正義と真実——嘘をつけるか、つかないか</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>十の頭脳を持つ学者魔王ラーヴァナ、真実のために王座も妻子も捨てたハリシュチャンドラ、生涯ただ一度の嘘で戦争を決したユディシュティラ、夫への侮辱に命で抗議したサティー、復讐の果てに永遠の呪いを受けたアシュヴァッターマン、暴王の死体から生まれ大地を耕した最初の王プリトゥ——「試練」と「真実」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🎭 ラーヴァナ</span>
+          <span class="vol-deity">👑 ハリシュチャンドラ</span>
+          <span class="vol-deity">⚖️ ユディシュティラ</span>
+          <span class="vol-deity">🔥 サティー</span>
+          <span class="vol-deity">⚡ アシュヴァッターマン</span>
+          <span class="vol-deity">🌾 プリトゥ</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-7.html">読む →</a>
+        <span class="vol-stories">6柱・18話</span>
+      </div>
+    </div>
+
+    <!-- Vol 8 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第八弾</span>
+        <div>
+          <h2>献身と選択の物語</h2>
+          <div class="vol-theme">何かに深く身を捧げ、人生を決定づける選択を迫られた者たち</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>三歩で宇宙を覆った矮人ヴァーマナ、死神に抗って永遠の命を得た少年マールカンデーヤ、太陽の子を川に捨てた母クンティー、師への敬愛のため親指を差し出した弓の天才エーカラヴヤ、兄を捨てて正義を選んだ羅刹ヴィビーシャナ、百人の息子を失い神を呪った目隠しの王妃ガーンダーリー——「献身」と「選択」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🏛️ ヴァーマナ</span>
+          <span class="vol-deity">🕉️ マールカンデーヤ</span>
+          <span class="vol-deity">👸 クンティー</span>
+          <span class="vol-deity">🏹 エーカラヴヤ</span>
+          <span class="vol-deity">🕊️ ヴィビーシャナ</span>
+          <span class="vol-deity">👁️ ガーンダーリー</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-8.html">読む →</a>
+        <span class="vol-stories">6柱・18話</span>
+      </div>
+    </div>
+
+    <!-- Vol 9 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第九弾</span>
+        <div>
+          <h2>因縁と再生の物語</h2>
+          <div class="vol-theme">前世からの業、世代を超える執念、転生による因果の決着</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>神々が変装した婿選びで真の夫を見抜いたダマヤンティー、祖先の救済のため天上の河を地上に導いたバギーラタ、百回の無礼を許された末に討たれたシシュパーラ、宿敵との千年の対立を生き抜いた聖仙ヴァシシュタ、二つの半身を継ぎ合わせて生まれた魔王ジャラーサンダ、来世で男に転生しビーシュマを倒した王女アンバー——「因縁」と「再生」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🦢 ダマヤンティー</span>
+          <span class="vol-deity">🌊 バギーラタ</span>
+          <span class="vol-deity">💢 シシュパーラ</span>
+          <span class="vol-deity">📿 ヴァシシュタ</span>
+          <span class="vol-deity">⚔️ ジャラーサンダ</span>
+          <span class="vol-deity">🔄 アンバー</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-9.html">読む →</a>
+        <span class="vol-stories">6柱・18話</span>
+      </div>
+    </div>
+
+    <!-- Vol 10 -->
+    <div class="vol-card">
+      <div class="vol-card-header">
+        <span class="vol-card-badge">第十弾</span>
+        <div>
+          <h2>智謀と化身の物語</h2>
+          <div class="vol-theme">神の化身から人間の策士まで——知恵と策略が世界を動かす</div>
+        </div>
+      </div>
+      <div class="vol-card-body">
+        <p>大洪水から世界を救った魚マツヤ、柱から現れ暴君を引き裂いた人獅子ナラシンハ、復讐の賽で王朝を内部崩壊させた策士シャクニ、正しい助言を常に無視された賢者ヴィドゥラ、武勇と愛を貫いたマニプルの女戦士チトラーンガダー、鋤を持つクリシュナの兄バラーマ——「智謀」と「化身」をテーマに六柱の物語。</p>
+        <div class="vol-deities">
+          <span class="vol-deity">🐟 マツヤ</span>
+          <span class="vol-deity">🦁 ナラシンハ</span>
+          <span class="vol-deity">🎲 シャクニ</span>
+          <span class="vol-deity">📜 ヴィドゥラ</span>
+          <span class="vol-deity">⚜️ チトラーンガダー</span>
+          <span class="vol-deity">🪈 バラーマ</span>
+        </div>
+      </div>
+      <div class="vol-card-footer">
+        <a class="vol-btn" href="hindu-myths-10.html">読む →</a>
+        <span class="vol-stories">6柱・18話</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── All Deities ── -->
+  <h2 class="section-title">登場する神々と英雄（全61柱）</h2>
+
+  <div class="deity-grid">
+    <a class="deity-chip" href="hindu-myths.html#ganesha"><div class="deity-chip-icon">🐘</div><div class="deity-chip-name">ガネーシャ</div><div class="deity-chip-vol">第一弾</div></a>
+    <a class="deity-chip" href="hindu-myths.html#shiva"><div class="deity-chip-icon">🔱</div><div class="deity-chip-name">シヴァ</div><div class="deity-chip-vol">第一弾</div></a>
+    <a class="deity-chip" href="hindu-myths.html#krishna"><div class="deity-chip-icon">🦚</div><div class="deity-chip-name">クリシュナ</div><div class="deity-chip-vol">第一弾</div></a>
+    <a class="deity-chip" href="hindu-myths.html#rama"><div class="deity-chip-icon">🏹</div><div class="deity-chip-name">ラーマ</div><div class="deity-chip-vol">第一弾</div></a>
+    <a class="deity-chip" href="hindu-myths.html#parvati"><div class="deity-chip-icon">🪷</div><div class="deity-chip-name">パールヴァティー</div><div class="deity-chip-vol">第一弾</div></a>
+    <a class="deity-chip" href="hindu-myths.html#skanda"><div class="deity-chip-icon">⚔️</div><div class="deity-chip-name">スカンダ</div><div class="deity-chip-vol">第一弾</div></a>
+    <a class="deity-chip" href="hindu-myths.html#ganga"><div class="deity-chip-icon">🌊</div><div class="deity-chip-name">ガンガー</div><div class="deity-chip-vol">第一弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-2.html"><div class="deity-chip-icon">🪻</div><div class="deity-chip-name">ヴィシュヌ</div><div class="deity-chip-vol">第二弾</div></a>
+    <a class="deity-chip" href="hindu-myths-2.html"><div class="deity-chip-icon">📿</div><div class="deity-chip-name">ブラフマー</div><div class="deity-chip-vol">第二弾</div></a>
+    <a class="deity-chip" href="hindu-myths-2.html"><div class="deity-chip-icon">⚡</div><div class="deity-chip-name">インドラ</div><div class="deity-chip-vol">第二弾</div></a>
+    <a class="deity-chip" href="hindu-myths-2.html"><div class="deity-chip-icon">🐒</div><div class="deity-chip-name">ハヌマーン</div><div class="deity-chip-vol">第二弾</div></a>
+    <a class="deity-chip" href="hindu-myths-2.html"><div class="deity-chip-icon">🪷</div><div class="deity-chip-name">ラクシュミー</div><div class="deity-chip-vol">第二弾</div></a>
+    <a class="deity-chip" href="hindu-myths-2.html"><div class="deity-chip-icon">🎶</div><div class="deity-chip-name">サラスヴァティー</div><div class="deity-chip-vol">第二弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-3.html"><div class="deity-chip-icon">🔥</div><div class="deity-chip-name">アグニ</div><div class="deity-chip-vol">第三弾</div></a>
+    <a class="deity-chip" href="hindu-myths-3.html"><div class="deity-chip-icon">☀️</div><div class="deity-chip-name">スーリヤ</div><div class="deity-chip-vol">第三弾</div></a>
+    <a class="deity-chip" href="hindu-myths-3.html"><div class="deity-chip-icon">🏹</div><div class="deity-chip-name">カーマ</div><div class="deity-chip-vol">第三弾</div></a>
+    <a class="deity-chip" href="hindu-myths-3.html"><div class="deity-chip-icon">🪷</div><div class="deity-chip-name">シーター</div><div class="deity-chip-vol">第三弾</div></a>
+    <a class="deity-chip" href="hindu-myths-3.html"><div class="deity-chip-icon">🔱</div><div class="deity-chip-name">ドラウパディー</div><div class="deity-chip-vol">第三弾</div></a>
+    <a class="deity-chip" href="hindu-myths-3.html"><div class="deity-chip-icon">⚡</div><div class="deity-chip-name">アルジュナ</div><div class="deity-chip-vol">第三弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-4.html"><div class="deity-chip-icon">🛡️</div><div class="deity-chip-name">ビーシュマ</div><div class="deity-chip-vol">第四弾</div></a>
+    <a class="deity-chip" href="hindu-myths-4.html"><div class="deity-chip-icon">☀️</div><div class="deity-chip-name">カルナ</div><div class="deity-chip-vol">第四弾</div></a>
+    <a class="deity-chip" href="hindu-myths-4.html"><div class="deity-chip-icon">🦅</div><div class="deity-chip-name">ガルダ</div><div class="deity-chip-vol">第四弾</div></a>
+    <a class="deity-chip" href="hindu-myths-4.html"><div class="deity-chip-icon">🎵</div><div class="deity-chip-name">ナーラダ</div><div class="deity-chip-vol">第四弾</div></a>
+    <a class="deity-chip" href="hindu-myths-4.html"><div class="deity-chip-icon">🌺</div><div class="deity-chip-name">サーヴィトリー</div><div class="deity-chip-vol">第四弾</div></a>
+    <a class="deity-chip" href="hindu-myths-4.html"><div class="deity-chip-icon">⚖️</div><div class="deity-chip-name">ヤマ</div><div class="deity-chip-vol">第四弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-5.html"><div class="deity-chip-icon">🔥</div><div class="deity-chip-name">ヴィシュヴァーミトラ</div><div class="deity-chip-vol">第五弾</div></a>
+    <a class="deity-chip" href="hindu-myths-5.html"><div class="deity-chip-icon">🦋</div><div class="deity-chip-name">シャクンタラー</div><div class="deity-chip-vol">第五弾</div></a>
+    <a class="deity-chip" href="hindu-myths-5.html"><div class="deity-chip-icon">🎲</div><div class="deity-chip-name">ナラ</div><div class="deity-chip-vol">第五弾</div></a>
+    <a class="deity-chip" href="hindu-myths-5.html"><div class="deity-chip-icon">🙏</div><div class="deity-chip-name">プラフラーダ</div><div class="deity-chip-vol">第五弾</div></a>
+    <a class="deity-chip" href="hindu-myths-5.html"><div class="deity-chip-icon">⭐</div><div class="deity-chip-name">ドゥルヴァ</div><div class="deity-chip-vol">第五弾</div></a>
+    <a class="deity-chip" href="hindu-myths-5.html"><div class="deity-chip-icon">🌙</div><div class="deity-chip-name">チャンドラ</div><div class="deity-chip-vol">第五弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-6.html"><div class="deity-chip-icon">🪓</div><div class="deity-chip-name">パラシュラーマ</div><div class="deity-chip-vol">第六弾</div></a>
+    <a class="deity-chip" href="hindu-myths-6.html"><div class="deity-chip-icon">⚔️</div><div class="deity-chip-name">ドゥルガー</div><div class="deity-chip-vol">第六弾</div></a>
+    <a class="deity-chip" href="hindu-myths-6.html"><div class="deity-chip-icon">👑</div><div class="deity-chip-name">マハーバリ</div><div class="deity-chip-vol">第六弾</div></a>
+    <a class="deity-chip" href="hindu-myths-6.html"><div class="deity-chip-icon">🏹</div><div class="deity-chip-name">ダシャラタ</div><div class="deity-chip-vol">第六弾</div></a>
+    <a class="deity-chip" href="hindu-myths-6.html"><div class="deity-chip-icon">💎</div><div class="deity-chip-name">アハリヤー</div><div class="deity-chip-vol">第六弾</div></a>
+    <a class="deity-chip" href="hindu-myths-6.html"><div class="deity-chip-icon">🦌</div><div class="deity-chip-name">リシュヤシュリンガ</div><div class="deity-chip-vol">第六弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-7.html"><div class="deity-chip-icon">🎭</div><div class="deity-chip-name">ラーヴァナ</div><div class="deity-chip-vol">第七弾</div></a>
+    <a class="deity-chip" href="hindu-myths-7.html"><div class="deity-chip-icon">👑</div><div class="deity-chip-name">ハリシュチャンドラ</div><div class="deity-chip-vol">第七弾</div></a>
+    <a class="deity-chip" href="hindu-myths-7.html"><div class="deity-chip-icon">⚖️</div><div class="deity-chip-name">ユディシュティラ</div><div class="deity-chip-vol">第七弾</div></a>
+    <a class="deity-chip" href="hindu-myths-7.html"><div class="deity-chip-icon">🔥</div><div class="deity-chip-name">サティー</div><div class="deity-chip-vol">第七弾</div></a>
+    <a class="deity-chip" href="hindu-myths-7.html"><div class="deity-chip-icon">⚡</div><div class="deity-chip-name">アシュヴァッターマン</div><div class="deity-chip-vol">第七弾</div></a>
+    <a class="deity-chip" href="hindu-myths-7.html"><div class="deity-chip-icon">🌾</div><div class="deity-chip-name">プリトゥ</div><div class="deity-chip-vol">第七弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-8.html"><div class="deity-chip-icon">🏛️</div><div class="deity-chip-name">ヴァーマナ</div><div class="deity-chip-vol">第八弾</div></a>
+    <a class="deity-chip" href="hindu-myths-8.html"><div class="deity-chip-icon">🕉️</div><div class="deity-chip-name">マールカンデーヤ</div><div class="deity-chip-vol">第八弾</div></a>
+    <a class="deity-chip" href="hindu-myths-8.html"><div class="deity-chip-icon">👸</div><div class="deity-chip-name">クンティー</div><div class="deity-chip-vol">第八弾</div></a>
+    <a class="deity-chip" href="hindu-myths-8.html"><div class="deity-chip-icon">🏹</div><div class="deity-chip-name">エーカラヴヤ</div><div class="deity-chip-vol">第八弾</div></a>
+    <a class="deity-chip" href="hindu-myths-8.html"><div class="deity-chip-icon">🕊️</div><div class="deity-chip-name">ヴィビーシャナ</div><div class="deity-chip-vol">第八弾</div></a>
+    <a class="deity-chip" href="hindu-myths-8.html"><div class="deity-chip-icon">👁️</div><div class="deity-chip-name">ガーンダーリー</div><div class="deity-chip-vol">第八弾</div></a>
+
+    <a class="deity-chip" href="hindu-myths-9.html"><div class="deity-chip-icon">🦢</div><div class="deity-chip-name">ダマヤンティー</div><div class="deity-chip-vol">第九弾</div></a>
+    <a class="deity-chip" href="hindu-myths-9.html"><div class="deity-chip-icon">🌊</div><div class="deity-chip-name">バギーラタ</div><div class="deity-chip-vol">第九弾</div></a>
+    <a class="deity-chip" href="hindu-myths-9.html"><div class="deity-chip-icon">💢</div><div class="deity-chip-name">シシュパーラ</div><div class="deity-chip-vol">第九弾</div></a>
+    <a class="deity-chip" href="hindu-myths-9.html"><div class="deity-chip-icon">📿</div><div class="deity-chip-name">ヴァシシュタ</div><div class="deity-chip-vol">第九弾</div></a>
+    <a class="deity-chip" href="hindu-myths-9.html"><div class="deity-chip-icon">⚔️</div><div class="deity-chip-name">ジャラーサンダ</div><div class="deity-chip-vol">第九弾</div></a>
+    <a class="deity-chip" href="hindu-myths-9.html"><div class="deity-chip-icon">🔄</div><div class="deity-chip-name">アンバー</div><div class="deity-chip-vol">第九弾</div></a>
+    <a class="deity-chip" href="hindu-myths-10.html"><div class="deity-chip-icon">🐟</div><div class="deity-chip-name">マツヤ</div><div class="deity-chip-vol">第十弾</div></a>
+    <a class="deity-chip" href="hindu-myths-10.html"><div class="deity-chip-icon">🦁</div><div class="deity-chip-name">ナラシンハ</div><div class="deity-chip-vol">第十弾</div></a>
+    <a class="deity-chip" href="hindu-myths-10.html"><div class="deity-chip-icon">🎲</div><div class="deity-chip-name">シャクニ</div><div class="deity-chip-vol">第十弾</div></a>
+    <a class="deity-chip" href="hindu-myths-10.html"><div class="deity-chip-icon">📜</div><div class="deity-chip-name">ヴィドゥラ</div><div class="deity-chip-vol">第十弾</div></a>
+    <a class="deity-chip" href="hindu-myths-10.html"><div class="deity-chip-icon">⚜️</div><div class="deity-chip-name">チトラーンガダー</div><div class="deity-chip-vol">第十弾</div></a>
+    <a class="deity-chip" href="hindu-myths-10.html"><div class="deity-chip-icon">🪈</div><div class="deity-chip-name">バラーマ</div><div class="deity-chip-vol">第十弾</div></a>
+  </div>
+
+  <!-- ── Source ── -->
+  <div class="source-section">
+    <h2 class="section-title">出典について</h2>
+    <p>すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia: A Comprehensive Dictionary with Special Reference to the Epic and Puranic Literature』に基づいて再構成しています。</p>
+    <p>原典はマハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、シヴァ・プラーナ、デーヴィー・バーガヴァタ、カーリカー・プラーナ、パドマ・プラーナ、ガルダ・プラーナ、ウッタラ・ラーマーヤナ、カターサリトサーガラなど多数のサンスクリット文献です。入門として読みやすくするため、複数の異伝を整理したり、物語の順序を再構成した箇所があります。</p>
+  </div>
+
+  <div class="footer">
+    <p>ヒンドゥー神話入門シリーズ</p>
+    <p class="src">出典: Puranic Encyclopaedia (Vettam Mani著) より抜粋・再構成</p>
+  </div>
+
+</div>
+
+</body>
+</html>

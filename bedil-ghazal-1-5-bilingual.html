@@ -1,0 +1,817 @@
+<title>Bīdil Dihlavī Ghazalīyāt 1–5 対訳</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #f3ede3;
+    --bg-card: #fffcf6;
+    --text: #2a2520;
+    --text-muted: #6b5e52;
+    --text-light: #8a7d71;
+    --accent: #4a3060;
+    --accent-light: #6b4d8a;
+    --gold: #b8860b;
+    --gold-muted: #c9a84c;
+    --border: #d9d0c4;
+    --border-light: #e8e0d4;
+    --divider: #c9bfb2;
+    --shadow: rgba(42, 37, 32, 0.06);
+    --toc-hover: rgba(74, 48, 96, 0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1520;
+      --bg-card: #241e2c;
+      --text: #e0d8cc;
+      --text-muted: #a89e92;
+      --text-light: #7a7068;
+      --accent: #b896d8;
+      --accent-light: #d4b8f0;
+      --gold: #d4a843;
+      --gold-muted: #a68a3a;
+      --border: #3a3040;
+      --border-light: #2e2538;
+      --divider: #4a3e54;
+      --shadow: rgba(0, 0, 0, 0.3);
+      --toc-hover: rgba(184, 150, 216, 0.08);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1520;
+    --bg-card: #241e2c;
+    --text: #e0d8cc;
+    --text-muted: #a89e92;
+    --text-light: #7a7068;
+    --accent: #b896d8;
+    --accent-light: #d4b8f0;
+    --gold: #d4a843;
+    --gold-muted: #a68a3a;
+    --border: #3a3040;
+    --border-light: #2e2538;
+    --divider: #4a3e54;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --toc-hover: rgba(184, 150, 216, 0.08);
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'EB Garamond', 'Noto Serif JP', Georgia, serif;
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    line-height: 1.7;
+  }
+
+  .title-block {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .title-block h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 0.3rem;
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+  }
+  .title-block .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin: 0.3rem 0;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .title-block .poet-name {
+    font-size: 1.3rem;
+    color: var(--gold);
+    margin: 0.8rem 0 0.2rem;
+    font-weight: 500;
+  }
+  .title-block .poet-jp {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .note {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-family: 'Noto Serif JP', serif;
+  }
+  .note strong { color: var(--text); }
+
+  /* TOC */
+  .toc {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .toc h2 {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin: 0 0 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-family: 'EB Garamond', serif;
+  }
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .toc-list li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.45rem 0.6rem;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 4px;
+    transition: background 0.15s;
+    font-size: 0.95rem;
+    gap: 1rem;
+  }
+  .toc-list li a:hover { background: var(--toc-hover); }
+  .toc-list .toc-num {
+    color: var(--gold);
+    font-weight: 500;
+    flex-shrink: 0;
+    min-width: 2rem;
+  }
+  .toc-list .toc-title { flex: 1; }
+  .toc-list .toc-rhyme {
+    color: var(--text-light);
+    font-size: 0.82rem;
+    flex-shrink: 0;
+    font-style: italic;
+  }
+
+  /* Ghazal blocks */
+  .ghazal-block {
+    margin-bottom: 3rem;
+    scroll-margin-top: 1rem;
+  }
+  .ghazal-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  .ghazal-num {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  .ghazal-rhyme {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .ghazal-meter {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .bayt {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.6rem;
+    box-shadow: 0 1px 3px var(--shadow);
+    position: relative;
+  }
+  .bayt-num {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 0.72rem;
+    color: var(--text-light);
+    font-variant-numeric: tabular-nums;
+  }
+  .roman-line {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text);
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 0.15rem;
+    padding-right: 2.5rem;
+  }
+  .divider {
+    text-align: center;
+    color: var(--divider);
+    font-size: 0.75rem;
+    margin: 0.4rem 0;
+    letter-spacing: 0.3em;
+  }
+  .jp-line {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .colophon {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+  .colophon a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 1.2rem 1rem 3rem; }
+    .title-block h1 { font-size: 1.4rem; }
+    .roman-line { font-size: 0.98rem; }
+    .jp-line { font-size: 0.88rem; }
+  }
+</style>
+
+<div class="title-block">
+  <div class="poet-name">Abū al-Maʻānī Mīrzā ʻAbd al-Qādir Bīdil Dihlavī</div>
+  <div class="poet-jp">アブー・アル＝マアーニー・ミールザー・アブドゥル＝カーディル・ビーディル・ディフラヴィー</div>
+  <h1>Dīvān-i Ghazalīyāt · Ghazal 1–5</h1>
+  <div class="subtitle">ディーワーン・イ・ガザリヤート 対訳 ガザル1〜5</div>
+</div>
+
+<div class="note">
+  <strong>凡例</strong>：ローマ字転写はALA-LC（米国議会図書館）方式によるペルシア語転写。底本は Ganjoor (ganjoor.net) 所収テキスト（Akbar Bihdārvand 校訂版）。日本語訳は各聯（bayt）ごとの意訳。ビーディル（1644–1720）はインドのペルシア語詩人であり、「インド派」（sabk-i hindī）の巨匠として知られる。
+</div>
+
+<nav class="toc">
+  <h2>Ghazalīyāt · 目次</h2>
+  <ol class="toc-list">
+    <li><a href="#g1"><span class="toc-num">1</span><span class="toc-title">āyīnah bar khāk zad ṣunʻ-i yaktā</span><span class="toc-rhyme">14 bayts · -ā</span></a></li>
+    <li><a href="#g2"><span class="toc-num">2</span><span class="toc-title">agar bih gulshan zi nāz gardad</span><span class="toc-rhyme">12 bayts · -ā</span></a></li>
+    <li><a href="#g3"><span class="toc-num">3</span><span class="toc-title">ay khayāl-i qāmat-at āh-i żaʻīfān rā ʻaṣā</span><span class="toc-rhyme">14 bayts · -ā</span></a></li>
+    <li><a href="#g4"><span class="toc-num">4</span><span class="toc-title">ū sipihr va man kaf-i khāk</span><span class="toc-rhyme">12 bayts · -ā</span></a></li>
+    <li><a href="#g5"><span class="toc-num">5</span><span class="toc-title">kardah-am bāz bih ān giryah-ʼi sawdā, sawdā</span><span class="toc-rhyme">10 bayts · -ā</span></a></li>
+  </ol>
+</nav>
+
+<!-- ===== GHAZAL 1 ===== -->
+<section class="ghazal-block" id="g1">
+  <div class="ghazal-header">
+    <span class="ghazal-num">Ghazal 1</span>
+    <span class="ghazal-rhyme">Rhyme: -ā · 14 bayts</span>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">1</div>
+    <div class="roman-line">āyīnah bar khāk zad ṣunʻ-i yaktā</div>
+    <div class="roman-line">tā vānamūdand kayfīyat-i mā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">鏡を大地に叩きつけた、唯一なる御業は</div>
+    <div class="jp-line">我らの有り様を示さんがために</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">2</div>
+    <div class="roman-line">bunyād-i iẓhār bar rang chīdīm</div>
+    <div class="roman-line">khvud rā bih har rang kardīm rusvā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">顕現の礎を色の上に据えた我らは</div>
+    <div class="jp-line">あらゆる色に自らを晒し辱めた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">3</div>
+    <div class="roman-line">dar pardah pukhtīm sawdā-yi khāmī</div>
+    <div class="roman-line">chandān kih khandīd āyīnah bar mā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">帳の奥で生煮えの妄執を煮詰めた</div>
+    <div class="jp-line">ついに鏡が我らを嘲笑うほどに</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">4</div>
+    <div class="roman-line">az ʻālam-i fāsh bī-pardah gashtīm</div>
+    <div class="roman-line">pinhān nabūdan, kardīm paydā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">露わなる世界からなお帳を脱いで</div>
+    <div class="jp-line">隠れようもないことを、わざわざ顕わにした</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">5</div>
+    <div class="roman-line">mā va ruʻūnat, afsānah-ʼi kīst</div>
+    <div class="roman-line">nāz-i parī bast gardan bih mīnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">我らと虚栄と──いったい誰の物語か</div>
+    <div class="jp-line">妖精の矜りがガラス瓶に首を差し出した</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">6</div>
+    <div class="roman-line">āyīnah-vārīm maḥrūm-i ʻibrat</div>
+    <div class="roman-line">dādand mā rā chashmī kih magushā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">鏡のごとく教訓から締め出された我ら</div>
+    <div class="jp-line">「開くな」と言わんばかりの目を授かった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">7</div>
+    <div class="roman-line">darhā-yi firdaws vā būd imrūz</div>
+    <div class="roman-line">az bī-dimāghī guftīm fardā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">楽園の扉は今日こそ開いていたのに</div>
+    <div class="jp-line">怠惰ゆえ我らは「明日にしよう」と言った</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">8</div>
+    <div class="roman-line">gawhar girih bast az bī-niyāzī</div>
+    <div class="roman-line">dastī kih shustīm az āb-i daryā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">宝珠は無欲ゆえに結び目を作った</div>
+    <div class="jp-line">海の水で洗ったあの手のように</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">9</div>
+    <div class="roman-line">gar jayb-i nāmūs tangat nagīrad</div>
+    <div class="roman-line">dar chīn-i dāman khuftah-st ṣaḥrā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">もし名誉の懐が窮屈に思えぬなら</div>
+    <div class="jp-line">裾の襞の中に荒野が眠っている</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">10</div>
+    <div class="roman-line">ḥayrat-ṭarāzī-st, nayrang-sāzī-st</div>
+    <div class="roman-line">tims̱āl-i awhām āyīnah-ʼi dunyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">驚嘆を織りなし、幻惑を仕立てる</div>
+    <div class="jp-line">妄想の肖像──鏡たるこの世</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">11</div>
+    <div class="roman-line">kas̱rat nashud maḥv az sāz-i vaḥdat</div>
+    <div class="roman-line">hamchūn khayālāt az shakhṣ-i tanhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">多なるものは一なる調べにも消えなかった</div>
+    <div class="jp-line">孤独な者の幻影が消えぬように</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">12</div>
+    <div class="roman-line">vahm-i taʻalluq bar khvud machīnīd</div>
+    <div class="roman-line">ṣaḥrā-nishīn-and īn khānumān-hā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">執着の妄念を己に積み重ねるな</div>
+    <div class="jp-line">これらの世帯は皆、荒野に住む民なのだ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">13</div>
+    <div class="roman-line">mawjūd nāmī-st, bāqī tavahhum</div>
+    <div class="roman-line">az ʻālam-i Khiz̤r raw tā Masīḥā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">存在とはただの名に過ぎぬ、あとは全て幻想</div>
+    <div class="jp-line">ヒズルの世界からメシアの許へ往け</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">14</div>
+    <div class="roman-line">z-īn yaʾs-i munzal mā rā chih ḥāṣil</div>
+    <div class="roman-line">ham-khānah Bīdil, ham-sāyah ʻAnqā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">この天降りし絶望から我らに何が得られよう</div>
+    <div class="jp-line">ビーディルよ、不死鳥（アンカー）と隣り合い暮らす身よ</div>
+  </div>
+</section>
+
+<!-- ===== GHAZAL 2 ===== -->
+<section class="ghazal-block" id="g2">
+  <div class="ghazal-header">
+    <span class="ghazal-num">Ghazal 2</span>
+    <span class="ghazal-rhyme">Rhyme: -ā · 12 bayts</span>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">1</div>
+    <div class="roman-line">agar bih gulshan zi nāz gardad qad-i buland-i tū jalvah-farmā</div>
+    <div class="roman-line">zi paykar-i sarv, mawj-i khijlat shavad numāyān chū may zi mīnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">もし庭園にて気高く聳えるおまえの背丈が姿を現すなら</div>
+    <div class="jp-line">糸杉の体から恥辱の波が立つだろう、酒がガラス瓶から透けるように</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">2</div>
+    <div class="roman-line">zi chashm-i mast-at agar biyābad qabūl-i kayfīyat-i nigāhī</div>
+    <div class="roman-line">tapad zi mastī bih rūy-i āyīnah naqsh-i jawhar chū mawj-i ṣahbā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの酔眼からもし一瞥の恩寵を受けたなら</div>
+    <div class="jp-line">酔いに震えて鏡の面に模様が波打つ、紅酒の波のごとく</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">3</div>
+    <div class="roman-line">nakhvānd ṭifl-i junūn-mizājam khaṭṭī zi past va buland-i hastī</div>
+    <div class="roman-line">shavam Falāṭūn-i mulk-i dānish agar shināsam sar az kaf-i pā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">狂気の性を持つ稚児たる我は存在の高低から一行も読めなかった</div>
+    <div class="jp-line">頭と足の裏の区別がつけば知の国のプラトンになれるものを</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">4</div>
+    <div class="roman-line">bih hīch ṣūrat zi dawr-i gardūn naṣīb-i mā nīst sarbulandī</div>
+    <div class="roman-line">zi baʻd-i murdan magar nasīmī ghubār-i mā rā barad bih bālā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">いかなる形でも天の巡りから我らに誇りは授からぬ</div>
+    <div class="jp-line">死後にそよ風が我らの塵を空へ運ぶかもしれぬほかは</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">5</div>
+    <div class="roman-line">nah shām-i mā rā saḥar navīdī, nah ṣubḥ-i mā rā gul-i safīdī</div>
+    <div class="roman-line">chū ḥāṣil-i mā-st nā-umīdī, ghubār-i dunyā bih farq-i ʻuqbā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">我らの宵に暁の朗報はなく、我らの朝に白い花もない</div>
+    <div class="jp-line">我らの収穫が絶望であるなら、此の世の塵は来世の頭に積もるのみ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">6</div>
+    <div class="roman-line">ramīdī az dīdah, bī-taʾammul, guzashtī ākhir bih ṣad taghāful</div>
+    <div class="roman-line">agar nadīdī tapīdan-i dil, shanīdanī dāsht nālah-ʼi mā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">瞳から怯えて去った、顧みもせず、百の無関心を重ねて通り過ぎた</div>
+    <div class="jp-line">もし心の動悸が見えなかったとしても、我らの嘆きには聴くべきものがあったのに</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">7</div>
+    <div class="roman-line">zi ṣafḥah-ʼi rāz-i īn dabistān, zi nuskhah-ʼi rang-i īn gulistān</div>
+    <div class="roman-line">nagasht naqsh-i digar numāyān magar ghubārī bih bāl-i ʻAnqā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">この学舎の秘密のページから、この花園の彩りの写本から</div>
+    <div class="jp-line">別の模様は何も現れなかった──不死鳥の翼の塵のほかには</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">8</div>
+    <div class="roman-line">bih avvalīn jalvah-at zi dil-hā ramīd ṣabr va gudākht ṭāqat</div>
+    <div class="roman-line">kujā-st āyīnah tā bigīrad ghubār-i ḥayrat dar-īn tamāshā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの最初の輝きに心から忍耐は逃げ去り、堪忍は溶けた</div>
+    <div class="jp-line">この観照の中で驚嘆の塵を受け止める鏡はどこにあるのか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">9</div>
+    <div class="roman-line">bih dawr-i paymānah-ʼi nigāh-at agar zanad lāf-i may-furūshī</div>
+    <div class="roman-line">nafas bih rang-i kamand pīchad zi mawj-i may dar gulūy-i mīnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの眼差しの杯が酒売りを気取るなら</div>
+    <div class="jp-line">息が投げ縄のように絡みつく、酒の波がガラス瓶の喉元で</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">10</div>
+    <div class="roman-line">bih būy-i rayḥān-i mushk-bār-at bih khvīsh pīchīdah-am chū sunbul</div>
+    <div class="roman-line">zi har rag-i barg-i gul nadāram chū ṭāyir-i rang, rishtah bar pā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの麝香漂うバジルの香りに、風信子のように身を捩じらせた</div>
+    <div class="jp-line">花弁のどの筋からも、色鮮やかな鳥のように足に紐を持たぬ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">11</div>
+    <div class="roman-line">bih har-kujā nāz sar bar-ārad, niyāz ham pā-yi kam nadārad</div>
+    <div class="roman-line">tū va kharāmī va ṣad taghāful, man va nigāhī va ṣad tamannā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">どこであれ驕りが頭をもたげれば、希求もまた負けてはいない</div>
+    <div class="jp-line">おまえと優雅な歩みと百の無関心──我と一瞥と百の憧憬</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">12</div>
+    <div class="roman-line">zi ghunchah-ʼi ū damīd Bīdil bahār-i khaṭṭ-i naẓar-farībī</div>
+    <div class="roman-line">bih muʻjiz-i ḥusn gasht ākhir rag-i zumarrud zi laʻl paydā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの蕾からビーディルよ、目を惑わす産毛の春が芽吹いた</div>
+    <div class="jp-line">美の奇跡によりついにエメラルドの脈がルビーから現れた</div>
+  </div>
+</section>
+
+<!-- ===== GHAZAL 3 ===== -->
+<section class="ghazal-block" id="g3">
+  <div class="ghazal-header">
+    <span class="ghazal-num">Ghazal 3</span>
+    <span class="ghazal-rhyme">Rhyme: -ā · 14 bayts</span>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">1</div>
+    <div class="roman-line">ay khayāl-i qāmat-at āh-i żaʻīfān rā ʻaṣā</div>
+    <div class="roman-line">bar rukh-at naẓārah-hā rā laghzish az jūsh-i ṣafā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">ああ、おまえの姿の幻よ──弱き者たちの溜息の杖よ</div>
+    <div class="jp-line">おまえの顔の上で眺めるまなざしは純粋さの溢れに滑る</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">2</div>
+    <div class="roman-line">nashʾah-ʼi ṣad-khum sharāb az chashm-i mast-at, ghamzah-ī</div>
+    <div class="roman-line">khūn-bahā-yi ṣad chaman az jalvah-hāy-at, yak adā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの酔眼から百甕の酒の陶酔が──ただの流し目ひとつで</div>
+    <div class="jp-line">おまえの姿態から百の花園の血の代価が──ただの仕草ひとつで</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">3</div>
+    <div class="roman-line">hamchū āyīnah hazār-at chashm-i ḥayrān rūbihrū</div>
+    <div class="roman-line">hamchū kākul yak jahān jamʻ-i parīshān dar qafā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">鏡のようにおまえの前には千の驚く目が向かい合い</div>
+    <div class="jp-line">巻毛のようにおまえの背後には一世界の乱れた群衆が</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">4</div>
+    <div class="roman-line">tīgh-i muzhgān-at bih āb-i nāz dāman mī-kashad</div>
+    <div class="roman-line">chashm-i makhmūr-at bih khūn-i tāk mī-bandad ḥinā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの睫毛の剣は嬌態の水に裾を曳き</div>
+    <div class="jp-line">おまえの朦朧たる目は葡萄の血でヘンナを塗る</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">5</div>
+    <div class="roman-line">abrūy-i mishkīn-at az bār-i taghāful gashtah khum</div>
+    <div class="roman-line">māndah zulf-i sar-kash-at z-andīshah-ʼi dil-hā, du-tā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの麝香の眉は無関心の重みに撓んで</div>
+    <div class="jp-line">おまえの奔放な巻毛は人々の心を思い二つに折れ曲がった</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">6</div>
+    <div class="roman-line">rang-i khāl-at surmah dar chashm-i tamāshā mī-kunad</div>
+    <div class="roman-line">gard-i khaṭṭ-at mī-dihad āyīnah-ʼi dil rā jalā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの黒子の色が観照の目に黛を施し</div>
+    <div class="jp-line">おまえの産毛の塵が心の鏡に光沢を与える</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">7</div>
+    <div class="roman-line">bastah bar bāl-i asīr-at nāmah-ʼi parvāz-i nāz</div>
+    <div class="roman-line">khuftah dar khūn-i shahīd-at jūsh-i gulzār-i baqā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの虜の翼には嬌態の飛翔の手紙が結ばれ</div>
+    <div class="jp-line">おまえの殉教者の血の中に永遠の花園の沸きが眠る</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">8</div>
+    <div class="roman-line">az ṣafā-yi ʻāriż-at jān mī-chakad gāh-i ʻaraq</div>
+    <div class="roman-line">v-az shikast-i ṭurrah-at, dil mī-damad jā-yi ṣadā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの頬の澄明から汗の折に魂が滴り落ち</div>
+    <div class="jp-line">おまえの額髪の乱れから声の代わりに心が芽吹く</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">9</div>
+    <div class="roman-line">laʻl-i khāmūsh-at gar az mawj-i tabassum dam zanad</div>
+    <div class="roman-line">ghunchah sāzad dar chaman pīrāhan az khijlat qabā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの沈黙のルビーがもし微笑の波から一息つけば</div>
+    <div class="jp-line">蕾は庭園にて恥じらいゆえ襯衣を外套に仕立てる</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">10</div>
+    <div class="roman-line">az nigāh-at nashʾah-hā bālīdah har muzhgān zadan</div>
+    <div class="roman-line">v-az kharām-at fitnah-hā jūshīdah az har naqsh-i pā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの眼差しから瞬くたびに陶酔が育ち</div>
+    <div class="jp-line">おまえの歩みからは足跡のひとつひとつから騒乱が沸き立つ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">11</div>
+    <div class="roman-line">har-kujā zawq-i tamāshāy-at bar-andāzad niqāb</div>
+    <div class="roman-line">kī-st gardad yak mizhah bar ham zadan, ṣabr-āzmā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえを観る歓びがどこであれ面紗を取り去れば</div>
+    <div class="jp-line">瞬き一つの間も堪えられる者が誰かいようか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">12</div>
+    <div class="roman-line">gar jamāl-at ʻām sāzad, rukhṣat-i naẓārah rā</div>
+    <div class="roman-line">mardumak az dīdah-hā pīsh az nigah, gīrad havā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">もしおまえの美が眺めの許可を万人に与えたなら</div>
+    <div class="jp-line">瞳は視線より先に瞳孔から飛び立つだろう</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">13</div>
+    <div class="roman-line">ākhir az khvud raftanam, rāhī bih fahm-i nāz burd</div>
+    <div class="roman-line">sūkhtam chandān-kih bā khū-yi tū gashtam āshnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">ついに我を忘れたことが嬌態を解する道へ通じた</div>
+    <div class="jp-line">おまえの気性に馴染むまで焼き尽くされた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">14</div>
+    <div class="roman-line">ʻumr-hā shud dar havāy-at bāl-i ʻajzī mī-zanad</div>
+    <div class="roman-line">tā kujā parvāz gīrad Bīdil az dast-i duʻā?</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">幾歳月もおまえへの想いに無力の翼を打ち続ける</div>
+    <div class="jp-line">祈りの手からビーディルはどこまで飛び立てるのか</div>
+  </div>
+</section>
+
+<!-- ===== GHAZAL 4 ===== -->
+<section class="ghazal-block" id="g4">
+  <div class="ghazal-header">
+    <span class="ghazal-num">Ghazal 4</span>
+    <span class="ghazal-rhyme">Rhyme: -ā · 12 bayts</span>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">1</div>
+    <div class="roman-line">ū sipihr va man kaf-i khāk, ū kujā va man kujā</div>
+    <div class="roman-line">dāgham az sawdā-yi khām-i ghaflat va vahm-i rasā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの方は天、我は一掬の土──あの方はどこ、我はどこ</div>
+    <div class="jp-line">怠惰なる生煮えの妄執と届く幻想に焦がされて</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">2</div>
+    <div class="roman-line">ʻajz rā gar dar janāb-i bī-niyāzī-hā rahī-st</div>
+    <div class="roman-line">īn-qadar-hā bas kih tā kūy-at rasad faryād-i mā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">もし無力さに無欲の御前への道があるのなら</div>
+    <div class="jp-line">おまえの小路に我らの叫びが届くには、これだけで十分</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">3</div>
+    <div class="roman-line">nīst barq-i jān-gudāzī chūn taghāful-hā-yi nāz</div>
+    <div class="roman-line">bīsh az īn ātash ma-zan dar khānah-ʼi āyīnah-hā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">嬌態の無関心ほど魂を溶かす稲妻はない</div>
+    <div class="jp-line">これ以上、鏡たちの家に火を放つな</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">4</div>
+    <div class="roman-line">har-kih rā ulfat shahīd-i chashm-i makhmūr-at kunad</div>
+    <div class="roman-line">nashʾah angīzad zi khākash gard tā rūz-i jazā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえの朦朧たる目の殉教者となった者は誰であれ</div>
+    <div class="jp-line">その塵から審判の日まで陶酔が立ち上る</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">5</div>
+    <div class="roman-line">az numūd-i khāksār-i ʻishq na-tavān dād ʻarż</div>
+    <div class="roman-line">rang-i tims̱ālī magar āyīnah gardad tūtiyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋に塗れた卑しき者の姿からは訴えようもない</div>
+    <div class="jp-line">肖像の色が鏡の目薬となるのでなければ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">6</div>
+    <div class="roman-line">nīst dar bunyād-i ātish khānah-ʼi nayrang-i dahr</div>
+    <div class="roman-line">ān-qadar khākistarī k-āyīnah-ī gīrad jalā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">時の幻惑の館の炎の基礎には</div>
+    <div class="jp-line">鏡が光沢を得るほどの灰さえもない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">7</div>
+    <div class="roman-line">zindagī maḥmil-kash-i vahm-i du ʻālam ārzū-st</div>
+    <div class="roman-line">mī-tapad dar har nafas ṣad kārvān bāng-i darā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">生とは両世界の幻想を運ぶ駕籠の担ぎ手、欲望のこと</div>
+    <div class="jp-line">一息ごとに百の隊商の鈴の音が震える</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">8</div>
+    <div class="roman-line">ārzū khūn-gashtah-ʼi nayrang-i vażʻ-i nāzukī-st</div>
+    <div class="roman-line">ghamzah dard-i dūr bāsh va jalvah mī-gūyad biyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">欲望は繊細なる振る舞いの幻術に血を流し</div>
+    <div class="jp-line">流し目は「去れ」と痛みを発し、美姿は「来よ」と語る</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">9</div>
+    <div class="roman-line">har-chih mī-bīnam tapish-āmādah-ʼi ṣad justujū-st</div>
+    <div class="roman-line">z-īn biyābān naqsh-i pā ham nīst bī-āvāz-i pā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">目に映る全てが百の探求に向けて鼓動している</div>
+    <div class="jp-line">この荒野では足跡さえも足音なしには存在せぬ</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">10</div>
+    <div class="roman-line">qāmat-i ū har-kujā sarkūb-i raʻnāyān shavad</div>
+    <div class="roman-line">sarv rā khijlat magar dar sāyah-ash dārad bih pā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの方の背丈がどこであれ美人たちを圧倒すれば</div>
+    <div class="jp-line">糸杉は恥じてその影の中にのみ立っていられる</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">11</div>
+    <div class="roman-line">har nafas ṣad rang mī-gīrad ʻinān-i jalvah-ash</div>
+    <div class="roman-line">tā kunad shūkhī ʻaraq āyīnah mī-rīzad ḥayā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">一息ごとにあの方の美姿の手綱は百色に変わり</div>
+    <div class="jp-line">戯れをすれば汗が流れ、鏡は恥じらいを撒き散らす</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">12</div>
+    <div class="roman-line">bāl va par bar ham zadan Bīdil kaf-i afsūs būd</div>
+    <div class="roman-line">khāk-i nā-umīdī bih farq-i saʻy-hā-yi nā-rasā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">翼を打ち合わせるのはビーディルよ、嘆きの掌を叩くことだった</div>
+    <div class="jp-line">届かぬ努力の頭上に絶望の砂塵が降りかかる</div>
+  </div>
+</section>
+
+<!-- ===== GHAZAL 5 ===== -->
+<section class="ghazal-block" id="g5">
+  <div class="ghazal-header">
+    <span class="ghazal-num">Ghazal 5</span>
+    <span class="ghazal-rhyme">Rhyme: -ā (tarṣīʻ) · 10 bayts</span>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">1</div>
+    <div class="roman-line">kardah-am bāz bih ān giryah-ʼi sawdā, sawdā</div>
+    <div class="roman-line">kih zi har ashk zadam bar sar-i daryā, daryā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの狂おしき涙で再び取引をした、取引を</div>
+    <div class="jp-line">一粒の涙ごとに海の頭上を叩いた、海を</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">2</div>
+    <div class="roman-line">sāqī imshab chih junūn rīkht bih paymānah-ʼi hūsh</div>
+    <div class="roman-line">kih shikashtam bih dil az qulqul-i mīnā, mīnā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">酌人よ今宵いかなる狂気を理性の杯に注いだのか</div>
+    <div class="jp-line">ガラス瓶のこぽこぽいう音に心で瓶を砕いた、瓶を</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">3</div>
+    <div class="roman-line">maḥv-i ū gashtam va rāzam bih malāʾ ṭūfān kard</div>
+    <div class="roman-line">hast ḥayrānī-yi ʻāshiq lab-i gūyā, gūyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">あの方に没入し、我が秘密は公衆の前で嵐となった</div>
+    <div class="jp-line">恋する者の驚嘆はそれ自体が雄弁な唇、まさに</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">4</div>
+    <div class="roman-line">dāgh-i miʻmārī-yi ashkam kih bih yak laghzīdan</div>
+    <div class="roman-line">ʻāfiyat-hā shud az-īn ābalah bar-pā, bar-pā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">涙の建築術の焼印よ──一度の滑りで</div>
+    <div class="jp-line">この水疱から安寧が打ち立てられた、打ち立てられた</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">5</div>
+    <div class="roman-line">dard-i ʻishqam man va khalvatgāh-i rāzam vaṭan ast</div>
+    <div class="roman-line">gashtah-am īn-qadar az nālah-ʼi rusvā, rusvā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">恋の痛みの我、秘密の密室が我が故郷</div>
+    <div class="jp-line">嘆きによってこれほどまでに恥を晒した、恥を</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">6</div>
+    <div class="roman-line">nażr-i āvāragī-yi shawq havāy-at dāram</div>
+    <div class="roman-line">musht-i khākī kih dihad ṭarḥ bih ṣaḥrā, ṣaḥrā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">おまえへの憧憬の放浪を奉納として持っている</div>
+    <div class="jp-line">一握りの土が荒野に設計を与えるように、荒野を</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">7</div>
+    <div class="roman-line">dil-i āshuftah-ʼi mā rā sar-i mūyī daryāb</div>
+    <div class="roman-line">ay sar-i mūy-i tū sarkūb-i Khuṭan-hā, tanhā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">我らの乱れし心を髪の毛一筋ほどにも汲み取れ</div>
+    <div class="jp-line">おまえの毛先ひとつがホータンの麝香をたった独りで凌駕する</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">8</div>
+    <div class="roman-line">dawr-i insān bih miyān-i du qadaḥ mushtarak ast</div>
+    <div class="roman-line">tā chih iqbāl kunad jām-i ladun yā dunyā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">人の巡りは二つの杯の間に共有されている</div>
+    <div class="jp-line">神の杯と此の世と──どちらが幸運をもたらすか</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">9</div>
+    <div class="roman-line">tā taqāżā bih miyān āmadah, maṭlab raftah-st</div>
+    <div class="roman-line">nīst ghayr az kaf-i afsūs ṭalab-hā, lab-hā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">求めが口に出た途端に、望みは去ってしまった</div>
+    <div class="jp-line">嘆きの掌のほかに求めも唇もない</div>
+  </div>
+
+  <div class="bayt"><div class="bayt-num">10</div>
+    <div class="roman-line">Bīdil īn naqd bih tārāj-i gham-i nasīyah ma-dih</div>
+    <div class="roman-line">kār-i imrūz kun imrūz, zi fardā, fardā</div>
+    <div class="divider">· · ·</div>
+    <div class="jp-line">ビーディルよ、この手元の金を後払いの悲しみの略奪に渡すな</div>
+    <div class="jp-line">今日の仕事は今日せよ──明日のことは明日、明日</div>
+  </div>
+</section>
+
+<div class="colophon">
+  Dīvān-i Ghazalīyāt-i Bīdil Dihlavī · Ghazal 1–5<br>
+  底本：<a href="https://ganjoor.net/bedil/divan-bedel/ghazalbed/" target="_blank">Ganjoor</a>
+  所収テキスト（Akbar Bihdārvand 校訂版、Nigāh 出版社、1380年太陽暦）<br>
+  ALA-LC Romanization（ペルシア語）＋ 日本語対訳<br>
+  全5篇・62聯（bayt）
+</div>

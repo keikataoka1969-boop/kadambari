@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ブログ：ヒンドゥー神話入門 第二弾を作りました</title>
+<style>
+:root {
+  --bg: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --text: #1E1E1E;
+  --text-muted: #5C5C5C;
+  --accent: #2D5A8E;
+  --accent-light: rgba(45, 90, 142, 0.08);
+  --border: #E0DDD6;
+  --link: #2D5A8E;
+  --link-hover: #1A3D66;
+  --tag-bg: #EDE8DF;
+  --tag-text: #6B5D4F;
+  --code-bg: #F4F1EA;
+  --blockquote-border: #D4882E;
+  --blockquote-bg: rgba(212, 136, 46, 0.06);
+  --preview-bg: #FDF6E8;
+  --preview-border: #D4882E;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161616;
+    --bg-card: #1E1E1E;
+    --text: #E0DDD6;
+    --text-muted: #9A948A;
+    --accent: #6EAAE8;
+    --accent-light: rgba(110, 170, 232, 0.1);
+    --border: #2E2E2E;
+    --link: #6EAAE8;
+    --link-hover: #9CC4F0;
+    --tag-bg: #2A2520;
+    --tag-text: #B8A890;
+    --code-bg: #222018;
+    --blockquote-border: #D4882E;
+    --blockquote-bg: rgba(212, 136, 46, 0.08);
+    --preview-bg: #1E1A12;
+    --preview-border: #B87A28;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161616;
+  --bg-card: #1E1E1E;
+  --text: #E0DDD6;
+  --text-muted: #9A948A;
+  --accent: #6EAAE8;
+  --accent-light: rgba(110, 170, 232, 0.1);
+  --border: #2E2E2E;
+  --link: #6EAAE8;
+  --link-hover: #9CC4F0;
+  --tag-bg: #2A2520;
+  --tag-text: #B8A890;
+  --code-bg: #222018;
+  --blockquote-border: #D4882E;
+  --blockquote-bg: rgba(212, 136, 46, 0.08);
+  --preview-bg: #1E1A12;
+  --preview-border: #B87A28;
+}
+:root[data-theme="light"] {
+  --bg: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --text: #1E1E1E;
+  --text-muted: #5C5C5C;
+  --accent: #2D5A8E;
+  --accent-light: rgba(45, 90, 142, 0.08);
+  --border: #E0DDD6;
+  --link: #2D5A8E;
+  --link-hover: #1A3D66;
+  --tag-bg: #EDE8DF;
+  --tag-text: #6B5D4F;
+  --code-bg: #F4F1EA;
+  --blockquote-border: #D4882E;
+  --blockquote-bg: rgba(212, 136, 46, 0.06);
+  --preview-bg: #FDF6E8;
+  --preview-border: #D4882E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  line-height: 1.85;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+article {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0.6rem 0 1rem;
+  letter-spacing: 0.02em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.78rem;
+  padding: 0.2em 0.7em;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.6rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--link-hover); }
+
+blockquote {
+  border-left: 3px solid var(--blockquote-border);
+  background: var(--blockquote-bg);
+  padding: 0.8rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+ul, ol {
+  margin: 0.8rem 0 1.2rem 1.5rem;
+}
+li {
+  margin-bottom: 0.4rem;
+}
+
+.preview-box {
+  border: 2px solid var(--preview-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+.preview-header {
+  background: var(--preview-bg);
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: 1px solid var(--preview-border);
+}
+.preview-icon { font-size: 1.6rem; }
+.preview-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.preview-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.1rem;
+}
+.preview-body {
+  padding: 1rem 1.2rem;
+  background: var(--bg-card);
+}
+.preview-body p { font-size: 0.92rem; margin-bottom: 0.6rem; }
+.preview-body p:last-child { margin-bottom: 0; }
+.preview-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1.4em;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+.preview-link:hover {
+  background: var(--link-hover);
+  color: #fff;
+}
+
+.deity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0;
+}
+.deity-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.9rem;
+  text-align: center;
+}
+.deity-card .icon { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.deity-card .name { font-weight: 700; font-size: 0.95rem; }
+.deity-card .role { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+.series-nav {
+  background: var(--accent-light);
+  border-radius: 8px;
+  padding: 1rem 1.4rem;
+  margin: 1.5rem 0;
+}
+.series-nav-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.series-nav ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+.series-nav li {
+  margin-bottom: 0.25rem;
+  font-size: 0.92rem;
+}
+.series-nav li::before {
+  content: '—';
+  color: var(--text-muted);
+  margin-right: 0.5em;
+}
+
+.footer-note {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+</style>
+</head>
+<body>
+
+<article>
+
+<div class="date">2026年7月9日</div>
+<h1>ヒンドゥー神話入門・第二弾——新たな六柱の神々を紹介します</h1>
+<div class="tags">
+  <span class="tag">ヒンドゥー教</span>
+  <span class="tag">インド神話</span>
+  <span class="tag">プラーナ文献</span>
+  <span class="tag">デジタル人文学</span>
+</div>
+
+<p>前回、ガネーシャやシヴァ、クリシュナなど七柱の神々の物語をまとめた<a href="hindu-myths.html">ヒンドゥー神話入門</a>を公開しました。ありがたいことに好評をいただき、「もっと読みたい」という声にお応えして、第二弾を作りました。</p>
+
+<p>今回は宇宙を維持するヴィシュヌ、世界の創造主ブラフマー、雷神インドラ、猿の英雄ハヌマーン、幸運の女神ラクシュミー、学問の女神サラスヴァティーの六柱を取り上げています。</p>
+
+<div class="preview-box">
+  <div class="preview-header">
+    <div class="preview-icon">🙏</div>
+    <div>
+      <div class="preview-title">ヒンドゥー神話入門 第二弾 — 続・神々の物語</div>
+      <div class="preview-sub">新たな六柱の名場面を日本語でわかりやすく紹介</div>
+    </div>
+  </div>
+  <div class="preview-body">
+    <p>ヴィシュヌ、ブラフマー、インドラ、ハヌマーン、ラクシュミー、サラスヴァティー——前回の七柱に続き、さらに六柱の神々の名場面21話を収録しました。</p>
+    <a class="preview-link" href="hindu-myths-2.html">読んでみる</a>
+  </div>
+</div>
+
+<h2>今回の六柱の神々</h2>
+
+<div class="deity-grid">
+  <div class="deity-card">
+    <div class="icon">🪻</div>
+    <div class="name">ヴィシュヌ</div>
+    <div class="role">維持神・十の化身</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">📿</div>
+    <div class="name">ブラフマー</div>
+    <div class="role">創造神</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">⚡</div>
+    <div class="name">インドラ</div>
+    <div class="role">雷神・天界の王</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🐒</div>
+    <div class="name">ハヌマーン</div>
+    <div class="role">猿の英雄</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🪷</div>
+    <div class="name">ラクシュミー</div>
+    <div class="role">幸運と繁栄の女神</div>
+  </div>
+  <div class="deity-card">
+    <div class="icon">🎵</div>
+    <div class="name">サラスヴァティー</div>
+    <div class="role">学問と音楽の女神</div>
+  </div>
+</div>
+
+<h2>見どころ</h2>
+
+<p>今回も各神様ごとに3〜4つのエピソードを厳選しています。特に印象的なものをいくつか紹介します。</p>
+
+<h3>ヴィシュヌの菩提樹の葉の赤ん坊</h3>
+<p>大洪水ですべてが水に沈んだ後、暗い海面にぽつんと浮かぶ菩提樹の葉。その上で自分の足の指をしゃぶっている赤ん坊がヴィシュヌです。全宇宙の創造主が、赤ん坊の姿で漂っている——壮大さと愛らしさが同居するインド神話屈指のイメージです。</p>
+
+<h3>インドラとシビ王の「鳩と鷹」</h3>
+<p>鷹に追われた鳩を守るため、シビ王は自分の肉を差し出す試練に挑みます。鳩と釣り合う重さの肉を切り取ろうとしても、天秤はいつまでも傾かない。最後にシビ王が自らの全身を秤に乗せると——試練の主であるインドラとアグニが正体を明かし、すべての傷を癒します。自己犠牲と慈悲の究極を描いた物語です。</p>
+
+<h3>ハヌマーンの忘れられた力</h3>
+<p>幼少期に太陽を食べようとしてインドラに罰せられたハヌマーンは、大人になるまで自分の超能力を忘れていました。ラーマのためにシーターを探す任務で海を前にして立ち往生したとき、熊の将軍ジャーンバヴァンが「思い出せ！お前は世界を跳び越える力を持っている」と励まし、ハヌマーンは目覚める——友の言葉が力を呼び覚ます名場面です。</p>
+
+<h3>サラスヴァティーがクンバカルナの舌を操る</h3>
+<p>ブラフマーに恩恵を求めた悪魔クンバカルナ。彼が「無敵」と言おうとした瞬間、舌の上に乗ったサラスヴァティーが言葉を入れ替え、口から出てきたのは「永遠の眠り」。言葉の女神ならではのトリックで、声に出した言葉は取り消せないというインド神話の核心を突いています。</p>
+
+<blockquote>
+  <p>第一弾では「人間的な神々」が魅力だと書きました。第二弾で感じたのは、ヒンドゥー神話における「スケールの多重性」です。宇宙を創る神が赤ん坊として足の指をしゃぶり、学問の女神が舌の上に座って悪魔を騙す。壮大さと親密さが一つの物語の中に共存する——それがこの神話体系の底知れない面白さだと思います。</p>
+</blockquote>
+
+<h2>シリーズ一覧</h2>
+
+<div class="series-nav">
+  <div class="series-nav-title">ヒンドゥー神話入門シリーズ</div>
+  <ul>
+    <li><a href="hindu-myths.html">第一弾：ガネーシャ、シヴァ、クリシュナ、ラーマ、パールヴァティー、スカンダ、ガンガー（7柱）</a></li>
+    <li><a href="hindu-myths-2.html">第二弾：ヴィシュヌ、ブラフマー、インドラ、ハヌマーン、ラクシュミー、サラスヴァティー（6柱）</a></li>
+  </ul>
+</div>
+
+<h2>出典について</h2>
+
+<p>第一弾と同じく、すべてのエピソードは Vettam Mani 著『Puranic Encyclopaedia: A Comprehensive Dictionary with Special Reference to the Epic and Puranic Literature』に基づいて再構成しています。原典はマハーバーラタ、ラーマーヤナ、ヴィシュヌ・プラーナ、パドマ・プラーナ、デーヴィー・バーガヴァタ、ヴァーマナ・プラーナなど多数のサンスクリット文献です。</p>
+
+<p>読みやすくするため、異伝の整理や物語の再構成を行っています。より詳しく知りたい方は原典にあたってください。</p>
+
+<h2>ページへのリンク</h2>
+
+<p><a href="hindu-myths-2.html">ヒンドゥー神話入門 第二弾 — 続・神々の物語</a>を読んでみてください。第一弾と同じデザインで、ダーク/ライト両テーマ対応、スマートフォンでも快適に読めます。</p>
+
+<p>まだ第一弾を読んでいない方は、<a href="hindu-myths.html">ヒンドゥー神話入門 — 神々の物語</a>もあわせてどうぞ。</p>
+
+<div class="footer-note">
+  <p>このページの内容は学術的な正確さを期していますが、あくまで入門的な紹介であり、研究目的には原典の参照をお勧めします。</p>
+</div>
+
+</article>
+
+</body>
+</html>
