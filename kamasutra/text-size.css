@@ -16,3 +16,9 @@ html.lipi-deva :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not
   :is(.japanese, .jp, .verse-trans, .japanese-verse, .verse-japanese):not(td):not(th) { font-size: 1.04rem !important; }
   html.lipi-deva :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) { font-size: 1.12rem !important; }
 }
+
+/* 長い複合語で左右の列幅が崩れないよう、本文セルの最小幅を解除し、必要な所で折り返す */
+:is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit, .japanese, .jp, .verse-trans, .japanese-verse, .verse-japanese):not(td):not(th) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
