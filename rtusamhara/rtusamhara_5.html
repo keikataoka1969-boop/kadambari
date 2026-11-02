@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>季節集 第5歌 寒季</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 600; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.03em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .intro { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.2rem; margin: 0 0 2rem; font-size: 0.9rem; color: var(--text-secondary); }
+  .intro p { margin: 0.4rem 0; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .verse-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0 0; border: 1px solid var(--border); border-radius: 4px 4px 0 0; overflow: hidden; background: var(--bg-card); }
+  .verse-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; display: flex; justify-content: space-between; gap: 1rem; }
+  .verse-num .metre { font-weight: 400; color: var(--text-secondary); }
+  .sanskrit { padding: 0.7rem 0.9rem; font-family: 'Noto Serif', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .sanskrit .pada { display: block; padding-left: 1.2em; text-indent: -1.2em; }
+  .sanskrit .pada:nth-child(even) { padding-left: 2.4em; }
+  .japanese { padding: 0.7rem 0.9rem; font-size: 0.93rem; line-height: 1.95; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 4px 4px; padding: 0.8rem 1rem; margin: 0 0 1.8rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.86rem; line-height: 1.8; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.25rem 0; }
+  .iast { font-family: 'Noto Serif', serif; font-style: italic; color: var(--highlight); }
+  .quote { display: block; margin: 0.3rem 0 0.3rem 1.2em; font-family: 'Noto Serif', serif; font-style: italic; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); line-height: 1.7; }
+  @media (max-width: 640px) {
+    body { padding: 1rem 1rem 3rem; }
+    .verse-block { grid-template-columns: 1fr; }
+    .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+    .header h1 { font-size: 1.4rem; }
+  }
+  .verse-num .gid { font-weight: 400; color: var(--text-secondary); margin-left: 0.6em; font-size: 0.72rem; }
+  .verse-block.interp { border-style: dashed; }
+  .verse-block.interp .verse-num { background: transparent; }
+  .note-section.interp { border-style: dashed; border-top: none; }
+  .section-label { font-size: 0.88rem; font-weight: 600; color: var(--accent); margin: 2rem 0 0.6rem; padding-left: 0.3rem; letter-spacing: 0.05em; }
+  .chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 1em; padding: 2em 0 1em; margin-top: 2em; border-top: 1px solid var(--border); font-size: 0.88em; }
+  .chapter-nav a { color: var(--accent); text-decoration: none; line-height: 1.4; }
+  .chapter-nav span { min-width: 6em; }
+  .sanskrit, .note-section li, .japanese { overflow-wrap: anywhere; }
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <h1>Ṛtusaṃhāra — 季節集 対訳</h1>
+  <p class="subtitle">カーリダーサ作</p>
+  <p class="meta">底本：M. R. Kale 校訂本（第2版, 1967）・ヴェーンカターチャーリヤ・ウパーディエー注 <span class="iast">Bālabodhinī</span><br>本文対照：GRETIL 電子テキスト（Hellwig 入力）</p>
+</div>
+
+<div class="intro">
+  <p>寒季（<span class="iast">śiśira</span>、<span class="iast">Māgha</span>・<span class="iast">Phālguna</span> 月、おおよそ2〜3月）の歌。全六歌のうち最も短い。Kale も言うように冬とあまり変わらない季節で、閉ざした部屋・火・厚い衣が好まれ、夏や秋に喜ばれた涼しいものは顧みられない（2–4節）。後半は第4歌と同じく、朝の女たちの姿で構成される。</p>
+</div>
+
+<div class="chapter-title">
+  <h2>pañcamaḥ sargaḥ — 第5歌</h2>
+  <p class="ch-sub">寒季（<span class="iast">śiśira</span>）の描写</p>
+</div>
+
+<p class="section-label">寒の季節の到来（1–4節）</p>
+<!-- 5.1 -->
+<div class="verse-block" id="v5-5.1">
+  <div class="verse-num"><span>5.1</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">prarūḍhaśālīkṣucayāvṛtakṣitiṃ</span>
+    <span class="pada">kvacitsthitakrauñcaninādarājitam |</span>
+    <span class="pada">prakāmakāmaṃ pramadājanapriyaṃ</span>
+    <span class="pada">varoru kālaṃ śiśirāhvayaṃ śṛṇu ||</span>
+  </div>
+  <div class="japanese">美しい腿の人よ、シシラと呼ばれるこの季節のことを聞きなさい──伸びた稲とサトウキビの茂みに大地は覆われ、ところどころにとどまるクラウンチャ鳥の声に彩られ、恋の想いはこのうえなく強く、女たちに愛される季節を。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">prarūḍhaśālīkṣucayāvṛtakṣitim</span>「伸びた稲とサトウキビの茂みに大地が覆われた〔季節〕」。この読みは、異読 <span class="iast">prarūḍhaśālyaṃśucayair manoharam</span> よりよい。後者の <span class="iast">aṃśu</span> はうまく意味をなさないからで、16節 <span class="iast">svāduśālīkṣuramyaḥ</span> もこの読みを支持する。<span class="iast">prarūḍha</span>「伸びた」、<span class="iast">ikṣu</span>「サトウキビ」。<span class="iast">krauñca</span> は 4.8 参照。</li>
+    <li><span class="iast">prakāmakāmam</span>「恋の想いが存分にある〔季節〕」。</li>
+    <li><span class="iast">varoru</span>「美しい腿をもつ人よ」、つまり美しい女への呼びかけ（1.1 の <span class="iast">priye</span> と同じ趣向）。<span class="iast">varorū</span> の呼格で、<span class="iast">varoru</span> を原形とすれば呼格は <span class="iast">varoro</span> となる（『クマーラサンバヴァ』VIII.36 <span class="iast">pīvaroru</span> 参照）。</li>
+    <li><span class="iast">śiśira</span>「寒季」は <span class="iast">Māgha</span>・<span class="iast">Phālguna</span> の二か月、おおよそ2〜3月にあたる。ほかの季節にはそれぞれ際立った特徴があるが、シシラは冬（<span class="iast">hemanta</span>）とあまり変わらない、と Kale は言う。ライダーはこれを「早春」と訳している。<span class="iast">āhvaya</span>「名」（<span class="iast">ā-√hve</span>「呼ぶ」から）。</li>
+  </ul>
+</div>
+<!-- 5.2 -->
+<div class="verse-block" id="v5-5.2">
+  <div class="verse-num"><span>5.2</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">niruddhavātāyanamandirodaraṃ</span>
+    <span class="pada">hutāśano bhānumato gabhastayaḥ |</span>
+    <span class="pada">gurūṇi vāsāṃsyabalāḥ sayauvanāḥ</span>
+    <span class="pada">prayānti kāle 'tra janasya sevyatām ||</span>
+  </div>
+  <div class="japanese">窓を閉ざした家の奥、火、日の光、厚い衣、そして若さあふれる女たち──この季節には、これらが人々に好まれる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">niruddhavātāyanamandirodaram</span>「窓を閉ざした家の奥」：<span class="iast">vātāyana</span>「風の通り道」は窓。<span class="iast">vāta</span>「風」の <span class="iast">ayana</span>「通り道」をふさいだ、と分けて読むこともできる。<span class="iast">udara</span>「内部」。</li>
+    <li><span class="iast">guru</span>「厚い、重い」：夏の <span class="iast">tanu</span>「薄い」（1.7）と対照的。<span class="iast">prayānti … sevyatām</span>「好まれる」は 1.2 と同じ構文で、夏の楽しみ（月夜・噴水・宝石・白檀）を並べた 1.2 と、寒季の楽しみを並べたこの詩節が対になっている。</li>
+  </ul>
+</div>
+<!-- 5.3 -->
+<div class="verse-block" id="v5-5.3">
+  <div class="verse-num"><span>5.3</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">na candanaṃ candramarīciśītalaṃ</span>
+    <span class="pada">na harmyapṛṣṭhaṃ śaradindunirmalam |</span>
+    <span class="pada">na vāyavaḥ sāndratuṣāraśītalā</span>
+    <span class="pada">janasya cittaṃ ramayanti sāmpratam ||</span>
+  </div>
+  <div class="japanese">月の光に冷やした白檀も、秋の月に澄みわたる高殿の屋上も、濃い霜に冷たい風も、今は人の心を楽しませない。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>この詩節と次の詩節の趣旨は、この季節にはもう寒さがきびしいので、涼をとるものはもはや要らないということ。それらは夏（1.6、1.9 など）や秋（3.20、3.22 など）には喜ばれたものである。</li>
+    <li><span class="iast">candramarīciśītalam</span>「月の光で冷やした〔白檀〕」：夏には白檀の練り香を月光にさらしてさらに冷やすことがよくあった。</li>
+    <li><span class="iast">śaradindunirmalam</span>「秋の月で澄んだ〔屋上〕」：秋の月の光はとりわけ明るい（3.7、3.21、3.22 など）。<span class="iast">sāndratuṣāraśītalāḥ</span>「濃い霜で冷たい」：<span class="iast">tuṣāra</span> は 4.1 参照。</li>
+  </ul>
+</div>
+<!-- 5.4 -->
+<div class="verse-block" id="v5-5.4">
+  <div class="verse-num"><span>5.4</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">tuṣārasaṃghātanipātaśītalāḥ</span>
+    <span class="pada">śaśāṅkabhābhiḥ śiśirīkṛtāḥ punaḥ |</span>
+    <span class="pada">vipāṇḍutārāgaṇacārubhūṣaṇā</span>
+    <span class="pada">janasya sevyā na bhavanti rātrayaḥ ||</span>
+  </div>
+  <div class="japanese">降りしきる霜に冷たく、月の光にさらに冷えびえとし、ほの白い星々を美しい飾りとする夜々は、もう人々に好まれない。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">tuṣārasaṃghātanipātaśītalāḥ</span>「霜の塊が降ることで冷たい」。</li>
+    <li><span class="iast">vipāṇḍu</span>「ほの白い」：もやがかかるので空〔の星々〕が白っぽく見える。異読 <span class="iast">tārāgaṇajihmabhūṣitāḥ</span> を Kale は退ける。<span class="iast">jihma</span>「曲がった」は意味をなさず、強いて言えば「まっすぐでなく、不完全に飾られた」となるからである。</li>
+    <li>4.2–4 と同じく、否定を重ねて季節を描く。</li>
+  </ul>
+</div>
+<p class="section-label">寒季の夜（5–10節）</p>
+<!-- 5.5 -->
+<div class="verse-block" id="v5-5.5">
+  <div class="verse-num"><span>5.5</span><span class="metre">upajāti</span></div>
+  <div class="sanskrit">
+    <span class="pada">gṛhītatāmbūlavilepanasrajaḥ</span>
+    <span class="pada">puṣpāsavāmoditavaktrapaṅkajāḥ |</span>
+    <span class="pada">prakāmakālāgurudhūpavāsitaṃ</span>
+    <span class="pada">viśanti śayyāgṛhamutsukāḥ striyaḥ ||</span>
+  </div>
+  <div class="japanese">キンマと塗香と花輪を手にし、花の酒に蓮のような顔を香らせ、あこがれに満ちた女たちは、黒沈香の香煙をたっぷりと焚きしめた寝室へ入ってゆく。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">tāmbūla</span>：ビンロウジ・阿仙薬・石灰・香辛料をキンマの葉で包んだもの（マラーティー語 viḍā）。とくに食後に、消化を助ける強壮剤として噛む。<span class="iast">vilepana</span>：サフラン・麝香・白檀など、体に塗る香料。</li>
+    <li><span class="iast">puṣpāsava</span> は 4.11 参照。異読 <span class="iast">sukhāsava</span> は意味をなさない。<span class="iast">puṣpāsavāmoditavaktrapaṅkajāḥ</span>「花の酒で香りの生じた蓮のような顔をもつ」。</li>
+    <li><span class="iast">prakāmakālāgurudhūpavāsitam</span>「黒沈香の香煙をたっぷりと焚きしめた」。<span class="iast">prakāmam</span> は 4.14、5.1 にも出る。<span class="iast">kālāguru</span> は 2.21、<span class="iast">dhūpa</span> は 4.5 参照。</li>
+    <li>韻律：第2句が <span class="iast">indravaṃśā</span> なので、詩節全体は <span class="iast">upajāti</span> である。</li>
+  </ul>
+</div>
+<!-- 5.6 -->
+<div class="verse-block" id="v5-5.6">
+  <div class="verse-num"><span>5.6</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">kṛtāparādhānbahuśo 'bhitarjitān</span>
+    <span class="pada">savepathūn sādhvasaluptacetasaḥ |</span>
+    <span class="pada">nirīkṣya bhartṝn suratābhilāṣiṇaḥ</span>
+    <span class="pada">striyo 'parādhānsamadā visasmaruḥ ||</span>
+  </div>
+  <div class="japanese">何度も過ちを犯して叱りつけられ、恐れに心を失って震えながらも、なお愛の交わりを望む夫たちを見て、情に駆られた女たちは、〔夫の〕過ちを忘れてしまった。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">kṛtāparādhān</span> は 2.11 の注参照。<span class="iast">bahuśo 'bhitarjitān</span>「何度も叱りつけられた」は、異読 <span class="iast">bahuśo 'pi tarjitān</span> よりよい。後者の <span class="iast">api</span> には意味がない。</li>
+    <li><span class="iast">vepathu</span>「震え」（パーニニ III.3.89）。<span class="iast">sādhvasaluptacetasaḥ</span>「恐れ（<span class="iast">sādhvasa</span>）に心を失った」は <span class="iast">bhartṝn</span> にかかる。震えも恐れも叱責のためである。</li>
+    <li><span class="iast">samadāḥ</span>「情に駆られた」：これが、女たちがたやすく過ちを忘れる理由である。2.11（雷鳴に怯えて過ちある恋人を抱く）と同じ主題を、寒季の情念の側から描いている。</li>
+  </ul>
+</div>
+<!-- 5.7 -->
+<div class="verse-block" id="v5-5.7">
+  <div class="verse-num"><span>5.7</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">prakāmakāmair yuvabhiḥ sunirdayaṃ</span>
+    <span class="pada">niśāsu dīrghāsvabhirāmitāściram |</span>
+    <span class="pada">bhramanti mandaṃ śramakheditoravaḥ</span>
+    <span class="pada">kṣapāvasāne navayauvanāḥ striyaḥ ||</span>
+  </div>
+  <div class="japanese">激しい恋心にかられた若者たちに、長い夜々、容赦なく、いつまでも愛され、若さを迎えたばかりの女たちは、夜が明けると、疲れに太ももを痛め、ゆっくりと歩む。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">prakāmakāmaiḥ</span>「激しい恋心をもつ」（1節参照）。<span class="iast">sunirdayam</span>「ひどく容赦なく」（4.12 参照）は、異読 <span class="iast">sanirdayam</span> より平明。</li>
+    <li><span class="iast">abhirāmitāḥ</span>「楽しまされた」：規則的な形なら <span class="iast">abhiramitāḥ</span> となるはず。<span class="iast">dīrghāsu niśāsu</span>：この季節には夜が長い。</li>
+    <li><span class="iast">śramakheditoravaḥ</span>「疲れに太ももを痛めた」は、異読 <span class="iast">śramaveditorasaḥ</span> よりよい。ゆっくり歩く理由をよりよく説明するからである。<span class="iast">khedita</span>「苦しめられた、疲れた」。<span class="iast">kṣapāvasāne</span>「夜の終わりに」。</li>
+  </ul>
+</div>
+<!-- 5.8 -->
+<div class="verse-block" id="v5-5.8">
+  <div class="verse-num"><span>5.8</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">manojñakūrpāsakapīḍitastanāḥ</span>
+    <span class="pada">sarāgakauśeyakabhūṣitoravaḥ |</span>
+    <span class="pada">niveśitāntaḥ kusumaiḥ śiroruhair</span>
+    <span class="pada">vibhūṣayantīva himāgamaṃ striyaḥ ||</span>
+  </div>
+  <div class="japanese">美しい胴着に乳房を締めつけ、色染めの絹衣で太ももを飾り、髪には花を挿し込んで、女たちは、まるで寒の季節を飾っているかのようだ。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">kūrpāsaka</span> は 4.16 参照。<span class="iast">pīḍita</span>「締めつけられた」：胴着をぴったりと着けているため。<span class="iast">sarāga</span>「〔赤や黄に〕染めた」。</li>
+    <li><span class="iast">kauśeyaka</span>：絹の下衣。蚕の繭（<span class="iast">kośa</span>）から作るのでこう呼ばれる（パーニニ IV.3.42。<span class="iast">-ka</span> は意味を変えない接尾辞）。<span class="iast">bhūṣitoravaḥ</span>「太ももを飾った」は、異読 <span class="iast">bhūṣitorasaḥ</span>「胸を飾った」よりよい。乳房はすでに前半で描かれ、詩人は自然に下の衣へと進むからである。</li>
+    <li><span class="iast">niveśitāntaḥkusumaiḥ</span>：3.19 の注参照。複合語としては <span class="iast">antarniveśitakusumaiḥ</span> とするほうがよかった。<span class="iast">himāgama</span>「雪の来る時」は寒季（2.1 <span class="iast">ghanāgama</span>、挿入詩節13 <span class="iast">puṣpāgama</span> 参照）。</li>
+    <li>ふつうは季節が女を飾るのに、ここでは女たちが季節を飾るかのようだ、という詩的推量（<span class="iast">utprekṣā</span>）。</li>
+  </ul>
+</div>
+<!-- 5.9 -->
+<div class="verse-block" id="v5-5.9">
+  <div class="verse-num"><span>5.9</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">payodharaiḥ kuṅkumarāgapiñjaraiḥ</span>
+    <span class="pada">sukhopasevyairnavayauvanoṣmabhiḥ |</span>
+    <span class="pada">vilāsinībhiḥ paripīḍitorasaḥ</span>
+    <span class="pada">svapanti śītaṃ paribhūya kāminaḥ ||</span>
+  </div>
+  <div class="japanese">サフランの色に赤みを帯びた黄に染まり、若さのぬくもりをたたえて心地よく身を寄せられる乳房で、艶めく女たちに胸を押し包まれ、恋人たちは寒さに打ち勝って眠る。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>読み方は「艶めく女たちが（行為者）、乳房で（道具）、〔男たちの〕胸を押し包む」。<span class="iast">kuṅkumarāgapiñjaraiḥ</span>・<span class="iast">sukhopasevyaiḥ</span>・<span class="iast">navayauvanoṣmabhiḥ</span> はいずれも <span class="iast">payodharaiḥ</span>「乳房」にかかる。</li>
+    <li><span class="iast">kuṅkuma</span>「サフラン」、<span class="iast">piñjara</span>「赤みがかった黄色の」。<span class="iast">sukhopasevya</span>「心地よく親しめる」。<span class="iast">ūṣman</span>「熱、ぬくもり」。<span class="iast">paribhūya</span>「打ち負かして、ものともせず」。</li>
+  </ul>
+</div>
+<!-- 5.10 -->
+<div class="verse-block" id="v5-5.10">
+  <div class="verse-num"><span>5.10</span><span class="metre">vaṃśastha</span></div>
+  <div class="sanskrit">
+    <span class="pada">sugandhiniḥśvāsavikampitotpalaṃ</span>
+    <span class="pada">manoharaṃ kāmaratiprabodhakam |</span>
+    <span class="pada">niśāsu hṛṣṭā saha kāmibhiḥ striyaḥ</span>
+    <span class="pada">pibanti madyaṃ madanīyamuttamam ||</span>
+  </div>
+  <div class="japanese">香しい吐息に浮かぶ青蓮が揺れ、美しく、恋の楽しみを呼び覚ます、極上の酔わせる酒を、夜ごと女たちは、恋人とともに嬉々として飲む。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">sugandhiniḥśvāsavikampitotpalam</span>「香しい吐息に揺れる青蓮の〔浮かんだ酒〕」：酒には香りづけに蓮の花を浮かべた（『ラグ・ヴァンシャ』XIX.40 参照）。マンゴーやパータラの花を酒に入れることも言われる（『シシュパーラヴァダ』X.3 参照）。1.3 <span class="iast">priyāmukhocchvāsavikampitaṃ madhu</span>「恋人の吐息にさざめく酒」と呼応する。</li>
+    <li><span class="iast">kāmaratiprabodhakam</span>：<span class="iast">kāma</span> と <span class="iast">rati</span> を並べるのはいくらか同語反復だが、「愛欲における喜び（<span class="iast">rati</span>）を呼び覚ますもの」と説明できる。<span class="iast">madanīya</span>「酔わせる」。</li>
+  </ul>
+</div>
+<p class="section-label">寒季の朝の女たち（11–15節）</p>
+<!-- 5.11 -->
+<div class="verse-block" id="v5-5.11">
+  <div class="verse-num"><span>5.11</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">apagatamadarāgā yoṣidekā prabhāte</span>
+    <span class="pada">kṛtanibiḍakucāgrā patyurāliṅganena |</span>
+    <span class="pada">priyatamaparibhuktaṃ vīkṣamāṇā svadehaṃ</span>
+    <span class="pada">vrajati śayanavāsādvāsamanyaṃ hasantī ||</span>
+  </div>
+  <div class="japanese">朝、酔いも頬の上気もさめたある女は、夫の抱擁に乳房の先を固くしたまま、恋人に愛された自分の体を眺め、笑みを浮かべて、寝室から別の部屋へと移ってゆく。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">apagatamadarāgā</span>：10節の後なので、<span class="iast">mada</span> は「酔い」と取れる。<span class="iast">rāga</span> は「情」とも「上気した赤み」とも取れる。</li>
+    <li><span class="iast">kṛtanibiḍakucāgrā</span>「乳房の先を固く（<span class="iast">nibiḍa</span>）した」：複合語としては <span class="iast">nibiḍīkṛtakucāgrā</span> とするほうがよかった。</li>
+    <li><span class="iast">śayanavāsa</span> は寝室（2.21 参照）。<span class="iast">vāsa</span>「住まい、場所」（ヘーマチャンドラ <span class="iast">vāso veśmani</span>）。<span class="iast">anyam</span> は <span class="iast">vāsa</span> が男性名詞なので男性形。異読 <span class="iast">anyat</span>（中性）は誤り。</li>
+    <li>ここから韻律は <span class="iast">mālinī</span> に変わり、冬の歌（4.13–17）と同じく、朝の女たちの姿が一人ずつ描かれる。</li>
+  </ul>
+</div>
+<!-- 5.12 -->
+<div class="verse-block" id="v5-5.12">
+  <div class="verse-num"><span>5.12</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">agurusurabhidhūpāmoditaṃ keśapāśaṃ</span>
+    <span class="pada">galitakusumamālaṃ kuñcitāgraṃ vahantī |</span>
+    <span class="pada">tyajati gurunitambā nimnanābhiḥ sumadhyā</span>
+    <span class="pada">uṣasi śayanamanyā kāminī cāruśobhām ||</span>
+  </div>
+  <div class="japanese">沈香の香煙に香り、花輪のこぼれ落ちた、先の巻いた豊かな髪をなびかせ、腰は重く、臍は深く、腰つきは細やかで美しい姿の別の女は、明け方、寝床を離れる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">agurusurabhidhūpāmoditam</span>「沈香の香しい煙で香りをつけた」：4.5 とその注、本歌5節参照。<span class="iast">keśapāśa</span> は 2.21、4.14、<span class="iast">galita</span> は 4.15 参照。<span class="iast">kuñcitāgraṃ vahantī</span> は、異読 <span class="iast">tanvatī kuñcitāgram</span> より平明。</li>
+    <li><span class="iast">nimnanābhiḥ sumadhyā</span>：異読 <span class="iast">nimnamadhyāvasānā</span> はよい意味にならない。深い臍と重い腰は美のしるしとされる（『メーガドゥータ』II.21 <span class="iast">madhye kṣāmā … nimnanābhiḥ | śroṇībhārād alasagamanā</span> 参照）。<span class="iast">sumadhyā</span>「美しい腰つきの」：その美しさは細さにある。</li>
+    <li><span class="iast">sumadhyā uṣasi</span> で母音の連声が行われていないのは、「連声は一語の内部、語根と接頭辞のあいだ、複合語の内部では必須だが、文のなかでは話し手の意図による」（<span class="iast">saṃhitaikapade nityā nityā dhātūpasargayoḥ | nityā samāse vākye tu sā vivakṣām apekṣate</span>）という規則によって説明される。</li>
+  </ul>
+</div>
+<!-- 5.13 -->
+<div class="verse-block" id="v5-5.13">
+  <div class="verse-num"><span>5.13</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">kanakakamalakāntaiś cārutāmrādharoṣṭhaiḥ</span>
+    <span class="pada">śravaṇataṭaniṣaktaiḥ pāṭalopāntanetraiḥ |</span>
+    <span class="pada">uṣasi vadanabimbairaṃsasaṃsaktakeśaiḥ</span>
+    <span class="pada">śriya iva gṛhamadhye saṃsthitā yoṣito 'dya ||</span>
+  </div>
+  <div class="japanese">金の蓮のように美しい顔、美しく赤い唇、耳もとまで切れ長で目尻のほの赤い目、肩にかかる髪──今日、明け方、女たちは家のなかに、ラクシュミー女神のようにたたずんでいる。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li>語順が離れていて読みにくい詩節（<span class="iast">dūrānvaya</span>）。「金の蓮のように美しい顔、美しく赤い唇、耳もとに達する目、肩にかかる髪によって〔それと見分けられる〕女たち」と読む。具格は特徴を示す用法（<span class="iast">upalakṣaṇe tṛtīyā</span>）。</li>
+    <li><span class="iast">kanakakamala</span>：花が金色をした蓮の一種（『メーガドゥータ』I.65 <span class="iast">hemāmbhojaprasavi salilam</span>、6.7、挿入詩節9 参照）。比較の要点は金色の顔色。</li>
+    <li><span class="iast">cārutāmrādharoṣṭhaiḥ</span> は、異読 <span class="iast">sadya evāmbudhautaiḥ</span>「たったいま水で洗った」より適切。連声の規則上、<span class="iast">adharoṣṭha</span> とも <span class="iast">adharauṣṭha</span> とも書ける。</li>
+    <li><span class="iast">śravaṇataṭaniṣaktaiḥ</span>「耳の際まで届く〔目〕」：切れ長の目は美のしるし。<span class="iast">pāṭala</span>「赤みを帯びた白」。<span class="iast">śriya iva</span>「シュリー（ラクシュミー女神）のように」：美の基準とされる女神。</li>
+  </ul>
+</div>
+<!-- 5.14 -->
+<div class="verse-block" id="v5-5.14">
+  <div class="verse-num"><span>5.14</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">pṛthujaghanabharārtāḥ kiṃcidānamramadhyāḥ</span>
+    <span class="pada">stanabharaparikhedānmandamandaṃ vrajantyaḥ |</span>
+    <span class="pada">suratasamayaveṣaṃ naiśamāśu prahāya</span>
+    <span class="pada">dadhati divasayogyaṃ veśamanyāstaruṇyaḥ ||</span>
+  </div>
+  <div class="japanese">豊かな腰の重みに悩み、腰のくびれをわずかにかがめ、乳房の重みの疲れにごくゆっくりと歩む、また別の若い女たちは、夜の恋のための装いをすばやく脱ぎ捨て、昼にふさわしい装いを身にまとう。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">pṛthu</span>「大きな」、<span class="iast">jaghana</span>「腰」。<span class="iast">ārta</span>「悩む」：『メーガドゥータ』II.21 <span class="iast">śroṇībhārād alasagamanā stokanamrā stanābhyām</span>「腰の重みに歩みはものうく、乳房の重みにわずかにうつむく」参照。</li>
+    <li><span class="iast">kiṃcid ānamramadhyāḥ</span>：<span class="iast">ā-</span> がすでに「わずかに」を表すので、<span class="iast">kiṃcit</span> はそれを繰り返している。文体のゆるみと言える。<span class="iast">mandamandam</span> は 2.22 参照。</li>
+    <li><span class="iast">naiśa</span>「夜の」（衣装について言う。『メーガドゥータ』II.11 <span class="iast">naiśo mārgaḥ</span> 参照）。</li>
+  </ul>
+</div>
+<!-- 5.15 -->
+<div class="verse-block" id="v5-5.15">
+  <div class="verse-num"><span>5.15</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">nakhapadacitabhāgān vīkṣamāṇāḥ stanāntān</span>
+    <span class="pada">adharakisalayāgraṃ dantabhinnaṃ spṛśantyaḥ |</span>
+    <span class="pada">abhimatarataveṣaṃ nandayantyastaruṇyaḥ</span>
+    <span class="pada">saviturudayakāle bhūṣayantyānanāni ||</span>
+  </div>
+  <div class="japanese">爪の跡に覆われた乳房のあたりを見つめ、歯に傷ついた若葉のような唇の先に触れ、恋の名残をとどめた自分の好ましい姿を喜びながら、若い女たちは、日の昇るころ、顔を飾る。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">pada</span>「跡」（アマラ辞典 <span class="iast">padaṃ vyavasitatrāṇasthānalakṣmāṅghrivastuṣu</span>「<span class="iast">pada</span> は決意・保護・場所・しるし・足・もの」）。<span class="iast">nakhapada</span>「爪の跡」：『メーガドゥータ』I.37 <span class="iast">nakhapadasukhān</span>、II.36 <span class="iast">kararuhapadaiḥ</span>、『シシュパーラヴァダ』XI.34 参照。</li>
+    <li><span class="iast">stanāntān</span>「乳房のあたりを」は、異読の <span class="iast">stanāgra-</span> よりよい。「頂」の意味の <span class="iast">agra</span> は常に中性だからである。<span class="iast">adharakisalaya</span>「若葉のような唇」：唇を若葉にたとえることは 2.12 に既出。</li>
+    <li><span class="iast">abhimataratavesam</span>「恋の交わりによる、〔自分たちにとって〕好ましい姿」は、異読 <span class="iast">abhimatarasametam</span> よりよい。後者はよい意味にならない。<span class="iast">nand</span>（使役形で意味は変わらない）「喜ぶ」。<span class="iast">savitur udayakāle</span>「日の昇るころ」は <span class="iast">uṣasi</span>「明け方に」の言い換え。<span class="iast">bhūṣayanty ānanāni</span> は 4.13 参照。</li>
+  </ul>
+</div>
+<p class="section-label">結びの祝福</p>
+<!-- 5.16 -->
+<div class="verse-block" id="v5-5.16">
+  <div class="verse-num"><span>5.16</span><span class="metre">mālinī</span></div>
+  <div class="sanskrit">
+    <span class="pada">pracuraguḍavikāraḥ svāduśālīkṣuramyaḥ</span>
+    <span class="pada">prabalasuratakelirjātakandarpadarpaḥ |</span>
+    <span class="pada">priyajanarahitānāṃ citasaṃtāpahetuḥ</span>
+    <span class="pada">śiśirasamaya eṣa śreyase vo 'stu nityam ||</span>
+  </div>
+  <div class="japanese">砂糖菓子がふんだんにあり、甘い稲とサトウキビに楽しく、激しい恋の戯れがあり、愛神が誇らしげにふるまい、恋人のいない者たちには胸の痛みのもととなる──この寒の季節が、いつもあなたがたの幸せとなりますように。</div>
+</div>
+<div class="note-section">
+  <div class="note-title">解説</div>
+  <ul>
+    <li><span class="iast">guḍa</span>：サトウキビの汁を煮つめて作る、黄色または赤褐色の粗糖（マラーティー語 gūḷ、いわゆるジャガリー）。<span class="iast">guḍavikāra</span>「グダを形を変えて作ったもの」、つまり砂糖菓子。</li>
+    <li><span class="iast">svāduśālīkṣuramyaḥ</span>：1節参照。<span class="iast">jātakandarpadarpaḥ</span>「愛神の誇りの生じた」：愛の力がきわめて強いこと（6.24 <span class="iast">kandarpadarpaśithilīkṛtagātrayaṣṭyaḥ</span> 参照）。</li>
+    <li><span class="iast">citasaṃtāpahetuḥ</span>「積もった（<span class="iast">cita</span>）苦しみの原因」。恋人のいない者にとっては、この楽しい季節こそが別離の苦しみをつのらせる。</li>
+    <li><span class="iast">śreyase vo 'stu nityam</span>「いつもあなたがたの幸いとなりますように」と、読者への祝福で歌を閉じる。</li>
+  </ul>
+</div>
+
+<div class="colophon">
+  第5歌 韻律<br><span class="iast">vaṃśastha</span>：1–4, 6–10節<br><span class="iast">upajāti</span>：5節<br><span class="iast">mālinī</span>：11–16節<br>
+  詩節番号は Kale 本による。破線の枠は Kale 本で付録に回された挿入詩節（GRETIL 本では本文中にある）。
+</div>
+
+<nav class="chapter-nav">
+<a href="rtusamhara_4.html">← 第4歌 冬</a>
+<a href="rtusamhara_toc.html">📜 目次</a>
+<a href="rtusamhara_6.html">第6歌 春 →</a>
+</nav>
+
+</body>
+</html>

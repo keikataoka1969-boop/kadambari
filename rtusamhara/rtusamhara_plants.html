@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>花でひらくインドの詩</title>
+<meta name="description" content="カーリダーサ『季節集』に登場する十の植物から、インド古典詩の世界観をたどる読み物。">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+JP:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #f7f4ef;
+    --bg-card: #fffdf8;
+    --text: #2c2418;
+    --text-secondary: #6b5d4d;
+    --accent: #a0522d;
+    --accent-light: #c4845c;
+    --border: #ddd5c8;
+    --border-light: #ece6da;
+    --sanskrit-bg: #faf8f3;
+    --note-bg: #f2ede4;
+    --highlight: #8b4513;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+      --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+      --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1a1612; --bg-card: #242018; --text: #e0d8cc; --text-secondary: #a69880;
+    --accent: #d4845c; --accent-light: #b0764e; --border: #3d362c; --border-light: #2e2820;
+    --sanskrit-bg: #1f1b15; --note-bg: #2a2419; --highlight: #e09050;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Shippori Mincho', 'Noto Serif JP', serif; line-height: 1.85; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .header { text-align: center; padding: 2.5rem 0 2rem; border-bottom: 2px solid var(--accent); margin-bottom: 2rem; }
+  .header h1 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.8rem; font-weight: 600; color: var(--accent); margin: 0 0 0.3rem; letter-spacing: 0.03em; text-wrap: balance; }
+  .header .subtitle { font-size: 1.15rem; color: var(--text-secondary); margin: 0.2rem 0; }
+  .header .meta { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; line-height: 1.6; }
+  .intro { background: var(--bg-card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem 1.2rem; margin: 0 0 2rem; font-size: 0.9rem; color: var(--text-secondary); }
+  .intro p { margin: 0.4rem 0; }
+  .chapter-title { text-align: center; margin: 2.5rem 0 1.5rem; padding: 1.2rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .chapter-title h2 { font-family: 'Noto Serif', 'Noto Serif JP', serif; font-size: 1.35rem; font-weight: 600; color: var(--accent); margin: 0 0 0.2rem; }
+  .chapter-title .ch-sub { font-size: 1rem; color: var(--text-secondary); margin: 0; }
+  .verse-block { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 1rem 0 0; border: 1px solid var(--border); border-radius: 4px 4px 0 0; overflow: hidden; background: var(--bg-card); }
+  .verse-num { grid-column: 1 / -1; background: var(--note-bg); padding: 0.3rem 0.8rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); border-bottom: 1px solid var(--border-light); letter-spacing: 0.06em; display: flex; justify-content: space-between; gap: 1rem; }
+  .verse-num .metre { font-weight: 400; color: var(--text-secondary); }
+  .sanskrit { padding: 0.7rem 0.9rem; font-family: 'Noto Serif', serif; font-size: 0.95rem; line-height: 1.9; background: var(--sanskrit-bg); border-right: 1px solid var(--border-light); color: var(--text); }
+  .sanskrit .pada { display: block; padding-left: 1.2em; text-indent: -1.2em; }
+  .sanskrit .pada:nth-child(even) { padding-left: 2.4em; }
+  .japanese { padding: 0.7rem 0.9rem; font-size: 0.93rem; line-height: 1.95; color: var(--text); }
+  .note-section { background: var(--note-bg); border: 1px solid var(--border); border-top: none; border-radius: 0 0 4px 4px; padding: 0.8rem 1rem; margin: 0 0 1.8rem; }
+  .note-section .note-title { font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 0.4rem; letter-spacing: 0.08em; }
+  .note-section p, .note-section ul { font-size: 0.86rem; line-height: 1.8; color: var(--text-secondary); margin: 0.3rem 0; }
+  .note-section ul { padding-left: 1.2em; }
+  .note-section li { margin: 0.25rem 0; }
+  .iast { font-family: 'Noto Serif', serif; font-style: italic; color: var(--highlight); }
+  .quote { display: block; margin: 0.3rem 0 0.3rem 1.2em; font-family: 'Noto Serif', serif; font-style: italic; }
+  .colophon { text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); line-height: 1.7; }
+  @media (max-width: 640px) {
+    body { padding: 1rem 1rem 3rem; }
+    .verse-block { grid-template-columns: 1fr; }
+    .sanskrit { border-right: none; border-bottom: 1px solid var(--border-light); }
+    .header h1 { font-size: 1.4rem; }
+  }
+  .verse-num .gid { font-weight: 400; color: var(--text-secondary); margin-left: 0.6em; font-size: 0.72rem; }
+  .verse-block.interp { border-style: dashed; }
+  .verse-block.interp .verse-num { background: transparent; }
+  .note-section.interp { border-style: dashed; border-top: none; }
+  .section-label { font-size: 0.88rem; font-weight: 600; color: var(--accent); margin: 2rem 0 0.6rem; padding-left: 0.3rem; letter-spacing: 0.05em; }
+  .chapter-nav { display: flex; justify-content: space-between; align-items: center; gap: 1em; padding: 2em 0 1em; margin-top: 2em; border-top: 1px solid var(--border); font-size: 0.88em; }
+  .chapter-nav a { color: var(--accent); text-decoration: none; line-height: 1.4; }
+  .chapter-nav span { min-width: 6em; }
+  .sanskrit, .note-section li, .japanese { overflow-wrap: anywhere; }
+</style>
+
+<style>
+  .essay { font-size: 1rem; line-height: 2; }
+  .essay p { margin: 0.9rem 0; text-align: justify; }
+  .essay p.lead { font-size: 1.05rem; }
+  .essay a { color: var(--accent); }
+  .essay h3 { font-size: 1.25rem; color: var(--accent); margin: 3rem 0 0.2rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 0.6rem; }
+  .essay h3 .num { font-family: 'Noto Serif', serif; font-size: 0.85rem; color: var(--bg-card); background: var(--accent); border-radius: 50%; min-width: 1.7rem; height: 1.7rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .essay h3.closing { display: block; }
+  .essay p.names { margin: 0.3rem 0 1rem; font-size: 0.85rem; color: var(--text-secondary); }
+  .essay blockquote { margin: 1.2rem 0; padding: 0.8rem 1.1rem; background: var(--sanskrit-bg); border-left: 3px solid var(--accent-light); font-size: 0.92rem; line-height: 1.9; overflow-wrap: anywhere; }
+  .essay blockquote .iast { display: block; margin-bottom: 0.3rem; }
+  .essay p.note-small { font-size: 0.8rem; color: var(--text-secondary); margin-top: 2.5rem; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Ṛtusaṃhāra — 季節集 対訳</h1>
+  <p class="subtitle">読みもの</p>
+</div>
+
+<div class="chapter-title">
+  <h2>花でひらくインドの詩</h2>
+  <p class="ch-sub">『季節集』の十の植物──詩人たちが植物に託したもの</p>
+</div>
+
+<div class="essay">
+
+<p class="lead">インドの古典詩を読みはじめると、まず植物の名前の多さに驚きます。マンゴー、アショーカ、カダンバ、ケータキー、キンシュカ……。日本ではなじみのない名前ばかりですが、詩人たちはこうした花の名前を、ただの景色としてではなく、一語で読者の心を動かす「合図」として使っています。桜と聞けば日本人が散りぎわの美しさやはかなさを思い浮かべるように、古代インドの読者は、花の名を聞いただけで季節の空気や恋の気分、ときには神話の一場面まで思い浮かべることができました。</p>
+
+<p>サンスクリット詩論では、こうした約束事を「詩人の決まり（<span class="iast">kavisamaya</span>）」と呼びます。また、心を動かす詩の「味わい（<span class="iast">rasa</span>）」を生み出す要素の一つに、感情を燃え立たせる外界の事物（<span class="iast">uddīpana</span>「点火するもの」）が数えられています。花や月や風は、登場人物の恋心に火をつけ、読者の心にも同じ火を移すための装置なのです。</p>
+
+<p>カーリダーサ作と伝えられる『季節集（<span class="iast">Ṛtusaṃhāra</span>）』は、夏から春まで六つの季節を詠った小さな詩集で、こうした植物の「辞書」としてもうってつけです。ここでは、この詩集に登場する植物のなかから十種を選び、詩がそれぞれの植物にどんなイメージを託しているのかをたどってみます。引用した詩句は、本サイトの<a href="rtusamhara_toc.html">『季節集』対訳</a>で前後の文脈とともに読むことができます。</p>
+
+<h3><span class="num">1</span>蓮──太陽と月に恋する花</h3>
+<p class="names"><span class="iast">padma, kamala, paṅkaja / utpala / kumuda</span>　ハス・スイレンの仲間</p>
+
+<p>インドの詩でいちばん多く登場する花を一つ挙げるなら、間違いなく蓮です。ただし、サンスクリット語には「蓮」をひとまとめにする言葉はあまり使われず、詩人たちは種類を細かく描き分けます。朝日とともに開く紅や白の蓮（<span class="iast">padma</span>、<span class="iast">kamala</span>）、青い睡蓮（<span class="iast">utpala</span>）、そして月の出とともに開き、夜明けに閉じる白い睡蓮（<span class="iast">kumuda</span>）です。</p>
+
+<p>この「昼の花」と「夜の花」の対比が、詩人の想像力をかきたてました。昼の蓮は太陽の恋人、夜の睡蓮は月の恋人。だから太陽が昇れば蓮はほほえみ、月が沈めば睡蓮はしぼみます。『季節集』の秋の歌は、これを恋人と別れた女性の姿に重ねます。</p>
+
+<blockquote><span class="iast">kumudam api gate 'staṃ līyate candrabimbe / hasitam iva vadhūnāṃ proṣiteṣu priyeṣu</span><br>白睡蓮もまた、月が沈むとしぼんでしまう──恋人が旅に出てしまった妻たちの微笑みのように。（<a href="rtusamhara_3.html#v3-3.23">3.23</a>）</blockquote>
+
+<p>蓮はまた、人の体を描く基本の語彙でもあります。「蓮の顔」「蓮の目」「蓮の手」「蓮の足」──美しい人の体はほとんど蓮でできていると言ってよいほどです。青い睡蓮はとくに黒く澄んだ瞳にたとえられます。</p>
+
+<p>一方で、蓮は泥の中から生まれて泥に染まらない花として、宗教的な象徴にもなりました。『バガヴァッド・ギーター』は、行為の結果に執着しない人を「水に濡れない蓮の葉のように、罪に汚されない」（5.10）と言います。富と美の女神ラクシュミーは蓮の上に座り、創造神ブラフマーはヴィシュヌの臍から伸びた蓮から生まれます。恋の比喩から宇宙の始まりまで、蓮ほど広い世界を背負った花はほかにありません。</p>
+
+<h3><span class="num">2</span>マンゴー──愛神のいちばん鋭い矢</h3>
+<p class="names"><span class="iast">cūta, āmra, sahakāra</span>　マンゴー</p>
+
+<p>日本では果物として知られるマンゴーですが、インドの詩で主役になるのは実よりも、春先に枝いっぱいにつく小さな花の房と、赤い若葉です。マンゴーの花が咲くと、春が来たのだとわかります。</p>
+
+<p>インドの愛の神カーマ（愛神）は、サトウキビの弓に花の矢をつがえて人の心を射る神です。その矢は五本とされ、蓮・アショーカ・マンゴー・ナヴァマッリカー（ジャスミンの一種）・青い睡蓮がそれにあたります。なかでもマンゴーの花は最上の矢とされました。『季節集』の春の歌は、春そのものを、マンゴーの花を矢に、蜂の列を弓弦にした戦士として登場させます（<a href="rtusamhara_6.html#v6-6.1">6.1</a>）。</p>
+
+<p>マンゴーの花には、コーキラ（オニカッコウ）という鳥がつきものです。この鳥は春になると高く澄んだ声で鳴き、その声もまた恋心をかきたてるものとされました。コーキラはカラスの巣に卵を産んで育てさせるため、「他者に養われるもの（<span class="iast">parabhṛta</span>）」という別名をもっています。インドの詩人はこうした生き物の習性までよく観察していました。</p>
+
+<p>花ざかりのマンゴーをいちばん恐れるのは、家を遠く離れた旅人です。春の歌の終わり近くに、こんな一節があります。</p>
+
+<blockquote><span class="iast">netre nimīlayati roditi yāti śokaṃ / ghrāṇaṃ kareṇa viruṇaddhi virauti coccaiḥ</span><br>〔恋人と別れた旅人は、花咲くマンゴーの木を見て〕目を閉じ、泣き、悲しみに沈み、手で鼻をふさぎ、声高く嘆く。（<a href="rtusamhara_6.html#v6-6.26">6.26</a>）</blockquote>
+
+<p>目を閉じるのは花を見たくないから、鼻をふさぐのは香りをかぎたくないから。美しい季節ほど、ひとりでいる人には残酷なのです。</p>
+
+<h3><span class="num">3</span>アショーカ──「憂いなし」という名の憂い</h3>
+<p class="names"><span class="iast">aśoka, kaṅkeli</span>　ムユウジュ（無憂樹）</p>
+
+<p>アショーカは春に、幹や根もとから直接、珊瑚のように赤い花の房をつける木です。名前は「憂い（<span class="iast">śoka</span>）がない」という意味で、仏教にも縁の深い木として、日本では「無憂樹」とも呼ばれます。</p>
+
+<p>詩人たちは、この名前をそのまま使った言葉遊びが大好きでした。「憂いを払う」はずの木が、恋する人にはかえって憂いをもたらす、というのです。</p>
+
+<blockquote><span class="iast">kurvanty aśokā hṛdayaṃ saśokaṃ / nirīkṣyamāṇā navayauvanānām</span><br>アショーカの木々は、見つめる若い女たちの心を「憂いあるもの」にする。（<a href="rtusamhara_6.html#v6-6.16">6.16</a>）</blockquote>
+
+<p>アショーカには、もう一つ有名な「詩人の決まり」があります。美しい女性に足で蹴られると花を咲かせる、というものです。カーリダーサの戯曲『マーラヴィカーとアグニミトラ』には、なかなか咲かないアショーカの木に花を咲かせようと、ヒロインがその幹を足で蹴る場面があります。植物が人間の、それも美しい女性の働きかけに応えて花開くという発想には、人と自然の境目がとても薄い世界観が表れています。</p>
+
+<p>『ラーマーヤナ』で、魔王ラーヴァナにさらわれたシーター姫が閉じこめられるのも「アショーカの林」でした。憂いを知らぬはずの林で、最も深く憂える人が暮らす。インドの読者は、その皮肉を名前ひとつで感じ取ったはずです。</p>
+
+<h3><span class="num">4</span>カダンバ──雨にふるえる喜び</h3>
+<p class="names"><span class="iast">kadamba, nīpa</span>　クビナガタマバナノキ</p>
+
+<p>雨季の花の代表がカダンバです。オレンジ色の丸い玉のような花をつけ、その表面には細い花糸がびっしりと立っています。最初の雨が降ると、この花が一斉に咲きます。</p>
+
+<p>インドの詩では、喜びに打ち震えると体じゅうの毛が逆立つ（総毛立つ）とされ、恋人に触れられた喜びの表現として好んで使われます。そして、毛羽立ったようなカダンバの花は、まさにその「総毛立ち」の姿に見立てられました。雨季の歌では、雨に打たれて熱を冷まされた森が、カダンバの花で「喜びにふるえているかのよう」だと詠われます（<a href="rtusamhara_2.html#v2-2.23">2.23</a>）。同じ詩節では、風に揺れる枝が「踊り」、白いケータキーの蕾が「笑う」とされ、森全体がひとりの人間のように喜んでいます。</p>
+
+<p>カダンバは女性たちの髪飾りや耳飾りにもなりました（<a href="rtusamhara_2.html#v2-2.20">2.20</a>）。また、クリシュナ神の伝説では、ヤムナー河のほとりのカダンバの木がたびたび舞台になります。雨季、恋、そして神の戯れ。カダンバはそれらすべてをつなぐ木です。</p>
+
+<h3><span class="num">5</span>ケータキー──白い笑いと嘘の伝説</h3>
+<p class="names"><span class="iast">ketakī</span>　アダン（タコノキの仲間）</p>
+
+<p>ケータキーは、剣のようにとがった葉をもつ低木で、雨季に白っぽい細長い苞（ほう）に包まれた花をつけます。その香りはきわめて強く、いまでも香料に使われています。</p>
+
+<p>インドの詩では、笑いの色は「白」と決まっています。笑うと白い歯がこぼれるからです。そのため、針のように尖った白いケータキーの蕾は、森の「笑い」に見立てられました。</p>
+
+<blockquote><span class="iast">hasitam iva vidhatte sūcibhiḥ ketakīnām</span><br>〔森は〕ケータキーの尖った蕾で、笑っているかのようだ。（<a href="rtusamhara_2.html#v2-2.23">2.23</a>）</blockquote>
+
+<p>また、雨季の風はケータキーの花粉を運んで、旅に出た男たちの心を奪います（<a href="rtusamhara_2.html#v2-2.26">2.26</a>）。香りはインドの詩で、記憶と恋しさを呼び覚ます力の強い感覚です。</p>
+
+<p>この花には神話もあります。ブラフマー神とヴィシュヌ神が、どちらが偉いかを言い争った物語です。二人は、突然現れた果てしない光の柱（シヴァ神の現れ）の端を見つけようとします。そのときケータキーの花は、ブラフマーが柱の頂上に着いたという嘘の証言をしました。そのためシヴァの怒りを買い、シヴァの礼拝には使われなくなったといいます。美しく香り高い花が、同時に「嘘つきの花」でもある。花のイメージは一つに定まらず、文脈によって表情を変えるのです。</p>
+
+<h3><span class="num">6</span>カーシャ──秋の花嫁の白い衣</h3>
+<p class="names"><span class="iast">kāśa</span>　ワセオバナの類（ススキに似たイネ科の草）</p>
+
+<p>雨季が終わり、雲が晴れると、川辺や野原は一面、カーシャの白い穂で覆われます。日本のススキに似た景色ですが、インドの詩人がそこに見たのは寂しさではなく、華やかな「白」でした。</p>
+
+<p>『季節集』の秋の歌は、秋を新しい花嫁として登場させます。</p>
+
+<blockquote><span class="iast">kāśāṃśukā vikacapadmamanojñavaktrā …<br>prāptā śarannavavadhūr iva rūparamyā</span><br>カーシャの花を衣とし、咲いた蓮を愛らしい顔として……秋が新妻のようにやって来た。（<a href="rtusamhara_3.html#v3-3.1">3.1</a>）</blockquote>
+
+<p>カーシャの白い穂は花嫁の衣、蓮は顔、白鳥の声は足輪の音、実りかけて穂を垂れる稲はうつむく体です。秋の歌ではこのあとも、月、白鳥、白い睡蓮、白い花の木と、「白いもの」が次々と並べられます（<a href="rtusamhara_3.html#v3-3.2">3.2</a>）。秋は白の季節なのです。</p>
+
+<p>この感覚はいまも生きています。ベンガル地方では、カーシャの白い穂が揺れはじめると、秋の大祭ドゥルガー・プージャーが近いことを人々は知ります。サタジット・レイの映画『大地のうた』で、幼い姉弟が一面のカーシャの原を駆け抜けて汽車を見にゆく場面を覚えている方もいるでしょう。</p>
+
+<h3><span class="num">7</span>キンシュカ──野を焼く炎、香りのない美</h3>
+<p class="names"><span class="iast">kiṃśuka, palāśa</span>　ハナモツヤクノキ（「森の炎」）</p>
+
+<p>春の終わり、葉の落ちた枝いっぱいに、燃えるような朱色の花をつける木があります。英語で「森の炎（flame of the forest）」と呼ばれるキンシュカです。</p>
+
+<p>詩人たちは、この花に二つの姿を見ました。一つは炎です。春の歌では、キンシュカの林に覆われた大地が「赤い衣をまとった新妻」のように輝きます（<a href="rtusamhara_6.html#v6-6.19">6.19</a>）。秋の花嫁が白い衣だったのと、ちょうど対になっています。もう一つは、曲がった花の形から連想される「オウムのくちばし」です。<span class="iast">kiṃśuka</span> という名前自体、「いくらか（<span class="iast">kiṃ</span>）オウム（<span class="iast">śuka</span>）に似たもの」と俗に解釈されてきました。</p>
+
+<blockquote><span class="iast">kiṃ kiṃśukaiḥ śukamukhacchavibhir na bhinnam</span><br>オウムのくちばしのように赤いキンシュカの花に、〔若者の心は〕すでに裂かれていないというのか。（<a href="rtusamhara_6.html#v6-6.20">6.20</a>）</blockquote>
+
+<p>オウムのくちばしは、恋する者の心を「裂く」武器にもなります。ただし、キンシュカには香りがありません。格言集には「容姿と若さに恵まれ、名家に生まれても、学問のない者は輝かない。香りのないキンシュカの花のように」という一句があります。見た目は華やかでも中身がない、というたとえです。</p>
+
+<p>この花は暮らしのなかでも身近でした。春の色かけ祭りホーリーで使う色粉は、もとはこの花から作られたといいます。また、18世紀の「プラッシーの戦い」のプラッシー（パラーシー）という地名は、この木の別名パラーシャに由来すると言われます。</p>
+
+<h3><span class="num">8</span>カルニカーラ──創造主の不公平</h3>
+<p class="names"><span class="iast">karṇikāra</span>　金色の花をつける春の木（同定には諸説あり）</p>
+
+<p>カルニカーラは、春に輝くような黄金色の花をつける木です。名前のなかに「耳（<span class="iast">karṇa</span>）」という語を含み、詩のなかでは女性たちが耳飾りにする花として登場します（<a href="rtusamhara_6.html#v6-6.5">6.5</a>）。</p>
+
+<p>この花も、キンシュカと同じく香りがありません。カーリダーサは叙事詩『クマーラサンバヴァ（王子の誕生）』で、この欠点にこんな感想を添えています。</p>
+
+<blockquote><span class="iast">prāyeṇa sāmagryavidhau guṇānāṃ / parāṅmukhī viśvasṛjaḥ pravṛttiḥ</span><br>色はこれほど見事なのに、香りがないことが、カルニカーラを見る心を痛ませる。思えば世界の創り主は、一つのものにあらゆる美点をそろえて与えることを、たいてい避けるものなのだ。（『クマーラサンバヴァ』3.28）</blockquote>
+
+<p>完全なものはこの世にない、という嘆きです。しかし裏返せば、だからこそ人は欠けたものに心を寄せるのかもしれません。『季節集』では、カルニカーラの黄金色は恋する者の心を「焼く」炎の色でもあります（<a href="rtusamhara_6.html#v6-6.20">6.20</a>）。一つの花をめぐって、恋の歌と人生への思索とが隣り合っているのが、インドの詩の面白さです。</p>
+
+<h3><span class="num">9</span>ジャスミン──白い歯、白い微笑み、白い名声</h3>
+<p class="names"><span class="iast">mālatī, kunda, mallikā, yūthikā</span>　ジャスミンの仲間</p>
+
+<p>インドの夜をいちばん香らせる花といえば、ジャスミンの仲間でしょう。詩には何種類ものジャスミンが登場し、季節ごとに咲く種類が違います。雨季から秋にはマーラティー、冬から春にはクンダ、春にはナヴァマッリカーといった具合です。</p>
+
+<p>ジャスミンの役割は、何よりもまず「白」と「髪飾り」です。女性たちは豊かな黒髪を白い花で埋めつくします（<a href="rtusamhara_3.html#v3-3.19">3.19</a>）。黒い髪と白い花の対比が、詩人の目をとらえました。</p>
+
+<p>なかでもクンダの花は、白い歯と微笑みにたとえられる定番の花です。春の歌では、女性たちの笑いのように白いクンダの花が庭を照らし、世を捨てた聖者の心さえ奪います。</p>
+
+<blockquote><span class="iast">cittaṃ muner api haranti nivṛttarāgaṃ / prāg eva rāgamalināni manāṃsi yūnām</span><br>〔クンダに照り映える庭園は〕執着を離れた聖者の心さえ奪う。まして情に汚れた若者たちの心は言うまでもない。（<a href="rtusamhara_6.html#v6-6.23">6.23</a>）</blockquote>
+
+<p>サンスクリット詩の決まりでは、笑いだけでなく、名声も、善い行いも「白い」ものとされます。白いジャスミンは、見た目の美しさだけでなく、明るく清らかなもの全般を呼び出す花でもあるのです。8世紀の劇作家バヴァブーティの恋愛劇『マーラティーとマーダヴァ』のヒロインの名前が、この花の名マーラティーであることも付け加えておきましょう。</p>
+
+<h3><span class="num">10</span>プリヤング──女性の体そのものとしての蔓</h3>
+<p class="names"><span class="iast">priyaṅgu, śyāmā</span>　しなやかな蔓草（同定には諸説あり）</p>
+
+<p>最後は、あまり目立たない植物を取り上げます。プリヤングは「シャーマー」とも呼ばれる蔓草で、詩のなかではしなやかな女性の体、とくに腕にたとえられます。秋の歌では、花の重みにたわむシャーマーの蔓が、飾りをつけた女性たちの腕の美しさを「奪う」とされます（<a href="rtusamhara_3.html#v3-3.18">3.18</a>）。</p>
+
+<p>冬の歌で、この蔓は恋人と別れた女性の姿になります。</p>
+
+<blockquote><span class="iast">priye priyaṅguḥ priyaviprayuktā / vipāṇḍutāṃ yāti vilāsinīva</span><br>〔冷たい風に揺さぶられ、実りを迎えた〕プリヤングは、愛しい人よ、恋人と引き離された女のように青白くなってゆく。（<a href="rtusamhara_4.html#v4-4.10">4.10</a>）</blockquote>
+
+<p><span class="iast">priye priyaṅguḥ priya-</span> と「プリヤ（愛しい）」の音を三度重ねた、耳に心地よい一句です。インドの詩では、恋人と離れた人は青白くやせ細るものとされ、冬に色あせる蔓がその姿に重ねられています。</p>
+
+<p>カーリダーサの『メーガドゥータ（雲の使者）』では、遠く離れた妻を恋しがる主人公が、「シャーマーの蔓のなかにあなたの体を、怯えた鹿の目にあなたの眼差しを見る」と嘆きます。また「詩人の決まり」によれば、プリヤングは美しい女性に触れられると花を咲かせるとされました。アショーカの場合と同じく、植物と女性の体はたがいに映し合い、呼び合う関係にあるのです。</p>
+
+<h3 class="closing">おわりに──植物は心の鏡</h3>
+
+<p>十の植物をたどってみると、インドの古典詩に共通する考え方が見えてきます。</p>
+
+<p>まず、自然は人間の心から切り離された「背景」ではありません。花が咲けば恋心が燃え、花が散れば別れの悲しみがつのります。森は喜びにふるえて笑い、季節は花嫁や戦士や王の姿で現れます。人の体は蓮やジャスミンや蔓でできていて、木は女性に蹴られたり触れられたりして花を開きます。人と自然とは、同じ一つの感情の世界に住んでいるのです。</p>
+
+<p>次に、一つの植物には一つの意味だけが割り当てられているわけではありません。アショーカは「憂いなし」でありながら憂いを生み、ケータキーは笑いの花でありながら嘘の花でもあります。キンシュカとカルニカーラは、美しさと欠けたところをあわせもっています。決まった約束事があるからこそ、詩人はそれをずらしたり裏返したりして、新しい驚きを生み出すことができました。</p>
+
+<p>日本の和歌が桜や紅葉に託してきたものと、インドの詩人がマンゴーやアショーカに託したものとは、どこが似ていて、どこが違うのでしょうか。花の名前を手がかりに、ぜひ<a href="rtusamhara_toc.html">『季節集』の本文</a>を開いてみてください。二千年近く前の詩人たちが見ていた季節の色と香りが、きっと少し身近に感じられるはずです。</p>
+
+<p class="note-small">※ 植物の和名・学名との対応には、研究者のあいだで説が分かれるものがあります（とくにカルニカーラ、プリヤングなど）。ここでは代表的な説に従いました。詩句の訳は本サイトの対訳によります（『クマーラサンバヴァ』の一節は本稿のための訳）。</p>
+
+</div>
+
+
+<nav class="chapter-nav">
+<a href="rtusamhara_toc.html">📜 季節集 目次</a>
+<span></span>
+<a href="rtusamhara_1.html">第1歌 夏 →</a>
+</nav>
+
+</body>
+</html>
