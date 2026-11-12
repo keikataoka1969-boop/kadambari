@@ -1,0 +1,959 @@
+@act 3
+@synopsis パンチャヴァティー。河の女神タマサーとムララーの対話から、捨てられたシーターがガンガーに身を投げ、双子を産み、大地とガンガーの女神に救われていたことが明かされる。ガンガーの計らいで、シーターは誰の目にも見えない「影」の身となって森に来ている。そこへラーマが現れ、思い出の地で幾度も気を失うが、そのたびに見えないシーターの手に触れられて蘇る。森の女神ヴァーサンティーはラーマの非情を責め、シーターはラーマの変わらぬ愛を知って、ひそかに心を和らげる。
+@setting パンチャヴァティー、ゴーダーヴァリー河畔
+
+== śuddhaviṣkambhakaḥ | 純粋前場
+
+P
+s: (tataḥ praviśati nadīdvayam)
+j: （二人の河の女神が登場する）
+s: {ekā} sakhi murale, kim asi saṃbhrānteva.
+j: {一人} ムララー、どうしたの、何だかあわてているようね。
+s: {muralā} sakhi tamase, preṣitāsmi bhagavato 'gastyasya patnyā lopāmudrayā saridvarāṃ godāvarīm abhidhātum — jānāsy eva yathā vadhūparityāgāt prabhṛti —
+j: {ムララー} タマサー、私はアガスティヤ尊者の奥方ローパームドラーさまに遣わされて、河の王妃ゴーダーヴァリーさまにこう伝えに行くところなの——「ご存じのとおり、妃を捨てて以来、
+
+V 1 {muralā}
+s: anirbhinno gabhīratvād antargūḍhaghanavyathaḥ /
+s: puṭapākapratīkāśo rāmasya karuṇo rasaḥ
+j: ラーマの悲しみは、その深さゆえに外にあらわれず、
+j: 濃い痛みを内に秘め、封じた土器のなかで煮つめる薬（プタパーカ）のようです。
+
+N
+n: *puṭapāka* — 薬剤を二つの土器で密封して火にかける製法。外には何も漏れず、内で激しく煮えたぎる。ラーマの抑えられた悲嘆の的確な比喩。
+
+P
+s: {muralā} tena ca tathāvidheṣṭajanakaṣṭavinipātajanmanā prakarṣagatena dīrghaśokasaṃtāpena saṃpraty atitarāṃ parikṣīṇo rāmabhadraḥ. tam avalokya kampitam iva me sabandhanaṃ hṛdayam. adhunā ca pratinivartamānena rāmabhadreṇa niyatam eva pañcavaṭīvane vadhūsahavāsaviśrambhasākṣiṇaḥ pradeśā draṣṭavyāḥ. teṣu ca nisargadhīrasyāpy evaṃvidhāyām avasthāyām atigambhīrābhogaśokakṣobhasaṃvegāt pade pade mahānti pramādasthānāni śaṅkanīyāni rāmabhadrasya. tad bhagavati godāvari, tatra tvayā sāvadhānayā bhavitavyam —
+j: {ムララー} あれほど愛しい人にあのような災いが降りかかったことから生まれ、極みに達した長い悲嘆の苦しみに、ラーマさまはいまやすっかりやつれておられます。そのお姿を見ると、私の心も根もとから震えるようです。いまお帰りの途中のラーマさまは、きっとパンチャヴァティーの森で、妃と打ちとけて暮らした証人である場所の数々をご覧になるでしょう。生まれつき気丈な方でも、このような境遇では、深く広がる悲しみの激しい動揺から、一歩ごとに大きな危うさが案じられます。ですから尊きゴーダーヴァリーさま、そこでは気をつけてさしあげてください——
+
+V 2 {muralā}
+s: vīcīvātaiḥ śīkarakṣodaśītair / ākarṣadbhiḥ padmakiñjalkagandhān /
+s: mohe mohe rāmabhadrasya jīvaṃ / svairaṃ svairaṃ preritais tarpayeti
+j: 水しぶきの粒で冷たく、蓮の花蕊の香りを運ぶ
+j: さざ波の風を、そっと、そっと送って、
+j: ラーマさまが気を失われるたびに、
+j: その命を潤してさしあげてください」と。
+
+P
+s: {tamasā} ucitam eva dākṣiṇyaṃ snehasya. saṃjīvanopāyas tu maulika eva rāmabhadrasyādya saṃnihitaḥ.
+j: {タマサー} 愛情にふさわしい心づかいね。でも今日は、ラーマさまをよみがえらせる根本の手だてが、すぐそばにあるのよ。
+s: {muralā} katham iva.
+j: {ムララー} どういうこと。
+s: {tamasā} śrūyatām. purā kila vālmīkitapovanopakaṇṭhāt parityajya nivṛtte lakṣmaṇe sītā devī prāptaprasavavedanam atiduḥkhasaṃvegād ātmānaṃ gaṅgāpravāhe nikṣiptavatī. tadaiva tatra dārakadvayaṃ prasūtā. bhagavatībhyāṃ pṛthvībhāgīrathībhyām abhyupapannā rasātalaṃ ca nītā. stanyatyāgāt pareṇa ca dārakadvayaṃ tasyāḥ prācetasasya maharṣer gaṅgādevī svayam arpitavatī.
+j: {タマサー} 聞いてちょうだい。かつてヴァールミーキ仙の苦行林のほとりにシーター妃を置き去りにしてラクシュマナが帰ったあと、妃は産みの苦しみに襲われ、あまりのつらさに我を忘れて、ガンガーの流れに身を投げられたの。その場でふたりの男の子を産み、大地の女神とガンガーの女神に救われて、地底の世界へ連れていかれた。そして乳離れのあと、ガンガーの女神みずからが、そのふたりの子をプラーチェータサ大仙（ヴァールミーキ）に託されたのよ。
+s: {muralā} (savismayam)
+j: {ムララー} （驚いて）
+
+V 3 {muralā}
+s: īdṛśānāṃ vipāko 'pi jāyate param adbhutaḥ /
+s: yatropakaraṇībhāvam āyāty evaṃvidho janaḥ
+j: このような方々には、災いの果てさえこのうえなく不思議なものとなるのね——
+j: こんな尊い方々が、その手だてとなってくださるのだから。
+
+P
+s: {tamasā} idānīṃ tu śambūkavṛttāntenānena saṃbhāvitajanasthānāgamanaṃ rāmabhadraṃ sarayūmukhād upaśrutya bhagavatī bhāgīrathī yad eva bhagavatyā lopāmudrayā snehād āśaṅkitaṃ tad evāśaṅkya sītāsametā kenacid iva gṛhācāravyapadeśena godāvarīṃ vilokayitum āgatā.
+j: {タマサー} そしていま、シャンブーカの一件でラーマさまがジャナスターナに来られるらしいと、サラユー河の口から聞いたガンガーさまは、ローパームドラーさまが愛情から案じておられたのとまさに同じことを案じて、何か家同士のつきあいにことよせて、シーター妃を連れてゴーダーヴァリーさまを訪ねてこられたの。
+s: {muralā} sucintitaṃ bhagavatyā bhāgīrathyā. rājadhānīsthitasya khalu tais tair jagatām ābhyudayikaiḥ kāryair vyāpṛtasya rāmabhadrasya niyatāś cittavikṣepāḥ. avyagrasya punar asya śokamātradvitīyasya pañcavaṭīpraveśo mahān anartha iti. tat katham idānīṃ sītādevyā rāmabhadra āśvāsanīyaḥ syāt.
+j: {ムララー} ガンガーさまはよくお考えになったわ。都にいて世の繁栄のためのさまざまな務めに追われていれば、ラーマさまの心も紛れるでしょう。けれど用事もなく、悲しみだけを道づれにパンチャヴァティーに入られるのは大きな災いのもと。でも、シーター妃がどうやってラーマさまを慰められるのかしら。
+s: {tamasā} uktam eva bhagavatyā bhāgīrathyā — vatse devayajanasaṃbhave sīte, adya khalv āyuṣmatoḥ kuśalavayor dvādaśasya janmasaṃvatsarasya saṃkhyāmaṅgalagranthir bhavati. tad ātmanaḥ purāṇaśvaśuram etāvato mānavasya rājarṣivaṃśasya prasavitāraṃ savitāram apahatapāpmānaṃ devaṃ svahastāvacitaiḥ puṣpais tarpayasva. na ca tvām avanipṛṣṭhacāriṇīm asmatprabhāvād anyadevatā api drakṣyanti, kiṃ punar martyāḥ iti. aham apy ājñāpitā — tamase, tvayi prakṛṣṭapremaiva vadhūr jānakī, atas tvam evāsyāḥ pratyanantarībhava iti. sāham adhunā yathādiṣṭam anutiṣṭhāmi.
+j: {タマサー} それについてガンガーさまはこう仰せになったの——「祭場より生まれた娘シーターよ、今日はちょうど、健やかなクシャとラヴァの十二歳の誕生日の祝いの結び目を数える日。だから、そなたの古い舅であり、この人間の王仙の家系の祖である、罪を払う太陽神に、そなたが自ら摘んだ花を供えなさい。地上を歩むそなたの姿は、私の力によって他の神々にさえ見えまい。まして人間に見えるはずがない」と。そして私にも「タマサー、嫁のジャーナキーはそなたに特に心を寄せている。だからそなたがこの子のそばにずっと付いていなさい」とお命じになった。だから私はいま、仰せのとおりにしているのよ。
+
+N
+n: シーターがだれにも見えない身となる——これが第三幕の題「影」（*chāyā*）の由来である。観客には見えるが、ラーマにもヴァーサンティーにも見えない。
+
+P
+s: {muralā} aham apy etaṃ vṛttāntaṃ bhagavatyai lopāmudrāyai nivedayāmi. rāmabhadro 'py āgata eveti tarkayāmi.
+j: {ムララー} 私もこのことをローパームドラーさまにお知らせしましょう。ラーマさまも、もうお着きのころだと思うわ。
+s: {tamasā} tad iyaṃ godāvarīhradān niṣkrāmya —
+j: {タマサー} ほら、ゴーダーヴァリーの淵から出てきて——
+
+V 4 {tamasā}
+s: paripāṇḍudurbalakapolasundaraṃ / dadhatī vilolakabarīkam ānanam /
+s: karuṇasya mūrtir atha vā śarīriṇī / virahavyatheva vanam eti jānakī
+j: 青白くやつれた頬の美しい、
+j: 乱れた束ね髪の顔をして、
+j: 悲愴が形をとったのか、それとも別離の苦しみが
+j: 体をもったのか——ジャーナキーが森へやって来る。
+
+P
+s: {muralā} iyaṃ hi sā —
+j: {ムララー} ほんとうに、あの方——
+
+V 5 {muralā}
+s: kisalayam iva mugdhaṃ bandhanād vipralūnaṃ / hṛdayakusumaśoṣī dāruṇo dīrghaśokaḥ /
+s: glapayati paripāṇḍu kṣāmam asyāḥ śarīraṃ / śaradija iva gharmaḥ ketakīgarbhapatram
+j: 枝から摘みとられた可憐な若芽のように、
+j: 心の花を枯らす長い苛酷な悲しみが、
+j: 青ざめてやつれたこの方の体をしおれさせている——
+j: 秋の暑さが、ケータキーの花の芯の葉をしおれさせるように。
+
+P
+s: (iti parikramya niṣkrānte)
+j: （二人、歩きまわって退場）
+
+== atha aṅkaḥ | 本場
+
+P
+s: (nepathye) pramādaḥ pramādaḥ.
+j: （舞台裏で）たいへんだ、たいへんだ。
+s: (tataḥ praviśati puṣpāvacayavyagrā sakaruṇautsukyam ākarṇayantī sītā)
+j: （花摘みに夢中だったシーターが、悲しみと気がかりのまじった面持ちで耳を傾けながら登場する）
+s: {sītā} amhahe, jānāmi priyasakhī me vāsantī vyāharatīti.
+j: {シーター} あら、あれは私の親友ヴァーサンティーの声だわ。
+s: (punar nepathye)
+j: （ふたたび舞台裏で）
+
+V 6
+s: sītādevyā svakarakalitaiḥ sallakīpallavāgrair / agre lolaḥ karikalabhako yaḥ purā vardhito 'bhūt /
+i: {sītā} kiṃ tasya.
+s: vadhvā sārdhaṃ payasi viharan so 'yam anyena darpād / uddāmena dviradapatinā saṃnipatyābhiyuktaḥ
+j: かつてシーター妃が手ずから与えたサッラキーの若葉の先で
+j: 育てられた、あのやんちゃな子象——
+k: {シーター} その子がどうしたの。
+j: その子が妻といっしょに水で遊んでいると、
+j: 傲り高ぶった別の象の王が襲いかかってきたのだ。
+
+N
+n: 偈の前半と後半のあいだに、姿の見えないシーターが問いをはさむ。この偈は後で、ラーマの耳にも同じように聞こえる（第15偈前）。
+
+P
+s: {sītā} (sasaṃbhramaṃ katicit padāni gatvā) āryaputra, paritrāyasva paritrāyasva mama taṃ putrakam. (stimitam abhinīya) hā dhik hā dhik, tāny eva ciraparicitāny akṣarāṇi pañcavaṭīdarśanena māṃ mandabhāginīm anubadhnanti. hā āryaputra. (iti mūrcchati)
+j: {シーター} （あわてて数歩進み）あなた、助けて、あの子を助けて。（はっと立ちすくんで）ああ、いや、いや——パンチャヴァティーを見たせいで、聞き慣れたあの呼び名が、不運な私の口をついて出てしまう。ああ、あなた。（気を失う）
+s: (praviśya)
+j: （タマサーが登場して）
+s: {tamasā} vatse, samāśvasihi samāśvasihi.
+j: {タマサー} 娘よ、気をしっかり、しっかりして。
+s: (nepathye) vimānarāja, atraiva sthīyatām.
+j: （舞台裏で）飛車の王よ、ここに止まれ。
+s: {sītā} (samāśvasya sotkampam) amhahe, jalabharabharitameghamandrastanitagambhīramāṃsalaḥ kuto nv eṣa bhāratīnirghoṣo bhriyamāṇakarṇavivarāṃ mām api mandabhāginīṃ jhaṭity ucchvāsayati.
+j: {シーター} （我にかえって、震えながら）まあ、水をたっぷり含んだ雲の低い雷鳴のように深く豊かなこの声は、どこから。耳の奥まで満たして、不運な私まで、たちまち息を吹きかえさせてくれる。
+s: {tamasā} (sasnehasmitam) ayi vatse —
+j: {タマサー} （愛しげに微笑んで）まあ、娘よ——
+
+V 7 {tamasā}
+s: aparisphuṭanikvāṇe kutastye 'pi tvam īdṛśī /
+s: stanayitnor mayūrīva cakitotkaṇṭhitaṃ sthitā
+j: どこから来たとも知れぬ、かすかな声にさえ、そなたはこのよう——
+j: 雷を聞いた雌の孔雀のように、おびえつつも恋しさに身を乗り出している。
+
+P
+s: {sītā} bhagavati, kiṃ bhaṇasi aparisphuṭa iti. mayā punaḥ svarasaṃyogena pratyabhijñātam āryaputra eva vyāharatīti.
+j: {シーター} タマサーさま、かすかだなんておっしゃるの？ 私には声の響きで、あの人が話しているのだとわかりました。
+s: {tamasā} śrūyate tapasyataḥ kila śūdrasya daṇḍadhāraṇārtham aikṣvāko rājā janasthānam āgata iti.
+j: {タマサー} 苦行するシュードラを罰するため、イクシュヴァークの王がジャナスターナに来られたと聞いているわ。
+s: {sītā} diṣṭyā aparihīnarājadharmaḥ khalu sa rājā.
+j: {シーター} よかった、あの王さまは王の務めを少しも怠っておられないのね。
+
+N
+n: シーターの言葉には、王の務め（*rājadharma*）のために自分を捨てた夫へのかすかな皮肉が響く。
+
+P
+s: (nepathye)
+j: （舞台裏で）
+
+V 8 {rāmaḥ}
+s: yatra drumā api mṛgā api bandhavo me / yāni priyāsahacaraś ciram adhyavātsam /
+s: etāni tāni bahunirjharakandarāṇi / godāvarīparisarasya gires taṭāni
+j: 木々も獣たちも私の身内であったところ、
+j: 愛しい人を伴って長く住んだところ——
+j: これが、滝や洞窟の多い、
+j: ゴーダーヴァリーのほとりの山の斜面だ。
+
+P
+s: {sītā} (dṛṣṭvā) hā katham, prabhātacandramaṇḍalāpāṇḍuraparikṣāmadurbalenākāreṇa nijasaumyagambhīrānubhāvamātrapratyabhijñeya āryaputra eva. bhagavati tamase, dhāraya mām. (iti tamasām āśliṣya mūrcchati)
+j: {シーター} （見て）まあ、どうしたこと——明け方の月のように青ざめ、やせ細って弱々しいお姿。ただあの優しく深い威厳だけで、やっとあの人だとわかる。タマサーさま、私を支えて。（タマサーにすがって気を失う）
+s: {tamasā} (dhārayantī) vatse, samāśvasihi samāśvasihi.
+j: {タマサー} （支えながら）娘よ、しっかりして、しっかりして。
+s: (nepathye) anena pañcavaṭīdarśanena —
+j: （舞台裏で）このパンチャヴァティーを見て——
+
+V 9 {rāmaḥ}
+s: antarlīnasya duḥkhāgner adyoddāmaṃ jvaliṣyataḥ /
+s: utpīḍa iva dhūmasya mohaḥ prāg āvṛṇoti mām
+j: 内にひそむ悲しみの火が、今日まさに激しく燃えあがろうとして、
+j: その前に、噴き出す煙のように、失神が私を覆いつくす。
+
+N
+n: 火が燃え上がる前にまず煙が噴き出すように、悲しみが爆発する前に気が遠くなる、の意。第2パーダ、OCR の *duḥkhāmbhodher udghāmaṃ jvaliyataḥ* は乱れており、*duḥkhāgner adyoddāmaṃ jvaliṣyataḥ* と解する。
+
+P
+s: (nepathye) hā priye jānaki.
+j: （舞台裏で）ああ、愛しいジャーナキー。
+s: {tamasā} (svagatam) idaṃ tad āśaṅkitaṃ gurujanena.
+j: {タマサー} （傍白）長老がたの案じていたのは、まさにこのこと。
+s: {sītā} (samāśvasya) hā katham etat.
+j: {シーター} （我にかえって）ああ、どうしたの。
+s: (punar nepathye) hā devi daṇḍakāraṇyavāsapriyasakhi videharājaputri. (iti mūrcchati)
+j: （ふたたび舞台裏で）ああ妃よ、ダンダカの森の暮らしの愛しい伴侶、ヴィデーハ王の娘よ。（気を失う）
+s: {sītā} hā dhik hā dhik, māṃ mandabhāginīṃ vyāhṛtyāmīlitanetranīlotpalo mūrcchita eva. hā katham dharaṇipṛṣṭhe niruddhaniḥśvāsaniḥsahaṃ viparyastaḥ. bhagavati tamase, paritrāyasva paritrāyasva, jīvayāryaputram. (iti pādayoḥ patati)
+j: {シーター} ああ、いや、いや——不運な私の名を呼んで、青蓮のような目を閉じて気を失ってしまわれた。ああ、息も止まって、ぐったりと地面に倒れてしまわれた。タマサーさま、助けて、助けて、あの人を生き返らせて。（足もとにひれ伏す）
+
+V 10 {tamasā}
+s: tvam eva nanu kalyāṇi saṃjīvaya jagatpatim /
+s: priyasparśo hi pāṇis te tatraiṣa nirato janaḥ
+j: 吉祥なる人よ、そなたこそ世界の主を生き返らせなさい。
+j: そなたの手の触れることこそ愛しく、この人はそれにこそ心を寄せているのだから。
+
+P
+s: {sītā} yad bhavatu tad bhavatu, yathā bhagavaty ājñāpayati. (iti sasaṃbhramaṃ niṣkrāntā)
+j: {シーター} どうなろうとかまいません。仰せのとおりにいたします。（あわてて退場）
+s: (tataḥ praviśati bhūmau nipatitaḥ sārdrayā sītayā spṛśyamānaḥ sāhlādocchvāso rāmaḥ)
+j: （地に倒れ伏し、涙にぬれたシーターに触れられて、喜びの息を吹きかえすラーマが現れる）
+s: {sītā} (kiṃcit saharṣam) jāne punaḥ pratyāgatam iva jīvitaṃ trailokyasya.
+j: {シーター} （少しうれしそうに）三界の命が戻ってきたような気がするわ。
+s: {rāmaḥ} hanta bhoḥ, kim etat —
+j: {ラーマ} おお、これは何だ——
+
+V 11 {rāmaḥ}
+s: āścyotanaṃ nu haricandanapallavānāṃ / niṣpīḍitendukarakandalajo nu sekaḥ /
+s: ātaptajīvitapunaḥparitarpaṇo 'yaṃ / saṃjīvanauṣadhiraso nu hṛdi prasiktaḥ
+j: 黄色い白檀の若葉から滴る雫か、
+j: しぼりとった月光の芽から生まれた灌ぎか、
+j: それとも、焼けただれた命をふたたび潤す、
+j: 蘇生の霊薬の汁が胸に注がれたのか。
+
+P
+s: {rāmaḥ} api ca —
+j: {ラーマ} それに——
+
+V 12 {rāmaḥ}
+s: sparśaḥ purā paricito niyataṃ sa eva / saṃjīvanaś ca manasaḥ parimohanaś ca /
+s: saṃtāpajāṃ sapadi yaḥ parihṛtya mūrcchām / ānandanena jaḍatāṃ punar ātanoti
+j: この手ざわりは、昔なじみのあの手ざわりにちがいない——
+j: 心をよみがえらせ、またとろかすもの。
+j: 苦しみから来た失神をたちまち払いのけ、
+j: こんどは喜びのあまりの痺れをもたらすのだ。
+
+P
+s: {sītā} (sasādhvasotkampam apasṛtya) etāvad evedānīṃ me bahutaram.
+j: {シーター} （おびえ震えながら身を引いて）いまの私には、これだけでも過ぎるほど。
+s: {rāmaḥ} (upaviśya) na khalu vatsalayā devyābhyupapanno 'smi.
+j: {ラーマ} （身を起こして）まさか、愛しい妃が私を助けてくれたのではあるまいな。
+s: {sītā} hā dhik hā dhik, kim iti mām āryaputro mārgiṣyati.
+j: {シーター} ああ、いや、いや——あの人が私を探しはじめたらどうしよう。
+s: {rāmaḥ} bhavatu, paśyāmi.
+j: {ラーマ} よし、見てみよう。
+s: {sītā} bhagavati tamase, apasarāvas tāvat. māṃ prekṣyānabhyanujñātena saṃnidhānena rājādhikaṃ kopiṣyati.
+j: {シーター} タマサーさま、ひとまず離れましょう。許しもなくそばにいる私を見たら、王さまはひどくお怒りになるでしょう。
+s: {tamasā} ayi vatse, bhāgīrathīprasādād vanadevatānām apy adṛśyāsi saṃvṛttā.
+j: {タマサー} まあ娘よ、ガンガーさまのお恵みで、そなたは森の女神たちにさえ見えない身になっているのよ。
+s: {sītā} āṃ, asti khalv etat.
+j: {シーター} ああ、そうでした。
+s: {rāmaḥ} hā priye jānaki.
+j: {ラーマ} ああ、愛しいジャーナキー。
+s: {sītā} (samanyugadgadam) āryaputra, asadṛśaṃ khalv etad vacanam asya vṛttāntasya. (sāsram) atha vā kim iti vajramayī janmāntareṣv api punar asaṃbhāvitadurlabhadarśanasya mām eva mandabhāginīm uddiśya vatsalasyaivaṃvādina āryaputrasyopari niranukrośā bhaviṣyāmi. aham etasya hṛdayaṃ jānāmi, mamāpy eṣaḥ.
+j: {シーター} （恨みに声をつまらせて）あなた、そのおことばは、あのなさりようにはふさわしくありません。（涙ながらに）いいえ——生まれ変わってもふたたび会えるとは思えない、得がたい方が、不運な私のことを思ってこんなに優しく語ってくださるのに、どうして金剛のように冷たくなれましょう。私はこの人の心を知っている。この人も私の心を知っている。
+s: {rāmaḥ} (sarvato 'valokya, sanirvedam) hā, na kiṃcid atra.
+j: {ラーマ} （あたりを見回して、落胆して）ああ、何もない。
+s: {sītā} bhagavati tamase, tathā niṣkāraṇaparityāgino 'py etasyaivaṃvidhena darśanena kīdṛśa iva me hṛdayānubandha iti na jānāmi.
+j: {シーター} タマサーさま、わけもなく私を捨てた人なのに、こんなお姿を見ると、私の心がどんなふうに引き寄せられているのか、自分でもわからないのです。
+s: {tamasā} jānāmi vatse jānāmi —
+j: {タマサー} わかるわ、娘よ、わかるわ——
+
+V 13 {tamasā}
+s: taṭasthaṃ nairāśyād api ca kaluṣaṃ vipriyavaśād / viyoge dīrghe 'smin jhaṭiti ghaṭanāt stambhitam iva /
+s: prasannaṃ saujanyād dayitakaruṇair gāḍhakaruṇaṃ / dravībhūtaṃ premṇā tava hṛdayam asmin kṣaṇa iva
+j: 望みを失ったゆえに素知らぬふりをし、つらい仕打ちゆえに濁り、
+j: 長い別れのあとの不意の出会いに、こわばったかのよう——
+j: それでいて生来の優しさゆえに澄み、愛しい人の嘆きに深く哀れを覚え、
+j: 愛によって溶けかけている——いまこの瞬間のそなたの心は。
+
+N
+n: シーターの心の相反する状態を列挙する。第2パーダ、OCR *jhaṭitighaṭatenāstambhitam* は *jhaṭiti ghaṭanāt stambhitam* と解する（韻律 śikhariṇī）。
+
+P
+s: {rāmaḥ} devi —
+j: {ラーマ} 妃よ——
+
+V 14 {rāmaḥ}
+s: prasāda iva mūrtas te sparśaḥ snehārdraśītalaḥ /
+s: adyāpy ānandayati māṃ tvaṃ punaḥ kvāsi nandini
+j: そなたの慈しみが形をとったかのような、愛に潤ってひんやりとしたその手ざわりが、
+j: いまもなお私を喜ばせる。それなのに、喜びをくれる人よ、そなたはどこにいるのだ。
+
+P
+s: {sītā} ete khalu te 'gādhamānasaditasnehasaṃbhārā ānandaniṣyandinaḥ sudhāmayā āryaputrasyollāpāḥ, yeṣāṃ pratyayena niṣkāraṇaparityāgaśalyito 'pi bahumato me janmalābhaḥ.
+j: {シーター} これこそ、底知れぬ心からあふれる愛にみちた、喜びのしたたる甘露のようなあの人のことば。これを信じられるからこそ、わけもなく捨てられた痛みが刺さったままでも、私はこの世に生まれたことをありがたく思えるのです。
+s: {rāmaḥ} atha vā kutaḥ priyatamā. nūnaṃ saṃkalpābhyāsapāṭavopādāna eṣa rāmabhadrasya vibhramaḥ.
+j: {ラーマ} いや、愛しい人がどこにいよう。きっと、絶えず思い描いていることが冴えて生み出した、ラーマの迷いなのだ。
+s: (nepathye) aho mahān pramādaḥ. ('sītādevyā svakarakalitaiḥ' ity ardhaṃ paṭhyate)
+j: （舞台裏で）ああ、たいへんだ。（第6偈の前半「かつてシーター妃が手ずから…」がふたたび唱えられる）
+s: {rāmaḥ} (sakaruṇautsukyam) kiṃ tasya.
+j: {ラーマ} （悲しみと気がかりにかられて）その子がどうしたのだ。
+s: (punar nepathye 'vadhvā sārdham' ity uttarārdhaṃ paṭhyate)
+j: （ふたたび舞台裏で、後半「その子が妻といっしょに…」が唱えられる）
+s: {sītā} ka idānīm abhiyokṣyate.
+j: {シーター} いま、だれがあの子を助けてくれるの。
+s: {rāmaḥ} kvāsau kvāsau durātmā yaḥ priyāyāḥ putrakaṃ vadhūdvitīyam abhibhavati. (ity uttiṣṭhati)
+j: {ラーマ} どこだ、どこにいる、愛しい人の子を、妻ともども襲うその悪党は。（立ちあがる）
+s: (praviśya saṃbhrāntā)
+j: （ヴァーサンティーがあわてて登場して）
+s: {vāsantī} kathaṃ devo raghunandanaḥ.
+j: {ヴァーサンティー} まあ、ラグ家の喜びなる陛下では。
+s: {sītā} kathaṃ priyasakhī me vāsantī.
+j: {シーター} まあ、私の親友ヴァーサンティー。
+s: {vāsantī} jayatu jayatu devaḥ.
+j: {ヴァーサンティー} 陛下に勝利あれ、勝利あれ。
+s: {rāmaḥ} (nirūpya) kathaṃ devyāḥ priyasakhī vāsantī.
+j: {ラーマ} （じっと見て）おや、妃の親友ヴァーサンティーではないか。
+s: {vāsantī} deva, tvaryatāṃ tvaryatām. ito jaṭāyuśikharasya dakṣiṇena sītātīrthena godāvarīm avatīrya saṃbhāvayatu devyāḥ putrakaṃ devaḥ.
+j: {ヴァーサンティー} 陛下、お急ぎください、お急ぎください。ここからジャターユス峰の南、「シーターの水場」からゴーダーヴァリーに下りて、妃のお子（子象）を助けてやってください。
+s: {sītā} hā tāta jaṭāyo, śūnyaṃ tvayā vinedaṃ janasthānam.
+j: {シーター} ああ、ジャターユスお父さま、あなたがいなくて、このジャナスターナはがらんとしています。
+s: {rāmaḥ} ahaha, hṛdayamarmacchidaḥ khalv amī kathodghātāḥ.
+j: {ラーマ} ああ、この話の切り出しのひとつひとつが、胸の急所を断ち切る。
+s: {vāsantī} ita ito devaḥ.
+j: {ヴァーサンティー} こちらです、陛下、こちらへ。
+s: {sītā} bhagavati, satyam eva vanadevatā api māṃ na prekṣante.
+j: {シーター} タマサーさま、ほんとうに森の女神にも私が見えないのですね。
+s: {tamasā} ayi vatse, sarvadevatābhyaḥ prakṛṣṭam aiśvaryaṃ mandākinīdevyāḥ. tat kim ity āśaṅkase.
+j: {タマサー} まあ娘よ、天のガンガーさまのお力は、どの神々にもまさっているのよ。何を心配することがあるの。
+s: {sītā} tato 'nusarāvaḥ. (iti parikrāmataḥ)
+j: {シーター} では、ついて行きましょう。（二人、歩みを進める）
+s: {rāmaḥ} bhagavati godāvari, namas te.
+j: {ラーマ} 尊きゴーダーヴァリーよ、敬礼いたします。
+s: {vāsantī} (nirūpya) deva, modasva vijayinā vadhūdvitīyena devyāḥ putrakeṇa.
+j: {ヴァーサンティー} （見やって）陛下、お喜びください。妃のお子は、妻ともども勝ちましたよ。
+s: {rāmaḥ} vijayatām āyuṣmān.
+j: {ラーマ} 勝利あれ、健やかな者よ。
+s: {sītā} aho, īdṛśo me putrakaḥ saṃvṛttaḥ.
+j: {シーター} まあ、私の坊やがこんなに立派になって。
+s: {rāmaḥ} hā devi, diṣṭyā vardhase —
+j: {ラーマ} ああ妃よ、めでたいことだ——
+
+V 15 {rāmaḥ}
+s: yenodgacchadbisakisalayasnigdhadantāṅkureṇa / vyākṛṣṭas te sutanu lavalīpallavaḥ karṇamūlāt /
+s: so 'yaṃ putras tava madamucāṃ vāraṇānāṃ vijetā / yat kalyāṇaṃ vayasi taruṇe bhājanaṃ tasya jātaḥ
+j: 芽吹いたばかりの蓮の根の若芽のようにつややかな、生えかけの牙で、
+j: 美しい人よ、そなたの耳もとからラヴァリーの若葉をひっぱりとった——
+j: そのそなたの子が、いまや発情した象どもを打ち負かす者となり、
+j: 若い盛りにふさわしい幸い（妻）を得たのだ。
+
+P
+s: {sītā} aviyukta idānīm ayaṃ dīrghāyur anayā saumyadarśanayā bhavatu.
+j: {シーター} この子が、この器量よしのお嫁さんと離れることなく、長生きしますように。
+s: {rāmaḥ} sakhi vāsanti, paśya paśya. kāntānuvṛtticāturyam api śikṣitaṃ vatsena —
+j: {ラーマ} ヴァーサンティー、ごらん、ごらん。あの子は愛しい者に尽くす心配りまで身につけている——
+
+V 16 {rāmaḥ}
+s: līlotkhātamṛṇālakāṇḍakavalacchedeṣu saṃpāditāḥ / puṣyatpuṣkaravāsitasya payaso gaṇḍūṣasaṃkrāntayaḥ /
+s: sekaḥ śīkariṇā kareṇa vihitaḥ kāmaṃ virāme punar / yat snehād anarālanālanalinīpatrātapatraṃ dhṛtam
+j: 戯れに引き抜いた蓮の茎をひと口ずつ食べ終えるたびに、
+j: 咲きほこる蓮の香りの水を口に含んで移してやり、
+j: 鼻で水しぶきを好きなだけかけてやり、それが済むと、
+j: まっすぐな茎の蓮の葉を、愛しさから日傘としてかざしてやっている。
+
+N
+n: 子象の夫婦の睦まじさを描きつつ、かつてのラーマとシーターの姿を重ねる。
+
+P
+s: {sītā} bhagavati tamase, ayaṃ tāvad īdṛśo jātaḥ. tau punar na jānāmi kuśalavāv etāvatā kālena kīdṛśau saṃvṛttāv iti.
+j: {シーター} タマサーさま、この子はこんなに大きくなりました。でもクシャとラヴァは、これだけの年月で、どんなふうに育ったのかしら。
+s: {tamasā} yādṛśo 'yaṃ tādṛśau tāv api.
+j: {タマサー} この子と同じように、あの子たちも立派に育っていますよ。
+s: {sītā} īdṛśy ahaṃ mandabhāginī, yasyā na kevalaṃ nirantaram āryaputravirahaḥ, putraviraho 'pi.
+j: {シーター} 私はこんなにも不運なのです——あの人と絶えず離れているばかりか、子どもたちとも離れているのですから。
+s: {tamasā} bhavitavyateyam īdṛśī.
+j: {タマサー} そういう定めなのよ。
+s: {sītā} kiṃ vā mayā prasūtayā, yena tādṛśam api mama putrakayor īṣadviralakomaladhavaladaśanojjvalakapolam anubaddhamugdhakākalīvihasitaṃ nibaddhakākapakṣakam amalamukhapuṇḍarīkayugalaṃ na paricumbitam āryaputreṇa.
+j: {シーター} 私が産んだところで何になりましょう——まばらに生えかけたやわらかな白い歯に頬の輝く、あどけない片言と笑い声のたえない、カラスの翼のような巻き髪を結った、ふたりの坊やの汚れない蓮のような顔に、あの人は口づけさえしていないのだから。
+s: {tamasā} astu devatāprasādāt.
+j: {タマサー} 神々のお恵みで、いつかそうなりますよ。
+s: {sītā} bhagavati tamase, etenāpatyasaṃsmaraṇenocchvasitaprasnutastanī tayoś ca pituḥ saṃnidhānena kṣaṇamātraṃ saṃsāriṇy asmi saṃvṛttā.
+j: {シーター} タマサーさま、子どもたちを思い出して胸が張り、乳があふれてきました。そしてあの子たちの父親がそばにいるので、ほんのひととき、私はまた家庭をもつ女に戻ったような気がします。
+s: {tamasā} kim atrocyate. prasavaḥ khalu prakarṣaparyantaḥ snehasya. paraṃ caitad anyonyasaṃśleṣaṇaṃ pitroḥ —
+j: {タマサー} 言うまでもないことね。子をなすことこそ愛の極み。そして子は、父と母とをたがいに結びつける最上のもの——
+
+V 17 {tamasā}
+s: antaḥkaraṇatattvasya dampatyoḥ snehasaṃśrayāt /
+s: ānandagranthir eko 'yam apatyam iti badhyate
+j: 夫婦の心の奥の本質が、愛によってひとつに寄りそうことから、
+j: 「子」という名の、ひとつの喜びの結び目が結ばれるのです。
+
+N
+n: *ānandagranthi* —「喜びの結び目」。子は夫婦の心をひとつに結ぶ。
+
+P
+s: {vāsantī} ito 'pi devaḥ paśyatu —
+j: {ヴァーサンティー} 陛下、こちらもごらんください——
+
+V 18 {vāsantī}
+s: anudivasam avardhayat priyā te / yam aciranirgatamugdhalolabarham /
+s: maṇimukuṭa ivocchikhaḥ kadambe / nadati sa eṣa vadhūsakhaḥ śikhaṇḍī
+j: あなたの愛しい方が日ごとに育てた、
+j: 生えそろったばかりの愛らしい尾羽のゆれる孔雀——
+j: 宝石の冠のように冠羽を立て、カダンバの木の上で
+j: 妻を連れて鳴いている、あれがその孔雀です。
+
+P
+s: {sītā} (sakautukasneham) eṣa sa eṣaḥ.
+j: {シーター} （うれしく、愛しげに）あの子だわ、あの子だわ。
+s: {rāmaḥ} modasva vatsa modasva.
+j: {ラーマ} 喜べ、子よ、喜ぶがよい。
+s: {sītā} evaṃ bhavatu.
+j: {シーター} そうでありますように。
+
+V 19 {rāmaḥ}
+s: bhramiṣu kṛtapuṭāntarmaṇḍalāvṛtticakṣuḥ / pracalitacaṭulabhrūtāṇḍavair maṇḍayantyā /
+s: karakisalayatālair mugdhayā nartyamānaṃ / sutam iva manasā tvāṃ vatsalena smarāmi
+j: そなたが旋回するたびに、まぶたのなかで瞳をくるりと回し、
+j: 揺れ動く愛らしい眉の舞で飾りながら、
+j: 若芽のような手で拍子をとって、あどけなく踊らせていた——
+j: そのそなたを、わが子のように、慈しみの心で思い出すのだ。
+
+N
+n: かつてシーターが手拍子で孔雀を踊らせ、その旋回を目で追っていた姿の回想。
+
+P
+s: {rāmaḥ} hanta, tiryañco 'pi paricayam anurudhyante —
+j: {ラーマ} ああ、獣でさえ馴染みを忘れぬものだ——
+
+V 20 {rāmaḥ}
+s: katipayakusumodgamaḥ kadambaḥ / priyatamayā parivardhito 'yam āsīt /
+i: {sītā} (nirūpya sāsram) suṣṭhu pratyabhijñātam āryaputreṇa.
+s: smarati girimayūra eṣa devyāḥ / svajana ivātra yataḥ pramodam eti
+j: いくつか花の咲きそめたこのカダンバの木は、
+j: 愛しい人が育てたものだった——
+k: {シーター} （じっと見て、涙ぐみ）よく覚えていてくださいました。
+j: この山の孔雀は妃を覚えているのだ。
+j: だからこそ、身内のもののようにこの木に来て喜んでいるのだ。
+
+P
+s: {vāsantī} atra tāvad āsanaparigrahaṃ karotu devaḥ.
+j: {ヴァーサンティー} ここでひとまずお掛けください、陛下。
+s: (rāma upaviśati)
+j: （ラーマ、腰をおろす）
+
+V 21 {vāsantī}
+s: etat tad eva kadalīvanamadhyavarti / kāntāsakhasya śayanīyaśilātalaṃ te /
+s: atra sthitā tṛṇam adād bahuśo yad ebhyaḥ / sītā tato hariṇakair na vimucyate sma
+j: これがあの、バナナの林のなかにある、
+j: 愛しい方と連れだったあなたの、寝台がわりの平たい岩です。
+j: ここに座ったシーターが、何度も草をやったので、
+j: 子鹿たちはそれ以来、シーターのそばを離れようとしませんでした。
+
+P
+s: {rāmaḥ} idaṃ tāvad aśakyam eva draṣṭum. (ity anyato rudann upaviśati)
+j: {ラーマ} これだけは、とても見ていられない。（顔をそむけ、泣きながら座りなおす）
+s: {sītā} sakhi vāsanti, kiṃ tvayā kṛtam āryaputrasya mama caitad darśayantyā. hā dhik hā dhik. sa evāryaputras tad eva pañcavaṭīvanaṃ saiva priyasakhī vāsantī ta eva vividhaviśrambhasākṣiṇo godāvarīkānanoddeśās ta eva jātanirviśeṣā mṛgapakṣipādapāḥ saiva cāham. mama punar mandabhāgyāyā dṛśyamānam api sarvam evaitan nāstīti. tad īdṛśo jīvalokasya parivartaḥ.
+j: {シーター} ヴァーサンティー、あの人にも私にもこれを見せて、なんということをしてくれたの。ああ、いや、いや——あの人もあの人のまま、パンチャヴァティーの森も同じ、親友ヴァーサンティーも同じ、数々の睦みの証人だったゴーダーヴァリーの森のあちこちも同じ、わが子同然だった鹿や鳥や木々も同じ、そして私も同じ私。それなのに不運な私には、目に見えているこのすべてが、もう無いのと同じ。生きる世の移ろいとは、こういうものなのね。
+s: {vāsantī} sakhi sīte, kathaṃ na paśyasi rāmabhadrasyāvasthām —
+j: {ヴァーサンティー} 友シーター、見ないの、ラーマさまのこのありさまを——
+
+V 22 {vāsantī}
+s: navakuvalayasnigdhair aṅgair dadan nayanotsavaṃ / satatam api naḥ svecchādṛśyo navo nava eva yaḥ /
+s: vikalakaraṇaḥ pāṇḍucchāyaḥ śucā paridurbalaḥ / katham api sa evety utprekṣyas tathāpi dṛśoḥ priyaḥ
+j: 咲いたばかりの青蓮のようにつややかな手足で目を楽しませ、
+j: いつ見ても見飽きず、会うたびに新しく見えたあの方が、
+j: いまは五感も萎え、顔色も青ざめ、悲しみにひどくやつれて、
+j: やっとそれと見分けられるほど——それでもなお、この目には愛しい。
+
+N
+n: 第4パーダ、OCR *kathamapi sa ityutprekṣyas* は一音節不足。注の「*utprekṣyaḥ* = 推し量られる」に従い、韻律（hariṇī）上 *sa evety utprekṣyaḥ*（「あの方だと、やっと推し量られる」）と解する。
+
+P
+s: {sītā} prekṣe sakhi prekṣe.
+j: {シーター} 見ているわ、ヴァーサンティー、見ているわ。
+s: {tamasā} paśyantī priyaṃ bhūyāḥ.
+j: {タマサー} 愛しい人を見つづけていなさい。
+s: {sītā} hā daiva, eṣa mayā vinā, aham apy etena vineti svapne 'pi kena saṃbhāvitam āsīt. tan muhūrtamātraṃ janmāntarād iva labdhadarśanaṃ bāṣpasalilāntareṣu prekṣe tāvad vatsalam āryaputram. (iti paśyantī sthitā)
+j: {シーター} ああ運命よ、この人が私なしで、私がこの人なしでいるなんて、夢にさえだれが思ったでしょう。だからせめてほんのひととき、生まれ変わってやっと会えたようなこの優しい人を、涙のあいまに見ていたい。（見つめたまま立っている）
+s: {tamasā} (pariṣvajya sāsram)
+j: {タマサー} （抱きしめて、涙ながらに）
+
+V 23 {tamasā}
+s: vilulitam atipūrair bāṣpam ānandaśoka- / prabhavam avasṛjantī tṛṣṇayottānadīrghā /
+s: snapayati hṛdayeśaṃ snehaniṣyandinī te / dhavalabahalamugdhā dugdhakulyeva dṛṣṭiḥ
+j: 喜びと悲しみから生まれた涙を、あふれる流れとなってこぼし、
+j: 恋しさに大きく見開かれた、
+j: 愛のしたたる、白く豊かで愛らしいそなたのまなざしは、
+j: 乳の流れのように、心の主を浴みさせている。
+
+
+V 24 {vāsantī}
+s: dadatu taravaḥ puṣpair arghyaṃ phalaiś ca madhuścutaḥ / sphuṭitakamalāmodaprāyāḥ pravāntu vanānilāḥ /
+s: kalam aviralaṃ rajyatkaṇṭhāḥ kvaṇantu śakuntayaḥ / punar idam ayaṃ devo rāmaḥ svayaṃ vanam āgataḥ
+j: 木々よ、花で、また蜜したたる実で、もてなしの供え物をささげよ。
+j: 森の風よ、ほころぶ蓮の香りをいっぱいに含んで吹け。
+j: 鳥たちよ、喉をふるわせ、やむことなく美しくさえずれ。
+j: ラーマ陛下が、ふたたび御自らこの森においでになったのだから。
+
+P
+s: {rāmaḥ} ehi sakhi vāsanti, nanv itaḥ sthīyatām.
+j: {ラーマ} さあ、ヴァーサンティー、こちらに来てすわりなさい。
+s: {vāsantī} (upaviśya sāsram) mahārāja, api kuśalaṃ kumāralakṣmaṇasya.
+j: {ヴァーサンティー} （腰をおろし、涙ながらに）大王さま、ラクシュマナ王子はお元気ですか。
+s: {rāmaḥ} (aśrutim abhinīya)
+j: {ラーマ} （聞こえぬふりをして）
+
+V 25 {rāmaḥ}
+s: karakamalavitīrṇair ambunīvāraśaṣpais / taruśakunikuraṅgān maithilī yān apuṣyat /
+s: bhavati mama vikāras teṣu dṛṣṭeṣu ko 'pi / drava iva hṛdayasya prastarodbhedayogyaḥ
+j: 蓮の手で与えた水と野生の米と若草とで、
+j: マイティリー（シーター）が養った木々や鳥や鹿——
+j: それらを見ると、私のなかに何とも言えぬ変化が起こる。
+j: 石をも割るほどの、心が溶けて流れるような変化が。
+
+P
+s: {vāsantī} mahārāja, nanu pṛcchāmy api kuśalaṃ kumāralakṣmaṇasyeti.
+j: {ヴァーサンティー} 大王さま、ラクシュマナ王子はお元気かとお尋ねしているのです。
+s: {rāmaḥ} (ātmagatam) aye, mahārājeti niṣpraṇayam āmantraṇapadaṃ saumitrimātre ca bāṣpaskhalitākṣaraḥ kuśalapraśnaḥ. tan manye viditasītāvṛttānteyam iti. (prakāśam) āṃ, kuśalaṃ kumārasya.
+j: {ラーマ} （傍白）おや、「大王さま」とは親しみのない呼びかけ。それに安否を問うのはラクシュマナのことだけで、その声も涙にとぎれている。してみると、この人はシーターのことを知っているのだな。（声に出して）ああ、王子は元気だ。
+s: {vāsantī} (rudatī) ayi deva, kiṃ paraṃ dāruṇaḥ khalv asi.
+j: {ヴァーサンティー} （泣きながら）ああ陛下、なんというむごい方なのでしょう、あなたは。
+s: {sītā} sakhi vāsanti, kiṃ tvam evaṃvādinī bhavasi. priyārhaḥ khalu sarvasyāryaputro viśeṣato mama priyasakhyāḥ.
+j: {シーター} ヴァーサンティー、どうしてそんなことを言うの。あの人はだれからも大切にされるべき方、とりわけ私の親友にとっては。
+
+V 26 {vāsantī}
+s: tvaṃ jīvitaṃ tvam asi me hṛdayaṃ dvitīyaṃ / tvaṃ kaumudī nayanayor amṛtaṃ tvam aṅge /
+s: ityādibhiḥ priyaśatair anurudhya mugdhāṃ / tām eva śāntam atha vā kim ihottareṇa
+j: 「そなたはわが命、そなたはわが第二の心、
+j: そなたは目には月の光、身には甘露」——
+j: こうした百もの甘いことばであの無垢な人を引き寄せておいて、
+j: その人を——いいえ、もうやめましょう。この先を言っても何になるでしょう。
+
+P
+s: (iti mūrcchati)
+j: （気を失う）
+s: {tamasā} sthāne vākyanivṛttir mohaś ca.
+j: {タマサー} ことばが途切れるのも、気を失うのも、無理もないこと。
+s: {rāmaḥ} sakhi, samāśvasihi samāśvasihi.
+j: {ラーマ} ヴァーサンティー、しっかりしなさい、しっかり。
+s: {vāsantī} (samāśvasya) tat kim idam akāryam anuṣṭhitaṃ devena.
+j: {ヴァーサンティー} （気をとりなおして）では、なぜ陛下はこんな、なすべきでないことをなさったのです。
+s: {sītā} sakhi vāsanti, virama virama.
+j: {シーター} ヴァーサンティー、やめて、やめて。
+s: {rāmaḥ} loko na mṛṣyatīti.
+j: {ラーマ} 民が許さないというのだ。
+s: {vāsantī} kasya hetoḥ.
+j: {ヴァーサンティー} 何のゆえに。
+s: {rāmaḥ} sa eva jānāti kim api.
+j: {ラーマ} それは民だけが知っている。
+s: {tamasā} cirād upālambhaḥ.
+j: {タマサー} やっと非難のことばが出たわね。
+
+V 27 {vāsantī}
+s: ayi kaṭhora yaśaḥ kila te priyaṃ / kim ayaśo nanu ghoram ataḥ param /
+s: kim abhavad vipine hariṇīdṛśaḥ / kathaya nātha kathaṃ bata manyase
+j: ああ、冷たい方。あなたには名声が大事なのでしょう——
+j: でも、これ以上恐ろしい汚名がほかにありましょうか。
+j: 森のなかで、あの子鹿の目の人がどうなったか、
+j: 言ってください、わが君、あなたはどう思っておいでなのです。
+
+P
+s: {sītā} tvam eva sakhi vāsanti dāruṇā kaṭhorā ca, yaivaṃ pradīptam āryaputraṃ pradīpayasi.
+j: {シーター} ヴァーサンティー、むごくて冷たいのはあなたのほうよ。燃えているあの人を、こんなにも煽りたてるなんて。
+s: {tamasā} praṇaya evaṃ vyāharati śokaś ca.
+j: {タマサー} 愛と悲しみが、こんなことを言わせるのよ。
+s: {rāmaḥ} sakhi, kim atra mantavyam —
+j: {ラーマ} ヴァーサンティー、何を思えというのだ——
+
+V 28 {rāmaḥ}
+s: trastaikahāyanakuraṅgaviloladṛṣṭes / tasyāḥ parisphuritagarbhabharālasāyāḥ /
+s: jyotsnāmayīva mṛdubālamṛṇālakalpā / kravyādbhir aṅgalatikā niyataṃ viluptā
+j: おびえた一歳の子鹿のように揺れるまなざしをもち、
+j: 胎のなかで動く子の重みに物憂げだったあの人の、
+j: 月の光でできたような、やわらかな若い蓮の茎のような
+j: 蔓のような体は、きっと肉食らう獣どもに引き裂かれてしまったのだ。
+
+N
+n: 第4パーダ、OCR *kanyādviraṅgalatā* は *kravyādbhir aṅgalatikā* と解する（韻律 vasantatilakā）。第一幕第49偈の「肉食らう獣への供物のように」と呼応する。
+
+P
+s: {sītā} āryaputra, dhriye eṣā dhriye.
+j: {シーター} あなた、私は生きています、ここに生きています。
+s: {rāmaḥ} hā priye jānaki, kvāsi.
+j: {ラーマ} ああ、愛しいジャーナキー、どこにいるのだ。
+s: {sītā} hā dhik hā dhik, anya ivāryaputraḥ pramuktakaṇṭhaṃ roditi.
+j: {シーター} ああ、いや、いや——あの人が、まるで別人のように声をあげて泣いている。
+s: {tamasā} vatse, sāṃpratikam evaitat. kartavyāni khalu duḥkhitair duḥkhanirvāpaṇāni —
+j: {タマサー} 娘よ、それでいいのよ。苦しむ者は、苦しみを鎮めることをしなければ——
+
+V 29 {tamasā}
+s: pūrotpīḍe taṭākasya parīvāhaḥ pratikriyā /
+s: śokakṣobhe ca hṛdayaṃ pralāpair eva dhāryate
+j: 池の水があふれそうなときは、溢れさせることが手当て。
+j: 悲しみに心が揺さぶられるときは、嘆きのことばによってこそ心は保たれる。
+
+P
+s: {tamasā} viśeṣato rāmabhadrasya bahuprakārakaṣṭo jīvalokaḥ —
+j: {タマサー} とりわけラーマさまにとって、この世はさまざまに苦しいものなのだから——
+
+V 30 {tamasā}
+s: idaṃ viśvaṃ pālyaṃ vidhivad abhiyuktena manasā / priyāśoko jīvaṃ kusumam iva gharmo glapayati /
+s: svayaṃ kṛtvā tyāgaṃ vilapanavinodo 'py asulabhas / tad adyāpy ucchvāso bhavati nanu lābho hi ruditam
+j: この世界を、掟どおりに、心を傾けて守らねばならず、
+j: 愛しい人を失った悲しみが、暑さが花をしおれさせるように命をしおれさせる。
+j: 自ら捨てたのだから、泣いて気を晴らすことさえままならない。
+j: だから今日のこの泣き声は息をつくこと——泣けることは、ひとつの恵みなのです。
+
+N
+n: 第4パーダ、OCR *tavāpyāyucchāso* は乱れており、韻律（śikhariṇī）から *tad adyāpy ucchvāso* と解する。注は *ucchvāsa* を「命をつなぐこと」と説く。
+
+P
+s: {rāmaḥ} kaṣṭaṃ bhoḥ kaṣṭam —
+j: {ラーマ} ああ、苦しい、苦しい——
+
+V 31 {rāmaḥ}
+s: dalati hṛdayaṃ gāḍhodvegaṃ dvidhā tu na bhidyate / vahati vikalaḥ kāyo mohaṃ na muñcati cetanām /
+s: jvalayati tanūm antardāhaḥ karoti na bhasmasāt / praharati vidhir marmacchedī na kṛntati jīvitam
+j: 深い苦悶に心臓は裂けるのに、ふたつに割れてはくれない。
+j: 萎えた体は失神を抱えこんでも、意識を手放してはくれない。
+j: 内なる炎は体を焼くのに、灰にしてはくれない。
+j: 急所を断つ運命は打ちすえるのに、命を断ち切ってはくれない。
+
+P
+s: {sītā} evaṃ nv idam.
+j: {シーター} ほんとうに、そのとおり。
+s: {rāmaḥ} he bhagavantaḥ paurajānapadāḥ —
+j: {ラーマ} 町と村の民よ——
+
+V 32 {rāmaḥ}
+s: na kila bhavatāṃ devyāḥ sthānaṃ gṛhe 'bhimataṃ tatas / tṛṇam iva vane śūnye tyaktā na cāpy anuśocitā /
+s: ciraparicitās te te bhāvāḥ paridravayanti mām / idam aśaraṇair adyāsmābhiḥ prasīdata rudyate
+j: 妃が家にいることは、あなたがたのお気に召さなかった。だから
+j: 草のように人けのない森に捨て、嘆きもしなかった。
+j: だが、なじみ深いあれこれのものが、私の心を溶かしてしまう。
+j: 頼るもののない私は、いまこうして泣いている——どうか許してほしい。
+
+P
+s: {vāsantī} (svagatam) atigambhīram āpūraṇaṃ manyusaṃbhārasya. (prakāśam) deva, atikrāntaṃ khalu dhairyam avalambyatām.
+j: {ヴァーサンティー} （傍白）なんと深く積もった悲しみの量だろう。（声に出して）陛下、過ぎたことです。どうかお気を強くおもちください。
+s: {rāmaḥ} sakhi, kim ucyate dhairyam iti —
+j: {ラーマ} ヴァーサンティー、気を強くもてと言うのか——
+
+V 33 {rāmaḥ}
+s: devyā śūnyasya jagato dvādaśaḥ parivatsaraḥ /
+s: praṇaṣṭam iva nāmāpi na ca rāmo na jīvati
+j: 妃のいない空しい世界が、もう十二年目になる。
+j: その名さえ消えうせたかのようなのに、ラーマは死にもせず生きている。
+
+P
+s: {sītā} mohitāsmy etair āryaputravacanaiḥ.
+j: {シーター} あの人のことばに、気が遠くなりそう。
+s: {tamasā} evam eva vatse —
+j: {タマサー} そうでしょうとも、娘よ——
+
+V 34 {tamasā}
+s: naitāḥ priyatamā vācaḥ snehārdrāḥ śokadāruṇāḥ /
+s: etās tā madhuno dhārāḥ ścotanti saviṣās tvayi
+j: 愛に潤い、悲しみにむごい、最愛の人のこのことばは——
+j: 毒をまじえた蜜の流れとなって、そなたのうえに滴っているのね。
+
+P
+s: {rāmaḥ} ayi vāsanti, mayā khalu —
+j: {ラーマ} ヴァーサンティー、私はこうして——
+
+V 35 {rāmaḥ}
+s: yathā tiraścīnam alātaśalyaṃ / pratyuptam antaḥ saviṣaś ca daṃśaḥ /
+s: tathaiva tīvro hṛdi śokaśaṅkur / marmāṇi kṛntann api kiṃ na soḍhaḥ
+j: 横ざまに刺さった燃えさしの矢じりのように、
+j: 体の奥に食いこんだ毒ある咬み傷のように、
+j: 胸に刺さった悲しみの鋭い杭が、急所を切り裂いても——
+j: それさえ私は、耐えてこなかっただろうか。
+
+P
+s: {sītā} evam asmi mandabhāginī punar apy āyāsakāriṇy āryaputrasya.
+j: {シーター} こうして不運な私は、またしてもあの人を苦しめているのね。
+s: {rāmaḥ} evam atiniṣkampastambhitāntaḥkaraṇasyāpi mama saṃstutatattatpriyavastudarśanād aho 'yam āvegaḥ. tathā hi —
+j: {ラーマ} 心をすっかり動かぬよう押しとどめているこの私でさえ、なじみ深い愛しいものの数々を見ると、ああ、この激しい動揺だ。というのも——
+
+V 36 {rāmaḥ}
+s: lolollolakṣubhitakaruṇojjṛmbhaṇastambhanārthaṃ / yo yo yatnaḥ katham api mayā dhīyate taṃ tam antaḥ /
+s: bhittvā bhittvā prasarati balāt ko 'pi cetovikāras / toyasyevāpratihatarayaḥ saikataṃ setum oghaḥ
+j: 波立ちさわいで湧きあがる悲しみを押しとどめようと、
+j: 私がやっとのことで重ねるあらゆる努力を、ひとつずつ、
+j: 内側から打ち破り打ち破りして、何とも言えぬ心の動揺が力ずくであふれ出す——
+j: 勢いを止めるものとてない水の流れが、砂の堤を破るように。
+
+N
+n: 第4パーダ、OCR *pratihatarāyaḥ* は *pratihatarayaḥ*（「勢いを止められない」）と解する（韻律 mandākrāntā）。
+
+P
+s: {sītā} etenāryaputrasya durvāradāruṇārambheṇa duḥkhasaṃkṣobheṇa parimuṣitanijaduḥkhaṃ kim api pramugdhaṃ me hṛdayam.
+j: {シーター} あの人の、止めようもなく恐ろしく湧きあがる苦しみの動揺に、私の心は自分の苦しみさえ奪われて、ただ茫然としています。
+s: {vāsantī} (svagatam) kaṣṭam abhyāpanno devaḥ. tad anyato vikṣipāmi tāvat. (prakāśam) ciraparicitān idānīṃ janasthānabhāgān avalokanena mānayatu devaḥ.
+j: {ヴァーサンティー} （傍白）陛下はつらい状態に陥っておられる。ひとまず気をそらしてさしあげよう。（声に出して）陛下、長くなじまれたジャナスターナのあちこちを、ご覧になってあげてくださいませ。
+s: {rāmaḥ} evam astu. (ity utthāya parikrāmati)
+j: {ラーマ} そうしよう。（立ちあがって歩きまわる）
+s: {sītā} saṃdīpana eva duḥkhasya priyasakhyā vinodanopāya iti tarkayāmi.
+j: {シーター} 親友の気晴らしの工夫は、かえって苦しみをかきたてるだけのように思うけれど。
+s: {vāsantī} (sakaruṇam) deva deva —
+j: {ヴァーサンティー} （悲しげに）陛下、陛下——
+
+V 37 {vāsantī}
+s: asminn eva latāgṛhe tvam abhavas tanmārgadattekṣaṇaḥ / sā haṃsaiḥ kṛtakautukā ciram abhūd godāvarīsaikate /
+s: āyāntyā paridurmanāyitam iva tvāṃ vīkṣya baddhas tayā / kātaryād aravindakuḍmalanibho mugdhaḥ praṇāmāñjaliḥ
+j: まさにこの蔓の四阿で、あなたはあの方の来る道をじっと見つめていた。
+j: あの方はゴーダーヴァリーの砂州で白鳥たちと戯れて、長いこと帰らなかった。
+j: 戻ってきて、あなたがすこしすねているように見えると、
+j: あの方はおずおずと、蓮の蕾のような愛らしい合掌をしたのでした。
+
+P
+s: {sītā} dāruṇāsi vāsanti dāruṇāsi, yaitair hṛdayamarmagūḍhaśalyasaṃghaṭṭanaiḥ punaḥ punar api māṃ mandabhāginīm āryaputraṃ ca saṃtāpayasi.
+j: {シーター} むごいわ、ヴァーサンティー、むごいわ。心の急所に埋もれた棘を何度もつついて、不運な私とあの人を苦しめるなんて。
+s: {rāmaḥ} ayi caṇḍi jānaki, itas tato dṛśyasa iva, na cānukampase —
+j: {ラーマ} ああ、つれないジャーナキー、そなたはあちらこちらに見えるようなのに、憐れんではくれないのだな——
+
+V 38 {rāmaḥ}
+s: hā hā devi sphuṭati hṛdayaṃ dhvaṃsate dehabandhaḥ / śūnyaṃ manye jagad aviratajvālam antar jvalāmi /
+s: sīdann andhe tamasi vidhuro majjatīvāntarātmā / viṣvaṅ mohaḥ sthagayati kathaṃ mandabhāgyaḥ karomi
+j: ああ、ああ、妃よ、心臓は張り裂け、体の結び目はほどけてゆく。
+j: 世界は空しく思え、私は内側で絶え間ない炎に燃えている。
+j: 魂は力つき、なすすべもなく、まっ暗な闇に沈んでゆくようだ。
+j: 失神が四方から覆いかぶさる——不運な私は、どうすればよいのか。
+
+P
+s: (iti mūrcchati)
+j: （気を失う）
+s: {sītā} hā dhik hā dhik, punar api pramūḍha āryaputraḥ.
+j: {シーター} ああ、いや、いや、あの人がまた気を失ってしまった。
+s: {vāsantī} deva, samāśvasihi samāśvasihi.
+j: {ヴァーサンティー} 陛下、しっかり、しっかりなさって。
+s: {sītā} āryaputra, māṃ mandabhāginīm uddiśya sakalajīvalokamaṅgalādhārasya te vāraṃ vāraṃ saṃśayitajīvitadāruṇo daśāpariṇāma iti hā hatāsmi. (iti mūrcchati)
+j: {シーター} あなた、生きとし生けるものすべての幸いのよりどころであるあなたが、不運な私のために、何度も何度も命も危ういむごいありさまになるなんて——ああ、私はもうだめ。（気を失う）
+s: {tamasā} vatse, samāśvasihi samāśvasihi. punas tvatpāṇisparśa eva saṃjīvanopāyo rāmabhadrasya.
+j: {タマサー} 娘よ、しっかりして、しっかり。またしても、ラーマさまを生き返らせる手だては、そなたの手が触れることだけなのよ。
+s: {vāsantī} katham adyāpi nocchvasiti. hā priyasakhi sīte, kvāsi. saṃbhāvayātmano jīviteśvaram.
+j: {ヴァーサンティー} どうしてまだ息を吹きかえされないの。ああ親友シーター、どこにいるの。あなたの命の主を助けてあげて。
+s: (sītā sasaṃbhramam upasṛtya hṛdi lalāṭe ca spṛśati)
+j: （シーター、あわてて近寄り、胸と額に触れる）
+s: {vāsantī} diṣṭyā pratyāpannacetano rāmabhadraḥ.
+j: {ヴァーサンティー} よかった、ラーマさまが正気をとり戻された。
+
+V 39 {rāmaḥ}
+s: ālimpann amṛtamayair iva pralepair / antar vā bahir api vā śarīradhātūn /
+s: saṃsparśaḥ punar api jīvayann akasmād / ānandād aparavidhaṃ tanoti moham
+j: 甘露でできた塗り薬を、体の内にも外にも
+j: すみずみまで塗りこむかのように、
+j: この手ざわりは、不意に私をふたたび生き返らせ、
+j: こんどは喜びのあまりの、別の種類の失神をもたらす。
+
+P
+s: {rāmaḥ} (ānandanimīlitākṣa eva) sakhi vāsanti, diṣṭyā vardhase.
+j: {ラーマ} （喜びに目を閉じたまま）ヴァーサンティー、めでたいことだ。
+s: {vāsantī} deva, katham iva.
+j: {ヴァーサンティー} 陛下、どういうことでしょう。
+s: {rāmaḥ} sakhi, kim anyat. punaḥ prāptā jānakī.
+j: {ラーマ} ヴァーサンティー、ほかに何があろう。ジャーナキーがまた見つかったのだ。
+s: {vāsantī} ayi deva rāmabhadra, kva sā.
+j: {ヴァーサンティー} まあラーマ陛下、どこにおられるのです。
+s: {rāmaḥ} (sparśasukham abhinīya) paśya nanv iyaṃ purata eva.
+j: {ラーマ} （触れられる喜びを表して）ごらん、ほら、ここに、すぐ目の前にいるではないか。
+s: {vāsantī} ayi deva, kim iti marmacchedadāruṇair ebhiḥ pralāpaiḥ priyasakhīvipattiduḥkhadagdhām api māṃ punar mandabhāgyāṃ dahasi.
+j: {ヴァーサンティー} ああ陛下、親友の不幸の悲しみにもう焼かれている不運な私を、急所を断つようなむごいうわごとで、どうしてまた焼くのです。
+s: {sītā} apasartum icchāmi. eṣa punaś cirapraṇayasaṃbhārasaumyaśītalenāryaputrasparśena dīrghadāruṇam api jhaṭiti saṃtāpaṃ haratā vajralepopanibaddha iva svidyanniḥsahaviparyasto vepanaśīlo 'vaśa iva me hastaḥ.
+j: {シーター} 離れたいのに——長い愛情の積もった、優しくひんやりとしたあの人の手ざわりが、長くむごい苦しみをたちまち消し去るので、私の手はまるで金剛の糊で貼りつけられたように、汗ばみ、力なく、震えて、思うにまかせないのです。
+s: {rāmaḥ} sakhi, kutaḥ pralāpāḥ —
+j: {ラーマ} ヴァーサンティー、うわごとなどではない——
+
+V 40 {rāmaḥ}
+s: gṛhīto yaḥ pūrvaṃ pariṇayavidhau kaṅkaṇadharaś / ciraṃ svecchāsparśair amṛtaśiśirair yaḥ paricitaḥ /
+i: {sītā} āryaputra, sa evedānīm asi tvam.
+s: sa evāyaṃ tasyās tuhinanikaraupamyasubhago / mayā labdhaḥ pāṇir lalitalavalīkandalanibhaḥ
+j: かつて婚礼の儀で、婚礼の紐を結んで私が取り、
+j: そののち長く、思うままに触れて、甘露のように冷たくなじんだ——
+k: {シーター} あなた、いまのあなたは、昔のあなたのままです。
+j: そのあの人の手が、まさにこれだ。氷の雫にもたとえられる心地よさの、
+j: 優美なラヴァリーの若芽のような手を、私はつかんだのだ。
+
+N
+n: 第2パーダ、OCR は *amṛtaśiśiraiḥ paricitaḥ* と一音節を欠く。韻律（śikhariṇī）により *amṛtaśiśirair yaḥ paricitaḥ* と補う。偈の途中で、見えないシーターが「いまのあなたは昔のあなたのまま」と応じる。
+
+P
+s: (iti gṛhṇāti)
+j: （手をつかむ）
+s: {sītā} hā dhik hā dhik, āryaputrasparśamohitāyāḥ pramādaḥ khalu me saṃvṛttaḥ.
+j: {シーター} ああ、いや、いや——あの人に触れられてうっとりしているうちに、しくじってしまった。
+s: {rāmaḥ} sakhi vāsanti, ānandanimīlitendriyaḥ sādhvasena paravān asmi. tat tvaṃ tāvad enāṃ dhāraya.
+j: {ラーマ} ヴァーサンティー、喜びに感官が閉じ、胸のときめきで思うにまかせない。そなた、しばらくこの人をつかまえていてくれ。
+s: {vāsantī} kaṣṭam, unmāda eva.
+j: {ヴァーサンティー} ああ、お気がふれてしまわれた。
+s: (sītā sasaṃbhramaṃ hastam ākṣipyāpasarpati)
+j: （シーター、あわてて手をふりほどいて離れる）
+s: {rāmaḥ} hā dhik, pramādaḥ —
+j: {ラーマ} しまった、取り逃がした——
+
+V 41 {rāmaḥ}
+s: karapallavaḥ sa tasyāḥ sahasaiva jaḍo jaḍāt paribhraṣṭaḥ /
+s: parikampinaḥ prakampī karān mama svidyataḥ svidyan
+j: あの人の若芽のような手が、痺れていた私の手から、痺れたまま不意にすべり落ちた——
+j: 震える私の手から震えながら、汗ばむ私の手から汗ばみながら。
+
+N
+n: 韻律は *āryā*。*jaḍo jaḍāt*、*prakampī parikampinaḥ*、*svidyan svidyataḥ* と、二人の手の状態を対にして重ねる。
+
+P
+s: {sītā} hā dhik hā dhik, adyāpy anavasthitaghūrṇamānodbhrāntaṃ na paryavasthāpayaty ātmānam.
+j: {シーター} ああ、いや、いや——まだ心が乱れ、くらくらと揺れて、自分をとり戻せない。
+s: {tamasā} (sasnehakautukasmitaṃ nirvarṇya)
+j: {タマサー} （愛しげに、おかしそうに微笑んで見やり）
+
+V 42 {tamasā}
+s: sasvedaromāñcitakampitāṅgī / jātā priyasparśasukhena vatsā /
+s: marunnavāmbhaḥpravidhūtasiktā / kadambayaṣṭiḥ sphuṭakorakeva
+j: 愛しい人に触れられた喜びに、この娘は
+j: 汗ばみ、総毛立ち、全身を震わせている——
+j: 風に揺すられ、初雨に濡れて、
+j: 蕾のはじけたカダンバの若木のように。
+
+N
+n: OCR *sasvedromāśrita* は *sasvedaromāñcita*（「汗ばみ総毛立った」）と解する（韻律 upajāti）。カダンバは雨季の初雨で一斉に花開き、その花は逆立つ毛に喩えられる。
+
+P
+s: {sītā} (svagatam) amhahe, avaśenaitenātmanā lajjāpitāsmi bhagavatyā tamasayā. kim iti kilaiṣā maṃsyate — eṣa te parityāga eṣo 'bhiṣaṅga iti.
+j: {シーター} （傍白）まあ、言うことをきかないこの身のせいで、タマサーさまの前で恥をかいてしまった。きっとこう思われるわ——「あんなに捨てられたのに、このなついていることといったら」って。
+s: {rāmaḥ} (sarvato 'valokya) hā, kathaṃ nāsty eva. nanv akaruṇe vaidehi.
+j: {ラーマ} （あたりを見回して）ああ、どうしてだ、いない。つれないヴァイデーヒーよ。
+s: {sītā} satyam akaruṇāsmi, yaivaṃvidhaṃ tvāṃ prekṣamāṇā jīvāmy eva.
+j: {シーター} ほんとうに私はつれない女。こんなあなたを見ていながら、まだ生きているのだもの。
+s: {rāmaḥ} kvāsi devi, prasīda. na mām evaṃvidhaṃ parityaktum arhasi.
+j: {ラーマ} どこにいるのだ、妃よ、機嫌を直してくれ。こんな私を見捨てないでおくれ。
+s: {sītā} ayi āryaputra, viparītam ivaitat.
+j: {シーター} まあ、あなた、それはあべこべでしょう。
+s: {vāsantī} deva, prasīda prasīda. svenaiva lokottareṇa dhairyeṇa saṃstambhayātibhūmigatavipralambham ātmānam. kuto 'tra me priyasakhī.
+j: {ヴァーサンティー} 陛下、どうか、どうか。世にすぐれたあなたご自身の気丈さで、極みに達した別離の苦しみに沈むお心をしっかり支えてください。どこに私の親友がいるというのです。
+s: {rāmaḥ} vyaktaṃ nāsty eva. katham anyathā vāsanty api tāṃ na paśyet. api khalu svapna eṣa syāt. na cāsmi suptaḥ. kuto rāmasya nidrā. sarvathā sa evaiṣa bhagavān anekavāraparikalpanānirmito vipralambhaḥ punaḥ punar anubadhnāti mām.
+j: {ラーマ} たしかに、いないのだ。そうでなければ、ヴァーサンティーにまで見えないはずがない。これは夢なのだろうか。だが私は眠ってはいない。ラーマにどうして眠りがあろう。いずれにせよ、幾度も思い描くうちに生まれたあの幻が、またしても私につきまとっているのだ。
+s: {sītā} mayaiva dāruṇayā vipralabdha āryaputraḥ.
+j: {シーター} むごい私こそが、あの人を惑わしてしまったのね。
+s: {vāsantī} deva, paśya paśya —
+j: {ヴァーサンティー} 陛下、ごらんください、ごらんください——
+
+V 43 {vāsantī}
+s: paulastyasya jaṭāyuṣā vighaṭitaḥ kārṣṇāyaso 'yaṃ rathas / te caite purataḥ piśācavadanāḥ kaṅkālaśeṣāḥ kharāḥ /
+s: khaḍgacchinnajaṭāyupakṣatir itaḥ sītāṃ calantīṃ vahann / antarvyākulavidyud ambuda iva dyām abhyudasthād ariḥ
+j: これがジャターユスに打ち砕かれた、ラーヴァナの黒鉄の戦車。
+j: その前にあるのは、悪鬼の顔をした驢馬どもの、骨ばかりになった残骸。
+j: ここから、剣でジャターユスの翼の付け根を断ち切り、もがくシーターを抱えて、
+j: 内に稲妻のゆらめく雨雲のように、あの敵は天へと舞いあがったのです。
+
+N
+n: 第4パーダの比喩（雲が稲妻を抱く）について、注は、雲は稲妻に触れても汚さないように、ラーヴァナの接触はシーターを汚さないことを暗示すると説く。OCR の乱れた本文は、注の「内に動く稲妻をもつ」に従って復元した。
+
+P
+s: {sītā} (sabhayam) āryaputra, tāto vyāpādyate, aham apy apahriye. tat paritrāyasva paritrāyasva.
+j: {シーター} （おびえて）あなた、お父さま（ジャターユス）が殺される、私もさらわれる。助けて、助けて。
+s: {rāmaḥ} (savegam utthāya) āḥ pāpa, tātaprāṇasītāpahārin, kva yāsi.
+j: {ラーマ} （勢いよく立ちあがって）おのれ悪党、父の命とシーターを奪った者め、どこへ行く。
+s: {vāsantī} ayi deva rākṣasakulapralayadhūmaketo, kim adyāpi te manyuviṣayaḥ.
+j: {ヴァーサンティー} まあ、羅刹の一族を滅ぼした凶星たる陛下、いまだに怒りを向ける相手がおありですか。
+s: {sītā} aho, aham apy udbhrāntāsmi.
+j: {シーター} まあ、私まで取り乱してしまった。
+s: {rāmaḥ} anya evāyam adhunā viparyayo vartate —
+j: {ラーマ} いまのこの災いは、あの時とはまるで別のものだ——
+
+V 44 {rāmaḥ}
+s: upāyānāṃ bhāvād aviralavinodavyatikarair / vimardair vīrāṇāṃ jagati janitātyadbhutarasaḥ /
+s: viyogo mugdhākṣyāḥ sa khalu ripughātāvadhir abhūt / kathaṃ tūṣṇīṃ sahyo niravadhir ayaṃ tv apratividhaḥ
+j: あの時は手だてがあり、たえまない気晴らしが重なり、
+j: 勇士たちの戦いが世に驚嘆の情趣を生んだ——
+j: あの愛らしい目の人との別れには、敵を討つという終わりがあった。
+j: だがこの別れには終わりがなく、打つ手もない。どうして黙って耐えられよう。
+
+N
+n: 第1パーダ、OCR *bhāvād virativinoda* は韻律（śikhariṇī）に合わず、*bhāvād aviralavinoda* と解する。
+
+P
+s: {sītā} niravadhir iti, hā hatāsmi mandabhāginī.
+j: {シーター} 「終わりがない」ですって——ああ、不運な私はもうおしまい。
+s: {rāmaḥ} hā kaṣṭam —
+j: {ラーマ} ああ、苦しい——
+
+V 45 {rāmaḥ}
+s: vyarthaṃ yatra kapīndrasakhyam api me vīryaṃ harīṇāṃ vṛthā / prajñā jāmbavato 'pi yatra na gatiḥ putrasya vāyor api /
+s: mārgaṃ yatra na viśvakarmatanayaḥ kartuṃ nalo 'pi kṣamaḥ / saumitrer api patriṇām aviṣayas tatra priye kvāsi me
+j: そこでは猿王（スグリーヴァ）との友情も役に立たず、猿たちの武勇もむなしく、
+j: ジャーンバヴァットの知恵も、風神の子（ハヌマーン）の足さえも届かず、
+j: ヴィシュヴァカルマンの子ナラでさえ道を架けることができず、
+j: ラクシュマナの矢も及ばない——愛しい人よ、そなたはそんなどこにいるのだ。
+
+P
+s: {sītā} bahumānitāsmi pūrvaviraham.
+j: {シーター} あの前の別れのときに劣らぬほど、大切に思われているのね、私は。
+s: {rāmaḥ} sakhi vāsanti, duḥkhāyaiva suhṛdām idānīṃ rāmasya darśanam. kiyac ciraṃ tvāṃ rodayiṣyāmi. tad anujānīhi māṃ gamanāya.
+j: {ラーマ} ヴァーサンティー、いまのラーマは、会えば友を苦しめるばかりだ。いつまでもそなたを泣かせてはおけない。行かせておくれ。
+s: {sītā} (sodvegamohaṃ tamasām āśliṣya) bhagavati tamase, kathaṃ gacchaty evāryaputraḥ. (iti mūrcchati)
+j: {シーター} （動揺のあまり気も遠くなり、タマサーにすがって）タマサーさま、あの人は本当に行ってしまうのですか。（気を失う）
+s: {tamasā} vatse, samāśvasihi samāśvasihi. nanv āvām apy āyuṣmatoḥ kuśalavayor varṣavardhanamaṅgalāni saṃpādayituṃ bhāgīrathīpadāntikam eva gacchāvaḥ.
+j: {タマサー} 娘よ、しっかりして、しっかり。私たちも、健やかなクシャとラヴァの誕生日の祝いを整えに、ガンガーさまのもとへ帰らなければ。
+s: {sītā} bhagavati, prasīda. kṣaṇamātram api tāvad durlabhadarśanaṃ janaṃ prekṣe.
+j: {シーター} タマサーさま、お願い。せめてほんのひととき、めったに会えないあの人を見ていたいのです。
+s: {rāmaḥ} asti cedānīm aśvamedhāya sahadharmacāriṇī me —
+j: {ラーマ} それにいまは、馬祀祭のための私の伴侶が——
+s: {sītā} (sotkampam) āryaputra, kā.
+j: {シーター} （震えて）あなた、それはだれなの。
+s: {rāmaḥ} hiraṇmayī sītāpratikṛtiḥ.
+j: {ラーマ} 黄金のシーターの像だ。
+s: {sītā} (socchvāsāsram) āryaputra, idānīm asi tvam. aho, utkhātam idānīṃ me parityāgalajjāśalyam āryaputreṇa.
+j: {シーター} （ほっと息をつき、涙ぐんで）あなた、いまこそあなたは、あなたです。ああ、捨てられた恥の棘を、あなたがいま抜いてくださった。
+s: {rāmaḥ} tatrāpi tāvad bāṣpadigdhaṃ cakṣur vinodayāmi.
+j: {ラーマ} あの像を見て、涙にぬれた目をせめて慰めるとしよう。
+s: {sītā} dhanyā khalu sā, yaivam āryaputreṇa bahumanyate, yā cāryaputraṃ vinodayanty āśānibandhanaṃ jātā jīvalokasya.
+j: {シーター} しあわせな人ね、その像は——あの人にこんなに大切にされて、あの人を慰めて、この世の望みのよりどころになっているのだもの。
+s: {tamasā} (sasmitasnehaṃ pariṣvajya) ayi vatse, evam ātmā stūyate.
+j: {タマサー} （微笑んで愛しげに抱きしめ）まあ娘よ、それでは自分をほめていることになるわね。
+s: {sītā} (salajjam adhomukhī, svagatam) parihasitāsmi bhagavatyā.
+j: {シーター} （恥じらってうつむき、傍白）タマサーさまにからかわれてしまった。
+s: {vāsantī} mahān ayaṃ vyatikaro 'smākaṃ prasādaḥ. gamanaṃ punar yathā kāryahānir na bhavati tathāstu.
+j: {ヴァーサンティー} お会いできたことは、私どもには大きなお恵みでした。お発ちになるのは、お務めに差し障りのないように。
+s: {sītā} pratikūledānīṃ me vāsantī saṃvṛttā.
+j: {シーター} こんどはヴァーサンティーが私に意地悪をするのね。
+s: {tamasā} vatse, ehi gacchāvaḥ.
+j: {タマサー} 娘よ、さあ、行きましょう。
+s: {sītā} (sakaṣṭam) evaṃ kariṣyāvaḥ.
+j: {シーター} （つらそうに）そうしましょう。
+s: {tamasā} kathaṃ vā gamyate, yasyās tava —
+j: {タマサー} でも、どうして行けるかしら——そなたの
+
+V 46 {tamasā}
+s: pratyuptasyeva dayite tṛṣṇādīrghasya cakṣuṣaḥ /
+s: marmacchedaparair yatnair ākarṣo na samāpyate
+j: 愛しい人に植えつけられたかのような、恋しさに見開かれたまなざしは、
+j: 急所を断つほどの努力を重ねても、引きはがしきれないのだから。
+
+P
+s: {sītā} namo namo 'pūrvapuṇyajanitadarśanābhyām āryaputracaraṇakamalābhyām.
+j: {シーター} たぐいない功徳によって拝することのできた、あなたの蓮の御足に、敬礼を、敬礼を。
+s: (iti mūrcchati)
+j: （気を失う）
+s: {tamasā} vatse, samāśvasihi samāśvasihi.
+j: {タマサー} 娘よ、しっかり、しっかりして。
+s: {sītā} (samāśvasya) kiyac ciraṃ vā meghāntareṇa pūrṇimācandrasya darśanam.
+j: {シーター} （我にかえって）雲のあいまに満月が見えるのは、いったいどれほどの間かしら。
+s: {tamasā} aho saṃvidhānakam —
+j: {タマサー} ああ、なんという巡りあわせ——
+
+V 47 {tamasā}
+s: eko rasaḥ karuṇa eva nimittabhedād / bhinnaḥ pṛthak pṛthag ivāśrayate vivartān /
+s: āvartabudbudataraṅgamayān vikārān / ambho yathā salilam eva tu tat samagram
+j: ラサ（情趣）はただひとつ、悲愴（カルナ）だけ。
+j: それが原因の違いによって分かれ、別々の現れをとるかのように見える——
+j: 渦や泡や波といった姿をとっても、
+j: 水は結局すべて水であるように。
+
+N
+n: バヴァブーティの詩論の宣言として名高い偈。他のラサはすべて悲愴の変容（*vivarta*）にすぎない、とする。ヴェーダーンタの *vivarta*（本体が変わらずに別の姿で現れること）の概念を詩論に応用している。
+
+P
+s: {rāmaḥ} ayi vimānarāja, ita itaḥ.
+j: {ラーマ} 飛車の王よ、こちらへ、こちらへ。
+s: (sarve uttiṣṭhanti)
+j: （一同、立ちあがる）
+s: {tamasāvāsantyau} (sītārāmau prati)
+j: {タマサーとヴァーサンティー} （シーターとラーマにそれぞれ向かって）
+
+V 48 {tamasāvāsantyau}
+s: avanir amarasindhuḥ sārdham asmadvidhābhiḥ / sa ca kulapatir ādyaś chandasāṃ yaḥ prayoktā /
+s: sa ca munir anuyātārundhatīko vasiṣṭhas / tvayi vitaratu bhadraṃ bhūyase maṅgalāya
+j: 大地の女神と、天の河ガンガーが、われらのような者とともに、
+j: そしてあの学林の長、韻律を初めて用いた方（ヴァールミーキ）が、
+j: さらにアルンダティーを伴うあの聖仙ヴァシシュタが、
+j: そなたに幸いを授け、大いなる吉祥へと導きますように。
+
+N
+n: タマサーはシーターに、ヴァーサンティーはラーマに向かって、同じ祝福を唱える。第七幕の大団円を予告する。
+
+P
+s: (iti niṣkrāntāḥ sarve)
+j: （一同退場）
+

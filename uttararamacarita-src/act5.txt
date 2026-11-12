@@ -1,0 +1,529 @@
+@act 5
+@synopsis 祭馬を奪ったラヴァは、ジュリンバカの神器で護衛の大軍を立ちすくませる。軍を率いるラクシュマナの子チャンドラケートゥが、老御者スマントラとともに駆けつける。若い二人の勇士は互いに一目で心惹かれながらも、戦士の掟に従って対峙する。ラヴァがラーマの馬祀祭の宣言をなじり、ラーマの過去の行いにまで言い及ぶと、チャンドラケートゥは怒り、二人は戦いの場へと向かう。
+@setting ヴァールミーキの庵の近く、戦場
+
+== cūlikā | 幕間（舞台裏の声）
+
+P
+s: (nepathye) bho bhoḥ sainikāḥ, jātaṃ jātam avalambanam asmākam —
+j: （舞台裏で）おい、兵士たち、援軍だ、われらに援軍が来たぞ——
+
+V 1
+s: nanv eṣa tvaritasumantranudyamāna- / prodvalgatprajavitavājinā rathena /
+s: utkhātapracalitakovidāraketuḥ / śrutvā naḥ pradhanam upaiti candraketuḥ
+j: 見よ、スマントラにせきたてられて躍りあがるように
+j: 疾駆する駿馬の引く戦車に乗り、
+j: でこぼこの地に揺れるコーヴィダーラの旗を掲げて、
+j: われらの戦いを聞きつけたチャンドラケートゥがやって来る。
+
+N
+n: 第2・3パーダ、OCR は乱れている（*vyāvelagat…*、*udghota…*）。注の *prodvalgāḥ … prajavitāḥ vājinaḥ*、*utkhāteṣu nimnonnatapradeśeṣu pracalita…* に従って復元した（韻律 praharṣiṇī）。コーヴィダーラ樹はラグ家の旗の紋章。
+
+P
+s: (tataḥ praviśati sumantrasārathinā rathena dhanuṣpāṇiḥ sādbhutaharṣasaṃbhramaś candraketuḥ)
+j: （スマントラを御者とする戦車に乗り、弓を手に、驚きと喜びに胸をはずませたチャンドラケートゥが登場する）
+s: {candraketuḥ} ārya sumantra, paśya paśya —
+j: {チャンドラケートゥ} スマントラ殿、ごらんなさい、ごらんなさい——
+
+V 2 {candraketuḥ}
+s: kirati kalitakiṃcitkoparajyanmukhaśrīr / aviratagunaguñjatkoṭinā kārmukeṇa /
+s: samaraśirasi cañcatpañcacūḍaś camūnām / upari śaratuṣāraṃ ko 'py ayaṃ vīrapotaḥ
+j: かすかな怒りに顔の美しさを赤く染め、
+j: 絶えず弦の唸る弓の先から、
+j: 戦の最前線で、五つの巻き髪を揺らしながら、
+j: 軍勢の上に矢の霰を降らせている——この若い勇士はいったい何者か。
+
+N
+n: 第1パーダ、OCR *koparamya* は韻律（mālinī）に合わない。注の「わずかな怒りに赤らむ顔の美しさ」に従い *koparajyanmukhaśrīḥ* と解する。
+
+P
+s: {candraketuḥ} āścaryam āścaryam —
+j: {チャンドラケートゥ} 不思議だ、不思議だ——
+
+V 3 {candraketuḥ}
+s: munijanaśiśur ekaḥ sarvataḥ sainyakāye / nava iva raghuvaṃśasyāprasiddhaḥ prarohaḥ /
+s: dalitakarikapolagranthiṭaṃkāraghora- / jvalitaśarasahasraḥ kautukaṃ me karoti
+j: 仙人の子がただひとり、軍勢のただなかで四方に向かい——
+j: ラグ家の、まだ知られていない新しい若芽のように——
+j: 象の頬のこぶを打ち砕く、恐ろしい音を立てて
+j: 燃えさかる千の矢を放っている。そのさまに私の胸は躍る。
+
+P
+s: {sumantraḥ} āyuṣman —
+j: {スマントラ} 若君——
+
+V 4 {sumantraḥ}
+s: atiśayitasurāsuraprabhāvaṃ / śiśum avalokya tathaiva tulyarūpam /
+s: kuśikasutamakhadviṣāṃ pramāthe / dhṛtadhanuṣaṃ raghunandanaṃ smarāmi
+j: 神々をも阿修羅をもしのぐ力をもち、
+j: 姿までもそっくりなこの少年を見ていると、
+j: クシカの子（ヴィシュヴァーミトラ）の祭祀を邪魔する者どもを打ち砕いたとき、
+j: 弓を手にしていたラグ家の喜び（ラーマ）を思い出します。
+
+P
+s: {candraketuḥ} mama tv ekam uddiśya bhūyasām ārambha iti hṛdayam apatrapate —
+j: {チャンドラケートゥ} ただひとりの相手に大勢でかかっているのかと思うと、私は恥ずかしい——
+
+V 5 {candraketuḥ}
+s: ayaṃ hi śiśur ekakaḥ samarabhārabhūrisphurat- / karālakarakandalīkalitaśastrajālair balaiḥ /
+s: kvaṇatkanakakiṅkiṇījhaṇajhaṇāyitasyandanair / amandamadadurdinadviradavāridair āvṛtaḥ
+j: この少年はただひとりで、戦の重みにいきり立って
+j: 恐ろしい若芽のような手に武器の網をかまえた軍勢に、
+j: 黄金の鈴をちりんちりんと鳴らす戦車に、
+j: さかんな発情の汗を雨雲のように降らせる象の群れに、囲まれているのだから。
+
+N
+n: 第1パーダ、OCR *śiśurekaḥ* は一音節不足で、注の *ayam ekakaḥ śiśuḥ* に従う。第3パーダも OCR *kanakiṅkiṇī* を *kanakakiṅkiṇī* と補う（韻律 pṛthvī）。
+
+P
+s: {sumantraḥ} vatsa, ebhiḥ samastair api kim asya, kiṃ punar vyastaiḥ.
+j: {スマントラ} 若君、この者たちが束になってかかっても、この子に何ができましょう。ばらばらなら、なおさらです。
+s: {candraketuḥ} ārya, tvaryatāṃ tvaryatām. anena hi mahān āśritajanapramatho 'smākam ārabdhaḥ. tathā hi —
+j: {チャンドラケートゥ} スマントラ殿、急いで、急いでください。この子はわが配下の者たちを大いに打ち倒しはじめています。ごらんなさい——
+
+V 6 {candraketuḥ}
+s: āgarjadgirikuñjakuñjaraghaṭāvistīrṇakarṇajvaraṃ / jyānirghoṣam amandadundubhiravair ādhmātam ujjṛmbhayan /
+s: vellad bhairavaruṇḍamuṇḍanikarair vīro vidhatte bhuvaṃ / tṛpyatkālakarālavaktravighasavyākīryamāṇām iva
+j: 山の茂みに咆える象の群れの耳を熱病のように苦しめる弓弦の響きを、
+j: 激しい太鼓の音にふくらませて、轟かせながら、
+j: この勇士は、のたうつ恐ろしい首なしの胴と首の山で、大地を
+j: 飽き足りた死神の恐ろしい口からこぼれ落ちる食べ残しが散らばっているかのようにしている。
+
+P
+s: {sumantraḥ} (svagatam) katham īdṛśena saha vatsasya candraketor dvandvasaṃprahāram anujānīmaḥ. (vicintya) atha vā ikṣvākukulavṛddhāḥ khalu vayam. prāpte cedānīṃ raṇe kā gatiḥ.
+j: {スマントラ} （傍白）このような者を相手に、若君チャンドラケートゥの一騎打ちをどうして許せようか。（考えて）いや、私はイクシュヴァーク家に仕えて年を重ねた身だ。いざ戦となった以上、ほかにどんな道があろう。
+s: {candraketuḥ} (savismayalajjāsaṃbhramam) hanta dhik, pratinivṛttāni sarvataḥ sainyāni mama.
+j: {チャンドラケートゥ} （驚き、恥じ、あわてて）ああ、なんたることだ。わが軍が四方で退いてゆく。
+s: {sumantraḥ} (rathavegam abhinīya) āyuṣman, eṣa te vāgviṣayībhūtaḥ sa vīraḥ.
+j: {スマントラ} （戦車を急がせるしぐさをして）若君、あの勇士は、もう声の届くところにおります。
+s: {candraketuḥ} (vismṛtim abhinīya) ārya, kim asya nāmadheyam ākhyātam āhvāyakaiḥ.
+j: {チャンドラケートゥ} （うっかりしていた様子で）スマントラ殿、伝令はあの子の名を何と告げていましたか。
+s: {sumantraḥ} lava iti.
+j: {スマントラ} ラヴァと。
+
+V 7 {candraketuḥ}
+s: bho bho lava mahābāho kim ebhis tava sainikaiḥ /
+s: eṣo 'ham ehi mām eva tejas tejasi śāmyatu
+j: おい、おい、腕たくましきラヴァよ、こんな兵士たちを相手にして何になる。
+j: 私はここだ。私にかかってこい。光は光によってこそ鎮まるべきなのだ。
+
+P
+s: {sumantraḥ} kumāra, paśya paśya —
+j: {スマントラ} 若君、ごらんなさい、ごらんなさい——
+
+V 8 {sumantraḥ}
+s: vinivartata eṣa vīrapotaḥ / pṛtanānirmathanāt tvayopahūtaḥ /
+s: stanayitnuravād ibhāvalīnām / avamardād iva dṛptasiṃhaśāvaḥ
+j: あなたに呼ばれて、この若い勇士は
+j: 軍勢を打ち砕くのをやめて引きかえしてくる——
+j: 雷鳴を聞いて、象の群れを踏みしだくのをやめる
+j: 誇り高い獅子の子のように。
+
+N
+n: 第3・4パーダ、OCR *stanayitnurivādibhāvalīnām … dattamaṃhaśāvaḥ* は乱れている。韻律（aupacchandasika）と文脈から *stanayitnuravād ibhāvalīnām avamardād iva dṛptasiṃhaśāvaḥ* と解する。
+
+P
+s: (tataḥ praviśati dhīroddhataparikramo lavaḥ)
+j: （勇ましく荒々しい足どりでラヴァが登場する）
+s: {lavaḥ} sādhu rājaputra sādhu. satyam aikṣvākaḥ khalv asi. tad aham āgata evāsmi.
+j: {ラヴァ} あっぱれ、王子、あっぱれ。まことにイクシュヴァークの子だ。さあ、私はここに来たぞ。
+s: (nepathye mahān kalakalaḥ)
+j: （舞台裏で大きな騒ぎ）
+s: {lavaḥ} (sāvaṣṭambhaṃ parāvṛtya) āḥ, katham idānīṃ bhagnā api pratinivṛtya yuddhābhisāriṇaḥ paryavaṣṭabhnanti māṃ camūpatayaḥ. dhig jālmān —
+j: {ラヴァ} （昂然とふりかえって）なに、いったん崩れた隊長どもが、また戻ってきて私を取り囲もうとするのか。愚か者どもめ——
+
+V 9 {lavaḥ}
+s: ayaṃ śailāghātakṣubhitavaḍavāvaktrahutabhuk- / pracaṇḍakrodhārcirnicayakavalatvaṃ vrajatu me /
+s: samantād utsarpadghanatumulasenākalakalaḥ / payorāśer oghaḥ pralayapavanāsphālita iva
+j: 四方から押し寄せる、濃く騒がしいこの軍勢のどよめきは、
+j: 世の終わりの風に打たれた大海の潮のようだが——
+j: 山にかき乱された海底の火（ヴァダヴァーの口の火）のように激しい
+j: 私の怒りの炎の、ひと口の餌食となるがよい。
+
+N
+n: マンダラ山に攪拌された海の底で燃える「牝馬の口の火」（*vaḍavāmukhāgni*）に、自らの怒りを喩える。
+
+P
+s: (savegaṃ parikrāmati)
+j: （勢いよく歩きまわる）
+s: {candraketuḥ} bho bhoḥ kumāra —
+j: {チャンドラケートゥ} おい、おい、王子よ——
+
+V 10 {candraketuḥ}
+s: atyadbhutād api guṇātiśayāt priyo me / tasmāt sakhā tvam asi yan mama tat tavaiva /
+s: tat kiṃ nije parijane kadanaṃ karoṣi / nanv eṣa darpanikaṣas tava candraketuḥ
+j: あまりに驚くべき徳のゆえに、そなたは私にとって愛しい。
+j: だからそなたは友であり、私のものはそなたのものでもある。
+j: それなのに、なぜ身内の者たちを打ち倒すのか。
+j: そなたの誇りを試す試金石なら、このチャンドラケートゥがここにいるではないか。
+
+P
+s: {lavaḥ} (saharṣasaṃbhramaṃ parāvṛtya) aho mahānubhāvasya prasannakarkaśā vīravacanaprayuktir vikartanakulakumārasya. tat kim ebhir enam eva tāvat saṃbhāvayāmi.
+j: {ラヴァ} （喜び勇んでふりかえり）ほう、この太陽の家の高貴な王子の、さわやかでいて手ごわい勇士のことばよ。では、こんな者たちはおいて、まずこの方のお相手をしよう。
+s: (punar nepathye kalakalaḥ)
+j: （ふたたび舞台裏で騒ぎ）
+s: {lavaḥ} (sakrodhanirvedam) āḥ, kadarthito 'ham ebhir vīrasaṃvādavighnakāribhiḥ pāpaiḥ. (tadabhimukhaṃ parikrāmati)
+j: {ラヴァ} （怒り、うんざりして）ええい、勇士どうしの語らいを邪魔するこの悪党どもに、ひどい目にあわされる。（そちらへ向かって歩く）
+s: {candraketuḥ} ārya, dṛśyatāṃ draṣṭavyam etat —
+j: {チャンドラケートゥ} スマントラ殿、これは見ものです——
+
+V 11 {candraketuḥ}
+s: darpeṇa kautukavatā mayi baddhalakṣyaḥ / paścād balair anusṛto 'yam udīrṇadhanvā /
+s: dvedhā samuddhatamarutttaralasya dhatte / meghasya māghavatacāpadharasya lakṣmīm
+j: 腕を試したいという誇りから私に狙いを定め、
+j: 後ろからは軍勢に追われて、この子は弓を高くかかげている——
+j: 向かい合う二方からの風に揺れる、
+j: 虹を帯びた雨雲のような姿を見せて。
+
+P
+s: {sumantraḥ} kumāra evainaṃ draṣṭum api jānāti. vayaṃ tu kevalaṃ paravanto vismayena.
+j: {スマントラ} 若君だけが、この子をまことに見る目をおもちです。私どもは、ただ驚きに我を失うばかり。
+s: {candraketuḥ} bho bho rājānaḥ —
+j: {チャンドラケートゥ} おい、おい、将たちよ——
+
+V 12 {candraketuḥ}
+s: saṃkhyātītair dviradaturagasyandanasthaiḥ padātāv / atraikasmin kavacanicitair naddhamauñjottarīye /
+s: kālajyeṣṭhair abhinavavayaḥkāmyakāye bhavadbhir / yo 'yaṃ baddho yudhi parikaras tena dhig vo dhig asmān
+j: 数知れぬ、象や馬や戦車に乗り、鎧に身をかためたあなたがたが、
+j: 下衣にムンジャ草の帯を締めたこの徒歩のただひとりの子に向かって——
+j: 年かさのあなたがたが、若く愛らしい体のこの子に向かって——
+j: 戦場で寄ってたかってかかったとは。あなたがたに恥あれ、われらに恥あれ。
+
+N
+n: 第2パーダ後半、OCR *madhyamonttarīye* は一音節不足。注の「*naddha*…*uttarīye*（上衣を結んだこの子に）」に従い *naddhamauñjottarīye* と推定した（韻律 mandākrāntā）。
+
+P
+s: {lavaḥ} (sonmātham) katham anukampate nāma. (vicintya) bhavatu, kālaharaṇapratiṣedhāya jṛmbhakāstreṇa tāvat sainyāni saṃstambhayāmi. (iti dhyānaṃ nāṭayati)
+j: {ラヴァ} （いきり立って）なに、私を憐れむというのか。（考えて）よし、時間を無駄にしないよう、まずジュリンバカの神器で軍勢を立ちすくませてやろう。（瞑想するしぐさをする）
+s: {sumantraḥ} tat kim akasmād asmatsainyaghoṣaḥ praśāmyati.
+j: {スマントラ} どうしたのだ、わが軍のどよめきが急に静まっていく。
+s: {lavaḥ} paśyāmy adhunā pragalbham.
+j: {ラヴァ} さあ、勇ましい方のお相手をしよう。
+s: {sumantraḥ} (sasaṃbhramam) vatsa, manye kumārakeṇānena jṛmbhakāstram āmantritam iti.
+j: {スマントラ} （あわてて）若君、この少年はジュリンバカの神器を呼び出したのだと思います。
+s: {candraketuḥ} atra kaḥ saṃdehaḥ —
+j: {チャンドラケートゥ} まちがいありません——
+
+V 13 {candraketuḥ}
+s: vyatikara iva bhīmas tāmaso vaidyutaś ca / praṇihitam api cakṣur grastamuktaṃ hinasti /
+s: atha likhitam ivaitat sainyam aspandam āste / niyatam ajitavīryaṃ jṛmbhate jṛmbhakāstram
+j: 闇と稲妻とが恐ろしく入りまじったように、
+j: こらした目も、呑まれては吐き出されて、くらまされる。
+j: そしてこの軍勢は、絵に描いたように動かずにいる——
+j: まちがいなく、無敵の力をもつジュリンバカの神器が働いているのだ。
+
+P
+s: {candraketuḥ} āścaryam āścaryam —
+j: {チャンドラケートゥ} 驚いた、驚いた——
+
+V 14 {candraketuḥ}
+s: pātālodarakuñjapuñjitatamaḥśyāmair nabho jṛmbhakair / uttaptasphuradārakūṭakapilajyotirjvaladdīptibhiḥ /
+s: kalpākṣepakaṭhorabhairavamarudvyastair avastīryate / mīlanmeghataḍitkaḍārakuharair vindhyādrikūṭair iva
+j: 地底の洞穴に積もった闇のように黒く、
+j: 灼けて輝く黄銅のような赤褐色の光に燃えるジュリンバカたちに、空はおおわれている——
+j: 世の終わりの激しく恐ろしい風に吹き散らされ、
+j: 雲が閉ざして稲妻に赤く染まる洞をもつ、ヴィンディヤ山の峰々のようなものに。
+
+N
+n: ジュリンバカの神器は人格をもつ存在として描かれる（第一幕第15偈参照）。
+
+P
+s: {sumantraḥ} kutaḥ punar asya jṛmbhakāṇām āgamaḥ syāt.
+j: {スマントラ} この子はどこからジュリンバカを授かったのだろう。
+s: {candraketuḥ} bhagavataḥ prācetasād iti manyāmahe.
+j: {チャンドラケートゥ} プラーチェータサ尊者（ヴァールミーキ）からだと思います。
+s: {sumantraḥ} vatsa, naitad evam astreṣu, viśeṣato jṛmbhakeṣu. yataḥ —
+j: {スマントラ} 若君、神器については、とりわけジュリンバカについては、そうはまいりません。というのも——
+
+V 15 {sumantraḥ}
+s: kṛśāśvatanayā hy ete kṛśāśvāt kauśikaṃ gatāḥ /
+s: atha tatsaṃpradāyena rāmabhadre sthitā iti
+j: これらはクリシャーシュヴァの子らであり、クリシャーシュヴァからカウシカ（ヴィシュヴァーミトラ）に伝わり、
+j: その伝授によってラーマさまのもとにあると聞いておりますから。
+
+P
+s: {candraketuḥ} apare 'pi pracīyamānasattvaprakāśāḥ svayam evaṃ mantradṛśaḥ paśyanti.
+j: {チャンドラケートゥ} 心の光が増した者は、ほかにも自ら呪を見る者となるものです。
+s: {sumantraḥ} vatsa, sāvadhāno bhava. parāgataḥ sa vīraḥ.
+j: {スマントラ} 若君、ご用心を。あの勇士が来ました。
+s: {kumārau} (anyonyaṃ prati) aho priyadarśanaḥ kumāraḥ. (sasnehānurāgaṃ nirvarṇya)
+j: {二人の王子} （たがいに）ああ、なんと見目よい王子だろう。（愛しさと親しみをこめて見つめ）
+
+V 16 {kumārau}
+s: yadṛcchāsaṃvādaḥ kim u kim u guṇānām atiśayaḥ / purāṇo vā janmāntaranibiḍabaddhaḥ paricayaḥ /
+s: nijo vā saṃbandhaḥ kim u vidhivaśāt ko 'py avidito / mamaitasmin dṛṣṭe hṛdayam avadhānaṃ racayati
+j: たまたま気が合ったのか、それともこの人の徳が並はずれているのか、
+j: 前世で固く結ばれた昔なじみなのか、
+j: それとも運命により、知らずにいた血の縁でもあるのか——
+j: この人を見ると、私の心は惹きつけられてやまない。
+
+P
+s: {sumantraḥ} bhūyasā jīvadharma eṣa yad rasamayī kasyacit kvacit prītiḥ, yatra laukikānām upacāras tārāmaitrakaṃ cakṣūrāga iti. tam apratisaṃkhyeyanibandhanaṃ premāṇam āmananti —
+j: {スマントラ} たいていの生き物には、ある者がある者に、何とも言えぬ親しみを覚えるということがあるものです。世間ではそれを「瞳の友情」とか「目の惚れこみ」とか呼びますが、そのわけは数えあげることのできない愛だと言われております——
+
+V 17 {sumantraḥ}
+s: ahetuḥ pakṣapāto yas tasya nāsti pratikriyā /
+s: sa hi snehātmakas tantur antarmarmāṇi sīvyati
+j: 理由のない好意には、逆らう手だてがない。
+j: それは愛でできた糸となって、心の急所の奥を縫いあわせてしまうのだから。
+
+P
+s: {kumārau} (anyonyam uddiśya)
+j: {二人の王子} （たがいに相手を見やって）
+
+V 18 {kumārau}
+s: etasmin masṛṇitarājapaṭṭakānte / moktavyāḥ katham iva sāyakāḥ śarīre /
+s: yatprāptau mama parirambhaṇābhilāṣād / unmīlatpulakakadambam aṅgam āste
+j: 磨いた王の宝玉（ラージャパッタ）のように美しいこの体に、
+j: どうして矢など放てよう——
+j: この人に出会うと、抱きしめたいという思いから、
+j: 私の体はカダンバの花のように総毛立っているというのに。
+
+V 19 {kumārau}
+s: kiṃ tv ākrāntakaṭhoratejasi gatiḥ kā nāma śastraṃ vinā / śastreṇāpi hi tena kiṃ na viṣayo jāyeta yasyedṛśaḥ /
+s: kiṃ vakṣyaty ayam eva yuddhavimukhaṃ mām udyate 'py āyudhe / vīrāṇāṃ samayo hi dāruṇarasaḥ snehakramaṃ bādhate
+j: とはいえ、厳しい威光で迫る相手に、武器なしでどんな道があろう。
+j: 武器にしても、このような相手を的としないで、何の役に立とう。
+j: 武器が振りあげられているのに、私が戦いに背を向けたら、この人こそ何と言うだろう。
+j: 勇士の掟は苛酷な味わいのもので、愛の道を妨げるのだ。
+
+P
+s: {sumantraḥ} (lavaṃ nirvarṇya sāsram, ātmagatam) hṛdaya, kim anyathā parikalpase —
+j: {スマントラ} （ラヴァを見つめて涙ぐみ、傍白）心よ、何をあらぬことを思い描くのか——
+
+V 20 {sumantraḥ}
+s: manorathasya yad bījaṃ tad daivenādito hṛtam /
+s: latāyāṃ pūrvalūnāyāṃ prasavasyāgamaḥ kutaḥ
+j: 望みの種は、はじめから運命に奪われてしまった。
+j: 前もって刈られてしまった蔓に、どうして花が咲こう。
+
+N
+n: シーターはすでに亡いと思われているので、この少年がラーマの子であるはずはない——というスマントラの打ち消し。
+
+P
+s: {candraketuḥ} avatara, ārya sumantra, syandanāt.
+j: {チャンドラケートゥ} スマントラ殿、戦車から降りましょう。
+s: {sumantraḥ} tat kasya hetoḥ.
+j: {スマントラ} それは何のために。
+s: {candraketuḥ} ekas tāvad ayaṃ vīrapuruṣaḥ pūjito bhavati. aparaṃ ca khalv ayaṃ kṣātradharmaḥ samanugato bhavati. na rathinaḥ pādacāram abhiyuñjantīti śāstravido bhāṣante.
+j: {チャンドラケートゥ} ひとつには、この勇士に敬意を表すことになります。もうひとつには、クシャトリヤの掟にかなうことになります。戦車に乗る者は徒歩の者に戦いを挑まない、と兵法に通じた人々は言っています。
+s: {sumantraḥ} (svagatam) āḥ, kaṣṭāṃ daśām anuprapanno 'smi —
+j: {スマントラ} （傍白）ああ、苦しい立場に追いこまれた——
+
+V 21 {sumantraḥ}
+s: kathaṃ nyāyyam anuṣṭhānaṃ mādṛśaḥ pratiṣedhatu /
+s: kathaṃ vābhyanujānātu sāhasaikarasāṃ kriyām
+j: 道理にかなったふるまいを、私のような者がどうして止められよう。
+j: かといって、向こう見ずなばかりのこの行いを、どうして許せよう。
+
+P
+s: {candraketuḥ} yat tātamiśrā api pituḥ priyasakham arthasaṃśayeṣv āryam eva pṛcchanti, tat kim āryo vimṛśati.
+j: {チャンドラケートゥ} 父上方でさえ、迷うことがあると、父の親友であるあなたにこそ尋ねられるのです。そのあなたが何をためらわれるのですか。
+s: {sumantraḥ} āyuṣman, evaṃ yathādharmam abhimanyase —
+j: {スマントラ} 若君、まことに掟どおりにお考えです——
+
+V 22 {sumantraḥ}
+s: eṣa sāṃgrāmiko nyāya eṣa dharmaḥ sanātanaḥ /
+s: iyaṃ hi raghusiṃhānāṃ vīracāritrapaddhatiḥ
+j: これこそ戦いの作法、これこそ永遠の掟。
+j: これこそラグ家の獅子たちの、勇士としてのふるまいの道です。
+
+P
+s: {candraketuḥ} apratirūpaṃ vacanam āryasya —
+j: {チャンドラケートゥ} そんなことをおっしゃるのはあなたらしくもない——
+
+V 23 {candraketuḥ}
+s: itihāsaṃ purāṇaṃ ca dharmapravacanāni ca /
+s: bhavanta eva jānanti raghūṇāṃ ca kulasthitim
+j: 史伝も、古伝承も、法の教えも、
+j: そしてラグ家の家のしきたりも、あなたがたこそがご存じなのですから。
+
+P
+s: {sumantraḥ} (sasnehāsraṃ pariṣvajya)
+j: {スマントラ} （愛しさに涙ぐみ、抱きしめて）
+
+V 24 {sumantraḥ}
+s: jātasya te pitur apīndrajito nihantur / vatsasya vatsa kati nāma dināny amūni /
+s: tasyāpy apatyam anutiṣṭhati vīradharmaṃ / diṣṭyā gataṃ daśarathasya kulaṃ pratiṣṭhām
+j: インドラジットを討ったそなたの父上が生まれてから、
+j: いったい何日たったというのだろう、若君——
+j: その方の子までが、もう勇士の掟を守っている。
+j: ありがたいことに、ダシャラタの家はゆるぎなく栄えている。
+
+P
+s: {candraketuḥ} (sakaṣṭam)
+j: {チャンドラケートゥ} （つらそうに）
+
+V 25 {candraketuḥ}
+s: apratiṣṭhe raghujyeṣṭhe kā pratiṣṭhā kulasya naḥ /
+s: iti duḥkhena tapyante trayo naḥ pitaro 'pare
+j: ラグ家の長兄（ラーマ）がゆるぎなくなくて、われらの家の何がゆるぎないものか——
+j: そう思って、ほかの三人の父たちは苦しんでいるのです。
+
+N
+n: 世継ぎのないラーマ（シーターを失った）の境遇を嘆く。*trayaḥ pitaro 'pare* — バラタ、ラクシュマナ、シャトルグナ。
+
+P
+s: {sumantraḥ} ahaha, hṛdayamarmadāruṇāny eva candraketor vacanāni.
+j: {スマントラ} ああ、チャンドラケートゥさまのおことばは、胸の急所に突き刺さる。
+s: {lavaḥ} hanta, miśrīkṛto rasakramo vartate —
+j: {ラヴァ} ああ、情趣がまじりあってしまった——
+
+V 26 {lavaḥ}
+s: yathendāv ānandaṃ vrajati samupoḍhe kumudinī / tathaivāsmin dṛṣṭir mama kalahakāmaḥ punar ayam /
+s: raṇatkārakrūrakvaṇitaguṇaguñjadgurudhanur / dhṛtapremā bāhur vikacavikarālolbaṇarasaḥ
+j: 月がのぼると睡蓮が喜びに開くように、
+j: 私の目はこの人を見て喜んでいる。だが、
+j: がらがらと荒々しく弦の唸る重い弓を
+j: 好んでつかむこの腕は、戦いを望み、猛々しい情趣にあふれている。
+
+N
+n: 愛（目）と勇（腕）の情趣が一身のうちに混じりあう。第3パーダ、OCR *guñjarudhanur* は *guñjadgurudhanur* の誤り（韻律 śikhariṇī）。
+
+P
+s: {candraketuḥ} (avataraṇaṃ rūpayan) ārya, sāvitraś candraketur abhivādayate.
+j: {チャンドラケートゥ} （戦車から降りるしぐさをして）太陽の家のチャンドラケートゥが、ご挨拶申しあげます。
+
+V 27 {sumantraḥ}
+s: ajitaṃ puṇyam ūrjasvi kakutsthasyeva te mahaḥ /
+s: śreyase śāśvato devo varāhaḥ parikalpatām
+j: カクトスタのそれのように、そなたの威光が無敵で清らかで力強くあれ。
+j: 永遠なる神、猪の姿のヴィシュヌが、そなたの幸いのためにあるように。
+
+P
+s: {sumantraḥ} api ca —
+j: {スマントラ} それに——
+
+V 28 {sumantraḥ}
+s: devas tvāṃ savitā dhinotu samare gotrasya yas te pitā / tvāṃ maitrāvaruṇo 'bhinandatu gurur yas te gurūṇām api /
+s: aindrāvaiṣṇavam āgnimārutam atho sauparṇam ojo 'stu te / deyād eva ca rāmalakṣmaṇadhanurjyāghoṣamantro jayam
+j: 戦いにおいて、そなたの一族の祖である太陽神がそなたを喜ばせ、
+j: そなたの師たちの師であるマイトラーヴァルニ（ヴァシシュタ）がそなたを祝福し、
+j: インドラとヴィシュヌの、アグニとマルトの、そしてガルダの力がそなたのものとなり、
+j: ラーマとラクシュマナの弓弦の響きという呪文が、そなたに勝利を授けますように。
+
+P
+s: {lavaḥ} kumāra, ati hi nāma śobhase ratha eva. kṛtaṃ kṛtam atyādareṇa.
+j: {ラヴァ} 王子、あなたは戦車の上にいてこそ、ひときわ立派です。過ぎたお気づかいは無用、無用。
+s: {candraketuḥ} tarhi mahābhāgo 'py anyaṃ ratham alaṃkarotu.
+j: {チャンドラケートゥ} では、高貴なあなたも別の戦車に乗ってください。
+s: {lavaḥ} ārya, pratyāropaya ratham upari rājaputram.
+j: {ラヴァ} 御者どの、王子をもう一度戦車にお乗せしてください。
+s: {sumantraḥ} tvam apy anurudhyasva vatsasya candraketor vacanam.
+j: {スマントラ} あなたも、チャンドラケートゥさまのことばに従いなさい。
+s: {lavaḥ} ko vicāraḥ sveṣūpakaraṇeṣu. kiṃ tv araṇyasado vayam anabhyastarathacaryāḥ.
+j: {ラヴァ} 自分の持ち物ならためらいもしませんが、森に住む私たちは、戦車の乗り方を習っていないのです。
+s: {sumantraḥ} jānāsi vatsa darpasaujanyayor yathocitam ācaritum. yadi punas tvām īdṛśaṃ vatso rāmabhadraḥ paśyet tadā tasya snehena hṛdayam abhiṣyandeta.
+j: {スマントラ} 坊や、あなたは勇ましさと礼儀とを、ほどよく使い分けることを心得ている。こんなあなたをラーマさまがごらんになったら、愛しさに胸がとろけてしまわれるでしょう。
+s: {lavaḥ} ārya, sujanaḥ sa rājarṣiḥ śrūyate. (salajjam iva) —
+j: {ラヴァ} 御者どの、あの王仙はよい方だと聞いています。（いくらか恥じらうように）——
+
+V 29 {lavaḥ}
+s: vayam api na khalv evaṃprāyāḥ kratupratighātinaḥ / ka iha na guṇais taṃ rājānaṃ jano bahu manyate /
+s: tad api khalu me sa vyāhāras turaṅgamarakṣiṇāṃ / vikṛtim akhilakṣatrākṣepapracaṇḍatayākarot
+j: 私とて、祭祀を妨げるような者ではありません。
+j: あの王を、その徳ゆえに重んじない者が、この世にいるでしょうか。
+j: けれど、馬の護衛たちのあの触れ口上が、
+j: あらゆるクシャトリヤをあなどる激しさで、私の心をかき乱したのです。
+
+N
+n: OCR の *evaṃmāyāḥ* は *evaṃprāyāḥ*（「そのような類の」）の誤り。第27偈の宣言（「七つの世界にただひとりの勇士」）が、ラヴァの戦いのきっかけとなった。
+
+P
+s: {candraketuḥ} (sasmitam) kiṃ nu bhavatas tātapratāpotkarṣe 'py amarṣaḥ.
+j: {チャンドラケートゥ} （微笑んで）では、あなたは父上（ラーマ）の威光の高さにまで腹を立てているのか。
+s: {lavaḥ} astv amarṣo mā bhūd vā. etat tu pṛcchāmi — dāntaṃ hi rājānaṃ rāghavaṃ śṛṇumaḥ. sa kila nātmanā dṛpyati, nāsya prajā vā dṛptā jāyante. tat kiṃ manuṣyās tasya rākṣasīṃ vācam udīrayanti —
+j: {ラヴァ} 腹を立てていようがいまいが、それはどうでもいい。ただお尋ねしたい——ラグ家の王は自制の人だと聞いています。王みずから驕ることもなく、その民も驕ることはないとか。それなのに、なぜその家来たちが羅刹のようなことばを口にするのですか——
+
+V 30 {lavaḥ}
+s: ṛṣayo rākṣasīm āhur vācam unmattadṛptayoḥ /
+s: sā yoniḥ sarvavairāṇāṃ sā hi lokasya nirṛtiḥ
+j: 聖仙たちは、狂った者と驕った者のことばを「羅刹のことば」と呼ぶ。
+j: それはあらゆる敵意の源であり、世の破滅にほかならない。
+
+P
+s: {lavaḥ} iti ha sma tāṃ nindanti. athetarām abhiṣṭuvanti —
+j: {ラヴァ} そう言って、そのことばを非難するのです。そして、もうひとつのことばを讃えて——
+
+V 31 {lavaḥ}
+s: kāmān dugdhe viprakarṣaty alakṣmīṃ / kīrtiṃ sūte duṣkṛtaṃ yā hinasti /
+s: tāṃ cāpy etāṃ mātaraṃ maṅgalānāṃ / dhenuṃ dhīrāḥ sūnṛtāṃ vācam āhuḥ
+j: 望みのものを乳のように出し、不運を遠ざけ、
+j: 名声を生み、悪業を滅ぼす——
+j: そのような、吉祥の母であり、願いをかなえる牝牛であることばを、
+j: 賢者たちは「まことの優しいことば」と呼ぶのです。
+
+P
+s: {sumantraḥ} paripūtasvabhāvo 'yaṃ kumāraḥ prācetasāntevāsī. vadaty ayam abhyupapannam ārṣeṇa saṃskāreṇa.
+j: {スマントラ} この王子は生まれながらに清らかな方で、プラーチェータサ尊者の弟子なのだ。聖仙の薫陶を受けて、まことにふさわしいことを言う。
+s: {lavaḥ} yat punaś candraketo vadasi kiṃ nu bhavatas tātapratāpotkarṣe 'py amarṣa iti, tat pṛcchāmi — kiṃ vyavasthitaviṣayaḥ kṣātradharma iti.
+j: {ラヴァ} それからチャンドラケートゥ、あなたは「父上の威光にまで腹を立てるのか」と言われたが、お尋ねしたい——クシャトリヤの掟とは、その及ぶ範囲が決まっているものなのですか。
+s: {sumantraḥ} naiva khalu jānāsi devam aikṣvākaṃ yenaivaṃ vadasi. tad alam atiprasaṅgena —
+j: {スマントラ} あなたはイクシュヴァークの王をご存じないから、そんなことが言えるのです。もう言い過ぎはおやめなさい——
+
+V 32 {sumantraḥ}
+s: sainikānāṃ pramāthena satyam ojāyitaṃ tvayā /
+s: jāmadagnyasya damane na hi nirbandham arhasi
+j: 兵士たちを打ち倒して、あなたはたしかに力を示された。
+j: だが、ジャーマダグニヤ（パラシュラーマ）をくだした方に、言いつのるべきではありません。
+
+P
+s: {lavaḥ} (sahāsam) ārya, jāmadagnyasya damanaḥ sa rājeti ko 'yam uccair vādaḥ —
+j: {ラヴァ} （笑って）御者どの、あの王がジャーマダグニヤをくだしたなどと、何をそんなに大げさに——
+
+V 33 {lavaḥ}
+s: siddhaṃ hy etad vāci vīryaṃ dvijānāṃ / bāhvor vīryaṃ yat tu tat kṣatriyāṇām /
+s: śastragrāhī brāhmaṇo jāmadagnyas / tasmin dānte kā stutis tasya rājñaḥ
+j: よく知られたことです——バラモンの力はことばにあり、
+j: 腕の力はクシャトリヤのものだと。
+j: ジャーマダグニヤは武器をとったバラモン。
+j: その人をくだしたからといって、その王の何の誉れになりましょう。
+
+P
+s: {candraketuḥ} (sonmātham iva) ārya sumantra, kṛtam uttarottareṇa —
+j: {チャンドラケートゥ} （いきり立って）スマントラ殿、もう言い返すのはおやめなさい——
+
+V 34 {candraketuḥ}
+s: ko 'py eṣa saṃprati navaḥ puruṣāvatāro / vīro na yasya bhagavān bhṛgunandano 'pi /
+s: paryāptasaptabhuvanābhayadakṣiṇāni / puṇyāni tātacaritāny api yo na veda
+j: これは何やら新しい人の化身らしい——
+j: 尊きブリグの子（パラシュラーマ）さえ勇士と認めず、
+j: 七つの世界に恐れなき安らぎを与えた
+j: 父上の清らかな行いさえ知らないというのだから。
+
+P
+s: {lavaḥ} ko hi raghupateś caritaṃ mahimānaṃ ca na jānāti. yadi nāma kiṃcid asti vaktavyam. atha vā śāntam —
+j: {ラヴァ} ラグ家の主の行いと偉大さを、知らない者がありましょうか。言うべきことが少しはありますが。いや、やめておこう——
+
+V 35 {lavaḥ}
+s: vṛddhās te na vicāraṇīyacaritās tiṣṭhantu kiṃ varṇyate / sundastrīmathane 'py akuṇṭhayaśaso loke mahānto hi te /
+s: yāni trīṇy aparāṅmukhāny api padāny āsan kharāyodhane / yad vā kauśalam indrasūnunidhane tatrāpy abhijño janaḥ
+j: あの方々は年長で、その行いをとやかく言うべきではない。そのままにしておこう。何を言うことがあろう。
+j: スンダの妻（ターターカー）を殺しても名声の衰えぬ、世に偉大な方々なのだから。
+j: カラとの戦いで、退かずに踏みとどまった三歩のことも、
+j: インドラの子（ヴァーリン）を討ったときの巧みさも、世間はよく知っている。
+
+N
+n: ラヴァの皮肉。ラーマの過去の行いのうち、非難されうるもの——女である羅刹女ターターカーの殺害、カラとの戦いで三歩退いたこと、木陰からヴァーリンを射たこと——を、ほのめかしながら列挙する。第3パーダ、OCR *āsanasvarāyodhane* は *āsan kharāyodhane* と解する。
+
+P
+s: {candraketuḥ} āḥ, tātāpavādin, bhinnamaryāda, ati hi nāma pragalbhase.
+j: {チャンドラケートゥ} ええい、父上を謗る者、礼儀をわきまえぬ者め、あまりに図に乗りすぎだ。
+s: {lavaḥ} aye, mayy eva bhrukuṭīdharaḥ saṃvṛttaḥ.
+j: {ラヴァ} おや、私に向かって眉をひそめておられる。
+s: {sumantraḥ} sphuritam anayoḥ krodhena. tathā hi —
+j: {スマントラ} ふたりとも怒りに燃えあがった。ごらんなさい——
+
+V 36 {sumantraḥ}
+s: cūḍāmaṇḍalabandhanaṃ taralayaty ākūtajo vepathuḥ / kiṃcitkokanadacchadasya sadṛśe netre svayaṃ rajyataḥ /
+s: dhatte kāntim akāṇḍatāṇḍavitayor bhaṅgena vaktraṃ bhruvoś / candrasyodbhaṭalāñchanasya kamalasyodbhrāntabhṛṅgasya ca
+j: 激情から生まれた震えが、髷を結った紐を揺らし、
+j: 赤蓮の花びらのような両の目が、おのずと赤らんでいる。
+j: 不意に舞いあがる眉のひそめによって、その顔は、
+j: 影のくっきりした月の、蜂の舞う蓮の美しさを帯びている。
+
+P
+s: {kumārau} tad ito vimardakṣamāṃ bhūmim avatarāvaḥ.
+j: {二人の王子} では、ここから戦いにふさわしい場所へ降りてゆこう。
+s: (iti niṣkrāntāḥ sarve)
+j: （一同退場）

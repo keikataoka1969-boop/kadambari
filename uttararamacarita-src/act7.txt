@@ -1,0 +1,460 @@
+@act 7
+@synopsis ガンガーの岸。ヴァールミーキが自作の劇を天女たちに演じさせ、神々と人々を招いて上演する。劇中劇は、捨てられたシーターがガンガーに身を投げ、双子を産み、大地とガンガーの女神に守られるさまを描く。観客席のラーマは現実と劇の区別を失って取り乱し、気を失う。そのとき本物のシーターが女神たちとともに水中から現れ、アルンダティーが民の前でシーターの潔白を宣言する。民と神々の歓呼のなか、ラーマはシーターを妻として迎え、クシャとラヴァはヴァールミーキに連れられて両親と再会する。
+@setting ガンガー河畔、ヴァールミーキの劇の上演場
+
+P
+s: (tataḥ praviśati lakṣmaṇaḥ)
+j: （ラクシュマナが登場する）
+s: {lakṣmaṇaḥ} bho bhoḥ, adya khalu bhagavatā vālmīkinā sabrahmakṣatrapaurajānapadāḥ prajāḥ sahāsmābhir āhūya kṛtsna eva sadevāsuratiryaguraganāyakanikāyo jaṅgamaḥ sthāvaraś ca bhūtagrāmaḥ svaprabhāvena saṃnidhāpitaḥ. ādiṣṭaś cāham āryeṇa — vatsa lakṣmaṇa, bhagavatā vālmīkinā svakṛtim apsarobhiḥ prayujyamānāṃ draṣṭum upanimantritāḥ smaḥ. tad gaṅgātīram ātodyasthānam upagamya kriyatāṃ samājasaṃniveśa iti. kṛtaś ca martyāmartyasya bhūtagrāmasya samucitasthānasaṃniveśo mayā. ayaṃ tu —
+j: {ラクシュマナ} さてさて、今日ヴァールミーキ尊者は、バラモン、クシャトリヤ、都と地方の民をわれらとともに招き、さらに御自身の神通力によって、神々、阿修羅、獣、蛇の首領たちの群れ、動くもの動かぬものあらゆる生きものを呼び集められた。兄上は私にこう命じられた——「ラクシュマナよ、ヴァールミーキ尊者は、御自作を天女たちが演じるのを見に来るよう、われらを招かれた。だからガンガーの岸の楽の場所へ行って、観客の席をしつらえよ」と。私は、人間と神々の生きものすべてに、それぞれふさわしい席を設けた。さて、こちらへは——
+
+V 1 {lakṣmaṇaḥ}
+s: rājyāśramanivāse 'pi prāptakaṣṭamunivrataḥ /
+s: vālmīkigauravād ārya ita evābhivartate
+j: 王国を庵とするような暮らしのうちにも、苦しい聖仙の誓いを守っておられる兄上が、
+j: ヴァールミーキ尊者への敬意から、まさにこちらへおいでになる。
+
+N
+n: *rājyāśrama* —「王国という庵」。ラーマにとって王位は安楽ではなく、禁欲の修行の場にほかならない。
+
+P
+s: (tataḥ praviśati rāmaḥ)
+j: （ラーマが登場する）
+s: {rāmaḥ} vatsa lakṣmaṇa, api sthitā raṅgaprekṣakāḥ.
+j: {ラーマ} ラクシュマナ、観客は席についたか。
+s: {lakṣmaṇaḥ} atha kim.
+j: {ラクシュマナ} はい。
+s: {rāmaḥ} imau punar vatsau kuśalavau kumāracandraketusadṛśīṃ sthānapratipattiṃ lambhayitavyau.
+j: {ラーマ} それから、この坊やたち、クシャとラヴァには、チャンドラケートゥ王子と同じ待遇の席を与えるように。
+s: {lakṣmaṇaḥ} prabhusnehapratyayāt tathaiva kṛtam. idaṃ cāstīrṇaṃ rājāsanam. tad upaviśatv āryaḥ.
+j: {ラクシュマナ} 兄上のお気持ちを察して、すでにそのようにいたしました。こちらに王座も敷いてございます。どうぞお座りください。
+s: {rāmaḥ} (upaviśati)
+j: {ラーマ} （座る）
+s: {lakṣmaṇaḥ} prastūyatāṃ bhoḥ.
+j: {ラクシュマナ} さあ、始めよ。
+s: {sūtradhāraḥ} (praviśya) bho bho bhagavān bhūtārthavādī prācetasaḥ sasthāvarajaṅgamaṃ jagad ājñāpayati — yad idam asmābhir ārṣeṇa cakṣuṣā samudvīkṣya pāvanaṃ karuṇādbhutarasaṃ ca kiṃcid upanibaddhaṃ, tatra kāvyagauravād avadhātavyam iti.
+j: {舞台監督} （登場して）皆さま、真実を語るプラーチェータサ尊者が、動くもの動かぬものを含む世界にこう告げられます——「聖仙の眼で見とおして、私が書きあげた、清らかで、悲愴と驚異の情趣にみちたこの作品に、詩の重みを思って、心して耳を傾けよ」と。
+
+N
+n: ここから劇中劇（*garbhāṅka*）が始まる。ヴァールミーキの書いた劇を天女たちが演じ、捨てられた後のシーターの身に起きたことが上演される。ラーマは観客としてそれを見る。
+
+P
+s: {rāmaḥ} etad uktaṃ bhavati — sākṣātkṛtadharmāṇa ṛṣayaḥ. teṣām ṛtaṃbharāṇi bhagavatāṃ parorajāṃsi prajñānāni na kvacid vyāhanyanta iti nābhiśaṅkanīyāni.
+j: {ラーマ} つまりこういうことだ——聖仙たちは法を目のあたりに見た人々である。その尊い方々の、真理をたたえ、塵を超えた智慧は、どこにおいても妨げられることがない。だから疑ってはならない、と。
+
+N
+n: *sākṣātkṛtadharmāṇaḥ* —「法を直観した者」。ヤースカ『ニルクタ』I.20 の聖仙の定義を踏まえる。*ṛtaṃbhara* —「真理を担う」（『ヨーガ・スートラ』I.48）。
+
+P
+s: (nepathye) hā āryaputra, hā kumāra lakṣmaṇa, ekākinīm aśaraṇām araṇye āsannaprasavavedanāṃ hatāśāḥ śvāpadā mām abhilaṣanti. sāham idānīṃ mandabhāginī bhāgīrathyām ātmānaṃ nikṣepsyāmi.
+j: （舞台裏で）ああ、あなた、ああ、ラクシュマナ王子——森のなかで頼る者もなくひとり、産みの苦しみの迫る私を、残忍な獣たちがねらっている。不運な私は、いまこそガンガーに身を投げます。
+s: {lakṣmaṇaḥ} (ātmagatam) kaṣṭaṃ batānyad eva kim api.
+j: {ラクシュマナ} （傍白）ああ、これは何か、ただごとではない。
+
+V 2 {sūtradhāraḥ}
+s: viśvaṃbharātmajā devī rājñā tyaktā mahāvane /
+s: prāptaprasavam ātmānaṃ gaṅgādevyāṃ vimuñcati
+j: 大地の娘である妃が、王に大森林で捨てられ、
+j: 産み月を迎えた身を、ガンガーの女神のなかへ投げる。
+
+P
+s: (iti niṣkrāntaḥ)
+j: （退場）
+s: {rāmaḥ} (sāvegam) devi devi, kṣaṇam avekṣasva.
+j: {ラーマ} （激しく動揺して）妃よ、妃よ、ちょっと待て。
+s: {lakṣmaṇaḥ} ārya, nāṭakam idam.
+j: {ラクシュマナ} 兄上、これは芝居です。
+s: {rāmaḥ} hā devi daṇḍakāraṇyavāsapriyasakhi, eṣa te rāmād vaivāhikaḥ durvipākaḥ.
+j: {ラーマ} ああ妃よ、ダンダカの森の暮らしの愛しい伴侶よ、ラーマとの結婚がもたらしたのは、このむごい結末なのか。
+s: {lakṣmaṇaḥ} ārya, dṛśyatāṃ tāvat prabandhārthaḥ.
+j: {ラクシュマナ} 兄上、ともかく劇の筋をごらんください。
+s: {rāmaḥ} eṣa sajjo 'smi vajramayaḥ.
+j: {ラーマ} 金剛のように心を固めて、見る用意はできている。
+s: (tataḥ praviśaty utsaṅgitaikaikadārakābhyāṃ pṛthivīgaṅgābhyām avalambitā sītā)
+j: （それぞれ赤子をひとりずつ膝に抱いた大地の女神とガンガーの女神に支えられて、シーターが登場する）
+s: {rāmaḥ} vatsa lakṣmaṇa, asaṃvijñātapadanibandhanam andhatamasam iva praviśāmi. dhāraya mām.
+j: {ラーマ} ラクシュマナ、足もとのよりどころもない真っ暗闇に入っていくようだ。私を支えてくれ。
+
+V 3 {devyau}
+s: samāśvasihi kalyāṇi diṣṭyā vaidehi vardhase /
+s: antarjale prasūtāsi raghuvaṃśadharau sutau
+j: 気をたしかに、吉祥な人よ。ヴァイデーヒーよ、めでたいことです。
+j: そなたは水のなかで、ラグ家を担う二人の子を産んだのです。
+
+P
+s: {sītā} (samāśvasya) diṣṭyā dārakau prasūtāsmi. hā āryaputra. (iti mūrcchati)
+j: {シーター} （気をとりなおして）うれしい、男の子をふたり産んだのね。ああ、あなた。（気を失う）
+s: {lakṣmaṇaḥ} (pādayor nipatya) ārya ārya, diṣṭyā vardhāmahe. kalyāṇaprarohī raghuvaṃśaḥ. (vilokya) hā hā, kathaṃ kṣubhitabāṣpotpīḍanirbharaḥ pramugdha evāryaḥ. (vījayati)
+j: {ラクシュマナ} （足もとにひれ伏して）兄上、兄上、めでたいことです。ラグ家に吉祥な若芽が生まれました。（見て）ああ、ああ、こみあげる涙にあふれて、兄上は気を失ってしまわれた。（あおぐ）
+s: {pṛthivī} vatse, samāśvasihi.
+j: {大地の女神} 娘よ、しっかりしなさい。
+s: {sītā} (samāśvasya) bhagavati, kā tvam, iyaṃ ca.
+j: {シーター} （気をとりなおして）女神さま、あなたはどなたですか。そしてこちらの方は。
+s: {pṛthivī} iyaṃ te śvaśurakuladevatā bhāgīrathī.
+j: {大地の女神} こちらは、そなたの夫の家の守り神バーギーラティー（ガンガー）です。
+s: {sītā} bhagavati, namas te.
+j: {シーター} 女神さま、礼拝いたします。
+s: {bhāgīrathī} cāritrocitāṃ kalyāṇasaṃpadam adhigaccha.
+j: {ガンガー} その貞節にふさわしい幸いを得なさい。
+s: {lakṣmaṇaḥ} anugṛhītāḥ smaḥ.
+j: {ラクシュマナ} ありがたいことです。
+s: {bhāgīrathī} iyaṃ tu jananī te viśvaṃbharā.
+j: {ガンガー} そしてこちらは、そなたの母、万物を支える大地です。
+s: {sītā} hā amba, īdṛśy ahaṃ tvayā dṛṣṭā.
+j: {シーター} ああ、お母さま、こんな姿の私を見られてしまった。
+s: {pṛthivī} ehi vatse, ehi putri. (iti sītām āliṅgya mūrcchati)
+j: {大地の女神} おいで、娘よ、おいで、わが子よ。（シーターを抱きしめて気を失う）
+s: {lakṣmaṇaḥ} (saharṣam) diṣṭyā gaṅgāpṛthivībhyām abhyupapannāryā.
+j: {ラクシュマナ} （喜んで）よかった、義姉上はガンガーと大地の女神に助けられた。
+s: {rāmaḥ} (avalokya) karuṇataraṃ khalv etad vartate.
+j: {ラーマ} （見て）いよいよ哀れなことになってきた。
+s: {bhāgīrathī} viśvaṃbharāpi nāma vyathata iti jitam apatyasnehena. yad vā sarvasādhāraṇo hy eṣa manaso mohagranthir antaścetanāvatām upaplavaḥ saṃsāratantuḥ. devi bhūtadhātri, vatse vaidehi, samāśvasihi samāśvasihi.
+j: {ガンガー} 万物を支える大地でさえ苦しむとは、子への愛はなんと強いことか。いや、これは心をもつあらゆるものに共通の、心の迷いの結び目、浮き世の糸であり、避けられない災いなのです。生きとし生けるものを支える女神よ、娘ヴァイデーヒーよ、気をたしかに、たしかに。
+s: {pṛthivī} (āśvasya) devi, sītāṃ prasūya katham āśvasimi —
+j: {大地の女神} （息を吹きかえして）女神よ、シーターを産んだ私が、どうして落ち着けましょう——
+
+V 4
+s: {pṛthivī} soḍhaś ciraṃ rākṣasamadhyavāsas / tyāgo dvitīyas tu suduḥsaho 'syāḥ /
+s: {bhāgīrathī} ko nāma pākābhimukhasya jantor / dvārāṇi daivasya pidhātum īṣṭe
+j: {大地の女神} 羅刹のなかに長く住むことにも、この子は耐えた。
+j: けれど二度目に捨てられたことは、とても耐えがたい。
+j: {ガンガー} 業の実りが熟そうとしている生きものに対して、
+j: だれが運命の門を閉ざすことができましょう。
+
+N
+n: 一偈を二人の女神が分けて語る。後半は宿業（*karmavipāka*）の不可避を説く格言。
+
+P
+s: {pṛthivī} bhagavati bhāgīrathi, sadṛśam uktam. ayuktam etad rāmabhadrasya —
+j: {大地の女神} 尊きガンガーよ、もっともです。けれどラーマのしたことは、ふさわしくない——
+
+V 5 {pṛthivī}
+s: na pramāṇīkṛtaḥ pāṇir bālye bālena pīḍitaḥ /
+s: nāhaṃ na janako nāgnir nānuvṛttir na saṃtatiḥ
+j: 幼い日に、幼い彼が取ったこの子の手も、
+j: この私も、ジャナカも、火神も、この子の献身も、子孫のことも、何ひとつ彼は重んじなかった。
+
+P
+s: {sītā} hā āryaputraṃ smāritāsmi.
+j: {シーター} ああ、あの人のことを思い出させられてしまう。
+s: {pṛthivī} āḥ, kas tavāryaputraḥ.
+j: {大地の女神} ふん、だれがおまえの「あの人」なのです。
+s: {sītā} (salajjam) yathā vāmā bhaṇati.
+j: {シーター} （恥じらって）お母さまの、意地悪なおっしゃりようね。
+s: {rāmaḥ} amba pṛthivi, īdṛśo 'smi.
+j: {ラーマ} 母なる大地よ、私はまさにそういう男です。
+s: {bhāgīrathī} bhagavati vasuṃdhare, śarīram asi saṃsārasya. tat kim asaṃviddāneva jāmātre kupyasi —
+j: {ガンガー} 尊き大地よ、あなたは世界の体そのもの。それなのに、どうしてわけを知らない者のように、婿に腹を立てるのです——
+
+V 6 {bhāgīrathī}
+s: ghoraṃ loke vitatam ayaśo yā ca vahnau viśuddhir / laṅkādvīpe katham iva janas tām iha śraddadhātu /
+s: ikṣvākūṇāṃ kuladhanam idaṃ yat samārādhanīyaḥ / kṛtsno lokas tad iha viṣame kiṃ sa vatsaḥ karotu
+j: 世には恐ろしい汚名が広まっていた。ランカー島で火によって潔白を証したことを、
+j: ここの人々がどうして信じられよう。
+j: 世の人すべての心を満たさねばならぬというのが、イクシュヴァーク家の家の宝。
+j: そのような窮地で、あの子にほかに何ができたでしょう。
+
+P
+s: {lakṣmaṇaḥ} avyāhatāntaḥprakāśā hi devatāḥ sattveṣu.
+j: {ラクシュマナ} 神々は、生きものの心の内を、さえぎられることなく見とおしておられるのだ。
+s: {bhāgīrathī} tathāpy eṣa te 'ñjaliḥ.
+j: {ガンガー} それでも、あなたに合掌してお願いします。
+s: {rāmaḥ} amba, anuvṛttas tvayā bhagīrathakule prasādaḥ.
+j: {ラーマ} 母なるガンガーよ、あなたはバギーラタの家に、変わらぬ恵みを注いでくださる。
+s: {pṛthivī} devi, nityaṃ prasannāsmi vaḥ. kiṃ tv āpātaduḥsahasnehasaṃvegenaiva bravīmi. na punar na jānāmi sītāsnehaṃ rāmabhadrasya —
+j: {大地の女神} 女神よ、私はいつもあなたがたに好意をもっています。ただ、不意にこみあげた耐えがたい愛の動揺から、こう言ったまで。ラーマのシーターへの愛を、知らないわけではないのです——
+
+V 7 {pṛthivī}
+s: dahyamānena manasā daivād vatsāṃ vihāya saḥ /
+s: lokottareṇa sattvena prajāpuṇyaiś ca jīvati
+j: 運命によって娘を手放し、燃えるような心を抱えながら、
+j: 彼は世に超えた気丈さと、民の功徳とによって、かろうじて生きているのだ。
+
+N
+n: 第2パーダ、OCR *daivāttvāṃ vihāya* は一音節不足で、文脈（大地がガンガーに向かってシーターのことを語る）から *daivād vatsāṃ vihāya* と解する。
+
+P
+s: {rāmaḥ} sakaruṇā hi guravo garbharūpeṣu.
+j: {ラーマ} 目上の方々は、子どものような者に憐れみ深いものだ。
+s: {sītā} (rudatī kṛtāñjaliḥ) nayatu mām ātmano 'ṅgeṣu vilayam ambā.
+j: {シーター} （泣きながら合掌して）お母さま、私をあなたの体のなかに溶けこませてください。
+s: {rāmaḥ} kim anyad bravītu.
+j: {ラーマ} ほかに何が言えよう。
+s: {bhāgīrathī} śāntam. avilīnā saṃvatsarasahasrāṇi bhūyāḥ.
+j: {ガンガー} 縁起でもない。幾千年も、溶けることなく生きていなさい。
+s: {pṛthivī} vatse, avekṣaṇīyau te putrakau.
+j: {大地の女神} 娘よ、おまえには面倒を見なければならない坊やたちがいるでしょう。
+s: {sītā} anāthāsmi. kim etābhyām.
+j: {シーター} 私は守ってくれる人もいない身です。この子たちがいても何になりましょう。
+s: {rāmaḥ} hṛdaya, vajramayam asi.
+j: {ラーマ} わが心よ、おまえは金剛でできているのか。
+s: {bhāgīrathī} kathaṃ tvaṃ sanāthāpy anāthā.
+j: {ガンガー} 守る者がいるのに、どうして守る者がいないなどと言うのです。
+s: {sītā} kīdṛśaṃ mamābhāgyāyāḥ sanāthatvam.
+j: {シーター} 不運な私に、どんな守り手がいるというのでしょう。
+
+V 8 {devyau}
+s: jaganmaṅgalam ātmānaṃ kathaṃ tvam avamanyase /
+s: āvayor api yatsaṅgāt pavitratvaṃ prakṛṣyate
+j: 世界の吉祥であるそなた自身を、どうしてそなたはさげすむのです。
+j: そなたに触れることで、私たち二人でさえ、いっそう清められるというのに。
+
+P
+s: {lakṣmaṇaḥ} ārya, śrūyatām.
+j: {ラクシュマナ} 兄上、お聞きになりましたか。
+s: {rāmaḥ} śṛṇotu lokaḥ.
+j: {ラーマ} 世の人々よ、聞くがよい。
+s: (nepathye kalakalaḥ)
+j: （舞台裏で騒がしい声）
+s: {rāmaḥ} adbhutataraṃ kim api.
+j: {ラーマ} 何か、もっと不思議なことが起きた。
+s: {sītā} kim ity antarikṣaṃ prajvalati.
+j: {シーター} どうして空が燃えているのでしょう。
+s: {devyau} jñātam —
+j: {二人の女神} わかりました——
+
+V 9 {devyau}
+s: kṛśāśvaḥ kauśiko rāma iti yeṣāṃ gurukramaḥ /
+s: prādurbhavanti tāny eva śastrāṇi saha jṛmbhakaiḥ
+j: クリシャーシュヴァ、カウシカ、ラーマと伝授されてきた
+j: あの神器が、ジュリンバカとともに現れたのです。
+
+P
+s: (nepathye)
+j: （舞台裏で）
+
+V 10
+s: devi sīte namas te 'stu gatir naḥ putrakau hi te /
+s: ālekhyadarśane devo yathāha raghunandanaḥ
+j: シーター妃よ、敬礼いたします。あなたの坊やたちこそ、われらの拠りどころ——
+j: 絵を見たとき、ラグ家の喜びなる陛下が仰せになったとおりに。
+
+N
+n: 第一幕で、ラーマが神器に「そなたの生む子に仕えよ」と命じた場面（第15偈の後）を受ける。
+
+P
+s: {sītā} diṣṭyā astradevatā etāḥ. hā āryaputra, adyāpi te prasādāḥ parisphuranti.
+j: {シーター} まあ、神器の神々なのね。ああ、あなた、あなたのお恵みが、いまもなお輝いている。
+s: {lakṣmaṇaḥ} uktam āsīd āryeṇa — sarvathedānīṃ tvatprasūtim upasthāsyantīti.
+j: {ラクシュマナ} 兄上は確かに仰せになった——「いずれこれらは、そなたの生む子に仕えよう」と。
+
+V 11 {devyau}
+s: namo vaḥ paramāstrebhyo dhanyāḥ smo vaḥ parigrahāt /
+s: kāle dhyātair upastheyaṃ vatsayor bhadram astu vaḥ
+j: 至高の神器たちよ、敬礼いたします。あなたがたが受けいれてくださったことで、私たちは幸いです。
+j: 念じられたときには、この子たちのもとに現れてください。あなたがたに幸いあれ。
+
+N
+n: OCR *paramātmebhyo* は文脈から *paramāstrebhyo*（至高の神器たちに）と解する。
+
+V 12 {rāmaḥ}
+s: kṣubhitāḥ kām api daśāṃ kurvanti mama sāṃpratam /
+s: vismayānandasaṃdarbhajarjarāḥ karuṇormayaḥ
+j: 驚きと喜びの重なりにくだかれ、かき乱された
+j: 悲しみの波が、いま私を何とも言えぬありさまにしている。
+
+P
+s: {devyau} modasva vatse modasva. rāmabhadratulyau te putrakāv idānīṃ saṃvṛttau.
+j: {二人の女神} 喜びなさい、娘よ、喜びなさい。そなたの坊やたちは、いまやラーマと並ぶ者となったのです。
+s: {sītā} bhagavatyau, ka etayoḥ kṣatriyocitaṃ karma kariṣyati.
+j: {シーター} 女神さまがた、だれがこの子たちに、クシャトリヤにふさわしい儀礼を授けてくれるのでしょう。
+
+V 13 {rāmaḥ}
+s: eṣā vasiṣṭhaguptānāṃ raghūṇāṃ vaṃśanandinī /
+s: kaṣṭaṃ sītāpi sutayoḥ saṃskāraṃ nābhivindati
+j: ヴァシシュタに守られてきたラグ家の、家系を喜ばせるこの人——
+j: ああ、そのシーターさえも、わが子のための浄めの儀を得られないとは。
+
+N
+n: 第4パーダ、OCR *saṃskāraṃ na vindati* は一音節不足。韻律（anuṣṭubh）から *nābhivindati* と補う。
+
+P
+s: {bhāgīrathī} putri, kiṃ tavānayā cintayā. etau hi vatsau stanyatyāgāt pareṇa bhagavato vālmīker arpayiṣyāmi. sa etayoḥ kṣatrakṛtyaṃ kariṣyati —
+j: {ガンガー} 娘よ、そんな心配はいりません。この坊やたちは、乳離れしたら、私がヴァールミーキ尊者にお預けします。尊者がクシャトリヤの儀礼をしてくださるでしょう——
+
+V 14 {bhāgīrathī}
+s: yathā vasiṣṭhāṅgirasāv ṛṣiḥ prācetasas tathā /
+s: janakānāṃ raghūṇāṃ ca vaṃśayor ubhayor guruḥ
+j: ヴァシシュタとアンギラスの裔（シャターナンダ）がそうであるように、プラーチェータサ仙もまた、
+j: ジャナカ家とラグ家の、両方の家の師なのですから。
+
+P
+s: {rāmaḥ} suvicintitaṃ bhagavatyā.
+j: {ラーマ} 女神はよく考えてくださった。
+s: {lakṣmaṇaḥ} ārya, satyaṃ vijñāpayāmi — tais tair upāyair vatsau kuśalavāv utprekṣe —
+j: {ラクシュマナ} 兄上、正直に申しあげます。いろいろな点から、あの子たちがクシャとラヴァではないかと思うのです——
+
+V 15 {lakṣmaṇaḥ}
+s: etau hi janmasiddhāstrau prāptaprācetasāv ubhau /
+s: āryatulyākṛtī vīrau vayasā dvādaśābdikau
+j: このふたりは生まれながらに神器を具え、ふたりともプラーチェータサ仙のもとにいる。
+j: 兄上と同じ姿をした勇士で、年も十二歳なのですから。
+
+P
+s: {rāmaḥ} vatsāv ity evāhaṃ pariplavamānahṛdayaḥ pramugdho 'smi.
+j: {ラーマ} 「坊やたち」と聞いただけで、私の心は揺れ動き、我を失ってしまう。
+s: {pṛthivī} ehi vatse, pavitrīkuru rasātalam.
+j: {大地の女神} おいで、娘よ、地底の世界を清めておくれ。
+s: {rāmaḥ} hā priye, lokāntaraṃ gatāsi.
+j: {ラーマ} ああ、愛しい人よ、別の世界へ行ってしまうのか。
+s: {sītā} nayatu mām ātmano 'ṅgeṣu vilayam ambā. na śaktāsmīdṛśaṃ jīvalokaparivartam anubhavitum.
+j: {シーター} お母さま、私をあなたの体のなかに溶けこませてください。こんな浮き世の移り変わりには、もう耐えられません。
+s: {rāmaḥ} kim uttaraṃ syāt.
+j: {ラーマ} 何と答えるのだろう。
+s: {pṛthivī} manniyogataḥ stanyatyāgaṃ yāvat putrayor avekṣasva. pareṇa tu yathā te rociṣyate.
+j: {大地の女神} 私の言いつけで、乳離れまでは坊やたちの面倒を見なさい。そのあとは、おまえの好きなように。
+s: {bhāgīrathī} evaṃ tāvat.
+j: {ガンガー} ではそのように。
+s: (iti niṣkrānte devyau sītā ca)
+j: （二人の女神とシーター退場）
+s: {rāmaḥ} kathaṃ vilaya eva vaidehyāḥ saṃpannaḥ. hā devi daṇḍakāraṇyavāsapriyasakhi, hā cāritradevate, lokāntaraṃ paryavasitāsi. (iti mūrcchati)
+j: {ラーマ} なに、ヴァイデーヒーは溶け去ってしまったのか。ああ妃よ、ダンダカの森の暮らしの愛しい伴侶よ、ああ貞節の女神よ、別の世界へ去ってしまったのか。（気を失う）
+s: {lakṣmaṇaḥ} bhagavan vālmīke, paritrāyasva paritrāyasva. eṣa te kāvyārthaḥ.
+j: {ラクシュマナ} ヴァールミーキ尊者、お助けください、お助けください。これがあなたの詩の結末なのですか。
+
+N
+n: 劇中劇の終わり。シーターが大地に溶け去る（*vilaya*）のは『ラーマーヤナ』本来の結末である。ラーマは劇と現実の区別を失って気を失う。ここからバヴァブーティは、伝承とは異なる再会の結末へと物語を転じる。
+
+P
+s: (nepathye) apanīyatām ātodyam. bho bhoḥ sajaṅgamasthāvarāḥ prāṇabhṛto martyāmartyāḥ, paśyatedānīṃ maharṣiṇā bhagavatā vālmīkinābhyanujñātaṃ pavitram āścaryam.
+j: （舞台裏で）楽をとめよ。動くもの動かぬもの、人間も神々も、生きとし生けるものよ、いまこそ見よ、大仙ヴァールミーキ尊者の許した、清らかな奇跡を。
+s: {lakṣmaṇaḥ} (vilokya)
+j: {ラクシュマナ} （見て）
+
+V 16 {lakṣmaṇaḥ}
+s: manthād iva kṣubhyati gāṅgam ambho / vyāptaṃ ca devarṣibhir antarikṣam /
+s: āścaryam āryā saha devatābhyāṃ / gaṅgāmahībhyāṃ salilād udeti
+j: 攪拌されたかのように、ガンガーの水が沸きたち、
+j: 空は神々と聖仙たちに満ちている。
+j: なんと不思議な——義姉上が、ガンガーと大地の
+j: 二人の女神とともに、水のなかから現れる。
+
+P
+s: (punar nepathye)
+j: （ふたたび舞台裏で）
+
+V 17
+s: arundhati jagadvandye gaṅgāpṛthvyau juṣasva nau /
+s: arpiteyaṃ tavāvābhyāṃ sītā puṇyavratā vadhūḥ
+j: 世界に敬われるアルンダティーよ、ガンガーと大地のわれら二人を受けいれたまえ。
+j: われらは清らかな誓いを守るこの嫁シーターを、あなたにお返しします。
+
+P
+s: {lakṣmaṇaḥ} aho āścaryam āścaryam. ārya, paśya paśya. (vilokya) kaṣṭam, adyāpi nocchvasity āryaḥ.
+j: {ラクシュマナ} ああ、不思議だ、不思議だ。兄上、ごらんください、ごらんください。（見て）ああ、兄上はまだ息を吹きかえされない。
+s: (tataḥ praviśaty arundhatī sītā ca)
+j: （アルンダティーとシーターが登場する）
+
+V 18 {arundhatī}
+s: tvarasva vatse vaidehi muñca śālīnaśīlatām /
+s: ehi jīvaya me vatsaṃ priyasparśena pāṇinā
+j: 急ぎなさい、娘ヴァイデーヒーよ、恥じらいを捨てて。
+j: さあ、その愛しい手で触れて、私の子を生きかえらせておくれ。
+
+P
+s: {sītā} (sasaṃbhramaṃ spṛśantī) samāśvasitu samāśvasitv āryaputraḥ.
+j: {シーター} （急いで触れながら）あなた、気をたしかに、気をたしかに。
+s: {rāmaḥ} (samāśvasya sānandam) bhoḥ, kim etat. (dṛṣṭvā saharṣādbhutam) kathaṃ devī. (salajjam) aye, ambā me 'rundhatī, sarve ca prahṛṣyanta ṛṣyaśṛṅgaśāntādayo 'smadguravaḥ.
+j: {ラーマ} （息を吹きかえして喜びに満ち）おお、これは何だ。（見て、喜びと驚きに打たれ）なんと、妃ではないか。（恥じらって）おや、母なるアルンダティーさま、そしてリシュヤシュリンガ尊者、シャーンター姉上ら、目上の方々が皆、喜んでおられる。
+s: {arundhatī} vatsa, eṣā bhagavatī bhagīrathagṛhadevatā suprasannā gaṅgā.
+j: {アルンダティー} 坊や、こちらがバギーラタの家の守り神、たいそうお喜びのガンガーさまです。
+s: (nepathye) jagatpate rāmacandra, smaryatām ālekhyadarśane māṃ praty ātmano vacanaṃ yathā — sā tvam amba snuṣāyām arundhatīva sītāyāṃ śivānudhyānaparā bhaveti. tad anṛṇāsmi jātā.
+j: （舞台裏で）世界の主ラーマチャンドラよ、絵を見たときあなたが私に言ったことを思い出しなさい——「母なる女神よ、アルンダティーさまのように、嫁なるシーターの幸いを念じていてください」と。私はその負い目を果たしたのです。
+s: {arundhatī} iyaṃ te śvaśrūr bhagavatī vasuṃdharā.
+j: {アルンダティー} こちらがあなたの義母、尊き大地の女神です。
+s: (punar nepathye) uktam āsīd āyuṣmatā vatsāyāḥ parityāge yathā — bhagavati vasuṃdhare, ślāghyāṃ duhitaram avekṣasva jānakīm iti. tad adhunā kṛtavacanāsmi prabhor vatsasya.
+j: （ふたたび舞台裏で）娘を捨てたとき、健やかなあなたはこう言いましたね——「尊き大地の女神よ、誉れ高いあなたの娘ジャーナキーを見守りたまえ」と。いま、わが子でもある主のことばを、私は果たしたのです。
+s: {rāmaḥ} kathaṃ kṛtamahāparādho bhagavatībhyām anukampitaḥ. praṇamāmi vaḥ.
+j: {ラーマ} 大きな罪を犯した私を、二人の女神が憐れんでくださるとは。礼拝いたします。
+
+N
+n: 第一幕でのラーマの祈り——ガンガーへの「嫁シーターの幸いを念じて」（第23偈の後）と、大地への「娘ジャーナキーを見守りたまえ」（第50偈の後）——が、ここで二人の女神によって果たされる。
+
+P
+s: {arundhatī} bho bhoḥ paurajānapadāḥ, iyam adhunā bhagavatībhyāṃ jāhnavīvasuṃdharābhyām evaṃ praśasyamānā mamārundhatyāḥ samarpitā, pūrvaṃ ca bhagavatā vaiśvānareṇa nirṇītapuṇyacāritrā, sabrahmakaiś ca devaiḥ saṃstutā sāvitrakulavadhūr devayajanasaṃbhavā sītā devī parigṛhyatām iti kathaṃ bhavanto manyante.
+j: {アルンダティー} さて、町と村の民よ。いまジャーフナヴィー（ガンガー）と大地の両女神にこのように讃えられ、このアルンダティーに託された人——かつて尊き火神にその清らかな貞節を証され、ブラフマーをはじめ神々に讃えられた、太陽の家の嫁、祭場より生まれたシーター妃を、迎え入れるべきだとは、あなたがたは思いませんか。
+
+N
+n: アルンダティーによるシーターの公の潔白宣言。第一幕でシーター追放の原因となった民衆の声に、いまや最高の権威がじかに問いかける。
+
+P
+s: {lakṣmaṇaḥ} ārya, evam āryayārundhatyā nirbhartsitāḥ paurajānapadāḥ kṛtsnaś ca bhūtagrāma āryāṃ namaskurvanti. lokapālāḥ saptarṣayaś ca puṣpavṛṣṭibhir upatiṣṭhante.
+j: {ラクシュマナ} 兄上、こうしてアルンダティーさまに叱りつけられて、町と村の民も、生きとし生けるものもみな、義姉上を礼拝しております。世界の守護神たちと七聖仙も、花の雨を降らせて義姉上を讃えています。
+s: {arundhatī} jagatpate rāmacandra —
+j: {アルンダティー} 世界の主ラーマチャンドラよ——
+
+V 19 {arundhatī}
+s: niyojaya yathādharmaṃ priyāṃ tvaṃ dharmacāriṇīm /
+s: hiraṇmayyāḥ pratikṛteḥ puṇyāṃ prakṛtim adhvare
+j: 法にかなって、愛しい法の伴侶を、
+j: 祭祀において、黄金の像のかわりに、清らかな本人として、伴いなさい。
+
+P
+s: {sītā} (svagatam) jānāty āryaputraḥ sītāyā duḥkhaṃ parimārṣṭum.
+j: {シーター} （傍白）あの人は、シーターの悲しみをぬぐい去るすべを知っている。
+s: {rāmaḥ} yathā bhagavaty ādiśati.
+j: {ラーマ} 尊きお方の仰せのとおりに。
+s: {lakṣmaṇaḥ} kṛtārtho 'smi.
+j: {ラクシュマナ} 私の願いはかないました。
+s: {sītā} pratyujjīvitāsmi.
+j: {シーター} 私は生きかえりました。
+s: {lakṣmaṇaḥ} ārye, eṣa nirlajjo lakṣmaṇaḥ praṇamati.
+j: {ラクシュマナ} 義姉上、恥知らずのラクシュマナが、礼拝いたします。
+s: {sītā} vatsa, īdṛśas tvaṃ ciraṃ jīva.
+j: {シーター} 坊や、いつまでもそのままのあなたで、長生きしてね。
+s: {arundhatī} bhagavan vālmīke, upanīyatām imau sītāgarbhasaṃbhavau rāmabhadrasya putrau kuśalavau.
+j: {アルンダティー} ヴァールミーキ尊者、シーターの胎から生まれたラーマの子、クシャとラヴァを、ここへお連れください。
+s: {rāmalakṣmaṇau} diṣṭyā tathaivaitat.
+j: {ラーマとラクシュマナ} ああ、やはりそうだったのだ。
+s: {sītā} (sabāṣpākulā) kutra mama putrakau.
+j: {シーター} （涙にくれて）私の坊やたちはどこ。
+s: (tataḥ praviśati vālmīkiḥ kuśalavau ca)
+j: （ヴァールミーキ、クシャ、ラヴァが登場する）
+s: {vālmīkiḥ} vatsau kuśalavau, eṣa vāṃ raghupatiḥ pitā, eṣa lakṣmaṇaḥ kaniṣṭhatātaḥ, eṣā sītā jananī, eṣa rājarṣir janako mātāmahaḥ.
+j: {ヴァールミーキ} クシャ、ラヴァよ、こちらがおまえたちの父、ラグ家の主。こちらが叔父のラクシュマナ。こちらが母のシーター。そしてこちらが母方の祖父、王仙ジャナカだ。
+s: {sītā} (saharṣakaruṇādbhutaṃ vilokya) kathaṃ tātaḥ.
+j: {シーター} （喜びと悲しみと驚きにうたれて見つめ）まあ、お父さま。
+s: {kuśalavau} hā tāta, hā amba, hā mātāmaha.
+j: {クシャとラヴァ} ああ、お父さま、ああ、お母さま、ああ、おじいさま。
+s: {rāmalakṣmaṇau} (saharṣam āliṅgya) nanu vatsau, puṇyaiḥ prāptau sthaḥ.
+j: {ラーマとラクシュマナ} （喜びに抱きしめて）坊やたち、功徳のおかげで、おまえたちに会えたのだ。
+s: {sītā} ehi jāta kuśa, ehi jāta lava, cirasya pariṣvajethāṃ māṃ punarjanmāntaragatāṃ jananīm.
+j: {シーター} おいで、坊やクシャ、おいで、坊やラヴァ。生まれかわってまたやって来たようなこの母を、久しぶりに抱きしめておくれ。
+s: {kuśalavau} (tathā kṛtvā) dhanyau svaḥ.
+j: {クシャとラヴァ} （抱きしめて）ぼくたちは幸せです。
+s: {sītā} bhagavan, eṣāhaṃ praṇamāmi.
+j: {シーター} 尊者さま、礼拝いたします。
+s: {vālmīkiḥ} vatse, īdṛśy eva ciraṃ bhūyāḥ.
+j: {ヴァールミーキ} 娘よ、いつまでもこのように幸せであれ。
+s: {sītā} amhahe, tātaḥ kulagurur āryajanaḥ sabhartṛkā cāryā śāntādevī salakṣmaṇāḥ suprasannā āryaputracaraṇāḥ samaṃ kuśalavābhyāṃ dṛśyante. tan nirbharāsmy ānandena.
+j: {シーター} まあ、お父さま、家の師、目上の方々、夫君とご一緒のシャーンター義姉さま、ラクシュマナ、そして上機嫌のあなた——みんなが、クシャとラヴァといっしょに見られるなんて。喜びで胸がいっぱいです。
+s: (nepathye kalakalaḥ)
+j: （舞台裏で騒がしい声）
+s: {vālmīkiḥ} (utthāyāvalokya ca) utkhātalavaṇo madhureśvaraḥ prāptaḥ.
+j: {ヴァールミーキ} （立ちあがって見やり）ラヴァナを根こそぎにした、マドゥラーの王（シャトルグナ）が着いたぞ。
+s: {lakṣmaṇaḥ} sānuṣaṅgāṇi kalyāṇāni.
+j: {ラクシュマナ} 幸いは幸いを呼ぶものですね。
+s: {rāmaḥ} sarvam idam anubhavann api na pratyemi. yad vā prakṛtir iyam abhyudayānām.
+j: {ラーマ} このすべてを味わいながら、それでも信じられない。いや、繁栄とはこういうものなのだろう。
+s: {vālmīkiḥ} rāmabhadra, ucyatāṃ kiṃ te bhūyaḥ priyam upakaromi.
+j: {ヴァールミーキ} ラーマよ、言うがよい。このうえ何を、そなたの喜びのためにしてやろうか。
+s: {rāmaḥ} ataḥ param api priyam asti. tathāpīdam astu —
+j: {ラーマ} これ以上の喜びなどありましょうか。それでも、こうありますように——
+
+N
+n: 第一幕の終わりでラーマが討伐を命じたラヴァナ（クンビーナシーの子）を、シャトルグナが討ち果たして帰還した。喜びが重なる大団円。
+
+V 20 {rāmaḥ}
+s: pāpmabhyaś ca punāti vardhayati ca śreyāṃsi seyaṃ kathā / maṅgalyā ca manoharā ca jagato māteva gaṅgeva ca /
+s: tām etāṃ paribhāvayantv abhinayair vinyastarūpāṃ budhāḥ / śabdabrahmavidaḥ kaveḥ pariṇatāṃ prājñasya vāṇīm imām
+j: 罪から清め、幸いを増すこの物語は、
+j: 母のように、ガンガーのように、世界にとって吉祥で、心を魅するもの——
+j: ことばのブラフマンを知る、賢き詩人の熟したこのことばを、
+j: 演技によって形を与え、賢者たちが味わい深めてゆきますように。
+
+N
+n: 結びの祝詞（*bharatavākya*）。慣例どおり作品とその上演を祝福する。「ことばのブラフマンを知る詩人」は、ヴァールミーキであると同時に作者バヴァブーティ自身をも指す（第一幕の序幕で、ことばの女神が彼に従うと述べられた）。
+
+P
+s: (iti niṣkrāntāḥ sarve)
+j: （一同退場）

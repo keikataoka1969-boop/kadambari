@@ -1,1204 +1,1801 @@
-<title>Kausalyājanakasamāgama</title>
+<!doctype html>
+<html lang="ja" data-script="iast">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uttararāmacarita IV</title>
+<meta name="description" content="バヴァブーティ『ウッタララーマチャリタ』第四幕「カウサリヤーとジャナカの対面」— Kale 版に基づくサンスクリット・日本語対訳">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@400;700&display=swap');
-
-  :root {
-    --bg: #f7f3eb;
-    --bg-alt: #f0ead8;
-    --heading: #1a1a2e;
-    --gold: #b8943e;
-    --ochre: #8b4513;
-    --text: #2d2d2d;
-    --text-light: #5a5a5a;
-    --border: #d4c9a8;
-    --note-bg: #faf6ed;
+:root {
+  --ground: #f8f8f5;
+  --panel: #f0f0eb;
+  --ink: #1c2130;
+  --muted: #5e6574;
+  --faint: #8a909c;
+  --rule: #e1e0d8;
+  --indigo: #2f4291;
+  --indigo-soft: #e6e9f5;
+  --sindura: #a3402a;
+  --note: #f3f2ec;
+  --focus: #2f4291;
+  --f-iast: "Gentium Book Plus", "Noto Serif", "Times New Roman", serif;
+  --f-dev: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", "Sanskrit Text", serif;
+  --f-jp: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-ui: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #12141a; --panel: #1a1d25; --ink: #e7e4dc; --muted: #a0a6b2; --faint: #747a87;
+    --rule: #2a2e38; --indigo: #a8b6ff; --indigo-soft: #232a45; --sindura: #e58d73; --note: #171a21;
+    --focus: #a8b6ff; color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --ground: #12141a; --panel: #1a1d25; --ink: #e7e4dc; --muted: #a0a6b2; --faint: #747a87;
+  --rule: #2a2e38; --indigo: #a8b6ff; --indigo-soft: #232a45; --sindura: #e58d73; --note: #171a21;
+  --focus: #a8b6ff; color-scheme: dark;
+}
 
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #1a1a2e;
-      --bg-alt: #22223a;
-      --heading: #e8dcc8;
-      --gold: #d4a843;
-      --ochre: #c87941;
-      --text: #d4cbb8;
-      --text-light: #9a917e;
-      --border: #3a3a52;
-      --note-bg: #1e1e32;
-    }
-  }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 4.5rem; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font-family: var(--f-jp); font-size: 16px; line-height: 1.85;
+}
+a { color: var(--indigo); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 3px; }
 
-  :root[data-theme="dark"] {
-    --bg: #1a1a2e;
-    --bg-alt: #22223a;
-    --heading: #e8dcc8;
-    --gold: #d4a843;
-    --ochre: #c87941;
-    --text: #d4cbb8;
-    --text-light: #9a917e;
-    --border: #3a3a52;
-    --note-bg: #1e1e32;
-  }
+/* script switching */
+.dev, .iast { display: none; }
+html[data-script="dev"] .dev { display: inline; }
+html[data-script="iast"] .iast { display: inline; }
+html[data-script="both"] .dev, html[data-script="both"] .iast { display: inline; }
+html[data-script="both"] .tx .iast, html[data-script="both"] .vtext .iast,
+html[data-script="both"] .sec-skt .iast, html[data-script="both"] .h-skt .iast,
+html[data-script="both"] .colophon .iast { display: block; color: var(--muted); font-size: .86em; margin-top: .25em; }
+html[data-script="both"] .sp .iast { display: none; }
+.dev { font-family: var(--f-dev); font-size: 1.12em; line-height: 1.75; }
+.iast { font-family: var(--f-iast); }
 
-  body {
-    font-family: 'Noto Serif', 'Noto Serif JP', Georgia, serif;
-    background: var(--bg);
-    color: var(--text);
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-    line-height: 1.85;
-  }
+/* top bar */
+.bar {
+  position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center;
+  gap: .5rem 1.25rem; padding: .55rem max(16px, calc((100% - 1120px) / 2));
+  background: color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); font-family: var(--f-ui); font-size: 14px;
+}
+.brand { color: var(--ink); text-decoration: none; font-weight: 500; }
+.brand .dev { font-size: 1.15em; }
+html[data-script="both"] .brand .iast { display: none; }
+.acts { display: flex; gap: 2px; flex-wrap: wrap; }
+.acts a {
+  min-width: 2.4em; text-align: center; padding: .2em .55em; border-radius: 6px; color: var(--muted);
+  text-decoration: none; font-variant-numeric: tabular-nums; font-family: var(--f-iast); font-size: 15px;
+}
+.acts a:first-child { font-family: var(--f-ui); font-size: 13px; }
+.acts a:hover { background: var(--panel); color: var(--ink); }
+.acts a[aria-current="page"] { background: var(--indigo); color: var(--ground); }
+.controls { margin-left: auto; display: flex; gap: .5rem; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+.seg button, .toggle {
+  font: inherit; font-size: 13px; padding: .3em .75em; border: 0; background: transparent; color: var(--muted); cursor: pointer;
+}
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[data-script="dev"] { font-family: var(--f-dev); font-size: 15px; padding-top: .15em; padding-bottom: .15em; }
+.seg button[aria-pressed="true"] { background: var(--indigo-soft); color: var(--indigo); font-weight: 700; }
+.toggle { border: 1px solid var(--rule); border-radius: 8px; }
+.toggle[aria-pressed="true"] { background: var(--indigo-soft); color: var(--indigo); font-weight: 700; }
 
-  h1 {
-    font-size: 1.6rem;
-    color: var(--heading);
-    text-align: center;
-    margin-bottom: 0.3rem;
-    text-wrap: balance;
-  }
+main { max-width: 1120px; margin: 0 auto; padding: 0 16px 4rem; }
 
-  .subtitle {
-    text-align: center;
-    color: var(--gold);
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
-  }
+/* act head */
+.act-head { padding: 3.2rem 0 1.6rem; border-bottom: 1px solid var(--rule); margin-bottom: 1rem; }
+.act-no { margin: 0; font-family: var(--f-ui); font-size: 13px; letter-spacing: .12em; color: var(--sindura); font-weight: 700; }
+.act-no .roman { margin-left: .8em; color: var(--faint); font-family: var(--f-iast); letter-spacing: .08em; font-weight: 400; }
+.act-head h1 { margin: .35rem 0 .8rem; font-weight: 600; line-height: 1.35; text-wrap: balance; }
+.h-jp { display: block; font-size: clamp(1.9rem, 4.5vw, 2.8rem); }
+.h-skt { display: block; font-size: 1.15rem; font-weight: 400; color: var(--muted); margin-top: .35rem; }
+.h-skt .iast { font-style: italic; }
+.synopsis { max-width: 46em; margin: 0 0 .6rem; color: var(--ink); }
+.act-meta { margin: 0; font-family: var(--f-ui); font-size: 13px; color: var(--faint); }
 
-  .subtitle-jp {
-    text-align: center;
-    color: var(--text-light);
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-  }
+.colhead {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2.75rem; position: sticky; top: 2.9rem; z-index: 5;
+  background: var(--ground); padding: .45rem 0 .35rem; border-bottom: 1px solid var(--rule);
+  font-family: var(--f-ui); font-size: 11px; letter-spacing: .14em; color: var(--faint);
+}
 
-  .section-label {
-    text-align: center;
-    color: var(--gold);
-    font-size: 0.9rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin: 2rem 0 1rem;
-    padding: 0.5rem 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
+/* rows */
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 2.75rem; padding: .55rem 0; }
+.row + .row { border-top: 1px dashed color-mix(in srgb, var(--rule) 70%, transparent); }
+.skt { font-size: 1.04rem; line-height: 1.8; }
+.skt .tx .iast { font-size: 1.03rem; }
+.jp { font-size: .98rem; }
+.sp { display: block; font-size: 12.5px; letter-spacing: .06em; color: var(--indigo); margin-bottom: .1rem; }
+.skt .sp .iast { font-family: var(--f-iast); font-variant: small-caps; letter-spacing: .07em; font-size: 15px; }
+.skt .sp .dev { font-size: 15px; }
+.jp .sp { font-family: var(--f-ui); font-weight: 700; }
+.sd { color: var(--muted); font-style: italic; }
+.jp .sd { font-style: normal; }
+.row.stage { padding: .25rem 0; }
+.row.stage .tx { font-size: .93em; }
 
-  .verse-pair, .prose-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin: 1.2rem 0;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
-  }
+/* section headings */
+.sec {
+  display: flex; flex-direction: column; align-items: center; gap: .1rem; margin: 2.4rem 0 1rem; padding: .8rem 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); font-weight: 400; text-align: center;
+}
+.sec-skt { font-size: 1.05rem; }
+.sec-skt .iast { font-style: italic; }
+.sec-jp { font-family: var(--f-ui); font-size: 12.5px; letter-spacing: .14em; color: var(--sindura); font-weight: 700; }
 
-  .verse-num {
-    color: var(--gold);
-    font-size: 0.8rem;
-    display: block;
-    margin-bottom: 0.3rem;
-  }
+/* verses */
+.verse { margin: .9rem 0; padding: .9rem 1.1rem 1rem; background: var(--panel); border-radius: 10px; }
+.verse figcaption {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .9rem; margin-bottom: .2rem;
+  font-family: var(--f-ui); font-size: 12px; color: var(--faint);
+}
+.vnum { font-family: var(--f-iast); font-size: 15px; font-weight: 700; color: var(--indigo); text-decoration: none; font-variant-numeric: tabular-nums; }
+.vnum:hover { text-decoration: underline; }
+.metre { font-family: var(--f-iast); font-style: italic; font-size: 14px; color: var(--muted); }
+.vlabel { color: var(--muted); }
+.verse .row { padding: .2rem 0; }
+.vtext { margin: 0; }
+.skt .vtext { font-size: 1.1rem; line-height: 1.9; }
+.skt .vtext .dev { font-size: 1.16em; line-height: 1.85; }
+.jp .vtext { line-height: 1.95; }
+.vsp { display: block; font-family: var(--f-ui); font-size: 12px; letter-spacing: .06em; color: var(--indigo); margin-top: .3rem; }
+.iast .vsp { font-family: var(--f-iast); font-variant: small-caps; font-size: 14px; }
+.interj { display: block; margin: .35rem 0 .45rem; padding-left: .8rem; border-left: 2px solid var(--rule); font-size: .92em; line-height: 1.7; }
+.interj .vsp { margin-top: 0; }
+.interj + br { display: none; }
+.vn { color: var(--faint); font-size: .85em; white-space: nowrap; }
 
-  .sanskrit {
-    font-size: 0.95rem;
-    line-height: 1.9;
-  }
+/* notes */
+.note {
+  margin: -.3rem 0 1.1rem 1.1rem; padding: .7rem 1rem .75rem; background: var(--note);
+  border-left: 2px solid var(--sindura); border-radius: 0 8px 8px 0; font-size: .9rem; line-height: 1.8; color: var(--ink);
+}
+.verse + .note { margin-top: -.55rem; }
+.note-label { display: block; font-family: var(--f-ui); font-size: 11px; font-weight: 700; letter-spacing: .14em; color: var(--sindura); margin-bottom: .15rem; }
+.note p { margin: 0 0 .35rem; max-width: 62em; }
+.note p:last-child { margin-bottom: 0; }
+.note .t { font-family: var(--f-iast); }
+html.no-notes .note { display: none; }
 
-  .japanese {
-    font-size: 0.95rem;
-    line-height: 1.9;
-  }
+.colophon { text-align: center; margin: 3rem 0 1.5rem; font-size: 1.05rem; color: var(--muted); }
+.colophon .iast { font-style: italic; }
+.pager { display: flex; justify-content: space-between; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-family: var(--f-ui); font-size: 14px; }
+.pager .next { margin-left: auto; }
+.foot { max-width: 1120px; margin: 0 auto; padding: 1.5rem 16px 3rem; font-family: var(--f-ui); font-size: 12.5px; color: var(--faint); border-top: 1px solid var(--rule); }
 
-  .speaker {
-    font-weight: 700;
-    color: var(--heading);
-    display: block;
-    margin-bottom: 0.2rem;
-  }
+@media (max-width: 760px) {
+  body { font-size: 15.5px; }
+  html { scroll-padding-top: 1rem; }
+  .bar { position: static; gap: .4rem .8rem; padding: .5rem 16px; }
+  .brand { width: 100%; }
+  .controls { margin-left: 0; }
+  .colhead { display: none; }
+  .row { grid-template-columns: 1fr; gap: .25rem; }
+  .row .jp { padding-left: .8rem; border-left: 2px solid var(--rule); }
+  .verse { padding: .8rem .85rem; margin-left: -4px; margin-right: -4px; }
+  .note { margin-left: .4rem; }
+}
+@media print {
+  .bar, .pager { display: none; }
+  .colhead { position: static; }
+  .verse { break-inside: avoid; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 
-  .stage-dir {
-    font-style: italic;
-    color: var(--ochre);
-    font-size: 0.9rem;
-  }
+/* overview page */
+.toc-head .synopsis { max-width: 50em; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: .75rem; margin-top: 1.4rem; max-width: 760px; }
+.stats div { background: var(--panel); border-radius: 10px; padding: .7rem .9rem; display: flex; flex-direction: column; }
+.stats b { font-family: var(--f-iast); font-size: 2rem; line-height: 1.1; color: var(--indigo); font-variant-numeric: tabular-nums; }
+.stats span { font-family: var(--f-ui); font-size: 12px; color: var(--muted); }
+.toc-h { font-size: 1.35rem; font-weight: 600; margin: 2.6rem 0 .8rem; padding-bottom: .35rem; border-bottom: 1px solid var(--rule); }
+.sub { font-size: 1rem; font-weight: 600; margin: 0 0 .5rem; }
+.lead { max-width: 46em; margin: 0 0 1rem; color: var(--muted); font-size: .95rem; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th { font-family: var(--f-ui); font-size: 12px; font-weight: 700; letter-spacing: .06em; color: var(--muted); text-align: left; padding: .45rem .6rem; border-bottom: 1px solid var(--ink); white-space: nowrap; }
+td { padding: .55rem .6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--f-iast); }
+td.zero { color: var(--faint); }
+td.tot { font-weight: 700; }
+td.ro, .ro { font-family: var(--f-iast); font-weight: 700; color: var(--indigo); }
+td a { color: inherit; text-decoration: none; } td a:hover { color: var(--indigo); text-decoration: underline; }
+.sk { font-family: var(--f-iast); font-style: italic; color: var(--muted); }
+.sk .dev { font-style: normal; }
+html[data-script="both"] .sk .iast { display: none; }
+table.toc td:nth-child(2) a { font-weight: 600; }
+.figwrap { overflow-x: auto; background: var(--panel); border-radius: 10px; padding: .6rem; }
+svg.flow { width: 100%; min-width: 620px; height: auto; display: block; font-family: var(--f-ui); }
+.flow .tl { stroke: var(--ink); stroke-width: 2; } .flow .tl.gap { stroke-dasharray: 3 5; stroke: var(--faint); }
+.flow .node circle { fill: var(--indigo); stroke: var(--panel); stroke-width: 2; }
+.flow .node:hover circle, .flow a:focus-visible circle { fill: var(--sindura); }
+.flow .nl { fill: var(--ground); font-family: var(--f-iast); font-size: 13px; font-weight: 700; text-anchor: middle; }
+.flow .nt { fill: var(--ink); font-size: 12px; text-anchor: middle; }
+.flow .gapl, .flow .cap { fill: var(--muted); font-size: 12px; text-anchor: middle; }
+.flow .cap { fill: var(--sindura); font-weight: 700; letter-spacing: .08em; }
+.flow .br { fill: none; stroke: var(--faint); stroke-width: 1; } .flow .bl { fill: var(--muted); font-size: 11px; text-anchor: middle; }
+.two { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; margin-top: 2rem; align-items: start; }
+.fig { margin: 0; } .fig figcaption, .sub { font-family: var(--f-ui); font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: .4rem; }
+.figcap { font-family: var(--f-ui); font-size: 12px; color: var(--faint); margin: .3rem 0 0; }
+svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast); }
+.chart .grid { stroke: var(--rule); stroke-width: 1; } .chart .axis { stroke: var(--faint); stroke-width: 1; }
+.chart .tick { fill: var(--faint); font-size: 11px; text-anchor: end; }
+.chart .xl { fill: var(--muted); font-size: 13px; text-anchor: middle; font-weight: 700; }
+.chart .val { fill: var(--ink); font-size: 12px; text-anchor: middle; font-variant-numeric: tabular-nums; }
+.chart .mark { fill: var(--indigo); } .chart .hit { fill: transparent; }
+.chart .bar:hover .mark, .chart .bar:focus .mark { fill: var(--sindura); } .chart .bar:focus { outline: none; }
+.syn { display: grid; gap: 1.2rem; }
+.syn-a { padding: 1rem 1.2rem; background: var(--panel); border-radius: 10px; }
+.syn-a h3 { margin: 0 0 .4rem; font-size: 1.1rem; } .syn-a h3 a { color: var(--ink); text-decoration: none; } .syn-a h3 a:hover { color: var(--indigo); }
+.syn-a h3 .ro { margin-right: .7rem; }
+.syn-a > p { margin: 0 0 .8rem; max-width: 50em; }
+.syn-a blockquote { margin: 0; padding: .7rem 1rem; border-left: 2px solid var(--indigo); background: var(--ground); border-radius: 0 8px 8px 0; display: grid; grid-template-columns: 1fr 1fr; gap: .4rem 2rem; }
+.q-skt, .q-jp { margin: 0; line-height: 1.85; font-size: .95rem; } .q-skt .iast { font-style: italic; }
+.syn-a cite { grid-column: 1 / -1; font-style: normal; font-family: var(--f-iast); font-size: 13px; }
+.ednotes { max-width: 50em; font-size: .95rem; } .ednotes p { margin: 0 0 .8rem; }
+@media (max-width: 760px) {
+  .two { grid-template-columns: 1fr; }
+  .syn-a blockquote { grid-template-columns: 1fr; }
+}
 
-  .note-block {
-    background: var(--note-bg);
-    border-left: 3px solid var(--gold);
-    padding: 0.8rem 1rem;
-    margin: 0.8rem 0 1.2rem;
-    font-size: 0.88rem;
-    color: var(--text-light);
-    line-height: 1.7;
-  }
-
-  .note-block strong {
-    color: var(--gold);
-  }
-
-  .end-mark {
-    text-align: center;
-    color: var(--gold);
-    margin-top: 2.5rem;
-    padding-top: 1rem;
-    border-top: 2px solid var(--border);
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-  }
-
-  @media (max-width: 600px) {
-    .verse-pair, .prose-pair {
-      grid-template-columns: 1fr;
-      gap: 0.8rem;
-    }
-    body { padding: 1rem; }
-    h1 { font-size: 1.3rem; }
-  }
 </style>
-
-<h1>Uttararāmacarita — Caturtho'ṅkaḥ</h1>
-<div class="subtitle">Act IV — The Meeting of Kausalyā and Janaka</div>
-<div class="subtitle-jp">ウッタララーマチャリタ 第四幕 — カウサリヤーとジャナカの邂逅</div>
-
-<div class="section-label">Miśra-viṣkambhaka — 混合序幕</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(tataḥ praviśatas tāpasau.)</span><br>
-    <span class="speaker">Ekaḥ —</span>
-    Saudhātake dṛśyatām aya bhūyiṣṭha-saṃnidhāpitātithijanasya samadhi-kārambha-ramaṇīyatā bhagavato Vālmīker āśramapadasya.
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（二人の修行者が登場する。）</span><br>
-    <span class="speaker">第一の修行者 —</span>
-    サウダータキよ、大勢の客人が集まり、もてなしの準備が格別に美しいヴァールミーキ尊者の僧院の様子をご覧なさい。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【1】</span>
-    nīvāraudana-maṇḍam uṣṇa-madhuraṃ sadyaḥ-prasūtā-priyā-<br>
-    pītābhyadhikaṃ tapovana-mṛgaḥ paryāptam ācāmati /<br>
-    gandhena sphuratā manāg anusṛto bhaktes ya sarpiṣmataḥ<br>
-    karkhandhū-phala-miśra-śāka-pacanāmodaḥ paristīryate //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【1】</span>
-    苦行林の鹿は、産まれたばかりの牝鹿が飲んだ残りの、<br>
-    温かく甘い野生米の粥の上澄みを、満ち足りるまで飲む。<br>
-    醍醐入りの飯の立ち昇る香りにそっと誘われ、<br>
-    棗の実を混ぜた野菜煮の薫りが辺り一面に広がる。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Saudhātakiḥ —</span>
-    Svāgatam aneka-prakārāṇāṃ jīrṇa-kūrcānām anadhyāya-kāraṇānām.
-  </div>
-  <div class="japanese">
-    <span class="speaker">サウダータキ —</span>
-    さまざまな白髯の年寄りたちが休日の原因になってくれたことは、まことに歓迎だ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Prathamaḥ —</span>
-    <span class="stage-dir">(vihasya.)</span> Apūrvaḥ ko'pi te bahumāna-hetur guruṣu, Saudhātake.
-  </div>
-  <div class="japanese">
-    <span class="speaker">第一の修行者 —</span>
-    <span class="stage-dir">（笑って。）</span> 長老方への敬意に何か珍しい理由があるのだな、サウダータキよ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Saudhātakiḥ —</span>
-    Bho Dāṇḍāyana, kiṃ-nāmadheya eṣa mahataḥ strī-sārthasya dhuraṃdharo 'dy ātithir āgataḥ.
-  </div>
-  <div class="japanese">
-    <span class="speaker">サウダータキ —</span>
-    ねえダーンダーヤナ、大勢の婦人たちを率いて今日やって来た客人の名は何というのだ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Dāṇḍāyanaḥ —</span>
-    Dhik prahasanam. Nanv ayam Ṛṣyaśṛṅgāśramād Urundhatī-puraskṛtān Mahārāja-Daśarathasya dārān adhiṣṭhāya bhagavān Vasiṣṭhaḥ prāptaḥ. Tat kim evaṃ pralapasi.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ダーンダーヤナ —</span>
-    冗談はよせ。これはリシュヤシュリンガの僧院から、アルンダティーを先頭にダシャラタ大王の妃たちを伴って、ヴァシシュタ尊者がお越しになったのだ。何をたわごとを言っているのだ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Saudhātakiḥ —</span>
-    Huṃ, Vasiṣṭhaḥ.
-    <br><span class="speaker">Dāṇḍāyanaḥ —</span> Atha kim.
-    <br><span class="speaker">Saudhātakiḥ —</span>
-    Mayā punar jñātaṃ vyāghro vṛko vaiṣa iti.
-  </div>
-  <div class="japanese">
-    <span class="speaker">サウダータキ —</span>
-    ふん、ヴァシシュタか。
-    <br><span class="speaker">ダーンダーヤナ —</span> そうだとも。
-    <br><span class="speaker">サウダータキ —</span>
-    僕はまた虎か狼かと思ったよ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Dāṇḍāyanaḥ —</span> Āḥ kim uktaṃ bhavati.
-    <br><span class="speaker">Saudhātakiḥ —</span>
-    Yena parāpatiteniva sā vārākī kapilā kalyāṇī maḍamaḍāyitā.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ダーンダーヤナ —</span> 何だと、それは。
-    <br><span class="speaker">サウダータキ —</span>
-    だって来るなり、あの可哀想な茶色の雌牛がむしゃむしゃ食べられてしまったではないか。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Dāṇḍāyanaḥ —</span>
-    "Samāṃso madhuparkaḥ" ity āmnāyaṃ bahumanyamānāḥ śrotriyāyāgatāya vatsatarīṃ mahokṣaṃ vā nirvapanti gṛhamedhinaḥ. Taṃ hi dharmaṃ dharma-sūtra-kārāḥ samāmananti.
-    <br><span class="speaker">Saudhātakiḥ —</span> Bho nigṛhīto'si.
-    <br><span class="speaker">Dāṇḍāyanaḥ —</span> Katham iva.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ダーンダーヤナ —</span>
-    「マドゥパルカ（蜜の供物）には肉を伴うべし」という聖典の教えを重んじて、来訪した学識ある婆羅門に、家長たちは若牛か大牡牛を供するのだ。法典の著者たちもこの法を説いている。
-    <br><span class="speaker">サウダータキ —</span> おや、やられたな。
-    <br><span class="speaker">ダーンダーヤナ —</span> どういうことだ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Saudhātakiḥ —</span>
-    Yenāgateṣu Vasiṣṭha-miśreṣu vatsatarī viśasitā. Adyaiva paryagatasya rājarṣer Janakasya bhagavatā Vālmīkinā dadhi-madhubhyām eva nirvartito madhuparkaḥ. Vatsatarī punar visarjitā.
-  </div>
-  <div class="japanese">
-    <span class="speaker">サウダータキ —</span>
-    ヴァシシュタ尊者がお着きの時には若牛が殺されたのに、今日到着した王仙ジャナカに対しては、ヴァールミーキ尊者は乳酪と蜜だけでマドゥパルカを用意し、若牛は放してやったではないか。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> madhuparka（マドゥパルカ）は蜜を主成分とする歓迎の供物。ヴェーダの教えでは肉を伴うべきとされるが、ジャナカはシーターの悲運を聞いて以来、肉食を断った vaikhānasa（林棲者）となっていたため、ヴァールミーキは乳酪と蜜のみでもてなした。dharmasūtrakāra はアーパスタンバなどの法典著者を指す。
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Dāṇḍāyanaḥ —</span>
-    Sa tadaiva devyāḥ Sītāyās tādṛśaṃ daiva-durvipākam upaśrutya vaikhānasaḥ saṃvṛttaḥ. Tathāsya katipaye saṃvatsarāś Candradvīpa-tovane tapas tapyamānasya.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ダーンダーヤナ —</span>
-    あの方はシーター妃のあのような残酷な運命を聞いた時から林棲者となられたのだ。そしてチャンドラドヴィーパの苦行林で修行されて幾年も経つ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Dāṇḍāyanaḥ —</span>
-    Ciraṃtana-priya-suhṛdaṃ bhagavantaṃ Prācetasaṃ draṣṭum.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ダーンダーヤナ —</span>
-    古くからの親友であるプラーチェータサ（ヴァールミーキ）尊者を訪ねるためにお越しになったのだ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Dāṇḍāyanaḥ —</span>
-    Tad ayaṃ brahmavādī purāṇa-rājarṣir Janakaḥ Prācetasa-siddāv upāsya saṃpraty āśramasya bahir vṛkṣa-mūlam adhiṣṭhati.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ダーンダーヤナ —</span>
-    さて、このブラフマンの説法者であり、古の王仙であるジャナカは、プラーチェータサとヴァシシュタに敬意を表してから、今は僧院の外の樹の根元に座っておられる。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【2】</span>
-    ya eṣa hṛdi nityānuṣaktena sītā-śokena tapyate /<br>
-    antaḥ-prasūta-dahano jaran iva vanaspatiḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【2】</span>
-    心に絶えず巣くうシーターへの嘆きに焼かれるこの方は、<br>
-    内に火を孕んだ老木のようである。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(iti niṣkrāntau.)</span><br>
-    Miśra-viṣkambhaḥ.
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（二人退場。）</span><br>
-    混合序幕おわり。
-  </div>
-</div>
-
-<div class="section-label">Janaka praviśati — ジャナカの登場</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(tataḥ praviśati Janakaḥ.)</span>
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（ジャナカが登場する。）</span>
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【3】</span>
-    apatye yat tādṛg duritam abhavat tena mahatā<br>
-    viṣaktas tīvreṇa vraṇita-hṛdayena vyathayatā /<br>
-    paṭu-dhārāvāhī nava iva cireṇāpi hi na me<br>
-    nikṛntann armāṇi krakaca iva manyur viramati //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【3】</span>
-    わが子にあのような災禍が降りかかったこと——<br>
-    その大いなる、激しい、心を抉る苦しみに囚われ、<br>
-    鋭く流れ落ちて、長き時を経てなお新しきもののように、<br>
-    急所を断ち切る鋸のごとく、わが悲嘆は止むことがない。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> krakaca（鋸）の比喩はジャナカの悲嘆の鋭さと持続性を表す。paṭu-dhārāvāhī は「鋭利に、絶え間なく流れるように」の意。manyu は「悲嘆」（śoka）と「怒り」（kopa）の両義を持つ。ジャナカの嘆きが年月を経ても新鮮であり続けることを nava iva（新しきもののように）が強調する。
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Janakaḥ —</span>
-    Kaṣṭam. Evaṃ nāma jarayā duḥkhena ca durāsadena bhūyaḥ Parākā-Sāṃtapana-prabhṛtibhis tapobhir uttaraṃ saṃdhātur anavasṭambho nādyāpi mama dagdha-dehaḥ patati.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ジャナカ —</span>
-    嗚呼、なんという苦しみか。老齢と、耐え難い悲嘆と、さらにパラーカやサーンタパナなどの苦行によって、もはやこの呪われた身体が倒れないのは不思議なことだ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【4】</span>
-    aniyata-rudita-smitaṃ virāja-<br>
-    t-katipaya-komala-danta-kuḍmalāgram /<br>
-    vadana-kamalaṃ śiśoḥ smarāmi<br>
-    skhalad-asamañju-jalpitaṃ ca te //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【4】</span>
-    気まぐれに泣いたり笑ったりしていた、<br>
-    いくつかの柔らかな歯の蕾が輝く、<br>
-    幼き日のお前の蓮のような顔を思い出す——<br>
-    つたないたどたどしい、けれども愛らしいおしゃべりとともに。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【5】</span>
-    tvaṃ vahnir munayo Vasiṣṭha-gṛhiṇī Gaṅgā ca yasyā vidu-<br>
-    r māhātmyaṃ yadi vā Raghoḥ kula-gurur devaḥ svayaṃ Bhāskaraḥ /<br>
-    vidyāṃ vāg iva yām asūta bhavatī tad-vṛttam yā daivataṃ<br>
-    tasyās tvad-duhitus tathā viśasanaṃ kiṃ dāruṇe 'mṛṣyathāḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【5】</span>
-    汝も、火神も、聖仙たちも、ヴァシシュタの妻も、ガンガーも知る、<br>
-    いや、ラグの家の師にして神なる太陽自らも知る、<br>
-    その偉大さを。学問を弁才天が生んだように汝が生んだ、<br>
-    神格なるその娘の、かくも残酷な殺害を、なぜ汝は耐え忍んだのか。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> この偈でジャナカは大地（vasundhare）に呼びかけ、シーターの偉大さを火神・聖仙・アルンダティー・ガンガー・太陽神が皆知っているのに、なぜ彼女の破滅を許したのかと詰問する。vidyāṃ vāg iva yām asūta bhavatī は「弁才天が学問を生んだように、汝（大地）がシーターを生んだ」の意。シーターはヤジュニャの地（devayajana-saṃbhavā）から生まれた。
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(nepathye.)</span> Ita itaḥ, bhagavatī-mahādevyau.
-    <br><span class="speaker">Janakaḥ —</span>
-    <span class="stage-dir">(dṛṣṭvā.)</span> Aye Gṛṣṭinā upadiśyamāna-mārgā bhagavaty Arundhatī. <span class="stage-dir">(utthāya.)</span> Kāṃ punar mahādevīty āha. <span class="stage-dir">(nirūpya.)</span> Hā hā, katham iyaṃ Mahārāja-Daśarathasya dharma-dārāḥ priyasakhī me Kausalyā. Ka etāṃ pratyeti saiveyam iti.
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（舞台裏から。）</span> こちらへ、こちらへ。尊者と大妃さまがお越しです。
-    <br><span class="speaker">ジャナカ —</span>
-    <span class="stage-dir">（見て。）</span> おお、グリシュティに道を案内されたアルンダティー尊者だ。<span class="stage-dir">（立ち上がって。）</span> しかし誰を「大妃」と呼んだのか。<span class="stage-dir">（よく見て。）</span> ああ、なんとダシャラタ大王の正妃、わが親友カウサリヤーではないか。もはや誰がこの方をかつてのご本人と認めようか。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【6】</span>
-    āsīd iyaṃ Daśarathasya gṛhe yathā Śrīḥ<br>
-    Śrīr eva vā kim upamāna-padena saiṣā /<br>
-    kaṣṭaṃ batānyad iva daiva-vaśena jātā<br>
-    duḥkhātmakaṃ kim api bhūtam aho vipākaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【6】</span>
-    この方はダシャラタの宮殿で吉祥天のようであった——<br>
-    いや、喩えを用いるまでもなく、吉祥天そのものであった。<br>
-    嗚呼、運命の力に変じて、まるで別人のように、<br>
-    悲しみそのもののような存在となった。ああ、運命の結末よ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【7】</span>
-    ya eva me janaḥ pūrvam āsīn mūrto mahotsavaḥ /<br>
-    kṣate kṣāram ivāsahyaṃ jātaṃ tasyaiva darśanam //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【7】</span>
-    かつて私にとって祝祭そのものの化身であった人の、<br>
-    まさにその人を見ることが今や、<br>
-    傷口に塩を塗るように耐え難いものとなった。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(tataḥ praviśaty Arundhatī, Kausalyā, Kañcukī ca.)</span>
-    <br><span class="speaker">Arundhatī —</span>
-    Nanu bravīmi, draṣṭavyaḥ svayam upetyaiva Vaideha ity eṣa vaḥ kula-guroḥ ādeśaḥ. Ata eva cāhaṃ preṣitā. Tat ko'yaṃ pade pade mahān adhyavasāyaḥ.
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（アルンダティー、カウサリヤー、門番が登場する。）</span>
-    <br><span class="speaker">アルンダティー —</span>
-    申し上げているでしょう、自ら出向いてヴァイデーハ（ジャナカ）に会うように、というのが家門の師のお言いつけです。だからこそ私も遣わされたのです。それなのにこの一歩ごとの躊躇はいったいどうしたことですか。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【8】</span>
-    saṃtāna-vāhinīny api mānuṣāṇāṃ duḥkhāni sad-bandhu-viyoga-jāni /<br>
-    dṛṣṭe jane preyasi duḥkha-hāni<br>
-    srotaḥ-sahasrair iva saṃplāvante //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【8】</span>
-    人の世の悲しみは、愛する親族との別離から生まれ、<br>
-    絶え間なく流れ続けるものなれど、<br>
-    愛しき人を目にした時、その悲嘆は堰を切り、<br>
-    千の流れとなって溢れ出すのだ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【9】</span>
-    eṣa vaḥ ślādhya-saṃbandhī Janakānāṃ kulodvahaḥ /<br>
-    Yājñavalkyo munir yasmai brahma-pārāyaṇaṃ jagau //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【9】</span>
-    この方こそ、あなた方の誉れ高き親族、ジャナカ家の柱石。<br>
-    聖仙ヤージュニャヴァルキヤがこの方にブラフマンの至高の教えを説いた。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> Yājñavalkya はブリハダーラニヤカ・ウパニシャッドにおいてジャナカの師として頻繁に言及される古代の大聖者・哲学者。brahma-pārāyaṇam は「ヴェーダの完全な学習」、ここではウパニシャッドを含むブラフマンの最高知識の意。
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【10】</span>
-    yayā pūtaṃmanyo nidhir api pavitrasya mahasa-<br>
-    ḥ patis te pūrveṣām api khalu gurūṇāṃ gurutamaḥ /<br>
-    trilokī-māṅgalyam avanitala-līnena śirasā<br>
-    jagad-vandyāṃ devīm uṣasam iva vande bhagatīm //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【10】</span>
-    汝によって浄化されたと自認する、清浄なる光輝の宝庫なるご主人は、<br>
-    古の師たちの中でもっとも尊い師である。<br>
-    三界に吉祥をもたらす方よ、地に伏した頭で、<br>
-    暁の女神（ウシャス）のごとき、世界が崇める尊者に礼拝いたします。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Arundhatī —</span>
-    Paraṃ te jyotiḥ prakāśatām. Ayaṃ tvāṃ punātu devaḥ parorajā ya eṣa tapati.
-    <br><span class="speaker">Janakaḥ —</span>
-    Ārya Gṛṣṭe, apy anāmayam asyāḥ prajā-pālakasya mātuḥ.
-  </div>
-  <div class="japanese">
-    <span class="speaker">アルンダティー —</span>
-    至高の光が汝に現れんことを。塵を超越した輝く神が汝を浄めんことを。
-    <br><span class="speaker">ジャナカ —</span>
-    <span class="stage-dir">（門番に。）</span> 民を守る王の母上は、ご息災でいらっしゃるか。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> ジャナカの prajā-pālakasya mātuḥ（民を守る者の母の）という問いかけには辛辣な皮肉が含まれる。ラーマは priyā-pālaka（妻を守る者）ではなく prajā-pālaka（民を守る者）に過ぎないという含意である——忠実な妻を見捨てながら臣民の意を重んじたラーマへの非難。
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【11】</span>
-    śiśur vā śiṣyā vā yad asi mama tāt tiṣṭhatu tathā<br>
-    viśuddher utkārṣas tvayi tu mama bhaktiṃ draḍhayati /<br>
-    śiśutvaṃ strītvaṃ vā bhavatu nanu vandyāsi jagatāṃ<br>
-    guṇāḥ pūjā-sthānaṃ guṇiṣu na ca liṅgaṃ na ca vayaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【11】</span>
-    お前が私の弟子であれ子であれ、それはさておき——<br>
-    お前の清浄さの卓越が、私の敬慕を確かなものにする。<br>
-    子供であれ女であれ、実にお前は世界が敬うべき存在。<br>
-    徳ある者にあっては、徳こそが崇敬の対象——性別でも年齢でもない。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> アルンダティーのこの言葉は劇全体の重要な思想的声明。guṇāḥ pūjāsthānaṃ guṇiṣu na ca liṅgaṃ na ca vayaḥ（徳ある者において、徳こそが崇敬の根拠であり、性別でも年齢でもない）は、クマーラサンビャヴァ V.16 の na dharmavṛddheṣu vayaḥ samīkṣyate（法において成熟した者には年齢は問われない）、同 VI.12 の strīpumān ity anāsthā（男か女かは問題ではない）と共通する理念を示す。
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【12】</span>
-    sa rājā tat saukhyaṃ sa ca śiśu-janas te ca divasāḥ<br>
-    smṛtāv āvirbhūtaṃ tvayi suhṛdi dṛṣṭe tad akhilam /<br>
-    vipāke ghore 'smin matha khalu vimūḍhā tava sakhī<br>
-    puraṃdhrīṇāṃ cittaṃ kusuma-sukumāraṃ hi bhavati //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【12】</span>
-    あの王、あの幸福、あの子供たち、あの日々——<br>
-    友なる貴方を目にした途端、それらすべてが記憶の中に蘇った。<br>
-    この恐ろしき運命の結末の中で、貴方の友は気を失ったのです。<br>
-    貞淑な婦人の心は、まことに花のように繊細なのですから。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【13】</span>
-    sa saṃbandhī ślāghyaḥ priya-suhṛd asau tac ca hṛdayaṃ<br>
-    sa cānandaḥ sākṣād api ca nikhilaṃ jīvita-phalam /<br>
-    śarīraṃ jīvo vā yad adhikam ato 'nyat priyataraṃ<br>
-    mahārājaḥ śrīmān kim iva mama nāsīd Daśarathaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【13】</span>
-    誉れ高き親族であり、愛しき友であり、心そのものであり、<br>
-    喜びの化身であり、生の果実のすべてであり、<br>
-    身体であり、魂であり、それ以上に愛しきもの——<br>
-    栄光のダシャラタ大王は、私にとって何でなかったろうか。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【14】</span>
-    yad asyāḥ patyur vā rahasi paramaṃ bhūṣitam abhū-<br>
-    d abhūvaṃ dampatyoḥ pṛthag aham upālambha-viṣayaḥ /<br>
-    prasāde kope vā tad anu mad-adhīno vidhir abhū-<br>
-    d alaṃ vā tat smṛtvā dahati yad avaskandya hṛdayam //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【14】</span>
-    この方か夫のどちらかに密かに深刻な不和があれば、<br>
-    私は夫婦それぞれから苦情を聞く役目であった。<br>
-    その後の和解も怒りも、私の裁量に委ねられていた。<br>
-    しかしもう、それを思い出すのはやめよう——心を踏みにじって焼くのだから。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【15】</span>
-    suhṛd iva prakaṭayya sukha-pradaṃ prathamam eka-rasām anukūlatām /<br>
-    punar akāṇḍa-vivartana-dāruṇo vidhir aho viśinaṣṭi mano-rujam //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【15】</span>
-    運命は最初、友のように心地よい一途な好意を見せておきながら、<br>
-    やがて突然の裏切りによって残酷なものとなり、<br>
-    ああ、心の苦痛をいっそう鋭くするのだ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Kausalyā —</span>
-    <span class="stage-dir">(āśvasya.)</span> Hā vatse Jānaki kutrāsi. Smarāmi te nava-vivāha-lakṣmī-parigraha-eka-maṇḍalaṃ prasphurac-chuddha-vihasitaṃ mugdha-mukha-puṇḍarīkam. Āsphurac-candra-candrikā-sundarair aṅgaiḥ punar api me jāte udyotayotsaṅgam.
-  </div>
-  <div class="japanese">
-    <span class="speaker">カウサリヤー —</span>
-    <span class="stage-dir">（息を吹き返して。）</span> ああ、ジャーナキよ、どこにいるの。新婚の吉祥にのみ彩られた、清らかな微笑みが輝くお前の無垢な蓮の顔を思い出す。月光のように美しい肢体でもう一度、私の膝を照らしておくれ、わが子よ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【16】</span>
-    pañca-prasūter api tasya rājñaḥ priyo viśeṣeṇa Subāhu-śatruḥ /<br>
-    vadhū-catuṣke 'pi yathaiva Śāntā priyā tanūjāsya tathaiva Sītā //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【16】</span>
-    五人の子を持つ王にとって、スバーフの敵（ラーマ）が格別に愛しかった。<br>
-    四人の嫁の中でも、シャーンターが娘として愛されたように、<br>
-    この方（ジャナカ）にとってシーターもまた同様であった。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> pañca-prasūti（五人の子）はラーマ・ラクシュマナ・バラタ・シャトルグナの四王子とシャーンター。スバーフ（Subāhu）はヴィシュヴァーミトラの祭祀を妨害した羅刹で、ラーマに討たれた（ラグヴァンシャ XI.29参照）。vadhū-catuṣka は四人の嫁、すなわちシーター・ウールミラー・マーンダヴィー・シュルタキールティ。
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【17】</span>
-    kanyāyāḥ kila pūjayanti pitaro jāmātṛ-jaṃ janaṃ<br>
-    saṃbandhe viparītam eva tad abhūd ārādhanaṃ te mayi /<br>
-    tvaṃ kālena tathāvidho 'ty apahṛtaḥ saṃbandha-bījaṃ ca ta-<br>
-    d ghore 'smin mama jīva-loka-bile pāpasya dhig jīvitam //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【17】</span>
-    花嫁の親が婿の一族を敬うのが世の常であるが、<br>
-    我らの縁組みではそれが逆であった——貴方が私を敬ってくださった。<br>
-    その貴方も時の流れに奪われ、絆の種子（シーター）もまた失われた。<br>
-    この恐ろしい生の深淵にいる罪人の命など呪われよ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【18】</span>
-    āvirbhūta-jyotiṣāṃ brāhmaṇānāṃ<br>
-    ye vyāhārās teṣu mā saṃśayo 'bhūt /<br>
-    bhadrā hy eṣāṃ vāci lakṣmīr niveśyā<br>
-    naite vācaṃ viplutārthāṃ vadanti //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【18】</span>
-    至高の光が顕現した婆羅門たちの、<br>
-    言葉について疑いを抱いてはなりません。<br>
-    彼らの言葉には吉祥が宿り、<br>
-    彼らは偽りの意味を持つ言葉を決して口にしないのです。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> アルンダティーがリグヴェーダ X.71.2 を引いてヴァシシュタの予言の確実性を保証する場面。āvirbhūta-jyotiṣām は「至高のブラフマンの光が顕現した（者たちの）」。ヴァシシュタがリシュヤシュリンガの僧院で「こうなるべきことが起こったが、結果は吉祥であろう」（kalyāṇodarkam bhaviṣyati）と述べた言葉を指す。
-</div>
-
-<div class="section-label">Lava praviśati — ラヴァの登場</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Kausalyā —</span>
-    Aho eteṣāṃ madhye ka eṣa Rāmabhadra-lakṣmī-pariśobhitaiḥ sāvaṣṭambha-mugdha-lalitair aṅgair asmākaṃ locanāni śītalayati.
-  </div>
-  <div class="japanese">
-    <span class="speaker">カウサリヤー —</span>
-    おや、あの子供たちの中で、ラーマの幼き日の美しさを映し、堂々として愛らしく優美な肢体でわが目を潤す、あれは誰であろう。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Arundhatī —</span>
-    <span class="stage-dir">(apavārya, sa-harṣa-vāṣpam.)</span> Idaṃ nāma tad Bhāgīrathī-nivedita-rahasyaṃ karṇāmṛtam. Na tv evaṃ vidmaḥ kataro 'yam āyuṣmataḥ Kuśa-Lavyor iti.
-  </div>
-  <div class="japanese">
-    <span class="speaker">アルンダティー —</span>
-    <span class="stage-dir">（傍白、喜びの涙を浮かべて。）</span> これがバーギーラティー（ガンガー）が打ち明けてくれた秘密、あの耳に甘露のような話なのだ。しかしクシャとラヴァのどちらかは分からないわ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【19】</span>
-    kuvalaya-dala-snigdha-śyāmaḥ śikhaṇḍaka-maṇḍano<br>
-    baṭu-pariṣadaṃ puṇya-śrīkaḥ śriyaiva sabhājayan /<br>
-    punar api śiśu-bhūto vatsaḥ sa me Raghunandano<br>
-    jhaṭiti kurute dṛṣṭeḥ ko 'yaṃ dṛśor amṛtāñjanam //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【19】</span>
-    青蓮華の花弁のように滑らかに黒く、巻き毛で飾られ、<br>
-    神聖な美をもって学童の集いをその輝きで彩るこの子は、<br>
-    まるで私のラグの喜び（ラーマ）が再び幼子となったかのよう——<br>
-    突然現れたこの子は誰か、わが両眼に甘露の目薬を塗るかのような。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【20】</span>
-    cūḍā-cumbitakaṅka-pattram abhitas tūṇī-dvayaṃ pṛṣṭhato<br>
-    bhasma-stoka-pavitra-lāñchanam uro dhatte tvacaṃ rauravīm /<br>
-    maurvyā mekhalayā niyantritam adho-vāsaś ca māñjiṣṭhakaṃ<br>
-    pāṇau kārmukam akṣa-sūtra-valayaṃ daṇḍe 'paraḥ paippalaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【20】</span>
-    頭頂に触れる蒼鷺の矢羽がついた矢筒を背に二つ、<br>
-    胸には灰の聖なる小さな印を帯び、鹿皮を纏い、<br>
-    ムールヴァー草の腰紐で締めた茜染めの下衣、<br>
-    手には弓とルドラークシャの数珠の腕輪、もう一方にはアシュヴァッタの杖。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> この偈はクシャトリヤの梵行学生（kṣatriya-brahmacārī）の典型的な装束を描写する。マヌ法典 II.40, 45 に規定される：「クシャトリヤの腰紐は maurvī（ムールヴァー草製）」「クシャトリヤの衣は māñjiṣṭhaka（茜で染めたもの）」。rauravī は ruru 鹿の皮。akṣasūtra はルドラークシャの数珠。paippala はアシュヴァッタ（菩提樹）の木で作った杖。
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【21】</span>
-    mahimnām etasmin vinaya-śiśutā-maugdhya-masṛṇo<br>
-    vidagdhair nirmāhyo na punar avidagdhair atiśayaḥ /<br>
-    mano me saṃmoha-sthiram api haraty eṣa balavā-<br>
-    n ayodhātuṃ yadvat parilghur ayaskānta-śakalaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【21】</span>
-    この子の偉大さの輝きは、礼儀正しさと幼さの無垢さに柔らかく包まれ、<br>
-    慧眼の者のみが見抜けるもの、鈍き者には分からない。<br>
-    困惑で鈍くなったわが心をも、この子は力強く引き寄せる——<br>
-    小さな磁石の欠片が鉄塊を引くように。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Lavaḥ —</span>
-    <span class="stage-dir">(praviśya.)</span> Ajñāta-nāmakam abhijāty-ānāpūjyān api svataḥ katham abhivādayiṣye. <span class="stage-dir">(vicintya.)</span> Ayaṃ punar aviruddhaḥ prakāra iti vṛddhebhyaḥ śrūyate. <span class="stage-dir">(savinayam upasṛtya.)</span> Eṣa vo Lavasya śirasā praṇāma-paryāyaḥ.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ラヴァ —</span>
-    <span class="stage-dir">（登場して。）</span> 名前も家柄も知らぬが敬うべき方々に、どのように挨拶すればよいのだろう。<span class="stage-dir">（考えて。）</span> しかし年長者たちから聞いた、差し支えないやり方がある。<span class="stage-dir">（丁重に近づいて。）</span> ラヴァがお一人お一人に、頭を下げてご挨拶申し上げます。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Arundhatī-Janakau —</span> Kalyāṇin āyuṣman bhūyāḥ.
-    <br><span class="speaker">Kausalyā —</span> Jāta, ciraṃ jīva.
-    <br><span class="speaker">Arundhatī —</span>
-    Ehi vatsa. <span class="stage-dir">(Lavam utsaṅge gṛhītvopāgatam.)</span> Diṣṭyā na kevalam utsaṅgaś ciram-anoratho 'pi me saṃpūrṇaḥ.
-  </div>
-  <div class="japanese">
-    <span class="speaker">アルンダティーとジャナカ —</span> 福ある子よ、長寿であれ。
-    <br><span class="speaker">カウサリヤー —</span> わが子よ、永く生きよ。
-    <br><span class="speaker">アルンダティー —</span>
-    おいで、坊や。<span class="stage-dir">（ラヴァを膝に抱いて。）</span> 幸いなことに、ただ膝が満たされたのみならず、長年の願いも叶えられた。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Kausalyā —</span>
-    <span class="stage-dir">(utsaṅge gṛhītvā.)</span> Aho na kevalaṃ dara-vikasan-nīlotpala-yamala-ujjvalena deha-bandhena ... Rāmabhadram anuharati. Nanu kaṭhora-kamala-garbha-pakṣmalaḥ śarīra-sparśo 'pi tādṛśa eva vatsasya. Jāta, prekṣe tāvat te mukha-puṇḍarīkam. <span class="stage-dir">(cubu-kam unnamayya nirūpya sa-vāṣpākūtam.)</span> Rājarṣe kiṃ na prekṣe nipuṇaṃ nirūpyamāṇasya mukhaṃ vatsāyā vadhvā mukha-candreṇa saṃvadaty eva.
-  </div>
-  <div class="japanese">
-    <span class="speaker">カウサリヤー —</span>
-    <span class="stage-dir">（膝に抱いて。）</span> なんと、この子は半開きの青蓮華のように黒く輝く体つきだけでなく……ラーマに生き写しだ。いや、固く結ぶ蓮の芯のように柔らかな肌触りまでも、まさに同じ。坊や、お顔を見せておくれ。<span class="stage-dir">（顎を上げて見つめ、涙を浮かべて。）</span> 王仙さま、ご覧なさいませんか。よく見れば、この子の顔はあの嫁の月のような顔にそっくりですよ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【22】</span>
-    vatsāyāś ca Raghūdvahasya ca śiśāv asminn abhivyajyate<br>
-    saṃpūrṇa-pratibimbiteva nikhilā saivākṛtiḥ sā dyutiḥ /<br>
-    sā vāṇī vinayaḥ sa eva sahajaḥ puṇyānubhāvo 'py asau<br>
-    hā hā daivi kim utpathair imam manaḥ pāriplavaṃ dhāvati //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【22】</span>
-    この幼子の中に、わが娘とラグの後嗣の両方が完全に映り、<br>
-    まさにあの姿、あの輝き、あの声、<br>
-    あの生来の慎み深さ、あの神聖なる威光——<br>
-    ああ、運命よ、なぜわが心は乱れて道なき道を走るのか。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Kausalyā —</span> Jāta, asti te mātā, smarasi vā tātam.
-    <br><span class="speaker">Lavaḥ —</span> Na hi na hi.
-    <br><span class="speaker">Kausalyā —</span> Tataḥ kasya tvam.
-    <br><span class="speaker">Lavaḥ —</span> Bhagavataḥ Vālmīkeḥ.
-  </div>
-  <div class="japanese">
-    <span class="speaker">カウサリヤー —</span> 坊や、母上はいるの。それとも父上を覚えている？
-    <br><span class="speaker">ラヴァ —</span> いいえ、いいえ。
-    <br><span class="speaker">カウサリヤー —</span> では誰の子なの。
-    <br><span class="speaker">ラヴァ —</span> ヴァールミーキ尊者のもとにおります。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Janakaḥ —</span> Jānāsi Rāma-Lakṣmaṇau Dāśarathī.
-    <br><span class="speaker">Lavaḥ —</span> Etāv eva Rāmāyaṇa-kathā-puruṣau.
-    <br><span class="speaker">Janakaḥ —</span> Atha kim.
-    <br><span class="speaker">Lavaḥ —</span> Tat kathaṃ na jānāmi.
-    <br><span class="speaker">Janakaḥ —</span> Tasya Lakṣmaṇasyāyam ātmajaś Candraketur.
-    <br><span class="speaker">Lavaḥ —</span> Ūrmilāyāḥ putras tarhi Maithilasya rājarṣer dauhitraḥ.
-    <br><span class="speaker">Arundhatī —</span>
-    <span class="stage-dir">(vihasya.)</span> Āviṣkṛtaṃ kathā-prāvīṇyaṃ vatsena.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ジャナカ —</span> ダシャラタの息子、ラーマとラクシュマナを知っているか。
-    <br><span class="speaker">ラヴァ —</span> ラーマーヤナ物語の主人公たちですね。
-    <br><span class="speaker">ジャナカ —</span> そうだとも。
-    <br><span class="speaker">ラヴァ —</span> もちろん知っています。
-    <br><span class="speaker">ジャナカ —</span> そのラクシュマナの息子がチャンドラケートゥだ。
-    <br><span class="speaker">ラヴァ —</span> ではウールミラーの息子、マイティラ（ミティラーの）王仙の外孫ですね。
-    <br><span class="speaker">アルンダティー —</span>
-    <span class="stage-dir">（微笑んで。）</span> 坊やは物語に精通していることを示しましたね。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Lavaḥ —</span> Praṇīto na prakāśitaḥ. Tasyaiva ko 'py ekadeśaḥ saṃdarbhāntareṇa rasān-abhineyārthaḥ kṛtaḥ. Taṃ ca sva-hasta-likhitaṃ munir bhagavān ny-asṛjad bhavato Bharatasya munes taurya-trika-sūtrakārasya.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ラヴァ —</span>
-    （ラーマーヤナは）著されましたがまだ公にされていません。その一部が、感情（ラサ）に富む舞台上演用の別の作品の形にまとめられました。それを自筆で書いたものを、尊者は音楽・舞踊・器楽の教典を著した聖仙バラタのもとに送られました。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> taurya-trika は nṛtya（舞踊）、gīta（歌唱）、vādya（器楽）の三芸。sūtrakāra はこれらの教典（ナーティヤシャーストラ）の著者バラタ仙を指す。カーリダーサも『ヴィクラモールヴァシーヤ』II.18でバラタを nāṭyācārya（演劇の師）として言及する。ヴァールミーキがラーマーヤナの一部を舞台用に編み直し、天女たちに上演させるためバラタに託したという設定は、詩人バヴァブーティの創作。
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Lavaḥ —</span>
-    Mahati punas tāsmin bhagavato Vālmīker āsthā. Yato yeṣām antevāsināṃ hastena tat pustakaṃ Bharatāśramaṃ prati preṣitaṃ teṣām anuyātrikaḥ śarāsa-pāṇiḥ pramāda-pra-nodanārtham asmad-bhrātā preṣitaḥ.
-    <br><span class="speaker">Kausalyā —</span> Jāta, bhrātā'pi te'sti.
-    <br><span class="speaker">Lavaḥ —</span> Asty āryaḥ Kuśo nāma.
-    <br><span class="speaker">Kausalyā —</span> Jyeṣṭha iti bhaṇitaṃ bhavati.
-    <br><span class="speaker">Lavaḥ —</span> Evam etat. Prasavānukrameṇa sa kila jyāyān.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ラヴァ —</span>
-    ヴァールミーキ尊者はその作品を非常に大切にされています。弟子たちの手で写本がバラタの僧院に送られましたが、その護衛として、事故を防ぐため、弓を手にした兄が遣わされました。
-    <br><span class="speaker">カウサリヤー —</span> 坊や、兄上もいるのね。
-    <br><span class="speaker">ラヴァ —</span> はい、クシャという兄がおります。
-    <br><span class="speaker">カウサリヤー —</span> 年上だということね。
-    <br><span class="speaker">ラヴァ —</span> その通りです。生まれの順番では兄の方が先です。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【23】</span>
-    nūnaṃ tvayā paribhavaṃ ca vanaṃ ca ghoraṃ<br>
-    tāṃ ca vyathāṃ prasava-kāla-kṛtām avāpya /<br>
-    kavyādaṇeṣu paritaḥ parivārayatsu<br>
-    saṃstratayā śaraṇam ity asakṛt smṛto 'smi //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【23】</span>
-    きっとお前は、辱めと、恐ろしき森と、<br>
-    産みの苦しみを味わいながら、<br>
-    肉食の獣たちが四方から取り囲む中で、<br>
-    怯えて「お父さま、助けて」と何度も私を思い出したことだろう。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Janakaḥ —</span>
-    Aho nirdayatā durātmanāṃ paurāṇām. Aho Rāmasya rājñaḥ kṣipra-kāritā.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ジャナカ —</span>
-    ああ、邪悪な市民どもの無慈悲さよ。ああ、ラーマ王の早まった仕打ちよ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Janakaḥ —</span>
-    Etad-vaiśasa-vajra-ghora-patanaṃ śaśvan mamotpaśyataḥ<br>
-    krodhasya jvalituṃ dho 'vasaraś cāpena śāpena vā.
-    <br><span class="speaker">Kausalyā —</span>
-    <span class="stage-dir">(sabhaya-kampam.)</span> Bhagavati, paritrāyasva paritrāyasva. Prasādaya kupitaṃ rājarṣim.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ジャナカ —</span>
-    この雷のごとく恐ろしい災禍を絶えず思い巡らすわが怒りが、弓あるいは呪いをもって燃え上がる時が来た。
-    <br><span class="speaker">カウサリヤー —</span>
-    <span class="stage-dir">（恐れおののいて。）</span> 尊者さま、お助けください、お助けください。怒れる王仙をなだめてください。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【24】 (Lavaḥ / Arundhatī)</span>
-    etad dhi paribhūtānāṃ prāyaś cittaṃ manasvinām /<br>
-    rājann apatyaṃ Rāmas te pālayāś ca kṛpṇā janāḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【24】</span>
-    <span class="speaker">ラヴァ —</span> 辱められた気高き者たちの心は、大方このようなものです。<br>
-    <span class="speaker">アルンダティー —</span> 王よ、ラーマは貴方の子息。そして哀れな民も守らねばならないのです。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【25】</span>
-    śāntaṃ vā Raghunandane tad ubhayaṃ yat putra-bhāṇḍaṃ hi me<br>
-    bhūyiṣṭha-dvija-bāla-vṛddha-vikalāstraiṇaś ca pauro janaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【25】</span>
-    いや、ラグの喜び（ラーマ）に関しては、その両方（呪いも弓も）を静めよう。<br>
-    彼は私の息子たる宝であり、市民は大半が婆羅門・子供・老人・障碍者・女たちなのだから。
-  </div>
-</div>
-
-<div class="section-label">Aśvamedha — 馬祀の馬</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(praviśya.)</span>
-    <br><span class="speaker">Saṃbhrāntā baṭavaḥ —</span>
-    Kumāra kumāra, adho'dhva iti ko'pi bhūta-viśeṣo janapadseṣu śrūyate. So'yam adhunāsmābhiḥ pratyakṣīkṛtaḥ.
-    <br><span class="speaker">Lavaḥ —</span>
-    Atha iti paśu-sāmnāye sāgrāmike ca paṭhyate. Tad brūta kīdṛśaḥ.
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（少年たちが興奮して登場する。）</span>
-    <br><span class="speaker">少年たち —</span>
-    友よ、「馬」という動物が田舎では話に聞くだけだったが、今日ついに実物を目にしたぞ。
-    <br><span class="speaker">ラヴァ —</span>
-    動物学や戦争の書物にも出てくるな。どんな姿か教えてくれ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【26】</span>
-    paścāt pucchaṃ vahati vipulaṃ tac ca dhūnoty ajasraṃ<br>
-    dīrgha-grīvaḥ sa bhavati khurās tasya catvāra eva /<br>
-    śaṣyāṇy atti prakirti śakṛt-piṇḍakān ānna-mātrā-<br>
-    n kiṃ vākhyātair vrajati sa punar dūram eho hi yāmaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【26】</span>
-    後ろに大きな尻尾があって、それを絶えず振っている。<br>
-    首が長くて、蹄は四つだけ。<br>
-    草を食べ、マンゴーほどの大きさの糞の塊を落とす。<br>
-    だが説明はもういい。あいつは遠くへ行ってしまう。さあ追いかけよう！
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> この偈は svabhāvokti（自然描写）の修辞法の好例。森で育った少年たちが初めて馬を見て、素朴に特徴を列挙する場面は hāsya-rasa（笑いの情趣）を促進する。viśeṣaṇa の「後ろに」「四つだけ」などの表現は、水牛や驢馬との区別を意識した森の子供たちの観察眼を示す。
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(ity upasṛtyājine hastau cākarṣanti.)</span>
-    <br><span class="speaker">Lavaḥ —</span>
-    <span class="stage-dir">(sakautuka-parodha-vinayam.)</span> Āryāḥ paśyata paśyata. Ebhir nīto'smi. <span class="stage-dir">(iti tvaritaṃ parikrāmati.)</span>
-    <br><span class="speaker">Arundhatī-Janakau —</span> Pūryatāṃ kautukaṃ vatsaḥ.
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（少年たちが鹿皮と手を引っ張る。）</span>
-    <br><span class="speaker">ラヴァ —</span>
-    <span class="stage-dir">（好奇心と遠慮と礼儀をもって。）</span> お歴々、ご覧ください。彼らに引っ張られていきます。<span class="stage-dir">（急いで歩き回る。）</span>
-    <br><span class="speaker">アルンダティーとジャナカ —</span> 坊やの好奇心を満たしてやりなさい。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Kausalyā —</span>
-    Bhagavati, jānāmy etam anālokayantī na jīvāmīva. Ato'nyato bhūtvā prekṣāmahe tāvad gacchantaṃ dīrghāyuṣam.
-  </div>
-  <div class="japanese">
-    <span class="speaker">カウサリヤー —</span>
-    尊者さま、あの子を見ないでは生きていられないような気がするのです。ですから別の場所に移って、あの長命な子が行くのを見守りましょう。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Kañcukī —</span>
-    <span class="stage-dir">(praviśya.)</span> Bhagavān Vālmīkir āha, jñātavyam etad avasare bhavadbhir iti.
-    <br><span class="speaker">Janakaḥ —</span>
-    Atigambhīram etat kim api. Bhagavaty Arundhati, sakhi Kausalye, ārya Gṛṣṭe, svayam eva gatvā bhagavantaṃ Prācetasaṃ paśyāmaḥ.
-    <br><span class="stage-dir">(iti niṣkrānto vṛddha-vargaḥ.)</span>
-  </div>
-  <div class="japanese">
-    <span class="speaker">門番 —</span>
-    <span class="stage-dir">（登場して。）</span> ヴァールミーキ尊者が仰せです、「しかるべき時にお分かりになりましょう」と。
-    <br><span class="speaker">ジャナカ —</span>
-    これは何か極めて深い意味がある。アルンダティー尊者、友カウサリヤーよ、グリシュティよ、自ら参ってプラーチェータサ尊者にお目にかかろう。
-    <br><span class="stage-dir">（長老たちが退場する。）</span>
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Lavaḥ —</span>
-    Dṛṣṭam avagataṃ ca. Nūnam āśvamedhiko'yam aśvaḥ.
-    <br><span class="speaker">Baṭavaḥ —</span> Kathaṃ jñāyate.
-    <br><span class="speaker">Lavaḥ —</span>
-    Nanu mūrkhāḥ, paṭhitam eva hi yuṣmābhir api tat kāṇḍam. Kiṃ na paśyatha pratyekaṃ śata-saṃkhyāḥ kavacinaḥ daṇḍino niṣaṅgiṇaś ca rakṣitāraḥ. Tat prāyam eva balam idaṃ dṛśyate.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ラヴァ —</span>
-    見たし、分かった。間違いなくこれは馬祀（アシュヴァメーダ）の馬だ。
-    <br><span class="speaker">少年たち —</span> どうしてわかるの。
-    <br><span class="speaker">ラヴァ —</span>
-    馬鹿だな、お前たちもあの章は読んだだろう。見えないのか、鎧武者・槍兵・矢筒兵がそれぞれ百人ずつ護衛についている。この軍勢を見れば分かるではないか。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Lavaḥ —</span>
-    <span class="stage-dir">(saspṛham ātmagatam.)</span> Aye aśvamedha iti nāma viśva-vijayināṃ kṣatriyāṇām ūrjasvalaḥ sarva-kṣatra-paribhāvī mahān utkarṣa-niṣkaṣaḥ.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ラヴァ —</span>
-    <span class="stage-dir">（憧れをもって独白。）</span> ああ、馬祀とは天下を征した王者たちの、力強く、あらゆる武士を凌駕する、偉大なる卓越の試金石だ。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【27】 <span class="stage-dir">(nepathye.)</span></span>
-    ayam aśvaḥ patākeyam atha vā vīra-ghoṣaṇā /<br>
-    sapta-lokaika-vīrasya Daśakaṇṭha-kula-dviṣaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【27】 <span class="stage-dir">（舞台裏から。）</span></span>
-    この馬、この旗、いや、この武勇の布告は、<br>
-    七界唯一の勇者、十頭族（ラーヴァナ一族）の仇敵のものである。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Lavaḥ —</span>
-    <span class="stage-dir">(sagarvam iva.)</span> Aho saṃdīpanāny akṣarāṇi.
-    <br>Mo bhoḥ tat kim akṣatriyā pṛthivī yad evam udghoṣyate.
-    <br><span class="stage-dir">(nepathye.)</span> Are re, Mahārājaṃ prati kutaḥ kṣatriyāḥ.
-    <br><span class="speaker">Lavaḥ —</span> Dhig jālmān.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ラヴァ —</span>
-    <span class="stage-dir">（誇らしげに。）</span> おお、血を沸かせる言葉だ。
-    <br>しかし待て、地上にクシャトリヤが一人もいないからそう触れ回るのか。
-    <br><span class="stage-dir">（舞台裏から。）</span> おい、大王の前にクシャトリヤなどいるものか。
-    <br><span class="speaker">ラヴァ —</span> 愚か者め。
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【28】</span>
-    yadi te santy evaṃ keyam atha vibhīṣikā /<br>
-    kim uttair ebhir adhunā tāṃ patākāṃ harāmi vaḥ //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【28】</span>
-    クシャトリヤがいるのなら、この脅しは何だ。<br>
-    もうそんな言葉は要らぬ——その旗を奪い取ってやろう。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Lavaḥ —</span>
-    Bho bho baṭavaḥ, parivṛtya loṣṭhair abhighnanto nayatainam aśvam. Eṣa rohitānāṃ madhye vairākaś caratu.
-  </div>
-  <div class="japanese">
-    <span class="speaker">ラヴァ —</span>
-    おい少年たち、馬を取り囲んで土塊を投げながら連れて行け。この哀れな馬を鹿の群れの中で草を食ませてやれ。
-  </div>
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="speaker">Baṭavaḥ —</span>
-    Kumāra kṛtam anenāśvena. Tarjayanti visphutira-śastrāḥ kumāram āyudhīya-śreṇayaḥ. Dūre cāśrama-padam itas tad ehi hariṇa-pluteḥ palāmahe.
-    <br><span class="speaker">Lavaḥ —</span>
-    <span class="stage-dir">(vihasya.)</span> Kiṃ nāma visphuranti śastrāṇi. <span class="stage-dir">(iti dhanur āropayan.)</span>
-  </div>
-  <div class="japanese">
-    <span class="speaker">少年たち —</span>
-    お友達、馬のことはもういいよ。武器をひらめかせた兵士たちが脅してくる。僧院はここから遠い。さあ、鹿のように跳ねて逃げよう。
-    <br><span class="speaker">ラヴァ —</span>
-    <span class="stage-dir">（微笑んで。）</span> 武器がきらめくだと。<span class="stage-dir">（弓に弦を張りながら。）</span>
-  </div>
-</div>
-
-<div class="verse-pair">
-  <div class="sanskrit">
-    <span class="verse-num">【29】</span>
-    jyā-jihvayā valayitotkaṭa-koṭi-daṃṣṭra-<br>
-    m udgāri-ghora-ghana-gharghar-ghoṣam etat /<br>
-    grāsa-prasakta-hasad-antaka-vaktra-yantra-<br>
-    jumbhā-viḍambi-vikaṭodaram astu cāpam //
-  </div>
-  <div class="japanese">
-    <span class="verse-num">【29】</span>
-    弦という舌が巻きつき、突き出た先端が牙のごとく、<br>
-    恐ろしく深く轟くうなりを発するこの弓よ——<br>
-    獲物を飲み込もうとして口を開く死神の大口を、<br>
-    その恐ろしい腹の空洞が模すがよい。
-  </div>
-</div>
-
-<div class="note-block">
-  <strong>Kale注:</strong> 張られた弓を死神ヤマの大口に喩える壮大な比喩。jyā（弦）は jihvā（舌）に、弓の先端の koṭi は daṃṣṭra（牙）に、弓と弦の間の空間は antaka-vaktra（死神の口）の vikaṭodara（恐ろしい空洞）に見立てられる。頭韻（ghora-ghana-gharghar-ghoṣa）の連続がヴィーラ・ラサ（勇壮の情趣）を強める。クシェーメーンドラの『アウチティヤヴィチャーラチャルチャー』にも引用される名句。
-</div>
-
-<div class="prose-pair">
-  <div class="sanskrit">
-    <span class="stage-dir">(iti yathocitaṃ parikramya niṣkrāntāḥ sarve.)</span>
-  </div>
-  <div class="japanese">
-    <span class="stage-dir">（各自しかるべく歩き回って退場する。）</span>
-  </div>
-</div>
-
-<div class="end-mark">
-  iti caturtho'ṅkaḥ — 第四幕おわり<br>
-  <span style="font-size:0.85rem;">Uttararāmacarita — Bhavabhūti</span>
-</div>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="uttararamacarita-toc.html"><span class="dev" lang="sa-Deva">उत्तररामचरितम्</span><span class="iast" lang="sa-Latn">Uttararāmacaritam</span></a>
+  <nav class="acts" aria-label="幕"><a href="uttararamacarita-toc.html">総覧</a><a href="uttararamacarita-act1.html">I</a><a href="uttararamacarita-act2.html">II</a><a href="uttararamacarita-act3.html">III</a><a href="uttararamacarita-act4.html" aria-current="page">IV</a><a href="uttararamacarita-act5.html">V</a><a href="uttararamacarita-act6.html">VI</a><a href="uttararamacarita-act7.html">VII</a></nav>
+  <div class="controls">
+    <div class="seg" role="group" aria-label="サンスクリットの文字">
+      <button type="button" data-script="dev">देव</button>
+      <button type="button" data-script="iast">IAST</button>
+      <button type="button" data-script="both">併記</button>
+    </div>
+    <button type="button" class="toggle" data-notes aria-pressed="true">注</button>
+  </div>
+</header>
+<main>
+<section class="act-head">
+  <p class="act-no">第四幕<span class="roman">Act IV</span></p>
+  <h1><span class="h-jp">カウサリヤーとジャナカの対面</span><span class="h-skt"><span class="dev" lang="sa-Deva">कौसल्याजनकयोगो नाम चतुर्थोऽङ्कः</span><span class="iast" lang="sa-Latn">kausalyājanakayogo nāma caturtho 'ṅkaḥ</span></span></h1>
+  <p class="synopsis">ヴァールミーキの庵。十二年の祭祀を終えたアルンダティーとヴァシシュタ、ラーマの母カウサリヤーらが訪れ、シーターの父ジャナカと久しぶりに対面する。娘を失った悲しみに老王は苦しみ、カウサリヤーは気を失う。そこへ遊び騒ぐ少年たちのなかに、ラーマとシーターに生き写しの少年ラヴァが現れ、一同は胸を騒がせる。やがてアシュヴァメーダの祭馬が庵に迷いこみ、護衛の兵の挑発的な宣言に怒ったラヴァは、弓を取って馬を奪いにかかる。</p>
+  <p class="act-meta">偈 29 ・ ヴァールミーキの庵</p>
+</section>
+<div class="colhead" aria-hidden="true"><span>原文</span><span>和訳</span></div><h3 class="sec"><span class="sec-skt"><span class="dev" lang="sa-Deva">मिश्रविष्कम्भकः</span><span class="iast" lang="sa-Latn">miśraviṣkambhakaḥ</span></span><span class="sec-jp">混合前場</span></h3>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(ततः प्रविशतस्तापसौ)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(tataḥ praviśatas tāpasau)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（二人の行者が登場する）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">एकः</span><span class="iast" lang="sa-Latn">Ekaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">सौधातके दृश्यतामद्य भूयिष्ठसंनिधापितातिथिजनस्य समधिकारम्भरमणीयता भगवतो वाल्मीकेराश्रमपदस्य । तथा हि —</span><span class="iast" lang="sa-Latn">saudhātake, dṛśyatām adya bhūyiṣṭhasaṃnidhāpitātithijanasya samadhikārambharamaṇīyatā bhagavato vālmīker āśramapadasya. tathā hi —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">一人</span>
+<span class="tx">サウダータキ、ごらん、今日は大勢の客人が寄りあって、いつにもましてにぎやかな支度で、ヴァールミーキ尊者の庵がなんと美しいことか。ほら——</span>
+</div></div>
+<figure class="verse" id="v4-1">
+<figcaption><a class="vnum" href="#v4-1">IV.1</a>
+<span class="metre">śārdūlavikrīḍita</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">एकः</span><span class="iast" lang="sa-Latn">Ekaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">नीवारौदनमण्डमुष्णमधुरं सद्यःप्रसूताप्रिया पीतादभ्यधिकं तपोवनमृगः पर्याप्तमाचामति ।<br>गन्धेन स्फुरता मनागनुसृतो भक्तस्य सर्पिष्मतः कर्कन्धूफलमिश्रशाकपचनामोदः परिस्तीर्यते ॥ १ ॥</span><span class="iast" lang="sa-Latn">nīvāraudanamaṇḍam uṣṇamadhuraṃ sadyaḥprasūtāpriyā-<br>pītād abhyadhikaṃ tapovanamṛgaḥ paryāptam ācāmati<br><br>gandhena sphuratā manāg anusṛto bhaktasya sarpiṣmataḥ<br>karkandhūphalamiśraśākapacanāmodaḥ paristīryate <span class="vn">‖ 1 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">子を産んだばかりの連れの牝鹿が飲み残した、<br>温かく甘い野生米の粥の上澄みを、苦行林の鹿が心ゆくまですすっている。<br>バターをたっぷり入れた飯の立ちのぼる香りをかすかに伴って、<br>ナツメの実をまぜた野菜を煮る匂いがあたりに広がっている。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第2パーダ、OCR <i class="t">pītābhyadhikaṃ</i> は <i class="t">pītād abhyadhikaṃ</i>、第3パーダ <i class="t">bhaktesya</i> は <i class="t">bhaktasya</i> の誤り（韻律 śārdūlavikrīḍita）。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">स्वागतमनेकप्रकाराणां जीर्णकूर्चानामनध्यायकारणानाम् ।</span><span class="iast" lang="sa-Latn">svāgatam anekaprakārāṇāṃ jīrṇakūrcānām anadhyāyakāraṇānām.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">休講のもとになってくださる、いろいろなひげの年寄りたち、ようこそ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">प्रथमः</span><span class="iast" lang="sa-Latn">Prathamaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(विहस्य)</span> अपूर्वः कोऽपि ते बहुमानहेतुर्गुरुषु सौधातके ।</span><span class="iast" lang="sa-Latn"><span class="sd">(vihasya)</span> apūrvaḥ ko 'pi te bahumānahetur guruṣu, saudhātake.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">第一の行者</span>
+<span class="tx"><span class="sd">（笑って）</span>サウダータキ、目上の方々をありがたがる理由がずいぶん変わっているな。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भो दण्डायन किंनामधेय एष महतः स्त्रीसार्थस्य धुरंधरोऽद्यातिथिरागतः ।</span><span class="iast" lang="sa-Latn">bho daṇḍāyana, kiṃnāmadheya eṣa mahataḥ strīsārthasya dhuraṃdharo 'dyātithir āgataḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">ねえダンダーヤナ、大勢の女の人たちを率いて今日やってきたお客は、何という名前だい。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">धिक्प्रहसनम् । नन्वयमृष्यशृङ्गाश्रमादरुन्धतीं पुरस्कृत्य महाराजदशरथस्य दारानधिष्ठाय भगवान्वसिष्ठः प्राप्तः । तत्किमेवं प्रलपसि ।</span><span class="iast" lang="sa-Latn">dhik prahasanam. nanv ayam ṛṣyaśṛṅgāśramād arundhatīṃ puraskṛtya mahārājadaśarathasya dārān adhiṣṭhāya bhagavān vasiṣṭhaḥ prāptaḥ. tat kim evaṃ pralapasi.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">ふざけるのはおよし。リシュヤシュリンガ仙の庵から、アルンダティーさまを先に立て、ダシャラタ大王の后がたを引き連れておいでになった、ヴァシシュタ尊者じゃないか。何をそんなにしゃべり散らしているんだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हुं वसिष्ठः ।</span><span class="iast" lang="sa-Latn">huṃ, vasiṣṭhaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">ふうん、ヴァシシュタか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अथ किम् ।</span><span class="iast" lang="sa-Latn">atha kim.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">そうとも。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">मया पुनर्ज्ञातं व्याघ्रो वृको वैष इति ।</span><span class="iast" lang="sa-Latn">mayā punar jñātaṃ vyāghro vṛko vaiṣa iti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">ぼくはてっきり、虎か狼かと思ったよ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">आः किमुक्तं भवति ।</span><span class="iast" lang="sa-Latn">āḥ, kim uktaṃ bhavati.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">なんだって。どういう意味だ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">येन परापतितेनैव सा वराकी कपिला कल्याणी मडमडायिता ।</span><span class="iast" lang="sa-Latn">yena parāpatitenaiva sā varākī kapilā kalyāṇī maḍamaḍāyitā.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">着いたとたんに、あのかわいそうな栗毛のいい子牛が、ばりばり食べられちゃったんだもの。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">समांसो मधुपर्क इत्याम्नायं बहुमन्यमानाः श्रोत्रियायाभ्यागताय वत्सतरीं महोक्षं वा निर्वपन्ति गृहमेधिनः । तं हि धर्मं धर्मसूत्रकाराः समामनन्ति ।</span><span class="iast" lang="sa-Latn">samāṃso madhuparka ity āmnāyaṃ bahumanyamānāḥ śrotriyāyābhyāgatāya vatsatarīṃ mahokṣaṃ vā nirvapanti gṛhamedhinaḥ. taṃ hi dharmaṃ dharmasūtrakārāḥ samāmananti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">「もてなしの蜜粥<span class="sd">（マドゥパルカ）</span>には肉を添える」という聖典を重んじて、家住者たちはヴェーダに通じた客が来ると、若い牝牛か大きな牡牛をふるまうものなのだ。法典の作者たちもそれを法として説いている。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भो निगृहीतोऽसि ।</span><span class="iast" lang="sa-Latn">bho nigṛhīto 'si.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">ほら、きみの負けだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कथमिव ।</span><span class="iast" lang="sa-Latn">katham iva.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">どうして。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">येनागतेषु वसिष्ठमिश्रेषु वत्सतरी विशसिता । अद्यैव प्रत्यागतस्य राजर्षेर्जनकस्य भगवता वाल्मीकिना दधिमधुभ्यामेव निर्वर्तितो मधुपर्कः । वत्सतरी पुनर्विसर्जिता ।</span><span class="iast" lang="sa-Latn">yenāgateṣu vasiṣṭhamiśreṣu vatsatarī viśasitā. adyaiva pratyāgatasya rājarṣer janakasya bhagavatā vālmīkinā dadhimadhubhyām eva nirvartito madhuparkaḥ. vatsatarī punar visarjitā.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">だって、ヴァシシュタさまたちが来たときは子牛がつぶされたのに、今日着いたジャナカ王仙には、ヴァールミーキさまは凝乳と蜂蜜だけでもてなしをすませて、子牛は放してやったじゃないか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अनिवृत्तमांसानामेवं कल्पं ऋषयो मन्यन्ते । निवृत्तमांसस्तु तत्रभवाञ्जनकः ।</span><span class="iast" lang="sa-Latn">anivṛttamāṃsānām evaṃ kalpaṃ ṛṣayo manyante. nivṛttamāṃsas tu tatrabhavāñ janakaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">仙人たちは、肉を断っていない人にはそうするのがよいと考えているのだ。ジャナカさまは肉を断っておられるのさ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">किंनिमित्तम् ।</span><span class="iast" lang="sa-Latn">kiṃnimittam.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">どうして。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">स तदैव देव्याः सीतायास्तादृशं दैवदुर्विपाकमुपश्रुत्य वैखानसः संवृत्तः । तस्य कतिपये संवत्सराश्चन्द्रद्वीपतपोवने तपस्तप्यमानस्य ।</span><span class="iast" lang="sa-Latn">sa tadaiva devyāḥ sītāyās tādṛśaṃ daivadurvipākam upaśrutya vaikhānasaḥ saṃvṛttaḥ. tasya katipaye saṃvatsarāś candradvīpatapovane tapas tapyamānasya.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">あの方は、シーター妃のあのむごい運命を耳にしたとたん、森の行者になられたのだ。チャンドラドヴィーパの苦行林で苦行をして、もう何年にもなる。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">ततः किमित्यागतः ।</span><span class="iast" lang="sa-Latn">tataḥ kim ity āgataḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">じゃあ、何をしに来たの。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">चिरंतनप्रियसुहृदं भगवन्तं प्राचेतसं द्रष्टुम् ।</span><span class="iast" lang="sa-Latn">ciraṃtanapriyasuhṛdaṃ bhagavantaṃ prācetasaṃ draṣṭum.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">昔からの親友、プラーチェータサ尊者<span class="sd">（ヴァールミーキ）</span>に会いにさ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अप्यद्य संबन्धिनीभिः समं वृत्तमस्य दर्शनं न वेति ।</span><span class="iast" lang="sa-Latn">apy adya saṃbandhinībhiḥ samaṃ vṛttam asya darśanaṃ na veti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">親戚の后さまたちとは、もう今日お会いになったのかな。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">संप्रत्येव भगवता वसिष्ठेन देव्याः कौसल्यायाः सकाशं भगवत्यरुन्धती प्रहिता यत्स्वयमुपेत्य वैदेहो द्रष्टव्य इति ।</span><span class="iast" lang="sa-Latn">saṃpraty eva bhagavatā vasiṣṭhena devyāḥ kausalyāyāḥ sakāśaṃ bhagavaty arundhatī prahitā, yat svayam upetya vaideho draṣṭavya iti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">ちょうどいま、ヴァシシュタ尊者がカウサリヤー后のもとへアルンダティーさまを遣わされたところだ。「御自分から出向いてヴィデーハ王に会うように」とね。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">सौधातकिः</span><span class="iast" lang="sa-Latn">Saudhātakiḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">यथैते स्थविराः परस्परं मिलितास्तथावामपि बटुभिः सह मिलित्वानध्यायमहोत्सवं खेलन्तौ संभावयावः ।</span><span class="iast" lang="sa-Latn">yathaite sthavirāḥ parasparaṃ militās tathāvām api baṭubhiḥ saha militvānadhyāyamahotsavaṃ khelantau saṃbhāvayāvaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">サウダータキ</span>
+<span class="tx">年寄りたちがおたがい寄りあうなら、ぼくらも仲間の学生たちと寄りあって、休講の大祭を遊んで祝おうよ。</span>
+</div></div>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(इति परिक्रामतः)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(iti parikrāmataḥ)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（二人、歩きまわる）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">तदयं ब्रह्मवादी पुराणराजर्षिर्जनकः प्राचेतसवसिष्ठावुपास्य संप्रत्याश्रमस्य बहिर्वृक्षमूलमधितिष्ठति य एषः —</span><span class="iast" lang="sa-Latn">tad ayaṃ brahmavādī purāṇarājarṣir janakaḥ prācetasavasiṣṭhāv upāsya saṃpraty āśramasya bahir vṛkṣamūlam adhitiṣṭhati, ya eṣaḥ —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ダンダーヤナ</span>
+<span class="tx">ほら、ブラフマンを説く古の王仙ジャナカさまが、ヴァールミーキさまとヴァシシュタさまに挨拶をすませて、いま庵の外の木の根もとにおいでだ。あの方は——</span>
+</div></div>
+<aside class="note"><span class="note-label">Kale 注</span><p>学生サウダータキの軽口（ヴァシシュタ一行のもてなしに子牛が屠られたこと）は、古代の歓待儀礼（<i class="t">madhuparka</i>）の習俗を伝える。前場は休講の喜びに浮かれる少年たちの喜劇的な調子で、続く悲痛な場面と対照をなす。</p></aside>
+<figure class="verse" id="v4-2">
+<figcaption><a class="vnum" href="#v4-2">IV.2</a>
+<span class="metre">anuṣṭubh</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">दण्डायनः</span><span class="iast" lang="sa-Latn">Daṇḍāyanaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">हृदि नित्यानुषक्तेन सीताशोकेन तप्यते ।<br>अन्तःप्रसूतदहनो जरन्निव वनस्पतिः ॥ २ ॥</span><span class="iast" lang="sa-Latn">hṛdi nityānuṣaktena sītāśokena tapyate <br>antaḥprasūtadahano jarann iva vanaspatiḥ <span class="vn">‖ 2 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">心に絶えずまといつくシーターへの悲しみに焼かれている——<br>内側に火の生じた、朽ちかけた大樹のように。</p></div>
+</div></figure>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(इति निष्क्रान्तौ)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(iti niṣkrāntau)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（二人退場）</span></span>
+</div></div>
+<h3 class="sec"><span class="sec-skt"><span class="dev" lang="sa-Deva">अथ अङ्कः</span><span class="iast" lang="sa-Latn">atha aṅkaḥ</span></span><span class="sec-jp">本場</span></h3>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(ततः प्रविशति जनकः)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(tataḥ praviśati janakaḥ)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（ジャナカが登場する）</span></span>
+</div></div>
+<figure class="verse" id="v4-3">
+<figcaption><a class="vnum" href="#v4-3">IV.3</a>
+<span class="metre">śikhariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">अपत्ये यत्तादृग्दुरितमभवत्तेन महता विषक्तस्तीव्रेण व्रणितहृदयेन व्यथयता ।<br>पटुर्धारावाही नव इव चिरेणापि हि न मे निकृन्तन्मर्माणि क्रकच इव मन्युर्विरमति ॥ ३ ॥</span><span class="iast" lang="sa-Latn">apatye yat tādṛg duritam abhavat tena mahatā<br>viṣaktas tīvreṇa vraṇitahṛdayena vyathayatā<br><br>paṭur dhārāvāhī nava iva cireṇāpi hi na me<br>nikṛntan marmāṇi krakaca iva manyur viramati <span class="vn">‖ 3 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">わが子に起きたあのような災い——その大きく激しく、<br>心を傷つけ苦しめる災いにとりつかれて、<br>鋭く、絶え間なく、いつまでも新しい私の悲しみは、<br>鋸のように急所を切り裂きつづけ、長い年月が経ってもやむことがない。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कष्टम् एवं नाम जरया दुःखेन च दुरासदेन भूयः पराकसांतपनप्रभृतिभिस्तपोभिश्च संशोषितान्तःशरीरधातोरनुपस्तम्भ एव नाद्यापि मम दग्धदेहः पतति । अन्धतामिस्रा ह्यसूर्या नाम ते लोकास्तेभ्यः प्रतिविधीयन्ते य आत्मघातिन इत्येवमृषयो मन्यन्ते । अनेकसंवत्सरातिक्रमेऽपि प्रतिक्षणपरिभावनास्पष्टनिर्भासः प्रत्यग्र इव दारुणो न मे दुःखसंवेगः प्रशाम्यति । अयि मातर्देवयजनसंभवे सीते ईदृशस्ते निर्माणभागः परिणतो येन लज्जया स्वच्छन्दमाक्रन्दितुमपि न शक्यते । हा पुत्रि —</span><span class="iast" lang="sa-Latn">kaṣṭam, evaṃ nāma jarayā duḥkhena ca durāsadena bhūyaḥ parākasāṃtapanaprabhṛtibhis tapobhiś ca saṃśoṣitāntaḥśarīradhātor anupastambha eva, nādyāpi mama dagdhadehaḥ patati. andhatāmisrā hy asūryā nāma te lokās tebhyaḥ pratividhīyante ya ātmaghātina ity evam ṛṣayo manyante. anekasaṃvatsarātikrame 'pi pratikṣaṇaparibhāvanāspaṣṭanirbhāsaḥ pratyagra iva dāruṇo na me duḥkhasaṃvegaḥ praśāmyati. ayi mātar devayajanasaṃbhave sīte, īdṛśas te nirmāṇabhāgaḥ pariṇato yena lajjayā svacchandam ākranditum api na śakyate. hā putri —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、つらい。老いと、近寄りがたい悲しみと、さらにパラーカやサーンタパナといった苦行とで、体の内のものはすっかり干からび、支えも失せているのに、この焼け焦げた体はいまだに倒れない。「自ら命を絶つ者には、日の光なき漆黒の闇の世界が用意されている」と聖仙たちは考えている。幾年が過ぎても、一瞬ごとに思いかえしてはありありと浮かぶ私の悲しみの衝撃は、生々しくむごいまま、少しも静まらない。ああ、母なる娘よ、祭場より生まれたシーターよ、おまえの定めはこうなりはてて、恥ずかしさのあまり思うさま声をあげて泣くことさえできない。ああ、娘よ——</span>
+</div></div>
+<aside class="note"><span class="note-label">Kale 注</span><p><i class="t">parāka</i>、<i class="t">sāṃtapana</i> — 断食を伴う贖罪の苦行。<i class="t">andhatāmisrā asūryā lokāḥ</i> —『イーシャー・ウパニシャッド』3 の「日の光なき世界、盲目の闇に覆われた世界に、自らを殺す者たちは行く」を踏まえる。</p></aside>
+<figure class="verse" id="v4-4">
+<figcaption><a class="vnum" href="#v4-4">IV.4</a>
+<span class="metre">puṣpitāgrā</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">अनियतरुदितस्मितं विराजत् कतिपयकोमलदन्तकुड्मलाग्रम् ।<br>वदनकमलकं शिशोः स्मरामि स्खलदसमञ्जसमुग्धजल्पितं ते ॥ ४ ॥</span><span class="iast" lang="sa-Latn">aniyataruditasmitaṃ virājat-<br>katipayakomaladantakuḍmalāgram<br><br>vadanakamalakaṃ śiśoḥ smarāmi<br>skhaladasamañjasamugdhajalpitaṃ te <span class="vn">‖ 4 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">わけもなく泣いたり笑ったり、<br>生えかけのやわらかな歯の蕾の先がのぞき、<br>たどたどしく、あどけない片言を口にしていた——<br>幼いおまえのあの蓮のような顔を、私は思い出す。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第3パーダ、OCR <i class="t">vadanakamalaṃ</i> は一音節不足で、<i class="t">vadanakamalakaṃ</i>（指小辞 <i class="t">-ka</i> で愛らしさを表す）。第4パーダも OCR は乱れており、韻律（puṣpitāgrā）から <i class="t">skhaladasamañjasamugdhajalpitaṃ</i> と解する。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भगवति वसुंधरे सत्यमतिदृढासि —</span><span class="iast" lang="sa-Latn">bhagavati vasuṃdhare, satyam atidṛḍhāsi —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">尊き大地の女神よ、あなたはまことにひどく冷酷だ——</span>
+</div></div>
+<figure class="verse" id="v4-5">
+<figcaption><a class="vnum" href="#v4-5">IV.5</a>
+<span class="metre">śārdūlavikrīḍita</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">त्वं वह्निर्मुनयो वसिष्ठगृहिणी गङ्गा च यस्या विदुर्माहात्म्यं यदि वा रघोः कुलगुरुर्देवः स्वयं भास्करः ।<br>विद्यां वागिव यामसूत भवती शुद्धिं गतायाः पुनस्तस्यास्त्वद्दुहितुस्तथा विशसनं किं दारुणेऽमृष्यथाः ॥ ५ ॥</span><span class="iast" lang="sa-Latn">tvaṃ vahnir munayo vasiṣṭhagṛhiṇī gaṅgā ca yasyā vidur<br>māhātmyaṃ yadi vā raghoḥ kulagurur devaḥ svayaṃ bhāskaraḥ<br><br>vidyāṃ vāg iva yām asūta bhavatī śuddhiṃ gatāyāḥ punas<br>tasyās tvadduhitus tathā viśasanaṃ kiṃ dāruṇe 'mṛṣyathāḥ <span class="vn">‖ 5 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">あなたも、火神も、仙人たちも、ヴァシシュタの妻も、ガンガーも、その偉大さを知っていた。<br>いや、ラグ家の家祖である太陽神ご自身も知っておられた——<br>ことばが学問を生むように、あなたが生んだその娘、ふたたび潔白を証したそのあなたの娘が、<br>あのように損なわれるのを、むごい方よ、どうして黙って見過ごしたのか。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第3パーダ後半は OCR では乱れている（<i class="t">tedvṛtta yā daivataṃ</i>）。Vīrarāghava 注の読み <i class="t">śuddhiṃ gatāyāḥ punaḥ</i> に従った。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(नेपथ्ये)</span> इत इतो भगवती महादेवी च ।</span><span class="iast" lang="sa-Latn"><span class="sd">(nepathye)</span> ita ito bhagavatī mahādevī ca.</span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（舞台裏で）</span>こちらへ、尊き方、そして后さま。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(दृष्ट्वा)</span> अये गृष्टिनोपदिश्यमानमार्गा भगवत्यरुन्धती । <span class="sd">(उत्थाय)</span> कां पुनर्महादेवीत्याह । <span class="sd">(निरूप्य)</span> हा हा कथमियं महाराजदशरथस्य धर्मदाराः प्रियसखी मे कौसल्या । क एतां प्रत्येति सैवेयमिति —</span><span class="iast" lang="sa-Latn"><span class="sd">(dṛṣṭvā)</span> aye, gṛṣṭinopadiśyamānamārgā bhagavaty arundhatī. <span class="sd">(utthāya)</span> kāṃ punar mahādevīty āha. <span class="sd">(nirūpya)</span> hā hā, katham iyaṃ mahārājadaśarathasya dharmadārāḥ priyasakhī me kausalyā. ka etāṃ pratyeti saiveyam iti —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx"><span class="sd">（見て）</span>おや、侍従に道を示されて、尊きアルンダティーさまがおいでだ。<span class="sd">（立ちあがって）</span>「后さま」とはどなたのことだろう。<span class="sd">（よく見て）</span>ああ、ああ、これはダシャラタ大王の正妃、わが親しい友カウサリヤーではないか。これがあの人だと、だれが信じられよう——</span>
+</div></div>
+<figure class="verse" id="v4-6">
+<figcaption><a class="vnum" href="#v4-6">IV.6</a>
+<span class="metre">vasantatilakā</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">आसीदियं दशरथस्य गृहे यथा श्रीः श्रीरेव वा किमुपमानपदेन सैषा ।<br>कष्टं बतान्यदिव दैववशेन जाता दुःखात्मकं किमपि भूतमहो विपाकः ॥ ६ ॥</span><span class="iast" lang="sa-Latn">āsīd iyaṃ daśarathasya gṛhe yathā śrīḥ<br>śrīr eva vā kim upamānapadena saiṣā<br><br>kaṣṭaṃ batānyad iva daivavaśena jātā<br>duḥkhātmakaṃ kim api bhūtam aho vipākaḥ <span class="vn">‖ 6 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">この人は、ダシャラタの家にあって幸運の女神のようだった——<br>いや、たとえるまでもない、幸運の女神そのものだった。<br>ああ、それが運命の力で、まるで別人のように、<br>悲しみそのものでできた何かになりはててしまった。ああ、これが報いか。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अयमपरः पापो दशाविपर्यासः —</span><span class="iast" lang="sa-Latn">ayam aparaḥ pāpo daśāviparyāsaḥ —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">これもまた、むごい境遇の逆転だ——</span>
+</div></div>
+<figure class="verse" id="v4-7">
+<figcaption><a class="vnum" href="#v4-7">IV.7</a>
+<span class="metre">anuṣṭubh</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">य एव मे जनः पूर्वमासीन्मूर्तो महोत्सवः ।<br>क्षते क्षारमिवासह्यं जातं तस्यैव दर्शनम् ॥ ७ ॥</span><span class="iast" lang="sa-Latn">ya eva me janaḥ pūrvam āsīn mūrto mahotsavaḥ <br>kṣate kṣāram ivāsahyaṃ jātaṃ tasyaiva darśanam <span class="vn">‖ 7 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">かつて私にとって祝祭そのものが形をとったようだった人が、<br>いまはその姿を見ることさえ、傷に塩を塗るように耐えがたい。</p></div>
+</div></figure>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(ततः प्रविशत्यरुन्धती कौसल्या कञ्चुकी च)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(tataḥ praviśaty arundhatī kausalyā kañcukī ca)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（アルンダティー、カウサリヤー、侍従が登場する）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">ननु ब्रवीमि द्रष्टव्यः स्वयमुपेत्यैव वैदेह इत्येष वः कुलगुरोरादेशः । अत एव चाहं प्रेषिता । तत्कोऽयं पदे पदे महाननध्यवसायः ।</span><span class="iast" lang="sa-Latn">nanu bravīmi, draṣṭavyaḥ svayam upetyaiva vaideha ity eṣa vaḥ kulagurorādeśaḥ. ata eva cāhaṃ preṣitā. tat ko 'yaṃ pade pade mahān anadhyavasāyaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">ですから言っているでしょう。「自ら出向いてヴィデーハ王に会うように」というのが、あなたがたの家の師の言いつけです。だからこそ私が遣わされたのです。それなのに、一歩ごとにこんなにためらうとは、どうしたことです。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">देवि संस्तभ्यात्मानमनुरुध्यस्व भगवतो वसिष्ठस्यादेशमिति विज्ञापयामि ।</span><span class="iast" lang="sa-Latn">devi, saṃstabhyātmānam anurudhyasva bhagavato vasiṣṭhasyādeśam iti vijñāpayāmi.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">侍従</span>
+<span class="tx">后さま、お気をしっかりおもちになって、ヴァシシュタ尊者の言いつけに従われますよう、申し上げます。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">ईदृशे काले मिथिलाधिपो मया द्रष्टव्य इति सममेव सर्वाणि दुःखानि समुद्भवन्ति । तस्मान्न शक्नोम्युद्वर्तमानमूलबन्धनं हृदयं पर्यवस्थापयितुम् ।</span><span class="iast" lang="sa-Latn">īdṛśe kāle mithilādhipo mayā draṣṭavya iti samam eva sarvāṇi duḥkhāni samudbhavanti. tasmān na śaknomy udvartamānamūlabandhanaṃ hṛdayaṃ paryavasthāpayitum.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">こんなときにミティラーの王さまにお会いしなければならないと思うと、あらゆる悲しみがいっせいにこみあげてくるのです。根もとからひっくりかえりそうなこの心を、とても落ち着かせることができません。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अत्र कः संदेहः —</span><span class="iast" lang="sa-Latn">atra kaḥ saṃdehaḥ —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">それはそうでしょう——</span>
+</div></div>
+<figure class="verse" id="v4-8">
+<figcaption><a class="vnum" href="#v4-8">IV.8</a>
+<span class="metre">indravajrā</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">संतानवाहीन्यपि मानुषाणां दुःखानि सद्बन्धुवियोगजानि ।<br>दृष्टे जने प्रेयसि दुःसहानि स्रोतःसहस्रैरिव संप्लवन्ते ॥ ८ ॥</span><span class="iast" lang="sa-Latn">saṃtānavāhīny api mānuṣāṇāṃ<br>duḥkhāni sadbandhuviyogajāni<br><br>dṛṣṭe jane preyasi duḥsahāni<br>srotaḥsahasrair iva saṃplavante <span class="vn">‖ 8 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">親しい身内との別れから生まれる人の悲しみは、<br>絶え間なく流れつづけるものだけれど、<br>愛しい人に会うと、それが千の流れとなって<br>あふれだすかのように、耐えがたくなるものです。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कथं नु खलु वत्साया वध्वा एवंगते तस्य राजर्षेर्मुखं दर्शयामः ।</span><span class="iast" lang="sa-Latn">kathaṃ nu khalu vatsāyā vadhvā evaṃgate tasya rājarṣer mukhaṃ darśayāmaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">かわいい嫁がこんなことになって、どうしてあの王仙に顔向けができましょう。</span>
+</div></div>
+<figure class="verse" id="v4-9">
+<figcaption><a class="vnum" href="#v4-9">IV.9</a>
+<span class="metre">anuṣṭubh</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">एष वः श्लाघ्यसंबन्धी जनकानां कुलोद्वहः ।<br>याज्ञवल्क्यो मुनिर्यस्मै ब्रह्मपारायणं जगौ ॥ ९ ॥</span><span class="iast" lang="sa-Latn">eṣa vaḥ ślāghyasaṃbandhī janakānāṃ kulodvahaḥ <br>yājñavalkyo munir yasmai brahmapārāyaṇaṃ jagau <span class="vn">‖ 9 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">こちらが、あなたがたの誇るべき姻戚、ジャナカ家を担う方——<br>聖仙ヤージュニャヴァルキヤがブラフマンの学をあますところなく説いた方です。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">एष स महाराजस्य हृदयानन्दो वत्साया वध्वाः पिता राजर्षिः । हा धिखा धिक् स्मारितास्म्यनिर्वेदरमणीयान्दिवसान् । हा दैव सर्वमेव तन्नास्ति ।</span><span class="iast" lang="sa-Latn">eṣa sa mahārājasya hṛdayānando vatsāyā vadhvāḥ pitā rājarṣiḥ. hā dhik hā dhik, smāritāsmy anirvedaramaṇīyān divasān. hā daiva, sarvam eva tan nāsti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">この方が、大王さまの心の喜びであった、かわいい嫁の父君、王仙さま。ああ、いや、いや——飽きることのない楽しい日々を思い出させられてしまう。ああ運命よ、あのすべてがもうないのだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(उपसृत्य)</span> भगवत्यरुन्धति वैदेहः सीरध्वजोऽभिवादयते —</span><span class="iast" lang="sa-Latn"><span class="sd">(upasṛtya)</span> bhagavaty arundhati, vaidehaḥ sīradhvajo 'bhivādayate —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx"><span class="sd">（近寄って）</span>尊きアルンダティーさま、ヴィデーハ王シーラドヴァジャがご挨拶申しあげます——</span>
+</div></div>
+<figure class="verse" id="v4-10">
+<figcaption><a class="vnum" href="#v4-10">IV.10</a>
+<span class="metre">śikhariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">यया पूतंमन्यो निधिरपि पवित्रस्य महसः पतिस्ते पूर्वेषामपि खलु गुरूणां गुरुतमः ।<br>त्रिलोकीमाङ्गल्यामवनितललीनेन शिरसा जगद्वन्द्यां देवीमुषसमिव वन्दे भगवतीम् ॥ १० ॥</span><span class="iast" lang="sa-Latn">yayā pūtaṃmanyo nidhir api pavitrasya mahasaḥ<br>patis te pūrveṣām api khalu gurūṇāṃ gurutamaḥ<br><br>trilokīmāṅgalyām avanitalalīnena śirasā<br>jagadvandyāṃ devīm uṣasam iva vande bhagavatīm <span class="vn">‖ 10 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">清らかな威光の宝庫であり、先人たちの師のなかでも最上の師である<br>あなたの夫君でさえ、あなたによって自らを清められたと思う——<br>三界の吉祥であり、世界に敬われる女神であるあなたを、<br>曙の女神を拝むように、頭を地につけて礼拝いたします。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">परं ते ज्योतिः प्रकाशताम् । अयं त्वां पुनातु देवः परोरजा य एष तपति ।</span><span class="iast" lang="sa-Latn">paraṃ te jyotiḥ prakāśatām. ayaṃ tvāṃ punātu devaḥ parorajā ya eṣa tapati.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">至上の光があなたのうちに輝きますように。塵を超えて照るあの神<span class="sd">（太陽）</span>が、あなたを清めてくださいますように。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">आर्य गृष्टे अप्यनामयमस्याः प्रजापालकस्य मातुः ।</span><span class="iast" lang="sa-Latn">ārya gṛṣṭe, apy anāmayam asyāḥ prajāpālakasya mātuḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">侍従どの、民を守る王の母君は、お変わりないか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(स्वगतम्)</span> निरवशेषमतिनिष्ठुरमुपालब्धाः स्मः । <span class="sd">(प्रकाशम्)</span> राजर्षे अनेनैव मन्युना चिरपरित्यक्तरामभद्रमुखचन्द्रदर्शनां नार्हसि दुःखयितुमतिदुःखितां देवीम् । रामभद्रस्यापि दैवदुर्योगः कोऽपि यत्किल समन्ततः प्रवृत्तबीभत्सकिंवदन्तीकाः पौरजानपदा नाग्निशुद्धिमल्पकाः प्रतियन्तीति दारुणमनुष्ठितं देवेन ।</span><span class="iast" lang="sa-Latn"><span class="sd">(svagatam)</span> niravaśeṣam atiniṣṭhuram upālabdhāḥ smaḥ. <span class="sd">(prakāśam)</span> rājarṣe, anenaiva manyunā ciraparityaktarāmabhadramukhacandradarśanāṃ nārhasi duḥkhayitum atiduḥkhitāṃ devīm. rāmabhadrasyāpi daivaduryogaḥ ko 'pi, yat kila samantataḥ pravṛttabībhatsakiṃvadantīkāḥ paurajānapadā nāgniśuddhim alpakāḥ pratiyantīti dāruṇam anuṣṭhitaṃ devena.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">侍従</span>
+<span class="tx"><span class="sd">（傍白）</span>これ以上ないほど手厳しく非難されてしまった。<span class="sd">（声に出して）</span>王仙さま、まさにこの悲しみのために、もう長いことラーマさまの月のような顔を見ておられない、ひどく苦しんでいる后さまを、どうか苦しめないでください。ラーマさまにも、何か運命の悪い巡りあわせがあったのです。あちこちでおぞましい噂が広まり、了見の狭い町や村の者たちが火による潔白を信じないというので、陛下はあのむごいことをなさったのです。</span>
+</div></div>
+<aside class="note"><span class="note-label">Kale 注</span><p>ジャナカはカウサリヤーをあえて「民を守る王（ラーマ）の母」と呼ぶ——民のために娘を捨てた王への痛烈な皮肉。侍従はそれを敏感に察する。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(सरोषम्)</span> आः कोऽयमग्निर्नामास्मत्प्रसूतिपरिशोधने । कष्टम् एवंवादिना जनेन रामभद्रपरिभूता अपि वयं पुनः परिभूयामहे ।</span><span class="iast" lang="sa-Latn"><span class="sd">(saroṣam)</span> āḥ, ko 'yam agnir nāmāsmatprasūtipariśodhane. kaṣṭam, evaṃvādinā janena rāmabhadraparibhūtā api vayaṃ punaḥ paribhūyāmahe.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx"><span class="sd">（怒って）</span>なに、わが子を清めるのに、火などというものが何だというのだ。ああ、ラーマにすでに辱められた私たちが、こんなことを言う者たちのせいで、またしても辱められるとは。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(निःश्वस्य)</span> एवमेतत् । अग्निरिति वत्सां प्रति लघीयांस्यक्षराणि । सीतेत्येव पर्याप्तम् । हा वत्से —</span><span class="iast" lang="sa-Latn"><span class="sd">(niḥśvasya)</span> evam etat. agnir iti vatsāṃ prati laghīyāṃsy akṣarāṇi. sītety eva paryāptam. hā vatse —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx"><span class="sd">（ため息をついて）</span>そのとおりです。あの子に対しては、「火」などということばは軽すぎる。「シーター」——それだけで十分なのです。ああ、娘よ——</span>
+</div></div>
+<figure class="verse" id="v4-11">
+<figcaption><a class="vnum" href="#v4-11">IV.11</a>
+<span class="metre">śikhariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">शिशुर्वा शिष्या वा यदसि मम तत्तिष्ठतु तथा विशुद्धेरुत्कर्षस्त्वयि तु मम भक्तिं द्रढयति ।<br>शिशुत्वं स्त्रीत्वं वा भवतु ननु वन्द्यासि जगतां गुणाः पूजास्थानं गुणिषु न च लिङ्गं न च वयः ॥ ११ ॥</span><span class="iast" lang="sa-Latn">śiśur vā śiṣyā vā yad asi mama tat tiṣṭhatu tathā<br>viśuddher utkarṣas tvayi tu mama bhaktiṃ draḍhayati<br><br>śiśutvaṃ strītvaṃ vā bhavatu nanu vandyāsi jagatāṃ<br>guṇāḥ pūjāsthānaṃ guṇiṣu na ca liṅgaṃ na ca vayaḥ <span class="vn">‖ 11 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">おまえが私にとって子であれ弟子であれ、それはそのままでよい。<br>だが、おまえの潔白のこの上ない尊さが、私の敬う心を強くするのです。<br>幼くとも女であろうとも、おまえは世界に敬われるべき人。<br>徳ある者において敬われるのはその徳であって、性でも年でもないのだから。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第4パーダは格言として名高い。カーリダーサ以来の「徳の尊重」の主題を、女性と年少者への敬意として明言する。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अहो उन्मीलन्ति वेदनाः । <span class="sd">(इति मूर्च्छति)</span></span><span class="iast" lang="sa-Latn">aho, unmīlanti vedanāḥ. <span class="sd">(iti mūrcchati)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">ああ、痛みが目を覚ます。<span class="sd">（気を失う）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हा कष्टम् किमेतत् ।</span><span class="iast" lang="sa-Latn">hā kaṣṭam, kim etat.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、どうしたのだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">राजर्षे किमन्यत् —</span><span class="iast" lang="sa-Latn">rājarṣe, kim anyat —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">王仙よ、ほかに何がありましょう——</span>
+</div></div>
+<figure class="verse" id="v4-12">
+<figcaption><a class="vnum" href="#v4-12">IV.12</a>
+<span class="metre">śikhariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">स राजा तत्सौख्यं स च शिशुजनस्ते च दिवसाः स्मृतावाविर्भूतं त्वयि सुहृदि दृष्टे तदखिलम् ।<br>विपाके घोरेऽस्मिन्ननु खलु विमूढा तव सखी पुरन्ध्रीणां चित्तं कुसुमसुकुमारं हि भवति ॥ १२ ॥</span><span class="iast" lang="sa-Latn">sa rājā tat saukhyaṃ sa ca śiśujanas te ca divasāḥ<br>smṛtāv āvirbhūtaṃ tvayi suhṛdi dṛṣṭe tad akhilam<br><br>vipāke ghore 'smin nanu khalu vimūḍhā tava sakhī<br>purandhrīṇāṃ cittaṃ kusumasukumāraṃ hi bhavati <span class="vn">‖ 12 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">あの王、あの幸せ、あの子どもたち、あの日々——<br>友であるあなたに会って、そのすべてが思い出によみがえったのです。<br>この恐ろしい結末に、あなたの友は気を失ってしまった。<br>家を守る女の心は、花のようにか弱いものなのです。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हन्त हन्त सर्वथा नृशंसोऽस्मि संवृत्तः यश्चिरस्य दृष्टान्प्रियसुहृदः प्रियान्दारानस्निग्ध इव पश्यामि —</span><span class="iast" lang="sa-Latn">hanta hanta, sarvathā nṛśaṃso 'smi saṃvṛttaḥ, yaś cirasya dṛṣṭān priyasuhṛdaḥ priyān dārān asnigdha iva paśyāmi —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、ああ、私はまったく無慈悲な男になってしまった。久しぶりに会った親友の愛しい妻を、まるで仇のように見ているのだから——</span>
+</div></div>
+<figure class="verse" id="v4-13">
+<figcaption><a class="vnum" href="#v4-13">IV.13</a>
+<span class="metre">śikhariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">स संबन्धी श्लाघ्यः प्रियसुहृदसौ तच्च हृदयं स चानन्दः साक्षादपि च निखिलं जीवितफलम् ।<br>शरीरं जीवो वा यदधिकमतोऽन्यत्प्रियतरं महाराजः श्रीमान्किमिव मम नासीद्दशरथः ॥ १३ ॥</span><span class="iast" lang="sa-Latn">sa saṃbandhī ślāghyaḥ priyasuhṛd asau tac ca hṛdayaṃ<br>sa cānandaḥ sākṣād api ca nikhilaṃ jīvitaphalam<br><br>śarīraṃ jīvo vā yad adhikam ato 'nyat priyataraṃ<br>mahārājaḥ śrīmān kim iva mama nāsīd daśarathaḥ <span class="vn">‖ 13 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">誇るべき姻戚であり、親友であり、わが心そのものであり、<br>喜びそのものであり、生きることのすべての実りでもあった。<br>この体であり、命であり、それよりもっと愛しいものでもあった——<br>栄えあるダシャラタ大王は、私にとって何でなかったろう。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कष्टम् इयमेव सा कौसल्या —</span><span class="iast" lang="sa-Latn">kaṣṭam, iyam eva sā kausalyā —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、この人こそ、あのカウサリヤーなのだ——</span>
+</div></div>
+<figure class="verse" id="v4-14">
+<figcaption><a class="vnum" href="#v4-14">IV.14</a>
+<span class="metre">śikhariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">यदस्याः पत्युर्वा रहसि परमं दूषितमभूदभूवं दम्पत्योः पृथगहमुपालम्भविषयः ।<br>प्रसादे कोपे वा तदनु मदधीनो विधिरभूदलं वा तत्स्मृत्वा दहति यदवस्कन्द्य हृदयम् ॥ १४ ॥</span><span class="iast" lang="sa-Latn">yad asyāḥ patyur vā rahasi paramaṃ dūṣitam abhūd<br>abhūvaṃ dampatyoḥ pṛthag aham upālambhaviṣayaḥ<br><br>prasāde kope vā tadanu madadhīno vidhir abhūd<br>alaṃ vā tat smṛtvā dahati yad avaskandya hṛdayam <span class="vn">‖ 14 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">この人であれ夫君であれ、内々で何か大きな落ち度があると、<br>夫婦それぞれから、私が苦情の聞き役にされたものだった。<br>そのあと仲直りするのも、怒りつづけるのも、私しだいだった——<br>いや、もうよそう。思い出すと、心に襲いかかって焼きつくすのだから。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第1パーダ、OCR <i class="t">paramaṃ bhūṣitam</i> は意味が通らない。注は「互いに相手の落ち度を私に訴えた」と説き、異読 <i class="t">param atyāhitam abhūt</i> にも触れる。韻律（śikhariṇī）と注に従い <i class="t">dūṣitam</i>（落ち度・いさかい）と解した。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हा कष्टम् अतिचिरनिरुद्धनिःश्वासनिष्पन्दं हृदयमस्याः ।</span><span class="iast" lang="sa-Latn">hā kaṣṭam, aticiraniruddhaniḥśvāsaniṣpandaṃ hṛdayam asyāḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">ああ、たいへん。この人の心臓は、長いこと息が止まって動かない。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हा प्रियसखि । <span class="sd">(इति कमण्डलूदकेन सिञ्चति)</span></span><span class="iast" lang="sa-Latn">hā priyasakhi. <span class="sd">(iti kamaṇḍalūdakena siñcati)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、親しい友よ。<span class="sd">（水瓶の水をふりかける）</span></span>
+</div></div>
+<figure class="verse" id="v4-15">
+<figcaption><a class="vnum" href="#v4-15">IV.15</a>
+<span class="metre">drutavilambita</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">सुहृदिव प्रकटय्य सुखप्रदां प्रथममेकरसामनुकूलताम् ।<br>पुनरकाण्डविवर्तनदारुणो विधिरहो विशिनष्टि मनोरुजम् ॥ १५ ॥</span><span class="iast" lang="sa-Latn">suhṛd iva prakaṭayya sukhapradāṃ<br>prathamam ekarasām anukūlatām<br><br>punar akāṇḍavivartanadāruṇo<br>vidhir aho viśinaṣṭi manorujam <span class="vn">‖ 15 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">はじめは友のように、喜びをもたらす<br>やがて不意に手のひらを返してむごくなる——<br>ああ、運命は心の痛みをいっそう深くするものだ。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(आश्वस्य)</span> हा वत्से जानकि कुत्रासि । स्मरामि ते नवविवाहलक्ष्मीपरिग्रहैकमण्डनं प्रस्फुरच्छुद्धविहसितं मुग्धमुखपुण्डरीकम् । आस्फुरच्चन्द्रचन्द्रिकासुन्दरैरङ्गैः पुनरपि मे जाते उद्योतयोत्सङ्गम् । सर्वदा महाराज एवं भणति — एषा रघुकुलमहत्तराणां वधूरस्माकं तु जनकसुता दुहितैवेति ।</span><span class="iast" lang="sa-Latn"><span class="sd">(āśvasya)</span> hā vatse jānaki, kutrāsi. smarāmi te navavivāhalakṣmīparigrahaikamaṇḍanaṃ prasphuracchuddhavihasitaṃ mugdhamukhapuṇḍarīkam. āsphuraccandracandrikāsundarair aṅgaiḥ punar api me jāte udyotayotsaṅgam. sarvadā mahārāja evaṃ bhaṇati — eṣā raghukulamahattarāṇāṃ vadhūr asmākaṃ tu janakasutā duhitaiveti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx"><span class="sd">（息を吹きかえして）</span>ああ、かわいいジャーナキー、どこにいるの。新婚の輝きだけを唯一の飾りとし、無邪気な笑みのこぼれていた、おまえのあどけない蓮のような顔を思い出す。娘よ、きらめく月の光のように美しいその体で、もう一度私の膝を明るくしておくれ。大王さまはいつもこうおっしゃっていた——「ラグ家の長老たちにとっては嫁だが、われらにとってジャナカの娘は実の娘だ」と。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">यथाह देवी —</span><span class="iast" lang="sa-Latn">yathāha devī —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">侍従</span>
+<span class="tx">后さまの仰せのとおりです——</span>
+</div></div>
+<figure class="verse" id="v4-16">
+<figcaption><a class="vnum" href="#v4-16">IV.16</a>
+<span class="metre">indravajrā</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">पञ्चप्रसूतेरपि तस्य राज्ञः प्रियो विशेषेण सुबाहुशत्रुः ।<br>वधूचतुष्केऽपि यथैव शान्ता प्रिया तनूजास्य तथैव सीता ॥ १६ ॥</span><span class="iast" lang="sa-Latn">pañcaprasūter api tasya rājñaḥ<br>priyo viśeṣeṇa subāhuśatruḥ<br><br>vadhūcatuṣke 'pi yathaiva śāntā<br>priyā tanūjāsya tathaiva sītā <span class="vn">‖ 16 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">五人の子をもうけたあの王にとって、<br>とりわけ愛しかったのはスバーフの敵<span class="sd">（ラーマ）</span>であり、<br>四人の嫁のなかでも、実の娘シャーンターと同じように<br>この方<span class="sd">（ジャナカ）</span>の娘シーターを愛しておられました。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>五人の子 = ラーマ、バラタ、ラクシュマナ、シャトルグナ、シャーンター。<i class="t">subāhuśatru</i> — 羅刹スバーフを討った者、すなわちラーマ。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हा प्रियसख महाराज दशरथ एवमपि सर्वप्रकारहृदयंगमः कथं विस्मर्यसे —</span><span class="iast" lang="sa-Latn">hā priyasakha mahārāja daśaratha, evam api sarvaprakārahṛdayaṃgamaḥ kathaṃ vismaryase —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、親友ダシャラタ大王よ、あらゆる点で心にかなうあなたを、どうして忘れられよう——</span>
+</div></div>
+<figure class="verse" id="v4-17">
+<figcaption><a class="vnum" href="#v4-17">IV.17</a>
+<span class="metre">śārdūlavikrīḍita</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">कन्यायाः किल पूजयन्ति पितरो जामातुराप्तं जनं संबन्धे विपरीतमेव तदभूदाराधनं ते मयि ।<br>त्वं कालेन तथाविधोऽप्यपहृतः संबन्धबीजं च तद्घोरेऽस्मिन्मम जीवलोकनरके पापस्य धिग्जीवितम् ॥ १७ ॥</span><span class="iast" lang="sa-Latn">kanyāyāḥ kila pūjayanti pitaro jāmātur āptaṃ janaṃ<br>saṃbandhe viparītam eva tad abhūd ārādhanaṃ te mayi<br><br>tvaṃ kālena tathāvidho 'py apahṛtaḥ saṃbandhabījaṃ ca tad<br>ghore 'smin mama jīvalokanarake pāpasya dhig jīvitam <span class="vn">‖ 17 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">縁組では、娘の親が婿の身内を敬うものだという。<br>ところがわれらの縁では逆に、あなたが私を敬ってくれた。<br>そのあなたも時に奪われ、縁の種<span class="sd">（シーター）</span>も失われた——<br>この恐ろしい浮き世の地獄で、罪深い私の命など呪われよ。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第1パーダ、OCR <i class="t">jāmātṛjaṃ janaṃ</i> は一音節不足。注の「婿の身近な身内」に従い <i class="t">jāmātur āptaṃ janaṃ</i> と解する（韻律 śārdūlavikrīḍita）。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">जाते जानकि किं करोमि । दृढवज्रलेपप्रतिबद्धबन्धनिश्चलं हतजीवितं मां मन्दभागिनीं न परित्यजति ।</span><span class="iast" lang="sa-Latn">jāte jānaki, kiṃ karomi. dṛḍhavajralepapratibaddhabandhaniścalaṃ hatajīvitaṃ māṃ mandabhāginīṃ na parityajati.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">かわいいジャーナキー、どうしたらいいの。金剛の糊で固く貼りつけられたように動かない、このいまいましい命が、不運な私を離れてくれないの。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">आश्वसिहि राजपुत्रि बाष्पविश्रामोऽप्यन्तरे कर्तव्य एव । अन्यच्च किं न स्मरसि यदवोचदृष्यशृङ्गाश्रमे युष्माकं कुलगुरुः — भवितव्यं तथेत्युपजातमेव किं तु कल्याणोदर्कं भविष्यतीति ।</span><span class="iast" lang="sa-Latn">āśvasihi rājaputri, bāṣpaviśrāmo 'py antare kartavya eva. anyac ca kiṃ na smarasi yad avocad ṛṣyaśṛṅgāśrame yuṣmākaṃ kulaguruḥ — bhavitavyaṃ tathety upajātam eva, kiṃ tu kalyāṇodarkaṃ bhaviṣyatīti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">気をしっかり、王女よ。ときには涙を休めることも必要です。それに、リシュヤシュリンガ仙の庵であなたがたの家の師が言われたことを覚えていないのですか——「起こるべきことは、そのとおりに起きた。だが、その結末は幸いとなろう」と。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कुतोऽतिक्रान्तमनोरथाया ममैतत् ।</span><span class="iast" lang="sa-Latn">kuto 'tikrāntamanorathāyā mamaitat.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">望みのすべて尽きた私に、どうしてそんなことが。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">तत्किं मन्यसे राजपुत्रि मृषोद्यमेतदिति । न हीदं सुक्षत्रियेऽन्यथा मन्तव्यम् । भवितव्यमेव तेन —</span><span class="iast" lang="sa-Latn">tat kiṃ manyase rājaputri mṛṣodyam etad iti. na hīdaṃ sukṣatriye 'nyathā mantavyam. bhavitavyam eva tena —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">では王女よ、あれが偽りの言葉だと思うのですか。これを疑ってはなりません。必ずそうなるのです——</span>
+</div></div>
+<figure class="verse" id="v4-18">
+<figcaption><a class="vnum" href="#v4-18">IV.18</a>
+<span class="metre">śālinī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">आविर्भूतज्योतिषां ब्राह्मणानां ये व्याहारास्तेषु मा संशयोऽभूत् ।<br>भद्रा ह्येषां वाचि लक्ष्मीर्निषक्ता नैते वाचं विप्लुतार्थां वदन्ति ॥ १८ ॥</span><span class="iast" lang="sa-Latn">āvirbhūtajyotiṣāṃ brāhmaṇānāṃ<br>ye vyāhārās teṣu mā saṃśayo 'bhūt<br><br>bhadrā hy eṣāṃ vāci lakṣmīr niṣaktā<br>naite vācaṃ viplutārthāṃ vadanti <span class="vn">‖ 18 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">内なる光の顕れたバラモンたちのことばを、<br>疑ってはなりません。<br>彼らのことばには吉祥の幸いが宿っており、<br>その口から、意味の外れたことばが出ることはないのです。</p></div>
+</div></figure>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(नेपथ्ये कलकलः । सर्वे आकर्णयन्ति)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(nepathye kalakalaḥ. sarve ākarṇayanti)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（舞台裏で騒がしい声。一同、耳を傾ける）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अये अद्य खलु शिष्टानध्याय इत्यनुपश्रुत्यं खेलतां बटूनां कलकलः ।</span><span class="iast" lang="sa-Latn">aye, adya khalu śiṣṭānadhyāya ity anupaśrutyaṃ khelatāṃ baṭūnāṃ kalakalaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">おや、今日は賓客の来訪による休講だというので、遊んでいる学生たちの騒ぎ声だな。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">सुलभसौख्यं तावद्बालत्वं भवति । <span class="sd">(निरूप्य)</span> अहो एतेषां मध्ये क एष रामभद्रलक्ष्मीपरिशोभितैः सावष्टम्भमुग्धललितैरङ्गैरस्माकं लोचने शीतलयति ।</span><span class="iast" lang="sa-Latn">sulabhasaukhyaṃ tāvad bālatvaṃ bhavati. <span class="sd">(nirūpya)</span> aho, eteṣāṃ madhye ka eṣa rāmabhadralakṣmīpariśobhitaiḥ sāvaṣṭambhamugdhalalitair aṅgair asmākaṃ locane śītalayati.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">子どものころは、楽しみがたやすく手に入るものね。<span class="sd">（じっと見て）</span>まあ、あの子たちのなかで、ラーマのような気品に輝き、凛々しくもあどけない、愛らしい手足で、私たちの目を涼やかにしてくれるあの子はだれかしら。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(अपवार्य, सहर्षबाष्पम्)</span> इदं नाम तद्भागीरथीनिवेदितरहस्यं कर्णामृतम् । न त्वेवं विद्मः कतरोवायमायुष्मतोः कुशलवयोरिति ।</span><span class="iast" lang="sa-Latn"><span class="sd">(apavārya, saharṣabāṣpam)</span> idaṃ nāma tad bhāgīrathīniveditarahasyaṃ karṇāmṛtam. na tv evaṃ vidmaḥ katarovāyam āyuṣmatoḥ kuśalavayor iti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx"><span class="sd">（脇を向いて、うれし涙をうかべ）</span>これこそ、ガンガーさまから明かされた、耳に甘露のあの秘密。でも、健やかなクシャとラヴァのどちらなのかはわからない。</span>
+</div></div>
+<figure class="verse" id="v4-19">
+<figcaption><a class="vnum" href="#v4-19">IV.19</a>
+<span class="metre">hariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">कुवलयदलस्निग्धश्यामः शिखण्डकमण्डनो बटुपरिषदं पुण्यश्रीकः श्रियेव सभाजयन् ।<br>पुनरपि शिशुर्भूतो वत्सः स मे रघुनन्दनो झटिति कुरुते दृष्टः कोऽयं दृशोरमृताञ्जनम् ॥ १९ ॥</span><span class="iast" lang="sa-Latn">kuvalayadalasnigdhaśyāmaḥ śikhaṇḍakamaṇḍano<br>baṭupariṣadaṃ puṇyaśrīkaḥ śriyeva sabhājayan<br><br>punar api śiśur bhūto vatsaḥ sa me raghunandano<br>jhaṭiti kurute dṛṣṭaḥ ko 'yaṃ dṛśor amṛtāñjanam <span class="vn">‖ 19 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">青蓮の花びらのようにつややかに黒く、巻き髪を飾りとし、<br>清らかな輝きをもって、学生の仲間を美しさそのもののように引きたてている——<br>ふたたび幼子となったあのラグ家の喜び<span class="sd">（ラーマ）</span>のようだ。<br>目にしたとたん、私の目に甘露の目薬をさしてくれるこの子は、いったいだれなのか。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第2パーダ、OCR <i class="t">baṭupariṣad … śriyaiva</i> は韻律（hariṇī）上 <i class="t">baṭupariṣadaṃ … śriyeva</i> と解する。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">नूनं क्षत्रियब्रह्मचारी दारकोऽयमिति मन्ये ।</span><span class="iast" lang="sa-Latn">nūnaṃ kṣatriyabrahmacārī dārako 'yam iti manye.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">侍従</span>
+<span class="tx">この子はきっと、クシャトリヤの学生でございましょう。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">एवमेतत् । अस्य हि —</span><span class="iast" lang="sa-Latn">evam etat. asya hi —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">そのとおりだ。なぜなら、この子は——</span>
+</div></div>
+<figure class="verse" id="v4-20">
+<figcaption><a class="vnum" href="#v4-20">IV.20</a>
+<span class="metre">śārdūlavikrīḍita</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">चूडाचुम्बितकङ्कपत्रमभितस्तूणीद्वयं पृष्ठतो भस्मस्तोकपवित्रलाञ्छनमुरो धत्ते त्वचं रौरवीम् ।<br>मौर्व्या मेखलया नियन्त्रितमधोवासश्च माञ्जिष्ठकं पाणौ कार्मुकमक्षसूत्रवलयं दण्डोऽपरः पैप्पलः ॥ २० ॥</span><span class="iast" lang="sa-Latn">cūḍācumbitakaṅkapatram abhitas tūṇīdvayaṃ pṛṣṭhato<br>bhasmastokapavitralāñchanam uro dhatte tvacaṃ rauravīm<br><br>maurvyā mekhalayā niyantritam adhovāsaś ca māñjiṣṭhakaṃ<br>pāṇau kārmukam akṣasūtravalayaṃ daṇḍo 'paraḥ paippalaḥ <span class="vn">‖ 20 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">背には、髷に触れるほど鷺の羽の矢をさした箙を左右にふたつ、<br>胸には聖灰の印をわずかにつけ、ルル鹿の皮をまとい、<br>弓弦の紐の帯で茜染めの下衣をしめ、<br>手には弓と数珠の腕輪、そしてもう一本、菩提樹の杖をもっている。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>クシャトリヤの学生の装い。弓弦（<i class="t">maurvī</i>）の帯と茜染め（<i class="t">māñjiṣṭha</i>）の衣は法典に定めるクシャトリヤの徴、菩提樹（<i class="t">pippala</i>）の杖もまたそうである。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भगवत्यरुन्धति किमुत्प्रेक्षसे कुतस्त्योऽयमिति ।</span><span class="iast" lang="sa-Latn">bhagavaty arundhati, kim utprekṣase kutastyo 'yam iti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">尊きアルンダティーさま、この子はどこの子だとお思いですか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अद्यैव वयमागताः ।</span><span class="iast" lang="sa-Latn">adyaiva vayam āgatāḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">私たちも今日着いたばかりです。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">आर्य गृष्टे अतीव मे कौतुकं वर्तते । तद्भगवन्तं वाल्मीकिमेव गत्वा पृच्छ । इमं च बटुं ब्रूहि — वत्स केऽप्येते प्रवयसस्त्वां दिदृक्षव इति ।</span><span class="iast" lang="sa-Latn">ārya gṛṣṭe, atīva me kautukaṃ vartate. tad bhagavantaṃ vālmīkim eva gatvā pṛccha. imaṃ ca baṭuṃ brūhi — vatsa, ke 'py ete pravayasas tvāṃ didṛkṣava iti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">侍従どの、たまらなく知りたい。ヴァールミーキ尊者のところへ行って尋ねてきてくれ。それから、この学生にこう言ってくれ——「坊や、ここにいるお年寄りたちが、おまえに会いたがっている」と。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">यदाज्ञापयति देवः । <span class="sd">(इति निष्क्रान्तः)</span></span><span class="iast" lang="sa-Latn">yad ājñāpayati devaḥ. <span class="sd">(iti niṣkrāntaḥ)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">侍従</span>
+<span class="tx">仰せのとおりに。<span class="sd">（退場）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">किं मन्यध्व एवं भणित आगमिष्यतीति ।</span><span class="iast" lang="sa-Latn">kiṃ manyadhva evaṃ bhaṇita āgamiṣyatīti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">そう言われて、あの子が来てくれると思って？</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भिद्येत वा सद्वृत्तमीदृशस्य निर्माणस्य ।</span><span class="iast" lang="sa-Latn">bhidyeta vā sadvṛttam īdṛśasya nirmāṇasya.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">これほどの生まれの子が、礼儀を欠くはずがない。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(निरूप्य)</span> कथं सविनयं निशामितगृष्टिवचनो विसर्जितर्षिदारक इतोऽभिमुखं प्रसृत एव स वत्सः ।</span><span class="iast" lang="sa-Latn"><span class="sd">(nirūpya)</span> kathaṃ savinayaṃ niśāmitagṛṣṭivacano visarjitarṣidāraka ito 'bhimukhaṃ prasṛta eva sa vatsaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx"><span class="sd">（見やって）</span>まあ、侍従の言葉を慎み深く聞いて、仙人の子らと別れて、あの子がこちらへやって来るわ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(चिरं निर्वर्ण्य)</span> भोः किमप्येतत् —</span><span class="iast" lang="sa-Latn"><span class="sd">(ciraṃ nirvarṇya)</span> bhoḥ, kim apy etat —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx"><span class="sd">（長いこと見つめて）</span>ああ、これは何とも——</span>
+</div></div>
+<figure class="verse" id="v4-21">
+<figcaption><a class="vnum" href="#v4-21">IV.21</a>
+<span class="metre">śikhariṇī</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">महिम्नामेतस्मिन्विनयशिशुतामौग्ध्यमसृणो विदग्धैर्निर्ग्राह्यो न पुनरविदग्धैरतिशयः ।<br>मनो मे संमोहस्थिरमपि हरत्येष बलवानयोधातुं यद्वत्परिलघुरयस्कान्तशकलः ॥ २१ ॥</span><span class="iast" lang="sa-Latn">mahimnām etasmin vinayaśiśutāmaugdhyamasṛṇo<br>vidagdhair nirgrāhyo na punar avidagdhair atiśayaḥ<br><br>mano me saṃmohasthiram api haraty eṣa balavān<br>ayodhātuṃ yadvat parilaghur ayaskāntaśakalaḥ <span class="vn">‖ 21 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">この子のなかにある偉大さの卓越は、慎みと幼さのあどけなさにやわらげられていて、<br>目の利く者にはわかるが、そうでない者には見抜けない。<br>悲しみに沈んで動かなくなった私の心さえ、この子は力強く引き寄せる——<br>小さな磁石のかけらが、鉄を引き寄せるように。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(प्रविश्य)</span> अज्ञातनामकमभिजनान्पूज्यानपि सतः कथमभिवादयिष्ये । <span class="sd">(विचिन्त्य)</span> अयं पुनरविरुद्धः प्रकार इति वृद्धेभ्यः श्रूयते । <span class="sd">(सविनयमुपसृत्य)</span> एष वो लवस्य शिरसा प्रणामपर्यायः ।</span><span class="iast" lang="sa-Latn"><span class="sd">(praviśya)</span> ajñātanāmakam abhijanān pūjyān api sataḥ katham abhivādayiṣye. <span class="sd">(vicintya)</span> ayaṃ punar aviruddhaḥ prakāra iti vṛddhebhyaḥ śrūyate. <span class="sd">(savinayam upasṛtya)</span> eṣa vo lavasya śirasā praṇāmaparyāyaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx"><span class="sd">（登場して）</span>名も家柄も知らない方々を、敬うべき方々とはいえ、どうご挨拶したものだろう。<span class="sd">（考えて）</span>でも、こういうやり方なら差しつかえないと、年長の方から聞いている。<span class="sd">（慎み深く近寄って）</span>ラヴァが、頭を下げて、皆さまに順にご挨拶申しあげます。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धतीजनकौ</span><span class="iast" lang="sa-Latn">Arundhatījanakau</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कल्याणिन् आयुष्मान्भूयाः ।</span><span class="iast" lang="sa-Latn">kalyāṇin, āyuṣmān bhūyāḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティーとジャナカ</span>
+<span class="tx">よい子よ、長生きするように。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">जात चिरं जीव ।</span><span class="iast" lang="sa-Latn">jāta, ciraṃ jīva.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">坊や、長生きしてね。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">एहि वत्स । <span class="sd">(लवमुत्सङ्गे गृहीत्वा, अपवार्य)</span> दिष्ट्या न केवलमुत्सङ्गश्चिरमनोरथोऽपि मे संपूर्णः ।</span><span class="iast" lang="sa-Latn">ehi vatsa. <span class="sd">(lavam utsaṅge gṛhītvā, apavārya)</span> diṣṭyā na kevalam utsaṅgaś ciramanoratho 'pi me saṃpūrṇaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">おいで、坊や。<span class="sd">（ラヴァを膝に抱いて、脇を向き）</span>うれしいこと、膝ばかりでなく、長年の願いまでいっぱいに満たされた。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">जात इतोऽपि तावदेहि । <span class="sd">(उत्सङ्गे गृहीत्वा)</span> अहो न केवलं दरविकसन्नीलोत्पलश्यामलोज्ज्वलेन देहबन्धेन कवलितारविन्दकेसरकषायकण्ठकलहंसघोषघर्घरेण स्वरेण च रामभद्रमनुहरति । ननु कठोरकमलगर्भपक्ष्मलः शरीरस्पर्शोऽपि तादृश एव वत्सस्य । जात प्रेक्षे तावत्ते मुखपुण्डरीकम् । <span class="sd">(चिबुकमुन्नमय्य निरूप्य, सबाष्पाकूतम्)</span> राजर्षे किं न प्रेक्षसे निपुणं निरूप्यमाणं वत्साया वध्वा मुखचन्द्रेण संवदत्येव ।</span><span class="iast" lang="sa-Latn">jāta, ito 'pi tāvad ehi. <span class="sd">(utsaṅge gṛhītvā)</span> aho, na kevalaṃ daravikasannīlotpalaśyāmalojjvalena dehabandhena, kavalitāravindakesarakaṣāyakaṇṭhakalahaṃsaghoṣagharghareṇa svareṇa ca rāmabhadram anuharati. nanu kaṭhorakamalagarbhapakṣmalaḥ śarīrasparśo 'pi tādṛśa eva vatsasya. jāta, prekṣe tāvat te mukhapuṇḍarīkam. <span class="sd">(cibukam unnamayya nirūpya, sabāṣpākūtam)</span> rājarṣe, kiṃ na prekṣase, nipuṇaṃ nirūpyamāṇaṃ vatsāyā vadhvā mukhacandreṇa saṃvadaty eva.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">坊や、こっちにもおいで。<span class="sd">（膝に抱いて）</span>まあ、咲きかけの青蓮のように黒く輝く体つきばかりか、蓮の花蕊をついばんで渋みを帯びた喉の白鳥の鳴き声のような、深く響く声まで、ラーマにそっくり。熟した蓮の芯のようにやわらかな、この肌ざわりまで同じだわ。坊や、蓮のような顔をよく見せて。<span class="sd">（あごを持ちあげて見つめ、涙ぐんで意味ありげに）</span>王仙さま、ごらんにならないの？ よく見ると、かわいい嫁の月のような顔にもそっくりよ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">पश्यामि सखि पश्यामि ।</span><span class="iast" lang="sa-Latn">paśyāmi sakhi paśyāmi.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">見ていますとも、友よ、見ていますとも。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अहो उन्मत्तीभूतमिव मे हृदयं किमपि विप्रलपति ।</span><span class="iast" lang="sa-Latn">aho, unmattībhūtam iva me hṛdayaṃ kim api vipralapati.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">ああ、私の心は気がふれたように、何やらうわごとを言っている。</span>
+</div></div>
+<figure class="verse" id="v4-22">
+<figcaption><a class="vnum" href="#v4-22">IV.22</a>
+<span class="metre">śārdūlavikrīḍita</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">वत्सायाश्च रघूद्वहस्य च शिशावस्मिन्नभिव्यज्यते संपूर्णप्रतिबिम्बितेव निखिला सैवाकृतिः सा द्युतिः ।<br>सा वाणी विनयः स एव सहजः पुण्यानुभावोऽप्यसौ हा हा दैव किमुत्पथैर्मम मनः पारिप्लवं धावति ॥ २२ ॥</span><span class="iast" lang="sa-Latn">vatsāyāś ca raghūdvahasya ca śiśāv asminn abhivyajyate<br>saṃpūrṇapratibimbiteva nikhilā saivākṛtiḥ sā dyutiḥ<br><br>sā vāṇī vinayaḥ sa eva sahajaḥ puṇyānubhāvo 'py asau<br>hā hā daiva kim utpathair mama manaḥ pāriplavaṃ dhāvati <span class="vn">‖ 22 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">この子には、わが娘とラグ家の後継ぎ<span class="sd">（ラーマ）</span>の、<br>姿のすべて、輝きのすべてが、そのまま映しだされたようにあらわれている。<br>あの声、あの生まれながらの慎み、あの清らかな威厳——<br>ああ、運命よ、揺れ動く私の心は、なんとあらぬ道へと走ってゆくのか。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">जात अस्ति ते माता । स्मरसि वा तातम् ।</span><span class="iast" lang="sa-Latn">jāta, asti te mātā. smarasi vā tātam.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">坊や、お母さんはいるの？ お父さんのことは覚えている？</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">नहि नहि ।</span><span class="iast" lang="sa-Latn">nahi nahi.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">いいえ、いいえ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">ततः कस्य त्वम् ।</span><span class="iast" lang="sa-Latn">tataḥ kasya tvam.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">では、だれの子なの。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भगवतो वाल्मीकेः ।</span><span class="iast" lang="sa-Latn">bhagavato vālmīkeḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">ヴァールミーキ尊者の子です。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अयि जात कथयितव्यं कथय ।</span><span class="iast" lang="sa-Latn">ayi jāta, kathayitavyaṃ kathaya.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">まあ坊や、言うべきことをちゃんと言ってちょうだい。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">एतावदेव जानामि ।</span><span class="iast" lang="sa-Latn">etāvad eva jānāmi.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">それしか知らないのです。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(नेपथ्ये)</span> भो भोः सैनिकाः एष खलु कुमारश्चन्द्रकेतुराज्ञापयति — न केनाप्याश्रमाभ्यर्णभूमिराक्रमितव्येति ।</span><span class="iast" lang="sa-Latn"><span class="sd">(nepathye)</span> bho bhoḥ sainikāḥ, eṣa khalu kumāraś candraketur ājñāpayati — na kenāpy āśramābhyarṇabhūmir ākramitavyeti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（舞台裏で）</span>おい、兵士たち、チャンドラケートゥ王子のご命令だ——「だれも庵の近くの地に踏みこんではならぬ」と。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धतीजनकौ</span><span class="iast" lang="sa-Latn">Arundhatījanakau</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अये मेध्याश्वरक्षाप्रसङ्गादुपागतो वत्सश्चन्द्रकेतुश्च द्रष्टव्य इत्यहो सुदिवसः ।</span><span class="iast" lang="sa-Latn">aye, medhyāśvarakṣāprasaṅgād upāgato vatsaś candraketuś ca draṣṭavya ity aho sudivasaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティーとジャナカ</span>
+<span class="tx">おや、祭馬の護衛のついでに、チャンドラケートゥも来ているのか。あの子にも会えるとは、なんとよい日だ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">वत्सलक्ष्मणस्य पुत्र आज्ञापयतीत्यमृतबिन्दुसुन्दराण्यक्षराणि श्रूयन्ते ।</span><span class="iast" lang="sa-Latn">vatsalakṣmaṇasya putra ājñāpayatīty amṛtabindusundarāṇy akṣarāṇi śrūyante.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">かわいいラクシュマナの息子が命令しているなんて、甘露のしずくのように美しいことばが聞こえてくる。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">आर्य क एष चन्द्रकेतुर्नाम ।</span><span class="iast" lang="sa-Latn">ārya, ka eṣa candraketur nāma.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">おじいさま、そのチャンドラケートゥという人はだれですか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">जानासि रामलक्ष्मणौ दाशरथी ।</span><span class="iast" lang="sa-Latn">jānāsi rāmalakṣmaṇau dāśarathī.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ダシャラタの子、ラーマとラクシュマナを知っているか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">एतावेव रामायणकथापुरुषौ ।</span><span class="iast" lang="sa-Latn">etāv eva rāmāyaṇakathāpuruṣau.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">『ラーマーヤナ』の物語の主人公のおふたりですね。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अथ किम् ।</span><span class="iast" lang="sa-Latn">atha kim.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">そうだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">तत्कथं न जानामि ।</span><span class="iast" lang="sa-Latn">tat kathaṃ na jānāmi.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">それなら、知らないはずがありません。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">तस्य लक्ष्मणस्यायमात्मजश्चन्द्रकेतुः ।</span><span class="iast" lang="sa-Latn">tasya lakṣmaṇasyāyam ātmajaś candraketuḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">そのラクシュマナの息子が、このチャンドラケートゥだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">ऊर्मिलायाः पुत्रस्तर्हि मैथिलस्य राजर्षेर्दौहित्रः ।</span><span class="iast" lang="sa-Latn">ūrmilāyāḥ putras tarhi maithilasya rājarṣer dauhitraḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">それならウールミラーさまの息子で、ミティラーの王仙の孫ですね。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(विहस्य)</span> आविष्कृतं कथाप्रावीण्यं वत्सेन ।</span><span class="iast" lang="sa-Latn"><span class="sd">(vihasya)</span> āviṣkṛtaṃ kathāprāvīṇyaṃ vatsena.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx"><span class="sd">（笑って）</span>この子は物語に通じていることを見せてくれたわね。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(विचिन्त्य)</span> यदि त्वमीदृशः कथायामभिज्ञस्तर्हि तावत्पृच्छामस्तेषां दशरथात्मजानां कियन्ति किंनामधेयान्यपत्यानि केषु दारेषु प्रसूतानीति ।</span><span class="iast" lang="sa-Latn"><span class="sd">(vicintya)</span> yadi tvam īdṛśaḥ kathāyām abhijñas tarhi tāvat pṛcchāmas teṣāṃ daśarathātmajānāṃ kiyanti kiṃnāmadheyāny apatyāni keṣu dāreṣu prasūtānīti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx"><span class="sd">（考えて）</span>それほど物語にくわしいなら、尋ねよう——ダシャラタの息子たちには、子が何人いて、何という名で、どの妻から生まれたのか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">नायं कथाविभागोऽस्माभिरन्येन वा श्रुतपूर्वः ।</span><span class="iast" lang="sa-Latn">nāyaṃ kathāvibhāgo 'smābhir anyena vā śrutapūrvaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">その部分の話は、私たちもほかの者も、まだ聞いたことがありません。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">किं न प्रणीत एव कविना ।</span><span class="iast" lang="sa-Latn">kiṃ na praṇīta eva kavinā.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">詩人はまだ書いていないのか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">प्रणीतो न प्रकाशितः । तस्यैव कोऽप्येकदेशः संदर्भान्तरेण रसवानभिनेयार्थः कृतः । तं च स्वहस्तलिखितं मुनिर्भगवान्व्यसृजद्भगवतो भरतस्य मुनेस्तौर्यत्रिकसूत्रकारस्य ।</span><span class="iast" lang="sa-Latn">praṇīto na prakāśitaḥ. tasyaiva ko 'py ekadeśaḥ saṃdarbhāntareṇa rasavān abhineyārthaḥ kṛtaḥ. taṃ ca svahastalikhitaṃ munir bhagavān vyasṛjad bhagavato bharatasya munes tauryatrikasūtrakārasya.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">書いてはいますが、まだ公にしていないのです。その一部を、別の構成で、情趣のある上演用の劇にされました。それを尊者は自ら書き写して、舞踊・声楽・器楽の綱要の作者である聖仙バラタのもとへ送られました。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">किमर्थम् ।</span><span class="iast" lang="sa-Latn">kimartham.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">何のために。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">स किल भगवान्भरतस्तमप्सरोभिः प्रयोजयिष्यतीति ।</span><span class="iast" lang="sa-Latn">sa kila bhagavān bharatas tam apsarobhiḥ prayojayiṣyatīti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">バラタ尊者がそれを天女たちに演じさせるのだそうです。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">सर्वमिदमाकूततरमस्माकम् ।</span><span class="iast" lang="sa-Latn">sarvam idam ākūtataram asmākam.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">なにもかも、われらにはいっそう気にかかることばかりだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">महती पुनस्तस्मिन्भगवतो वाल्मीकेरास्था । यतो येषामन्तेवासिनां हस्तेन तत्पुस्तकं भरताश्रमं प्रति प्रेषितं तेषामनुयात्रिकश्चापपाणिः प्रमादापनोदनार्थमस्मद्भ्राता प्रेषितः ।</span><span class="iast" lang="sa-Latn">mahatī punas tasmin bhagavato vālmīker āsthā. yato yeṣām antevāsināṃ hastena tat pustakaṃ bharatāśramaṃ prati preṣitaṃ teṣām anuyātrikaś cāpapāṇiḥ pramādāpanodanārtham asmadbhrātā preṣitaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">ヴァールミーキ尊者はその作品をたいへん大切にしておられます。それで、その写本をバラタ尊者の庵へ届ける弟子たちに、まちがいのないよう、私の兄が弓を手に付き添って遣わされました。</span>
+</div></div>
+<aside class="note"><span class="note-label">Kale 注</span><p>ヴァールミーキが自作の一部を劇に仕立て、バラタに上演させるという伏線。これが第七幕の劇中劇（<i class="t">garbhāṅka</i>）となる。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">जात भ्रातापि तेऽस्ति ।</span><span class="iast" lang="sa-Latn">jāta, bhrātāpi te 'sti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">坊や、お兄さんもいるの。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अस्त्यार्यः कुशो नाम ।</span><span class="iast" lang="sa-Latn">asty āryaḥ kuśo nāma.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">クシャという兄がいます。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">ज्येष्ठ इति भणितं भवति ।</span><span class="iast" lang="sa-Latn">jyeṣṭha iti bhaṇitaṃ bhavati.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">年上ということね。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">एवमेतत् । प्रसवानुक्रमेण स किल ज्यायान् ।</span><span class="iast" lang="sa-Latn">evam etat. prasavānukrameṇa sa kila jyāyān.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">そうです。生まれた順では、兄が上だそうです。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">किं यमजावायुष्मन्तौ ।</span><span class="iast" lang="sa-Latn">kiṃ yamajāv āyuṣmantau.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">おまえたちは双子なのか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अथ किम् ।</span><span class="iast" lang="sa-Latn">atha kim.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">はい。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">वत्स कथय कथाप्रबन्धस्य कीदृशः पर्यन्तः ।</span><span class="iast" lang="sa-Latn">vatsa, kathaya kathāprabandhasya kīdṛśaḥ paryantaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">坊や、話してくれ。その物語はどこで終わっているのだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अलीकपौरापवादोद्विग्नेन राज्ञा निर्वासितां देवयजनसंभवां सीतादेवीमासन्नप्रसववेदनामेकाकिनीमरण्ये परित्यज्य लक्ष्मणः प्रतिनिवृत्त इति ।</span><span class="iast" lang="sa-Latn">alīkapaurāpavādodvignena rājñā nirvāsitāṃ devayajanasaṃbhavāṃ sītādevīm āsannaprasavavedanām ekākinīm araṇye parityajya lakṣmaṇaḥ pratinivṛtta iti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">町の者たちの偽りの悪口に心を乱した王に追放された、祭場生まれのシーター妃を、産み月の近い身でただひとり森に置き去りにして、ラクシュマナが帰っていった——というところまでです。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हा वत्से मुग्धचन्द्रमुखि किमिदानीं ते शरीरकुसुमस्य झटिति दैवदुर्विलासपरिणाम एकाकिन्या निपतितः ।</span><span class="iast" lang="sa-Latn">hā vatse mugdhacandramukhi, kim idānīṃ te śarīrakusumasya jhaṭiti daivadurvilāsapariṇāma ekākinyā nipatitaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">ああ、あどけない月の顔のかわいい子、ひとりぼっちのおまえの花のような体に、そのあと運命のどんなむごい仕打ちが降りかかったのだろう。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">हा वत्से —</span><span class="iast" lang="sa-Latn">hā vatse —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、娘よ——</span>
+</div></div>
+<figure class="verse" id="v4-23">
+<figcaption><a class="vnum" href="#v4-23">IV.23</a>
+<span class="metre">vasantatilakā</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">नूनं त्वया परिभवं च वनं च घोरं तां च व्यथां प्रसवकालकृतामवाप्य ।<br>क्रव्यादनेषु परितः परिवारयत्सु संत्रस्तया शरणमित्यसकृत्स्मृतोऽस्मि ॥ २३ ॥</span><span class="iast" lang="sa-Latn">nūnaṃ tvayā paribhavaṃ ca vanaṃ ca ghoraṃ<br>tāṃ ca vyathāṃ prasavakālakṛtām avāpya<br><br>kravyādaneṣu paritaḥ parivārayatsu<br>saṃtrastayā śaraṇam ity asakṛt smṛto 'smi <span class="vn">‖ 23 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">屈辱と、恐ろしい森と、<br>産み月の苦しみとに見舞われて、<br>肉を食らう獣どもの群れにまわりを取りかこまれ、<br>おびえたおまえは、何度も私を助けを求める先として思い浮かべたにちがいない。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(अरुन्धतीं प्रति)</span> आर्ये कावेतौ ।</span><span class="iast" lang="sa-Latn"><span class="sd">(arundhatīṃ prati)</span> ārye, kāv etau.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx"><span class="sd">（アルンダティーに）</span>おばあさま、このおふたりはどなたですか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">इयं कौसल्या अयं च जनकः ।</span><span class="iast" lang="sa-Latn">iyaṃ kausalyā, ayaṃ ca janakaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">こちらがカウサリヤー、こちらがジャナカです。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(सबहुमानखेदकौतुकं पश्यति)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(sabahumānakhedakautukaṃ paśyati)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx"><span class="sd">（敬意と悲しみと好奇心をこめて見つめる）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अहो निर्दयता दुरात्मनां पौराणाम् । अहो रामस्य राज्ञः क्षिप्रकारिता —</span><span class="iast" lang="sa-Latn">aho, nirdayatā durātmanāṃ paurāṇām. aho, rāmasya rājñaḥ kṣiprakāritā —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">ああ、町の悪党どもの情け知らずよ。ああ、ラーマ王の軽はずみよ——</span>
+</div></div>
+<figure class="verse" id="v4-25a">
+<figcaption><a class="vnum" href="#v4-25a">IV.25</a>
+<span class="metre">śārdūlavikrīḍita</span>
+<span class="vlabel">前半</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">एतद्वैशसवज्रघोरपतनं शश्वन्ममोत्पश्यतः क्रोधस्य ज्वलितुं धिगित्यवसरश्चापेन शापेन वा ।</span><span class="iast" lang="sa-Latn">etadvaiśasavajraghorapatanaṃ śaśvan mamotpaśyataḥ<br>krodhasya jvalituṃ dhig ity avasaraś cāpena śāpena vā</span></p>
+</div><div class="jp" lang="ja"><p class="vtext">この惨事の雷が恐ろしく落ちかかるのを、絶えず見せつけられている私の<br>怒りが、弓によってか呪いによってか、燃えあがる時が来たのだ。ええい、許せぬ——</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(सभयकम्पम्)</span> भगवति परित्रायस्व परित्रायस्व । प्रसादय कुपितं राजर्षिम् ।</span><span class="iast" lang="sa-Latn"><span class="sd">(sabhayakampam)</span> bhagavati, paritrāyasva paritrāyasva. prasādaya kupitaṃ rājarṣim.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx"><span class="sd">（おびえ震えて）</span>アルンダティーさま、助けて、助けて。怒った王仙さまをなだめてください。</span>
+</div></div>
+<figure class="verse" id="v4-24">
+<figcaption><a class="vnum" href="#v4-24">IV.24</a>
+<span class="metre">anuṣṭubh</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<p class="vtext"><span class="dev" lang="sa-Deva"><span class="vsp">लवः</span>एतद्धि परिभूतानां प्रायश्चित्तं मनस्विनाम् ।<br><span class="vsp">अरुन्धती</span>राजन्नपत्यं रामस्ते पाल्याश्च कृपणा जनाः ॥ २४ ॥</span><span class="iast" lang="sa-Latn"><span class="vsp">Lavaḥ</span>etad dhi paribhūtānāṃ prāyaścittaṃ manasvinām <br><span class="vsp">Arundhatī</span>rājann apatyaṃ rāmas te pālyāś ca kṛpaṇā janāḥ <span class="vn">‖ 24 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">{ラヴァ} 辱められた誇り高い人にとっては、それこそが償いです。<br>{アルンダティー} 王よ、ラーマはあなたの子も同然。そして哀れな民は守られるべきもの。</p></div>
+</div></figure>
+<figure class="verse" id="v4-25">
+<figcaption><a class="vnum" href="#v4-25">IV.25</a>
+<span class="metre">śārdūlavikrīḍita</span>
+<span class="vlabel">後半</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">शान्तं वा रघुनन्दने तदुभयं यत्पुत्रभाण्डं हि मे भूयिष्ठद्विजबालवृद्धविकलस्त्रैणश्च पौरो जनः ॥ २५ ॥</span><span class="iast" lang="sa-Latn">śāntaṃ vā raghunandane tad ubhayaṃ yat putrabhāṇḍaṃ hi me<br>bhūyiṣṭhadvijabālavṛddhavikalastraiṇaś ca pauro janaḥ <span class="vn">‖ 25 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">いや、ラグ家の喜び<span class="sd">（ラーマ）</span>に対しては、その二つともやめておこう。彼はわが子同然なのだから。<br>そして町の民は、たいていがバラモンや子ども、老人、弱い者や女たちなのだから。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第25偈の前半と後半のあいだに、カウサリヤーの嘆願と、ラヴァとアルンダティーが分けて唱える第24偈がはさまる。ジャナカの怒り（弓か呪いで報いよう）に、ラヴァは「それこそ償い」と同意し、アルンダティーは「ラーマは子、民は弱き者」と諭す。</p></aside>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(प्रविश्य)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(praviśya)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（学生たちが登場して）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">संभ्रान्ता बटवः</span><span class="iast" lang="sa-Latn">Saṃbhrāntā baṭavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कुमार कुमार अश्वोऽश्व इति कोऽपि भूतविशेषो जनपदेषु श्रूयते । सोऽयमधुनास्माभिः प्रत्यक्षीकृतः ।</span><span class="iast" lang="sa-Latn">kumāra kumāra, aśvo 'śva iti ko 'pi bhūtaviśeṣo janapadeṣu śrūyate. so 'yam adhunāsmābhiḥ pratyakṣīkṛtaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">あわてた学生たち</span>
+<span class="tx">王子、王子、「馬、馬」とかいう、村々で噂に聞く何やら変わった生き物を、いまぼくたちがこの目で見たんだよ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अश्वोऽश्व इति पशुसमाम्नाये सांग्रामिके च पठ्यते । तद्ब्रूत कीदृशः ।</span><span class="iast" lang="sa-Latn">aśvo 'śva iti paśusamāmnāye sāṃgrāmike ca paṭhyate. tad brūta kīdṛśaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">「馬」なら、家畜の名を挙げた書物にも戦いの書物にも出てくるよ。で、どんなものだった。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">बटवः</span><span class="iast" lang="sa-Latn">Baṭavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">श्रूयताम् —</span><span class="iast" lang="sa-Latn">śrūyatām —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">学生たち</span>
+<span class="tx">聞いてよ——</span>
+</div></div>
+<figure class="verse" id="v4-26">
+<figcaption><a class="vnum" href="#v4-26">IV.26</a>
+<span class="metre">mandākrāntā</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">बटवः</span><span class="iast" lang="sa-Latn">Baṭavaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">पश्चात्पुच्छं वहति विपुलं तच्च धूनोत्यजस्रं दीर्घग्रीवः स भवति खुरास्तस्य चत्वार एव ।<br>शष्पाण्यत्ति प्रकिरति शकृत्पिण्डकानाम्रमात्रान्किं व्याख्यातैर्व्रजति स पुनर्दूरमेह्येहि यामः ॥ २६ ॥</span><span class="iast" lang="sa-Latn">paścāt pucchaṃ vahati vipulaṃ tac ca dhūnoty ajasraṃ<br>dīrghagrīvaḥ sa bhavati khurās tasya catvāra eva<br><br>śaṣpāṇy atti prakirati śakṛtpiṇḍakān āmramātrān<br>kiṃ vyākhyātair vrajati sa punar dūram ehy ehi yāmaḥ <span class="vn">‖ 26 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">うしろに大きなしっぽがあって、それをしょっちゅう振っている。<br>首が長くて、ひづめが四つだけある。<br>草を食べて、マンゴーくらいの大きさの糞のかたまりを落とす。<br>説明はもういいよ、あいつ遠くへ行っちゃう。さあ、行こう、行こう。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>庵で育った学生たちは馬を見たことがない。滑稽な描写で、深刻な場面のあとの緊張をゆるめる。</p></aside>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(इत्युपसृत्याजिने हस्ते चाकर्षन्ति)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(ity upasṛtyājine haste cākarṣanti)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（近寄って、ラヴァの鹿皮の衣と手を引っぱる）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(सकौतुकोपरोधविनयम्)</span> आर्याः पश्यत पश्यत एभिर्नीतोऽस्मि । <span class="sd">(इति त्वरितं परिक्रामति)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(sakautukoparodhavinayam)</span> āryāḥ, paśyata paśyata, ebhir nīto 'smi. <span class="sd">(iti tvaritaṃ parikrāmati)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx"><span class="sd">（面白がりつつも、引きとめられて困り、慎み深く）</span>皆さま、ごらんください、この子たちに連れていかれます。<span class="sd">（急いで歩きまわる）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धतीजनकौ</span><span class="iast" lang="sa-Latn">Arundhatījanakau</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">पूर्यतां कौतुकं वत्सस्य ।</span><span class="iast" lang="sa-Latn">pūryatāṃ kautukaṃ vatsasya.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティーとジャナカ</span>
+<span class="tx">坊やの好奇心を満たしておやり。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कौसल्या</span><span class="iast" lang="sa-Latn">Kausalyā</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भगवति जानाम्येतमनालोकयन्ती न जीवामीव । तदन्यतो भूत्वा प्रेक्षामहे तावद्गच्छन्तं दीर्घायुषम् ।</span><span class="iast" lang="sa-Latn">bhagavati, jānāmy etam anālokayantī na jīvāmīva. tad anyato bhūtvā prekṣāmahe tāvad gacchantaṃ dīrghāyuṣam.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">カウサリヤー</span>
+<span class="tx">アルンダティーさま、この子を見ていないと、生きた心地がしないの。場所を移して、行ってしまうこの子を見ていましょう。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">अरुन्धती</span><span class="iast" lang="sa-Latn">Arundhatī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अतिजवेन दूरमतिक्रान्तः स चपलः कथं दृश्यते ।</span><span class="iast" lang="sa-Latn">atijavena dūram atikrāntaḥ sa capalaḥ kathaṃ dṛśyate.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">アルンダティー</span>
+<span class="tx">あのすばしこい子は、すごい速さでもう遠くへ行ってしまった。もう見えないわ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">कञ्चुकी</span><span class="iast" lang="sa-Latn">Kañcukī</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(प्रविश्य)</span> भगवान्वाल्मीकिराह — ज्ञातव्यमेतदवसरे भवद्भिरिति ।</span><span class="iast" lang="sa-Latn"><span class="sd">(praviśya)</span> bhagavān vālmīkir āha — jñātavyam etad avasare bhavadbhir iti.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">侍従</span>
+<span class="tx"><span class="sd">（登場して）</span>ヴァールミーキ尊者はこう仰せです——「それは時が来れば、おわかりになろう」と。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">जनकः</span><span class="iast" lang="sa-Latn">Janakaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">अतिगम्भीरमेतत्किमपि । भगवत्यरुन्धति सखि कौसल्ये आर्य गृष्टे स्वयमेव गत्वा भगवन्तं प्राचेतसं पश्यामः ।</span><span class="iast" lang="sa-Latn">atigambhīram etat kim api. bhagavaty arundhati, sakhi kausalye, ārya gṛṣṭe, svayam eva gatvā bhagavantaṃ prācetasaṃ paśyāmaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ジャナカ</span>
+<span class="tx">これは何やら深いわけがありそうだ。アルンダティーさま、友カウサリヤー、侍従どの、わたしたち自身で行って、プラーチェータサ尊者にお会いしよう。</span>
+</div></div>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(इति निष्क्रान्तो वृद्धवर्गः)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(iti niṣkrānto vṛddhavargaḥ)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（老人たちの一行退場）</span></span>
+</div></div>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(प्रविश्य)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(praviśya)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（学生たちとラヴァが登場して）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">बटवः</span><span class="iast" lang="sa-Latn">Baṭavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">पश्यतु कुमारस्तदाश्चर्यम् ।</span><span class="iast" lang="sa-Latn">paśyatu kumāras tad āścaryam.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">学生たち</span>
+<span class="tx">王子、あの不思議なものを見てよ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">दृष्टमवगतं च । नूनमाश्वमेधिकोऽयमश्वः ।</span><span class="iast" lang="sa-Latn">dṛṣṭam avagataṃ ca. nūnam āśvamedhiko 'yam aśvaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">見たし、わかったよ。これはきっと、馬祀祭の馬だ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">बटवः</span><span class="iast" lang="sa-Latn">Baṭavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कथं ज्ञायते ।</span><span class="iast" lang="sa-Latn">kathaṃ jñāyate.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">学生たち</span>
+<span class="tx">どうしてわかるの。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">ननु मूर्खाः पठितमेव हि युष्माभिरपि तत्काण्डम् । किं न पश्यथ प्रत्येकं शतसंख्याः कवचिनो दण्डिनो निषङ्गिणश्च रक्षितारः । तत्प्रायमेव बलमिदं दृश्यते । यदि च विप्रत्ययस्तद्गत्वा पृच्छत ।</span><span class="iast" lang="sa-Latn">nanu mūrkhāḥ, paṭhitam eva hi yuṣmābhir api tat kāṇḍam. kiṃ na paśyatha pratyekaṃ śatasaṃkhyāḥ kavacino daṇḍino niṣaṅgiṇaś ca rakṣitāraḥ. tatprāyam eva balam idaṃ dṛśyate. yadi ca vipratyayas tad gatvā pṛcchata.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">ばかだなあ、きみたちだってあの章を習ったじゃないか。鎧をつけ、杖をもち、箙を負った護衛が、それぞれ百人ずつついているのが見えないのかい。あそこに見える軍勢も、たいていそういう者たちだ。信じられないなら、行って聞いてごらん。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">बटवः</span><span class="iast" lang="sa-Latn">Baṭavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भो भोः किंप्रयोजनोऽयमश्वः परिवृतः पर्यटति ।</span><span class="iast" lang="sa-Latn">bho bhoḥ, kiṃprayojano 'yam aśvaḥ parivṛtaḥ paryaṭati.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">学生たち</span>
+<span class="tx">おーい、この馬は何のために、まわりを囲まれて歩きまわっているの。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(सस्पृहमात्मगतम्)</span> अये अश्वमेध इति नाम विश्वविजयिनां क्षत्रियाणामूर्जस्वलः सर्वक्षत्रपरिभावी महानुत्कर्षनिकषः ।</span><span class="iast" lang="sa-Latn"><span class="sd">(saspṛham ātmagatam)</span> aye, aśvamedha iti nāma viśvavijayināṃ kṣatriyāṇām ūrjasvalaḥ sarvakṣatraparibhāvī mahān utkarṣanikaṣaḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx"><span class="sd">（あこがれをこめて、傍白）</span>ああ、馬祀祭といえば、世界を征するクシャトリヤたちの、力強く、あらゆる武士をしのぐ、偉大さを試す大いなる試金石だ。</span>
+</div></div>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(नेपथ्ये)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(nepathye)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（舞台裏で）</span></span>
+</div></div>
+<figure class="verse" id="v4-27">
+<figcaption><a class="vnum" href="#v4-27">IV.27</a>
+<span class="metre">anuṣṭubh</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<p class="vtext"><span class="dev" lang="sa-Deva">अयमश्वः पताकेयमथ वा वीरघोषणा ।<br>सप्तलोकैकवीरस्य दशकण्ठकुलद्विषः ॥ २७ ॥</span><span class="iast" lang="sa-Latn">ayam aśvaḥ patākeyam atha vā vīraghoṣaṇā <br>saptalokaikavīrasya daśakaṇṭhakuladviṣaḥ <span class="vn">‖ 27 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">この馬は旗印、いや、勇士の宣言なのだ——<br>七つの世界にただひとりの勇士、十の首をもつ者<span class="sd">（ラーヴァナ）</span>の一族の敵<span class="sd">（ラーマ）</span>の。</p></div>
+</div></figure>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(सगर्वमिव)</span> अहो संदीपनान्यक्षराणि ।</span><span class="iast" lang="sa-Latn"><span class="sd">(sagarvam iva)</span> aho, saṃdīpanāny akṣarāṇi.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx"><span class="sd">（いくらか誇らしげに）</span>ほう、闘志をかきたてることばだ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">बटवः</span><span class="iast" lang="sa-Latn">Baṭavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">किमुच्यते प्राज्ञः खलु कुमारः ।</span><span class="iast" lang="sa-Latn">kim ucyate, prājñaḥ khalu kumāraḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">学生たち</span>
+<span class="tx">なんて言ったの。王子は物知りだね。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भो भोः तत्किमक्षत्रिया पृथिवी यदेवमुद्घोष्यते ।</span><span class="iast" lang="sa-Latn">bho bhoḥ, tat kim akṣatriyā pṛthivī yad evam udghoṣyate.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">おい、おい、それでは大地にクシャトリヤはいないとでもいうのか、そんなふうに触れまわるとは。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(नेपथ्ये)</span> अरे रे महाराजं प्रति कुतः क्षत्रियाः ।</span><span class="iast" lang="sa-Latn"><span class="sd">(nepathye)</span> are re, mahārājaṃ prati kutaḥ kṣatriyāḥ.</span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（舞台裏で）</span>こいつ、大王に比べれば、クシャトリヤなどどこにいるものか。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">धिग्जाल्मान् —</span><span class="iast" lang="sa-Latn">dhig jālmān —</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">愚か者どもめ——</span>
+</div></div>
+<figure class="verse" id="v4-28">
+<figcaption><a class="vnum" href="#v4-28">IV.28</a>
+<span class="metre">anuṣṭubh</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">यदि ते सन्ति सन्त्येव केयमद्य विभीषिका ।<br>किमुक्तैरेभिरधुना तां पताकां हरामि वः ॥ २८ ॥</span><span class="iast" lang="sa-Latn">yadi te santi santy eva keyam adya vibhīṣikā <br>kim uktair ebhir adhunā tāṃ patākāṃ harāmi vaḥ <span class="vn">‖ 28 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">その王がいるなら、いるがよい。だが、いまのこのおどしは何だ。<br>口でいくら言っても何になろう——おまえたちのその旗印<span class="sd">（馬）</span>を、私が奪ってやる。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>第1パーダ後半、OCR <i class="t">santyevaṃ keyamatha</i> は二音節不足。韻律（anuṣṭubh）から <i class="t">santi santy eva keyam adya</i> と解する。</p></aside>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">भो भो बटवः परिवृत्य लोष्टैरभिघ्नन्तो नयतैनमश्वम् । एष रोहितानां मध्ये चरतु ।</span><span class="iast" lang="sa-Latn">bho bho baṭavaḥ, parivṛtya loṣṭair abhighnanto nayatainam aśvam. eṣa rohitānāṃ madhye caratu.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx">おい、みんな、まわりを囲んで土くれをぶつけて、この馬を連れていけ。こいつはローヒタ鹿たちのなかで草を食めばいい。</span>
+</div></div>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(प्रविश्य सक्रोधदर्पः)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(praviśya sakrodhadarpaḥ)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（怒りと傲りをあらわにした兵士が登場して）</span></span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">पुरुषः</span><span class="iast" lang="sa-Latn">Puruṣaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">धिक्पाप किमुक्तवानसि । तीक्ष्णनीरसा ह्यायुधश्रेणयः शिशोरपि दृप्तां वाचं न सहन्ते । राजपुत्रश्चन्द्रकेतुररिविमर्दनः । सोऽप्यपूर्वारण्यदर्शनाक्षिप्तहृदयो न यावदायाति तावत्त्वरितमनेन तरुगहनेनापसर्पत ।</span><span class="iast" lang="sa-Latn">dhik pāpa, kim uktavān asi. tīkṣṇanīrasā hy āyudhaśreṇayaḥ śiśor api dṛptāṃ vācaṃ na sahante. rājaputraś candraketur arivimardanaḥ. so 'py apūrvāraṇyadarśanākṣiptahṛdayo na yāvad āyāti tāvat tvaritam anena tarugahanenāpasarpata.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">兵士</span>
+<span class="tx">こら、悪たれ、何をほざいた。気の荒い兵の群れは、子どもであろうと生意気な口は許さんぞ。チャンドラケートゥ王子は敵を打ち砕くお方だ。初めて見る森に心を奪われておられる王子がお戻りにならないうちに、さっさとこの木立から逃げてしまえ。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">बटवः</span><span class="iast" lang="sa-Latn">Baṭavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva">कुमार कृतमनेनाश्वेन । तर्जयन्ति विस्फुरितशस्त्राः कुमारमायुधीयश्रेणयः । दूरे चाश्रमपदम् । इतस्तदेहि हरिणप्लुतैः पलायामहे ।</span><span class="iast" lang="sa-Latn">kumāra, kṛtam anenāśvena. tarjayanti visphuritaśastrāḥ kumāram āyudhīyaśreṇayaḥ. dūre cāśramapadam. itas tad ehi hariṇaplutaiḥ palāyāmahe.</span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">学生たち</span>
+<span class="tx">王子、馬なんてもういいよ。兵隊たちが刀をきらめかせて王子をおどしている。庵は遠いし、さあ、鹿みたいに跳んで逃げよう。</span>
+</div></div>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(विहस्य)</span> किं नाम विस्फुरन्ति शस्त्राणि । <span class="sd">(इति धनुरारोपयन्)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(vihasya)</span> kiṃ nāma visphuranti śastrāṇi. <span class="sd">(iti dhanur āropayan)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="sp">ラヴァ</span>
+<span class="tx"><span class="sd">（笑って）</span>なに、刀がきらめいているだと。<span class="sd">（弓に弦を張りながら）</span></span>
+</div></div>
+<figure class="verse" id="v4-29">
+<figcaption><a class="vnum" href="#v4-29">IV.29</a>
+<span class="metre">vasantatilakā</span>
+</figcaption>
+<div class="row">
+<div class="skt">
+<span class="sp"><span class="dev" lang="sa-Deva">लवः</span><span class="iast" lang="sa-Latn">Lavaḥ</span></span>
+<p class="vtext"><span class="dev" lang="sa-Deva">ज्याजिह्वया वलयितोत्कटकोटिदंष्ट्रमुद्गारिघोरघनघर्घरघोषमेतत् ।<br>ग्रासप्रसक्तहसदन्तकवक्त्रयन्त्र जृम्भाविडम्बिविकटोदरमस्तु चापम् ॥ २९ ॥</span><span class="iast" lang="sa-Latn">jyājihvayā valayitotkaṭakoṭidaṃṣṭram<br>udgārighoraghanaghargharaghoṣam etat<br><br>grāsaprasaktahasadantakavaktrayantra-<br>jṛmbhāviḍambivikaṭodaram astu cāpam <span class="vn">‖ 29 ‖</span></span></p>
+</div><div class="jp" lang="ja"><p class="vtext">弦を舌として巻きつけ、反りかえった両端を牙とし、<br>恐ろしく重い、ごうごうと唸る響きを吐き出すこの弓よ——<br>獲物を呑もうとして笑う死神の口の<br>大あくびを思わせる、ぱっくりと開いた腹となれ。</p></div>
+</div></figure>
+<aside class="note"><span class="note-label">Kale 注</span><p>張られた弓を死神の口に喩える。弦（<i class="t">jyā</i>）は舌、弓の両端（<i class="t">koṭi</i>）は牙、弓と弦のあいだの空間は大きく開いた口。</p></aside>
+<div class="row stage">
+<div class="skt">
+<span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(इति यथोचितं परिक्रम्य निष्क्रान्ताः सर्वे)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(iti yathocitaṃ parikramya niṣkrāntāḥ sarve)</span></span></span>
+</div><div class="jp" lang="ja">
+<span class="tx"><span class="sd">（一同、しかるべく歩きまわって退場）</span></span>
+</div></div><p class="colophon"><span class="dev" lang="sa-Deva">इति कौसल्याजनकयोगो नाम चतुर्थोऽङ्कः</span><span class="iast" lang="sa-Latn">iti kausalyājanakayogo nāma caturtho 'ṅkaḥ</span></p><nav class="pager"><a class="prev" href="uttararamacarita-act3.html">← 第三幕</a><a class="next" href="uttararamacarita-act5.html">第五幕「王子の武勇」 →</a></nav>
+</main>
+<footer class="foot">
+  <p>Bhavabhūti, <i>Uttararāmacarita</i>. 本文は M. R. Kale 校訂本（Motilal Banarsidass, 第5版 1934）に拠る。女性・従者等のプラークリットの台詞は、Kale 本文に従いサンスクリット訳（chāyā）で示す。</p>
+</footer>
+<script>
+(function () {
+  var root = document.documentElement;
+  function get(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } }
+  function put(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function setScript(s) {
+    root.setAttribute('data-script', s);
+    document.querySelectorAll('[data-script]').forEach(function (b) {
+      if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed', b.getAttribute('data-script') === s ? 'true' : 'false');
+    });
+    put('urc-script', s);
+  }
+  function setNotes(on) {
+    root.classList.toggle('no-notes', !on);
+    var b = document.querySelector('[data-notes]');
+    if (b) b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    put('urc-notes', on ? '1' : '0');
+  }
+  setScript(get('urc-script', 'iast'));
+  setNotes(get('urc-notes', '1') === '1');
+  document.querySelectorAll('button[data-script]').forEach(function (b) {
+    b.addEventListener('click', function () { setScript(b.getAttribute('data-script')); });
+  });
+  var nb = document.querySelector('[data-notes]');
+  if (nb) nb.addEventListener('click', function () { setNotes(root.classList.contains('no-notes')); });
+})();
+
+</script>
+</body>
+</html>

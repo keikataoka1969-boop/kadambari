@@ -1,0 +1,648 @@
+@act 4
+@synopsis ヴァールミーキの庵。十二年の祭祀を終えたアルンダティーとヴァシシュタ、ラーマの母カウサリヤーらが訪れ、シーターの父ジャナカと久しぶりに対面する。娘を失った悲しみに老王は苦しみ、カウサリヤーは気を失う。そこへ遊び騒ぐ少年たちのなかに、ラーマとシーターに生き写しの少年ラヴァが現れ、一同は胸を騒がせる。やがてアシュヴァメーダの祭馬が庵に迷いこみ、護衛の兵の挑発的な宣言に怒ったラヴァは、弓を取って馬を奪いにかかる。
+@setting ヴァールミーキの庵
+
+== miśraviṣkambhakaḥ | 混合前場
+
+P
+s: (tataḥ praviśatas tāpasau)
+j: （二人の行者が登場する）
+s: {ekaḥ} saudhātake, dṛśyatām adya bhūyiṣṭhasaṃnidhāpitātithijanasya samadhikārambharamaṇīyatā bhagavato vālmīker āśramapadasya. tathā hi —
+j: {一人} サウダータキ、ごらん、今日は大勢の客人が寄りあって、いつにもましてにぎやかな支度で、ヴァールミーキ尊者の庵がなんと美しいことか。ほら——
+
+V 1 {ekaḥ}
+s: nīvāraudanamaṇḍam uṣṇamadhuraṃ sadyaḥprasūtāpriyā- / pītād abhyadhikaṃ tapovanamṛgaḥ paryāptam ācāmati /
+s: gandhena sphuratā manāg anusṛto bhaktasya sarpiṣmataḥ / karkandhūphalamiśraśākapacanāmodaḥ paristīryate
+j: 子を産んだばかりの連れの牝鹿が飲み残した、
+j: 温かく甘い野生米の粥の上澄みを、苦行林の鹿が心ゆくまですすっている。
+j: バターをたっぷり入れた飯の立ちのぼる香りをかすかに伴って、
+j: ナツメの実をまぜた野菜を煮る匂いがあたりに広がっている。
+
+N
+n: 第2パーダ、OCR *pītābhyadhikaṃ* は *pītād abhyadhikaṃ*、第3パーダ *bhaktesya* は *bhaktasya* の誤り（韻律 śārdūlavikrīḍita）。
+
+P
+s: {saudhātakiḥ} svāgatam anekaprakārāṇāṃ jīrṇakūrcānām anadhyāyakāraṇānām.
+j: {サウダータキ} 休講のもとになってくださる、いろいろなひげの年寄りたち、ようこそ。
+s: {prathamaḥ} (vihasya) apūrvaḥ ko 'pi te bahumānahetur guruṣu, saudhātake.
+j: {第一の行者} （笑って）サウダータキ、目上の方々をありがたがる理由がずいぶん変わっているな。
+s: {saudhātakiḥ} bho daṇḍāyana, kiṃnāmadheya eṣa mahataḥ strīsārthasya dhuraṃdharo 'dyātithir āgataḥ.
+j: {サウダータキ} ねえダンダーヤナ、大勢の女の人たちを率いて今日やってきたお客は、何という名前だい。
+s: {daṇḍāyanaḥ} dhik prahasanam. nanv ayam ṛṣyaśṛṅgāśramād arundhatīṃ puraskṛtya mahārājadaśarathasya dārān adhiṣṭhāya bhagavān vasiṣṭhaḥ prāptaḥ. tat kim evaṃ pralapasi.
+j: {ダンダーヤナ} ふざけるのはおよし。リシュヤシュリンガ仙の庵から、アルンダティーさまを先に立て、ダシャラタ大王の后がたを引き連れておいでになった、ヴァシシュタ尊者じゃないか。何をそんなにしゃべり散らしているんだ。
+s: {saudhātakiḥ} huṃ, vasiṣṭhaḥ.
+j: {サウダータキ} ふうん、ヴァシシュタか。
+s: {daṇḍāyanaḥ} atha kim.
+j: {ダンダーヤナ} そうとも。
+s: {saudhātakiḥ} mayā punar jñātaṃ vyāghro vṛko vaiṣa iti.
+j: {サウダータキ} ぼくはてっきり、虎か狼かと思ったよ。
+s: {daṇḍāyanaḥ} āḥ, kim uktaṃ bhavati.
+j: {ダンダーヤナ} なんだって。どういう意味だ。
+s: {saudhātakiḥ} yena parāpatitenaiva sā varākī kapilā kalyāṇī maḍamaḍāyitā.
+j: {サウダータキ} 着いたとたんに、あのかわいそうな栗毛のいい子牛が、ばりばり食べられちゃったんだもの。
+s: {daṇḍāyanaḥ} samāṃso madhuparka ity āmnāyaṃ bahumanyamānāḥ śrotriyāyābhyāgatāya vatsatarīṃ mahokṣaṃ vā nirvapanti gṛhamedhinaḥ. taṃ hi dharmaṃ dharmasūtrakārāḥ samāmananti.
+j: {ダンダーヤナ} 「もてなしの蜜粥（マドゥパルカ）には肉を添える」という聖典を重んじて、家住者たちはヴェーダに通じた客が来ると、若い牝牛か大きな牡牛をふるまうものなのだ。法典の作者たちもそれを法として説いている。
+s: {saudhātakiḥ} bho nigṛhīto 'si.
+j: {サウダータキ} ほら、きみの負けだ。
+s: {daṇḍāyanaḥ} katham iva.
+j: {ダンダーヤナ} どうして。
+s: {saudhātakiḥ} yenāgateṣu vasiṣṭhamiśreṣu vatsatarī viśasitā. adyaiva pratyāgatasya rājarṣer janakasya bhagavatā vālmīkinā dadhimadhubhyām eva nirvartito madhuparkaḥ. vatsatarī punar visarjitā.
+j: {サウダータキ} だって、ヴァシシュタさまたちが来たときは子牛がつぶされたのに、今日着いたジャナカ王仙には、ヴァールミーキさまは凝乳と蜂蜜だけでもてなしをすませて、子牛は放してやったじゃないか。
+s: {daṇḍāyanaḥ} anivṛttamāṃsānām evaṃ kalpaṃ ṛṣayo manyante. nivṛttamāṃsas tu tatrabhavāñ janakaḥ.
+j: {ダンダーヤナ} 仙人たちは、肉を断っていない人にはそうするのがよいと考えているのだ。ジャナカさまは肉を断っておられるのさ。
+s: {saudhātakiḥ} kiṃnimittam.
+j: {サウダータキ} どうして。
+s: {daṇḍāyanaḥ} sa tadaiva devyāḥ sītāyās tādṛśaṃ daivadurvipākam upaśrutya vaikhānasaḥ saṃvṛttaḥ. tasya katipaye saṃvatsarāś candradvīpatapovane tapas tapyamānasya.
+j: {ダンダーヤナ} あの方は、シーター妃のあのむごい運命を耳にしたとたん、森の行者になられたのだ。チャンドラドヴィーパの苦行林で苦行をして、もう何年にもなる。
+s: {saudhātakiḥ} tataḥ kim ity āgataḥ.
+j: {サウダータキ} じゃあ、何をしに来たの。
+s: {daṇḍāyanaḥ} ciraṃtanapriyasuhṛdaṃ bhagavantaṃ prācetasaṃ draṣṭum.
+j: {ダンダーヤナ} 昔からの親友、プラーチェータサ尊者（ヴァールミーキ）に会いにさ。
+s: {saudhātakiḥ} apy adya saṃbandhinībhiḥ samaṃ vṛttam asya darśanaṃ na veti.
+j: {サウダータキ} 親戚の后さまたちとは、もう今日お会いになったのかな。
+s: {daṇḍāyanaḥ} saṃpraty eva bhagavatā vasiṣṭhena devyāḥ kausalyāyāḥ sakāśaṃ bhagavaty arundhatī prahitā, yat svayam upetya vaideho draṣṭavya iti.
+j: {ダンダーヤナ} ちょうどいま、ヴァシシュタ尊者がカウサリヤー后のもとへアルンダティーさまを遣わされたところだ。「御自分から出向いてヴィデーハ王に会うように」とね。
+s: {saudhātakiḥ} yathaite sthavirāḥ parasparaṃ militās tathāvām api baṭubhiḥ saha militvānadhyāyamahotsavaṃ khelantau saṃbhāvayāvaḥ.
+j: {サウダータキ} 年寄りたちがおたがい寄りあうなら、ぼくらも仲間の学生たちと寄りあって、休講の大祭を遊んで祝おうよ。
+s: (iti parikrāmataḥ)
+j: （二人、歩きまわる）
+s: {daṇḍāyanaḥ} tad ayaṃ brahmavādī purāṇarājarṣir janakaḥ prācetasavasiṣṭhāv upāsya saṃpraty āśramasya bahir vṛkṣamūlam adhitiṣṭhati, ya eṣaḥ —
+j: {ダンダーヤナ} ほら、ブラフマンを説く古の王仙ジャナカさまが、ヴァールミーキさまとヴァシシュタさまに挨拶をすませて、いま庵の外の木の根もとにおいでだ。あの方は——
+
+N
+n: 学生サウダータキの軽口（ヴァシシュタ一行のもてなしに子牛が屠られたこと）は、古代の歓待儀礼（*madhuparka*）の習俗を伝える。前場は休講の喜びに浮かれる少年たちの喜劇的な調子で、続く悲痛な場面と対照をなす。
+
+V 2 {daṇḍāyanaḥ}
+s: hṛdi nityānuṣaktena sītāśokena tapyate /
+s: antaḥprasūtadahano jarann iva vanaspatiḥ
+j: 心に絶えずまといつくシーターへの悲しみに焼かれている——
+j: 内側に火の生じた、朽ちかけた大樹のように。
+
+P
+s: (iti niṣkrāntau)
+j: （二人退場）
+
+== atha aṅkaḥ | 本場
+
+P
+s: (tataḥ praviśati janakaḥ)
+j: （ジャナカが登場する）
+
+V 3 {janakaḥ}
+s: apatye yat tādṛg duritam abhavat tena mahatā / viṣaktas tīvreṇa vraṇitahṛdayena vyathayatā /
+s: paṭur dhārāvāhī nava iva cireṇāpi hi na me / nikṛntan marmāṇi krakaca iva manyur viramati
+j: わが子に起きたあのような災い——その大きく激しく、
+j: 心を傷つけ苦しめる災いにとりつかれて、
+j: 鋭く、絶え間なく、いつまでも新しい私の悲しみは、
+j: 鋸のように急所を切り裂きつづけ、長い年月が経ってもやむことがない。
+
+P
+s: {janakaḥ} kaṣṭam, evaṃ nāma jarayā duḥkhena ca durāsadena bhūyaḥ parākasāṃtapanaprabhṛtibhis tapobhiś ca saṃśoṣitāntaḥśarīradhātor anupastambha eva, nādyāpi mama dagdhadehaḥ patati. andhatāmisrā hy asūryā nāma te lokās tebhyaḥ pratividhīyante ya ātmaghātina ity evam ṛṣayo manyante. anekasaṃvatsarātikrame 'pi pratikṣaṇaparibhāvanāspaṣṭanirbhāsaḥ pratyagra iva dāruṇo na me duḥkhasaṃvegaḥ praśāmyati. ayi mātar devayajanasaṃbhave sīte, īdṛśas te nirmāṇabhāgaḥ pariṇato yena lajjayā svacchandam ākranditum api na śakyate. hā putri —
+j: {ジャナカ} ああ、つらい。老いと、近寄りがたい悲しみと、さらにパラーカやサーンタパナといった苦行とで、体の内のものはすっかり干からび、支えも失せているのに、この焼け焦げた体はいまだに倒れない。「自ら命を絶つ者には、日の光なき漆黒の闇の世界が用意されている」と聖仙たちは考えている。幾年が過ぎても、一瞬ごとに思いかえしてはありありと浮かぶ私の悲しみの衝撃は、生々しくむごいまま、少しも静まらない。ああ、母なる娘よ、祭場より生まれたシーターよ、おまえの定めはこうなりはてて、恥ずかしさのあまり思うさま声をあげて泣くことさえできない。ああ、娘よ——
+
+N
+n: *parāka*、*sāṃtapana* — 断食を伴う贖罪の苦行。*andhatāmisrā asūryā lokāḥ* —『イーシャー・ウパニシャッド』3 の「日の光なき世界、盲目の闇に覆われた世界に、自らを殺す者たちは行く」を踏まえる。
+
+V 4 {janakaḥ}
+s: aniyataruditasmitaṃ virājat- / katipayakomaladantakuḍmalāgram /
+s: vadanakamalakaṃ śiśoḥ smarāmi / skhaladasamañjasamugdhajalpitaṃ te
+j: わけもなく泣いたり笑ったり、
+j: 生えかけのやわらかな歯の蕾の先がのぞき、
+j: たどたどしく、あどけない片言を口にしていた——
+j: 幼いおまえのあの蓮のような顔を、私は思い出す。
+
+N
+n: 第3パーダ、OCR *vadanakamalaṃ* は一音節不足で、*vadanakamalakaṃ*（指小辞 *-ka* で愛らしさを表す）。第4パーダも OCR は乱れており、韻律（puṣpitāgrā）から *skhaladasamañjasamugdhajalpitaṃ* と解する。
+
+P
+s: {janakaḥ} bhagavati vasuṃdhare, satyam atidṛḍhāsi —
+j: {ジャナカ} 尊き大地の女神よ、あなたはまことにひどく冷酷だ——
+
+V 5 {janakaḥ}
+s: tvaṃ vahnir munayo vasiṣṭhagṛhiṇī gaṅgā ca yasyā vidur / māhātmyaṃ yadi vā raghoḥ kulagurur devaḥ svayaṃ bhāskaraḥ /
+s: vidyāṃ vāg iva yām asūta bhavatī śuddhiṃ gatāyāḥ punas / tasyās tvadduhitus tathā viśasanaṃ kiṃ dāruṇe 'mṛṣyathāḥ
+j: あなたも、火神も、仙人たちも、ヴァシシュタの妻も、ガンガーも、その偉大さを知っていた。
+j: いや、ラグ家の家祖である太陽神ご自身も知っておられた——
+j: ことばが学問を生むように、あなたが生んだその娘、ふたたび潔白を証したそのあなたの娘が、
+j: あのように損なわれるのを、むごい方よ、どうして黙って見過ごしたのか。
+
+N
+n: 第3パーダ後半は OCR では乱れている（*tedvṛtta yā daivataṃ*）。Vīrarāghava 注の読み *śuddhiṃ gatāyāḥ punaḥ* に従った。
+
+P
+s: (nepathye) ita ito bhagavatī mahādevī ca.
+j: （舞台裏で）こちらへ、尊き方、そして后さま。
+s: {janakaḥ} (dṛṣṭvā) aye, gṛṣṭinopadiśyamānamārgā bhagavaty arundhatī. (utthāya) kāṃ punar mahādevīty āha. (nirūpya) hā hā, katham iyaṃ mahārājadaśarathasya dharmadārāḥ priyasakhī me kausalyā. ka etāṃ pratyeti saiveyam iti —
+j: {ジャナカ} （見て）おや、侍従に道を示されて、尊きアルンダティーさまがおいでだ。（立ちあがって）「后さま」とはどなたのことだろう。（よく見て）ああ、ああ、これはダシャラタ大王の正妃、わが親しい友カウサリヤーではないか。これがあの人だと、だれが信じられよう——
+
+V 6 {janakaḥ}
+s: āsīd iyaṃ daśarathasya gṛhe yathā śrīḥ / śrīr eva vā kim upamānapadena saiṣā /
+s: kaṣṭaṃ batānyad iva daivavaśena jātā / duḥkhātmakaṃ kim api bhūtam aho vipākaḥ
+j: この人は、ダシャラタの家にあって幸運の女神のようだった——
+j: いや、たとえるまでもない、幸運の女神そのものだった。
+j: ああ、それが運命の力で、まるで別人のように、
+j: 悲しみそのものでできた何かになりはててしまった。ああ、これが報いか。
+
+P
+s: {janakaḥ} ayam aparaḥ pāpo daśāviparyāsaḥ —
+j: {ジャナカ} これもまた、むごい境遇の逆転だ——
+
+V 7 {janakaḥ}
+s: ya eva me janaḥ pūrvam āsīn mūrto mahotsavaḥ /
+s: kṣate kṣāram ivāsahyaṃ jātaṃ tasyaiva darśanam
+j: かつて私にとって祝祭そのものが形をとったようだった人が、
+j: いまはその姿を見ることさえ、傷に塩を塗るように耐えがたい。
+
+P
+s: (tataḥ praviśaty arundhatī kausalyā kañcukī ca)
+j: （アルンダティー、カウサリヤー、侍従が登場する）
+s: {arundhatī} nanu bravīmi, draṣṭavyaḥ svayam upetyaiva vaideha ity eṣa vaḥ kulagurorādeśaḥ. ata eva cāhaṃ preṣitā. tat ko 'yaṃ pade pade mahān anadhyavasāyaḥ.
+j: {アルンダティー} ですから言っているでしょう。「自ら出向いてヴィデーハ王に会うように」というのが、あなたがたの家の師の言いつけです。だからこそ私が遣わされたのです。それなのに、一歩ごとにこんなにためらうとは、どうしたことです。
+s: {kañcukī} devi, saṃstabhyātmānam anurudhyasva bhagavato vasiṣṭhasyādeśam iti vijñāpayāmi.
+j: {侍従} 后さま、お気をしっかりおもちになって、ヴァシシュタ尊者の言いつけに従われますよう、申し上げます。
+s: {kausalyā} īdṛśe kāle mithilādhipo mayā draṣṭavya iti samam eva sarvāṇi duḥkhāni samudbhavanti. tasmān na śaknomy udvartamānamūlabandhanaṃ hṛdayaṃ paryavasthāpayitum.
+j: {カウサリヤー} こんなときにミティラーの王さまにお会いしなければならないと思うと、あらゆる悲しみがいっせいにこみあげてくるのです。根もとからひっくりかえりそうなこの心を、とても落ち着かせることができません。
+s: {arundhatī} atra kaḥ saṃdehaḥ —
+j: {アルンダティー} それはそうでしょう——
+
+V 8 {arundhatī}
+s: saṃtānavāhīny api mānuṣāṇāṃ / duḥkhāni sadbandhuviyogajāni /
+s: dṛṣṭe jane preyasi duḥsahāni / srotaḥsahasrair iva saṃplavante
+j: 親しい身内との別れから生まれる人の悲しみは、
+j: 絶え間なく流れつづけるものだけれど、
+j: 愛しい人に会うと、それが千の流れとなって
+j: あふれだすかのように、耐えがたくなるものです。
+
+P
+s: {kausalyā} kathaṃ nu khalu vatsāyā vadhvā evaṃgate tasya rājarṣer mukhaṃ darśayāmaḥ.
+j: {カウサリヤー} かわいい嫁がこんなことになって、どうしてあの王仙に顔向けができましょう。
+
+V 9 {arundhatī}
+s: eṣa vaḥ ślāghyasaṃbandhī janakānāṃ kulodvahaḥ /
+s: yājñavalkyo munir yasmai brahmapārāyaṇaṃ jagau
+j: こちらが、あなたがたの誇るべき姻戚、ジャナカ家を担う方——
+j: 聖仙ヤージュニャヴァルキヤがブラフマンの学をあますところなく説いた方です。
+
+P
+s: {kausalyā} eṣa sa mahārājasya hṛdayānando vatsāyā vadhvāḥ pitā rājarṣiḥ. hā dhik hā dhik, smāritāsmy anirvedaramaṇīyān divasān. hā daiva, sarvam eva tan nāsti.
+j: {カウサリヤー} この方が、大王さまの心の喜びであった、かわいい嫁の父君、王仙さま。ああ、いや、いや——飽きることのない楽しい日々を思い出させられてしまう。ああ運命よ、あのすべてがもうないのだ。
+s: {janakaḥ} (upasṛtya) bhagavaty arundhati, vaidehaḥ sīradhvajo 'bhivādayate —
+j: {ジャナカ} （近寄って）尊きアルンダティーさま、ヴィデーハ王シーラドヴァジャがご挨拶申しあげます——
+
+V 10 {janakaḥ}
+s: yayā pūtaṃmanyo nidhir api pavitrasya mahasaḥ / patis te pūrveṣām api khalu gurūṇāṃ gurutamaḥ /
+s: trilokīmāṅgalyām avanitalalīnena śirasā / jagadvandyāṃ devīm uṣasam iva vande bhagavatīm
+j: 清らかな威光の宝庫であり、先人たちの師のなかでも最上の師である
+j: あなたの夫君でさえ、あなたによって自らを清められたと思う——
+j: 三界の吉祥であり、世界に敬われる女神であるあなたを、
+j: 曙の女神を拝むように、頭を地につけて礼拝いたします。
+
+P
+s: {arundhatī} paraṃ te jyotiḥ prakāśatām. ayaṃ tvāṃ punātu devaḥ parorajā ya eṣa tapati.
+j: {アルンダティー} 至上の光があなたのうちに輝きますように。塵を超えて照るあの神（太陽）が、あなたを清めてくださいますように。
+s: {janakaḥ} ārya gṛṣṭe, apy anāmayam asyāḥ prajāpālakasya mātuḥ.
+j: {ジャナカ} 侍従どの、民を守る王の母君は、お変わりないか。
+s: {kañcukī} (svagatam) niravaśeṣam atiniṣṭhuram upālabdhāḥ smaḥ. (prakāśam) rājarṣe, anenaiva manyunā ciraparityaktarāmabhadramukhacandradarśanāṃ nārhasi duḥkhayitum atiduḥkhitāṃ devīm. rāmabhadrasyāpi daivaduryogaḥ ko 'pi, yat kila samantataḥ pravṛttabībhatsakiṃvadantīkāḥ paurajānapadā nāgniśuddhim alpakāḥ pratiyantīti dāruṇam anuṣṭhitaṃ devena.
+j: {侍従} （傍白）これ以上ないほど手厳しく非難されてしまった。（声に出して）王仙さま、まさにこの悲しみのために、もう長いことラーマさまの月のような顔を見ておられない、ひどく苦しんでいる后さまを、どうか苦しめないでください。ラーマさまにも、何か運命の悪い巡りあわせがあったのです。あちこちでおぞましい噂が広まり、了見の狭い町や村の者たちが火による潔白を信じないというので、陛下はあのむごいことをなさったのです。
+
+N
+n: ジャナカはカウサリヤーをあえて「民を守る王（ラーマ）の母」と呼ぶ——民のために娘を捨てた王への痛烈な皮肉。侍従はそれを敏感に察する。
+
+P
+s: {janakaḥ} (saroṣam) āḥ, ko 'yam agnir nāmāsmatprasūtipariśodhane. kaṣṭam, evaṃvādinā janena rāmabhadraparibhūtā api vayaṃ punaḥ paribhūyāmahe.
+j: {ジャナカ} （怒って）なに、わが子を清めるのに、火などというものが何だというのだ。ああ、ラーマにすでに辱められた私たちが、こんなことを言う者たちのせいで、またしても辱められるとは。
+s: {arundhatī} (niḥśvasya) evam etat. agnir iti vatsāṃ prati laghīyāṃsy akṣarāṇi. sītety eva paryāptam. hā vatse —
+j: {アルンダティー} （ため息をついて）そのとおりです。あの子に対しては、「火」などということばは軽すぎる。「シーター」——それだけで十分なのです。ああ、娘よ——
+
+V 11 {arundhatī}
+s: śiśur vā śiṣyā vā yad asi mama tat tiṣṭhatu tathā / viśuddher utkarṣas tvayi tu mama bhaktiṃ draḍhayati /
+s: śiśutvaṃ strītvaṃ vā bhavatu nanu vandyāsi jagatāṃ / guṇāḥ pūjāsthānaṃ guṇiṣu na ca liṅgaṃ na ca vayaḥ
+j: おまえが私にとって子であれ弟子であれ、それはそのままでよい。
+j: だが、おまえの潔白のこの上ない尊さが、私の敬う心を強くするのです。
+j: 幼くとも女であろうとも、おまえは世界に敬われるべき人。
+j: 徳ある者において敬われるのはその徳であって、性でも年でもないのだから。
+
+N
+n: 第4パーダは格言として名高い。カーリダーサ以来の「徳の尊重」の主題を、女性と年少者への敬意として明言する。
+
+P
+s: {kausalyā} aho, unmīlanti vedanāḥ. (iti mūrcchati)
+j: {カウサリヤー} ああ、痛みが目を覚ます。（気を失う）
+s: {janakaḥ} hā kaṣṭam, kim etat.
+j: {ジャナカ} ああ、どうしたのだ。
+s: {arundhatī} rājarṣe, kim anyat —
+j: {アルンダティー} 王仙よ、ほかに何がありましょう——
+
+V 12 {arundhatī}
+s: sa rājā tat saukhyaṃ sa ca śiśujanas te ca divasāḥ / smṛtāv āvirbhūtaṃ tvayi suhṛdi dṛṣṭe tad akhilam /
+s: vipāke ghore 'smin nanu khalu vimūḍhā tava sakhī / purandhrīṇāṃ cittaṃ kusumasukumāraṃ hi bhavati
+j: あの王、あの幸せ、あの子どもたち、あの日々——
+j: 友であるあなたに会って、そのすべてが思い出によみがえったのです。
+j: この恐ろしい結末に、あなたの友は気を失ってしまった。
+j: 家を守る女の心は、花のようにか弱いものなのです。
+
+P
+s: {janakaḥ} hanta hanta, sarvathā nṛśaṃso 'smi saṃvṛttaḥ, yaś cirasya dṛṣṭān priyasuhṛdaḥ priyān dārān asnigdha iva paśyāmi —
+j: {ジャナカ} ああ、ああ、私はまったく無慈悲な男になってしまった。久しぶりに会った親友の愛しい妻を、まるで仇のように見ているのだから——
+
+V 13 {janakaḥ}
+s: sa saṃbandhī ślāghyaḥ priyasuhṛd asau tac ca hṛdayaṃ / sa cānandaḥ sākṣād api ca nikhilaṃ jīvitaphalam /
+s: śarīraṃ jīvo vā yad adhikam ato 'nyat priyataraṃ / mahārājaḥ śrīmān kim iva mama nāsīd daśarathaḥ
+j: 誇るべき姻戚であり、親友であり、わが心そのものであり、
+j: 喜びそのものであり、生きることのすべての実りでもあった。
+j: この体であり、命であり、それよりもっと愛しいものでもあった——
+j: 栄えあるダシャラタ大王は、私にとって何でなかったろう。
+
+P
+s: {janakaḥ} kaṣṭam, iyam eva sā kausalyā —
+j: {ジャナカ} ああ、この人こそ、あのカウサリヤーなのだ——
+
+V 14 {janakaḥ}
+s: yad asyāḥ patyur vā rahasi paramaṃ dūṣitam abhūd / abhūvaṃ dampatyoḥ pṛthag aham upālambhaviṣayaḥ /
+s: prasāde kope vā tadanu madadhīno vidhir abhūd / alaṃ vā tat smṛtvā dahati yad avaskandya hṛdayam
+j: この人であれ夫君であれ、内々で何か大きな落ち度があると、
+j: 夫婦それぞれから、私が苦情の聞き役にされたものだった。
+j: そのあと仲直りするのも、怒りつづけるのも、私しだいだった——
+j: いや、もうよそう。思い出すと、心に襲いかかって焼きつくすのだから。
+
+N
+n: 第1パーダ、OCR *paramaṃ bhūṣitam* は意味が通らない。注は「互いに相手の落ち度を私に訴えた」と説き、異読 *param atyāhitam abhūt* にも触れる。韻律（śikhariṇī）と注に従い *dūṣitam*（落ち度・いさかい）と解した。
+
+P
+s: {arundhatī} hā kaṣṭam, aticiraniruddhaniḥśvāsaniṣpandaṃ hṛdayam asyāḥ.
+j: {アルンダティー} ああ、たいへん。この人の心臓は、長いこと息が止まって動かない。
+s: {janakaḥ} hā priyasakhi. (iti kamaṇḍalūdakena siñcati)
+j: {ジャナカ} ああ、親しい友よ。（水瓶の水をふりかける）
+
+V 15 {kañcukī}
+s: suhṛd iva prakaṭayya sukhapradāṃ / prathamam ekarasām anukūlatām /
+s: punar akāṇḍavivartanadāruṇo / vidhir aho viśinaṣṭi manorujam
+j: はじめは友のように、喜びをもたらす
+j:変わらぬ好意を見せておいて、
+j: やがて不意に手のひらを返してむごくなる——
+j: ああ、運命は心の痛みをいっそう深くするものだ。
+
+P
+s: {kausalyā} (āśvasya) hā vatse jānaki, kutrāsi. smarāmi te navavivāhalakṣmīparigrahaikamaṇḍanaṃ prasphuracchuddhavihasitaṃ mugdhamukhapuṇḍarīkam. āsphuraccandracandrikāsundarair aṅgaiḥ punar api me jāte udyotayotsaṅgam. sarvadā mahārāja evaṃ bhaṇati — eṣā raghukulamahattarāṇāṃ vadhūr asmākaṃ tu janakasutā duhitaiveti.
+j: {カウサリヤー} （息を吹きかえして）ああ、かわいいジャーナキー、どこにいるの。新婚の輝きだけを唯一の飾りとし、無邪気な笑みのこぼれていた、おまえのあどけない蓮のような顔を思い出す。娘よ、きらめく月の光のように美しいその体で、もう一度私の膝を明るくしておくれ。大王さまはいつもこうおっしゃっていた——「ラグ家の長老たちにとっては嫁だが、われらにとってジャナカの娘は実の娘だ」と。
+s: {kañcukī} yathāha devī —
+j: {侍従} 后さまの仰せのとおりです——
+
+V 16 {kañcukī}
+s: pañcaprasūter api tasya rājñaḥ / priyo viśeṣeṇa subāhuśatruḥ /
+s: vadhūcatuṣke 'pi yathaiva śāntā / priyā tanūjāsya tathaiva sītā
+j: 五人の子をもうけたあの王にとって、
+j: とりわけ愛しかったのはスバーフの敵（ラーマ）であり、
+j: 四人の嫁のなかでも、実の娘シャーンターと同じように
+j: この方（ジャナカ）の娘シーターを愛しておられました。
+
+N
+n: 五人の子 = ラーマ、バラタ、ラクシュマナ、シャトルグナ、シャーンター。*subāhuśatru* — 羅刹スバーフを討った者、すなわちラーマ。
+
+P
+s: {janakaḥ} hā priyasakha mahārāja daśaratha, evam api sarvaprakārahṛdayaṃgamaḥ kathaṃ vismaryase —
+j: {ジャナカ} ああ、親友ダシャラタ大王よ、あらゆる点で心にかなうあなたを、どうして忘れられよう——
+
+V 17 {janakaḥ}
+s: kanyāyāḥ kila pūjayanti pitaro jāmātur āptaṃ janaṃ / saṃbandhe viparītam eva tad abhūd ārādhanaṃ te mayi /
+s: tvaṃ kālena tathāvidho 'py apahṛtaḥ saṃbandhabījaṃ ca tad / ghore 'smin mama jīvalokanarake pāpasya dhig jīvitam
+j: 縁組では、娘の親が婿の身内を敬うものだという。
+j: ところがわれらの縁では逆に、あなたが私を敬ってくれた。
+j: そのあなたも時に奪われ、縁の種（シーター）も失われた——
+j: この恐ろしい浮き世の地獄で、罪深い私の命など呪われよ。
+
+N
+n: 第1パーダ、OCR *jāmātṛjaṃ janaṃ* は一音節不足。注の「婿の身近な身内」に従い *jāmātur āptaṃ janaṃ* と解する（韻律 śārdūlavikrīḍita）。
+
+P
+s: {kausalyā} jāte jānaki, kiṃ karomi. dṛḍhavajralepapratibaddhabandhaniścalaṃ hatajīvitaṃ māṃ mandabhāginīṃ na parityajati.
+j: {カウサリヤー} かわいいジャーナキー、どうしたらいいの。金剛の糊で固く貼りつけられたように動かない、このいまいましい命が、不運な私を離れてくれないの。
+s: {arundhatī} āśvasihi rājaputri, bāṣpaviśrāmo 'py antare kartavya eva. anyac ca kiṃ na smarasi yad avocad ṛṣyaśṛṅgāśrame yuṣmākaṃ kulaguruḥ — bhavitavyaṃ tathety upajātam eva, kiṃ tu kalyāṇodarkaṃ bhaviṣyatīti.
+j: {アルンダティー} 気をしっかり、王女よ。ときには涙を休めることも必要です。それに、リシュヤシュリンガ仙の庵であなたがたの家の師が言われたことを覚えていないのですか——「起こるべきことは、そのとおりに起きた。だが、その結末は幸いとなろう」と。
+s: {kausalyā} kuto 'tikrāntamanorathāyā mamaitat.
+j: {カウサリヤー} 望みのすべて尽きた私に、どうしてそんなことが。
+s: {arundhatī} tat kiṃ manyase rājaputri mṛṣodyam etad iti. na hīdaṃ sukṣatriye 'nyathā mantavyam. bhavitavyam eva tena —
+j: {アルンダティー} では王女よ、あれが偽りの言葉だと思うのですか。これを疑ってはなりません。必ずそうなるのです——
+
+V 18 {arundhatī}
+s: āvirbhūtajyotiṣāṃ brāhmaṇānāṃ / ye vyāhārās teṣu mā saṃśayo 'bhūt /
+s: bhadrā hy eṣāṃ vāci lakṣmīr niṣaktā / naite vācaṃ viplutārthāṃ vadanti
+j: 内なる光の顕れたバラモンたちのことばを、
+j: 疑ってはなりません。
+j: 彼らのことばには吉祥の幸いが宿っており、
+j: その口から、意味の外れたことばが出ることはないのです。
+
+P
+s: (nepathye kalakalaḥ. sarve ākarṇayanti)
+j: （舞台裏で騒がしい声。一同、耳を傾ける）
+s: {janakaḥ} aye, adya khalu śiṣṭānadhyāya ity anupaśrutyaṃ khelatāṃ baṭūnāṃ kalakalaḥ.
+j: {ジャナカ} おや、今日は賓客の来訪による休講だというので、遊んでいる学生たちの騒ぎ声だな。
+s: {kausalyā} sulabhasaukhyaṃ tāvad bālatvaṃ bhavati. (nirūpya) aho, eteṣāṃ madhye ka eṣa rāmabhadralakṣmīpariśobhitaiḥ sāvaṣṭambhamugdhalalitair aṅgair asmākaṃ locane śītalayati.
+j: {カウサリヤー} 子どものころは、楽しみがたやすく手に入るものね。（じっと見て）まあ、あの子たちのなかで、ラーマのような気品に輝き、凛々しくもあどけない、愛らしい手足で、私たちの目を涼やかにしてくれるあの子はだれかしら。
+s: {arundhatī} (apavārya, saharṣabāṣpam) idaṃ nāma tad bhāgīrathīniveditarahasyaṃ karṇāmṛtam. na tv evaṃ vidmaḥ katarovāyam āyuṣmatoḥ kuśalavayor iti.
+j: {アルンダティー} （脇を向いて、うれし涙をうかべ）これこそ、ガンガーさまから明かされた、耳に甘露のあの秘密。でも、健やかなクシャとラヴァのどちらなのかはわからない。
+
+V 19 {janakaḥ}
+s: kuvalayadalasnigdhaśyāmaḥ śikhaṇḍakamaṇḍano / baṭupariṣadaṃ puṇyaśrīkaḥ śriyeva sabhājayan /
+s: punar api śiśur bhūto vatsaḥ sa me raghunandano / jhaṭiti kurute dṛṣṭaḥ ko 'yaṃ dṛśor amṛtāñjanam
+j: 青蓮の花びらのようにつややかに黒く、巻き髪を飾りとし、
+j: 清らかな輝きをもって、学生の仲間を美しさそのもののように引きたてている——
+j: ふたたび幼子となったあのラグ家の喜び（ラーマ）のようだ。
+j: 目にしたとたん、私の目に甘露の目薬をさしてくれるこの子は、いったいだれなのか。
+
+N
+n: 第2パーダ、OCR *baṭupariṣad … śriyaiva* は韻律（hariṇī）上 *baṭupariṣadaṃ … śriyeva* と解する。
+
+P
+s: {kañcukī} nūnaṃ kṣatriyabrahmacārī dārako 'yam iti manye.
+j: {侍従} この子はきっと、クシャトリヤの学生でございましょう。
+s: {janakaḥ} evam etat. asya hi —
+j: {ジャナカ} そのとおりだ。なぜなら、この子は——
+
+V 20 {janakaḥ}
+s: cūḍācumbitakaṅkapatram abhitas tūṇīdvayaṃ pṛṣṭhato / bhasmastokapavitralāñchanam uro dhatte tvacaṃ rauravīm /
+s: maurvyā mekhalayā niyantritam adhovāsaś ca māñjiṣṭhakaṃ / pāṇau kārmukam akṣasūtravalayaṃ daṇḍo 'paraḥ paippalaḥ
+j: 背には、髷に触れるほど鷺の羽の矢をさした箙を左右にふたつ、
+j: 胸には聖灰の印をわずかにつけ、ルル鹿の皮をまとい、
+j: 弓弦の紐の帯で茜染めの下衣をしめ、
+j: 手には弓と数珠の腕輪、そしてもう一本、菩提樹の杖をもっている。
+
+N
+n: クシャトリヤの学生の装い。弓弦（*maurvī*）の帯と茜染め（*māñjiṣṭha*）の衣は法典に定めるクシャトリヤの徴、菩提樹（*pippala*）の杖もまたそうである。
+
+P
+s: {janakaḥ} bhagavaty arundhati, kim utprekṣase kutastyo 'yam iti.
+j: {ジャナカ} 尊きアルンダティーさま、この子はどこの子だとお思いですか。
+s: {arundhatī} adyaiva vayam āgatāḥ.
+j: {アルンダティー} 私たちも今日着いたばかりです。
+s: {janakaḥ} ārya gṛṣṭe, atīva me kautukaṃ vartate. tad bhagavantaṃ vālmīkim eva gatvā pṛccha. imaṃ ca baṭuṃ brūhi — vatsa, ke 'py ete pravayasas tvāṃ didṛkṣava iti.
+j: {ジャナカ} 侍従どの、たまらなく知りたい。ヴァールミーキ尊者のところへ行って尋ねてきてくれ。それから、この学生にこう言ってくれ——「坊や、ここにいるお年寄りたちが、おまえに会いたがっている」と。
+s: {kañcukī} yad ājñāpayati devaḥ. (iti niṣkrāntaḥ)
+j: {侍従} 仰せのとおりに。（退場）
+s: {kausalyā} kiṃ manyadhva evaṃ bhaṇita āgamiṣyatīti.
+j: {カウサリヤー} そう言われて、あの子が来てくれると思って？
+s: {janakaḥ} bhidyeta vā sadvṛttam īdṛśasya nirmāṇasya.
+j: {ジャナカ} これほどの生まれの子が、礼儀を欠くはずがない。
+s: {kausalyā} (nirūpya) kathaṃ savinayaṃ niśāmitagṛṣṭivacano visarjitarṣidāraka ito 'bhimukhaṃ prasṛta eva sa vatsaḥ.
+j: {カウサリヤー} （見やって）まあ、侍従の言葉を慎み深く聞いて、仙人の子らと別れて、あの子がこちらへやって来るわ。
+s: {janakaḥ} (ciraṃ nirvarṇya) bhoḥ, kim apy etat —
+j: {ジャナカ} （長いこと見つめて）ああ、これは何とも——
+
+V 21 {janakaḥ}
+s: mahimnām etasmin vinayaśiśutāmaugdhyamasṛṇo / vidagdhair nirgrāhyo na punar avidagdhair atiśayaḥ /
+s: mano me saṃmohasthiram api haraty eṣa balavān / ayodhātuṃ yadvat parilaghur ayaskāntaśakalaḥ
+j: この子のなかにある偉大さの卓越は、慎みと幼さのあどけなさにやわらげられていて、
+j: 目の利く者にはわかるが、そうでない者には見抜けない。
+j: 悲しみに沈んで動かなくなった私の心さえ、この子は力強く引き寄せる——
+j: 小さな磁石のかけらが、鉄を引き寄せるように。
+
+P
+s: {lavaḥ} (praviśya) ajñātanāmakam abhijanān pūjyān api sataḥ katham abhivādayiṣye. (vicintya) ayaṃ punar aviruddhaḥ prakāra iti vṛddhebhyaḥ śrūyate. (savinayam upasṛtya) eṣa vo lavasya śirasā praṇāmaparyāyaḥ.
+j: {ラヴァ} （登場して）名も家柄も知らない方々を、敬うべき方々とはいえ、どうご挨拶したものだろう。（考えて）でも、こういうやり方なら差しつかえないと、年長の方から聞いている。（慎み深く近寄って）ラヴァが、頭を下げて、皆さまに順にご挨拶申しあげます。
+s: {arundhatījanakau} kalyāṇin, āyuṣmān bhūyāḥ.
+j: {アルンダティーとジャナカ} よい子よ、長生きするように。
+s: {kausalyā} jāta, ciraṃ jīva.
+j: {カウサリヤー} 坊や、長生きしてね。
+s: {arundhatī} ehi vatsa. (lavam utsaṅge gṛhītvā, apavārya) diṣṭyā na kevalam utsaṅgaś ciramanoratho 'pi me saṃpūrṇaḥ.
+j: {アルンダティー} おいで、坊や。（ラヴァを膝に抱いて、脇を向き）うれしいこと、膝ばかりでなく、長年の願いまでいっぱいに満たされた。
+s: {kausalyā} jāta, ito 'pi tāvad ehi. (utsaṅge gṛhītvā) aho, na kevalaṃ daravikasannīlotpalaśyāmalojjvalena dehabandhena, kavalitāravindakesarakaṣāyakaṇṭhakalahaṃsaghoṣagharghareṇa svareṇa ca rāmabhadram anuharati. nanu kaṭhorakamalagarbhapakṣmalaḥ śarīrasparśo 'pi tādṛśa eva vatsasya. jāta, prekṣe tāvat te mukhapuṇḍarīkam. (cibukam unnamayya nirūpya, sabāṣpākūtam) rājarṣe, kiṃ na prekṣase, nipuṇaṃ nirūpyamāṇaṃ vatsāyā vadhvā mukhacandreṇa saṃvadaty eva.
+j: {カウサリヤー} 坊や、こっちにもおいで。（膝に抱いて）まあ、咲きかけの青蓮のように黒く輝く体つきばかりか、蓮の花蕊をついばんで渋みを帯びた喉の白鳥の鳴き声のような、深く響く声まで、ラーマにそっくり。熟した蓮の芯のようにやわらかな、この肌ざわりまで同じだわ。坊や、蓮のような顔をよく見せて。（あごを持ちあげて見つめ、涙ぐんで意味ありげに）王仙さま、ごらんにならないの？ よく見ると、かわいい嫁の月のような顔にもそっくりよ。
+s: {janakaḥ} paśyāmi sakhi paśyāmi.
+j: {ジャナカ} 見ていますとも、友よ、見ていますとも。
+s: {kausalyā} aho, unmattībhūtam iva me hṛdayaṃ kim api vipralapati.
+j: {カウサリヤー} ああ、私の心は気がふれたように、何やらうわごとを言っている。
+
+V 22 {janakaḥ}
+s: vatsāyāś ca raghūdvahasya ca śiśāv asminn abhivyajyate / saṃpūrṇapratibimbiteva nikhilā saivākṛtiḥ sā dyutiḥ /
+s: sā vāṇī vinayaḥ sa eva sahajaḥ puṇyānubhāvo 'py asau / hā hā daiva kim utpathair mama manaḥ pāriplavaṃ dhāvati
+j: この子には、わが娘とラグ家の後継ぎ（ラーマ）の、
+j: 姿のすべて、輝きのすべてが、そのまま映しだされたようにあらわれている。
+j: あの声、あの生まれながらの慎み、あの清らかな威厳——
+j: ああ、運命よ、揺れ動く私の心は、なんとあらぬ道へと走ってゆくのか。
+
+P
+s: {kausalyā} jāta, asti te mātā. smarasi vā tātam.
+j: {カウサリヤー} 坊や、お母さんはいるの？ お父さんのことは覚えている？
+s: {lavaḥ} nahi nahi.
+j: {ラヴァ} いいえ、いいえ。
+s: {kausalyā} tataḥ kasya tvam.
+j: {カウサリヤー} では、だれの子なの。
+s: {lavaḥ} bhagavato vālmīkeḥ.
+j: {ラヴァ} ヴァールミーキ尊者の子です。
+s: {kausalyā} ayi jāta, kathayitavyaṃ kathaya.
+j: {カウサリヤー} まあ坊や、言うべきことをちゃんと言ってちょうだい。
+s: {lavaḥ} etāvad eva jānāmi.
+j: {ラヴァ} それしか知らないのです。
+s: (nepathye) bho bhoḥ sainikāḥ, eṣa khalu kumāraś candraketur ājñāpayati — na kenāpy āśramābhyarṇabhūmir ākramitavyeti.
+j: （舞台裏で）おい、兵士たち、チャンドラケートゥ王子のご命令だ——「だれも庵の近くの地に踏みこんではならぬ」と。
+s: {arundhatījanakau} aye, medhyāśvarakṣāprasaṅgād upāgato vatsaś candraketuś ca draṣṭavya ity aho sudivasaḥ.
+j: {アルンダティーとジャナカ} おや、祭馬の護衛のついでに、チャンドラケートゥも来ているのか。あの子にも会えるとは、なんとよい日だ。
+s: {kausalyā} vatsalakṣmaṇasya putra ājñāpayatīty amṛtabindusundarāṇy akṣarāṇi śrūyante.
+j: {カウサリヤー} かわいいラクシュマナの息子が命令しているなんて、甘露のしずくのように美しいことばが聞こえてくる。
+s: {lavaḥ} ārya, ka eṣa candraketur nāma.
+j: {ラヴァ} おじいさま、そのチャンドラケートゥという人はだれですか。
+s: {janakaḥ} jānāsi rāmalakṣmaṇau dāśarathī.
+j: {ジャナカ} ダシャラタの子、ラーマとラクシュマナを知っているか。
+s: {lavaḥ} etāv eva rāmāyaṇakathāpuruṣau.
+j: {ラヴァ} 『ラーマーヤナ』の物語の主人公のおふたりですね。
+s: {janakaḥ} atha kim.
+j: {ジャナカ} そうだ。
+s: {lavaḥ} tat kathaṃ na jānāmi.
+j: {ラヴァ} それなら、知らないはずがありません。
+s: {janakaḥ} tasya lakṣmaṇasyāyam ātmajaś candraketuḥ.
+j: {ジャナカ} そのラクシュマナの息子が、このチャンドラケートゥだ。
+s: {lavaḥ} ūrmilāyāḥ putras tarhi maithilasya rājarṣer dauhitraḥ.
+j: {ラヴァ} それならウールミラーさまの息子で、ミティラーの王仙の孫ですね。
+s: {arundhatī} (vihasya) āviṣkṛtaṃ kathāprāvīṇyaṃ vatsena.
+j: {アルンダティー} （笑って）この子は物語に通じていることを見せてくれたわね。
+s: {janakaḥ} (vicintya) yadi tvam īdṛśaḥ kathāyām abhijñas tarhi tāvat pṛcchāmas teṣāṃ daśarathātmajānāṃ kiyanti kiṃnāmadheyāny apatyāni keṣu dāreṣu prasūtānīti.
+j: {ジャナカ} （考えて）それほど物語にくわしいなら、尋ねよう——ダシャラタの息子たちには、子が何人いて、何という名で、どの妻から生まれたのか。
+s: {lavaḥ} nāyaṃ kathāvibhāgo 'smābhir anyena vā śrutapūrvaḥ.
+j: {ラヴァ} その部分の話は、私たちもほかの者も、まだ聞いたことがありません。
+s: {janakaḥ} kiṃ na praṇīta eva kavinā.
+j: {ジャナカ} 詩人はまだ書いていないのか。
+s: {lavaḥ} praṇīto na prakāśitaḥ. tasyaiva ko 'py ekadeśaḥ saṃdarbhāntareṇa rasavān abhineyārthaḥ kṛtaḥ. taṃ ca svahastalikhitaṃ munir bhagavān vyasṛjad bhagavato bharatasya munes tauryatrikasūtrakārasya.
+j: {ラヴァ} 書いてはいますが、まだ公にしていないのです。その一部を、別の構成で、情趣のある上演用の劇にされました。それを尊者は自ら書き写して、舞踊・声楽・器楽の綱要の作者である聖仙バラタのもとへ送られました。
+s: {janakaḥ} kimartham.
+j: {ジャナカ} 何のために。
+s: {lavaḥ} sa kila bhagavān bharatas tam apsarobhiḥ prayojayiṣyatīti.
+j: {ラヴァ} バラタ尊者がそれを天女たちに演じさせるのだそうです。
+s: {janakaḥ} sarvam idam ākūtataram asmākam.
+j: {ジャナカ} なにもかも、われらにはいっそう気にかかることばかりだ。
+s: {lavaḥ} mahatī punas tasmin bhagavato vālmīker āsthā. yato yeṣām antevāsināṃ hastena tat pustakaṃ bharatāśramaṃ prati preṣitaṃ teṣām anuyātrikaś cāpapāṇiḥ pramādāpanodanārtham asmadbhrātā preṣitaḥ.
+j: {ラヴァ} ヴァールミーキ尊者はその作品をたいへん大切にしておられます。それで、その写本をバラタ尊者の庵へ届ける弟子たちに、まちがいのないよう、私の兄が弓を手に付き添って遣わされました。
+
+N
+n: ヴァールミーキが自作の一部を劇に仕立て、バラタに上演させるという伏線。これが第七幕の劇中劇（*garbhāṅka*）となる。
+
+P
+s: {kausalyā} jāta, bhrātāpi te 'sti.
+j: {カウサリヤー} 坊や、お兄さんもいるの。
+s: {lavaḥ} asty āryaḥ kuśo nāma.
+j: {ラヴァ} クシャという兄がいます。
+s: {kausalyā} jyeṣṭha iti bhaṇitaṃ bhavati.
+j: {カウサリヤー} 年上ということね。
+s: {lavaḥ} evam etat. prasavānukrameṇa sa kila jyāyān.
+j: {ラヴァ} そうです。生まれた順では、兄が上だそうです。
+s: {janakaḥ} kiṃ yamajāv āyuṣmantau.
+j: {ジャナカ} おまえたちは双子なのか。
+s: {lavaḥ} atha kim.
+j: {ラヴァ} はい。
+s: {janakaḥ} vatsa, kathaya kathāprabandhasya kīdṛśaḥ paryantaḥ.
+j: {ジャナカ} 坊や、話してくれ。その物語はどこで終わっているのだ。
+s: {lavaḥ} alīkapaurāpavādodvignena rājñā nirvāsitāṃ devayajanasaṃbhavāṃ sītādevīm āsannaprasavavedanām ekākinīm araṇye parityajya lakṣmaṇaḥ pratinivṛtta iti.
+j: {ラヴァ} 町の者たちの偽りの悪口に心を乱した王に追放された、祭場生まれのシーター妃を、産み月の近い身でただひとり森に置き去りにして、ラクシュマナが帰っていった——というところまでです。
+s: {kausalyā} hā vatse mugdhacandramukhi, kim idānīṃ te śarīrakusumasya jhaṭiti daivadurvilāsapariṇāma ekākinyā nipatitaḥ.
+j: {カウサリヤー} ああ、あどけない月の顔のかわいい子、ひとりぼっちのおまえの花のような体に、そのあと運命のどんなむごい仕打ちが降りかかったのだろう。
+s: {janakaḥ} hā vatse —
+j: {ジャナカ} ああ、娘よ——
+
+V 23 {janakaḥ}
+s: nūnaṃ tvayā paribhavaṃ ca vanaṃ ca ghoraṃ / tāṃ ca vyathāṃ prasavakālakṛtām avāpya /
+s: kravyādaneṣu paritaḥ parivārayatsu / saṃtrastayā śaraṇam ity asakṛt smṛto 'smi
+j: 屈辱と、恐ろしい森と、
+j: 産み月の苦しみとに見舞われて、
+j: 肉を食らう獣どもの群れにまわりを取りかこまれ、
+j: おびえたおまえは、何度も私を助けを求める先として思い浮かべたにちがいない。
+
+P
+s: {lavaḥ} (arundhatīṃ prati) ārye, kāv etau.
+j: {ラヴァ} （アルンダティーに）おばあさま、このおふたりはどなたですか。
+s: {arundhatī} iyaṃ kausalyā, ayaṃ ca janakaḥ.
+j: {アルンダティー} こちらがカウサリヤー、こちらがジャナカです。
+s: {lavaḥ} (sabahumānakhedakautukaṃ paśyati)
+j: {ラヴァ} （敬意と悲しみと好奇心をこめて見つめる）
+s: {janakaḥ} aho, nirdayatā durātmanāṃ paurāṇām. aho, rāmasya rājñaḥ kṣiprakāritā —
+j: {ジャナカ} ああ、町の悪党どもの情け知らずよ。ああ、ラーマ王の軽はずみよ——
+
+V 25 {janakaḥ} [śārdūlavikrīḍita] 前半
+s: etadvaiśasavajraghorapatanaṃ śaśvan mamotpaśyataḥ / krodhasya jvalituṃ dhig ity avasaraś cāpena śāpena vā
+j: この惨事の雷が恐ろしく落ちかかるのを、絶えず見せつけられている私の
+j: 怒りが、弓によってか呪いによってか、燃えあがる時が来たのだ。ええい、許せぬ——
+
+P
+s: {kausalyā} (sabhayakampam) bhagavati, paritrāyasva paritrāyasva. prasādaya kupitaṃ rājarṣim.
+j: {カウサリヤー} （おびえ震えて）アルンダティーさま、助けて、助けて。怒った王仙さまをなだめてください。
+
+V 24
+s: {lavaḥ} etad dhi paribhūtānāṃ prāyaścittaṃ manasvinām /
+s: {arundhatī} rājann apatyaṃ rāmas te pālyāś ca kṛpaṇā janāḥ
+j: {ラヴァ} 辱められた誇り高い人にとっては、それこそが償いです。
+j: {アルンダティー} 王よ、ラーマはあなたの子も同然。そして哀れな民は守られるべきもの。
+
+V 25 {janakaḥ} [śārdūlavikrīḍita] 後半
+s: śāntaṃ vā raghunandane tad ubhayaṃ yat putrabhāṇḍaṃ hi me / bhūyiṣṭhadvijabālavṛddhavikalastraiṇaś ca pauro janaḥ
+j: いや、ラグ家の喜び（ラーマ）に対しては、その二つともやめておこう。彼はわが子同然なのだから。
+j: そして町の民は、たいていがバラモンや子ども、老人、弱い者や女たちなのだから。
+
+N
+n: 第25偈の前半と後半のあいだに、カウサリヤーの嘆願と、ラヴァとアルンダティーが分けて唱える第24偈がはさまる。ジャナカの怒り（弓か呪いで報いよう）に、ラヴァは「それこそ償い」と同意し、アルンダティーは「ラーマは子、民は弱き者」と諭す。
+
+P
+s: (praviśya)
+j: （学生たちが登場して）
+s: {saṃbhrāntā baṭavaḥ} kumāra kumāra, aśvo 'śva iti ko 'pi bhūtaviśeṣo janapadeṣu śrūyate. so 'yam adhunāsmābhiḥ pratyakṣīkṛtaḥ.
+j: {あわてた学生たち} 王子、王子、「馬、馬」とかいう、村々で噂に聞く何やら変わった生き物を、いまぼくたちがこの目で見たんだよ。
+s: {lavaḥ} aśvo 'śva iti paśusamāmnāye sāṃgrāmike ca paṭhyate. tad brūta kīdṛśaḥ.
+j: {ラヴァ} 「馬」なら、家畜の名を挙げた書物にも戦いの書物にも出てくるよ。で、どんなものだった。
+s: {baṭavaḥ} śrūyatām —
+j: {学生たち} 聞いてよ——
+
+V 26 {baṭavaḥ}
+s: paścāt pucchaṃ vahati vipulaṃ tac ca dhūnoty ajasraṃ / dīrghagrīvaḥ sa bhavati khurās tasya catvāra eva /
+s: śaṣpāṇy atti prakirati śakṛtpiṇḍakān āmramātrān / kiṃ vyākhyātair vrajati sa punar dūram ehy ehi yāmaḥ
+j: うしろに大きなしっぽがあって、それをしょっちゅう振っている。
+j: 首が長くて、ひづめが四つだけある。
+j: 草を食べて、マンゴーくらいの大きさの糞のかたまりを落とす。
+j: 説明はもういいよ、あいつ遠くへ行っちゃう。さあ、行こう、行こう。
+
+N
+n: 庵で育った学生たちは馬を見たことがない。滑稽な描写で、深刻な場面のあとの緊張をゆるめる。
+
+P
+s: (ity upasṛtyājine haste cākarṣanti)
+j: （近寄って、ラヴァの鹿皮の衣と手を引っぱる）
+s: {lavaḥ} (sakautukoparodhavinayam) āryāḥ, paśyata paśyata, ebhir nīto 'smi. (iti tvaritaṃ parikrāmati)
+j: {ラヴァ} （面白がりつつも、引きとめられて困り、慎み深く）皆さま、ごらんください、この子たちに連れていかれます。（急いで歩きまわる）
+s: {arundhatījanakau} pūryatāṃ kautukaṃ vatsasya.
+j: {アルンダティーとジャナカ} 坊やの好奇心を満たしておやり。
+s: {kausalyā} bhagavati, jānāmy etam anālokayantī na jīvāmīva. tad anyato bhūtvā prekṣāmahe tāvad gacchantaṃ dīrghāyuṣam.
+j: {カウサリヤー} アルンダティーさま、この子を見ていないと、生きた心地がしないの。場所を移して、行ってしまうこの子を見ていましょう。
+s: {arundhatī} atijavena dūram atikrāntaḥ sa capalaḥ kathaṃ dṛśyate.
+j: {アルンダティー} あのすばしこい子は、すごい速さでもう遠くへ行ってしまった。もう見えないわ。
+s: {kañcukī} (praviśya) bhagavān vālmīkir āha — jñātavyam etad avasare bhavadbhir iti.
+j: {侍従} （登場して）ヴァールミーキ尊者はこう仰せです——「それは時が来れば、おわかりになろう」と。
+s: {janakaḥ} atigambhīram etat kim api. bhagavaty arundhati, sakhi kausalye, ārya gṛṣṭe, svayam eva gatvā bhagavantaṃ prācetasaṃ paśyāmaḥ.
+j: {ジャナカ} これは何やら深いわけがありそうだ。アルンダティーさま、友カウサリヤー、侍従どの、わたしたち自身で行って、プラーチェータサ尊者にお会いしよう。
+s: (iti niṣkrānto vṛddhavargaḥ)
+j: （老人たちの一行退場）
+s: (praviśya)
+j: （学生たちとラヴァが登場して）
+s: {baṭavaḥ} paśyatu kumāras tad āścaryam.
+j: {学生たち} 王子、あの不思議なものを見てよ。
+s: {lavaḥ} dṛṣṭam avagataṃ ca. nūnam āśvamedhiko 'yam aśvaḥ.
+j: {ラヴァ} 見たし、わかったよ。これはきっと、馬祀祭の馬だ。
+s: {baṭavaḥ} kathaṃ jñāyate.
+j: {学生たち} どうしてわかるの。
+s: {lavaḥ} nanu mūrkhāḥ, paṭhitam eva hi yuṣmābhir api tat kāṇḍam. kiṃ na paśyatha pratyekaṃ śatasaṃkhyāḥ kavacino daṇḍino niṣaṅgiṇaś ca rakṣitāraḥ. tatprāyam eva balam idaṃ dṛśyate. yadi ca vipratyayas tad gatvā pṛcchata.
+j: {ラヴァ} ばかだなあ、きみたちだってあの章を習ったじゃないか。鎧をつけ、杖をもち、箙を負った護衛が、それぞれ百人ずつついているのが見えないのかい。あそこに見える軍勢も、たいていそういう者たちだ。信じられないなら、行って聞いてごらん。
+s: {baṭavaḥ} bho bhoḥ, kiṃprayojano 'yam aśvaḥ parivṛtaḥ paryaṭati.
+j: {学生たち} おーい、この馬は何のために、まわりを囲まれて歩きまわっているの。
+s: {lavaḥ} (saspṛham ātmagatam) aye, aśvamedha iti nāma viśvavijayināṃ kṣatriyāṇām ūrjasvalaḥ sarvakṣatraparibhāvī mahān utkarṣanikaṣaḥ.
+j: {ラヴァ} （あこがれをこめて、傍白）ああ、馬祀祭といえば、世界を征するクシャトリヤたちの、力強く、あらゆる武士をしのぐ、偉大さを試す大いなる試金石だ。
+s: (nepathye)
+j: （舞台裏で）
+
+V 27
+s: ayam aśvaḥ patākeyam atha vā vīraghoṣaṇā /
+s: saptalokaikavīrasya daśakaṇṭhakuladviṣaḥ
+j: この馬は旗印、いや、勇士の宣言なのだ——
+j: 七つの世界にただひとりの勇士、十の首をもつ者（ラーヴァナ）の一族の敵（ラーマ）の。
+
+P
+s: {lavaḥ} (sagarvam iva) aho, saṃdīpanāny akṣarāṇi.
+j: {ラヴァ} （いくらか誇らしげに）ほう、闘志をかきたてることばだ。
+s: {baṭavaḥ} kim ucyate, prājñaḥ khalu kumāraḥ.
+j: {学生たち} なんて言ったの。王子は物知りだね。
+s: {lavaḥ} bho bhoḥ, tat kim akṣatriyā pṛthivī yad evam udghoṣyate.
+j: {ラヴァ} おい、おい、それでは大地にクシャトリヤはいないとでもいうのか、そんなふうに触れまわるとは。
+s: (nepathye) are re, mahārājaṃ prati kutaḥ kṣatriyāḥ.
+j: （舞台裏で）こいつ、大王に比べれば、クシャトリヤなどどこにいるものか。
+s: {lavaḥ} dhig jālmān —
+j: {ラヴァ} 愚か者どもめ——
+
+V 28 {lavaḥ}
+s: yadi te santi santy eva keyam adya vibhīṣikā /
+s: kim uktair ebhir adhunā tāṃ patākāṃ harāmi vaḥ
+j: その王がいるなら、いるがよい。だが、いまのこのおどしは何だ。
+j: 口でいくら言っても何になろう——おまえたちのその旗印（馬）を、私が奪ってやる。
+
+N
+n: 第1パーダ後半、OCR *santyevaṃ keyamatha* は二音節不足。韻律（anuṣṭubh）から *santi santy eva keyam adya* と解する。
+
+P
+s: {lavaḥ} bho bho baṭavaḥ, parivṛtya loṣṭair abhighnanto nayatainam aśvam. eṣa rohitānāṃ madhye caratu.
+j: {ラヴァ} おい、みんな、まわりを囲んで土くれをぶつけて、この馬を連れていけ。こいつはローヒタ鹿たちのなかで草を食めばいい。
+s: (praviśya sakrodhadarpaḥ)
+j: （怒りと傲りをあらわにした兵士が登場して）
+s: {puruṣaḥ} dhik pāpa, kim uktavān asi. tīkṣṇanīrasā hy āyudhaśreṇayaḥ śiśor api dṛptāṃ vācaṃ na sahante. rājaputraś candraketur arivimardanaḥ. so 'py apūrvāraṇyadarśanākṣiptahṛdayo na yāvad āyāti tāvat tvaritam anena tarugahanenāpasarpata.
+j: {兵士} こら、悪たれ、何をほざいた。気の荒い兵の群れは、子どもであろうと生意気な口は許さんぞ。チャンドラケートゥ王子は敵を打ち砕くお方だ。初めて見る森に心を奪われておられる王子がお戻りにならないうちに、さっさとこの木立から逃げてしまえ。
+s: {baṭavaḥ} kumāra, kṛtam anenāśvena. tarjayanti visphuritaśastrāḥ kumāram āyudhīyaśreṇayaḥ. dūre cāśramapadam. itas tad ehi hariṇaplutaiḥ palāyāmahe.
+j: {学生たち} 王子、馬なんてもういいよ。兵隊たちが刀をきらめかせて王子をおどしている。庵は遠いし、さあ、鹿みたいに跳んで逃げよう。
+s: {lavaḥ} (vihasya) kiṃ nāma visphuranti śastrāṇi. (iti dhanur āropayan)
+j: {ラヴァ} （笑って）なに、刀がきらめいているだと。（弓に弦を張りながら）
+
+V 29 {lavaḥ}
+s: jyājihvayā valayitotkaṭakoṭidaṃṣṭram / udgārighoraghanaghargharaghoṣam etat /
+s: grāsaprasaktahasadantakavaktrayantra- / jṛmbhāviḍambivikaṭodaram astu cāpam
+j: 弦を舌として巻きつけ、反りかえった両端を牙とし、
+j: 恐ろしく重い、ごうごうと唸る響きを吐き出すこの弓よ——
+j: 獲物を呑もうとして笑う死神の口の
+j: 大あくびを思わせる、ぱっくりと開いた腹となれ。
+
+N
+n: 張られた弓を死神の口に喩える。弦（*jyā*）は舌、弓の両端（*koṭi*）は牙、弓と弦のあいだの空間は大きく開いた口。
+
+P
+s: (iti yathocitaṃ parikramya niṣkrāntāḥ sarve)
+j: （一同、しかるべく歩きまわって退場）
