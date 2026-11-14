@@ -330,8 +330,13 @@ def render_act(path, outpath):
     if act < 7:
         nxt = '<a class="next" href="uttararamacarita-act%d.html">%s →</a>' % (act + 1, ACTS[act + 1][1] + '「' + ACTS[act + 1][2] + '」')
     prv = '<a class="prev" href="uttararamacarita-act%d.html">← %s</a>' % (act - 1, ACTS[act - 1][1]) if act > 1 else '<a class="prev" href="uttararamacarita-toc.html">← 総覧</a>'
-    ih2, dh2 = skt_inline('iti ' + skt_title)
-    body += f'<p class="colophon">{bi(ih2, dh2)}</p><nav class="pager">{prv}{nxt}</nav>'
+    col = 'iti mahākavibhavabhūtiviracite uttararāmacarite ' + skt_title
+    ih2, dh2 = skt_inline(col)
+    colo = bi(ih2, dh2)
+    if act == 7:
+        ih3, dh3 = skt_inline('samāptam idaṃ nāṭakam')
+        colo += '<br>' + bi(ih3, dh3)
+    body += f'<p class="colophon">{colo}</p><nav class="pager">{prv}{nxt}</nav>'
     title = 'Uttararāmacarita %s' % ROMAN[act]
     desc = 'バヴァブーティ『ウッタララーマチャリタ』%s「%s」— Kale 版に基づくサンスクリット・日本語対訳' % (jp_no, jp_title)
     open(outpath, 'w', encoding='utf-8').write(page(title, desc, body, act))
