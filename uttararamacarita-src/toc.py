@@ -133,7 +133,7 @@ def build():
   <h1><span class="h-jp">ウッタララーマチャリタ</span><span class="h-skt">{bi(ih, dh)}</span></h1>
   <p class="synopsis">バヴァブーティ（8世紀前半）作の七幕の戯曲。『ラーマーヤナ』の後日譚——ラーヴァナを討って即位したラーマが、民の噂のためにシーターを捨て、十二年後に双子の子らとともに再会するまで——を描く。ラーマの悲嘆を主調とし、「ラサ（情趣）はただひとつ、悲愴（カルナ）のみ」（第三幕第47偈）と宣言する、悲愴の劇の最高峰とされる。</p>
   <div class="stats">
-    <div><b>7</b><span>幕</span></div><div><b>{total}</b><span>偈（全256のうち）</span></div><div><b>12</b><span>年（第一幕と第二幕の間）</span></div><div><b>{len(allm)}</b><span>種の韻律</span></div>
+    <div><b>7</b><span>幕</span></div><div><b>{total}</b><span>偈（全256）</span></div><div><b>12</b><span>年（第一幕と第二幕の間）</span></div><div><b>{len(allm)}</b><span>種の韻律</span></div>
   </div>
 </section>''')
     # TOC table
@@ -149,7 +149,7 @@ def build():
     h.append('<div class="figwrap">' + flow_svg() + '</div>')
     # chart + rasa table
     h.append('<div class="two"><figure class="fig"><figcaption>各幕の偈の数</figcaption>' + bar_chart(data) +
-             '<p class="figcap">第六幕は底本 OCR の欠落により42偈中38偈を収録。</p></figure>')
+             '</figure>')
     h.append('<div><h3 class="sub">各幕の主調となるラサ（情趣）</h3><div class="tablewrap"><table class="rasa"><thead><tr><th>幕</th><th>ラサ</th><th>趣</th></tr></thead><tbody>')
     for a in range(1, 8):
         h.append('<tr><td class="ro">%s</td><td class="sk">%s</td><td>%s</td></tr>' % (ROMAN[a], esc(RASA[a][0]), esc(RASA[a][1])))
@@ -191,7 +191,7 @@ def build():
 <p><b>底本。</b>M. R. Kale 校訂本（Vīrarāghava 注付き、Motilal Banarsidass）の OCR テキストを底本とし、全幕の本文を原典と照合して校訂した。偈はすべて韻律（音節の長短の型）で検証し、OCR の誤りは、注釈の語釈・異読・韻律に基づいて訂正した。主な訂正は各偈の注に記した。</p>
 <p><b>プラークリット。</b>女性や従者の台詞は原作ではプラークリットで書かれているが、Kale 本の本文に従い、サンスクリット訳（chāyā）で示した。</p>
 <p><b>文字の切り替え。</b>上部のボタンで、サンスクリット本文を Devanāgarī・IAST（ローマ字転写）・併記のいずれでも表示できる。選択は次に開いたときにも保たれる。「注」ボタンで注の表示・非表示を切り替えられる。</p>
-<p><b>欠落。</b>底本 OCR には第六幕の一頁（第21〜24偈を含む）が欠けている。推測で本文を補うことはせず、該当箇所に欠落を明記した。第六幕第40偈にも、OCR の乱れによる本文の欠落がある。</p>
+<p><b>補填と欠落。</b>底本 OCR に欠けていた第六幕の一頁（第21〜24偈とその前後の散文）は、Śaṅkara Rāma Śāstrī 校訂本（Śrī Bālamanoramā Series 17, 1932、Nārāyaṇa 注 <i>Bhāvārthadīpikā</i> 付）によって補い、該当箇所の注に明記した。第六幕第40偈には、OCR の乱れによる本文の欠落がなお一箇所残る。</p>
 <p><b>和訳。</b>サンスクリット原文から直接訳した。</p></div>''')
     body = '\n'.join(h)
     out = page('Uttararāmacarita 総覧', 'バヴァブーティ『ウッタララーマチャリタ』全七幕の目次・構成図・韻律分布・登場人物・梗概', body, None)

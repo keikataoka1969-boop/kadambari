@@ -358,7 +358,72 @@ j: ああ、なんと心なごむ姿、なんと清らかな威厳であるこ�
 j: 『ラーマーヤナ』の詩人がこの方のために神聖なことばを繰りひろげたのも、もっともなことだ。
 
 N
-n: 〔原典欠落〕Kale 本の第20偈のあと、第21〜24偈を含む一頁が、今回の底本 OCR に収められていない（印刷頁番号の飛び、偈番号の 20 → 26 の飛びによる）。旧版の和訳（英訳からの参照に基づく）によれば、この間に、クシャがラーマに挨拶し、ラーマが二人を抱きしめて「この子は私の子ではないか」と自問する場面（第22偈は、子は「肢体のひとつひとつから生まれた、体の精髄が外に現れたもの」とする *aṅgād aṅgāt* の聖句を踏まえる）、ラヴァの勧めで一同がサーラ樹の木陰に座る場面、ラーマが二人の立ち居ふるまいに帝王の相を見る場面（第23・24偈）がある。サンスクリット本文の確定には Kale 本の当該頁が必要なため、ここでは推測による本文の補填を行わない。
+n: 〔補填〕第21〜24偈とその前後の散文は、今回の Kale 本 OCR に欠けている頁にあたるため、Śaṅkara Rāma Śāstrī 校訂本（Śrī Bālamanoramā Series 17, 1932、Nārāyaṇa 注 *Bhāvārthadīpikā* 付、pp. 234–241）によって補った。OCR の明白な誤り（*snigdha* の誤読、*kim ity ayaṃ* の誤読、*upaviśanti* の誤読など）は注釈の語釈によって正した。
+
+P
+s: {kuśaḥ} tāta, prācetasāntevāsī kuśo 'bhivādayate.
+j: {クシャ} 父上、プラチェータスの子（ヴァールミーキ）の弟子クシャがご挨拶申し上げます。
+s: {rāmaḥ} ehy ehy āyuṣman —
+j: {ラーマ} おいで、おいで、いとしい子よ——
+
+V 21 {rāmaḥ}
+s: amṛtādhmātajīmūtasnigdhasaṃhananasya te /
+s: pariṣvaṅgāya vātsalyād ayam utkaṇṭhate janaḥ
+j: 甘露の水をたっぷりと含んだ雨雲のように、しっとりとやわらかな体をしたおまえを、
+j: 抱きしめたいと、いとしさのあまり、この者（わたし）は焦がれている。
+
+N
+n: *amṛta* は Nārāyaṇa によれば「水」（*amṛtena jalena*）。*ādhmāta* は「ふくらんだ、満ちた」（*pīna*）。*saṃhanana* は「体の組み立て、体躯」（*śarīrabandha*）。*ayaṃ janaḥ* は話し手自身を指す謙遜の言い方。
+
+P
+s: (pariṣvajya, svagatam) tat kim ity ayaṃ ca dārakaḥ —
+j: （抱きしめて、独白）それにしても、どうしてこの子までも——
+
+V 22 {rāmaḥ}
+s: aṅgād aṅgāt sruta iva nijaḥ snehajo dehasāraḥ / prādurbhūya sthita iva bahiś cetanādhātur ekaḥ /
+s: sāndrānandakṣubhitahṛdayaprasraveṇeva sikto / gātraśleṣe yad amṛtarasasrotasā siñcatīva
+j: 手足のひとつひとつから、愛しさに溶けて流れ出た、わが身の精髄そのもののように、
+j: また、生命の精がただひとつ形をとって、身の外に現れ立っているかのように、
+j: 濃い歓びに揺さぶられた心からほとばしる流れに浸されたかのように、
+j: 体を寄せあうと、甘露の流れでわたしを潤してくれるかのようだ。
+
+N
+n: 一節ごとに重ねられる *utprekṣā*（「〜のように」の見立て）。Nārāyaṇa は、抱擁で得た歓びの正体を問う「疑い」（*saṃdeha*）に支えられた見立ての連鎖と解し、*saṃkara*（複合修辞）とする。*aṅgād aṅgāt* は、子は父の「肢体のひとつひとつから生まれる」とする聖句（*aṅgād aṅgāt saṃbhavasi hṛdayād adhijāyase / ātmā vai putranāmāsi*）を踏まえ、ラーマが我知らず実の子を感じとっていることを示す。*dehasāra* は皮膚以下の体の要素のうち最上のもの（Nārāyaṇa は *śukla* と解する）、*cetanādhātu* は「意識をになう体の要素」で、Nārāyaṇa はアーユルヴェーダの第八の要素 *ojas* と解し、Vāgbhaṭa の「*ojas* は諸要素の精髄」を引く。
+n: 第三節の *prasraveṇa*（「ほとばしり、滴り」）は Śāstrī 本 OCR では本文・注とも *prastavena* と読めるが、注の語釈 *niṣyandena*（「滴り」）から *prasraveṇa* の誤読と判断した。
+
+P
+s: {lavaḥ} lalāṭaṃtapas tapati tigmāṃśuḥ. tad atra sālapracchāye muhūrtam āsanaparigrahaṃ karotu tātaḥ.
+j: {ラヴァ} 額を焦がすほどに、日ざしが照りつけております。どうか父上、このサーラ樹の木陰で、しばらくお座りください。
+s: {rāmaḥ} yad abhirucitaṃ vatsasya.
+j: {ラーマ} おまえのよいように。
+s: (parikramya yathocitam upaviśanti)
+j: （歩みを移し、しかるべき順に腰をおろす）
+s: {rāmaḥ} (svagatam)
+j: {ラーマ} （独白）
+
+V 23 {rāmaḥ}
+s: aho praśrayayoge 'pi gatisthityāsanādayaḥ /
+s: sāmrājyaśaṃsino bhāvāḥ kuśasya ca lavasya ca
+j: ああ、慎み深くふるまっていても、
+j: クシャとラヴァの歩み、立ち姿、座り方などの所作は、帝王の位を告げている。
+
+N
+n: *lalāṭaṃtapa*（「額を焼く」）は Pāṇini 3.2.36 *asūryalalāṭayor dṛśitapoḥ* による *khaś* 接辞の形。*sālapracchāya* は中性（Pāṇini 2.4.25 *vibhāṣā senāsurāchāyāśālāniśānām*）。第23偈の *gati* は歩み、*sthiti* は木の根もとへ行って立つこと、*āsana* はそこに座ること、「など」は眼差しを含む（Nārāyaṇa）。*sāmrājyaśaṃsin* は「天下を統べる帝王であることを告げる」。
+
+V 24 {rāmaḥ}
+s: vapur aviyutasiddhā eva lakṣmīvilāsāḥ / pratikalakamanīyāṃ kāntim udbhedayanti /
+s: amalinam iva candraṃ raśmayaḥ sve yathā vā / vikasitam aravindaṃ bindavo mākarandāḥ
+j: 体と切り離しえずそなわった王者の吉祥の輝きが、
+j: 刻一刻と愛らしさを増す美しさを、ひらき現している——
+j: 曇りのない月を、月みずからの光がそうするように、また、
+j: 咲きひらいた蓮を、その花蜜のしずくがそうするように。
+
+N
+n: *aviyutasiddha* は「（体と）分かちがたく成立している」、すなわち体に内属する（*śarīrasamavāyin*）。Nārāyaṇa は *eva* によって、腕輪や冠など外から付けた帝王の標章が除外される、と解する。*pratikala* は「刻々に」、*udbhedayanti* は「芽吹かせる、顕わにする」。月と光、蓮と花蜜という、内からの輝きの二つの比喩（*mālopamā*）。
+
+P
+s: {rāmaḥ} bhūyiṣṭhaṃ ca raghukulakaumārakam anayoḥ paśyāmi —
+j: {ラーマ} それに、この二人には、ラグ家の少年時代の面影がありありと見える——
 
 V 25 {rāmaḥ}
 s: kaṭhorapārāvatakaṇṭhamecakaṃ / vapur vṛṣaskandhasubandhurāṃsayoḥ /
@@ -369,7 +434,7 @@ j: 落ち着いた獅子のように静かなまなざし、
 j: 吉祥の祭りに打つ太鼓のように豊かに響く声——
 
 N
-n: 底本 OCR の欠落頁にあたるため、この偈は旧版和訳の内容と韻律（vaṃśastha）の照合によって復元した。帝王の身体的特徴（太い体格、獅子の眼差し、太鼓のような声）を二人の少年に認める。
+n: 帝王の身体的特徴（太く引きしまった体格、牡牛のような肩、獅子の眼差し、太鼓のような声）を二人の少年に認める。*kaṭhorapārāvata* は「成熟した鳩」。Śāstrī 本によって本文を確認した（旧版ではこの偈を和訳と韻律から復元していた）。
 
 P
 s: {rāmaḥ} (nipuṇaṃ nirūpya) aye, na kevalam asmadaṅgasaṃvādiny ākṛtiḥ —
