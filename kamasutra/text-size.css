@@ -9,16 +9,49 @@
   line-height: 1.95 !important;
 }
 html.lipi-deva :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) {
-  font-size: 1.2rem !important;
+  font-size: 1.34rem !important;
+  line-height: 2.05 !important;
 }
+/* 注釈・和訳中のデーヴァナーガリー語句も少し大きく */
+html.lipi-deva :is(.iast, .term, .term-sk) { font-size: 1.1em; }
 @media (max-width: 640px) {
   :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) { font-size: 1.06rem !important; }
   :is(.japanese, .jp, .verse-trans, .japanese-verse, .verse-japanese):not(td):not(th) { font-size: 1.04rem !important; }
-  html.lipi-deva :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) { font-size: 1.12rem !important; }
+  html.lipi-deva :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit):not(td):not(th) { font-size: 1.24rem !important; }
 }
 
 /* 長い複合語で左右の列幅が崩れないよう、本文セルの最小幅を解除し、必要な所で折り返す */
 :is(.sanskrit, .sk, .sanskrit-verse, .verse-sanskrit, .japanese, .jp, .verse-trans, .japanese-verse, .verse-japanese):not(td):not(th) {
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+/* ---- 見やすさの統一（全章共通） ---- */
+/* 注釈：小さく淡かった文字を本文に近い大きさ・濃さにそろえる */
+:is(.note-box, .note-block, .note-section) {
+  font-size: 0.98rem !important;
+  line-height: 1.9 !important;
+  color: var(--text, #2c2418) !important;
+}
+:is(.note-box, .note-block, .note-section) :is(p, li, ul, ol) {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+:is(.note-box, .note-block, .note-section) :is(p, li) + :is(p, li) { margin-top: 0.45em; }
+:is(.note-title, .note-label, .note-box-title) {
+  font-size: 0.86rem !important;
+  letter-spacing: 0.06em;
+}
+/* スートラ番号を読みやすく */
+:is(.sutra-num, .snum, .verse-label) {
+  font-size: 0.88rem !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+}
+/* 和訳側に重ねて出ていた同じ番号は隠す（位置はそろえたまま） */
+.sutra > div:nth-child(2) > .snum { visibility: hidden; }
+@media (max-width: 640px) {
+  .sutra > div:nth-child(2) > .snum { display: none; }
+  :is(.note-box, .note-block, .note-section) { font-size: 0.95rem !important; }
 }

@@ -38,9 +38,17 @@
 
   /* 1語（ハイフン連結を含む）を変換 */
   function translitWord(w) {
-    w = w.normalize("NFC").toLowerCase().replace(/[-‐]/g, "");
+    w = w.normalize("NFC").toLowerCase();
     var out = "", i = 0, pendingCons = false;
     while (i < w.length) {
+      // 複合語のハイフン：母音の後なら改行可能位置（ゼロ幅スペース）にする。
+      // 子音の後では結合文字を保つため何も入れない。
+      var hy = w.charAt(i);
+      if (hy === "-" || hy === "‐") {
+        if (!pendingCons && out) out += "\u200B";
+        i += 1;
+        continue;
+      }
       // "aï"/"aü" などは扱わない（IAST の分音記号付き母音は稀）
       var c = matchAt(w, i, CONS);
       if (c) {
