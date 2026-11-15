@@ -266,6 +266,7 @@ CSS = open(__file__.replace('render.py', 'style.css'), encoding='utf-8').read() 
 
 
 def page(title, desc, body, act=None):
+    body = re.sub(r'(—{2,}|…{2,})', r'<span class="jd">\1</span>', body)
     css = open(sys.path[0] + '/style.css', encoding='utf-8').read()
     js = open(sys.path[0] + '/ui.js', encoding='utf-8').read()
     nav = ['<a href="uttararamacarita-toc.html"%s>総覧</a>' % (' aria-current="page"' if act is None else '')]
@@ -280,7 +281,7 @@ def page(title, desc, body, act=None):
 <meta name="description" content="{esc(desc)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
 {css}
 </style>

@@ -7,7 +7,7 @@
 <meta name="description" content="バヴァブーティ『ウッタララーマチャリタ』第一幕「絵画の観覧」— Kale 版に基づくサンスクリット・日本語対訳">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
 :root {
   --ground: #f8f8f5;
@@ -23,8 +23,8 @@
   --focus: #2f4291;
   --f-iast: "Gentium Book Plus", "Noto Serif", "Times New Roman", serif;
   --f-dev: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", "Sanskrit Text", serif;
-  --f-jp: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  --f-ui: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --f-jp: "Gentium Book Plus", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-ui: "Noto Sans", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -248,6 +248,9 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
   .syn-a blockquote { grid-template-columns: 1fr; }
 }
 
+/* Japanese dashes and ellipses: keep them in the Japanese face, not the Latin one */
+.jd { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+
 </style>
 </head>
 <body>
@@ -278,7 +281,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="row">
 <div class="skt">
 <p class="vtext"><span class="dev" lang="sa-Deva">इयं कविभ्यः पूर्वेभ्यो नमोवाकं प्रशास्महे ।<br>वन्देमहि च तां वाचममृतामात्मनः कलाम् ॥ १ ॥</span><span class="iast" lang="sa-Latn">iyaṃ kavibhyaḥ pūrvebhyo namovākaṃ praśāsmahe <br>vandemahi ca tāṃ vācam amṛtām ātmanaḥ kalām <span class="vn">‖ 1 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">古の詩人たちに、この敬礼のことばを捧げる。<br>そして、かの〈ことば〉を礼拝しよう——不滅にして、至上我の一分なるものを。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">古の詩人たちに、この敬礼のことばを捧げる。<br>そして、かの〈ことば〉を礼拝しよう<span class="jd">——</span>不滅にして、至上我の一分なるものを。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">kavibhyaḥ pūrvebhyaḥ</i> — ヴァールミーキ、ヴィヤーサら古の詩聖を指す。<i class="t">ātmanaḥ kalām</i> — <i class="t">ātman</i> は単独では「至上我」の意。〈ことば〉（<i class="t">vāc</i>）はその一分（<i class="t">kalā</i>）として礼拝される。</p></aside>
 <div class="row stage">
@@ -293,7 +296,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">अलमतिविस्तरेण । अथ खलु भगवतः कालप्रियनाथस्य यात्रायामार्यमिश्रान्विज्ञापयामि — एवमत्रभवन्तो विदांकुर्वन्तु । अस्ति खलु तत्रभवान्काश्यपः श्रीकण्ठपदलाञ्छनः पदवाक्यप्रमाणज्ञो भवभूतिर्नाम जातूकर्णीपुत्रः ।</span><span class="iast" lang="sa-Latn">alam ativistareṇa. atha khalu bhagavataḥ kālapriyanāthasya yātrāyām āryamiśrān vijñāpayāmi — evam atrabhavanto vidāṃkurvantu. asti khalu tatrabhavān kāśyapaḥ śrīkaṇṭhapadalāñchanaḥ padavākyapramāṇajño bhavabhūtir nāma jātūkarṇīputraḥ.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">舞台監督</span>
-<span class="tx">長い前置きはこのくらいに。さて、尊きカーラプリヤナータ神の祭礼に際し、ご列席の皆さまに申し上げます——どうかお聞き置きください。ここにカーシヤパ氏の出で、「シュリーカンタ」の称号をもち、文法学<span class="sd">（pada）</span>・ミーマーンサー学<span class="sd">（vākya）</span>・論理学<span class="sd">（pramāṇa）</span>に通じた、ジャートゥーカルニーの子バヴァブーティなる方がおられます。</span>
+<span class="tx">長い前置きはこのくらいに。さて、尊きカーラプリヤナータ神の祭礼に際し、ご列席の皆さまに申し上げます<span class="jd">——</span>どうかお聞き置きください。ここにカーシヤパ氏の出で、「シュリーカンタ」の称号をもち、文法学<span class="sd">（pada）</span>・ミーマーンサー学<span class="sd">（vākya）</span>・論理学<span class="sd">（pramāṇa）</span>に通じた、ジャートゥーカルニーの子バヴァブーティなる方がおられます。</span>
 </div></div>
 <figure class="verse" id="v1-2">
 <figcaption><a class="vnum" href="#v1-2">I.2</a>
@@ -302,7 +305,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="row">
 <div class="skt">
 <p class="vtext"><span class="dev" lang="sa-Deva">यं ब्रह्माणमियं देवी वाग्वश्येवानुवर्तते ।<br>उत्तरं रामचरितं तत्प्रणीतं प्रयुज्यते ॥ २ ॥</span><span class="iast" lang="sa-Latn">yaṃ brahmāṇam iyaṃ devī vāg vaśyevānuvartate <br>uttaraṃ rāmacaritaṃ tat praṇītaṃ prayujyate <span class="vn">‖ 2 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">このバラモンに、ことばの女神は従順な女のように付き従う——<br>その人の著した『ラーマ後伝』<span class="sd">（ウッタラ・ラーマチャリタ）</span>を、いま上演いたします。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">このバラモンに、ことばの女神は従順な女のように付き従う<span class="jd">——</span><br>その人の著した『ラーマ後伝』<span class="sd">（ウッタラ・ラーマチャリタ）</span>を、いま上演いたします。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">brahmāṇam</i> — ここでは「バラモン」の意（Kale の本文。異読 <i class="t">brāhmaṇam</i>）。<i class="t">vaśyā</i> は「意のままになる（女）」。詩才が作者に自在に仕えることをいう。</p></aside>
 <div class="row">
@@ -341,7 +344,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">अन्यच्च —</span><span class="iast" lang="sa-Latn">anyac ca —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">役者</span>
-<span class="tx">それに——</span>
+<span class="tx">それに<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-3">
 <figcaption><a class="vnum" href="#v1-3">I.3</a>
@@ -358,7 +361,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">वैदेशिकोऽस्मीति पृच्छामि — कः पुनरसौ जामाता ।</span><span class="iast" lang="sa-Latn">vaideśiko 'smīti pṛcchāmi — kaḥ punar asau jāmātā.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">舞台監督</span>
-<span class="tx">私はよそ者ということで尋ねるが——その婿殿とはどなたかね。</span>
+<span class="tx">私はよそ者ということで尋ねるが<span class="jd">——</span>その婿殿とはどなたかね。</span>
 </div></div>
 <figure class="verse" id="v1-4">
 <figcaption><a class="vnum" href="#v1-4">I.4</a>
@@ -444,7 +447,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">सर्वथा ऋषयो देवताश्च श्रेयो विधास्यन्ति । <span class="sd">(परिक्रम्य)</span> भो भोः क्वेदानीं महाराजः । <span class="sd">(आकर्ण्य)</span> एवं जनाः कथयन्ति —</span><span class="iast" lang="sa-Latn">sarvathā ṛṣayo devatāś ca śreyo vidhāsyanti. <span class="sd">(parikramya)</span> bho bhoḥ, kvedānīṃ mahārājaḥ. <span class="sd">(ākarṇya)</span> evaṃ janāḥ kathayanti —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">役者</span>
-<span class="tx">ともかく仙人方と神々がよいようにしてくださいましょう。<span class="sd">（歩きまわって）</span>もしもし、大王はいまどちらに。<span class="sd">（耳を傾けて）</span>人々はこう言っています——</span>
+<span class="tx">ともかく仙人方と神々がよいようにしてくださいましょう。<span class="sd">（歩きまわって）</span>もしもし、大王はいまどちらに。<span class="sd">（耳を傾けて）</span>人々はこう言っています<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-7">
 <figcaption><a class="vnum" href="#v1-7">I.7</a>
@@ -513,7 +516,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">रामभद्र — <span class="sd">(इत्यर्धोक्ते साशङ्कम्)</span> महाराज —</span><span class="iast" lang="sa-Latn">rāmabhadra — <span class="sd">(ity ardhokte sāśaṅkam)</span> mahārāja —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">侍従</span>
-<span class="tx">ラーマ様——<span class="sd">（言いかけて、はっとして）</span>大王さま——</span>
+<span class="tx">ラーマ様<span class="jd">——</span><span class="sd">（言いかけて、はっとして）</span>大王さま<span class="jd">——</span></span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -599,7 +602,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(उपविश्य)</span> अथ किम् । देवि भगवान्वसिष्ठस्त्वामिदमाह —</span><span class="iast" lang="sa-Latn"><span class="sd">(upaviśya)</span> atha kim. devi, bhagavān vasiṣṭhas tvām idam āha —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">アシュターヴァクラ</span>
-<span class="tx"><span class="sd">（腰をおろして）</span>もちろんですとも。妃よ、ヴァシシュタ尊者はあなたにこう仰せです——</span>
+<span class="tx"><span class="sd">（腰をおろして）</span>もちろんですとも。妃よ、ヴァシシュタ尊者はあなたにこう仰せです<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-9">
 <figcaption><a class="vnum" href="#v1-9">I.9</a>
@@ -608,7 +611,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="row">
 <div class="skt">
 <p class="vtext"><span class="dev" lang="sa-Deva">विश्वंभरा भगवती भवतीमसूत राजा प्रजापतिसमो जनकः पिता ते ।<br>तेषां वधूस्त्वमसि नन्दिनि पार्थिवानां येषां कुलेषु सविता च गुरुर्वयं च ॥ ९ ॥</span><span class="iast" lang="sa-Latn">viśvaṃbharā bhagavatī bhavatīm asūta<br>rājā prajāpatisamo janakaḥ pitā te<br><br>teṣāṃ vadhūs tvam asi nandini pārthivānāṃ<br>yeṣāṃ kuleṣu savitā ca gurur vayaṃ ca <span class="vn">‖ 9 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">万物を支える尊き大地がそなたを生み、<br>プラジャーパティにも等しいジャナカ王がそなたの父。<br>娘よ、そなたは王たちの家の嫁である——<br>太陽神と、そしてわれらとを師とする一族の。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">万物を支える尊き大地がそなたを生み、<br>プラジャーパティにも等しいジャナカ王がそなたの父。<br>娘よ、そなたは王たちの家の嫁である<span class="jd">——</span><br>太陽神と、そしてわれらとを師とする一族の。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">nandini</i> — 「喜びを与える娘よ」の呼びかけ。<i class="t">savitā ca gurur vayaṃ ca</i> — ラグ家は太陽神の裔であり、ヴァシシュタが家の師（<i class="t">kulaguru</i>）である。</p></aside>
 <div class="row">
@@ -637,14 +640,14 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <p class="vtext"><span class="dev" lang="sa-Deva">लौकिकानां हि साधूनामर्थं वागनुवर्तते ।<br>ऋषीणां पुनराद्यानां वाचमर्थोऽनुधावति ॥ १० ॥</span><span class="iast" lang="sa-Latn">laukikānāṃ hi sādhūnām arthaṃ vāg anuvartate <br>ṛṣīṇāṃ punar ādyānāṃ vācam artho 'nudhāvati <span class="vn">‖ 10 ‖</span></span></p>
 </div><div class="jp" lang="ja"><p class="vtext">世の善き人々にあっては、ことばが事実の後に従う。<br>だが太古の聖仙たちにあっては、事実がことばの後を追うのだ。</p></div>
 </div></figure>
-<aside class="note"><span class="note-label">Kale 注</span><p>太古の聖仙のことばは苦行の力によって、まだ存在しない事実をも生みだす——すなわち彼らの祝福は必ず成就する、の意。</p></aside>
+<aside class="note"><span class="note-label">Kale 注</span><p>太古の聖仙のことばは苦行の力によって、まだ存在しない事実をも生みだす<span class="jd">——</span>すなわち彼らの祝福は必ず成就する、の意。</p></aside>
 <div class="row">
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">अष्टावक्रः</span><span class="iast" lang="sa-Latn">Aṣṭāvakraḥ</span></span>
 <span class="tx"><span class="dev" lang="sa-Deva">इदं च भगवत्यारुन्धत्या देवीभिः शान्तया च भूयो भूयः संदिष्टम् — यः कश्चिद्गर्भदोहदोऽस्या भवति सोऽवश्यमचिरान्मानयितव्य इति ।</span><span class="iast" lang="sa-Latn">idaṃ ca bhagavatyārundhatyā devībhiḥ śāntayā ca bhūyo bhūyaḥ saṃdiṣṭam — yaḥ kaścid garbhadohado 'syā bhavati so 'vaśyam acirān mānayitavya iti.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">アシュターヴァクラ</span>
-<span class="tx">また、尊きアルンダティー様、后がた、シャーンター様からは、くれぐれもと次の言伝てがあります——「妃に懐妊の望み<span class="sd">（ドーハダ）</span>が何か起きたなら、必ずすぐに叶えて差しあげるように」と。</span>
+<span class="tx">また、尊きアルンダティー様、后がた、シャーンター様からは、くれぐれもと次の言伝てがあります<span class="jd">——</span>「妃に懐妊の望み<span class="sd">（ドーハダ）</span>が何か起きたなら、必ずすぐに叶えて差しあげるように」と。</span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -660,7 +663,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">ननान्दृपतिना च देव्याः संदिष्टमृष्यशृङ्गेण — वत्से कठोरगर्भेति नानीतासि । वत्सोऽपि रामभद्रस्त्वद्विनोदार्थमेव स्थापितः । तत्पुत्रपूर्णोत्सङ्गामायुष्मतीं द्रक्ष्याम इति ।</span><span class="iast" lang="sa-Latn">nanāndṛpatinā ca devyāḥ saṃdiṣṭam ṛṣyaśṛṅgeṇa — vatse, kaṭhoragarbheti nānītāsi. vatso 'pi rāmabhadras tvadvinodārtham eva sthāpitaḥ. tat putrapūrṇotsaṅgām āyuṣmatīṃ drakṣyāma iti.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">アシュターヴァクラ</span>
-<span class="tx">また、義姉の夫君リシュヤシュリンガ様から妃へ——「娘よ、臨月ゆえにそなたを連れて来なかった。ラーマもそなたを慰めるためにこそ残したのだ。子を膝に抱いた健やかなそなたに会えるのを楽しみにしている」と。</span>
+<span class="tx">また、義姉の夫君リシュヤシュリンガ様から妃へ<span class="jd">——</span>「娘よ、臨月ゆえにそなたを連れて来なかった。ラーマもそなたを慰めるためにこそ残したのだ。子を膝に抱いた健やかなそなたに会えるのを楽しみにしている」と。</span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -676,7 +679,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">श्रूयताम् —</span><span class="iast" lang="sa-Latn">śrūyatām —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">アシュターヴァクラ</span>
-<span class="tx">お聞きください——</span>
+<span class="tx">お聞きください<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-11">
 <figcaption><a class="vnum" href="#v1-11">I.11</a>
@@ -686,7 +689,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">अष्टावक्रः</span><span class="iast" lang="sa-Latn">Aṣṭāvakraḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">जामातृयज्ञेन वयं निरुद्धास्त्वं बाल एवासि नवं च राज्यम् ।<br>युक्तः प्रजानामनुरञ्जने स्यास्तस्माद्यशो यत्परमं धनं वः ॥ ११ ॥</span><span class="iast" lang="sa-Latn">jāmātṛyajñena vayaṃ niruddhās<br>tvaṃ bāla evāsi navaṃ ca rājyam<br><br>yuktaḥ prajānām anurañjane syās<br>tasmād yaśo yat paramaṃ dhanaṃ vaḥ <span class="vn">‖ 11 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">われらは婿殿の祭祀に引きとめられている。<br>そなたはまだ若く、王位も新しい。<br>民の心をつかむことに努めよ——<br>そこから生まれる名声こそ、そなたらの家の至上の宝なのだから。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">われらは婿殿の祭祀に引きとめられている。<br>そなたはまだ若く、王位も新しい。<br>民の心をつかむことに努めよ<span class="jd">——</span><br>そこから生まれる名声こそ、そなたらの家の至上の宝なのだから。</p></div>
 </div></figure>
 <div class="row">
 <div class="skt">
@@ -704,7 +707,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">स्नेहं दयां च सौख्यं च यदि वा जानकीमपि ।<br>आराधनाय लोकस्य मुञ्चतो नास्ति मे व्यथा ॥ १२ ॥</span><span class="iast" lang="sa-Latn">snehaṃ dayāṃ ca saukhyaṃ ca yadi vā jānakīm api <br>ārādhanāya lokasya muñcato nāsti me vyathā <span class="vn">‖ 12 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">情愛も、憐れみも、安楽も、あるいはジャーナキーさえも——<br>民を満足させるためならば、手放すことに私は痛みを覚えない。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">情愛も、憐れみも、安楽も、あるいはジャーナキーさえも<span class="jd">——</span><br>民を満足させるためならば、手放すことに私は痛みを覚えない。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>この一偈が劇全体の悲劇を予告する（<i class="t">patākāsthānaka</i>）。<i class="t">jānakīm api</i> の <i class="t">api</i> がもっとも重い。この誓いが、まさにこの幕の終わりで現実となる。</p></aside>
 <div class="row">
@@ -852,7 +855,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">ब्रह्मादयो ब्रह्महिताय तप्त्वा परःसहस्राः शरदस्तपांसि ।<br>एतान्यपश्यन्गुरवः पुराणाः स्वान्येव तेजांसि तपोमयानि ॥ १५ ॥</span><span class="iast" lang="sa-Latn">brahmādayo brahmahitāya taptvā<br>paraḥsahasrāḥ śaradas tapāṃsi<br><br>etāny apaśyan guravaḥ purāṇāḥ<br>svāny eva tejāṃsi tapomayāni <span class="vn">‖ 15 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">ブラフマーをはじめ太古の師たちが、ヴェーダ<span class="sd">（brahman）</span>の守りのため<br>幾千年にもわたって苦行を積み、<br>そこに見いだしたのがこれら——<br>苦行から成る、彼ら自身の光輝なのだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">ブラフマーをはじめ太古の師たちが、ヴェーダ<span class="sd">（brahman）</span>の守りのため<br>幾千年にもわたって苦行を積み、<br>そこに見いだしたのがこれら<span class="jd">——</span><br>苦行から成る、彼ら自身の光輝なのだ。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">brahmahitāya</i> — 「ヴェーダ（またはバラモン）の利益のために」。<i class="t">paraḥsahasrāḥ śaradaḥ</i> — 「千を超える年月」。神器はラーマに仕え、のちにその子らに受け継がれる（第六幕の伏線）。</p></aside>
 <div class="row">
@@ -893,7 +896,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">अहो दलन्नवनीलोत्पलश्यामलस्निग्धमसृणमांसलेन देहसौभाग्येन विस्मयस्तिमिततातदृश्यमानसौम्यसुन्दरश्रीरनादरखण्डितशंकरशरासनः शिखण्डमुग्धमुखमण्डल आर्यपुत्र आलिखितः ।</span><span class="iast" lang="sa-Latn">aho, dalannavanīlotpalaśyāmalasnigdhamasṛṇamāṃsalena dehasaubhāgyena vismayastimitatātadṛśyamānasaumyasundaraśrīr anādarakhaṇḍitaśaṃkaraśarāsanaḥ śikhaṇḍamugdhamukhamaṇḍala āryaputra ālikhitaḥ.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">シーター</span>
-<span class="tx">まあ、咲きかけた青蓮のように黒く艶やかで、なめらかに肉づいた美しいお身体——驚きに目を見張る父の前で、穏やかで麗しい姿を見せ、シヴァの弓を事もなげに折り、巻き髪に縁どられたあどけない顔のあなたが描かれているわ。</span>
+<span class="tx">まあ、咲きかけた青蓮のように黒く艶やかで、なめらかに肉づいた美しいお身体<span class="jd">——</span>驚きに目を見張る父の前で、穏やかで麗しい姿を見せ、シヴァの弓を事もなげに折り、巻き髪に縁どられたあどけない顔のあなたが描かれているわ。</span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -929,7 +932,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">जनकानां रघूणां च संबन्धः कस्य न प्रियः ।<br>यत्र दाता ग्रहीता च स्वयं कुशिकनन्दनः ॥ १७ ॥</span><span class="iast" lang="sa-Latn">janakānāṃ raghūṇāṃ ca saṃbandhaḥ kasya na priyaḥ <br>yatra dātā grahītā ca svayaṃ kuśikanandanaḥ <span class="vn">‖ 17 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">ジャナカ家とラグ家との縁組を、誰が喜ばずにいよう——<br>嫁を与える者も受ける者も、クシカの末裔<span class="sd">（ヴィシュヴァーミトラ）</span>その人なのだから。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">ジャナカ家とラグ家との縁組を、誰が喜ばずにいよう<span class="jd">——</span><br>嫁を与える者も受ける者も、クシカの末裔<span class="sd">（ヴィシュヴァーミトラ）</span>その人なのだから。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>ヴィシュヴァーミトラが両家の仲立ちとして、与える側・受ける側の双方を代表したことをいう。</p></aside>
 <div class="row">
@@ -938,7 +941,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">एते खलु तत्कालकृतगोदानमङ्गलाश्चत्वारो भ्रातरो विवाहदीक्षिता यूयम् । अहो जानामि तस्मिन्नेव प्रदेशे तस्मिन्नेव काले वर्तामि ।</span><span class="iast" lang="sa-Latn">ete khalu tatkālakṛtagodānamaṅgalāś catvāro bhrātaro vivāhadīkṣitā yūyam. aho, jānāmi tasminn eva pradeśe tasminn eva kāle vartāmi.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">シーター</span>
-<span class="tx">ここにいるのは、ちょうどその頃に剃髪の儀<span class="sd">（ゴーダーナ）</span>を済ませ、婚礼の潔斎に入った兄弟四人——あなた方ね。ああ、まるであの場所、あの時に、私がいま居るような気がする。</span>
+<span class="tx">ここにいるのは、ちょうどその頃に剃髪の儀<span class="sd">（ゴーダーナ）</span>を済ませ、婚礼の潔斎に入った兄弟四人<span class="jd">——</span>あなた方ね。ああ、まるであの場所、あの時に、私がいま居るような気がする。</span>
 </div></div>
 <figure class="verse" id="v1-18">
 <figcaption><a class="vnum" href="#v1-18">I.18</a>
@@ -948,7 +951,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">समयः स वर्तत इवैष यत्र मां समनन्दयत्सुमुखि गौतमार्पितः ।<br>अयमागृहीतकमनीयकङ्कणस्तव मूर्तिमानिव महोत्सवः करः ॥ १८ ॥</span><span class="iast" lang="sa-Latn">samayaḥ sa vartata ivaiṣa yatra māṃ<br>samanandayat sumukhi gautamārpitaḥ<br><br>ayam āgṛhītakamanīyakaṅkaṇas<br>tava mūrtimān iva mahotsavaḥ karaḥ <span class="vn">‖ 18 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">あの時がいまここにあるかのようだ、美しい人よ——<br>ガウタマの子<span class="sd">（シャターナンダ）</span>の手で私に委ねられ、<br>愛らしい婚礼の紐<span class="sd">（カンカナ）</span>を結んだそなたのこの手が、<br>祝祭そのものが形をとったかのように、私を歓ばせたあの時が。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">あの時がいまここにあるかのようだ、美しい人よ<span class="jd">——</span><br>ガウタマの子<span class="sd">（シャターナンダ）</span>の手で私に委ねられ、<br>愛らしい婚礼の紐<span class="sd">（カンカナ）</span>を結んだそなたのこの手が、<br>祝祭そのものが形をとったかのように、私を歓ばせたあの時が。</p></div>
 </div></figure>
 <div class="row">
 <div class="skt">
@@ -996,7 +999,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">आर्ये पश्य पश्य । अयमसावार्येण — <span class="sd">(इत्यर्धोक्ते)</span></span><span class="iast" lang="sa-Latn">ārye, paśya paśya. ayam asāv āryeṇa — <span class="sd">(ity ardhokte)</span></span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラクシュマナ</span>
-<span class="tx">義姉上、ご覧ください。これが兄上によって——<span class="sd">（言いかけたところで）</span></span>
+<span class="tx">義姉上、ご覧ください。これが兄上によって<span class="jd">——</span><span class="sd">（言いかけたところで）</span></span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -1039,7 +1042,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">जीवत्सु तातपादेषु नवे दारपरिग्रहे ।<br>मातृभिश्चिन्त्यमानानां ते हि नो दिवसा गताः ॥ १९ ॥</span><span class="iast" lang="sa-Latn">jīvatsu tātapādeṣu nave dāraparigrahe <br>mātṛbhiś cintyamānānāṃ te hi no divasā gatāḥ <span class="vn">‖ 19 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">父上がまだ御存命で、妻を迎えたばかり、<br>母上たちに気づかわれていた——あの日々は過ぎ去ってしまった。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">父上がまだ御存命で、妻を迎えたばかり、<br>母上たちに気づかわれていた<span class="jd">——</span>あの日々は過ぎ去ってしまった。</p></div>
 </div></figure>
 <div class="row">
 <div class="skt">
@@ -1047,7 +1050,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">इयमपि तदा जानकी —</span><span class="iast" lang="sa-Latn">iyam api tadā jānakī —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">そしてあの頃のジャーナキーは——</span>
+<span class="tx">そしてあの頃のジャーナキーは<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-20">
 <figcaption><a class="vnum" href="#v1-20">I.20</a>
@@ -1066,7 +1069,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">एषा मन्थरा —</span><span class="iast" lang="sa-Latn">eṣā mantharā —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラクシュマナ</span>
-<span class="tx">これがマンタラー——</span>
+<span class="tx">これがマンタラー<span class="jd">——</span></span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -1178,7 +1181,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">अयि कथं विस्मर्यते —</span><span class="iast" lang="sa-Latn">ayi, kathaṃ vismaryate —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">どうして忘れられよう——</span>
+<span class="tx">どうして忘れられよう<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-24">
 <figcaption><a class="vnum" href="#v1-24">I.24</a>
@@ -1188,7 +1191,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">अलसललितमुग्धान्यध्वसंजातखेदादशिथिलपरिरम्भैर्दत्तसंवाहनानि ।<br>परिमृदितमृणालीदुर्बलान्यङ्गकानि त्वमुरसि मम कृत्वा यत्र निद्रामवाप्ता ॥ २४ ॥</span><span class="iast" lang="sa-Latn">alasalalitamugdhāny adhvasaṃjātakhedād<br>aśithilaparirambhair dattasaṃvāhanāni<br><br>parimṛditamṛṇālīdurbalāny aṅgakāni<br>tvam urasi mama kṛtvā yatra nidrām avāptā <span class="vn">‖ 24 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">旅の疲れにけだるく、しなやかで愛らしい手足を——<br>私が固く抱きしめてさすってやった、<br>揉みしだかれた蓮の茎のように力の抜けたその手足を——<br>私の胸にあずけて、そなたが眠りに落ちたのがここだった。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">旅の疲れにけだるく、しなやかで愛らしい手足を<span class="jd">——</span><br>私が固く抱きしめてさすってやった、<br>揉みしだかれた蓮の茎のように力の抜けたその手足を<span class="jd">——</span><br>私の胸にあずけて、そなたが眠りに落ちたのがここだった。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>ここでバヴァブーティは情愛の描写においてカーリダーサにもっとも近づくが、それは後の悲愴（<i class="t">karuṇa</i>）を際立たせるためである。</p></aside>
 <div class="row">
@@ -1215,7 +1218,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">एतानि तानि गिरिनिर्झरिणीतटेषु वैखानसाश्रिततरूणि तपोवनानि ।<br>येष्वातिथेयपरमाः शमिनो भजन्ते नीवारमुष्टिपचना गृहिणो गृहाणि ॥ २५ ॥</span><span class="iast" lang="sa-Latn">etāni tāni girinirjhariṇītaṭeṣu<br>vaikhānasāśritatarūṇi tapovanāni<br><br>yeṣv ātitheyaparamāḥ śamino bhajante<br>nīvāramuṣṭipacanā gṛhiṇo gṛhāṇi <span class="vn">‖ 25 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">これがあの苦行林だ——山の渓流の岸辺に、<br>木々の下にヴァイカーナサの行者たちが住まい、<br>そこでは客のもてなしを第一とし、心静かな家住者たちが、<br>ひと握りの野生の米を炊いて、庵を営んでいる。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">これがあの苦行林だ<span class="jd">——</span>山の渓流の岸辺に、<br>木々の下にヴァイカーナサの行者たちが住まい、<br>そこでは客のもてなしを第一とし、心静かな家住者たちが、<br>ひと握りの野生の米を炊いて、庵を営んでいる。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">vaikhānasa</i> — 森に住む苦行者の一派。<i class="t">gṛhiṇaḥ</i> — 森に住みつつも家住期の務め（とりわけ客人歓待）を守る者たち。</p></aside>
 <div class="row">
@@ -1234,7 +1237,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">स्मरसि सुतनु तस्मिन्पर्वते लक्ष्मणेन प्रतिविहितसपर्यासुस्थयोस्तान्यहानि ।<br>स्मरसि सरसनीरां तत्र गोदावरीं वा स्मरसि च तदुपान्तेष्वावयोर्वर्तनानि ॥ २६ ॥</span><span class="iast" lang="sa-Latn">smarasi sutanu tasmin parvate lakṣmaṇena<br>prativihitasaparyāsusthayos tāny ahāni<br><br>smarasi sarasanīrāṃ tatra godāvarīṃ vā<br>smarasi ca tadupānteṣv āvayor vartanāni <span class="vn">‖ 26 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">覚えているか、美しい人よ——あの山で、ラクシュマナの心尽くしのもてなしを受けて、<br>われら二人が安らかに過ごしたあの日々を。<br>覚えているか、あそこを流れる甘い水のゴーダーヴァリーを。<br>そして覚えているか、その岸辺でのわれらの暮らしを。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">覚えているか、美しい人よ<span class="jd">——</span>あの山で、ラクシュマナの心尽くしのもてなしを受けて、<br>われら二人が安らかに過ごしたあの日々を。<br>覚えているか、あそこを流れる甘い水のゴーダーヴァリーを。<br>そして覚えているか、その岸辺でのわれらの暮らしを。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>第2パーダ、OCR <i class="t">prativihitasaparyāstasthyos</i> は <i class="t">prativihitasaparyāsusthayoḥ</i>（「もてなしを受けて安らかな二人の」）と解する（韻律 mālinī）。</p></aside>
 <div class="row">
@@ -1243,7 +1246,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">किं च —</span><span class="iast" lang="sa-Latn">kiṃ ca —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">それに——</span>
+<span class="tx">それに<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-27">
 <figcaption><a class="vnum" href="#v1-27">I.27</a>
@@ -1253,7 +1256,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">किमपि किमपि मन्दं मन्दमासत्तियोगादविरलितकपोलं जल्पतोरक्रमेण ।<br>अशिथिलपरिरम्भव्यापृतैकैकदोष्णोरविदितगतयामा रात्रिरेव व्यरंसीत् ॥ २७ ॥</span><span class="iast" lang="sa-Latn">kim api kim api mandaṃ mandam āsattiyogād<br>aviralitakapolaṃ jalpator akrameṇa<br><br>aśithilaparirambhavyāpṛtaikaikadoṣṇor<br>aviditagatayāmā rātrir eva vyaraṃsīt <span class="vn">‖ 27 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">身を寄せあい、頬と頬をつけて、<br>とりとめもなく何やかやと、そっと、そっと語りあううちに——<br>互いに片腕でかたく抱きあったまま——<br>更けてゆく時も知らぬまま、夜のほうが先に明けてしまったのだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">身を寄せあい、頬と頬をつけて、<br>とりとめもなく何やかやと、そっと、そっと語りあううちに<span class="jd">——</span><br>互いに片腕でかたく抱きあったまま<span class="jd">——</span><br>更けてゆく時も知らぬまま、夜のほうが先に明けてしまったのだ。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>優勢なラサは <i class="t">saṃbhogaśṛṅgāra</i>（結ばれた愛）。<i class="t">rātrir eva vyaraṃsīt</i> —「夜だけが終わった（語らいは終わらなかった）」。伝承では詩人がはじめ <i class="t">rātrir evaṃ</i> と書き、カーリダーサの助言で <i class="t">eva</i> と改めたという。</p></aside>
 <div class="row">
@@ -1270,7 +1273,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">हा आर्यपुत्र एतावत्ते दर्शनम् ।</span><span class="iast" lang="sa-Latn">hā āryaputra, etāvat te darśanam.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">シーター</span>
-<span class="tx">ああ、あなた、これがあなたにお会いできた最後——</span>
+<span class="tx">ああ、あなた、これがあなたにお会いできた最後<span class="jd">——</span></span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -1416,7 +1419,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">एतस्मिन्मदकलमल्लिकाक्षपक्ष व्याधूतस्फुरदुरुदण्डपुण्डरीकाः ।<br>बाष्पाम्भःपरिपतनोद्गमान्तराले संदृष्टाः कुवलयिनो भुवो विभागाः ॥ ३१ ॥</span><span class="iast" lang="sa-Latn">etasmin madakalamallikākṣapakṣa-<br>vyādhūtasphuradurudaṇḍapuṇḍarīkāḥ<br><br>bāṣpāmbhaḥparipatanodgamāntarāle<br>saṃdṛṣṭāḥ kuvalayino bhuvo vibhāgāḥ <span class="vn">‖ 31 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">この湖のほとりで——恋に鳴くマッリカークシャ鳥<span class="sd">（白鳥の一種）</span>の翼にあおられて、<br>太い茎の白蓮が揺れ動いていた——<br>涙がこぼれ落ちてはまたあふれる、その束の間に、<br>青蓮の咲くあたりのたたずまいが、私の目に映ったのだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">この湖のほとりで<span class="jd">——</span>恋に鳴くマッリカークシャ鳥<span class="sd">（白鳥の一種）</span>の翼にあおられて、<br>太い茎の白蓮が揺れ動いていた<span class="jd">——</span><br>涙がこぼれ落ちてはまたあふれる、その束の間に、<br>青蓮の咲くあたりのたたずまいが、私の目に映ったのだ。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>涙で視界がさえぎられ、そのとぎれる合間にしか景色を見られなかったことをいう（<i class="t">paripatanodgamāntarāle</i>）。注は、昼に開く白蓮は白鳥の羽ばたきで揺れるが、青蓮（<i class="t">kuvalaya</i>）はただ在るだけ、と詩の細部を説く。</p></aside>
 <div class="row">
@@ -1443,7 +1446,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">दिष्ट्या सोऽयं महाबाहुरञ्जनानन्दवर्धनः ।<br>यस्य वीर्येण कृतिनो वयं च भुवनानि च ॥ ३२ ॥</span><span class="iast" lang="sa-Latn">diṣṭyā so 'yaṃ mahābāhur añjanānandavardhanaḥ <br>yasya vīryeṇa kṛtino vayaṃ ca bhuvanāni ca <span class="vn">‖ 32 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">幸いなるかな、かの腕たくましき者、アンジャナーの喜びを増す子——<br>その勇力によってこそ、われらも世界も目的を遂げたのだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">幸いなるかな、かの腕たくましき者、アンジャナーの喜びを増す子<span class="jd">——</span><br>その勇力によってこそ、われらも世界も目的を遂げたのだ。</p></div>
 </div></figure>
 <div class="row">
 <div class="skt">
@@ -1460,7 +1463,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="row">
 <div class="skt">
 <p class="vtext"><span class="dev" lang="sa-Deva"><span class="vsp">लक्ष्मणः</span>सोऽयं शैलः ककुभसुरभिर्माल्यवान्नाम यस्मिन्नीलः स्निग्धः श्रयति शिखरं नूतनस्तोयवाहः ।<br><span class="vsp">रामः</span>वत्सैतस्माद्विरम विरमातः परं न क्षमोऽस्मि प्रत्यावृत्तः पुनरिव स मे जानकीविप्रयोगः ॥ ३३ ॥</span><span class="iast" lang="sa-Latn"><span class="vsp">Lakṣmaṇaḥ</span>so 'yaṃ śailaḥ kakubhasurabhir mālyavān nāma yasmin<br>nīlaḥ snigdhaḥ śrayati śikharaṃ nūtanas toyavāhaḥ<br><br><span class="vsp">Rāmaḥ</span>vatsaitasmād virama viramātaḥ paraṃ na kṣamo 'smi<br>pratyāvṛttaḥ punar iva sa me jānakīviprayogaḥ <span class="vn">‖ 33 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">{ラクシュマナ} これがカクバの花に香るマーリヤヴァット山——その峰には、<br>青く艶やかな雨季の初めての雲がかかっています。<br>{ラーマ} 弟よ、やめてくれ、もうやめてくれ。これ以上は耐えられない。<br>あのジャーナキーとの別離が、またも戻ってきたかのようだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">{ラクシュマナ} これがカクバの花に香るマーリヤヴァット山<span class="jd">——</span>その峰には、<br>青く艶やかな雨季の初めての雲がかかっています。<br>{ラーマ} 弟よ、やめてくれ、もうやめてくれ。これ以上は耐えられない。<br>あのジャーナキーとの別離が、またも戻ってきたかのようだ。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>一偈を二人で分けて語る（前半ラクシュマナ、後半ラーマ）。マーリヤヴァット山は、シーターを失ったラーマが雨季を過ごした場所。</p></aside>
 <div class="row">
@@ -1584,14 +1587,14 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">जीवयन्निव ससाध्वसश्रम स्वेदबिन्दुरधिकण्ठमर्प्यताम् ।<br>बाहुरैन्दवमयूखचुम्बित स्यन्दिचन्द्रमणिहारविभ्रमः ॥ ३४ ॥</span><span class="iast" lang="sa-Latn">jīvayann iva sasādhvasaśrama-<br>svedabindur adhikaṇṭham arpyatām<br><br>bāhur aindavamayūkhacumbita-<br>syandicandramaṇihāravibhramaḥ <span class="vn">‖ 34 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">私を生き返らせるかのように、ときめきと疲れの汗の玉を浮かべた<br>そなたの腕を、私の首にかけておくれ——<br>月の光に口づけされて雫をしたたらせる<br>月長石の首飾りのような、その腕を。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">私を生き返らせるかのように、ときめきと疲れの汗の玉を浮かべた<br>そなたの腕を、私の首にかけておくれ<span class="jd">——</span><br>月の光に口づけされて雫をしたたらせる<br>月長石の首飾りのような、その腕を。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>月長石（<i class="t">candramaṇi</i>）は月光を受けると水をしたたらせると考えられた。汗ばんだ冷たい腕をそれに喩える。</p></aside>
 <div class="row">
 <div class="skt">
 <span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(तथा कृत्वा सानन्दम्)</span> प्रिये किमेतत् —</span><span class="iast" lang="sa-Latn"><span class="sd">(tathā kṛtvā sānandam)</span> priye, kim etat —</span></span>
 </div><div class="jp" lang="ja">
-<span class="tx"><span class="sd">（シーターがそうすると、喜びに満ちて）</span>愛しい人よ、これは何だろう——</span>
+<span class="tx"><span class="sd">（シーターがそうすると、喜びに満ちて）</span>愛しい人よ、これは何だろう<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-35">
 <figcaption><a class="vnum" href="#v1-35">I.35</a>
@@ -1601,7 +1604,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">विनिश्चेतुं शक्यो न सुखमिति वा दुःखमिति वा प्रमोहो निद्रा वा किमु विषविसर्पः किमु मदः ।<br>तव स्पर्शे स्पर्शे मम हि परिमूढेन्द्रियगणो विकारश्चैतन्यं भ्रमयति च संमीलयति च ॥ ३५ ॥</span><span class="iast" lang="sa-Latn">viniścetuṃ śakyo na sukham iti vā duḥkham iti vā<br>pramoho nidrā vā kim u viṣavisarpaḥ kim u madaḥ<br><br>tava sparśe sparśe mama hi parimūḍhendriyagaṇo<br>vikāraś caitanyaṃ bhramayati ca saṃmīlayati ca <span class="vn">‖ 35 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">喜びとも苦しみとも見定めがたい。<br>失神か、眠りか、毒のまわりか、酔いか——<br>そなたに触れるたびに私の感官はすべて痺れ、<br>ある変容が意識を揺さぶり、また閉ざしてしまうのだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">喜びとも苦しみとも見定めがたい。<br>失神か、眠りか、毒のまわりか、酔いか<span class="jd">——</span><br>そなたに触れるたびに私の感官はすべて痺れ、<br>ある変容が意識を揺さぶり、また閉ざしてしまうのだ。</p></div>
 </div></figure>
 <div class="row">
 <div class="skt">
@@ -1619,7 +1622,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">म्लानस्य जीवकुसुमस्य विकासनानि संतर्पणानि सकलेन्द्रियमोहनानि ।<br>एतानि ते सुवचनानि सरोरुहाक्षि कर्णामृतानि मनसश्च रसायनानि ॥ ३६ ॥</span><span class="iast" lang="sa-Latn">mlānasya jīvakusumasya vikāsanāni<br>saṃtarpaṇāni sakalendriyamohanāni<br><br>etāni te suvacanāni saroruhākṣi<br>karṇāmṛtāni manasaś ca rasāyanāni <span class="vn">‖ 36 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">萎れた命の花を咲かせ、<br>すべての感官を満たし、とろかす——<br>蓮の眼の人よ、そなたのこの優しいことばは、<br>耳には甘露、心には不老の妙薬だ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">萎れた命の花を咲かせ、<br>すべての感官を満たし、とろかす<span class="jd">——</span><br>蓮の眼の人よ、そなたのこの優しいことばは、<br>耳には甘露、心には不老の妙薬だ。</p></div>
 </div></figure>
 <div class="row">
 <div class="skt">
@@ -1645,7 +1648,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">आविवाहसमयाद्गृहे वने शैशवे तदनु यौवने पुनः ।<br>स्वापहेतुरनुपाश्रितोऽन्यया रामबाहुरुपधानमेष ते ॥ ३७ ॥</span><span class="iast" lang="sa-Latn">āvivāhasamayād gṛhe vane<br>śaiśave tadanu yauvane punaḥ<br><br>svāpahetur anupāśrito 'nyayā<br>rāmabāhur upadhānam eṣa te <span class="vn">‖ 37 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">婚礼の時から——家でも森でも、<br>幼い日にも、やがて若い日にも——<br>そなたの眠りのよすがとして、ほかの女の頼ったことのない<br>このラーマの腕こそが、そなたの枕なのだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">婚礼の時から<span class="jd">——</span>家でも森でも、<br>幼い日にも、やがて若い日にも<span class="jd">——</span><br>そなたの眠りのよすがとして、ほかの女の頼ったことのない<br>このラーマの腕こそが、そなたの枕なのだ。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">anupāśrito 'nyayā</i> —「他の女に頼られたことのない」。ラーマの一妻への貞節（<i class="t">ekapatnīvrata</i>）を示す。第三幕でこの句が回想される。</p></aside>
 <div class="row">
@@ -1672,7 +1675,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">इयं गेहे लक्ष्मीरियममृतवर्तिर्नयनयोरसावस्याः स्पर्शो वपुषि बहुलश्चन्दनरसः ।<br>अयं बाहुः कण्ठे शिशिरमसृणो मौक्तिकसरः किमस्या न प्रेयो यदि परमसह्यस्तु विरहः ॥ ३८ ॥</span><span class="iast" lang="sa-Latn">iyaṃ gehe lakṣmīr iyam amṛtavartir nayanayor<br>asāv asyāḥ sparśo vapuṣi bahulaś candanarasaḥ<br><br>ayaṃ bāhuḥ kaṇṭhe śiśiramasṛṇo mauktikasaraḥ<br>kim asyā na preyo yadi param asahyas tu virahaḥ <span class="vn">‖ 38 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">この人は家にあっては幸運の女神ラクシュミー、両の眼には甘露の目薬、<br>その肌ざわりは身に塗るたっぷりの白檀の香油、<br>首にかかるこの腕は冷たくなめらかな真珠の首飾り——<br>この人のどこが愛しくないことがあろう。ただ、この人との別れだけが耐えがたい。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">この人は家にあっては幸運の女神ラクシュミー、両の眼には甘露の目薬、<br>その肌ざわりは身に塗るたっぷりの白檀の香油、<br>首にかかるこの腕は冷たくなめらかな真珠の首飾り<span class="jd">——</span><br>この人のどこが愛しくないことがあろう。ただ、この人との別れだけが耐えがたい。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>前三パーダは連続する隠喩（<i class="t">rūpaka</i>）で、ヴァーマナの詩論に引かれる。<i class="t">yadi param asahyas tu virahaḥ</i> — 別離への言及は、直後に来る悲劇の予兆として働く。</p></aside>
 <div class="row stage">
@@ -1687,7 +1690,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">देव उपस्थितः —</span><span class="iast" lang="sa-Latn">deva, upasthitaḥ —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">門衛女</span>
-<span class="tx">陛下、参っております——</span>
+<span class="tx">陛下、参っております<span class="jd">——</span></span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -1719,7 +1722,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 </div><div class="jp" lang="ja">
 <span class="tx"><span class="sd">（門衛女退場）</span></span>
 </div></div>
-<aside class="note"><span class="note-label">Kale 注</span><p>「（別離が）参っております（<i class="t">upasthitaḥ</i>）」——前の偈の「別れだけが耐えがたい」に門衛の言葉がそのまま続いて響く。劇作法でいう <i class="t">patākāsthānaka</i>（偶然の言葉が来たるべき事態を予示する技法）。<i class="t">Durmukha</i>（「不吉な顔」）という名も凶報にふさわしい。</p></aside>
+<aside class="note"><span class="note-label">Kale 注</span><p>「（別離が）参っております（<i class="t">upasthitaḥ</i>）」<span class="jd">——</span>前の偈の「別れだけが耐えがたい」に門衛の言葉がそのまま続いて響く。劇作法でいう <i class="t">patākāsthānaka</i>（偶然の言葉が来たるべき事態を予示する技法）。<i class="t">Durmukha</i>（「不吉な顔」）という名も凶報にふさわしい。</p></aside>
 <div class="row stage">
 <div class="skt">
 <span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(प्रविश्य)</span></span><span class="iast" lang="sa-Latn"><span class="sd">(praviśya)</span></span></span>
@@ -1758,7 +1761,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">अद्वैतं सुखदुःखयोरनुगुणं सर्वास्ववस्थासु यद्विश्रामो हृदयस्य यत्र जरसा यस्मिन्नहार्यो रसः ।<br>कालेनावरणात्ययात्परिणते यत्स्नेहसारे स्थितं भद्रं तस्य सुमानुषस्य कथमप्येकं हि तत्प्राप्यते ॥ ३९ ॥</span><span class="iast" lang="sa-Latn">advaitaṃ sukhaduḥkhayor anuguṇaṃ sarvāsv avasthāsu yad<br>viśrāmo hṛdayasya yatra jarasā yasminn ahāryo rasaḥ<br><br>kālenāvaraṇātyayāt pariṇate yat snehasāre sthitaṃ<br>bhadraṃ tasya sumānuṣasya katham apy ekaṃ hi tat prāpyate <span class="vn">‖ 39 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">幸にも不幸にも分かたれず、あらゆる境遇にふさわしく寄り添い、<br>そこに心が憩い、老いによっても味わいを奪われず、<br>時とともに遠慮の覆いが取り払われて熟し、愛の精髄に安住する——<br>そのような夫婦の幸いは、善き人がやっとのことで、ただ一度だけ得るものなのだ。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">幸にも不幸にも分かたれず、あらゆる境遇にふさわしく寄り添い、<br>そこに心が憩い、老いによっても味わいを奪われず、<br>時とともに遠慮の覆いが取り払われて熟し、愛の精髄に安住する<span class="jd">——</span><br>そのような夫婦の幸いは、善き人がやっとのことで、ただ一度だけ得るものなのだ。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>理想の夫婦愛を語る名偈。<i class="t">advaitam</i> — 幸不幸に二つとない。<i class="t">āvaraṇātyayāt</i> — 新婚の遠慮・恥じらいという覆いが時を経て取り除かれること。<i class="t">Daśarūpaka</i> に引かれる。</p></aside>
 <div class="row">
@@ -1783,7 +1786,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">उपस्तुवन्ति देवं पौरजानपदाः — विस्मारिता वयं महाराजदशरथस्य रामभद्रेणेति ।</span><span class="iast" lang="sa-Latn">upastuvanti devaṃ paurajānapadāḥ — vismāritā vayaṃ mahārājadaśarathasya rāmabhadreṇeti.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ドゥルムカ</span>
-<span class="tx">町の者も村の者も陛下を讃えております——「ラーマ様のおかげで、ダシャラタ大王のことを忘れるほどだ」と。</span>
+<span class="tx">町の者も村の者も陛下を讃えております<span class="jd">——</span>「ラーマ様のおかげで、ダシャラタ大王のことを忘れるほどだ」と。</span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -1807,7 +1810,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">अहह तीव्रसंवेगो वाग्वज्रः । <span class="sd">(इति मूर्च्छति)</span></span><span class="iast" lang="sa-Latn">ahaha, tīvrasaṃvego vāgvajraḥ. <span class="sd">(iti mūrcchati)</span></span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">ああ、何という激しい衝撃——言葉の雷だ。<span class="sd">（気を失う）</span></span>
+<span class="tx">ああ、何という激しい衝撃<span class="jd">——</span>言葉の雷だ。<span class="sd">（気を失う）</span></span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -1833,7 +1836,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">हा हा धिक्परगृहवासदूषणं यद्वैदेह्याः प्रशमितमद्भुतैरुपायैः ।<br>एतत्तत्पुनरपि दैवदुर्विपाकादालर्कं विषमिव सर्वतः प्रसृप्तम् ॥ ४० ॥</span><span class="iast" lang="sa-Latn">hā hā dhik paragṛhavāsadūṣaṇaṃ yad<br>vaidehyāḥ praśamitam adbhutair upāyaiḥ<br><br>etat tat punar api daivadurvipākād<br>ālarkaṃ viṣam iva sarvataḥ prasṛptam <span class="vn">‖ 40 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">ああ、ああ、なんということだ——他人の館に住んだという汚名を、<br>ヴァイデーヒーは驚くべき手だて<span class="sd">（火の試練）</span>で鎮めたはずなのに、<br>それが運命の悪しき巡りあわせによって、またもや<br>狂犬の毒のようにあらゆる方へ広がってしまった。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">ああ、ああ、なんということだ<span class="jd">——</span>他人の館に住んだという汚名を、<br>ヴァイデーヒーは驚くべき手だて<span class="sd">（火の試練）</span>で鎮めたはずなのに、<br>それが運命の悪しき巡りあわせによって、またもや<br>狂犬の毒のようにあらゆる方へ広がってしまった。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">ālarka</i> — 狂犬（<i class="t">alarka</i>）の毒。いったん治ったように見えても再発すると考えられた。第2パーダ、OCR の <i class="t">daivehāḥ</i> は <i class="t">vaidehyāḥ</i> の誤り。第4パーダ末は韻律（praharṣiṇī）上 <i class="t">prasṛptam</i>（「這い広がった」）。注は異読 <i class="t">prasṛtam</i> にも触れる。</p></aside>
 <div class="row">
@@ -1842,7 +1845,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">तत्किमत्र मन्दभाग्यः करोमि । <span class="sd">(विमृश्य सकरुणम्)</span> अथ वा किमन्यत् —</span><span class="iast" lang="sa-Latn">tat kim atra mandabhāgyaḥ karomi. <span class="sd">(vimṛśya sakaruṇam)</span> atha vā kim anyat —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">この不運な身は、いったいどうすればよいのか。<span class="sd">（思いめぐらし、悲しげに）</span>いや、ほかに何があろう——</span>
+<span class="tx">この不運な身は、いったいどうすればよいのか。<span class="sd">（思いめぐらし、悲しげに）</span>いや、ほかに何があろう<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-41">
 <figcaption><a class="vnum" href="#v1-41">I.41</a>
@@ -1860,7 +1863,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">संप्रत्येव च भगवता वसिष्ठेन संदिष्टम् । अपि च —</span><span class="iast" lang="sa-Latn">saṃpraty eva ca bhagavatā vasiṣṭhena saṃdiṣṭam. api ca —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">しかも、たった今ヴァシシュタ尊者からもそう言いつけられたばかりだ。それに——</span>
+<span class="tx">しかも、たった今ヴァシシュタ尊者からもそう言いつけられたばかりだ。それに<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-42">
 <figcaption><a class="vnum" href="#v1-42">I.42</a>
@@ -1870,7 +1873,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">यत्सावित्रैर्दीपितं भूमिपालैर्लोकश्रेष्ठैः साधु शुद्धं चरित्रम् ।<br>मत्संबन्धात्कश्मला किंवदन्ती स्याच्चेदस्मिन्हन्त धिङ्मामधन्यम् ॥ ४२ ॥</span><span class="iast" lang="sa-Latn">yat sāvitrair dīpitaṃ bhūmipālair<br>lokaśreṣṭhaiḥ sādhu śuddhaṃ caritram<br><br>matsaṃbandhāt kaśmalā kiṃvadantī<br>syāc ced asmin hanta dhiṅ mām adhanyam <span class="vn">‖ 42 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">太陽の裔たる、世に並ぶ者なき王たちが輝かせてきた<br>正しく清らかなこの家の行いに、<br>もし私とのかかわりゆえに汚れた噂がつくのなら——<br>ああ、呪われよ、この不幸な私は。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">太陽の裔たる、世に並ぶ者なき王たちが輝かせてきた<br>正しく清らかなこの家の行いに、<br>もし私とのかかわりゆえに汚れた噂がつくのなら<span class="jd">——</span><br>ああ、呪われよ、この不幸な私は。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p>第4パーダ、OCR <i class="t">dhiggrāmadhanyam</i> は <i class="t">dhiṅ mām adhanyam</i> の誤読と見られる（韻律 śālinī）。<i class="t">sāvitraiḥ</i> — 太陽神（サヴィトリ）の裔たる。</p></aside>
 <div class="row">
@@ -1879,7 +1882,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">हा देवि देवयजनसंभवे हा स्वजन्मानुग्रहपवित्रितवसुंधरे हा निमिजनकवंशनन्दिनि हा पावकवसिष्ठारुन्धतीप्रशस्तशीलशालिनि हा राममयजीविते हा महारण्यवासप्रियसखि हा तातप्रिये हा स्तोकवादिनि कथमेवंविधायास्तवायमीदृशः परिणामः ।</span><span class="iast" lang="sa-Latn">hā devi devayajanasaṃbhave, hā svajanmānugrahapavitritavasuṃdhare, hā nimijanakavaṃśanandini, hā pāvakavasiṣṭhārundhatīpraśastaśīlaśālini, hā rāmamayajīvite, hā mahāraṇyavāsapriyasakhi, hā tātapriye, hā stokavādini, katham evaṃvidhāyās tavāyam īdṛśaḥ pariṇāmaḥ.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">ああ妃よ——祭場から生まれた人、その誕生の恵みで大地を清めた人、ニミとジャナカの家の喜び、火神とヴァシシュタとアルンダティーにその徳を讃えられた人、ラーマを命とする人、大いなる森の暮らしの愛しい伴侶、父上に愛された人、口数少ない人よ——このような人に、どうしてこのような結末が訪れるのか。</span>
+<span class="tx">ああ妃よ<span class="jd">——</span>祭場から生まれた人、その誕生の恵みで大地を清めた人、ニミとジャナカの家の喜び、火神とヴァシシュタとアルンダティーにその徳を讃えられた人、ラーマを命とする人、大いなる森の暮らしの愛しい伴侶、父上に愛された人、口数少ない人よ<span class="jd">——</span>このような人に、どうしてこのような結末が訪れるのか。</span>
 </div></div>
 <figure class="verse" id="v1-43">
 <figcaption><a class="vnum" href="#v1-43">I.43</a>
@@ -1891,14 +1894,14 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <p class="vtext"><span class="dev" lang="sa-Deva">त्वया जगन्ति पुण्यानि त्वय्यपुण्या जनोक्तयः ।<br>नाथवन्तस्त्वया लोकास्त्वमनाथा विपत्स्यसे ॥ ४३ ॥</span><span class="iast" lang="sa-Latn">tvayā jaganti puṇyāni tvayy apuṇyā janoktayaḥ <br>nāthavantas tvayā lokās tvam anāthā vipatsyase <span class="vn">‖ 43 ‖</span></span></p>
 </div><div class="jp" lang="ja"><p class="vtext">そなたによって世界は清められるのに、そなたについての人の言葉は不浄である。<br>そなたによって世は守り手を得るのに、そなた自身は守る者もなく滅びてゆくのだ。</p></div>
 </div></figure>
-<aside class="note"><span class="note-label">Kale 注</span><p>修辞は <i class="t">viṣama</i>（原因と結果の不整合）。<i class="t">vipatsyase</i> は未来形——ラーヴァナによる別離と違い、今回は救いの手だてがないことを暗示する。この時ラーマはすでに決断している。</p></aside>
+<aside class="note"><span class="note-label">Kale 注</span><p>修辞は <i class="t">viṣama</i>（原因と結果の不整合）。<i class="t">vipatsyase</i> は未来形<span class="jd">——</span>ラーヴァナによる別離と違い、今回は救いの手だてがないことを暗示する。この時ラーマはすでに決断している。</p></aside>
 <div class="row">
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(दुर्मुखं प्रति)</span> दुर्मुख ब्रूहि लक्ष्मणम् — एष ते नूतनो राजा रामः समाज्ञापयति । <span class="sd">(कर्णे)</span> एवमेवमिति ।</span><span class="iast" lang="sa-Latn"><span class="sd">(durmukhaṃ prati)</span> durmukha, brūhi lakṣmaṇam — eṣa te nūtano rājā rāmaḥ samājñāpayati. <span class="sd">(karṇe)</span> evam evam iti.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx"><span class="sd">（ドゥルムカに）</span>ドゥルムカ、ラクシュマナに伝えよ——「そなたの新しい王ラーマが命じる」と。<span class="sd">（耳もとで）</span>かくかくしかじかと。</span>
+<span class="tx"><span class="sd">（ドゥルムカに）</span>ドゥルムカ、ラクシュマナに伝えよ<span class="jd">——</span>「そなたの新しい王ラーマが命じる」と。<span class="sd">（耳もとで）</span>かくかくしかじかと。</span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -1959,7 +1962,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <div class="skt">
 <span class="sp"><span class="dev" lang="sa-Deva">रामः</span><span class="iast" lang="sa-Latn">Rāmaḥ</span></span>
 <p class="vtext"><span class="dev" lang="sa-Deva">शैशवात्प्रभृति पोषितां प्रियां सौहृदादपृथगाश्रयामिमाम् ।<br>छद्मना परिददामि मृत्यवे सौनिकः गृहशकुन्तिकामिव ॥ ४५ ॥</span><span class="iast" lang="sa-Latn">śaiśavāt prabhṛti poṣitāṃ priyāṃ<br>sauhṛdād apṛthagāśrayām imām<br><br>chadmanā paridadāmi mṛtyave<br>saunikaḥ gṛhaśakuntikām iva <span class="vn">‖ 45 ‖</span></span></p>
-</div><div class="jp" lang="ja"><p class="vtext">幼い時から慈しみ育ててきた、愛しいこの人を——<br>情愛ゆえに片時も離れず私に寄りそってきたこの人を——<br>偽りの口実で死に引き渡すのだ、<br>屠殺人が飼い慣らした小鳥を引き渡すように。</p></div>
+</div><div class="jp" lang="ja"><p class="vtext">幼い時から慈しみ育ててきた、愛しいこの人を<span class="jd">——</span><br>情愛ゆえに片時も離れず私に寄りそってきたこの人を<span class="jd">——</span><br>偽りの口実で死に引き渡すのだ、<br>屠殺人が飼い慣らした小鳥を引き渡すように。</p></div>
 </div></figure>
 <aside class="note"><span class="note-label">Kale 注</span><p><i class="t">chadmanā</i> —「偽りの口実で」。シーター自身が望んだ森への旅を口実に追放するのである。</p></aside>
 <div class="row">
@@ -1986,7 +1989,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva"><span class="sd">(उत्थाय)</span> हन्त विपर्यस्तः संप्रति जीवलोकः । पर्यवसितमद्य जीवितप्रयोजनं रामस्य । शून्यमधुना जीर्णारण्यं जगत् । असारः संसारः । कष्टप्रायं शरीरम् । अशरणोऽस्मि । किं करोमि । का गतिः । अथ वा —</span><span class="iast" lang="sa-Latn"><span class="sd">(utthāya)</span> hanta, viparyastaḥ saṃprati jīvalokaḥ. paryavasitam adya jīvitaprayojanaṃ rāmasya. śūnyam adhunā jīrṇāraṇyaṃ jagat. asāraḥ saṃsāraḥ. kaṣṭaprāyaṃ śarīram. aśaraṇo 'smi. kiṃ karomi. kā gatiḥ. atha vā —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx"><span class="sd">（立ち上がって）</span>ああ、生きとし生けるものの世は、いまやすっかり逆さまになった。ラーマが生きる意味は今日で尽きた。いまや世界は荒れはてた森のように空しい。浮き世に実はなく、この身は苦しみばかり。私には頼るものがない。どうすればよい。どこへ行けばよい。いや——</span>
+<span class="tx"><span class="sd">（立ち上がって）</span>ああ、生きとし生けるものの世は、いまやすっかり逆さまになった。ラーマが生きる意味は今日で尽きた。いまや世界は荒れはてた森のように空しい。浮き世に実はなく、この身は苦しみばかり。私には頼るものがない。どうすればよい。どこへ行けばよい。いや<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-47">
 <figcaption><a class="vnum" href="#v1-47">I.47</a>
@@ -2005,7 +2008,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">हा अम्ब अरुन्धति हा भगवन्तौ वसिष्ठविश्वामित्रौ हा भगवन्पावक हा देवि भूतधात्रि हा तात जनक हा तात हा मातरः हा प्रियसख महाराज सुग्रीव हा सौम्य हनूमन् हा महोपकारिन्लङ्काधिपते विभीषण हा सखि त्रिजटे मुषिताः स्थ परिभूताः स्थ रामहतकेन । अथ वा को नाम तेषामहमिदानीमाह्वाने ।</span><span class="iast" lang="sa-Latn">hā amba arundhati, hā bhagavantau vasiṣṭhaviśvāmitrau, hā bhagavan pāvaka, hā devi bhūtadhātri, hā tāta janaka, hā tāta, hā mātaraḥ, hā priyasakha mahārāja sugrīva, hā saumya hanūman, hā mahopakārin laṅkādhipate vibhīṣaṇa, hā sakhi trijaṭe, muṣitāḥ stha paribhūtāḥ stha rāmahatakena. atha vā ko nāma teṣām aham idānīm āhvāne.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">ああ母なるアルンダティー様、ああヴァシシュタ、ヴィシュヴァーミトラの両尊者、ああ尊き火神、ああ万物を支える大地の女神、ああ父ジャナカ王、ああ父上、ああ母上たち、ああ親友スグリーヴァ王、ああ心優しいハヌマーン、ああ大恩人ランカーの王ヴィビーシャナ、ああ友トリジャター——あなた方はみな、この呪われたラーマに欺かれ、辱められたのだ。いや、いまの私に、あの方々の名を呼ぶ資格がどこにあろう。</span>
+<span class="tx">ああ母なるアルンダティー様、ああヴァシシュタ、ヴィシュヴァーミトラの両尊者、ああ尊き火神、ああ万物を支える大地の女神、ああ父ジャナカ王、ああ父上、ああ母上たち、ああ親友スグリーヴァ王、ああ心優しいハヌマーン、ああ大恩人ランカーの王ヴィビーシャナ、ああ友トリジャター<span class="jd">——</span>あなた方はみな、この呪われたラーマに欺かれ、辱められたのだ。いや、いまの私に、あの方々の名を呼ぶ資格がどこにあろう。</span>
 </div></div>
 <figure class="verse" id="v1-48">
 <figcaption><a class="vnum" href="#v1-48">I.48</a>
@@ -2023,7 +2026,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">योऽहम् —</span><span class="iast" lang="sa-Latn">yo 'ham —</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ラーマ</span>
-<span class="tx">この私は——</span>
+<span class="tx">この私は<span class="jd">——</span></span>
 </div></div>
 <figure class="verse" id="v1-49">
 <figcaption><a class="vnum" href="#v1-49">I.49</a>
@@ -2115,7 +2118,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <span class="tx"><span class="dev" lang="sa-Deva">देवि कुमारलक्ष्मणो विज्ञापयति — सज्जो रथः आरोहतु देवीति ।</span><span class="iast" lang="sa-Latn">devi, kumāralakṣmaṇo vijñāpayati — sajjo rathaḥ, ārohatu devīti.</span></span>
 </div><div class="jp" lang="ja">
 <span class="sp">ドゥルムカ</span>
-<span class="tx">お妃さま、ラクシュマナ王子からの申し上げです——「車の用意ができました。どうぞお乗りください」と。</span>
+<span class="tx">お妃さま、ラクシュマナ王子からの申し上げです<span class="jd">——</span>「車の用意ができました。どうぞお乗りください」と。</span>
 </div></div>
 <div class="row">
 <div class="skt">
@@ -2147,7 +2150,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 </div><div class="jp" lang="ja">
 <span class="tx"><span class="sd">（一同退場）</span></span>
 </div></div>
-<aside class="note"><span class="note-label">Kale 注</span><p>幕の終わりのシーターの別れの挨拶は、それと知らぬまま永遠の別れの言葉となっている——観客だけがその意味を知る劇的皮肉。</p></aside><p class="colophon"><span class="dev" lang="sa-Deva">इति महाकविभवभूतिविरचिते उत्तररामचरिते चित्रदर्शनो नाम प्रथमोऽङ्कः</span><span class="iast" lang="sa-Latn">iti mahākavibhavabhūtiviracite uttararāmacarite citradarśano nāma prathamo 'ṅkaḥ</span></p><nav class="pager"><a class="prev" href="uttararamacarita-toc.html">← 総覧</a><a class="next" href="uttararamacarita-act2.html">第二幕「パンチャヴァティーへの入場」 →</a></nav>
+<aside class="note"><span class="note-label">Kale 注</span><p>幕の終わりのシーターの別れの挨拶は、それと知らぬまま永遠の別れの言葉となっている<span class="jd">——</span>観客だけがその意味を知る劇的皮肉。</p></aside><p class="colophon"><span class="dev" lang="sa-Deva">इति महाकविभवभूतिविरचिते उत्तररामचरिते चित्रदर्शनो नाम प्रथमोऽङ्कः</span><span class="iast" lang="sa-Latn">iti mahākavibhavabhūtiviracite uttararāmacarite citradarśano nāma prathamo 'ṅkaḥ</span></p><nav class="pager"><a class="prev" href="uttararamacarita-toc.html">← 総覧</a><a class="next" href="uttararamacarita-act2.html">第二幕「パンチャヴァティーへの入場」 →</a></nav>
 </main>
 <footer class="foot">
   <p>Bhavabhūti, <i>Uttararāmacarita</i>. 本文は M. R. Kale 校訂本（Motilal Banarsidass, 第5版 1934）に拠る。女性・従者等のプラークリットの台詞は、Kale 本文に従いサンスクリット訳（chāyā）で示す。</p>

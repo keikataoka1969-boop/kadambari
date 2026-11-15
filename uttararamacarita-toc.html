@@ -7,7 +7,7 @@
 <meta name="description" content="バヴァブーティ『ウッタララーマチャリタ』全七幕の目次・構成図・韻律分布・登場人物・梗概">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400&family=Tiro+Devanagari+Sanskrit:ital@0;1&family=Noto+Serif+JP:wght@400;600&family=Noto+Sans:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <style>
 :root {
   --ground: #f8f8f5;
@@ -23,8 +23,8 @@
   --focus: #2f4291;
   --f-iast: "Gentium Book Plus", "Noto Serif", "Times New Roman", serif;
   --f-dev: "Tiro Devanagari Sanskrit", "Noto Serif Devanagari", "Sanskrit Text", serif;
-  --f-jp: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  --f-ui: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
+  --f-jp: "Gentium Book Plus", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --f-ui: "Noto Sans", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -248,6 +248,9 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
   .syn-a blockquote { grid-template-columns: 1fr; }
 }
 
+/* Japanese dashes and ellipses: keep them in the Japanese face, not the Latin one */
+.jd { font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+
 </style>
 </head>
 <body>
@@ -267,7 +270,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <section class="act-head toc-head">
   <p class="act-no">総覧<span class="roman">Contents</span></p>
   <h1><span class="h-jp">ウッタララーマチャリタ</span><span class="h-skt"><span class="dev" lang="sa-Deva">उत्तररामचरितम्</span><span class="iast" lang="sa-Latn">uttararāmacaritam</span></span></h1>
-  <p class="synopsis">バヴァブーティ（8世紀前半）作の七幕の戯曲。『ラーマーヤナ』の後日譚——ラーヴァナを討って即位したラーマが、民の噂のためにシーターを捨て、十二年後に双子の子らとともに再会するまで——を描く。ラーマの悲嘆を主調とし、「ラサ（情趣）はただひとつ、悲愴（カルナ）のみ」（第三幕第47偈）と宣言する、悲愴の劇の最高峰とされる。</p>
+  <p class="synopsis">バヴァブーティ（8世紀前半）作の七幕の戯曲。『ラーマーヤナ』の後日譚<span class="jd">——</span>ラーヴァナを討って即位したラーマが、民の噂のためにシーターを捨て、十二年後に双子の子らとともに再会するまで<span class="jd">——</span>を描く。ラーマの悲嘆を主調とし、「ラサ（情趣）はただひとつ、悲愴（カルナ）のみ」（第三幕第47偈）と宣言する、悲愴の劇の最高峰とされる。</p>
   <div class="stats">
     <div><b>7</b><span>幕</span></div><div><b>256</b><span>偈（全256）</span></div><div><b>12</b><span>年（第一幕と第二幕の間）</span></div><div><b>18</b><span>種の韻律</span></div>
   </div>
@@ -570,13 +573,13 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <h2 class="toc-h">各幕の梗概と名偈</h2><div class="syn">
 <article class="syn-a"><h3><a href="uttararamacarita-act1.html"><span class="ro">I</span>第一幕「絵画の観覧」</a></h3>
 <p>即位後まもないアヨーディヤー。長老たちが祭祀に出かけた王宮で、ラーマは身重のシーターを慰め、ラクシュマナが描かせた二人の半生の壁画を見せる。絵に誘われたシーターは再び森を訪れたいと願い、ラーマの腕を枕に眠る。そこへ密偵ドゥルムカが、シーターの貞節を疑う民の噂を報告する。ラーマは王の務めとして、眠るシーターを森へ捨てる決意を固める。</p>
-<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">अद्वैतं सुखदुःखयोरनुगुणं सर्वास्ववस्थासु यद्विश्रामो हृदयस्य यत्र जरसा यस्मिन्नहार्यो रसः<br>कालेनावरणात्ययात्परिणते यत्स्नेहसारे स्थितं भद्रं तस्य सुमानुषस्य कथमप्येकं हि तत्प्राप्यते</span><span class="iast" lang="sa-Latn">advaitaṃ sukhaduḥkhayor anuguṇaṃ sarvāsv avasthāsu yad viśrāmo hṛdayasya yatra jarasā yasminn ahāryo rasaḥ <br>kālenāvaraṇātyayāt pariṇate yat snehasāre sthitaṃ bhadraṃ tasya sumānuṣasya katham apy ekaṃ hi tat prāpyate</span></p><p class="q-jp">幸にも不幸にも分かたれず、あらゆる境遇にふさわしく寄り添い、<br>そこに心が憩い、老いによっても味わいを奪われず、<br>時とともに遠慮の覆いが取り払われて熟し、愛の精髄に安住する——<br>そのような夫婦の幸いは、善き人がやっとのことで、ただ一度だけ得るものなのだ。</p><cite><a href="uttararamacarita-act1.html#v1-39">I.39</a></cite></blockquote></article>
+<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">अद्वैतं सुखदुःखयोरनुगुणं सर्वास्ववस्थासु यद्विश्रामो हृदयस्य यत्र जरसा यस्मिन्नहार्यो रसः<br>कालेनावरणात्ययात्परिणते यत्स्नेहसारे स्थितं भद्रं तस्य सुमानुषस्य कथमप्येकं हि तत्प्राप्यते</span><span class="iast" lang="sa-Latn">advaitaṃ sukhaduḥkhayor anuguṇaṃ sarvāsv avasthāsu yad viśrāmo hṛdayasya yatra jarasā yasminn ahāryo rasaḥ <br>kālenāvaraṇātyayāt pariṇate yat snehasāre sthitaṃ bhadraṃ tasya sumānuṣasya katham apy ekaṃ hi tat prāpyate</span></p><p class="q-jp">幸にも不幸にも分かたれず、あらゆる境遇にふさわしく寄り添い、<br>そこに心が憩い、老いによっても味わいを奪われず、<br>時とともに遠慮の覆いが取り払われて熟し、愛の精髄に安住する<span class="jd">——</span><br>そのような夫婦の幸いは、善き人がやっとのことで、ただ一度だけ得るものなのだ。</p><cite><a href="uttararamacarita-act1.html#v1-39">I.39</a></cite></blockquote></article>
 <article class="syn-a"><h3><a href="uttararamacarita-act2.html"><span class="ro">II</span>第二幕「パンチャヴァティーへの入場」</a></h3>
 <p>十二年後。ダンダカの森で、旅の女行者アートレーイーが森の女神ヴァーサンティーに、ヴァールミーキの庵で育つ不思議な双子クシャとラヴァのこと、『ラーマーヤナ』誕生のいきさつ、そしてシーター追放後のアヨーディヤーの近況を語る。本場では、苦行するシュードラのシャンブーカを討つためラーマが森に現れ、斬られて天上の姿となったシャンブーカに導かれながら、かつてシーターと暮らした森の景色に胸を裂かれる。</p>
-<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">वज्रादपि कठोराणि मृदूनि कुसुमादपि<br>लोकोत्तराणां चेतांसि को नु विज्ञातुमर्हति</span><span class="iast" lang="sa-Latn">vajrād api kaṭhorāṇi mṛdūni kusumād api <br>lokottarāṇāṃ cetāṃsi ko nu vijñātum arhati</span></p><p class="q-jp">金剛よりも硬く、花よりも柔らかい——<br>世を超えた人々の心を、いったい誰が知りえよう。</p><cite><a href="uttararamacarita-act2.html#v2-7">II.7</a></cite></blockquote></article>
+<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">वज्रादपि कठोराणि मृदूनि कुसुमादपि<br>लोकोत्तराणां चेतांसि को नु विज्ञातुमर्हति</span><span class="iast" lang="sa-Latn">vajrād api kaṭhorāṇi mṛdūni kusumād api <br>lokottarāṇāṃ cetāṃsi ko nu vijñātum arhati</span></p><p class="q-jp">金剛よりも硬く、花よりも柔らかい<span class="jd">——</span><br>世を超えた人々の心を、いったい誰が知りえよう。</p><cite><a href="uttararamacarita-act2.html#v2-7">II.7</a></cite></blockquote></article>
 <article class="syn-a"><h3><a href="uttararamacarita-act3.html"><span class="ro">III</span>第三幕「影」</a></h3>
 <p>パンチャヴァティー。河の女神タマサーとムララーの対話から、捨てられたシーターがガンガーに身を投げ、双子を産み、大地とガンガーの女神に救われていたことが明かされる。ガンガーの計らいで、シーターは誰の目にも見えない「影」の身となって森に来ている。そこへラーマが現れ、思い出の地で幾度も気を失うが、そのたびに見えないシーターの手に触れられて蘇る。森の女神ヴァーサンティーはラーマの非情を責め、シーターはラーマの変わらぬ愛を知って、ひそかに心を和らげる。</p>
-<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">एको रसः करुण एव निमित्तभेदाद्भिन्नः पृथक्पृथगिवाश्रयते विवर्तान्<br>आवर्तबुद्बुदतरङ्गमयान्विकारानम्भो यथा सलिलमेव तु तत्समग्रम्</span><span class="iast" lang="sa-Latn">eko rasaḥ karuṇa eva nimittabhedād bhinnaḥ pṛthak pṛthag ivāśrayate vivartān <br>āvartabudbudataraṅgamayān vikārān ambho yathā salilam eva tu tat samagram</span></p><p class="q-jp">ラサ（情趣）はただひとつ、悲愴（カルナ）だけ。<br>それが原因の違いによって分かれ、別々の現れをとるかのように見える——<br>渦や泡や波といった姿をとっても、<br>水は結局すべて水であるように。</p><cite><a href="uttararamacarita-act3.html#v3-47">III.47</a></cite></blockquote></article>
+<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">एको रसः करुण एव निमित्तभेदाद्भिन्नः पृथक्पृथगिवाश्रयते विवर्तान्<br>आवर्तबुद्बुदतरङ्गमयान्विकारानम्भो यथा सलिलमेव तु तत्समग्रम्</span><span class="iast" lang="sa-Latn">eko rasaḥ karuṇa eva nimittabhedād bhinnaḥ pṛthak pṛthag ivāśrayate vivartān <br>āvartabudbudataraṅgamayān vikārān ambho yathā salilam eva tu tat samagram</span></p><p class="q-jp">ラサ（情趣）はただひとつ、悲愴（カルナ）だけ。<br>それが原因の違いによって分かれ、別々の現れをとるかのように見える<span class="jd">——</span><br>渦や泡や波といった姿をとっても、<br>水は結局すべて水であるように。</p><cite><a href="uttararamacarita-act3.html#v3-47">III.47</a></cite></blockquote></article>
 <article class="syn-a"><h3><a href="uttararamacarita-act4.html"><span class="ro">IV</span>第四幕「カウサリヤーとジャナカの対面」</a></h3>
 <p>ヴァールミーキの庵。十二年の祭祀を終えたアルンダティーとヴァシシュタ、ラーマの母カウサリヤーらが訪れ、シーターの父ジャナカと久しぶりに対面する。娘を失った悲しみに老王は苦しみ、カウサリヤーは気を失う。そこへ遊び騒ぐ少年たちのなかに、ラーマとシーターに生き写しの少年ラヴァが現れ、一同は胸を騒がせる。やがてアシュヴァメーダの祭馬が庵に迷いこみ、護衛の兵の挑発的な宣言に怒ったラヴァは、弓を取って馬を奪いにかかる。</p>
 <blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">शिशुर्वा शिष्या वा यदसि मम तत्तिष्ठतु तथा विशुद्धेरुत्कर्षस्त्वयि तु मम भक्तिं द्रढयति<br>शिशुत्वं स्त्रीत्वं वा भवतु ननु वन्द्यासि जगतां गुणाः पूजास्थानं गुणिषु न च लिङ्गं न च वयः</span><span class="iast" lang="sa-Latn">śiśur vā śiṣyā vā yad asi mama tat tiṣṭhatu tathā viśuddher utkarṣas tvayi tu mama bhaktiṃ draḍhayati <br>śiśutvaṃ strītvaṃ vā bhavatu nanu vandyāsi jagatāṃ guṇāḥ pūjāsthānaṃ guṇiṣu na ca liṅgaṃ na ca vayaḥ</span></p><p class="q-jp">おまえが私にとって子であれ弟子であれ、それはそのままでよい。<br>だが、おまえの潔白のこの上ない尊さが、私の敬う心を強くするのです。<br>幼くとも女であろうとも、おまえは世界に敬われるべき人。<br>徳ある者において敬われるのはその徳であって、性でも年でもないのだから。</p><cite><a href="uttararamacarita-act4.html#v4-11">IV.11</a></cite></blockquote></article>
@@ -588,7 +591,7 @@ svg.chart { width: 100%; height: auto; display: block; font-family: var(--f-iast
 <blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">व्यतिषजति पदार्थानान्तरः कोऽपि हेतुर्न खलु बहिरुपाधीन्प्रीतयः संश्रयन्ते<br>विकसति हि पतङ्गस्योदये पुण्डरीकं द्रवति च हिमरश्मावुद्गते चन्द्रकान्तः</span><span class="iast" lang="sa-Latn">vyatiṣajati padārthān āntaraḥ ko 'pi hetur na khalu bahir upādhīn prītayaḥ saṃśrayante <br>vikasati hi pataṅgasyodaye puṇḍarīkaṃ dravati ca himaraśmāv udgate candrakāntaḥ</span></p><p class="q-jp">何か内なるわけがものとものとを結びつけるのであって、<br>愛は外のしるしをよりどころにはしない。<br>太陽がのぼると白蓮が開き、<br>月がのぼると月長石がしたたるように。</p><cite><a href="uttararamacarita-act6.html#v6-12">VI.12</a></cite></blockquote></article>
 <article class="syn-a"><h3><a href="uttararamacarita-act7.html"><span class="ro">VII</span>第七幕「再会」</a></h3>
 <p>ガンガーの岸。ヴァールミーキが自作の劇を天女たちに演じさせ、神々と人々を招いて上演する。劇中劇は、捨てられたシーターがガンガーに身を投げ、双子を産み、大地とガンガーの女神に守られるさまを描く。観客席のラーマは現実と劇の区別を失って取り乱し、気を失う。そのとき本物のシーターが女神たちとともに水中から現れ、アルンダティーが民の前でシーターの潔白を宣言する。民と神々の歓呼のなか、ラーマはシーターを妻として迎え、クシャとラヴァはヴァールミーキに連れられて両親と再会する。</p>
-<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">पाप्मभ्यश्च पुनाति वर्धयति च श्रेयांसि सेयं कथा मङ्गल्या च मनोहरा च जगतो मातेव गङ्गेव च<br>तामेतां परिभावयन्त्वभिनयैर्विन्यस्तरूपां बुधाः शब्दब्रह्मविदः कवेः परिणतां प्राज्ञस्य वाणीमिमाम्</span><span class="iast" lang="sa-Latn">pāpmabhyaś ca punāti vardhayati ca śreyāṃsi seyaṃ kathā maṅgalyā ca manoharā ca jagato māteva gaṅgeva ca <br>tām etāṃ paribhāvayantv abhinayair vinyastarūpāṃ budhāḥ śabdabrahmavidaḥ kaveḥ pariṇatāṃ prājñasya vāṇīm imām</span></p><p class="q-jp">罪から清め、幸いを増すこの物語は、<br>母のように、ガンガーのように、世界にとって吉祥で、心を魅するもの——<br>ことばのブラフマンを知る、賢き詩人の熟したこのことばを、<br>演技によって形を与え、賢者たちが味わい深めてゆきますように。</p><cite><a href="uttararamacarita-act7.html#v7-20">VII.20</a></cite></blockquote></article>
+<blockquote><p class="q-skt"><span class="dev" lang="sa-Deva">पाप्मभ्यश्च पुनाति वर्धयति च श्रेयांसि सेयं कथा मङ्गल्या च मनोहरा च जगतो मातेव गङ्गेव च<br>तामेतां परिभावयन्त्वभिनयैर्विन्यस्तरूपां बुधाः शब्दब्रह्मविदः कवेः परिणतां प्राज्ञस्य वाणीमिमाम्</span><span class="iast" lang="sa-Latn">pāpmabhyaś ca punāti vardhayati ca śreyāṃsi seyaṃ kathā maṅgalyā ca manoharā ca jagato māteva gaṅgeva ca <br>tām etāṃ paribhāvayantv abhinayair vinyastarūpāṃ budhāḥ śabdabrahmavidaḥ kaveḥ pariṇatāṃ prājñasya vāṇīm imām</span></p><p class="q-jp">罪から清め、幸いを増すこの物語は、<br>母のように、ガンガーのように、世界にとって吉祥で、心を魅するもの<span class="jd">——</span><br>ことばのブラフマンを知る、賢き詩人の熟したこのことばを、<br>演技によって形を与え、賢者たちが味わい深めてゆきますように。</p><cite><a href="uttararamacarita-act7.html#v7-20">VII.20</a></cite></blockquote></article>
 </div>
 <h2 class="toc-h">この版について</h2><div class="ednotes">
 <p><b>底本。</b>M. R. Kale 校訂本（Vīrarāghava 注付き、Motilal Banarsidass）の OCR テキストを底本とし、全幕の本文を原典と照合して校訂した。偈はすべて韻律（音節の長短の型）で検証し、OCR の誤りは、注釈の語釈・異読・韻律に基づいて訂正した。主な訂正は各偈の注に記した。</p>
