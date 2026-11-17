@@ -1,0 +1,297 @@
+/* Kale『高等サンスクリット文法』日本語教科書 — 共通スタイル（カラー版） */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif+Devanagari:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --ground: #F6F0E4;
+  --card: #FFFCF6;
+  --ink: #2A2520;
+  --ink-soft: #5A4D42;
+  --muted: #8A7D70;
+  --rule: #D8CDBB;
+  --rule-light: #E8DFD0;
+
+  --accent: #9A4A26;        /* テラコッタ：見出し・§ */
+  --accent-soft: #C9784F;
+  --accent-wash: #F6E3D6;
+  --indigo: #2F5D8A;        /* 典拠（スートラ） */
+  --indigo-wash: #E3ECF5;
+  --green: #4A7A3A;         /* 補説・正解 */
+  --green-wash: #E5F0DC;
+  --gold: #A9771C;          /* 例文 */
+  --gold-wash: #FBF0D6;
+  --red: #B0413E;           /* it・注意 */
+  --red-wash: #F8E1DE;
+  --purple: #7A4E8C;
+  --purple-wash: #EEE4F3;
+  --teal: #2E7D78;
+  --teal-wash: #DDF0EE;
+
+  /* 調音位置の色 */
+  --kantha: #C0601F; --talu: #3E8A3E; --murdhan: #C0392B; --danta: #2F5D8A; --ostha: #8A4FA8; --nasika: #6B5D50;
+
+  --font-jp: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-ui: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif;
+  --font-sa: 'Noto Serif Devanagari', 'Sanskrit Text', serif;
+  --font-lat: 'Cormorant Garamond', 'Times New Roman', serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #1C1A17; --card: #24211D; --ink: #E4DED4; --ink-soft: #B3A898; --muted: #8C8174;
+    --rule: #433D35; --rule-light: #35302A;
+    --accent: #E08B5E; --accent-soft: #E9A37C; --accent-wash: #3A2A20;
+    --indigo: #8DB4DF; --indigo-wash: #1F2A36; --green: #9CC985; --green-wash: #213020;
+    --gold: #E2B65A; --gold-wash: #342B18; --red: #EE8A80; --red-wash: #3A2220;
+    --purple: #C59AD8; --purple-wash: #2E2335; --teal: #77C9C2; --teal-wash: #1C302E;
+    --kantha: #F0A06A; --talu: #8FD08F; --murdhan: #F08A80; --danta: #8DB4DF; --ostha: #C59AD8; --nasika: #B3A898;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #1C1A17; --card: #24211D; --ink: #E4DED4; --ink-soft: #B3A898; --muted: #8C8174;
+  --rule: #433D35; --rule-light: #35302A;
+  --accent: #E08B5E; --accent-soft: #E9A37C; --accent-wash: #3A2A20;
+  --indigo: #8DB4DF; --indigo-wash: #1F2A36; --green: #9CC985; --green-wash: #213020;
+  --gold: #E2B65A; --gold-wash: #342B18; --red: #EE8A80; --red-wash: #3A2220;
+  --purple: #C59AD8; --purple-wash: #2E2335; --teal: #77C9C2; --teal-wash: #1C302E;
+  --kantha: #F0A06A; --talu: #8FD08F; --murdhan: #F08A80; --danta: #8DB4DF; --ostha: #C59AD8; --nasika: #B3A898;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font-family: var(--font-jp); font-size: 1.06rem; line-height: 1.95;
+  -webkit-font-smoothing: antialiased;
+}
+[lang="sa"], .sa { font-family: var(--font-sa); font-size: 1.12em; line-height: 1.75; }
+.iast, i.iast { font-family: var(--font-lat); font-style: italic; font-size: 1.1em; }
+a { color: var(--accent); }
+b, strong { color: var(--accent); font-weight: 700; }
+
+/* ---------- top bar ---------- */
+.top-bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--accent); color: #fff; font-family: var(--font-ui); font-size: 13px; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.top-bar .inner { max-width: 900px; margin: 0 auto; padding: 7px 16px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.top-bar a { color: #fff; text-decoration: none; opacity: .92; }
+.top-bar a:hover { opacity: 1; text-decoration: underline; }
+.top-bar .title { font-weight: 700; opacity: 1; }
+.top-bar .spacer { flex: 1; }
+.top-bar button { font: inherit; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.5); border-radius: 999px; padding: 1px 10px; color: #fff; cursor: pointer; }
+
+/* ---------- layout ---------- */
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 16px 80px; }
+main { min-width: 0; }
+
+/* ---------- chapter header ---------- */
+.chapter-head {
+  text-align: center; margin: 28px 0 26px; padding: 30px 20px 26px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-wash), var(--gold-wash) 60%, var(--indigo-wash));
+  border: 1px solid var(--rule-light);
+}
+.chapter-head .dev-title { font-family: var(--font-sa); font-size: 1.7rem; font-weight: 700; color: var(--ink); line-height: 1.5; }
+.chapter-head .num { font-family: var(--font-lat); font-style: italic; font-size: 1.1rem; color: var(--ink-soft); letter-spacing: .04em; }
+.chapter-head h1 { font-size: 2rem; line-height: 1.4; margin: 4px 0 6px; font-weight: 700; color: var(--accent); letter-spacing: .08em; }
+.chapter-head .orig { color: var(--ink-soft); font-size: .9rem; }
+
+/* ---------- TOC (top) ---------- */
+nav.toc { background: var(--card); border: 1px solid var(--rule-light); border-radius: 12px; padding: 14px 18px 12px; margin-bottom: 30px; }
+nav.toc h2 { margin: 0 0 6px; font-family: var(--font-ui); font-size: .8rem; letter-spacing: .14em; color: var(--ink-soft); }
+nav.toc ol { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 24px; }
+nav.toc li { break-inside: avoid; }
+nav.toc li.sub { padding-left: 1.2em; }
+nav.toc a { display: block; padding: 3px 0; border-bottom: 1px dotted var(--rule-light); text-decoration: none; font-size: .95rem; }
+nav.toc a:hover { color: var(--accent-soft); }
+@media (max-width: 640px) { nav.toc ol { columns: 1; } }
+
+/* ---------- part heading ---------- */
+h2.part {
+  font-size: 1.45rem; margin: 54px 0 20px; padding: 12px 18px; color: #fff; border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+}
+h2.part [lang="sa"] { color: #fff; }
+h2.part small { display: block; font-family: var(--font-lat); font-style: italic; font-size: 1rem; font-weight: 400; opacity: .92; }
+
+/* ---------- § card ---------- */
+section.para {
+  position: relative; margin: 26px 0; scroll-margin-top: 56px;
+  background: var(--card); border: 1px solid var(--rule-light); border-top: 4px solid var(--accent);
+  border-radius: 10px; padding: 18px 22px 16px;
+}
+section.para > h3 { font-size: 1.22rem; margin: 0 0 10px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; color: var(--ink); line-height: 1.5; }
+.sec { font-family: var(--font-ui); font-weight: 700; font-size: .9rem; color: #fff; background: var(--accent); border-radius: 6px; padding: 1px 10px; white-space: nowrap; }
+.pg { font-family: var(--font-ui); font-size: .72rem; color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0 8px; font-weight: 400; white-space: nowrap; }
+@media (max-width: 560px) { section.para { padding: 14px 14px 12px; } }
+
+p { margin: 8px 0 12px; }
+.sub-item { margin: 14px 0; padding-left: 2.4em; position: relative; }
+.sub-item > .lbl { position: absolute; left: 0; top: 2px; font-family: var(--font-ui); font-weight: 700; font-size: .85rem; color: var(--accent); background: var(--accent-wash); border-radius: 6px; padding: 0 6px; }
+h4.mini { font-family: var(--font-jp); font-size: 1.05rem; margin: 22px 0 6px; color: var(--accent); }
+h4.mini.warn { color: var(--red); }
+
+/* ---------- boxes ---------- */
+.note { background: var(--indigo-wash); border-left: 4px solid var(--indigo); border-radius: 6px; padding: 10px 14px; margin: 14px 0; font-size: .98rem; }
+.note > b:first-child { font-family: var(--font-ui); font-size: .78rem; color: #fff; background: var(--indigo); border-radius: 4px; padding: 1px 7px; margin-right: 8px; }
+.supp { background: var(--green-wash); border-radius: 6px; padding: 10px 14px; margin: 14px 0; font-size: .96rem; color: var(--ink); }
+.supp::before { content: "補説"; display: inline-block; font-family: var(--font-ui); font-size: .74rem; font-weight: 700; color: #fff; background: var(--green); border-radius: 4px; padding: 0 7px; margin-right: 8px; }
+.point { background: var(--gold-wash); border: 1px solid var(--gold); border-radius: 8px; padding: 10px 14px; margin: 16px 0 4px; font-size: .98rem; }
+.point::before { content: "★ ポイント"; display: block; font-family: var(--font-ui); font-weight: 700; font-size: .82rem; color: var(--gold); margin-bottom: 2px; }
+.reconstructed { color: var(--red); cursor: help; font-family: var(--font-ui); font-size: .8em; }
+
+/* ---------- sūtra (典拠) card ---------- */
+.sutra { margin: 12px 0; padding: 10px 14px 9px; background: var(--indigo-wash); border-left: 4px solid var(--indigo); border-radius: 6px; display: flex; flex-direction: column; gap: 1px; }
+.sutra > [lang="sa"] { font-size: 1.32rem; font-weight: 600; color: var(--ink); line-height: 1.6; }
+.sutra .tr { font-family: var(--font-lat); font-style: italic; font-size: 1.05rem; color: var(--indigo); line-height: 1.45; }
+.sutra .gl { color: var(--ink-soft); font-size: .95rem; }
+.sutra cite { order: -1; align-self: flex-start; font-style: normal; font-family: var(--font-ui); font-size: .74rem; color: #fff; background: var(--indigo); border-radius: 4px; padding: 0 8px; }
+
+/* ---------- examples ---------- */
+.ex { display: grid; grid-template-columns: minmax(0,max-content) minmax(0,1fr); gap: 4px 20px; margin: 12px 0; padding: 12px 16px; background: var(--gold-wash); border-left: 4px solid var(--gold); border-radius: 6px; align-items: baseline; }
+.ex > .f { font-family: var(--font-sa); font-size: 1.22em; white-space: nowrap; line-height: 1.5; }
+.ex > .f .tr { display: block; font-family: var(--font-lat); font-style: italic; font-size: .82em; color: var(--ink-soft); white-space: normal; line-height: 1.25; }
+.ex > .g { color: var(--ink-soft); font-size: .97rem; }
+.ex > .f .r { color: var(--red); font-weight: 700; }
+@media (max-width: 600px) { .ex { grid-template-columns: minmax(0,1fr); } .ex > .f { white-space: normal; } .ex > .g { margin-bottom: 8px; padding-left: .8em; border-left: 2px solid var(--rule); } }
+
+/* ---------- figures ---------- */
+figure.fig { margin: 20px 0; padding: 16px; background: var(--ground); border: 1px solid var(--rule-light); border-radius: 10px; }
+figure.fig figcaption { font-family: var(--font-ui); font-size: .82rem; color: var(--ink-soft); margin-bottom: 10px; }
+figure.fig figcaption b { color: #fff; background: var(--teal); border-radius: 4px; padding: 0 7px; margin-right: 6px; font-weight: 700; }
+.scroll-x { overflow-x: auto; }
+
+/* ---------- tables ---------- */
+table.t { border-collapse: collapse; width: 100%; font-size: .97rem; background: var(--card); }
+table.t th, table.t td { border: 1px solid var(--rule); padding: 7px 9px; text-align: center; vertical-align: middle; }
+table.t thead th { background: var(--accent); color: #fff; font-family: var(--font-ui); font-size: .8rem; font-weight: 600; }
+table.t thead th [lang="sa"] { color: #fff; }
+table.t tbody th { font-family: var(--font-ui); font-size: .85rem; font-weight: 600; text-align: left; background: var(--accent-wash); white-space: nowrap; }
+table.t tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--ground) 60%, var(--card)); }
+table.t td.big { font-family: var(--font-sa); font-size: 1.5em; line-height: 1.3; }
+table.t td small, table.t th small { display: block; font-family: var(--font-lat); font-style: italic; font-size: .85rem; color: var(--muted); font-weight: 400; }
+table.t thead th small { color: #fff; opacity: .85; }
+table.t td.empty { background: repeating-linear-gradient(45deg, transparent 0 6px, var(--rule-light) 6px 7px) !important; }
+
+/* place colors */
+.c-kantha { --pc: var(--kantha); } .c-talu { --pc: var(--talu); } .c-murdhan { --pc: var(--murdhan); }
+.c-danta { --pc: var(--danta); } .c-ostha { --pc: var(--ostha); } .c-nasika { --pc: var(--nasika); }
+tr[class^="c-"] > th:first-child { border-left: 6px solid var(--pc); color: var(--pc); }
+tr[class^="c-"] > td.big { color: var(--pc); }
+.dot { display: inline-block; width: .75em; height: .75em; border-radius: 50%; background: var(--pc); vertical-align: middle; margin-right: 5px; }
+td.hard, .hard { background: var(--indigo-wash) !important; }
+td.soft, .soft { background: var(--green-wash) !important; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--font-ui); font-size: .78rem; color: var(--ink-soft); margin-top: 10px; }
+.legend span::before { content: ""; display: inline-block; width: 16px; height: 11px; margin-right: 5px; vertical-align: middle; border-radius: 3px; background: var(--sw); }
+
+/* ---------- śivasūtra ---------- */
+.shiva { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+.ss { border: 1px solid var(--rule-light); border-radius: 8px; padding: 6px 9px 5px; background: var(--card); }
+.ss .n { font-family: var(--font-ui); font-size: .7rem; color: var(--muted); }
+.ss .ls { font-family: var(--font-sa); font-size: 1.45rem; line-height: 1.5; display: flex; flex-wrap: wrap; gap: 0 2px; }
+.ss .ls span { padding: 0 3px; border-radius: 5px; transition: background .15s; }
+.ss .ls span.it { color: var(--red); font-weight: 700; font-size: .85em; }
+.ss .ls span.on { background: var(--accent); color: #fff; }
+.ss .ls span.it.on-it { outline: 2px solid var(--red); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 6px; }
+.chips button { font-family: var(--font-sa); font-size: 1.05rem; padding: 1px 12px; border-radius: 999px; border: 1px solid var(--accent-soft); background: var(--card); color: var(--accent); cursor: pointer; }
+.chips button:hover { background: var(--accent-wash); }
+.chips button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.chips button.later { border-style: dashed; border-color: var(--rule); color: var(--ink-soft); }
+.pr-out { font-family: var(--font-ui); font-size: .9rem; color: var(--ink-soft); min-height: 1.8em; background: var(--card); border-radius: 6px; padding: 4px 10px; }
+.pr-out b { font-family: var(--font-sa); font-size: 1.15rem; }
+
+/* ---------- small cards ---------- */
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 10px; margin: 12px 0; }
+.kv > div { border: 1px solid var(--rule-light); border-radius: 8px; padding: 10px 14px; background: var(--card); }
+.kv > div [lang="sa"] { font-size: 1.25em; }
+.kv h4 { margin: 0 0 4px; font-family: var(--font-ui); font-size: .82rem; color: var(--accent); }
+.kv > div.hard h4 { color: var(--indigo); } .kv > div.soft h4 { color: var(--green); }
+.mora { display: inline-flex; gap: 3px; vertical-align: middle; }
+.mora i { display: inline-block; width: 16px; height: 9px; border-radius: 3px; background: var(--accent-soft); }
+
+/* ---------- conjuncts ---------- */
+.cj-row { display: grid; grid-template-columns: 3.4em minmax(0,1fr); gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--rule-light); }
+.cj-head { font-family: var(--font-sa); font-size: 1.3rem; color: #fff; background: var(--accent); border-radius: 8px; text-align: center; align-self: start; line-height: 1.7; }
+.cj-cells { display: flex; flex-wrap: wrap; gap: 5px 6px; }
+.cj { display: inline-flex; flex-direction: column; align-items: center; min-width: 3.6em; padding: 2px 5px; border-radius: 7px; background: var(--card); border: 1px solid var(--rule-light); }
+.cj b { font-family: var(--font-sa); font-size: 1.45rem; font-weight: 400; line-height: 1.45; color: var(--ink); }
+.cj i { font-family: var(--font-lat); font-size: .9rem; color: var(--indigo); }
+
+/* ---------- guṇa / vṛddhi ladder ---------- */
+.ladder { display: grid; grid-template-columns: auto repeat(3, minmax(0,1fr)); font-size: 1rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--rule); }
+.ladder > div { padding: 8px; border-bottom: 1px solid var(--rule-light); text-align: center; background: var(--card); }
+.ladder .h { font-family: var(--font-ui); font-size: .8rem; font-weight: 700; color: #fff; background: var(--accent); }
+.ladder .r { font-family: var(--font-lat); font-style: italic; text-align: left; color: var(--ink-soft); background: var(--accent-wash); }
+.ladder .s { font-family: var(--font-sa); font-size: 1.55rem; }
+.ladder .s.g { background: var(--green-wash); color: var(--green); }
+.ladder .s.v { background: var(--gold-wash); color: var(--gold); font-weight: 700; }
+
+/* ---------- sandhi chart ---------- */
+table.sandhi td { font-family: var(--font-sa); font-size: 1.15rem; line-height: 1.35; }
+table.sandhi td small { font-family: var(--font-ui); font-style: normal; font-size: .68rem; }
+table.sandhi tbody tr td.k-dirgha { background: var(--indigo-wash); color: var(--indigo); font-weight: 700; }
+table.sandhi tbody tr td.k-guna { background: var(--green-wash); color: var(--green); font-weight: 700; }
+table.sandhi tbody tr td.k-vrddhi { background: var(--gold-wash); color: var(--gold); font-weight: 700; }
+table.sandhi tbody tr td.k-yan { background: var(--purple-wash); color: var(--purple); }
+table.sandhi tbody tr td.k-ayadi { background: var(--red-wash); color: var(--red); }
+
+/* ---------- flow ---------- */
+.flow { display: flex; flex-direction: column; }
+.flow .q { border: 2px solid var(--accent-soft); border-radius: 10px; padding: 8px 14px; background: var(--card); }
+.flow .q b { font-family: var(--font-ui); font-size: .78rem; color: #fff; background: var(--accent); border-radius: 4px; padding: 0 6px; margin-right: 8px; }
+.flow .yes { margin-left: 26px; border-left: 3px solid var(--green); padding: 5px 0 7px 14px; font-size: .97rem; }
+.flow .yes::before { content: "はい ➜ "; font-family: var(--font-ui); font-size: .8rem; color: var(--green); font-weight: 700; }
+.flow .no { margin-left: 26px; font-family: var(--font-ui); font-size: .78rem; color: var(--red); padding: 2px 0 6px 14px; border-left: 3px dashed var(--rule); }
+.flow .no::before { content: "▼ "; }
+
+/* ---------- derivation ---------- */
+.deriv { counter-reset: step; }
+.deriv .step { counter-increment: step; position: relative; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; padding: 8px 0 8px 2.7rem; border-bottom: 1px dashed var(--rule); }
+.deriv .step::before { content: counter(step); position: absolute; left: 0; top: .55rem; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--accent); color: #fff; font-family: var(--font-ui); font-size: .85rem; text-align: center; line-height: 1.8rem; }
+.deriv .step .rule { font-family: var(--font-ui); font-size: .78rem; color: var(--accent); font-weight: 700; min-width: 7.5em; }
+.deriv .step .form { font-family: var(--font-sa); font-size: 1.35rem; font-weight: 600; }
+.forms4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px,1fr)); gap: 8px; margin-top: 10px; }
+.forms4 > div { border: 2px solid var(--accent-soft); border-radius: 10px; padding: 6px 10px; text-align: center; background: var(--card); }
+.forms4 .sa { font-size: 1.45rem; display: block; color: var(--accent); font-weight: 600; }
+.forms4 .tr { display: block; font-family: var(--font-lat); font-style: italic; color: var(--ink-soft); line-height: 1.2; }
+.forms4 small { font-family: var(--font-ui); font-size: .72rem; color: var(--muted); }
+
+/* ---------- bars ---------- */
+.bars { display: grid; grid-template-columns: max-content minmax(0,1fr) max-content; gap: 8px 10px; align-items: center; font-family: var(--font-ui); font-size: .85rem; }
+.bars .bar { height: 20px; background: var(--indigo); border-radius: 4px; }
+.bars .num { font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+
+.pagenav { display: flex; justify-content: space-between; gap: 12px; margin-top: 50px; font-family: var(--font-ui); font-size: .92rem; }
+.pagenav a { text-decoration: none; border: 1px solid var(--accent-soft); border-radius: 999px; padding: 6px 16px; background: var(--card); }
+.pagenav a:hover { background: var(--accent-wash); }
+footer.colophon { font-family: var(--font-ui); font-size: .78rem; color: var(--muted); margin-top: 34px; padding-top: 14px; border-top: 1px solid var(--rule); }
+
+@media print {
+  .top-bar, nav.toc { display: none; }
+  section.para, figure.fig { break-inside: avoid; }
+}
+table.sandhi { min-width: 660px; }
+@media (max-width: 600px) { table.t { font-size: .9rem; } }
+.sutra > [lang="sa"], .sutra .tr, .ex > .f, .deriv .form, .forms4 .sa { overflow-wrap: anywhere; }
+
+/* ---------- paradigm tables ---------- */
+.para-wrap { overflow-x: auto; margin: 14px 0; }
+table.para { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 420px; background: var(--card); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+table.para caption { caption-side: top; text-align: left; padding: 0 0 6px; font-weight: 700; color: var(--accent); }
+table.para caption [lang="sa"] { font-size: 1.35rem; }
+table.para caption .gl { font-weight: 400; color: var(--ink-soft); font-size: .92rem; margin-left: 6px; }
+table.para th, table.para td { padding: 5px 9px; border-bottom: 1px solid var(--rule-light); text-align: left; vertical-align: top; }
+table.para thead th { background: var(--accent); color: #fff; font-family: var(--font-ui); font-size: .78rem; font-weight: 600; }
+table.para tbody th { width: 5.6em; font-family: var(--font-ui); font-size: .78rem; font-weight: 600; color: var(--accent); background: var(--accent-wash); white-space: nowrap; }
+table.para tbody th small { display: block; font-family: var(--font-lat); font-style: italic; color: var(--muted); font-weight: 400; font-size: .85rem; }
+table.para td.f { font-family: var(--font-sa); font-size: 1.15rem; line-height: 1.35; }
+table.para td.f .w { display: inline; }
+table.para td.f small.tr { display: block; font-family: var(--font-lat); font-style: italic; font-size: .82rem; color: var(--muted); margin-bottom: 2px; }
+table.para td.f .or { font-family: var(--font-ui); font-size: .68rem; color: var(--accent); display: block; line-height: 1.3; margin: 4px 0 0; }
+table.para td.hl { background: var(--gold-wash); }
+table.para td.hl2 { background: var(--indigo-wash); }
+table.para td.hl3 { background: var(--green-wash); }
+table.para td.same { color: var(--muted); }
+table.para tr.vrow td, table.para tr.vrow th { border-bottom: 2px solid var(--rule); }
+.para-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr)); gap: 14px; }
+.para-grid > * { min-width: 0; }
+.ending { color: var(--red); font-weight: 700; }
+.ladder > div { min-width: 0; overflow-wrap: anywhere; }
